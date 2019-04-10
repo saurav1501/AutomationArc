@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>verify if any field like (informative content, well organized, performance, project id, comment) is blank proper error message should display and user should not able to complete feedback</description>
+   <name>FeedbackBlankFieldsTest</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>45db3fd9-1268-4a96-bdbb-f943be2ed2b2</testCaseGuid>
+</TestCaseEntity>

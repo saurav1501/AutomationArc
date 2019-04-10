@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Dashboard page Frizzes after navigation form Payment page to LEED  Online .</description>
+   <name>DashBoardPageFrizzesVerificationPostLeedNavTest</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>750fbe96-6721-44a3-b6bf-90566da3cb99</testCaseGuid>
+</TestCaseEntity>

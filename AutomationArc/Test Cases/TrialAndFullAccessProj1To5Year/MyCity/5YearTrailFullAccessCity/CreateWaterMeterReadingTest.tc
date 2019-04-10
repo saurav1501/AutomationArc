@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verifies if ability to add new water meter details &amp; reading .</description>
+   <name>CreateWaterMeterReadingTest</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>6291b5d9-1f4c-4b8c-90f3-4a459d1175e2</testCaseGuid>
+</TestCaseEntity>

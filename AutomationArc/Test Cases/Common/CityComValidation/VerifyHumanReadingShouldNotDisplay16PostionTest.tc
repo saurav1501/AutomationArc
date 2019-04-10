@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify ability to add human experience reading on the year basis .</description>
+   <name>VerifyHumanReadingShouldNotDisplay16PostionTest</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>da2cddd9-98d6-421a-9e1d-4bd19649dd05</testCaseGuid>
+</TestCaseEntity>

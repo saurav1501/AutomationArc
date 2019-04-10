@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify that after the registration payment the pay now pop is not visible.</description>
+   <name>VerifyTheFullAccessPopupAfterPaymentTest</name>
+   <tag>Verify the pay now popup</tag>
+   <comment></comment>
+   <testCaseGuid>2ea2e68c-0513-4ffc-bf18-839bbed4df69</testCaseGuid>
+</TestCaseEntity>

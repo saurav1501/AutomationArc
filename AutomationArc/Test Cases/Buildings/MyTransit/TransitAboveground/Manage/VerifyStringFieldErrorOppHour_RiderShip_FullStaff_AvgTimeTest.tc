@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify if opearting hours Annual Ridership , full time staff , Average time station should not accept string values . </description>
+   <name>VerifyStringFieldErrorOppHour_RiderShip_FullStaff_AvgTimeTest</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>20a9766f-f8c6-40a3-80de-2edbb9786efe</testCaseGuid>
+</TestCaseEntity>

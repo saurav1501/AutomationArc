@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify Owner Type should be mandatory field in Portfolio GRESB and Error message (Error uploading file. please try again) should be change based on the response “{owner_type: [&quot;&quot;undefined&quot; is not a valid choice.&quot;]} in the front end .</description>
+   <name>VerifyOwnerTypeTest</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>cf579951-eb87-4e25-830c-8e0956eccffd</testCaseGuid>
+</TestCaseEntity>

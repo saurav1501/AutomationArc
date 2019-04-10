@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify if Clicking on Limited Access -> Select Free Trial Access -> application is  responding.Steps: Register Project -> Full Access ->Payment page ->Edit Project details (Fill owner organization , owner email->  save   -> Back -> Select Free Trial Access.</description>
+   <name>NavigationTrialTest</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>9b4ad420-764f-4c5d-a63b-abf3d70d4aa0</testCaseGuid>
+</TestCaseEntity>

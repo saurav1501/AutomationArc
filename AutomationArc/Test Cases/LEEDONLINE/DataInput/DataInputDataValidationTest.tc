@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify the data populated in the data input matches with the data populated in the ARC.</description>
+   <name>DataInputDataValidationTest</name>
+   <tag>Verify the data populated in the data input section.</tag>
+   <comment></comment>
+   <testCaseGuid>33df96ca-3361-4bf6-8abb-0b2f07584d00</testCaseGuid>
+</TestCaseEntity>

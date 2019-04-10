@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Validate the water meter label and the reading labels.</description>
+   <name>DataInputWaterMeterPageTextValidationTest</name>
+   <tag>Validate the water meter label test</tag>
+   <comment></comment>
+   <testCaseGuid>b644013f-a796-455b-892a-415446a9ce45</testCaseGuid>
+</TestCaseEntity>

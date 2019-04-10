@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Check the project details after the excel upload.</description>
+   <name>TrialProjectDetailVerificationAfterExcelUploadTest</name>
+   <tag>Project details verification after excel upload.</tag>
+   <comment></comment>
+   <testCaseGuid>31f96fa6-f6fa-4c5b-82e1-afb8aff20d2b</testCaseGuid>
+</TestCaseEntity>

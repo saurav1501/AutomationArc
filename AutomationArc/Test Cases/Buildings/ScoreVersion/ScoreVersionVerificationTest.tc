@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Checking the score version is updated or not</description>
+   <name>ScoreVersionVerificationTest</name>
+   <tag>Score Version Verification</tag>
+   <comment></comment>
+   <testCaseGuid>f3564f19-08a9-48f4-b5d1-a8a06b14028c</testCaseGuid>
+</TestCaseEntity>

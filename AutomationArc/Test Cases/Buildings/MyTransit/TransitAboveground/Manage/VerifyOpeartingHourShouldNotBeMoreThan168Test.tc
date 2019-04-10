@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify if weekly opearting hour should not be more than 168 hours . </description>
+   <name>VerifyOpeartingHourShouldNotBeMoreThan168Test</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>8b1772ed-1e7c-4e51-86a6-3dbe6f7ab8ee</testCaseGuid>
+</TestCaseEntity>

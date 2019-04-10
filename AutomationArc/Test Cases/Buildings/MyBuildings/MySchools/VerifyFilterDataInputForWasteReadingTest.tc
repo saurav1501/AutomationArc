@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Apply filter for the waste reading, and check if it works.</description>
+   <name>VerifyFilterDataInputForWasteReadingTest</name>
+   <tag>Check Filter</tag>
+   <comment></comment>
+   <testCaseGuid>ef43e1ce-eec0-4a86-8439-ec9802325e7c</testCaseGuid>
+</TestCaseEntity>

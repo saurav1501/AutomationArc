@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Transport survey -> Default Error notification is not displaying for the newly created project or before submitting of the survey. Please note that this notification is displays in QAS/PRD.</description>
+   <name>WasteDefaultNotifciationTest</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>a7c52e62-ecdc-46e3-9732-76da9225e76e</testCaseGuid>
+</TestCaseEntity>

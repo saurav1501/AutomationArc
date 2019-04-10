@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>BuildingRegistrationPageValidationTest</name>
+   <tag>Validate Building Registration Page</tag>
+   <comment></comment>
+   <testCaseGuid>e00b36ef-494a-43dd-82f1-802365ab42db</testCaseGuid>
+   <variable>
+      <defaultValue>findTestData('Test').getValue('ProjectName', 2)</defaultValue>
+      <description></description>
+      <id>69a9fb10-879c-427a-84ff-78dc550d87ee</id>
+      <masked>false</masked>
+      <name>ProjectName</name>
+   </variable>
+   <variable>
+      <defaultValue>findTestData(null).getValue(1, 1)</defaultValue>
+      <description></description>
+      <id>26c84aa9-3a79-48d1-adcc-85eb5656a4e4</id>
+      <masked>false</masked>
+      <name>prjArea</name>
+   </variable>
+   <variable>
+      <defaultValue>findTestData(null).getValue(1, 1)</defaultValue>
+      <description></description>
+      <id>2f811adc-ac3f-4391-ad5c-8b2b58c7f4c1</id>
+      <masked>false</masked>
+      <name>prjAddress</name>
+   </variable>
+   <variable>
+      <defaultValue>findTestData(null).getValue(1, 1)</defaultValue>
+      <description></description>
+      <id>64641737-4072-4f12-a1df-fd07a167b9d7</id>
+      <masked>false</masked>
+      <name>prjCity</name>
+   </variable>
+   <variable>
+      <defaultValue>findTestData(null).getValue(1, 1)</defaultValue>
+      <description></description>
+      <id>376e86f4-3213-43d2-9075-884684f07a40</id>
+      <masked>false</masked>
+      <name>prjZip</name>
+   </variable>
+</TestCaseEntity>

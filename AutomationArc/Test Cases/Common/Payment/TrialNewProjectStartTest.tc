@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Validate all new projects must be registered with Proj id starting with 9XXXXXXXXX (10 digits)</description>
+   <name>TrialNewProjectStartTest</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>20ba2933-8fc4-46a5-a23b-419d5de9661a</testCaseGuid>
+</TestCaseEntity>

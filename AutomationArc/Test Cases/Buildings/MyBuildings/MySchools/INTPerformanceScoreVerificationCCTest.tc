@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Submit the project for the review</description>
+   <name>INTPerformanceScoreVerificationCCTest</name>
+   <tag>Submit Review</tag>
+   <comment></comment>
+   <testCaseGuid>82fc5d59-16a9-4e2a-9cbb-5c0d97cf200b</testCaseGuid>
+</TestCaseEntity>

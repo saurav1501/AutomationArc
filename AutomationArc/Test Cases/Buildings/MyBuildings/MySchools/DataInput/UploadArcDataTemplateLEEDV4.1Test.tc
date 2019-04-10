@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Uploading the excel file to create the meter and populate the data</description>
+   <name>UploadArcDataTemplateLEEDV4.1Test</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>f8deb822-57d5-437b-973e-f829900188eb</testCaseGuid>
+</TestCaseEntity>

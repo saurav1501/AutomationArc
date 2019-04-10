@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>LEED for City/Community->  Payment page after selecting the rating system &quot;Other&quot; and clicking on save, the rating system option comes to default LEED for cites/Communities . </description>
+   <name>VerifyRatingSystemValidationTest</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>0be14806-2a2d-4f51-b953-47daf5d70c67</testCaseGuid>
+</TestCaseEntity>

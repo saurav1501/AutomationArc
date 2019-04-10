@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify if Weighted Occupancy displaying correctly based on below formula (WeightedOccupancy = ((full_time+ (ridership/365 * davg_time/60 )/(Opartinghours/2))</description>
+   <name>VerifyCalcuateWeightedOccupancyTest</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>8aff3d68-b841-4e0c-bef4-872d0ce526c9</testCaseGuid>
+</TestCaseEntity>

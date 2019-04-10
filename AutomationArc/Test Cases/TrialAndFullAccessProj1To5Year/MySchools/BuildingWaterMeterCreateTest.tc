@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Create new Water meter for Building None rating system.</description>
+   <name>BuildingWaterMeterCreateTest</name>
+   <tag>Create Water Meter</tag>
+   <comment></comment>
+   <testCaseGuid>b2d2eb7c-941b-4a83-a309-108a0c896229</testCaseGuid>
+</TestCaseEntity>

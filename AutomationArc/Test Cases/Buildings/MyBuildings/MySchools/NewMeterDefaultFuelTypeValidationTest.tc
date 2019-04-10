@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>This test case will check the default meter type for all the meters</description>
+   <name>NewMeterDefaultFuelTypeValidationTest</name>
+   <tag>Default Fuel Type</tag>
+   <comment></comment>
+   <testCaseGuid>4905d6aa-c27b-48f6-bdd7-3bde1e867bd2</testCaseGuid>
+</TestCaseEntity>

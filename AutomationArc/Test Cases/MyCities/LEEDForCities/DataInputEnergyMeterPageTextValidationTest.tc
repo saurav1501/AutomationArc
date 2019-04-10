@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Validate the metyer label and meter title for the Energy meter</description>
+   <name>DataInputEnergyMeterPageTextValidationTest</name>
+   <tag>Validate the Energy meter text</tag>
+   <comment></comment>
+   <testCaseGuid>c05294a5-e10e-4771-9c43-28887c0c5f01</testCaseGuid>
+</TestCaseEntity>

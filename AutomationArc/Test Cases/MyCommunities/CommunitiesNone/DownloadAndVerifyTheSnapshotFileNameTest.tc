@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Here we are downloading the snapshot for the given project and we will check the name of the files uploaded for the various languages.</description>
+   <name>DownloadAndVerifyTheSnapshotFileNameTest</name>
+   <tag>Download and Verify the snapshot for the various languages.</tag>
+   <comment></comment>
+   <testCaseGuid>e03708f3-c2e0-4a70-bb3c-1aa37f3c7f19</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify if ablity to delete the projects form manage project section .</description>
+   <name>ManagePortfolioProjectDeleteTest</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>9506b771-d54d-4631-bae3-e43ad458c6a6</testCaseGuid>
+</TestCaseEntity>

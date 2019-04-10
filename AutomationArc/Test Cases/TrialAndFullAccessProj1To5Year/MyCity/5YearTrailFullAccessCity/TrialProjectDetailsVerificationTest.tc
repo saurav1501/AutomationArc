@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify the trial project details inputted during the project registration.</description>
+   <name>TrialProjectDetailsVerificationTest</name>
+   <tag>Project Details Verification Test</tag>
+   <comment></comment>
+   <testCaseGuid>43d02018-b988-4a7f-be88-903e6c6e6d99</testCaseGuid>
+</TestCaseEntity>

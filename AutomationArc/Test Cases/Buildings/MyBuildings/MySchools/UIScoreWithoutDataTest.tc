@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify the default loaded UI functionality racetrack &amp;  category score  without data score should not be recomputed.</description>
+   <name>UIScoreWithoutDataTest</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>52022806-9854-4a2a-a874-ddf3643b37b4</testCaseGuid>
+</TestCaseEntity>

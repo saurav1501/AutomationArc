@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Adding new project for building to check the trial flow.</description>
+   <name>AddNewProjectBuildingTransitTest</name>
+   <tag>Add New Project</tag>
+   <comment></comment>
+   <testCaseGuid>7b0e2540-1e20-4c34-a5c5-5779016bbc27</testCaseGuid>
+</TestCaseEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Test case to check the trial project accessibility</description>
+   <name>DashboardNavigationEndToEndTest</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>e975bae0-5a87-4773-b7b9-42fa40fe1120</testCaseGuid>
+</TestCaseEntity>

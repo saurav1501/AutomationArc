@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Validate &quot;Estimated Score&quot; button on DI widget automatically gets removed without reloading page once no estimated data is present i.e. for green color</description>
+   <name>EstimatedScoreShouldNotDisplayDITest</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d3c05429-2f1d-468e-87b5-19b4f954fcd6</testCaseGuid>
+</TestCaseEntity>

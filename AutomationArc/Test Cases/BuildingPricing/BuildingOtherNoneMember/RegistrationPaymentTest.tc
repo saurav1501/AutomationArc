@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Pay the registration amount and verify the amount reflected on the UI.</description>
+   <name>RegistrationPaymentTest</name>
+   <tag>Registration Payment Test</tag>
+   <comment></comment>
+   <testCaseGuid>f0844194-0ee1-4aa7-9739-364bde5090c0</testCaseGuid>
+</TestCaseEntity>

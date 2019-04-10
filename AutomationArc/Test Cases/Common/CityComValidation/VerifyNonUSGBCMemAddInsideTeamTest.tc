@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Please try again error message displays  when we try to register non USGBC member in team . Please note that in QAS validation error message as “ please have the user register at https://new.usgbc.org/registration/create-user and try again.”</description>
+   <name>VerifyNonUSGBCMemAddInsideTeamTest</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>a951f356-133b-4ee8-8917-68c8e2583631</testCaseGuid>
+</TestCaseEntity>

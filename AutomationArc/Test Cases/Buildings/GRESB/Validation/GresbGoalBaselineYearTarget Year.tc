@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Default Base line Year(2018) and Target Year(2020) is missing in newly created GRESB/Portfolio . Please note that its populated when we refresh the page multiple time or fill the value in text area manages goal Carbon/Energy</description>
+   <name>GresbGoalBaselineYearTarget Year</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>64177615-d379-425b-a19b-60cb9b0936b9</testCaseGuid>
+</TestCaseEntity>

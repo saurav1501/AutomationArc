@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify certification details of new added project on submission.</description>
+   <name>CertiVerifyCertificationDetailsForProjectsPointsAddedFromAdminToolTest</name>
+   <tag>Manage Certification</tag>
+   <comment></comment>
+   <testCaseGuid>d29fea80-2807-4f07-8089-be9ed669c44a</testCaseGuid>
+</TestCaseEntity>

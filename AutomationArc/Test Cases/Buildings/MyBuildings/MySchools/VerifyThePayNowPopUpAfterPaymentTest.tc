@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify if the pay now pop gone after payment.</description>
+   <name>VerifyThePayNowPopUpAfterPaymentTest</name>
+   <tag>Pay now popup verification</tag>
+   <comment></comment>
+   <testCaseGuid>e4336b41-0d0e-4ff3-b04d-ec3cb80c970a</testCaseGuid>
+</TestCaseEntity>

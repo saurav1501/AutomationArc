@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>ProjectDetailsLabelsVerificationTest</name>
+   <tag>Verify the labels present in the project details section</tag>
+   <comment></comment>
+   <testCaseGuid>4ff639a6-63df-4b7a-9ce7-0b441e7673cb</testCaseGuid>
+</TestCaseEntity>

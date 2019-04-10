@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify search is finding projects using ID and Name Verifying the search dropdown and also verfiy the no of projects, if no project not found it throws error.</description>
+   <name>SearchProgramTest</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>6b793bef-7629-4941-b8b7-25d1d797e751</testCaseGuid>
+</TestCaseEntity>

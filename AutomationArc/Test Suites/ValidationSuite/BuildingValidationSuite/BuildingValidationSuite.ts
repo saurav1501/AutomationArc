@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestSuiteEntity>
+   <description></description>
+   <name>BuildingValidationSuite</name>
+   <tag></tag>
+   <isRerun>false</isRerun>
+   <mailRecipient></mailRecipient>
+   <numberOfRerun>0</numberOfRerun>
+   <pageLoadTimeout>60</pageLoadTimeout>
+   <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
+   <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
+   <testSuiteGuid>9f05e39c-1728-4331-a2ab-60f6a9738178</testSuiteGuid>
+   <testCaseLink>
+      <guid>82c49fd7-2848-4bba-9b12-428ce311aba6</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/ValidationScript/Building/BuildingRegistrationPageValidationTest</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>69a9fb10-879c-427a-84ff-78dc550d87ee</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>26c84aa9-3a79-48d1-adcc-85eb5656a4e4</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>2f811adc-ac3f-4391-ad5c-8b2b58c7f4c1</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>64641737-4072-4f12-a1df-fd07a167b9d7</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>376e86f4-3213-43d2-9075-884684f07a40</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>ca511241-06b1-4e1c-aa8c-142745072127</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/ValidationScript/Building/BuildingPaymentPageDetailsValidationTest</testCaseId>
+   </testCaseLink>
+</TestSuiteEntity>

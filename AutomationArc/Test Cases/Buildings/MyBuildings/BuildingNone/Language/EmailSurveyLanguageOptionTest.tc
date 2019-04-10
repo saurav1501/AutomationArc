@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>To verify the details of the projects</description>
+   <name>EmailSurveyLanguageOptionTest</name>
+   <tag>Project Detail</tag>
+   <comment></comment>
+   <testCaseGuid>aef0dd57-1b72-4e93-8b73-7b2d93d4aaaf</testCaseGuid>
+</TestCaseEntity>
