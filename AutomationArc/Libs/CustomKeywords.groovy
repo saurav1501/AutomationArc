@@ -2932,10 +2932,12 @@ def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifyReportingP
 
 def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifySnapshotFileNameUploaded"(
     	String sheetName	
-     , 	int rowNum	) {
+     , 	int rowNum	
+     , 	String ratingSystem	) {
     (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).verifySnapshotFileNameUploaded(
         	sheetName
-         , 	rowNum)
+         , 	rowNum
+         , 	ratingSystem)
 }
 
 def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifySnapshotFileNameUploadedCityCommNoneOther"(

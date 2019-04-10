@@ -739,14 +739,14 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 
 	//Verify the project Snapshot file names
 	@Keyword
-	public void verifySnapshotFileNameUploaded(String sheetName, int rowNum){
+	public void verifySnapshotFileNameUploaded(String sheetName, int rowNum, String ratingSystem){
 
 
 		String projectId = data.getCellData(sheetName, "ProjectID", rowNum)
 		String fileName= projectId+".zip"
 		String sourceZipFile= RunConfiguration.getProjectDir()+"/Download/"+fileName
 		println sourceZipFile
-		String sourceExtractedFile= RunConfiguration.getProjectDir()+"/Download/"+projectId+"/none/Performance Score Verification/energy/"
+		String sourceExtractedFile= RunConfiguration.getProjectDir()+"/Download/"+projectId+"/"+ratingSystem+"/Performance Score Verification/energy/"
 		println sourceExtractedFile
 		String destinationUnZippedFolder= RunConfiguration.getProjectDir()+"/Download/"
 		println destinationUnZippedFolder
