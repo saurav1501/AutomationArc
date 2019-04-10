@@ -371,13 +371,13 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyReviewBillingDetailsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>adaa1d95-6f0e-4b40-8565-548561167d7a</guid>
+      <guid>519fdd53-c6b6-45e3-b797-f221b1b04ab5</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyTheOrderHistoryUSGBCAccountTest</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/DownloadAndVerifyTheSnapshotFileNameTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>519fdd53-c6b6-45e3-b797-f221b1b04ab5</guid>
+      <guid>adaa1d95-6f0e-4b40-8565-548561167d7a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/DownloadAndVerifyTheSnapshotFileNameTest</testCaseId>
