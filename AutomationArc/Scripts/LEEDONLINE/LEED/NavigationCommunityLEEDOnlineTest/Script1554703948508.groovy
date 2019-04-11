@@ -22,7 +22,7 @@ import internal.GlobalVariable as GlobalVariable
 try{
 	
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToCommunities'()
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsAddNewProject.addNewProjectCityORCom'(GlobalVariable.CommunitySheet, GlobalVariable.rowNumTwo)
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsAddNewProject.addNewProjectCityORCom'(GlobalVariable.CommunitySheet, GlobalVariable.rowNumThree)
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.selectPayNow'()
 	CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsLEEDOnline.communityLEEDPage'()
 

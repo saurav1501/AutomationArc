@@ -410,13 +410,19 @@
       <guid>2c9ef751-361e-45e3-97d7-9ae4a8f66fd9</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/LEEDOnlineCity/VerifyAddedTeamMemberDetailsFromArcTest</testCaseId>
+      <testCaseId>Test Cases/LEEDOnlineCity/VerifyAddedTeamAdministratorDetailsFromArcTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>deea3490-8acd-49f4-84db-b3df1a5dffcb</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/LEEDOnlineCity/AddNewTeamMemberFromLEEDTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>b8493cdd-4727-4345-9e67-3c77a7326880</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/LEEDOnlineCity/ChangeAuthorizationProjectAdministratorTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d44cc223-edf7-4f6f-8213-6ffe4549a1a1</guid>
