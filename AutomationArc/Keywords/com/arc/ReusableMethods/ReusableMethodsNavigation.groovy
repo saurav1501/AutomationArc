@@ -12,8 +12,8 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable
 
 public class ReusableMethodsNavigation {
-	
-	
+
+
 	@Keyword
 	public void navigateToBuilding() {
 		WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
@@ -209,7 +209,6 @@ public class ReusableMethodsNavigation {
 		WebUI.waitForPageLoad(GlobalVariable.timeOut)
 		String LogOut = WebUI.getText(findTestObject('LoginArc/Page_Arc Skoru  Sustainability perf/Logout'))
 		WebUI.verifyMatch(LogOut,'Logout', false)
-	 
 	}
 
 	@Keyword
@@ -337,7 +336,7 @@ public class ReusableMethodsNavigation {
 				WebUI.delay(2)
 				WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 			}
-		  }
+		}
 
 
 		else if((suitId.contains("Building")) || (suitId.contains("BuildingOther")) || (suitId.contains("Transit")) || (suitId.contains("MySchools")) ) {

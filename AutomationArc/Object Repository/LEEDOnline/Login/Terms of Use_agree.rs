@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//*[@class='checkmark' ])[2]</value>
+         <value>//input[@name='agree']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

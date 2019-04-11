@@ -792,7 +792,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
 		WebUI.delay(2)
 		uploadFile(UploadDocumentDataInput)
-		WebUI.delay(4)
+		//WebUI.delay(4)
 		//WebUI.sendKeys(findTestObject('DataInput/DataInputFileUpload/sendFileToUpload'),UploadDocumentDataInput)
 		//text file
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
@@ -802,7 +802,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
 		WebUI.delay(2)
 		uploadFile(UploadTextFile)
-		WebUI.delay(4)
+		//WebUI.delay(4)
 		//WebUI.sendKeys(findTestObject('DataInput/DataInputFileUpload/sendFileToUpload'),UploadTextFile)
 		//jpg file
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
@@ -812,7 +812,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
 		WebUI.delay(2)
 		uploadFile(UploadJpeg)
-		WebUI.delay(4)
+		//WebUI.delay(4)
 		//WebUI.sendKeys(findTestObject('DataInput/DataInputFileUpload/sendFileToUpload'),UploadJpeg)
 		//Png file
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
@@ -822,7 +822,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
 		WebUI.delay(2)
 		uploadFile(UploadPng)
-		WebUI.delay(4)
+		//WebUI.delay(4)
 		//WebUI.sendKeys(findTestObject('DataInput/DataInputFileUpload/sendFileToUpload'),UploadPng)
 		//gif file
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
@@ -842,7 +842,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
 		WebUI.delay(2)
 		uploadFile(UploadXls)
-		WebUI.delay(4)
+		//WebUI.delay(4)
 		//WebUI.sendKeys(findTestObject('DataInput/DataInputFileUpload/sendFileToUpload'),UploadXls)
 		//doc file
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
@@ -852,7 +852,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
 		WebUI.delay(2)
 		uploadFile(UploadDocs)
-		WebUI.delay(4)
+		//WebUI.delay(4)
 		//WebUI.sendKeys(findTestObject('DataInput/DataInputFileUpload/sendFileToUpload'),UploadDocs)
 		//duplicate doc file
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
@@ -901,7 +901,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
 		WebUI.delay(2)
 		uploadFile(UploadArcDataTempleteSpanish)
-		WebUI.delay(4)
+		//WebUI.delay(4)
 		//WebUI.sendKeys(findTestObject('DataInput/DataInputFileUpload/sendFileToUpload'),UploadDocumentDataInput)
 		//text file
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
@@ -911,7 +911,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
 		WebUI.delay(2)
 		uploadFile(UploadArcDataTempleteFrench)
-		WebUI.delay(4)
+		//WebUI.delay(4)
 		//WebUI.sendKeys(findTestObject('DataInput/DataInputFileUpload/sendFileToUpload'),UploadTextFile)
 		//jpg file
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
@@ -921,7 +921,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
 		WebUI.delay(2)
 		uploadFile(UploadArcDataTempleteTurkish)
-		WebUI.delay(4)
+		//WebUI.delay(4)
 		//WebUI.sendKeys(findTestObject('DataInput/DataInputFileUpload/sendFileToUpload'),UploadJpeg)
 		//Png file
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
@@ -931,7 +931,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
 		WebUI.delay(2)
 		uploadFile(UploadArcDataTempleteGerman)
-		WebUI.delay(4)
+		//WebUI.delay(4)
 		//WebUI.sendKeys(findTestObject('DataInput/DataInputFileUpload/sendFileToUpload'),UploadPng)
 		//gif file
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
@@ -951,7 +951,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
 		WebUI.delay(2)
 		uploadFile(UploadArcDataTempleteKorean)
-		WebUI.delay(4)
+		//WebUI.delay(4)
 		//WebUI.sendKeys(findTestObject('DataInput/DataInputFileUpload/sendFileToUpload'),UploadXls)
 		//doc file
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
@@ -961,7 +961,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
 		WebUI.delay(2)
 		uploadFile(UploadArcDataTempleteChineseSimple)
-		WebUI.delay(4)
+		//WebUI.delay(4)
 		//WebUI.sendKeys(findTestObject('DataInput/DataInputFileUpload/sendFileToUpload'),UploadDocs)
 		//duplicate doc file
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
@@ -1249,7 +1249,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	@Keyword
 	public void fileUploadCityCommEnergyMeter(){
-		
+
 		WebUI.delay(5)
 		//pdf upload
 		WebUI.click(findTestObject('Object Repository/DataInput/CreditFileupload/ClickToUploadCityComm'))
@@ -2967,7 +2967,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(5)
 		//WebUI.waitForElementClickable(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'), 15)
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
-		WebUI.delay(10)
+		//WebUI.delay(10)
 		ReusableMethodsLogin.waitForPageLoad(60)
 		ReusableMethodsLogin.waitForIframeLoad(60)
 		//WebUI.scrollToElement(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'), 5)

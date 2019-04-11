@@ -10,7 +10,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@name=&quot;country&quot; or @ng-model=&quot;formdata.country&quot;]</value>
+         <value>//*[@ng-repeat=&quot;country in countries&quot; and @selected=&quot;selected&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

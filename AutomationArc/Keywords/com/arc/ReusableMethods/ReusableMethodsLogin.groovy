@@ -309,8 +309,8 @@ public class ReusableMethodsLogin extends BaseClass{
 
 		String userName= GlobalVariable.userName
 		String password= GlobalVariable.password
-
-
+		
+		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/clickOnLogin'))
 		WebUI.delay(2)
 		WebUI.sendKeys(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/input__name'), userName)
@@ -321,8 +321,7 @@ public class ReusableMethodsLogin extends BaseClass{
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/button_Log in'))
 
-		WebUI.setViewPortSize(1366,1280)
-		waitForPageLoad(60)
+		WebUI.delay(20)
 		WebUI.click(findTestObject('Object Repository/Page_Home  Arc/WelcomeArcText'))
 		//WebUI.waitForElementVisible(findTestObject('Object Repository/Page_Home  Arc/ClickNavProjectText'), 30)
 		WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/span_Projects'))
@@ -332,7 +331,7 @@ public class ReusableMethodsLogin extends BaseClass{
 		WebUI.verifyMatch(postLoginText, 'My Projects',true)
 		WebUI.delay(3)
 
-
+		
 	}
 	@Keyword
 	public void loginWithBlankValue() {

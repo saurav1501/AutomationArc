@@ -19,6 +19,7 @@ import org.testng.Assert
 import com.arc.BaseClass.BaseClass
 import com.arc.BaseClass.CommonMethod
 import com.kms.katalon.core.annotation.Keyword
+import com.kms.katalon.core.logging.KeywordLogger
 import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.driver.DriverFactory
@@ -58,7 +59,6 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DashboardNavigationNewUI/projectPageProjectTextVerification'), 20)
 		String projectTextVerification= WebUI.getText(findTestObject('Object Repository/DashboardNavigationNewUI/projectPageProjectTextVerification'))
 		WebUI.verifyMatch("Project", projectTextVerification, false)
-		WebUI.delay(7)
 		String projectName= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectName'),'value')
 		String projectId= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectId'),'value')
 		String projectUnit= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/unitType'),'value')
@@ -1271,6 +1271,100 @@ public class ReusableMethodsManage extends BaseClass {
 
 	}
 
+	@Keyword
+	public void manageProjectEntityNotEditable(String sheetName , int rowNum){
+
+		String ownerCity    = data.getCellData(sheetName, "OwnerCity", rowNum)
+		String address1     = data.getCellData(sheetName, "Address1", rowNum)
+		String address2     = data.getCellData(sheetName, "Address2", rowNum)
+		String ownerCountry = data.getCellData(sheetName, "OwnerCountry", rowNum)
+		String ownerState    = data.getCellData(sheetName, "OwnerState", rowNum)
+
+		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
+		WebUI.delay(7)
+		
+		boolean notEditableName = WebUI.setText(findTestObject('Manage/ManageEntity/Managing entity Name'),'testName', FailureHandling.OPTIONAL)
+		println ("DEBUG boolean value "+notEditableName)
+		KeywordUtil.logInfo("Managing entity Name Not editable")
+		boolean notEditableCity = WebUI.setText(findTestObject('Manage/ManageEntity/Managing entity City'), 'testCity', FailureHandling.OPTIONAL)
+		println ("DEBUG boolean value "+notEditableCity)
+		KeywordUtil.logInfo("Managing entity City is not editable")
+
+		boolean notEditableAdd1 = WebUI.setText(findTestObject('Manage/ManageEntity/ManagingEntityAdd1'), 'testAdd1', FailureHandling.OPTIONAL)
+		KeywordUtil.logInfo("Managing entity Address 1 is not editable")
+		println ("DEBUG boolean value "+notEditableAdd1)
+
+
+		boolean notEditableAdd2 = WebUI.setText(findTestObject('Manage/ManageEntity/ManagingEntityAdd2'), 'testAdd2', FailureHandling.OPTIONAL)
+		KeywordUtil.logInfo("Managing entity Address 2 is not editable")
+		println ("DEBUG boolean value "+notEditableAdd2)
+
+
+		boolean notEditableCountry = WebUI.setText(findTestObject('Manage/ManageEntity/Manging Country'),'India',  FailureHandling.OPTIONAL)
+		KeywordUtil.logInfo("Managing entity Country is not editable")
+		println ("DEBUG boolean value "+notEditableCountry)
+
+		boolean notEditableState = WebUI.setText(findTestObject('Manage/ManageEntity/Manging Country'),'Andaman and Nico.In.',  FailureHandling.OPTIONAL)
+		KeywordUtil.logInfo("Managing entity State is not editable")
+		println ("DEBUG boolean value "+notEditableState)
+
+
+		String entityName = 	 WebUI.getAttribute(findTestObject('Manage/ManageEntity/Managing entity Name'), 'value')
+		String entityCity = 	 WebUI.getAttribute(findTestObject('Manage/ManageEntity/Managing entity City'), 'value')
+		String entityAdd1 = 	 WebUI.getAttribute(findTestObject('Manage/ManageEntity/ManagingEntityAdd1'), 'value')
+		String entityAdd2 = 	 WebUI.getAttribute(findTestObject('Manage/ManageEntity/ManagingEntityAdd2'), 'value')
+
+		WebUI.verifyMatch(entityName, 'Arc',false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(entityAdd1, address1,false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(entityAdd2, '' , false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(entityCity, ownerCity, false, FailureHandling.CONTINUE_ON_FAILURE)
+
+		WebUI.verifyOptionSelectedByLabel(findTestObject('Manage/ManageEntity/Manging Country'), ownerCountry,,false, 3)
+		WebUI.verifyOptionSelectedByLabel(findTestObject('Manage/ManageEntity/ManagingState'), ownerState, ,false,3)
+
+	}
+
+	@Keyword
+	public void manageEditProjectDetails(String sheetName , int rowNum){
+
+		String prjName      = data.getCellData(sheetName,"ProjectName", rowNum)
+		String prjId        = data.getCellData(sheetName,"ProjectID", rowNum)
+		String ownerType    = data.getCellData(sheetName,"OwnerType", rowNum)
+		String ownerOrg     = data.getCellData(sheetName,"OwnerOrganization", rowNum)
+		String ownerEmail   = data.getCellData(sheetName,"OwnerEmail", rowNum)
+		String spaceType    = data.getCellData(sheetName,"SpaceType", rowNum)
+		String ownerCountry = data.getCellData(sheetName, "OwnerCountry", rowNum)
+		String prjArea 		= data.getCellData(sheetName, "Area", rowNum)
+		String prjAddress 	= data.getCellData(sheetName, "Address", rowNum)
+		String prjCity 		= data.getCellData(sheetName, "City", rowNum)
+		String prjCountry 	= data.getCellData(sheetName, "Country", rowNum)
+		String prjState 	= data.getCellData(sheetName, "State", rowNum)
+		String population 	= data.getCellData(sheetName, "Population", rowNum)
+
+		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
+		WebUI.delay(2)
+		WebUI.setText(findTestObject('Manage/ProjectDetailVerification/projectName'),'Changed Data LEEDV4 CityCom project')
+		WebUI.delay(3)
+		WebUI.selectOptionByLabel(findTestObject('Manage/CityCom/New/unitType'), 'SI', false)
+		WebUI.delay(3)
+		WebUI.setText(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),'1000')
+		WebUI.delay(3)
+		WebUI.setText(findTestObject('Manage/ProjectDetailVerification/population'),'1000')
+		WebUI.delay(3)
+		WebUI.selectOptionByLabel(findTestObject('Manage/CityCom/New/private'), 'Yes', false)
+		WebUI.delay(3)
+		WebUI.click(findTestObject('Manage/CityCom/New/Save'))
+
+		WebUI.delay(5)
+
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectName'),'value'),'Changed Data LEEDV4 CityCom project', false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/unitType'),'value'),"string:SI", false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/prjPrivate'),'value'),"boolean:true", false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/population'),'value'),'1000', false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),'value'),'1000', false, FailureHandling.CONTINUE_ON_FAILURE)
+
+
+	}
 
 	@Keyword
 	public void deleteActivity(String sheetName, int rowNum) throws IOException, InterruptedException{

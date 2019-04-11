@@ -21,8 +21,9 @@ import internal.GlobalVariable as GlobalVariable
 
 
 try{
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariable'()
 	
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginWithValidId'()
+	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginWithValidId'()
 	
 	} catch (Throwable t) {
 	  System.out.println(t.getLocalizedMessage())

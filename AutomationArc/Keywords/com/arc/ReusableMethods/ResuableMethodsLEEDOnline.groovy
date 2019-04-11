@@ -359,7 +359,6 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		String password= GlobalVariable.password
 		WebUI.openBrowser('')
 		//WebUI.switchToWindowIndex(1)
-		WebUI.setViewPortSize(1366,1280)
 		WebUI.waitForPageLoad(GlobalVariable.timeOut)
 		WebUI.navigateToUrl(url)
 		ReusableMethodsLogin.waitForPageLoad(60)
@@ -376,7 +375,77 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.verifyMatch(createNewProj, 'CREATE NEW PROJECT', false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.delay(2)
 	}
+	
+	@Keyword
+	public void verifySynccdataInLEED() {
+		
+		WebUI.click(findTestObject('Manage/CityCom/LEED/a_Details'))
+		WebUI.delay(3)
+		
+		String projectname = 	 WebUI.getText(findTestObject('Manage/CityCom/LEED/projectname'))
+		String population = 	 WebUI.getText(findTestObject('Manage/CityCom/LEED/population'))
+		String Area = 	 WebUI.getText(findTestObject('Manage/CityCom/LEED/Area'))
+		String Isprivate = 	 WebUI.getText(findTestObject('Manage/CityCom/LEED/private'))
+		
+		WebUI.verifyMatch(projectname, 'Changed Data LEEDV4 CityCom project',false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(population, '1000',false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(Area, '1000 sq mi' , false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(Isprivate, 'Yes', false, FailureHandling.CONTINUE_ON_FAILURE)
+		
+	}
 
+	@Keyword
+	public void verifyAddedTeamMemDetailsInArc() {
+		WebUI.click(findTestObject('Manage/CityCom/LEED/a_Team'))
+		WebUI.delay(3)
+		String teamMemberDetails = 	 WebUI.getText(findTestObject('Manage/CityCom/LEED/TeamUserid1'))
+		WebUI.verifyMatch(teamMemberDetails,GlobalVariable.TeamMember, false)
+	
+		
+	}
+	
+	@Keyword
+	public void verifyAddNewTeamMemLEED() {
+		
+		WebUI.setText(findTestObject('Manage/CityCom/LEED/TeamSearch'),GlobalVariable.TeamMember2 )
+		WebUI.click(findTestObject('Manage/CityCom/LEED/teamAddButton'))
+		WebUI.delay(3)
+		
+		String teamMemberDetails = 	WebUI.getText(findTestObject('Manage/CityCom/LEED/TeamUserid2'))
+		WebUI.verifyMatch(teamMemberDetails,GlobalVariable.TeamMember2, false)
+	
+		
+	}
+	
+	@Keyword
+	public void creditTabShouldNaviageToArc() {
+		WebUI.click(findTestObject('Manage/CityCom/LEED/a_Credits'))
+		WebUI.delay(3)
+		WebUI.click(findTestObject('Manage/CityCom/LEED/a_Arc'))
+		WebUI.delay(15)
+		WebUI.waitForPageLoad(30)
+		WebUI.switchToWindowIndex(1)
+		String allAction = WebUI.getText(findTestObject('Manage/CityCom/LEED/All Actions'))
+		WebUI.verifyMatch(allAction,'All Actions', false)
+		
+		
+	}
+	
+	@Keyword
+	public void verifyAddedTeamFromToArc() {
+		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+		WebUI.delay(2)
+		WebUI.scrollToElement(findTestObject('Manage/TeamModule/a_ Team'),2)
+		WebUI.click(findTestObject('Manage/TeamModule/a_ Team'))
+		WebUI.delay(5)
+		String teamMemberDetails = 	WebUI.getText(findTestObject('Manage/CityCom/LEED/ArcUserID2'))
+		WebUI.verifyMatch(teamMemberDetails,GlobalVariable.TeamMember2, false)
+	
+		
+		
+		
+	}
+	
 	@Keyword
 	public void acceptAggrement() throws IOException, InterruptedException {
 

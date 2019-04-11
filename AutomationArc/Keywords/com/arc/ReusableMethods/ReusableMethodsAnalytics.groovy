@@ -2429,14 +2429,17 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 		String annual_Dailycarbon_Emissionin_Lbs = annual_daily_carbon_emissionin_lbs.toString()
 		BigDecimal daily_carbon_emissionin_lbs = new BigDecimal(annual_Dailycarbon_Emissionin_Lbs)
-		daily_carbon_emissionin_lbs = daily_carbon_emissionin_lbs.setScale(4,RoundingMode.HALF_UP)
+		daily_carbon_emissionin_lbs = daily_carbon_emissionin_lbs.setScale(2,RoundingMode.HALF_UP)
 
 		String daily_carbon_Emissionin_lbs = daily_carbon_emissionin_lbs.toString()
 
 		String UIdaily_carbon_Emissionin_lbs = WebUI.getText(findTestObject('Analytics/Transport/DaliyProj'))
 		String UIdaily_carbon_Emissionin_Lbs =  UIdaily_carbon_Emissionin_lbs.replace(',', '')
-
-		WebUI.verifyMatch(UIdaily_carbon_Emissionin_Lbs, daily_carbon_Emissionin_lbs, false)
+		BigDecimal Uidaily_carbon_Emissionin_Lbs = new BigDecimal(UIdaily_carbon_Emissionin_Lbs)
+		Uidaily_carbon_Emissionin_Lbs = Uidaily_carbon_Emissionin_Lbs.setScale(2,RoundingMode.HALF_UP)
+        String UiDaily_carbon_Emissionin_Lbs = Uidaily_carbon_Emissionin_Lbs.toString()
+		
+		WebUI.verifyMatch(UiDaily_carbon_Emissionin_Lbs, daily_carbon_Emissionin_lbs, false)
 	}
 
 	@Keyword

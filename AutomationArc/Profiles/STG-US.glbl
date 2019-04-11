@@ -249,4 +249,9 @@
       <initValue>11</initValue>
       <name>rowNumEleven</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'stg-02@gmail.com'</initValue>
+      <name>TeamMember2</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
