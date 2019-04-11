@@ -760,6 +760,10 @@ def static "com.arc.ReusableMethods.ResuableMethodsLEEDOnline.creditTabShouldNav
     (new com.arc.ReusableMethods.ResuableMethodsLEEDOnline()).creditTabShouldNaviageToArc()
 }
 
+def static "com.arc.ReusableMethods.ResuableMethodsLEEDOnline.teamAdministrator"() {
+    (new com.arc.ReusableMethods.ResuableMethodsLEEDOnline()).teamAdministrator()
+}
+
 def static "com.arc.ReusableMethods.ResuableMethodsLEEDOnline.verifyAddedTeamFromToArc"() {
     (new com.arc.ReusableMethods.ResuableMethodsLEEDOnline()).verifyAddedTeamFromToArc()
 }
@@ -2952,19 +2956,17 @@ def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifyReportingP
 
 def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifySnapshotFileNameUploaded"(
     	String sheetName	
-     , 	int rowNum	
-     , 	String ratingSystem	) {
+     , 	int rowNum	) {
     (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).verifySnapshotFileNameUploaded(
         	sheetName
-         , 	rowNum
-         , 	ratingSystem)
+         , 	rowNum)
 }
 
-def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifySnapshotFileNameUploadedBuildingOther"(
+def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifySnapshotFileNameUploadedCityCommNoneOther"(
     	String sheetName	
      , 	int rowNum	
      , 	String ratingSystem	) {
-    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).verifySnapshotFileNameUploadedBuildingOther(
+    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).verifySnapshotFileNameUploadedCityCommNoneOther(
         	sheetName
          , 	rowNum
          , 	ratingSystem)

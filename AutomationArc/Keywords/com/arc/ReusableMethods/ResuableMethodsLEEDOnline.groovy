@@ -427,9 +427,21 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.switchToWindowIndex(1)
 		String allAction = WebUI.getText(findTestObject('Manage/CityCom/LEED/All Actions'))
 		WebUI.verifyMatch(allAction,'All Actions', false)
-		
-		
+			
 	}
+	
+	@Keyword
+	public void teamAdministrator() {
+		WebUI.click(findTestObject('Manage/CityCom/Change/EditStg2'))
+		WebUI.delay(3)
+		WebUI.selectOptionByLabel(findTestObject('Manage/CityCom/Change/select_Select an authorization'),'Project Administrator', false)
+		WebUI.delay(4)
+		WebUI.click(findTestObject('Manage/CityCom/Change/input_No_btn btn-primary'))
+		WebUI.delay(3)
+	
+	}
+	
+	
 	
 	@Keyword
 	public void verifyAddedTeamFromToArc() {

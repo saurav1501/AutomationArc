@@ -74,7 +74,7 @@
       <guid>af3fd3d9-3d5c-49f8-b35e-db81ef97f648</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/LEEDOnlineCity/VerifyAddedTeamMemberDetailsFromArcTest</testCaseId>
+      <testCaseId>Test Cases/LEEDOnlineCity/VerifyAddedTeamAdministratorDetailsFromArcTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>db5d9659-7c63-411d-b14d-66e8d602bc66</guid>
