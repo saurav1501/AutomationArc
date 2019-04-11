@@ -1,12 +1,8 @@
 package internal
 
 import com.kms.katalon.core.configuration.RunConfiguration
-import com.kms.katalon.core.testobject.ObjectRepository as ObjectRepository
-import com.kms.katalon.core.testdata.TestDataFactory as TestDataFactory
-import com.kms.katalon.core.testcase.TestCaseFactory as TestCaseFactory
-import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
-import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
-import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
+import com.kms.katalon.core.main.TestCaseMain
+
 
 /**
  * This class is generated automatically by Katalon Studio and should not be modified or deleted.
@@ -390,92 +386,77 @@ Profile STG2D-US : payment via credit card</p>
      
 
     static {
-        def allVariables = [:]        
-        allVariables.put('default', ['StgUrl' : 'http://www.stg.arconline.io/', 'StgUserName' : 'Saurav@groupten.com', 'StgPassword' : 'LEEDg10', 'DelayTime' : 3, 'TimeOut' : 40, 'Env' : 'qas', 'QasUrl' : 'http://www.qas.arconline.io', 'QasUserName' : 'usgbcarc@gmail.com', 'QasPassword' : 'initpass', 'DevUrl' : 'http://www.dev.arconline.io', 'DevUserName' : 'rmishra@usgbc.org', 'DevPassword' : 'initpass', 'downloadPath' : 'D:\\Katalon\\AutomationArc\\Automation\\Download\\'])
-        allVariables.put('QAS-CA', allVariables['default'] + ['url' : 'http://www.qas.arconline.io/', 'userName' : 'usgbcarc@gmail.com', 'password' : 'initpass', 'timeOut' : 40, 'env' : 'ARCDataTemplete/QasArcTest.xlsx', 'BuildingSheet' : 'CanadaBuildingProject', 'BuildingTeam' : 'BTeam', 'CCPayment' : 'Payment', 'rowNumTwo' : 2, 'rowNumThree' : 3, 'rowNumFour' : 4, 'rowNumFive' : 5, 'rowNumSix' : 6, 'CitySheet' : 'CanadaCityProject', 'CommunitySheet' : 'CanadaCommunityProject', 'CDataInput' : 'CDataInput', 'rowNumSeven' : 7, 'rowNumEight' : 8, 'PortfoliosSheet' : 'Portfolio', 'BDataInput' : 'BDataInput', 'adminUrl' : 'qas.app.arconline.io/admin', 'adminUserName' : 'qasgbciadmin@gbci.com', 'adminPassword' : 'initpass', 'rowNumNine' : 9, 'ExcelTemplateData' : 'ExcelTemplateDataVerificationSheet.xlsx', 'TemplateEnergyData' : 'Energy', 'TemplateWaterData' : 'Water', 'TemplateWasteData' : 'Waste', 'AllProjectUrl' : 'https://qas.app.arconline.io/app/projects/my-projects/?project-type=all'])
-        allVariables.put('QAS-CN', allVariables['default'] + ['url' : 'http://www.qas.arconline.io/', 'userName' : 'usgbcarc@gmail.com', 'password' : 'initpass', 'timeOut' : 40, 'env' : 'ARCDataTemplete/QasArcTest.xlsx', 'BuildingSheet' : 'ChinaBuildingProejct', 'BuildingTeam' : 'BTeam', 'CCPayment' : 'Payment', 'rowNumTwo' : 2, 'rowNumThree' : 3, 'rowNumFour' : 4, 'rowNumFive' : 5, 'rowNumSix' : 6, 'CitySheet' : 'ChinaCityProject', 'CommunitySheet' : 'ChinaCommunityProject', 'CDataInput' : 'CDataInput', 'rowNumSeven' : 7, 'rowNumEight' : 8, 'PortfoliosSheet' : 'Portfolio', 'BDataInput' : 'BDataInput', 'adminUrl' : 'qas.app.arconline.io/admin', 'adminUserName' : 'qasgbciadmin@gbci.com', 'adminPassword' : 'initpass', 'rowNumNine' : 9, 'ExcelTemplateData' : 'ExcelTemplateDataVerificationSheet.xlsx', 'TemplateEnergyData' : 'Energy', 'TemplateWaterData' : 'Water', 'TemplateWasteData' : 'Waste', 'AllProjectUrl' : 'https://qas.app.arconline.io/app/projects/my-projects/?project-type=all'])
-        allVariables.put('QAS-IND', allVariables['default'] + ['url' : 'http://www.qas.arconline.io/', 'userName' : 'usgbcarc@gmail.com', 'password' : 'initpass', 'timeOut' : 40, 'env' : 'ARCDataTemplete/QasArcTest.xlsx', 'BuildingSheet' : 'BuildingIndiaProject', 'BuildingTeam' : 'BTeam', 'CCPayment' : 'Payment', 'rowNumTwo' : 2, 'rowNumThree' : 3, 'rowNumFour' : 4, 'rowNumFive' : 5, 'rowNumSix' : 6, 'CitySheet' : 'CityIndiaProject', 'CommunitySheet' : 'CommunityIndiaProject', 'CDataInput' : 'CDataInput', 'rowNumSeven' : 7, 'rowNumEight' : 8, 'BDataInput' : 'BDataInput', 'adminUrl' : 'qas.app.arconline.io/admin', 'adminUserName' : 'qasgbciadmin@gbci.com', 'adminPassword' : 'initpass', 'rowNumNine' : 9, 'ExcelTemplateData' : 'ExcelTemplateDataVerificationSheet.xlsx', 'TemplateEnergyData' : 'Energy', 'TemplateWaterData' : 'Water', 'TemplateWasteData' : 'Waste', 'AllProjectUrl' : 'https://qas.app.arconline.io/app/projects/my-projects/?project-type=all', 'TemplateHE' : 'HumanExp'])
-        allVariables.put('QAS-US', allVariables['default'] + ['url' : 'http://www.qas.arconline.io/', 'userName' : 'usgbcarc@gmail.com', 'password' : 'initpass', 'timeOut' : 40, 'env' : 'ARCDataTemplete/QasArcTest.xlsx', 'BuildingSheet' : 'USBuildingProject', 'BuildingTeam' : 'BTeam', 'CCPayment' : 'Payment', 'rowNumTwo' : 2, 'rowNumThree' : 3, 'rowNumFour' : 4, 'rowNumFive' : 5, 'rowNumSix' : 6, 'CitySheet' : 'USCityProject', 'CommunitySheet' : 'USCommunityProject', 'CDataInput' : 'CDataInput', 'PortfoliosSheet' : 'PortfolioQAS', 'rowNumSeven' : 7, 'rowNumEight' : 8, 'BDataInput' : 'BDataInput', 'TeamMember' : 'qas-02@gmail.com', 'adminUrl' : 'qas.app.arconline.io/admin', 'adminUserName' : 'qasgbciadmin@gbci.com', 'adminPassword' : 'initpass', 'rowNumNine' : 9, 'teamMemName' : 'ARC USGBC', 'ExcelTemplateData' : 'ExcelTemplateDataVerificationSheet.xlsx', 'TemplateEnergyData' : 'Energy', 'TemplateWaterData' : 'Water', 'TeamMemberPassword' : 'initpass', 'TemplateWasteData' : 'Waste', 'rowNumTen' : 10, 'AllProjectUrl' : 'https://qas.app.arconline.io/app/projects/my-projects/?project-type=all', 'TemplateHE' : 'HumanExp', 'appUrl' : 'https://qas.app.arconline.io/', 'rowNumEleven' : 11, 'creditCard' : 'creditCard', 'checkPayment' : 'check', 'pricingSheet' : 'Pricing', 'LEEDURL' : 'https://leedonline-qas.usgbc.org/', 'validationSheet' : 'Validation', 'LEEDData' : 'LEEDData', 'projectTeamAdminAndArcAdminName' : 'ARC USGBC', 'projectTeamAdminAndArcAdminEmail' : 'usgbcarc@gmail.com', 'UserId' : '0010639470'])
-        allVariables.put('QAS-US-User2', allVariables['default'] + ['url' : 'http://www.qas.arconline.io/', 'userName' : 'testuser2@usgbc.org', 'password' : 'initpass', 'timeOut' : 40, 'env' : 'ARCDataTemplete/QasArcTest.xlsx', 'BuildingSheet' : 'USBuildingProject', 'BuildingTeam' : 'BTeam', 'CCPayment' : 'Payment', 'rowNumTwo' : 2, 'rowNumThree' : 3, 'rowNumFour' : 4, 'rowNumFive' : 5, 'rowNumSix' : 6, 'CitySheet' : 'USCityProject', 'CommunitySheet' : 'USCommunityProject', 'CDataInput' : 'CDataInput', 'PortfoliosSheet' : 'Portfolio', 'rowNumSeven' : 7, 'rowNumEight' : 8, 'BDataInput' : 'BDataInput', 'TeamMember' : 'qas-02@gmail.com', 'adminUrl' : 'qas.app.arconline.io/admin', 'adminUserName' : 'qasgbciadmin@gbci.com', 'adminPassword' : 'initpass', 'rowNumNine' : 9, 'teamMemName' : 'ARC USGBC', 'ExcelTemplateData' : 'ExcelTemplateDataVerificationSheet.xlsx', 'TemplateEnergyData' : 'Energy', 'TemplateWaterData' : 'Water', 'TeamMemberPassword' : 'initpass', 'TemplateWasteData' : 'Waste', 'rowNumTen' : 10, 'AllProjectUrl' : 'https://qas.app.arconline.io/app/projects/my-projects/?project-type=all', 'TemplateHE' : 'HumanExp', 'appUrl' : 'https://qas.app.arconline.io/'])
-        allVariables.put('STG-CA', allVariables['default'] + ['url' : 'http://www.stg.arconline.io/', 'userName' : 'Saurav@groupten.com', 'password' : 'LEEDg10', 'timeOut' : 40, 'env' : 'ARCDataTemplete/ArcTest.xlsx', 'BuildingSheet' : 'CanadaBuildingProject', 'BuildingTeam' : 'BTeam', 'CCPayment' : 'Payment', 'rowNumTwo' : 2, 'rowNumThree' : 3, 'rowNumFour' : 4, 'rowNumFive' : 5, 'rowNumSix' : 6, 'CitySheet' : 'CanadaCityProject', 'CommunitySheet' : 'CanadaCommunityProject', 'CDataInput' : 'CDataInput', 'rowNumSeven' : 7, 'rowNumEight' : 8, 'PortfoliosSheet' : 'Portfolio', 'BDataInput' : 'BDataInput', 'adminUrl' : 'stg.app.arconline.io/admin', 'adminUserName' : 'stggbciadmin@gbci.com', 'adminPassword' : 'initpass', 'rowNumNine' : 9, 'ExcelTemplateData' : 'ExcelTemplateDataVerificationSheet.xlsx', 'TemplateEnergyData' : 'Energy', 'TemplateWaterData' : 'Water', 'TemplateWasteData' : 'Waste', 'AllProjectUrl' : 'https://stg.app.arconline.io/app/projects/my-projects/?project-type=all'])
-        allVariables.put('STG-CN', allVariables['default'] + ['url' : 'http://www.stg.arconline.io/', 'userName' : 'Saurav@groupten.com', 'password' : 'LEEDg10', 'timeOut' : 40, 'env' : 'ARCDataTemplete/ArcTest.xlsx', 'BuildingSheet' : 'ChinaBuildingProejct', 'BuildingTeam' : 'BTeam', 'CCPayment' : 'Payment', 'rowNumTwo' : 2, 'rowNumThree' : 3, 'rowNumFour' : 4, 'rowNumFive' : 5, 'rowNumSix' : 6, 'CitySheet' : 'ChinaCityProject', 'CommunitySheet' : 'ChinaCommunityProject', 'CDataInput' : 'CDataInput', 'rowNumSeven' : 7, 'rowNumEight' : 8, 'PortfoliosSheet' : 'Portfolio', 'BDataInput' : 'BDataInput', 'adminUrl' : 'stg.app.arconline.io/admin', 'adminUserName' : 'stggbciadmin@gbci.com', 'adminPassword' : 'initpass', 'rowNumNine' : 9, 'ExcelTemplateData' : 'ExcelTemplateDataVerificationSheet.xlsx', 'TemplateEnergyData' : 'Energy', 'TemplateWaterData' : 'Water', 'TemplateWasteData' : 'Waste', 'AllProjectUrl' : 'https://stg.app.arconline.io/app/projects/my-projects/?project-type=all'])
-        allVariables.put('STG-IND', allVariables['default'] + ['url' : 'http://www.stg.arconline.io/', 'userName' : 'Saurav@groupten.com', 'password' : 'LEEDg10', 'timeOut' : 40, 'env' : 'ARCDataTemplete/ArcTest.xlsx', 'BuildingSheet' : 'BuildingIndiaProject', 'BuildingTeam' : 'BTeam', 'CCPayment' : 'Payment', 'rowNumTwo' : 2, 'rowNumThree' : 3, 'rowNumFour' : 4, 'rowNumFive' : 5, 'rowNumSix' : 6, 'CitySheet' : 'CityIndiaProject', 'CommunitySheet' : 'CommunityIndiaProject', 'CDataInput' : 'CDataInput', 'rowNumSeven' : 7, 'rowNumEight' : 8, 'PortfoliosSheet' : 'Portfolio', 'BDataInput' : 'BDataInput', 'adminUrl' : 'stg.app.arconline.io/admin', 'adminUserName' : 'stggbciadmin@gbci.com', 'adminPassword' : 'initpass', 'rowNumNine' : 9, 'ExcelTemplateData' : 'ExcelTemplateDataVerificationSheet.xlsx', 'TemplateEnergyData' : 'Energy', 'TemplateWaterData' : 'Water', 'TemplateWasteData' : 'Waste', 'AllProjectUrl' : 'https://stg.app.arconline.io/app/projects/my-projects/?project-type=all'])
-        allVariables.put('STG-US', allVariables['default'] + ['url' : 'http://www.stg.arconline.io/', 'userName' : 'Saurav@groupten.com', 'password' : 'LEEDg10', 'timeOut' : 40, 'env' : 'ARCDataTemplete/QasArcTest.xlsx', 'BuildingSheet' : 'USBuildingProject', 'BuildingTeam' : 'BTeam', 'CCPayment' : 'Payment', 'rowNumTwo' : 2, 'rowNumThree' : 3, 'rowNumFour' : 4, 'rowNumFive' : 5, 'rowNumSix' : 6, 'CitySheet' : 'USCityProject', 'CommunitySheet' : 'USCommunityProject', 'CDataInput' : 'CDataInput', 'PortfoliosSheet' : 'PortfolioSTG', 'rowNumSeven' : 7, 'rowNumEight' : 8, 'BDataInput' : 'BDataInput', 'TeamMember' : 'stg-01@gmail.com', 'adminUrl' : 'stg.app.arconline.io/admin', 'adminUserName' : 'stggbciadmin@gbci.com', 'adminPassword' : 'initpass', 'rowNumTwentyOne' : 21, 'rowNumTwentyTwo' : 22, 'notCertified' : 'notCertified', 'rowNumTwentyThree' : 23, 'rowNumNine' : 9, 'teamMemName' : 'Saurav K', 'ExcelTemplateData' : 'ExcelTemplateDataVerificationSheet.xlsx', 'TemplateEnergyData' : 'Energy', 'TemplateWaterData' : 'Water', 'TeamMemberPassword' : 'initpass', 'TemplateWasteData' : 'Waste', 'rowNumTen' : 10, 'AllProjectUrl' : 'https://stg.app.arconline.io/app/projects/my-projects/?project-type=all', 'TemplateHE' : 'HumanExp', 'cardPayment' : 'creditCard', 'checkPayment' : 'check', 'appUrl' : 'https://stg.app.arconline.io', 'LEEDURL' : 'https://leedonline-stg.usgbc.org/', 'creditCard' : 'creditCard', 'pricingSheet' : 'Pricing', 'LEEDData' : 'LEEDData', 'projectTeamAdminAndArcAdminName' : 'Saurav K', 'projectTeamAdminAndArcAdminEmail' : 'saurav@groupten.com', 'UserId' : '0010544805', 'rowNumEleven' : 11])
-        allVariables.put('STG2D-US', allVariables['default'] + ['url' : 'https://dev.app.arconline.io/login', 'userName' : 'sswaminathan@usgbc.org', 'password' : 'initpass', 'timeOut' : 40, 'env' : 'ARCDataTemplete/QasArcTest.xlsx', 'BuildingSheet' : 'USBuildingProject', 'BuildingTeam' : 'BTeam', 'CCPayment' : 'Payment', 'rowNumTwo' : 2, 'rowNumThree' : 3, 'rowNumFour' : 4, 'rowNumFive' : 5, 'rowNumSix' : 6, 'CitySheet' : 'USCityProject', 'CommunitySheet' : 'USCommunityProject', 'CDataInput' : 'CDataInput', 'PortfoliosSheet' : 'Portfolio', 'rowNumSeven' : 7, 'rowNumEight' : 8, 'BDataInput' : 'BDataInput', 'TeamMember' : 'testuser2@gmail.com', 'adminUrl' : 'https://dev.app.arconline.io/admin', 'adminUserName' : 'devgbciadmin@usgbc.org', 'adminPassword' : 'initpass', 'rowNumTwentyOne' : 21, 'rowNumTwentyTwo' : 22, 'notCertified' : 'notCertified', 'rowNumTwentyThree' : 23, 'rowNumNine' : 9, 'teamMemName' : 'Test User', 'ExcelTemplateData' : 'ExcelTemplateDataVerificationSheet.xlsx', 'TemplateEnergyData' : 'Energy', 'TemplateWaterData' : 'Water', 'TeamMemberPassword' : 'initpass', 'TemplateWasteData' : 'Waste', 'rowNumTen' : 10, 'AllProjectUrl' : 'https://dev.app.arconline.io/app/projects/my-projects/?project-type=all', 'TemplateHE' : 'HumanExp', 'cardPayment' : 'creditCard', 'checkPayment' : 'check', 'appUrl' : 'https://dev.app.arconline.io/login', 'pricingSheet' : 'Pricing', 'rowNumEleven' : 11, 'creditCard' : 'creditCard', 'LEEDURL' : 'https://leedonline-dev.usgbc.org/', 'projectTeamAdminAndArcAdminName' : 'Sureka Swaminathan', 'projectTeamAdminAndArcAdminEmail' : 'sswaminathan@usgbc.org', 'UserId' : ''])
-        
-        String profileName = RunConfiguration.getExecutionProfile()
-        def selectedVariables = allVariables[profileName]
-		
-		for(object in selectedVariables){
-			String overridingGlobalVariable = RunConfiguration.getOverridingGlobalVariable(object.key)
-			if(overridingGlobalVariable != null){
-				selectedVariables.put(object.key, overridingGlobalVariable)
-			}
-		}
-
-        StgUrl = selectedVariables["StgUrl"]
-        StgUserName = selectedVariables["StgUserName"]
-        StgPassword = selectedVariables["StgPassword"]
-        DelayTime = selectedVariables["DelayTime"]
-        TimeOut = selectedVariables["TimeOut"]
-        Env = selectedVariables["Env"]
-        QasUrl = selectedVariables["QasUrl"]
-        QasUserName = selectedVariables["QasUserName"]
-        QasPassword = selectedVariables["QasPassword"]
-        DevUrl = selectedVariables["DevUrl"]
-        DevUserName = selectedVariables["DevUserName"]
-        DevPassword = selectedVariables["DevPassword"]
-        downloadPath = selectedVariables["downloadPath"]
-        url = selectedVariables["url"]
-        userName = selectedVariables["userName"]
-        password = selectedVariables["password"]
-        timeOut = selectedVariables["timeOut"]
-        env = selectedVariables["env"]
-        BuildingSheet = selectedVariables["BuildingSheet"]
-        BuildingTeam = selectedVariables["BuildingTeam"]
-        CCPayment = selectedVariables["CCPayment"]
-        rowNumTwo = selectedVariables["rowNumTwo"]
-        rowNumThree = selectedVariables["rowNumThree"]
-        rowNumFour = selectedVariables["rowNumFour"]
-        rowNumFive = selectedVariables["rowNumFive"]
-        rowNumSix = selectedVariables["rowNumSix"]
-        CitySheet = selectedVariables["CitySheet"]
-        CommunitySheet = selectedVariables["CommunitySheet"]
-        CDataInput = selectedVariables["CDataInput"]
-        rowNumSeven = selectedVariables["rowNumSeven"]
-        rowNumEight = selectedVariables["rowNumEight"]
-        PortfoliosSheet = selectedVariables["PortfoliosSheet"]
-        BDataInput = selectedVariables["BDataInput"]
-        adminUrl = selectedVariables["adminUrl"]
-        adminUserName = selectedVariables["adminUserName"]
-        adminPassword = selectedVariables["adminPassword"]
-        rowNumNine = selectedVariables["rowNumNine"]
-        ExcelTemplateData = selectedVariables["ExcelTemplateData"]
-        TemplateEnergyData = selectedVariables["TemplateEnergyData"]
-        TemplateWaterData = selectedVariables["TemplateWaterData"]
-        TemplateWasteData = selectedVariables["TemplateWasteData"]
-        AllProjectUrl = selectedVariables["AllProjectUrl"]
-        TemplateHE = selectedVariables["TemplateHE"]
-        TeamMember = selectedVariables["TeamMember"]
-        teamMemName = selectedVariables["teamMemName"]
-        TeamMemberPassword = selectedVariables["TeamMemberPassword"]
-        rowNumTen = selectedVariables["rowNumTen"]
-        appUrl = selectedVariables["appUrl"]
-        rowNumEleven = selectedVariables["rowNumEleven"]
-        creditCard = selectedVariables["creditCard"]
-        checkPayment = selectedVariables["checkPayment"]
-        pricingSheet = selectedVariables["pricingSheet"]
-        LEEDURL = selectedVariables["LEEDURL"]
-        validationSheet = selectedVariables["validationSheet"]
-        LEEDData = selectedVariables["LEEDData"]
-        projectTeamAdminAndArcAdminName = selectedVariables["projectTeamAdminAndArcAdminName"]
-        projectTeamAdminAndArcAdminEmail = selectedVariables["projectTeamAdminAndArcAdminEmail"]
-        UserId = selectedVariables["UserId"]
-        rowNumTwentyOne = selectedVariables["rowNumTwentyOne"]
-        rowNumTwentyTwo = selectedVariables["rowNumTwentyTwo"]
-        notCertified = selectedVariables["notCertified"]
-        rowNumTwentyThree = selectedVariables["rowNumTwentyThree"]
-        cardPayment = selectedVariables["cardPayment"]
-        
+        try {
+            def selectedVariables = TestCaseMain.getGlobalVariables("default")
+			selectedVariables += TestCaseMain.getGlobalVariables(RunConfiguration.getExecutionProfile())
+            selectedVariables += RunConfiguration.getOverridingParameters()
+    
+            StgUrl = selectedVariables['StgUrl']
+            StgUserName = selectedVariables['StgUserName']
+            StgPassword = selectedVariables['StgPassword']
+            DelayTime = selectedVariables['DelayTime']
+            TimeOut = selectedVariables['TimeOut']
+            Env = selectedVariables['Env']
+            QasUrl = selectedVariables['QasUrl']
+            QasUserName = selectedVariables['QasUserName']
+            QasPassword = selectedVariables['QasPassword']
+            DevUrl = selectedVariables['DevUrl']
+            DevUserName = selectedVariables['DevUserName']
+            DevPassword = selectedVariables['DevPassword']
+            downloadPath = selectedVariables['downloadPath']
+            url = selectedVariables['url']
+            userName = selectedVariables['userName']
+            password = selectedVariables['password']
+            timeOut = selectedVariables['timeOut']
+            env = selectedVariables['env']
+            BuildingSheet = selectedVariables['BuildingSheet']
+            BuildingTeam = selectedVariables['BuildingTeam']
+            CCPayment = selectedVariables['CCPayment']
+            rowNumTwo = selectedVariables['rowNumTwo']
+            rowNumThree = selectedVariables['rowNumThree']
+            rowNumFour = selectedVariables['rowNumFour']
+            rowNumFive = selectedVariables['rowNumFive']
+            rowNumSix = selectedVariables['rowNumSix']
+            CitySheet = selectedVariables['CitySheet']
+            CommunitySheet = selectedVariables['CommunitySheet']
+            CDataInput = selectedVariables['CDataInput']
+            rowNumSeven = selectedVariables['rowNumSeven']
+            rowNumEight = selectedVariables['rowNumEight']
+            PortfoliosSheet = selectedVariables['PortfoliosSheet']
+            BDataInput = selectedVariables['BDataInput']
+            adminUrl = selectedVariables['adminUrl']
+            adminUserName = selectedVariables['adminUserName']
+            adminPassword = selectedVariables['adminPassword']
+            rowNumNine = selectedVariables['rowNumNine']
+            ExcelTemplateData = selectedVariables['ExcelTemplateData']
+            TemplateEnergyData = selectedVariables['TemplateEnergyData']
+            TemplateWaterData = selectedVariables['TemplateWaterData']
+            TemplateWasteData = selectedVariables['TemplateWasteData']
+            AllProjectUrl = selectedVariables['AllProjectUrl']
+            TemplateHE = selectedVariables['TemplateHE']
+            TeamMember = selectedVariables['TeamMember']
+            teamMemName = selectedVariables['teamMemName']
+            TeamMemberPassword = selectedVariables['TeamMemberPassword']
+            rowNumTen = selectedVariables['rowNumTen']
+            appUrl = selectedVariables['appUrl']
+            rowNumEleven = selectedVariables['rowNumEleven']
+            creditCard = selectedVariables['creditCard']
+            checkPayment = selectedVariables['checkPayment']
+            pricingSheet = selectedVariables['pricingSheet']
+            LEEDURL = selectedVariables['LEEDURL']
+            validationSheet = selectedVariables['validationSheet']
+            LEEDData = selectedVariables['LEEDData']
+            projectTeamAdminAndArcAdminName = selectedVariables['projectTeamAdminAndArcAdminName']
+            projectTeamAdminAndArcAdminEmail = selectedVariables['projectTeamAdminAndArcAdminEmail']
+            UserId = selectedVariables['UserId']
+            rowNumTwentyOne = selectedVariables['rowNumTwentyOne']
+            rowNumTwentyTwo = selectedVariables['rowNumTwentyTwo']
+            notCertified = selectedVariables['notCertified']
+            rowNumTwentyThree = selectedVariables['rowNumTwentyThree']
+            cardPayment = selectedVariables['cardPayment']
+            
+        } catch (Exception e) {
+            TestCaseMain.logGlobalVariableError(e)
+        }
     }
 }
