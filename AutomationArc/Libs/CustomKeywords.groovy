@@ -2952,17 +2952,19 @@ def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifyReportingP
 
 def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifySnapshotFileNameUploaded"(
     	String sheetName	
-     , 	int rowNum	) {
+     , 	int rowNum	
+     , 	String ratingSystem	) {
     (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).verifySnapshotFileNameUploaded(
         	sheetName
-         , 	rowNum)
+         , 	rowNum
+         , 	ratingSystem)
 }
 
-def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifySnapshotFileNameUploadedCityCommNoneOther"(
+def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifySnapshotFileNameUploadedBuildingOther"(
     	String sheetName	
      , 	int rowNum	
      , 	String ratingSystem	) {
-    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).verifySnapshotFileNameUploadedCityCommNoneOther(
+    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).verifySnapshotFileNameUploadedBuildingOther(
         	sheetName
          , 	rowNum
          , 	ratingSystem)
