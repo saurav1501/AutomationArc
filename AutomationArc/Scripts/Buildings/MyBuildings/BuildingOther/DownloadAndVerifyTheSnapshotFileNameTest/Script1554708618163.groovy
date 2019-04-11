@@ -16,8 +16,8 @@ import internal.GlobalVariable as GlobalVariable
 	
 try {
 		
-		//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginArcAdminToolWithGlobalVariable'()
-		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifySnapshotFileNameUploaded'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumFive)
+		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginArcAdminToolWithGlobalVariable'()
+		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifySnapshotFileNameUploadedBuildingOther'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumFive,"Other")
 		
 	} catch (Throwable t) {
 		WebUI.closeWindowIndex(1)
