@@ -57,7 +57,7 @@
             <profileName>QAS-US</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
-         <runEnabled>true</runEnabled>
+         <runEnabled>false</runEnabled>
          <testSuiteEntity>Test Suites/CommunitySuites/USComSuite/USComNoneSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
@@ -112,11 +112,7 @@
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
          <runEnabled>false</runEnabled>
-<<<<<<< HEAD
-         <testSuiteEntity>Test Suites/CommunitySuites/USComSuite/USComLEEDForComSuite</testSuiteEntity>
-=======
          <testSuiteEntity>Test Suites/TrialFullAccess1To5YearsSuite/USBuildingTrialFullAccess1To5YearsSuite</testSuiteEntity>
->>>>>>> ed3f69b85081120ab9439e5fc2ddb91c575a6343
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>
@@ -125,11 +121,7 @@
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
          <runEnabled>false</runEnabled>
-<<<<<<< HEAD
-         <testSuiteEntity>Test Suites/CommunitySuites/USComSuite/USComNoneSuite</testSuiteEntity>
-=======
          <testSuiteEntity>Test Suites/BuildingSuites/Transit/Underground/USTransitSuite/USTransitUndergroundSuite</testSuiteEntity>
->>>>>>> ed3f69b85081120ab9439e5fc2ddb91c575a6343
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>
@@ -138,11 +130,7 @@
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
          <runEnabled>false</runEnabled>
-<<<<<<< HEAD
-         <testSuiteEntity>Test Suites/CommunitySuites/USComSuite/USComOtherSuite</testSuiteEntity>
-=======
          <testSuiteEntity>Test Suites/BuildingSuites/ParkingSuites/USParkingSuite/USParkingSuite</testSuiteEntity>
->>>>>>> ed3f69b85081120ab9439e5fc2ddb91c575a6343
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>
@@ -151,11 +139,7 @@
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
          <runEnabled>false</runEnabled>
-<<<<<<< HEAD
-         <testSuiteEntity>Test Suites/CitiesSuites/USCitySuite/USCitiesOtherSuite</testSuiteEntity>
-=======
          <testSuiteEntity>Test Suites/BuildingSuites/PortfolioSuite/PortfolioSuite</testSuiteEntity>
->>>>>>> ed3f69b85081120ab9439e5fc2ddb91c575a6343
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>
@@ -164,11 +148,7 @@
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
          <runEnabled>false</runEnabled>
-<<<<<<< HEAD
-         <testSuiteEntity>Test Suites/CitiesSuites/USCitySuite/USCitiesNoneSuite</testSuiteEntity>
-=======
          <testSuiteEntity>Test Suites/BuildingSuites/PortfolioSuite/GRESBSuite</testSuiteEntity>
->>>>>>> ed3f69b85081120ab9439e5fc2ddb91c575a6343
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>
@@ -182,10 +162,10 @@
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>QAS-US</profileName>
+            <profileName>STG-US - Test</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
-         <runEnabled>false</runEnabled>
+         <runEnabled>true</runEnabled>
          <testSuiteEntity>Test Suites/CitiesSuites/USCitySuite/USLEEDForCitiesSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
    </testSuiteRunConfigurations>
