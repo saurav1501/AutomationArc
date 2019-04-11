@@ -22,7 +22,10 @@
          <systemFolderConfiguration>
             <url>Include/config</url>
          </systemFolderConfiguration>
+         <systemFolderConfiguration>
+            <url>Include/config</url>
+         </systemFolderConfiguration>
       </systemFolderList>
    </sourceContent>
-   <type>WEBUI</type>
+   <type>GENERIC</type>
 </Project>

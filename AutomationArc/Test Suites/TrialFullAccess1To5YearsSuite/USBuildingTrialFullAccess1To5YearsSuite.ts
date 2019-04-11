@@ -281,6 +281,12 @@
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/MySchools/UploadArcDataTemplateTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>524e62ab-1528-41d7-a41b-540839e7bf2a</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/MySchools/TrialProjectDetailVerificationAfterExcelUploadTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>69fed6b8-3bde-41dd-aa11-3957689441a3</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -311,9 +317,9 @@
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/1YearFullAccessBuildingOther/VerifyThePayNowPopUpAfterPaymentTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>524e62ab-1528-41d7-a41b-540839e7bf2a</guid>
+      <guid>b209aa6a-cf23-4553-84c6-f41fc91f817c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/MySchools/TrialProjectDetailVerificationAfterExcelUploadTest</testCaseId>
+      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/1YearFullAccessBuildingOther/VerifyThePayNowPopUpAfterPaymentTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

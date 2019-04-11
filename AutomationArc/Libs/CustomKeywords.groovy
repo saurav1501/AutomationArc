@@ -744,6 +744,26 @@ def static "com.arc.ReusableMethods.ResuableMethodsLEEDOnline.loginIntoLEEDOnlin
     (new com.arc.ReusableMethods.ResuableMethodsLEEDOnline()).loginIntoLEEDOnlineWithGlobalVariable()
 }
 
+def static "com.arc.ReusableMethods.ResuableMethodsLEEDOnline.verifySynccdataInLEED"() {
+    (new com.arc.ReusableMethods.ResuableMethodsLEEDOnline()).verifySynccdataInLEED()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsLEEDOnline.verifyAddedTeamMemDetailsInArc"() {
+    (new com.arc.ReusableMethods.ResuableMethodsLEEDOnline()).verifyAddedTeamMemDetailsInArc()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsLEEDOnline.verifyAddNewTeamMemLEED"() {
+    (new com.arc.ReusableMethods.ResuableMethodsLEEDOnline()).verifyAddNewTeamMemLEED()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsLEEDOnline.creditTabShouldNaviageToArc"() {
+    (new com.arc.ReusableMethods.ResuableMethodsLEEDOnline()).creditTabShouldNaviageToArc()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsLEEDOnline.verifyAddedTeamFromToArc"() {
+    (new com.arc.ReusableMethods.ResuableMethodsLEEDOnline()).verifyAddedTeamFromToArc()
+}
+
 def static "com.arc.ReusableMethods.ResuableMethodsLEEDOnline.acceptAggrement"() {
     (new com.arc.ReusableMethods.ResuableMethodsLEEDOnline()).acceptAggrement()
 }
@@ -2932,12 +2952,10 @@ def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifyReportingP
 
 def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifySnapshotFileNameUploaded"(
     	String sheetName	
-     , 	int rowNum	
-     , 	String ratingSystem	) {
+     , 	int rowNum	) {
     (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).verifySnapshotFileNameUploaded(
         	sheetName
-         , 	rowNum
-         , 	ratingSystem)
+         , 	rowNum)
 }
 
 def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifySnapshotFileNameUploadedCityCommNoneOther"(
@@ -3562,6 +3580,22 @@ def static "com.arc.ReusableMethods.ReusableMethodsManage.projectManageState"() 
 
 def static "com.arc.ReusableMethods.ReusableMethodsManage.projectDetailsValidation"() {
     (new com.arc.ReusableMethods.ReusableMethodsManage()).projectDetailsValidation()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsManage.manageProjectEntityNotEditable"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsManage()).manageProjectEntityNotEditable(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsManage.manageEditProjectDetails"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsManage()).manageEditProjectDetails(
+        	sheetName
+         , 	rowNum)
 }
 
 def static "com.arc.ReusableMethods.ReusableMethodsManage.deleteActivity"(

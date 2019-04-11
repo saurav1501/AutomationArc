@@ -25,7 +25,19 @@
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
          <value></value>
+         <variableId>10d45148-79dd-424a-bbf8-8fd69a7458fb</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
          <variableId>f2928dc5-77d4-49b4-814c-10ec43b27457</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>38a2fa2f-3482-45c8-aaa2-28b2b9b80c1e</variableId>
       </variableLink>
    </testCaseLink>
    <testCaseLink>
@@ -371,13 +383,13 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyReviewBillingDetailsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>519fdd53-c6b6-45e3-b797-f221b1b04ab5</guid>
+      <guid>adaa1d95-6f0e-4b40-8565-548561167d7a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/DownloadAndVerifyTheSnapshotFileNameTest</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyTheOrderHistoryUSGBCAccountTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>adaa1d95-6f0e-4b40-8565-548561167d7a</guid>
+      <guid>519fdd53-c6b6-45e3-b797-f221b1b04ab5</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/DownloadAndVerifyTheSnapshotFileNameTest</testCaseId>

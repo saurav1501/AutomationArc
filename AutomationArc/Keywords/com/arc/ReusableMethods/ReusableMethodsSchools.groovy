@@ -29,7 +29,6 @@ public class ReusableMethodsSchools extends BaseClass{
 		String projectArea =data.getCellData(sheetName, "Area", rowNum)
 		WebUI.delay(3)
 		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/grossArea'), projectArea)
-		WebUI.delay(5)
 		String prjName      = WebUI.getAttribute(findTestObject('Object Repository/AddProjectNewUI/projectName'),'value')
 		String prjType 		= WebUI.getText(findTestObject('Object Repository/AddProjectNewUI/selectProjectType'))
 		String prjAddress 	= WebUI.getAttribute(findTestObject('Object Repository/AddProjectNewUI/streetName'),'value')
@@ -209,9 +208,8 @@ public class ReusableMethodsSchools extends BaseClass{
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectTargetCertificationDate')), "Target certification date", false,FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectWeeklyOprHours')), "Weekly Operating Hours", false,FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectOperationaldays')), "Operational days", false,FailureHandling.CONTINUE_ON_FAILURE)
-		//WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectOccupancy')), "Occupancy", false,FailureHandling.CONTINUE_ON_FAILURE)
-	    WebUI.verifyElementPresent(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectOccupancy'), 3, FailureHandling.STOP_ON_FAILURE)
-		}
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectOccupancy')), "Occupancy", false,FailureHandling.CONTINUE_ON_FAILURE)
+	}
 	
 
 	//Validate Data Input Meter Human experience After v4.1 Excel Upload

@@ -20,7 +20,6 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 	ReusableMethodsNavigation navigation = new ReusableMethodsNavigation()
 	WebDriver driver = DriverFactory.getWebDriver()
 	SimpleDateFormat formatarDate = new SimpleDateFormat(' HH:mm:ss')
-	
 	@Keyword
 	public void buildingAddNewProject(String sheetName , int rowNum) {
 		/**************Reading data form excel sheet*************************/

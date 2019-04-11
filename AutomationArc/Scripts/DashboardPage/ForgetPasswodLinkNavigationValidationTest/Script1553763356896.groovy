@@ -19,10 +19,9 @@ try{
 	CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsLandingPage.invalidIDNavigationTest'()
 
 	} catch (Throwable t) {
-	    String url = GlobalVariable.url
-		WebUI.navigateToUrl(url)
-		WebUI.delay(10)
-
+	  String url = GlobalVariable.url
+	  WebUI.navigateToUrl(url)
+	  WebUI.delay(10)
 	  System.out.println(t.getLocalizedMessage())
 	  Error e1 = new Error(t.getMessage())
 	  e1.setStackTrace(t.getStackTrace())
