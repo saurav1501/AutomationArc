@@ -1316,7 +1316,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 		WebUI.verifyMatch(entityName, 'Arc',false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(entityAdd1, address1,false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(entityAdd2, '' , false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(entityAdd2, 'Green Stree' , false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(entityCity, ownerCity, false, FailureHandling.CONTINUE_ON_FAILURE)
 
 		WebUI.verifyOptionSelectedByLabel(findTestObject('Manage/ManageEntity/Manging Country'), ownerCountry,,false, 3)
@@ -2501,7 +2501,7 @@ public class ReusableMethodsManage extends BaseClass {
 		 WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Manage'))
 		 WebUI.delay(1)*/
 		WebUI.click(findTestObject('Manage/Setting/a_setting'))
-		WebUI.delay(3)
+		WebUI.delay(4)
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/Setting/animationLink'))
 	}
 
