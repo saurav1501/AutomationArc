@@ -334,4 +334,28 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/VerifyBillingReceiptAmountTest</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>e471d8a7-dd09-49b8-bd6c-5da1b3f35a7b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/Team/AssignAddedTeamMemberInsideCredit Test</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>f0a4e281-0834-4523-8a6f-5c08f3eb7f89</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/Team/DeactivateAddedTeamMemberTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>ce4fa0da-7e71-43bd-97fc-8d48df90ff0c</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/Team/VerifyDeactivatedTeamMemberShouldNotPresentTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>f7d9ecf9-3328-4a6a-8e25-0a40d4c08a26</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/Team/VerifyTeamLabelShouldBeDisplayDataInputTest</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>
