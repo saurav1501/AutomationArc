@@ -17,9 +17,9 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 	ReusableMethodsSearch reusableMethodsSearch = new 	ReusableMethodsSearch()
 
 	SimpleDateFormat formatarDate = new SimpleDateFormat(' HH:mm:ss')
-	
-	
-	
+
+
+
 	@Keyword
 	public void buildingLEEDPage() {
 		/**********Verify if project type selected is  'Building LEED', a pop up to redirect to LEED ONLINE appears. Verify if redirect button works as expected.*******************/
@@ -70,8 +70,8 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.click(findTestObject('DashboardNavigationNewUI/payment/Cancel'))
 		WebUI.delay(5)
 	}
-	
-	
+
+
 	@Keyword
 	public void buildingAddNewProject(String sheetName , int rowNum) {
 		/**************Reading data form excel sheet*************************/
@@ -89,7 +89,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		String prjCountry 	= data.getCellData(sheetName, "Country", rowNum)
 		String prjState 	= data.getCellData(sheetName, "State", rowNum)
 		String prjZip 		= data.getCellData(sheetName, "Zip", rowNum)
-
+		Date date = new Date(System.currentTimeMillis())
 		String proName
 		if(sheetName.equalsIgnoreCase("USBuildingProject")){
 			proName="USBuilding"
@@ -136,7 +136,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.delay(5)
 	}
 
-	
+
 	//Add New Project City / Community LEED Online
 	@Keyword
 	public void addNewProjectCityORCom(String sheetName , int rowNum, String registerAs) {
@@ -162,7 +162,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		String ownerState    = data.getCellData(sheetName, "OwnerState", rowNum)
 		String ownerPostalCode    = data.getCellData(sheetName, "OwnerPostalCode", rowNum)
 		String ownerPhone     = data.getCellData(sheetName, "OwnerContactNo", rowNum)
-
+		Date date = new Date(System.currentTimeMillis())
 		String proName
 		if(sheetName.equalsIgnoreCase("USCityProject")){
 			proName="USCity"
@@ -188,7 +188,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		else{
 			proName="CNComm"
 		}
-		
+
 		String ProjectName = proName +'LEED v4.1' +formatarDate.format(date)
 		data.setCellData(sheetName,"ProjectName", rowNum, ProjectName)
 		WebUI.click(findTestObject('LEEDOnline/Login/a_Create new Project'))
@@ -232,8 +232,8 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.click(findTestObject('LEEDOnline/ProjReg/Continue'))
 		WebUI.delay(5)
 	}
-	
-	
+
+
 	@Keyword
 	public void acceptAgreement(String sheetName ,int rowNum) {
 		WebUI.delay(2)
@@ -319,7 +319,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.click(findTestObject('LEEDOnline/Receipt/a_Done'))
 		WebUI.delay(5)
 	}
-	
+
 	@Keyword
 	public void searchProgram(String sheetName , int rowNum) {
 		String projectId = data.getCellData(sheetName,"ProjectID",rowNum)
@@ -375,23 +375,23 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.verifyMatch(createNewProj, 'CREATE NEW PROJECT', false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.delay(2)
 	}
-	
+
 	@Keyword
 	public void verifySynccdataInLEED() {
-		
+
 		WebUI.click(findTestObject('Manage/CityCom/LEED/a_Details'))
 		WebUI.delay(3)
-		
+
 		String projectname = 	 WebUI.getText(findTestObject('Manage/CityCom/LEED/projectname'))
 		String population = 	 WebUI.getText(findTestObject('Manage/CityCom/LEED/population'))
 		String Area = 	 WebUI.getText(findTestObject('Manage/CityCom/LEED/Area'))
 		String Isprivate = 	 WebUI.getText(findTestObject('Manage/CityCom/LEED/private'))
-		
+
 		WebUI.verifyMatch(projectname, 'Changed Data LEEDV4 CityCom project',false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(population, '1000',false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(Area, '1000 sq mi' , false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(Isprivate, 'Yes', false, FailureHandling.CONTINUE_ON_FAILURE)
-		
+
 	}
 
 	@Keyword
@@ -400,23 +400,23 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.delay(3)
 		String teamMemberDetails = 	 WebUI.getText(findTestObject('Manage/CityCom/LEED/TeamUserid1'))
 		WebUI.verifyMatch(teamMemberDetails,GlobalVariable.TeamMember, false)
-	
-		
+
+
 	}
-	
+
 	@Keyword
 	public void verifyAddNewTeamMemLEED() {
-		
+
 		WebUI.setText(findTestObject('Manage/CityCom/LEED/TeamSearch'),GlobalVariable.TeamMember2 )
 		WebUI.click(findTestObject('Manage/CityCom/LEED/teamAddButton'))
 		WebUI.delay(3)
-		
+
 		String teamMemberDetails = 	WebUI.getText(findTestObject('Manage/CityCom/LEED/TeamUserid2'))
 		WebUI.verifyMatch(teamMemberDetails,GlobalVariable.TeamMember2, false)
-	
-		
+
+
 	}
-	
+
 	@Keyword
 	public void creditTabShouldNaviageToArc() {
 		WebUI.click(findTestObject('Manage/CityCom/LEED/a_Credits'))
@@ -427,9 +427,9 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.switchToWindowIndex(1)
 		String allAction = WebUI.getText(findTestObject('Manage/CityCom/LEED/All Actions'))
 		WebUI.verifyMatch(allAction,'All Actions', false)
-			
+
 	}
-	
+
 	@Keyword
 	public void teamAdministrator() {
 		WebUI.click(findTestObject('Manage/CityCom/Change/EditStg2'))
@@ -438,11 +438,11 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.delay(4)
 		WebUI.click(findTestObject('Manage/CityCom/Change/input_No_btn btn-primary'))
 		WebUI.delay(3)
-	
+
 	}
-	
-	
-	
+
+
+
 	@Keyword
 	public void verifyAddedTeamFromToArc() {
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
@@ -452,12 +452,12 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.delay(5)
 		String teamMemberDetails = 	WebUI.getText(findTestObject('Manage/CityCom/LEED/ArcUserID2'))
 		WebUI.verifyMatch(teamMemberDetails,GlobalVariable.TeamMember2, false)
-	
-		
-		
-		
+
+
+
+
 	}
-	
+
 	@Keyword
 	public void acceptAggrement() throws IOException, InterruptedException {
 
@@ -501,8 +501,8 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.verifyElementPresent(findTestObject('LEEDOnline/Manage/Arc'), 12)
 		println "Agreement File downloaded and verified successfully"
 	}
-	
-	
+
+
 	@Keyword
 	public void billingDetails(String sheetName, int rowNum){
 		WebUI.delay(2)

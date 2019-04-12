@@ -37,7 +37,7 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		String prjCountry 	= data.getCellData(sheetName, "Country", rowNum)
 		String prjState 	= data.getCellData(sheetName, "State", rowNum)
 		String prjZip 		= data.getCellData(sheetName, "Zip", rowNum)
-
+		Date date = new Date(System.currentTimeMillis())
 		String proName
 		if(sheetName.equalsIgnoreCase("USBuildingProject")){
 			proName="USBuilding"
@@ -106,7 +106,7 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		String prjState 	    = data.getCellData(sheetName, "State", rowNum)
 		String prjZip 		    = data.getCellData(sheetName, "Zip", rowNum)
 		String isStation 		= data.getCellData(sheetName, "is_station", rowNum)
-
+		Date date = new Date(System.currentTimeMillis())
 		String proName
 		if(sheetName.equalsIgnoreCase("USBuildingProject")){
 			proName="USBuilding"
@@ -170,7 +170,7 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		String prjCountry 	= data.getCellData(sheetName, "Country", rowNum)
 		String prjState 	= data.getCellData(sheetName, "State", rowNum)
 		String prjZip 		= data.getCellData(sheetName, "Zip", rowNum)
-
+		Date date = new Date(System.currentTimeMillis())
 
 		String proName
 		if(sheetName.equalsIgnoreCase("USCityProject")){
@@ -242,7 +242,7 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		String prjCountry 	= data.getCellData(sheetName, "Country", rowNum)
 		String prjState 	= data.getCellData(sheetName, "State", rowNum)
 		String prjZip 		= data.getCellData(sheetName, "Zip", rowNum)
-
+		Date date = new Date(System.currentTimeMillis())
 		String	proName="USCity"
 
 		String ProjectName = proName + prjRating + formatarDate.format(date)
@@ -290,7 +290,7 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		String prjCountry 	= data.getCellData(sheetName, "Country", rowNum)
 		String prjState 	= data.getCellData(sheetName, "State", rowNum)
 		String prjZip 		= data.getCellData(sheetName, "Zip", rowNum)
-
+		Date date = new Date(System.currentTimeMillis())
 
 		String proName
 		if(sheetName.equalsIgnoreCase("USBuildingProject")){
@@ -375,7 +375,7 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		//String prjCountry 	= data.getCellData(sheetName, "Country", rowNum)
 		//String prjState 	= data.getCellData(sheetName, "State", rowNum)
 		//String prjZip 		= data.getCellData(sheetName, "Zip", rowNum)
-
+		
 		String proName
 		if(sheetName.equalsIgnoreCase("USBuildingProject")){
 			proName="USBuilding"
@@ -559,7 +559,7 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		String prjState 	    = data.getCellData(sheetName, "State", rowNum)
 		String prjZip 		    = data.getCellData(sheetName, "Zip", rowNum)
 		String isStation 		= data.getCellData(sheetName, "is_station", rowNum)
-
+		Date date = new Date(System.currentTimeMillis())
 		String proName="USBuilding"
 		String ProjectName = proName +prjRating +formatarDate.format(date)
 

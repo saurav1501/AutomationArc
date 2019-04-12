@@ -130,6 +130,7 @@
 	<classpathentry kind="lib" path="D:/AutomationArc/AutomationArc/Drivers/xmlbeans-2.6.0.jar"/>
 	<classpathentry kind="lib" path="D:/AutomationArc/AutomationArc/Drivers/xmpbox-2.0.11.jar"/>
 	<classpathentry kind="lib" path="D:/AutomationArc/AutomationArc/Drivers/zip4j-1.3.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/.katalon/plugin/install/3553/1.0.1/calendar-plugin.jar"/>
 	<classpathentry exported="true" kind="con" path="GROOVY_SUPPORT"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
