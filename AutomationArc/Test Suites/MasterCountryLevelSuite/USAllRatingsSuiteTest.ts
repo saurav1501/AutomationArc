@@ -111,7 +111,7 @@
             <profileName>STG-US - Test</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
-         <runEnabled>true</runEnabled>
+         <runEnabled>false</runEnabled>
          <testSuiteEntity>Test Suites/TrialFullAccess1To5YearsSuite/USBuildingTrialFullAccess1To5YearsSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
