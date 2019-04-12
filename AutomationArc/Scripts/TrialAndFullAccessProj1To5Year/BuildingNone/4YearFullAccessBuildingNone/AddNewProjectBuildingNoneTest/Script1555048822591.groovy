@@ -18,7 +18,7 @@ import internal.GlobalVariable as GlobalVariable
 	try {
 	
 		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToBuilding'()
-		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsAddNewProject.buildingAddNewProject'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumFive)
+		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsAddNewProject.buildingAddNewProject'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
 	    CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.selectTrial'()
 		
 	} catch (Throwable t) {

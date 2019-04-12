@@ -51,7 +51,7 @@ public class BaseClass {
 	public static XlsReader dataExcelTemplate = new XlsReader(excelTemplateData)
 	public static String screenShot = RunConfiguration.getProjectDir()+"/ScreenShot/screenshot_"
 	public static TestObject myTestObject = new TestObject("customObject")
-	public static Date date = new Date(System.currentTimeMillis())
+	//public static Date date = new Date(System.currentTimeMillis())
 	public static Date dateNew = new Date()
 	public static String gresbUpload = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Gresb.xlsx"
 
