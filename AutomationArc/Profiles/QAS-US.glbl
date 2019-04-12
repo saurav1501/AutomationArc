@@ -229,4 +229,9 @@
       <initValue>'0010639470'</initValue>
       <name>UserId</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'qas-02@gmail.com'</initValue>
+      <name>TeamMember2</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
