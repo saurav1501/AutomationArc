@@ -21,6 +21,7 @@ import org.openqa.selenium.WebElement
 import org.testng.Assert
 
 import com.arc.BaseClass.BaseClass
+import com.katalon.plugin.keyword.calendar.SetDateCalendarKeyword
 import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.webui.driver.DriverFactory
@@ -2559,8 +2560,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ReadingThree'),'value'),reading1)
 	}
 
-
-
+	
 
 	@Keyword
 	public void createWasteMeter(){
@@ -2574,28 +2574,26 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'),2)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
 		WebUI.delay(4)
-		WebUI.setDa(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter start_'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter start_'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.mouseOver(findTestObject('DataInput/CreateMeterBuilding/year_2017'))
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/year_2017'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Jan'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Jan'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter end_da'))
-
-		/*WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker'))
-		 WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
-		 WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
-		 WebUI.mouseOver(findTestObject('DataInput/CreateMeterBuilding/year_2017'))
-		 WebUI.click(findTestObject('DataInput/CreateMeterBuilding/year_2017'))
-		 WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Jan'))
-		 WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Jan'))
-		 WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
-		 WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
-		 WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter end_da'))
-		 WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker'))
-		 WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
-		 WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
-		 WebUI.mouseOver(findTestObject('DataInput/CreateMeterBuilding/year_2017'))
-		 WebUI.click(findTestObject('DataInput/CreateMeterBuilding/year_2017'))
-		 WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Feb'))
-		 WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Feb'))
-		 WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
-		 WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))*/
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.mouseOver(findTestObject('DataInput/CreateMeterBuilding/year_2017'))
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/year_2017'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Feb'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Feb'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
 		WebUI.sendKeys(findTestObject('Object Repository/DataInput/CreateMeterBuilding/wasteGenerated'), '1000')
 		WebUI.sendKeys(findTestObject('Object Repository/DataInput/CreateMeterBuilding/wasteDiverted'), '800')
 		WebUI.sendKeys(findTestObject('Object Repository/DataInput/CreateMeterBuilding/source') ,'office')

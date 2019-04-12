@@ -33,13 +33,13 @@ public class ReusableMethodsSchools extends BaseClass{
 		String prjType 		= WebUI.getText(findTestObject('Object Repository/AddProjectNewUI/selectProjectType'))
 		String prjAddress 	= WebUI.getAttribute(findTestObject('Object Repository/AddProjectNewUI/streetName'),'value')
 		String prjCity 		= WebUI.getAttribute(findTestObject('Object Repository/AddProjectNewUI/cityName'),'value')
-		String prjCountry 	= WebUI.getText(findTestObject('Object Repository/AddProjectNewUI/GetSchoolCountryName'))
 		String prjState 	= WebUI.getText(findTestObject('Object Repository/AddProjectNewUI/GetSchoolStateName'))
 		String prjZip 		= WebUI.getAttribute(findTestObject('Object Repository/AddProjectNewUI/zipCode'),'value')
 		data.setCellData(sheetName, "ProjectName", rowNum, prjName)
 		data.setCellData(sheetName, "ProjectType", rowNum, prjType)
 		data.setCellData(sheetName, "Address", rowNum, prjAddress)
 		data.setCellData(sheetName, "City", rowNum, prjCity)
+		String prjCountry 	= WebUI.getText(findTestObject('Object Repository/AddProjectNewUI/GetSchoolCountryName'))
 		data.setCellData(sheetName, "Country", rowNum, prjCountry )
 		data.setCellData(sheetName, "State", rowNum, prjState)
 		data.setCellData(sheetName, "Zip", rowNum, prjZip)
@@ -208,7 +208,9 @@ public class ReusableMethodsSchools extends BaseClass{
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectTargetCertificationDate')), "Target certification date", false,FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectWeeklyOprHours')), "Weekly Operating Hours", false,FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectOperationaldays')), "Operational days", false,FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectOccupancy')), "Occupancy", false,FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectOccupancy')), "Occupancy", false,FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyElementPresent(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectOccupancy'), 5)
+		
 	}
 	
 

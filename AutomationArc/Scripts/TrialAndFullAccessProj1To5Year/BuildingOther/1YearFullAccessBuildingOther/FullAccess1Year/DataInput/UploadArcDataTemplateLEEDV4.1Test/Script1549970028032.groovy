@@ -25,11 +25,8 @@ import org.openqa.selenium.Keys as Keys
 
 
 	try {
-		//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToTransitDataInput'()
-		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.uploadArcDataTemplateLEEDV4'()
-		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.uploadArcDataTemplateTransitAboveAnalytics'()
+			CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.uploadArcDataTemplateLEEDV4'()
 		
-
 	} catch (Throwable t) {	
 		System.out.println(t.getLocalizedMessage())
 		Error e1 = new Error(t.getMessage())

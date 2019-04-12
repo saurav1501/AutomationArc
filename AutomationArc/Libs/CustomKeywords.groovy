@@ -1140,6 +1140,28 @@ def static "com.arc.ReusableMethods.ReusableMethodsSearch.searchLEEDProgram"(
          , 	rowNum)
 }
 
+def static "com.helper.grid.GridHelper.GetValueFromGrid"(
+    	TestObject baseTestObject	
+     , 	int rowIndex	
+     , 	int colIndex	) {
+    (new com.helper.grid.GridHelper()).GetValueFromGrid(
+        	baseTestObject
+         , 	rowIndex
+         , 	colIndex)
+}
+
+def static "com.helper.grid.GridHelper.getValueOrClickOnColumn"(
+    	TestObject baseTestObject	
+     , 	int rowIndex	
+     , 	int colIndex	
+     , 	String type	) {
+    (new com.helper.grid.GridHelper()).getValueOrClickOnColumn(
+        	baseTestObject
+         , 	rowIndex
+         , 	colIndex
+         , 	type)
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsSchools.addNewSchoolProjectRegistration"(
     	String sheetName	
      , 	int rowNum	) {
@@ -1282,28 +1304,6 @@ def static "com.arc.ReusableMethods.ReusableMethodsSchools.verifyFormaldehydeTot
 
 def static "com.arc.ReusableMethods.ReusableMethodsSchools.navigateToBuildingSchools"() {
     (new com.arc.ReusableMethods.ReusableMethodsSchools()).navigateToBuildingSchools()
-}
-
-def static "com.helper.grid.GridHelper.GetValueFromGrid"(
-    	TestObject baseTestObject	
-     , 	int rowIndex	
-     , 	int colIndex	) {
-    (new com.helper.grid.GridHelper()).GetValueFromGrid(
-        	baseTestObject
-         , 	rowIndex
-         , 	colIndex)
-}
-
-def static "com.helper.grid.GridHelper.getValueOrClickOnColumn"(
-    	TestObject baseTestObject	
-     , 	int rowIndex	
-     , 	int colIndex	
-     , 	String type	) {
-    (new com.helper.grid.GridHelper()).getValueOrClickOnColumn(
-        	baseTestObject
-         , 	rowIndex
-         , 	colIndex
-         , 	type)
 }
 
 def static "com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToBuilding"() {
@@ -2956,17 +2956,19 @@ def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifyReportingP
 
 def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifySnapshotFileNameUploaded"(
     	String sheetName	
-     , 	int rowNum	) {
+     , 	int rowNum	
+     , 	String ratingSystem	) {
     (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).verifySnapshotFileNameUploaded(
         	sheetName
-         , 	rowNum)
+         , 	rowNum
+         , 	ratingSystem)
 }
 
-def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifySnapshotFileNameUploadedCityCommNoneOther"(
+def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifySnapshotFileNameUploadedCity"(
     	String sheetName	
      , 	int rowNum	
      , 	String ratingSystem	) {
-    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).verifySnapshotFileNameUploadedCityCommNoneOther(
+    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).verifySnapshotFileNameUploadedCity(
         	sheetName
          , 	rowNum
          , 	ratingSystem)
