@@ -375,7 +375,7 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		//String prjCountry 	= data.getCellData(sheetName, "Country", rowNum)
 		//String prjState 	= data.getCellData(sheetName, "State", rowNum)
 		//String prjZip 		= data.getCellData(sheetName, "Zip", rowNum)
-		
+
 		String proName
 		if(sheetName.equalsIgnoreCase("USBuildingProject")){
 			proName="USBuilding"
@@ -578,10 +578,10 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		//String PaymentPageText = WebUI.getText(findTestObject('Add_Project_Details/VerifyPaymentPage_ text'))
 		String PaymentPageText = WebUI.getText(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'))
 		WebUI.verifyMatch(PaymentPageText,'Project Setup',true)
-				
+
 		WebUI.click(findTestObject('Object Repository/paymentPageNewUI/payNowButton'),FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.delay(5)
-		
+
 	}
 
 	@Keyword

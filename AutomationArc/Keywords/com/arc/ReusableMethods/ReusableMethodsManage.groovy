@@ -639,7 +639,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(3)
 		WebUI.verifyElementPresent(findTestObject('Portfolio/GRESB/Setting/p_Re-enter Occupancy'),2,FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyElementPresent(findTestObject('Portfolio/GRESB/Setting/p_Re-enter OPPHour'),2,FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyElementPresent(findTestObject('Portfolio/GRESB/Setting/p_Re-enterArea'),2,FailureHandling.CONTINUE_ON_FAILURE)
+	//	WebUI.verifyElementPresent(findTestObject('Portfolio/GRESB/Setting/p_Re-enterArea'),2,FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Portfolio/GRESB/Setting/button_CANCEL'))
 		WebUI.delay(10)

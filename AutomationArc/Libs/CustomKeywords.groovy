@@ -946,6 +946,24 @@ def static "com.arc.ReusableMethods.ResuableMethodsLEEDOnline.checkPreCertPrelim
     (new com.arc.ReusableMethods.ResuableMethodsLEEDOnline()).checkPreCertPreliminaryReviewStatus()
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodValidation.buildingAddNewProjectPageValidation"(
+    	String sheetName	
+     , 	int rowNum1	) {
+    (new com.arc.ReusableMethods.ReusableMethodValidation()).buildingAddNewProjectPageValidation(
+        	sheetName
+         , 	rowNum1)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodValidation.paymentPageProjectDataValidation"(
+    	String sheetName	
+     , 	int rowNum1	
+     , 	int yearOfSubscription	) {
+    (new com.arc.ReusableMethods.ReusableMethodValidation()).paymentPageProjectDataValidation(
+        	sheetName
+         , 	rowNum1
+         , 	yearOfSubscription)
+}
+
 def static "com.arc.ReusableMethods.ResuableMethodsLandingPage.invalidIDLoginTest"() {
     (new com.arc.ReusableMethods.ResuableMethodsLandingPage()).invalidIDLoginTest()
 }
@@ -1074,24 +1092,6 @@ def static "com.arc.ReusableMethods.ResuableMethodsLandingPage.verifyNavigationP
     (new com.arc.ReusableMethods.ResuableMethodsLandingPage()).verifyNavigationPopup()
 }
 
-def static "com.arc.ReusableMethods.ReusableMethodValidation.buildingAddNewProjectPageValidation"(
-    	String sheetName	
-     , 	int rowNum1	) {
-    (new com.arc.ReusableMethods.ReusableMethodValidation()).buildingAddNewProjectPageValidation(
-        	sheetName
-         , 	rowNum1)
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodValidation.paymentPageProjectDataValidation"(
-    	String sheetName	
-     , 	int rowNum1	
-     , 	int yearOfSubscription	) {
-    (new com.arc.ReusableMethods.ReusableMethodValidation()).paymentPageProjectDataValidation(
-        	sheetName
-         , 	rowNum1
-         , 	yearOfSubscription)
-}
-
 def static "com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram"(
     	String sheetName	
      , 	int rowNum	) {
@@ -1138,28 +1138,6 @@ def static "com.arc.ReusableMethods.ReusableMethodsSearch.searchLEEDProgram"(
     (new com.arc.ReusableMethods.ReusableMethodsSearch()).searchLEEDProgram(
         	sheetName
          , 	rowNum)
-}
-
-def static "com.helper.grid.GridHelper.GetValueFromGrid"(
-    	TestObject baseTestObject	
-     , 	int rowIndex	
-     , 	int colIndex	) {
-    (new com.helper.grid.GridHelper()).GetValueFromGrid(
-        	baseTestObject
-         , 	rowIndex
-         , 	colIndex)
-}
-
-def static "com.helper.grid.GridHelper.getValueOrClickOnColumn"(
-    	TestObject baseTestObject	
-     , 	int rowIndex	
-     , 	int colIndex	
-     , 	String type	) {
-    (new com.helper.grid.GridHelper()).getValueOrClickOnColumn(
-        	baseTestObject
-         , 	rowIndex
-         , 	colIndex
-         , 	type)
 }
 
 def static "com.arc.ReusableMethods.ReusableMethodsSchools.addNewSchoolProjectRegistration"(
@@ -1304,6 +1282,28 @@ def static "com.arc.ReusableMethods.ReusableMethodsSchools.verifyFormaldehydeTot
 
 def static "com.arc.ReusableMethods.ReusableMethodsSchools.navigateToBuildingSchools"() {
     (new com.arc.ReusableMethods.ReusableMethodsSchools()).navigateToBuildingSchools()
+}
+
+def static "com.helper.grid.GridHelper.GetValueFromGrid"(
+    	TestObject baseTestObject	
+     , 	int rowIndex	
+     , 	int colIndex	) {
+    (new com.helper.grid.GridHelper()).GetValueFromGrid(
+        	baseTestObject
+         , 	rowIndex
+         , 	colIndex)
+}
+
+def static "com.helper.grid.GridHelper.getValueOrClickOnColumn"(
+    	TestObject baseTestObject	
+     , 	int rowIndex	
+     , 	int colIndex	
+     , 	String type	) {
+    (new com.helper.grid.GridHelper()).getValueOrClickOnColumn(
+        	baseTestObject
+         , 	rowIndex
+         , 	colIndex
+         , 	type)
 }
 
 def static "com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToBuilding"() {
@@ -2964,11 +2964,11 @@ def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifySnapshotFi
          , 	ratingSystem)
 }
 
-def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifySnapshotFileNameUploadedCity"(
+def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifySnapshotFileNameUploadedBuilding"(
     	String sheetName	
      , 	int rowNum	
      , 	String ratingSystem	) {
-    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).verifySnapshotFileNameUploadedCity(
+    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).verifySnapshotFileNameUploadedBuilding(
         	sheetName
          , 	rowNum
          , 	ratingSystem)

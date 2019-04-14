@@ -55,6 +55,9 @@ public class ResuableMethodsGRESB extends BaseClass {
 
 		WebUI.click(findTestObject('Portfolio/GRESB/button_Import from GRESB'))
 		WebUI.delay(5)
+		
+		Date date = new Date(System.currentTimeMillis())
+		
 
 		data.setCellData(sheetName,"ProjectName",5, "GRESB Portfolio" +" " +formatarDate.format(date))
 		String prjName 	= data.getCellData(sheetName, "ProjectName",5)
@@ -84,6 +87,7 @@ public class ResuableMethodsGRESB extends BaseClass {
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Portfolio/GRESB/button_UPLOAD'))
 		WebUI.delay(30)
+		WebUI.delay(500)
 
 	}
 
@@ -152,7 +156,8 @@ public class ResuableMethodsGRESB extends BaseClass {
 		String ownerOrg 	= data.getCellData(sheetName, "GOwnerOrganization", rowNum);
 		String ownerMail 	= data.getCellData(sheetName, "GOwnerEmail", rowNum);
 		String ownerName = data.getCellData(sheetName, "GOwnerOrg", rowNum);
-
+		Date date = new Date(System.currentTimeMillis())
+		
 
 		/*	WebUI.click(findTestObject('Portfolio/GRESB/button_Import from GRESB'))
 		 WebUI.delay(5)*/
@@ -238,7 +243,8 @@ public class ResuableMethodsGRESB extends BaseClass {
 
 		/*WebUI.click(findTestObject('Portfolio/GRESB/Owner/a_Click here'))
 		 WebUI.delay(2)*/
-
+		Date date = new Date(System.currentTimeMillis())
+		
 		String ownerName1= ownerName.substring(0, 9)
 		String OwnerName = ownerName1 +formatarDate.format(date)
 		data.setCellData(sheetName,"GOwnerOrg", rowNum, OwnerName)

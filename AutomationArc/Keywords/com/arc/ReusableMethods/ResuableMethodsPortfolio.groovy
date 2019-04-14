@@ -20,6 +20,8 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 public class ResuableMethodsPortfolio extends BaseClass {
 	WebDriver driver= DriverFactory.getWebDriver()
 	SimpleDateFormat formatarDate = new SimpleDateFormat('HHmmss')
+	Date date = new Date(System.currentTimeMillis())
+	
 	@Keyword
 	public void createNewPortfolio( String sheetName,int rowNum) throws IOException, InterruptedException {
 		String  organization = data.getCellData(sheetName,"Organization",rowNum)
@@ -197,16 +199,16 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		Integer totalScore6valule= Double.parseDouble(totalScore6Valule)
 
 		double totalScoreaverage = (totalScore1valule + totalScore2valule + totalScore3valule + totalScore4valule + totalScore5valule + totalScore6valule) / 6
-		
+
 		BigDecimal DaverageScore = new BigDecimal(totalScoreaverage)
 		DaverageScore = DaverageScore .setScale(0,RoundingMode.HALF_EVEN)
 		String totalScoreAvg = DaverageScore.toString()
-	
-		
-		
+
+
+
 		/*int totalScoreAverage = Math.round(totalScoreaverage)
-		String totalScoreAvg = totalScoreAverage.toString()
-	*/	data.setCellData(sheetName,"totalScore",11,totalScoreAvg)
+		 String totalScoreAvg = totalScoreAverage.toString()
+		 */	data.setCellData(sheetName,"totalScore",11,totalScoreAvg)
 
 		println totalScoreaverage
 		ArrayList<Integer> totalScore = new ArrayList<Integer>()
@@ -399,7 +401,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		BigDecimal averageScore2 = new BigDecimal(daverageScore1)
 		averageScore2 =  averageScore2.setScale(2, RoundingMode.HALF_UP)
 		String caverageScore = averageScore2.toString()
-	
+
 		String lowestScore  =data.getCellData(sheetName, "carbonEmission",7)
 
 		String highestScorePoint = WebUI.getText(findTestObject('Portfolio/Common/CaronHighest'))
@@ -409,7 +411,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		String highestscorepoint = highestScorepoint.toString()
 		WebUI.verifyMatch(highestscorepoint,highScore,false)
 		println "Highest score for carbon  verified Successfully"
-		
+
 		String avgScorePoint = WebUI.getText(findTestObject('Portfolio/Common/CarbonAvg'))
 		double avgScorePoint1 = Double.parseDouble(avgScorePoint)
 		BigDecimal avgScorePoint2 = new BigDecimal(avgScorePoint1)
@@ -600,8 +602,8 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		BigDecimal DaverageScore = new BigDecimal(averageScore)
 		DaverageScore = DaverageScore .setScale(0,RoundingMode.HALF_EVEN)
 		String CaverageScore = DaverageScore.toString()
-	
-		
+
+
 		String lowestScore  =data.getCellData(sheetName, "transportation", 7)
 
 		/*WebUI.click(findTestObject('Portfolio/Common/a_ Analytics'))
@@ -959,11 +961,11 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		BigDecimal DaverageScore = new BigDecimal(energyaverage)
 		DaverageScore = DaverageScore .setScale(0,RoundingMode.HALF_EVEN)
 		String energyAvg = DaverageScore.toString()
-	
-		
+
+
 		/*int energyAverage = Math.round(energyaverage)
-		String energyAvg = energyAverage.toString()
-	*/	data.setCellData(sheetName,"energyScore",11,energyAvg)
+		 String energyAvg = energyAverage.toString()
+		 */	data.setCellData(sheetName,"energyScore",11,energyAvg)
 		println energyaverage
 
 		ArrayList<Integer> energy = new ArrayList<Integer>()
@@ -1033,12 +1035,12 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		BigDecimal DaverageScore = new BigDecimal(wateraverage)
 		DaverageScore = DaverageScore .setScale(0,RoundingMode.HALF_EVEN)
 		String waterAvg = DaverageScore.toString()
-	
-		
-		
+
+
+
 		/*int waterAverage = Math.round(wateraverage)
-		String waterAvg = waterAverage.toString()
-	*/	data.setCellData(sheetName,"waterScore",11,waterAvg)
+		 String waterAvg = waterAverage.toString()
+		 */	data.setCellData(sheetName,"waterScore",11,waterAvg)
 
 		println wateraverage
 		ArrayList<Integer> water = new ArrayList<Integer>()
@@ -1103,15 +1105,15 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		Integer waste6valule=Double.parseDouble(waste6Valule)
 
 		double wasteaverage = (waste1valule + waste2valule + waste3valule + waste4valule + waste5valule + waste6valule) / 6
-		
+
 		BigDecimal DaverageScore = new BigDecimal(wasteaverage)
 		DaverageScore = DaverageScore .setScale(0,RoundingMode.HALF_EVEN)
 		String wasteAvg = DaverageScore.toString()
-	
-		
-	/*	int wasteAverage = Math.round(wasteaverage)
-		String wasteAvg = wasteAverage.toString()
-	*/	
+
+
+		/*	int wasteAverage = Math.round(wasteaverage)
+		 String wasteAvg = wasteAverage.toString()
+		 */	
 		data.setCellData(sheetName,"wasteScore",11,wasteAvg)
 		println wasteaverage
 
@@ -1184,7 +1186,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		BigDecimal DaverageScore = new BigDecimal(transportationaverage)
 		DaverageScore = DaverageScore .setScale(0,RoundingMode.HALF_EVEN)
 		String transportationAvg = DaverageScore.toString()
-		
+
 		data.setCellData(sheetName,"transportation",11,transportationAvg)
 		println transportationaverage
 
@@ -1253,11 +1255,11 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		Integer humanExperience6valule=Double.parseDouble(humanExperience6Valule)
 
 		double humanExperienceaverage = (humanExperience1valule + humanExperience2valule + humanExperience3valule + humanExperience4valule + humanExperience5valule + humanExperience6valule ) / 6
-		
+
 		BigDecimal DaverageScore = new BigDecimal(humanExperienceaverage)
 		DaverageScore = DaverageScore .setScale(0,RoundingMode.HALF_EVEN)
 		String humanExperienceAvg = DaverageScore.toString()
-		
+
 		data.setCellData(sheetName,"humanExperience",11,humanExperienceAvg)
 
 		println humanExperienceAvg
@@ -1709,7 +1711,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		String sareductionTarget2 = areductionTarget2.toString()
 		String scGoalPercentage = cGoalPercentage.toString()
 		WebUI.verifyMatch(sareductionTarget2, scGoalPercentage,true,FailureHandling.CONTINUE_ON_FAILURE)
-		
+
 		System.out.println(areductionTarget2)
 		System.out.println(cGoalPercentage)
 		println "verifyed 2018 Reduction Targets"
@@ -2173,12 +2175,12 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		double cGoalPercetage=Double.parseDouble(greplace)
 
 		double result =((annaulwasteGen) * (cGoalPercetage * total_No_Proj))/100
-		
+
 		BigDecimal cGoalPercentage = new BigDecimal(result)
 		cGoalPercentage =  cGoalPercentage .setScale(2, RoundingMode.HALF_UP)
 		String areductionTarget = WebUI.getText(findTestObject('Portfolio/Total/WasteGRTarget'))
 		double areductionTarget1 = Double.parseDouble(areductionTarget)
-		
+
 		BigDecimal areductionTarget2 = new BigDecimal(areductionTarget1)
 		areductionTarget2 =  areductionTarget2 .setScale(2, RoundingMode.HALF_UP)
 
@@ -2723,16 +2725,16 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		BigDecimal cannualCarconEmession =  new BigDecimal(annualCarconEmession)
 		cannualCarconEmession =  cannualCarconEmession .setScale(0, RoundingMode.HALF_UP)
 		String cAnnualCarconEmession = cannualCarconEmession.toString()
-	
-		
+
+
 		String emissionstotaloccupant =  data.getCellData(sheetName,"occupancy", 8)
 		Double emissionstotaloccupantocc =  Double.parseDouble(emissionstotaloccupant)
-		
-		
+
+
 		String actannualcarconEmession = WebUI.getText(findTestObject('Portfolio/CarbonVal/AnualEmession'))
 		BigDecimal UactannualcarconEmession =  new BigDecimal(actannualcarconEmession)
 		UactannualcarconEmession =  UactannualcarconEmession .setScale(0, RoundingMode.HALF_UP)
-		String uactannualcarconEmession = UactannualcarconEmession.toString()	
+		String uactannualcarconEmession = UactannualcarconEmession.toString()
 		WebUI.verifyMatch(uactannualcarconEmession, cAnnualCarconEmession,true, FailureHandling.CONTINUE_ON_FAILURE)
 
 		/************* Verifying Emissions per occupant *****************************************/
@@ -2740,7 +2742,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		BigDecimal emissionsTotaloccupantu =  new BigDecimal(aemessionPerOccupaint)
 		emissionsTotaloccupantu =  emissionsTotaloccupantu .setScale(0, RoundingMode.HALF_UP)
 		String uemissionsTotaloccupant = emissionsTotaloccupantu.toString()
-		
+
 		Double emissionsperoccupant = annualCarconEmession/emissionstotaloccupantocc
 		BigDecimal cemissionsperoccupant =  new BigDecimal(emissionsperoccupant)
 		cemissionsperoccupant =  cemissionsperoccupant .setScale(0, RoundingMode.HALF_UP)
@@ -2759,14 +2761,14 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		Str2 =  Str2 .setScale(0, RoundingMode.HALF_UP)
 		String UStr2 = Str2.toString()
 
-		
+
 		String str4 = WebUI.getText(findTestObject('Portfolio/CarbonVal/CarbonPage/Annual Scope 2'))
 		BigDecimal str25 = new BigDecimal(str4)
 		str25 =  str25 .setScale(0, RoundingMode.HALF_UP)
 		String str24 = str25.toString()
 
-		
-		
+
+
 		String str1 = WebUI.getText(findTestObject('Portfolio/CarbonVal/CarbonPage/Annual Energy Emissions'))
 		BigDecimal Str1 = new BigDecimal(str1)
 		Str1 =  Str1 .setScale(0, RoundingMode.HALF_UP)
@@ -3436,22 +3438,22 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		BigDecimal scope1 = new BigDecimal(Scope1)
 		scope1 =  scope1.setScale(0, RoundingMode.HALF_UP)
 		String uscope1 =  scope1.toString()
-	
+
 		String Scope2 = WebUI.getText(findTestObject('Portfolio/CarbonVal/CarbonPage/Annual Scope 2'))
 		BigDecimal scope2 = new BigDecimal(Scope2)
 		scope2 =  scope2.setScale(0, RoundingMode.HALF_UP)
 		String uscope2 =  scope2.toString()
-		
+
 		String AnnualEnergy = WebUI.getText(findTestObject('Portfolio/CarbonVal/CarbonPage/Annual Energy Emissions'))
 		BigDecimal annualEnergy = new BigDecimal(AnnualEnergy)
 		annualEnergy =  annualEnergy.setScale(0, RoundingMode.HALF_UP)
 		String uannualEnergy =  annualEnergy.toString()
-	
+
 		String transportation = WebUI.getText(findTestObject('Portfolio/CarbonVal/CarbonPage/Annual Transportation'))
 		BigDecimal Transportation = new BigDecimal(transportation)
 		Transportation =  Transportation.setScale(0, RoundingMode.HALF_UP)
 		String utransportation =  Transportation.toString()
-	
+
 		WebUI.click(findTestObject('Portfolio/CarbonVal/CarbonPage/Annual Scope 1'))
 		WebUI.delay(3)
 
