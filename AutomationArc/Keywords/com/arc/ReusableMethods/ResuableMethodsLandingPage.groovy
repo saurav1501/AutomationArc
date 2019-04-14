@@ -17,6 +17,8 @@ import internal.GlobalVariable
 
 public class ResuableMethodsLandingPage extends BaseClass {
 	ReusableMethodsNavigation landingPage =new ReusableMethodsNavigation()
+	Date date = new Date(System.currentTimeMillis())
+	
 
 	@Keyword
 	public void invalidIDLoginTest() throws IOException, InterruptedException {
@@ -579,24 +581,20 @@ public class ResuableMethodsLandingPage extends BaseClass {
 		WebUI.click(findTestObject('Page_Arc dashboard/Feedback/FeedBackButton'))
 		WebUI.delay(2)
 	}
-	
+
 	@Keyword
 	public void verifyBuildingPopup(){
 		String popup = WebUI.getText(findTestObject('Object Repository/Add_Project_Details/BuildingPop/yourBuildingScore'))
-		
+
 		WebUI.verifyMatch(popup, "Your Building's Score", false)
-		
+
 		WebUI.click(findTestObject('PaymenntLocator/NextButton'))
 		WebUI.delay(10)
-		
 	}
-	
+
 	@Keyword
 	public void verifyNavigationPopup(){
 		String DataInput = WebUI.getText(findTestObject('Object Repository/Add_Project_Details/BuildingPop/DataInput'))
 		WebUI.verifyMatch(DataInput, "Data Input", false)
-		
 	}
-	
-	
 }

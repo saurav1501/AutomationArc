@@ -257,6 +257,24 @@
       <testCaseId>Test Cases/MyCities/LEEDForCities/CertiVerifyCertificationDetailsForNotCertfiedProjectsTest.java</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>458f74f5-5664-4a2c-a950-88a142fdeb0d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCities/LEEDForCities/SettingVerifyPlaqueAnimationURLVisibleTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>7d538207-66d6-4bd4-8d2d-79cbcd6fd907</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCities/LEEDForCities/SettingVerifyPlaqueAnimationWorkInNewWindowTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>48d3fef9-3b4e-40d7-bd40-b82c0a91ea7d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCities/LEEDForCities/SettingVerifySettingsPageDetailsTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>e0914b7a-10a8-43bb-b9c1-6829378d7988</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -369,24 +387,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/MyCities/LEEDForCities/AppVerifyAllUninstalledAppRemovedFromAddSupportingSectionTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>458f74f5-5664-4a2c-a950-88a142fdeb0d</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCities/LEEDForCities/SettingVerifyPlaqueAnimationURLVisibleTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>7d538207-66d6-4bd4-8d2d-79cbcd6fd907</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCities/LEEDForCities/SettingVerifyPlaqueAnimationWorkInNewWindowTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>48d3fef9-3b4e-40d7-bd40-b82c0a91ea7d</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCities/LEEDForCities/SettingVerifySettingsPageDetailsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>659aca15-ffce-4403-a35e-8f20cfd08afc</guid>
