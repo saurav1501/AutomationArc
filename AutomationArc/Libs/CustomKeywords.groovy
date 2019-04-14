@@ -7,6 +7,8 @@ import java.lang.String
 
 import com.kms.katalon.core.testobject.TestObject
 
+import com.kms.katalon.core.model.FailureHandling
+
 import java.sql.Connection
 
 
@@ -946,24 +948,6 @@ def static "com.arc.ReusableMethods.ResuableMethodsLEEDOnline.checkPreCertPrelim
     (new com.arc.ReusableMethods.ResuableMethodsLEEDOnline()).checkPreCertPreliminaryReviewStatus()
 }
 
-def static "com.arc.ReusableMethods.ReusableMethodValidation.buildingAddNewProjectPageValidation"(
-    	String sheetName	
-     , 	int rowNum1	) {
-    (new com.arc.ReusableMethods.ReusableMethodValidation()).buildingAddNewProjectPageValidation(
-        	sheetName
-         , 	rowNum1)
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodValidation.paymentPageProjectDataValidation"(
-    	String sheetName	
-     , 	int rowNum1	
-     , 	int yearOfSubscription	) {
-    (new com.arc.ReusableMethods.ReusableMethodValidation()).paymentPageProjectDataValidation(
-        	sheetName
-         , 	rowNum1
-         , 	yearOfSubscription)
-}
-
 def static "com.arc.ReusableMethods.ResuableMethodsLandingPage.invalidIDLoginTest"() {
     (new com.arc.ReusableMethods.ResuableMethodsLandingPage()).invalidIDLoginTest()
 }
@@ -1090,6 +1074,24 @@ def static "com.arc.ReusableMethods.ResuableMethodsLandingPage.verifyBuildingPop
 
 def static "com.arc.ReusableMethods.ResuableMethodsLandingPage.verifyNavigationPopup"() {
     (new com.arc.ReusableMethods.ResuableMethodsLandingPage()).verifyNavigationPopup()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodValidation.buildingAddNewProjectPageValidation"(
+    	String sheetName	
+     , 	int rowNum1	) {
+    (new com.arc.ReusableMethods.ReusableMethodValidation()).buildingAddNewProjectPageValidation(
+        	sheetName
+         , 	rowNum1)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodValidation.paymentPageProjectDataValidation"(
+    	String sheetName	
+     , 	int rowNum1	
+     , 	int yearOfSubscription	) {
+    (new com.arc.ReusableMethods.ReusableMethodValidation()).paymentPageProjectDataValidation(
+        	sheetName
+         , 	rowNum1
+         , 	yearOfSubscription)
 }
 
 def static "com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram"(
@@ -1822,6 +1824,22 @@ def static "com.arc.ReusableMethods.ReusableMethodsMeasuresParking.toolTip"() {
 
 def static "com.arc.ReusableMethods.ReusableMethodsMeasuresParking.permissionRequestsTeamMan"() {
     (new com.arc.ReusableMethods.ReusableMethodsMeasuresParking()).permissionRequestsTeamMan()
+}
+
+def static "com.katalon.plugin.keyword.calendar.SetDateCalendarKeyword.setDate"(
+    	TestObject to	
+     , 	int day	
+     , 	int month	
+     , 	int year	
+     , 	int slideTimeOut	
+     , 	FailureHandling flowControl	) {
+    (new com.katalon.plugin.keyword.calendar.SetDateCalendarKeyword()).setDate(
+        	to
+         , 	day
+         , 	month
+         , 	year
+         , 	slideTimeOut
+         , 	flowControl)
 }
 
 def static "com.arc.BaseClass.CommonMethod.clickCancel"() {
