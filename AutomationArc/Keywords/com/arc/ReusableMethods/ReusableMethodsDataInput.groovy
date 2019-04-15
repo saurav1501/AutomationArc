@@ -4798,7 +4798,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianHouseholdYearLabel')), "Year", false)
 		//WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianHouseholdUSDollarPerYearLabel')), "US Dollars/Year", false)
 		WebUI.verifyElementPresent(findTestObject('Manage/CityCom/USDollar'), 3, FailureHandling.CONTINUE_ON_FAILURE)	
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianHouseholdActionLabel')), "Actions", false)
+	/*	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianHouseholdActionLabel')), "Actions", false)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/UnemploymentYearLabel')), "Year", false)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/UnemploymentPercentLabel')), "Percent", false)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/UnemploymentActionsLabel')), "Actions", false)
@@ -4811,7 +4811,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/ViolentCrimeYearLabel')), "Year", false)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/ViolentCrimeValueLabel')), "Value", false)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/ViolentCrimeActionsLabel')), "Actions", false)
-
+*/
 	}
 
 

@@ -7,8 +7,6 @@ import java.lang.String
 
 import com.kms.katalon.core.testobject.TestObject
 
-import com.kms.katalon.core.model.FailureHandling
-
 import java.sql.Connection
 
 
@@ -62,6 +60,10 @@ def static "com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalV
 
 def static "com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariableT"() {
     (new com.arc.ReusableMethods.ReusableMethodsLogin()).loginIntoArcWithGlobalVariableT()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsLogin.loginArcWithGlobalVariable"() {
+    (new com.arc.ReusableMethods.ReusableMethodsLogin()).loginArcWithGlobalVariable()
 }
 
 def static "com.arc.ReusableMethods.ReusableMethodsLogin.loginArcGlobalVariable"() {
@@ -1826,22 +1828,6 @@ def static "com.arc.ReusableMethods.ReusableMethodsMeasuresParking.permissionReq
     (new com.arc.ReusableMethods.ReusableMethodsMeasuresParking()).permissionRequestsTeamMan()
 }
 
-def static "com.katalon.plugin.keyword.calendar.SetDateCalendarKeyword.setDate"(
-    	TestObject to	
-     , 	int day	
-     , 	int month	
-     , 	int year	
-     , 	int slideTimeOut	
-     , 	FailureHandling flowControl	) {
-    (new com.katalon.plugin.keyword.calendar.SetDateCalendarKeyword()).setDate(
-        	to
-         , 	day
-         , 	month
-         , 	year
-         , 	slideTimeOut
-         , 	flowControl)
-}
-
 def static "com.arc.BaseClass.CommonMethod.clickCancel"() {
     (new com.arc.BaseClass.CommonMethod()).clickCancel()
 }
@@ -3206,6 +3192,126 @@ def static "com.arc.ReusableMethods.ResuableMethodsGRESB.gresbAddanddeleteprojec
          , 	rowNum)
 }
 
+def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.genratePerformanceScoreAdminTool"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).genratePerformanceScoreAdminTool(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.trialScoreVerifica"() {
+    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).trialScoreVerifica()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.genratePerformanceScoreAdminToolOtherNone"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).genratePerformanceScoreAdminToolOtherNone(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.genratePerformanceScoreAdminToolAnalytics"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).genratePerformanceScoreAdminToolAnalytics(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.genratePerformanceScoreAdminToolCityComLEED"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).genratePerformanceScoreAdminToolCityComLEED(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.genratePerformanceScoreAdminToolCityComOtherNone"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).genratePerformanceScoreAdminToolCityComOtherNone(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.setdefaultpagePerformanceScore"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).setdefaultpagePerformanceScore(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.setdefaultpagePerformanceScoreOtherNone"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).setdefaultpagePerformanceScoreOtherNone(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.verifyCompleteScoreSection"() {
+    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).verifyCompleteScoreSection()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.totalPerformanceScoreUIAllFieldVerification"() {
+    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).totalPerformanceScoreUIAllFieldVerification()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.individualScoreUIAllFieldVerification"() {
+    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).individualScoreUIAllFieldVerification()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.totalPerformanceScoreUIAllFieldVerificationCityComOtherNone"() {
+    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).totalPerformanceScoreUIAllFieldVerificationCityComOtherNone()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.totalPerformanceScoreUIWithoutScore"() {
+    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).totalPerformanceScoreUIWithoutScore()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.totalPerformanceScoreUIWithoutScoreAg"() {
+    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).totalPerformanceScoreUIWithoutScoreAg()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.totalPerformanceScoreUIWithoutScoreCityComOtherNone"() {
+    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).totalPerformanceScoreUIWithoutScoreCityComOtherNone()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.individualPerformanceScoreUIWithoutScore"() {
+    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).individualPerformanceScoreUIWithoutScore()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.individualPerformanceScoreUIWithoutScoreAg"() {
+    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).individualPerformanceScoreUIWithoutScoreAg()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.individualPerformanceScoreUIWithoutScoreLV4"() {
+    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).individualPerformanceScoreUIWithoutScoreLV4()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.navigationTotalScoreToAnalytics"() {
+    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).navigationTotalScoreToAnalytics()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.navigationIndividualRacetrackToAnalytics"() {
+    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).navigationIndividualRacetrackToAnalytics()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.trialProjectScoreVerificaion"() {
+    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).trialProjectScoreVerificaion()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.genratePerformanceScoreAdminToolTrial"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).genratePerformanceScoreAdminToolTrial(
+        	sheetName
+         , 	rowNum)
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsBasePoint.preRequisiteAttemptTransit"() {
     (new com.arc.ReusableMethods.ReusableMethodsBasePoint()).preRequisiteAttemptTransit()
 }
@@ -3924,126 +4030,6 @@ def static "com.arc.ReusableMethods.ReusableMethodsManage.billingStatusPriceCC"(
     	String sheetName	
      , 	int rowNum	) {
     (new com.arc.ReusableMethods.ReusableMethodsManage()).billingStatusPriceCC(
-        	sheetName
-         , 	rowNum)
-}
-
-def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.genratePerformanceScoreAdminTool"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).genratePerformanceScoreAdminTool(
-        	sheetName
-         , 	rowNum)
-}
-
-def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.trialScoreVerifica"() {
-    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).trialScoreVerifica()
-}
-
-def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.genratePerformanceScoreAdminToolOtherNone"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).genratePerformanceScoreAdminToolOtherNone(
-        	sheetName
-         , 	rowNum)
-}
-
-def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.genratePerformanceScoreAdminToolAnalytics"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).genratePerformanceScoreAdminToolAnalytics(
-        	sheetName
-         , 	rowNum)
-}
-
-def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.genratePerformanceScoreAdminToolCityComLEED"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).genratePerformanceScoreAdminToolCityComLEED(
-        	sheetName
-         , 	rowNum)
-}
-
-def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.genratePerformanceScoreAdminToolCityComOtherNone"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).genratePerformanceScoreAdminToolCityComOtherNone(
-        	sheetName
-         , 	rowNum)
-}
-
-def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.setdefaultpagePerformanceScore"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).setdefaultpagePerformanceScore(
-        	sheetName
-         , 	rowNum)
-}
-
-def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.setdefaultpagePerformanceScoreOtherNone"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).setdefaultpagePerformanceScoreOtherNone(
-        	sheetName
-         , 	rowNum)
-}
-
-def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.verifyCompleteScoreSection"() {
-    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).verifyCompleteScoreSection()
-}
-
-def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.totalPerformanceScoreUIAllFieldVerification"() {
-    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).totalPerformanceScoreUIAllFieldVerification()
-}
-
-def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.individualScoreUIAllFieldVerification"() {
-    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).individualScoreUIAllFieldVerification()
-}
-
-def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.totalPerformanceScoreUIAllFieldVerificationCityComOtherNone"() {
-    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).totalPerformanceScoreUIAllFieldVerificationCityComOtherNone()
-}
-
-def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.totalPerformanceScoreUIWithoutScore"() {
-    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).totalPerformanceScoreUIWithoutScore()
-}
-
-def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.totalPerformanceScoreUIWithoutScoreAg"() {
-    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).totalPerformanceScoreUIWithoutScoreAg()
-}
-
-def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.totalPerformanceScoreUIWithoutScoreCityComOtherNone"() {
-    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).totalPerformanceScoreUIWithoutScoreCityComOtherNone()
-}
-
-def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.individualPerformanceScoreUIWithoutScore"() {
-    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).individualPerformanceScoreUIWithoutScore()
-}
-
-def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.individualPerformanceScoreUIWithoutScoreAg"() {
-    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).individualPerformanceScoreUIWithoutScoreAg()
-}
-
-def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.individualPerformanceScoreUIWithoutScoreLV4"() {
-    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).individualPerformanceScoreUIWithoutScoreLV4()
-}
-
-def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.navigationTotalScoreToAnalytics"() {
-    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).navigationTotalScoreToAnalytics()
-}
-
-def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.navigationIndividualRacetrackToAnalytics"() {
-    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).navigationIndividualRacetrackToAnalytics()
-}
-
-def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.trialProjectScoreVerificaion"() {
-    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).trialProjectScoreVerificaion()
-}
-
-def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.genratePerformanceScoreAdminToolTrial"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).genratePerformanceScoreAdminToolTrial(
         	sheetName
          , 	rowNum)
 }

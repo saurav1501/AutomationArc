@@ -17,7 +17,7 @@ try {
 	
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.PortfoliosSheet,GlobalVariable.rowNumTwo)
 	WebUI.delay(5)
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.surveySubmitTr'(GlobalVariable.BDataInput)
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.surveySubmit'(GlobalVariable.BDataInput)
 	}
 catch (Throwable t) {
 	System.out.println(t.getLocalizedMessage())
