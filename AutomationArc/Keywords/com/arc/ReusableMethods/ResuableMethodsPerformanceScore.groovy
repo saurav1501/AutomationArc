@@ -1046,7 +1046,7 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.delay(2)
 		WebUI.click(findTestObject('PerformanceScore/RecomputeScore'))
 		WebUI.delay(22)
-
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/Score/EnergyScore'), 30)
 		String energyScore = WebUI.getText(findTestObject('PerformanceScore/Score/EnergyScore'))
 		String waterScore = WebUI.getText(findTestObject('PerformanceScore/Score/WaterSocre'))
 		String wasteScore = WebUI.getText(findTestObject('PerformanceScore/Score/WasteScore'))
@@ -1075,9 +1075,9 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.delay(2)
 		WebUI.switchToWindowIndex(0)
 		//Search the project
-		reusableMethodsSearch.searchProgram(sheetName,rowNum)
+		//reusableMethodsSearch.searchProgram(sheetName,rowNum)
 
-		WebUI.delay(15)
+		//WebUI.delay(15)
 		//WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TotalPerformanceScore'),10)
