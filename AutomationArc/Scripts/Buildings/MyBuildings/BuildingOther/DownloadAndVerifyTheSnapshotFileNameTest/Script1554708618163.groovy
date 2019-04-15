@@ -16,7 +16,7 @@ import internal.GlobalVariable as GlobalVariable
 	
 try {
 		
-		//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginArcAdminToolWithGlobalVariable'()
+		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginArcAdminToolWithGlobalVariable'()
 		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifySnapshotFileNameUploadedBuilding'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumFive,"Other")
 		
 	} catch (Throwable t) {

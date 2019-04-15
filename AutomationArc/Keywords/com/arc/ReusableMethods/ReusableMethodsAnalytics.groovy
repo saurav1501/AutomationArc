@@ -1200,6 +1200,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Water'))
 		WebUI.delay(9)
 
+		WebUI.waitForElementVisible(findTestObject('Analytics/TotalPage/WaterGlobalAvg'), 20)
 		String waterGlobal = WebUI.getText(findTestObject('Analytics/TotalPage/WaterGlobalAvg'))
 		String ewaterGlobal = "Global average: ".concat(waterGlobal)
 		String waterLocal = WebUI.getText(findTestObject('Analytics/TotalPage/WaterLocalAvg'))

@@ -639,7 +639,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(3)
 		WebUI.verifyElementPresent(findTestObject('Portfolio/GRESB/Setting/p_Re-enter Occupancy'),2,FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyElementPresent(findTestObject('Portfolio/GRESB/Setting/p_Re-enter OPPHour'),2,FailureHandling.CONTINUE_ON_FAILURE)
-	//	WebUI.verifyElementPresent(findTestObject('Portfolio/GRESB/Setting/p_Re-enterArea'),2,FailureHandling.CONTINUE_ON_FAILURE)
+		//	WebUI.verifyElementPresent(findTestObject('Portfolio/GRESB/Setting/p_Re-enterArea'),2,FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Portfolio/GRESB/Setting/button_CANCEL'))
 		WebUI.delay(10)
@@ -812,7 +812,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.sendKeys(findTestObject('DataInput/WeightedOcc/Annual ridership'),'SDF');
 		WebUI.click(findTestObject('DataInput/WeightedOcc/Full time staff at stati'));
 		Thread.sleep(3000);
-		WebUI.verifyElementPresent(findTestObject('Manage/ErrorMessage/ErrorMessage1'),3)
+		WebUI.verifyElementPresent(findTestObject('Manage/ErrorMessage/ErrorMessage1'),5)
 
 		WebUI.clearText(findTestObject('DataInput/WeightedOcc/Full time staff at stati'));
 		WebUI.sendKeys(findTestObject('DataInput/WeightedOcc/Full time staff at stati'),'XYZ');
@@ -830,7 +830,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.sendKeys(findTestObject('DataInput/WeightedOcc/OperatingHour'),'SDF');
 		WebUI.click(findTestObject('DataInput/WeightedOcc/Annual ridership'));
 		Thread.sleep(3000);
-		WebUI.verifyElementPresent(findTestObject('Manage/ErrorMessage/ErrorMessage4'),3)
+		WebUI.verifyElementPresent(findTestObject('Manage/ErrorMessage/ErrorMessage1'),3)
 
 	}
 
@@ -1650,8 +1650,8 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void editAuthLevelNone(){
-	/*	WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
-		WebUI.delay(1)*/
+		/*	WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+		 WebUI.delay(1)*/
 		WebUI.scrollToElement(findTestObject('Manage/TeamModule/a_ Team'),2)
 		WebUI.click(findTestObject('Manage/TeamModule/a_ Team'))
 		WebUI.delay(6)
@@ -1663,7 +1663,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyOptionSelectedByLabel(findTestObject('Object Repository/Manage/TeamModule/newMemberAddedAuthorizationLevel'),'None', false,10)
 	}
 
-	
+
 	@Keyword
 	public void verifyDeactivatedMemShouldNot(){
 		WebUI.click(findTestObject('DataInput/CityCom/a_ Data Input'))
@@ -1671,38 +1671,38 @@ public class ReusableMethodsManage extends BaseClass {
 		String memberName = WebUI.getText(findTestObject('DataInput/Team/Energy'))
 		WebUI.delay(5)
 		WebUI.verifyMatch(memberName," ", false)
-		
+
 	}
-		
+
 	@Keyword
 	public void dataInputTeamShouldDisplay(){
-		
+
 		WebUI.click(findTestObject('DataInput/CityCom/a_ Data Input'))
 		WebUI.delay(5)
 		WebUI.click(findTestObject('DataInput/CityCom/span_Energy'))
 		WebUI.delay(5)
-        WebUI.verifyElementPresent(findTestObject('DataInput/Team/TeamLabel'),4,FailureHandling.CONTINUE_ON_FAILURE)
-		
-		WebUI.click(findTestObject('DataInput/Team/Next'))
-		WebUI.delay(3)
 		WebUI.verifyElementPresent(findTestObject('DataInput/Team/TeamLabel'),4,FailureHandling.CONTINUE_ON_FAILURE)
-		
-		WebUI.click(findTestObject('DataInput/Team/Next'))
-		WebUI.delay(3)
-		WebUI.verifyElementPresent(findTestObject('DataInput/Team/TeamLabel'),4,FailureHandling.CONTINUE_ON_FAILURE)
-		
-		WebUI.click(findTestObject('DataInput/Team/Next'))
-		WebUI.delay(3)
-		WebUI.verifyElementPresent(findTestObject('DataInput/Team/TeamLabel'),4,FailureHandling.CONTINUE_ON_FAILURE)
-		
-		WebUI.click(findTestObject('DataInput/Team/Next'))
-		WebUI.delay(3)
-		WebUI.verifyElementPresent(findTestObject('DataInput/Team/TeamLabel'),4,FailureHandling.CONTINUE_ON_FAILURE)
-		
-}
 
-	
-	
+		WebUI.click(findTestObject('DataInput/Team/Next'))
+		WebUI.delay(3)
+		WebUI.verifyElementPresent(findTestObject('DataInput/Team/TeamLabel'),4,FailureHandling.CONTINUE_ON_FAILURE)
+
+		WebUI.click(findTestObject('DataInput/Team/Next'))
+		WebUI.delay(3)
+		WebUI.verifyElementPresent(findTestObject('DataInput/Team/TeamLabel'),4,FailureHandling.CONTINUE_ON_FAILURE)
+
+		WebUI.click(findTestObject('DataInput/Team/Next'))
+		WebUI.delay(3)
+		WebUI.verifyElementPresent(findTestObject('DataInput/Team/TeamLabel'),4,FailureHandling.CONTINUE_ON_FAILURE)
+
+		WebUI.click(findTestObject('DataInput/Team/Next'))
+		WebUI.delay(3)
+		WebUI.verifyElementPresent(findTestObject('DataInput/Team/TeamLabel'),4,FailureHandling.CONTINUE_ON_FAILURE)
+
+	}
+
+
+
 	@Keyword
 	public void verifyBillingOrderFileDownload(String sheetName, int rowNum){
 
@@ -2301,10 +2301,15 @@ public class ReusableMethodsManage extends BaseClass {
 		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
 		 WebUI.delay(1)
 		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
-		 WebUI.delay(5)*/
+		 */
+		WebUI.delay(5)
 		WebUI.scrollToElement(findTestObject('Manage/CertificationAndScore/a_ Score Version'),2)
 		WebUI.click(findTestObject('Manage/CertificationAndScore/a_ Score Version'))
+<<<<<<< HEAD
 		//WebUI.waitForElementPresent(findTestObject('Object Repository/Loaders/ProjectDashboardLoader'), 30)
+=======
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Loaders/ProjectDashboardLoader'), 30, FailureHandling.CONTINUE_ON_FAILURE)
+>>>>>>> 7de3610779c9dc64499d503768b5143474e7c0e1
 		String scoreVersion = WebUI.getText(findTestObject('Manage/CertificationAndScore/h3_Arc score v2.0'))
 		WebUI.verifyMatch(scoreVersion, "Arc score v2.0",false, FailureHandling.CONTINUE_ON_FAILURE)
 		print scoreVersion
@@ -2531,7 +2536,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 	}
 
-	
+
 	@Keyword
 	public void assignAddedTeamMem() throws IOException, InterruptedException {
 		WebUI.delay(5)
@@ -2539,20 +2544,20 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(5)
 		WebUI.click(findTestObject('DataInput/CityCom/span_Energy'))
 		WebUI.delay(5)
-		
+
 		WebUI.click(findTestObject('DataInput/Team/TeamEdit'))
 		WebUI.delay(2)
 		WebUI.click(findTestObject('DataInput/Team/Option1'))
 		WebUI.delay(10)
-	
+
 		WebUI.click(findTestObject('DataInput/CityCom/a_ Data Input'))
 		String memberName = WebUI.getText(findTestObject('DataInput/Team/Energy'))
 		WebUI.delay(5)
 		WebUI.verifyMatch(memberName,GlobalVariable.teamMemberName, false)
-		
+
 	}
 
-	
+
 	@Keyword
 	public void verifyLobbyBtnRemailOnAfterNavigationFromOtherPage() throws IOException, InterruptedException {
 		/*WebUI.delay(5)
