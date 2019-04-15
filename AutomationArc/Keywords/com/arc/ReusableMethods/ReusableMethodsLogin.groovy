@@ -309,7 +309,7 @@ public class ReusableMethodsLogin extends BaseClass{
 
 		String userName= GlobalVariable.userName
 		String password= GlobalVariable.password
-		
+
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/clickOnLogin'))
 		WebUI.delay(2)
@@ -331,7 +331,7 @@ public class ReusableMethodsLogin extends BaseClass{
 		WebUI.verifyMatch(postLoginText, 'My Projects',true)
 		WebUI.delay(3)
 
-		
+
 	}
 	@Keyword
 	public void loginWithBlankValue() {

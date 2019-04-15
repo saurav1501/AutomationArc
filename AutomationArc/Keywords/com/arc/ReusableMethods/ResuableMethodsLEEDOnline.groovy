@@ -362,6 +362,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.waitForPageLoad(GlobalVariable.timeOut)
 		WebUI.navigateToUrl(url)
 		ReusableMethodsLogin.waitForPageLoad(60)
+		WebUI.setViewPortSize(1366,1280)
 		WebUI.click(findTestObject('Object Repository/LEEDOnline/Login/AcceptAndAgreeButton'))
 		WebUI.setText(findTestObject('LEEDOnline/Login/Log In_username'), userName)
 		WebUI.setText(findTestObject('LEEDOnline/Login/Log In_password'), password)
