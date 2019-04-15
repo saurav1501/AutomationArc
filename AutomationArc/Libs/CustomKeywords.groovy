@@ -62,6 +62,10 @@ def static "com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalV
     (new com.arc.ReusableMethods.ReusableMethodsLogin()).loginIntoArcWithGlobalVariableT()
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsLogin.loginArcWithGlobalVariable"() {
+    (new com.arc.ReusableMethods.ReusableMethodsLogin()).loginArcWithGlobalVariable()
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsLogin.loginArcGlobalVariable"() {
     (new com.arc.ReusableMethods.ReusableMethodsLogin()).loginArcGlobalVariable()
 }

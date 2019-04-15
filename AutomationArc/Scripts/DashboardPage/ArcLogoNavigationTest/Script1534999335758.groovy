@@ -22,13 +22,16 @@ import internal.GlobalVariable as GlobalVariable
 
 try{
 	
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.logoutFromArcApplication'()
+/*	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginArcWithGlobalVariable'()
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsNavigation.ArclogoNavigation'()
-	WebUI.delay(6)
+*/	//WebUI.delay(6)
 	//WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/clickOnLogin'))
 
 
 	} catch (Throwable t) {
-
+	  WebUI.click(findTestObject('LoginArc/Page_Arc Skoru  Sustainability perf/Logout'))
+	  WebUI.delay(5)
 	  System.out.println(t.getLocalizedMessage())
 	  Error e1 = new Error(t.getMessage())
 	  e1.setStackTrace(t.getStackTrace())

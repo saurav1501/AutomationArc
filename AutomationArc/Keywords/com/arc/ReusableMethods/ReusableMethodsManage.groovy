@@ -1438,7 +1438,7 @@ public class ReusableMethodsManage extends BaseClass {
 		/****************Navigating to Manage project section *********************************/
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
 		WebUI.delay(3)
-		WebUI.verifyOptionNotSelectedByLabel(findTestObject('Object Repository/Manage/CityCom/New/ManageState'), 'Not Available', false, 4, FailureHandling.STOP_ON_FAILURE)
+		WebUI.verifyOptionNotSelectedByLabel(findTestObject('Object Repository/Manage/CityCom/New/ManageState'), 'Alabama', false, 4, FailureHandling.STOP_ON_FAILURE)
 
 
 	}
@@ -1656,7 +1656,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Manage/TeamModule/a_ Team'))
 		WebUI.delay(6)
 		WebUI.click(findTestObject('Manage/TeamModule/button_Edit'))
-		WebUI.selectOptionByLabel(findTestObject('Manage/TeamModule/newMemberAddedAuthorizationLevel'), 'None', false)
+		WebUI.selectOptionByLabel(findTestObject('Manage/TeamModule/newMemberAddedAuthorizationLevel'),'None', false)
 		WebUI.delay(3)
 		WebUI.click(findTestObject('Manage/TeamModule/button_Save'))
 		WebUI.delay(5)
@@ -1667,7 +1667,7 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public void verifyDeactivatedMemShouldNot(){
 		WebUI.click(findTestObject('DataInput/CityCom/a_ Data Input'))
-		WebUI.delay(5)
+		WebUI.delay(10)
 		String memberName = WebUI.getText(findTestObject('DataInput/Team/Energy'))
 		WebUI.delay(5)
 		WebUI.verifyMatch(memberName," ", false)
@@ -2304,7 +2304,7 @@ public class ReusableMethodsManage extends BaseClass {
 		 WebUI.delay(5)*/
 		WebUI.scrollToElement(findTestObject('Manage/CertificationAndScore/a_ Score Version'),2)
 		WebUI.click(findTestObject('Manage/CertificationAndScore/a_ Score Version'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Loaders/ProjectDashboardLoader'), 30)
+		//WebUI.waitForElementPresent(findTestObject('Object Repository/Loaders/ProjectDashboardLoader'), 30)
 		String scoreVersion = WebUI.getText(findTestObject('Manage/CertificationAndScore/h3_Arc score v2.0'))
 		WebUI.verifyMatch(scoreVersion, "Arc score v2.0",false, FailureHandling.CONTINUE_ON_FAILURE)
 		print scoreVersion

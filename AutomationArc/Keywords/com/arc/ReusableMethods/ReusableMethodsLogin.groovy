@@ -133,7 +133,7 @@ public class ReusableMethodsLogin extends BaseClass{
 		//WebUI.delay(10)
 		WebUI.setViewPortSize(1366,1280)
 		waitForPageLoad(60)
-		WebUI.click(findTestObject('Object Repository/Page_Home  Arc/WelcomeArcText'))
+		//WebUI.click(findTestObject('Object Repository/Page_Home  Arc/WelcomeArcText'))
 		//WebUI.waitForElementVisible(findTestObject('Object Repository/Page_Home  Arc/ClickNavProjectText'), 30)
 		WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/span_Projects'))
 		WebUI.waitForElementPresent(findTestObject('Page_Arc dashboard/span_My Projects'), 30)
@@ -166,7 +166,38 @@ public class ReusableMethodsLogin extends BaseClass{
 		WebUI.waitForElementPresent(findTestObject('Page_Arc dashboard/span_My Projects'), 30)
 		WebUI.delay(3)
 	}
+	@Keyword
+	public void loginArcWithGlobalVariable() {
 
+
+		String url = GlobalVariable.url
+		String userName= GlobalVariable.userName
+		String password= GlobalVariable.password
+	/*	WebUI.openBrowser('')
+		WebUI.maximizeWindow()*/
+		WebUI.waitForPageLoad(GlobalVariable.timeOut)
+		WebUI.navigateToUrl(url)
+		waitForPageLoad(60)
+		WebUI.delay(2)
+		//RemoteWebDriver  driver= DriverFactory.getWebDriver()
+		//driver.setFileDetector(new LocalFileDetector())
+	//	WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/button_ACCEPT AND CLOSE'))
+		WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/clickOnLogin'))
+		WebUI.delay(2)
+		WebUI.sendKeys(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/input__name'), userName)
+
+		WebUI.sendKeys(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/input__pass'), password)
+
+		WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/input_Forgot Password_field_po'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/button_Log in'))
+
+		//WebUI.waitForPageLoad(10)
+		//WebUI.delay(10)
+		//WebUI.setViewPortSize(1366,1280)
+		waitForPageLoad(60)
+		WebUI.delay(2)
+	}
 	@Keyword
 	public void loginArcGlobalVariable() {
 		String url = GlobalVariable.url

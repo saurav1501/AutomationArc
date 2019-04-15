@@ -355,8 +355,8 @@ public class ResuableMethodsGRESB extends BaseClass {
 		WebUI.click(findTestObject('Portfolio/GRESB/SignAcceptButton'))
 		WebUI.delay(15)
 
-		String status = WebUI.getText(findTestObject('Portfolio/GRESB/Owner/Reg1'))
-		WebUI.verifyMatch(status,'Trial', false)
+		String status = WebUI.getText(findTestObject('Portfolio/GRESB/New/Reg1'))
+		WebUI.verifyMatch(status,'Trial',false)
 	}
 
 	@Keyword
