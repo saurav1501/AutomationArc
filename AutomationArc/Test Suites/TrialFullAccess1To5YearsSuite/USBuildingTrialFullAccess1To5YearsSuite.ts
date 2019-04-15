@@ -281,6 +281,12 @@
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/MySchools/UploadArcDataTemplateTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>b5896dc1-cac0-4957-98d0-5f11eb3c6255</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/MySchools/AdminToolScoreRecomputeTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>69fed6b8-3bde-41dd-aa11-3957689441a3</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -314,6 +320,6 @@
       <guid>524e62ab-1528-41d7-a41b-540839e7bf2a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/MySchools/TrialProjectDetailVerificationAfterExcelUploadTest</testCaseId>
+      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/MySchools/AdminToolScoreRecomputeTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
