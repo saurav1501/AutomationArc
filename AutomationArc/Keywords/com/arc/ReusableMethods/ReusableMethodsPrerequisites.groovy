@@ -339,7 +339,9 @@ public class ReusableMethodsPrerequisites extends BaseClass {
 				WebUI.verifyTextPresent('Human Experience', false ,FailureHandling.CONTINUE_ON_FAILURE)
 
 			if(count==11)
-			   WebUI.verifyTextPresent('Additional data', false ,FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyElementPresent(findTestObject('Manage/CityCom/AddData'),3, FailureHandling.CONTINUE_ON_FAILURE)
+			
+			  // WebUI.verifyTextPresent('Additional data', false ,FailureHandling.CONTINUE_ON_FAILURE)
 				//Assert.assertTrue(WebUI.getText(findTestObject('Page_Arc dashboard/Credit/CityCom/span_Additional dataLEED')).equalsIgnoreCase("Additional data"))
 				//WebUI.verifyElementPresent(findTestObject('Object Repository/PreRequisite/CityCom/span_Additional Data'),5, FailureHandling.STOP_ON_FAILURE)
 
