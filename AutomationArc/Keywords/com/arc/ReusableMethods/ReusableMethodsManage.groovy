@@ -2305,11 +2305,9 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(5)
 		WebUI.scrollToElement(findTestObject('Manage/CertificationAndScore/a_ Score Version'),2)
 		WebUI.click(findTestObject('Manage/CertificationAndScore/a_ Score Version'))
-<<<<<<< HEAD
-		//WebUI.waitForElementPresent(findTestObject('Object Repository/Loaders/ProjectDashboardLoader'), 30)
-=======
+
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Loaders/ProjectDashboardLoader'), 30, FailureHandling.CONTINUE_ON_FAILURE)
->>>>>>> 7de3610779c9dc64499d503768b5143474e7c0e1
+
 		String scoreVersion = WebUI.getText(findTestObject('Manage/CertificationAndScore/h3_Arc score v2.0'))
 		WebUI.verifyMatch(scoreVersion, "Arc score v2.0",false, FailureHandling.CONTINUE_ON_FAILURE)
 		print scoreVersion
