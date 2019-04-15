@@ -1282,7 +1282,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
 		WebUI.delay(7)
-		
+
 		boolean notEditableName = WebUI.setText(findTestObject('Manage/ManageEntity/Managing entity Name'),'testName', FailureHandling.OPTIONAL)
 		println ("DEBUG boolean value "+notEditableName)
 		KeywordUtil.logInfo("Managing entity Name Not editable")
@@ -1735,6 +1735,7 @@ public class ReusableMethodsManage extends BaseClass {
 		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))*/
 		WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Loaders/ProjectDashboardLoader'), 30)
 		//Registration Payment details verification
 		WebUI.delay(5)
 		String regDate= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/registrationPaymentDate'))
@@ -2303,6 +2304,7 @@ public class ReusableMethodsManage extends BaseClass {
 		 WebUI.delay(5)*/
 		WebUI.scrollToElement(findTestObject('Manage/CertificationAndScore/a_ Score Version'),2)
 		WebUI.click(findTestObject('Manage/CertificationAndScore/a_ Score Version'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Loaders/ProjectDashboardLoader'), 30)
 		String scoreVersion = WebUI.getText(findTestObject('Manage/CertificationAndScore/h3_Arc score v2.0'))
 		WebUI.verifyMatch(scoreVersion, "Arc score v2.0",false, FailureHandling.CONTINUE_ON_FAILURE)
 		print scoreVersion

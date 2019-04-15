@@ -2560,7 +2560,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ReadingThree'),'value'),reading1)
 	}
 
-	
+
 
 	@Keyword
 	public void createWasteMeter(){
