@@ -23,7 +23,7 @@ try {
 		
 	
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginArcAdminToolWithGlobalVariable'()
-	CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsPerformanceScore.genratePerformanceScoreAdminToolOtherNone'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumEleven)
+	CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsPerformanceScore.genratePerformanceScoreAdminToolTrial'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumEleven)
 	
 } catch (Throwable t) {
 	WebUI.closeWindowIndex(1)

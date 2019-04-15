@@ -63,7 +63,7 @@ public class BaseClass {
 	public static String ServiceAgreement = RunConfiguration.getProjectDir()+"/Download/Agreement.pdf"
 
 	public static String UploadArcDataTempleteTransit = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Arc_Data_Template_transit_above.xlsm"
-	public static String UploadArcDataTempleteLEEDV4 = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Arc_Data_Template_building_v4.xlsm"
+	//public static String UploadArcDataTempleteLEEDV4 = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Arc_Data_Template_building_v4.xlsm"
 	public static String UploadArcDataTempleteTransitanalytics = RunConfiguration.getProjectDir()+"/ARCDataTemplete/AnalyticArc_Data_Template_transit_above.xlsm"
 	public static String UploadArcDataTempleteTransitBelow = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Arc_Data_Template_transit_below.xlsm"
 	public static String UploadArcDataTemplete = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Arc_Data_Template.xlsm"
@@ -92,6 +92,7 @@ public class BaseClass {
 	
 	
 	
+	public static String UploadArcDataTempleteLEEDV4 = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Arc_Data_Template_building_v4.xlsm"
 	
 	//local files
 	/*

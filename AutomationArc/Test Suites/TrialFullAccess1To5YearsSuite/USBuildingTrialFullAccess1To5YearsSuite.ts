@@ -316,10 +316,4 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/1YearFullAccessBuildingOther/VerifyThePayNowPopUpAfterPaymentTest</testCaseId>
    </testCaseLink>
-   <testCaseLink>
-      <guid>524e62ab-1528-41d7-a41b-540839e7bf2a</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/MySchools/AdminToolScoreRecomputeTest</testCaseId>
-   </testCaseLink>
 </TestSuiteEntity>

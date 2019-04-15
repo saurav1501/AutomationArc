@@ -1034,4 +1034,60 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		//WebUI.verifyMatch(totalScore, "47", false, FailureHandling.CONTINUE_ON_FAILURE)
 
 	}
+	
+	
+	
+	@Keyword
+	public void genratePerformanceScoreAdminToolTrial(String sheetName,int rowNum) throws IOException, InterruptedException {
+		String projectId = data.getCellData(sheetName,"ProjectID",rowNum)
+		WebUI.click(findTestObject('PerformanceScore/RecomputeScoreButton'))
+		WebUI.delay(3)
+		WebUI.setText(findTestObject('PerformanceScore/PorjectId'),projectId)
+		WebUI.delay(2)
+		WebUI.click(findTestObject('PerformanceScore/RecomputeScore'))
+		WebUI.delay(22)
+
+		String energyScore = WebUI.getText(findTestObject('PerformanceScore/Score/EnergyScore'))
+		String waterScore = WebUI.getText(findTestObject('PerformanceScore/Score/WaterSocre'))
+		String wasteScore = WebUI.getText(findTestObject('PerformanceScore/Score/WasteScore'))
+		String transportScore = WebUI.getText(findTestObject('PerformanceScore/Score/TransportScore'))
+		String humanExpScore = WebUI.getText(findTestObject('PerformanceScore/Score/HumanExperianceScore'))
+
+		//saving the data into the excel sheet for verifying with leed online.
+
+		dataExcelTemplate.setCellData(GlobalVariable.LEEDData, "energyScore", GlobalVariable.rowNumTwo, energyScore)
+		dataExcelTemplate.setCellData(GlobalVariable.LEEDData, "waterScore", GlobalVariable.rowNumTwo, waterScore)
+		dataExcelTemplate.setCellData(GlobalVariable.LEEDData, "wasteScore", GlobalVariable.rowNumTwo, wasteScore)
+		dataExcelTemplate.setCellData(GlobalVariable.LEEDData, "transportation", GlobalVariable.rowNumTwo, transportScore)
+		dataExcelTemplate.setCellData(GlobalVariable.LEEDData, "humanExperience", GlobalVariable.rowNumTwo, humanExpScore)
+
+		double energyscore = Double.parseDouble(energyScore)
+		double waterscore =  Double.parseDouble(waterScore)
+		double wastescore =  Double.parseDouble(wasteScore)
+		double transportscore = Double.parseDouble(transportScore)
+		double humexpscore =    Double.parseDouble(humanExpScore)
+		double totalPerformanceScore = energyscore + waterscore + wastescore + transportscore + humexpscore
+		String totalperformanceScore = Math.round(totalPerformanceScore)
+		//String totalperformanceScore = Double.toString(totalPerformanceScore)
+		println totalperformanceScore
+
+		WebUI.closeWindowIndex(1)
+		WebUI.delay(2)
+		WebUI.switchToWindowIndex(0)
+		//Search the project
+		reusableMethodsSearch.searchProgram(sheetName,rowNum)
+
+		WebUI.delay(15)
+		//WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
+		WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TotalPerformanceScore'),10)
+		WebUI.delay(15)
+		//Verifying the Performance score
+		String totalperformaceScore = WebUI.getText(findTestObject('PerformanceScore/Score/TotalPerformanceScore'))
+		print totalperformaceScore
+		WebUI.verifyMatch(totalperformaceScore , totalperformanceScore, false)
+
+	}
+	
+	
 }
