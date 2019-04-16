@@ -380,7 +380,7 @@ public class MasterTestListener extends BaseClass {
 			e.printStackTrace();
 		}
 
-		SendEmail.sendStatusReport(TestCount,TestCasePass, TestCaseFail,  diffMinutes+diffSeconds)
+		SendEmail.sendStatusReport1(TestCount,TestCasePass, TestCaseFail,  diffMinutes+diffSeconds)
 		KeywordUtil.markWarning("After Test Suite Listener : " + testSuite.getTestSuiteId())
 		WebUI.closeBrowser()
 		
