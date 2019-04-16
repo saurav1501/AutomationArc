@@ -20,7 +20,10 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
 try {
-	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgramPortfolio'(GlobalVariable.PortfoliosSheet,GlobalVariable.rowNumTwo)
+	/*CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgramPortfolio'(GlobalVariable.PortfoliosSheet,GlobalVariable.rowNumTwo)
+	
+	WebUI.delay(7)
+*/	
 	CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsPortfolio.wasteGenerationTest'(GlobalVariable.PortfoliosSheet,GlobalVariable.rowNumTwo)
 	
 } catch (Throwable t) {
