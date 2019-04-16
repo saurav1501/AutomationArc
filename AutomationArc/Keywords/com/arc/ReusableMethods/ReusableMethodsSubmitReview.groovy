@@ -778,7 +778,37 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 	     if((isFileExtracted('Parking SJ.jpg', sourceExtractedFile)))
 			 KeywordUtil.markWarning("Parking Sj.jpg file is present  ")
 		 else
-		 KeywordUtil.markFailed("Parking Sj.jpg file Not present")
+		 	KeywordUtil.markFailed("Parking Sj.jpg file Not present")
+		 
+		 if((isFileExtracted('USGBC.pdf', sourceExtractedFile)))
+		 	KeywordUtil.markWarning("USGBC.pdf file is present  ")
+		 else
+		 	KeywordUtil.markFailed("USGBC.pdf file Not present")
+		 
+		 if((isFileExtracted('txtFileUpload.txt', sourceExtractedFile)))
+		 	KeywordUtil.markWarning("txtFileUpload.txt file is present ")
+		 else
+		 	KeywordUtil.markFailed("txtFileUpload.txt file Not present")
+			 
+		 if((isFileExtracted('uploadPng.png', sourceExtractedFile)))
+			 KeywordUtil.markWarning("uploadPng.png file is present  ")
+		 else
+		 	KeywordUtil.markFailed("uploadPng.png file Not present")
+		 
+		 if((isFileExtracted('uploadGif.gif', sourceExtractedFile)))
+		 	KeywordUtil.markWarning("uploadGif.gif file is present  ")
+		 else
+		 	KeywordUtil.markFailed("uploadGif.gif file Not present")
+			 
+		 if((isFileExtracted('uploasExcel.xlsx', sourceExtractedFile)))
+			 KeywordUtil.markWarning("uploasExcel.xlsx file is present  ")
+		 else
+		 	KeywordUtil.markFailed("uploasExcel.xlsx file Not present")
+		 
+		 if((isFileExtracted('uploadDoc.docx', sourceExtractedFile)))
+		 	KeywordUtil.markWarning("uploadDoc.docx file is present  ")
+		 else
+		 	KeywordUtil.markFailed("uploadDoc.docx file Not present")
 	}
 
 	//Verify the project Snapshot file names
@@ -819,39 +849,44 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		/*Assert.assertTrue(isFileExtracted('GBCI PAN Card.pdf'), "GBCI PAN Card File Didn't downloaded successfully")
 		 Assert.assertTrue(isFileExtracted('GBCI-Noida-GST Registration Certificate.pdf'), "GBCI-Noida-GST Registration Certificate File Didn't downloaded successfully")
 		 */
-		 if((isFileExtracted('Parking SJ.jpg', sourceExtractedFile)))
-			 KeywordUtil.markWarning("Parking Sj.jpg file is present  ")
+		 if((isFileExtracted('Test de téléchargement de fichier(French).txt', sourceExtractedFile)))
+			 KeywordUtil.markWarning("Test de téléchargement de fichier(French).txt file is present  ")
 		 else
-		 KeywordUtil.markFailed("Parking Sj.jpg file Not present")
+		 KeywordUtil.markFailed("Test de téléchargement de fichier(French).txt file not present")
 		 
-		 if((isFileExtracted('USGBC.pdf', sourceExtractedFile)))
-		 KeywordUtil.markWarning("USGBC.pdf file is present  ")
+		 if((isFileExtracted('Upload do arquivo de teste(Portugues).txt', sourceExtractedFile)))
+		 KeywordUtil.markWarning("Upload do arquivo de teste(Portugues).txt file present ")
 		 else
-	     KeywordUtil.markFailed("USGBC.pdf file Not present")
+	     KeywordUtil.markFailed("Upload do arquivo de teste(Portugues).txt file not present")
 			 
-		 if((isFileExtracted('uploadGif.gif', sourceExtractedFile)))
-		 KeywordUtil.markWarning("uploadGif.gif file is present  ")
+		 if((isFileExtracted('Testen Sie den Datei-Upload(Greman).txt', sourceExtractedFile)))
+		 KeywordUtil.markWarning("Testen Sie den Datei-Upload(Greman).txt file present ")
 		 else
-		 KeywordUtil.markFailed("uploadGif.gif file Not present")
+		 KeywordUtil.markFailed("Testen Sie den Datei-Upload(Greman).txt file not present")
 		 
-		 if((isFileExtracted('uploasExcel.xlsx', sourceExtractedFile)))
-		 KeywordUtil.markWarning("uploasExcel.xlsx file is present  ")
+		 if((isFileExtracted('Carga de archivos de prueba(Spanish).txt', sourceExtractedFile)))
+		 KeywordUtil.markWarning("Carga de archivos de prueba(Spanish).txt file present")
 		 else
-		 KeywordUtil.markFailed("uploasExcel.xlsx file Not present")
+		 KeywordUtil.markFailed("Carga de archivos de prueba(Spanish).txt file Not present")
 		 
-		 if((isFileExtracted('uploadPng.png', sourceExtractedFile)))
-		 KeywordUtil.markWarning("uploadPng.png file is present  ")
+		 if((isFileExtracted('測試文件上傳(ChineseT).txt', sourceExtractedFile)))
+		 KeywordUtil.markWarning("測試文件上傳(ChineseT).txt file is present  ")
 		 else
-		 KeywordUtil.markFailed("uploadPng.png file Not present")
+		 KeywordUtil.markFailed("測試文件上傳(ChineseT).txt file Not present")
 		
-		 if((isFileExtracted('txtFileUpload.txt', sourceExtractedFile)))
-		 KeywordUtil.markWarning("txtFileUpload.txt file is present  ")
+		 if((isFileExtracted('测试文件上传(ChineseS).txt', sourceExtractedFile)))
+		 KeywordUtil.markWarning("测试文件上传(ChineseS).txt file is present  ")
 		 else
-		 KeywordUtil.markFailed("txtFileUpload.txt file Not present")
+		 KeywordUtil.markFailed("测试文件上传(ChineseS).txt file Not present")
 		 
-		 if((isFileExtracted('uploadDoc.docx', sourceExtractedFile)))
-		 KeywordUtil.markWarning("uploadDoc.docx file is present  ")
+		 if((isFileExtracted('테스트 파일 업로드(Korean).txt', sourceExtractedFile)))
+		 KeywordUtil.markWarning("테스트 파일 업로드(Korean).txt file is present  ")
 		 else
-		 KeywordUtil.markFailed("uploadDoc.docx file Not present")
+		 KeywordUtil.markFailed("테스트 파일 업로드(Korean).txt file Not present")
+		 
+		 if((isFileExtracted('Test Dosyası Yüklemesi(Turkish).txt', sourceExtractedFile)))
+		 KeywordUtil.markWarning("Test Dosyası Yüklemesi(Turkish).txt file is present  ")
+		 else
+		 KeywordUtil.markFailed("Test Dosyası Yüklemesi(Turkish).txt file Not present")
 	}
 }
