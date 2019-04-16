@@ -61,31 +61,31 @@
    <testCaseLink>
       <guid>e42ba676-ccc5-4766-9c85-1612bcc24e3f</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/CityComValidation/UIValidationPercentageEDUCATIONPopulationWithHighSchoolHumanExperienceTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>3999c084-de70-46ba-a9a0-43633a464e44</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/CityComValidation/UIValidationPopulationWith(at least)BachelorDegreeHumanExperienceTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>49239a95-d2e8-4f05-a1ce-a0272c1c0030</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/CityComValidation/UIValidationPercentageEQUITABILITYHumanExperienceTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>1666e115-d39e-4cf4-a81a-4630f6d6e877</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/CityComValidation/UIValidationGiniCoefficient(for income distribution)HumanExperienceTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>2c77d49d-43c8-4942-ae4d-cb7465232cf8</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/MyCities/CitiesNone/ScoreVersionVerificationTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

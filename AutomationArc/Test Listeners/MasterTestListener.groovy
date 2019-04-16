@@ -1,7 +1,11 @@
-import org.openqa.selenium.WebDriver
+import java.text.ParseException
+import java.text.SimpleDateFormat
+import java.time.LocalDateTime
+
 import org.testng.annotations.BeforeMethod
 
 import com.arc.BaseClass.BaseClass
+import com.arc.BaseClass.SendEmail
 import com.kms.katalon.core.annotation.AfterTestCase
 import com.kms.katalon.core.annotation.AfterTestSuite
 import com.kms.katalon.core.annotation.BeforeTestCase
@@ -35,6 +39,14 @@ public class MasterTestListener extends BaseClass {
 	int count
 	public static int count1
 	public static String [] testName
+	//Count the no of test Cases
+	public static TestCount =0
+	public static TestCasePass = 0
+	public static TestCaseFail = 0
+	SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss")
+	Date date, date1
+	String startTime
+	String endTime
 	@SetUp
 	void Setup() {		
 		
@@ -43,7 +55,9 @@ public class MasterTestListener extends BaseClass {
 	@BeforeTestSuite
 	public void beforeTestSuiteListener(TestSuiteContext testSuite)
 	{
-			
+		date= new Date(System.currentTimeMillis());
+		startTime = format.format(date);
+		println startTime
 		println "This is before Test Suit"
 		println("Before Test Suite Listener : " + testSuite.getTestSuiteId())
 		KeywordUtil.markWarning("Before Test Suite Listener : " + testSuite.getTestSuiteId())
@@ -56,7 +70,7 @@ public class MasterTestListener extends BaseClass {
 		println Country
 		//WebUI.openBrowser('')
 		
-
+		
 		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariable'()
 
 		//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariableAppUrl'()
@@ -164,6 +178,15 @@ public class MasterTestListener extends BaseClass {
 		
 		
 		result = testCase.getTestCaseStatus()
+		//cunt the tota no of test cases
+		TestCount+=1
+		//Count the test cases passed or failed
+		if(result.equals('PASSED')){
+			TestCasePass+=1
+		}
+		else{
+			TestCaseFail+=1
+		}
 		testName = testCase.getTestCaseId().split("/")
 		count1 =testName.size()
 		println count1
@@ -330,6 +353,34 @@ public class MasterTestListener extends BaseClass {
 	
 	@AfterTestSuite
 	public void afterTestSuite(TestSuiteContext testSuite){
+		date1= new Date(System.currentTimeMillis());
+		endTime = format.format(date1);
+		Date d1 = null;
+		Date d2 = null;
+		long diffSeconds,diffMinutes,diffHours
+		try {
+			d1 = format.parse(startTime);
+			println d1
+			d2 = format.parse(endTime);
+            println d2
+			//in milliseconds
+			long diff = d2 - d1;
+
+			 diffSeconds = diff / 1000 % 60;
+			 diffMinutes = diff / (60 * 1000) % 60;
+			 diffHours = diff / (60 * 60 * 1000) % 24;
+			long diffDays = diff / (24 * 60 * 60 * 1000);
+
+			System.out.print(diffDays + " days, ");
+			System.out.print(diffHours + " hours, ");
+			System.out.print(diffMinutes + " minutes, ");
+			System.out.print(diffSeconds + " seconds.");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		SendEmail.sendStatusReport(TestCount,TestCasePass, TestCaseFail,  diffMinutes+diffSeconds)
 		KeywordUtil.markWarning("After Test Suite Listener : " + testSuite.getTestSuiteId())
 		WebUI.closeBrowser()
 		

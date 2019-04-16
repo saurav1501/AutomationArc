@@ -4,7 +4,6 @@
    <name>CNComOtherSuite</name>
    <tag></tag>
    <isRerun>false</isRerun>
-   <lastRun>2018-07-24T18:51:41</lastRun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>

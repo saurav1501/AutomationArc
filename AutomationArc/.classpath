@@ -106,12 +106,14 @@
 	<classpathentry kind="lib" path="C:/Users/Lenovo/Downloads/Katalon_Studio_Windows_64-6.1.1/plugins/wsdl4j_1.6.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Lenovo/Downloads/Katalon_Studio_Windows_64-6.1.1/plugins/com.google.oauth-client.google-oauth-client_1.22.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Lenovo/Downloads/Katalon_Studio_Windows_64-6.1.1/plugins/com.google.http-client.google-http-client_1.22.0.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationArc/AutomationArc/Drivers/activation-1.1.jar"/>
 	<classpathentry kind="lib" path="D:/AutomationArc/AutomationArc/Drivers/calendar-plugin.jar"/>
 	<classpathentry kind="lib" path="D:/AutomationArc/AutomationArc/Drivers/commons-codec-1.10.jar"/>
 	<classpathentry kind="lib" path="D:/AutomationArc/AutomationArc/Drivers/commons-collections4-4.1.jar"/>
 	<classpathentry kind="lib" path="D:/AutomationArc/AutomationArc/Drivers/commons-logging-1.2.jar"/>
 	<classpathentry kind="lib" path="D:/AutomationArc/AutomationArc/Drivers/curvesapi-1.04.jar"/>
 	<classpathentry kind="lib" path="D:/AutomationArc/AutomationArc/Drivers/fontbox-2.0.11.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationArc/AutomationArc/Drivers/javax.mail-1.6.0.jar"/>
 	<classpathentry kind="lib" path="D:/AutomationArc/AutomationArc/Drivers/json-simple-1.1.1.jar"/>
 	<classpathentry kind="lib" path="D:/AutomationArc/AutomationArc/Drivers/junit-4.12.jar"/>
 	<classpathentry kind="lib" path="D:/AutomationArc/AutomationArc/Drivers/log4j-1.2.17.jar"/>
