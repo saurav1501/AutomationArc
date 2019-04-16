@@ -1257,17 +1257,17 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.setText(findTestObject('Manage/CityCom/New/Population'),'SDF')
 		WebUI.delay(1)
 		WebUI.click(findTestObject('Manage/CityCom/New/input_Population - Daytime_pop'))
-		WebUI.verifyElementPresent(findTestObject('Manage/ErrorMessage/ErrorMessage1'),2)
+		WebUI.verifyElementPresent(findTestObject('Object Repository/Manage/ErrorMessage/populationErrorMessage'),2)
 
 		WebUI.setText(findTestObject('Manage/CityCom/New/input_Population - Daytime_pop'),'SDF')
 		WebUI.click(findTestObject('Manage/CityCom/New/input_Population - Daytime_pop'))
 		WebUI.delay(1)
-		WebUI.verifyElementPresent(findTestObject('Manage/ErrorMessage/ErrorMessage2'),2)
+		WebUI.verifyElementPresent(findTestObject('Object Repository/Manage/ErrorMessage/populationDayTime'),2)
 
 		WebUI.setText(findTestObject('Manage/CityCom/New/input_Population - Nighttime_p'),'SDF')
 		WebUI.click(findTestObject('Manage/CityCom/New/input_Population - Daytime_pop'))
 		WebUI.delay(1)
-		WebUI.verifyElementPresent(findTestObject('Manage/ErrorMessage/ErrorMessage3'),2)
+		WebUI.verifyElementPresent(findTestObject('Object Repository/Manage/ErrorMessage/populationNightTime'),2)
 
 	}
 
