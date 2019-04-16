@@ -167,36 +167,14 @@ public class ReusableMethodsLogin extends BaseClass{
 		WebUI.delay(3)
 	}
 	@Keyword
-	public void loginArcWithGlobalVariable() {
+	public void navigateToURL() {
 
 
 		String url = GlobalVariable.url
-		String userName= GlobalVariable.userName
-		String password= GlobalVariable.password
-	/*	WebUI.openBrowser('')
-		WebUI.maximizeWindow()*/
 		WebUI.waitForPageLoad(GlobalVariable.timeOut)
 		WebUI.navigateToUrl(url)
 		waitForPageLoad(60)
-		WebUI.delay(2)
-		//RemoteWebDriver  driver= DriverFactory.getWebDriver()
-		//driver.setFileDetector(new LocalFileDetector())
-	//	WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/button_ACCEPT AND CLOSE'))
-		WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/clickOnLogin'))
-		WebUI.delay(2)
-		WebUI.sendKeys(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/input__name'), userName)
-
-		WebUI.sendKeys(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/input__pass'), password)
-
-		WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/input_Forgot Password_field_po'))
-		WebUI.delay(2)
-		WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/button_Log in'))
-
-		//WebUI.waitForPageLoad(10)
-		//WebUI.delay(10)
-		//WebUI.setViewPortSize(1366,1280)
-		waitForPageLoad(60)
-		WebUI.delay(2)
+		WebUI.delay(5)
 	}
 	@Keyword
 	public void loginArcGlobalVariable() {
