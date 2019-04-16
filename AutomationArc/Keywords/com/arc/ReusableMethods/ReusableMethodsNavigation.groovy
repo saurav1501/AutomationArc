@@ -206,12 +206,10 @@ public class ReusableMethodsNavigation {
 		/*******Verify clicking on the ARC LOGO takes you back to the ARC log-in page *************************/
 		WebUI.click(findTestObject('Page_Arc dashboard/DashboardPage/a_appLogo'))
 		WebUI.delay(3)
-		//WebUI.waitForPageLoad(GlobalVariable.timeOut)
 		String LogOut = WebUI.getText(findTestObject('DashboardNavigationNewUI/Dash/Logout'))
-		WebUI.verifyMatch(LogOut,'Logout', false)
-		
+		WebUI.verifyMatch(LogOut,'Logout', false)	
 		WebUI.click(findTestObject('DashboardNavigationNewUI/Dash/Logout'))
-		WebUI.delay(5)s
+		WebUI.delay(8)
 	}
 
 	@Keyword
