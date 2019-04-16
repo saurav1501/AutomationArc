@@ -1055,7 +1055,7 @@ public class ReusableMethodsPayment extends BaseClass{
 		 WebUI.verifyMatch(prjRating,ratingSystem, false)
 		 */
 		String toregPrince= WebUI.getText(findTestObject('PaymenntLocator/projectDetails/TotalRegPrice'))
-		WebUI.verifyMatch(toregPrince,regPriceNonMem, false)
+		WebUI.verifyMatch(toregPrince,'$1,500.00', false)
 
 		//String memberUI= WebUI.getText(findTestObject('PaymenntLocator/projectDetails/USGBCMember'))
 		//WebUI.verifyMatch(memberUI,member, false)
