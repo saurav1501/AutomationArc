@@ -87,7 +87,7 @@ public class ResuableMethodsGRESB extends BaseClass {
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Portfolio/GRESB/button_UPLOAD'))
 		WebUI.delay(30)
-		WebUI.delay(500)
+		WebUI.delay(60)
 
 	}
 
@@ -602,7 +602,7 @@ public class ResuableMethodsGRESB extends BaseClass {
 		WebUI.sendKeys(findTestObject('Portfolio/Total/portfolio_name'), " ")
 		WebUI.click(findTestObject('Portfolio/Total/span_Save'))
 		WebUI.delay(10)
-		WebUI.verifyElementPresent(findTestObject('Portfolio/GRESB/span_This field is required'),5)
+		WebUI.verifyElementPresent(findTestObject('LoginArc/Page_Arc Skoru  Sustainability perf/Required'),5)
 	}
 
 	@Keyword
