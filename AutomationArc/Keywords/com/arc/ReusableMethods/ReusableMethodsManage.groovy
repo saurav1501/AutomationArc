@@ -1670,7 +1670,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(10)
 		String memberName = WebUI.getText(findTestObject('DataInput/Team/Energy'))
 		WebUI.delay(5)
-		WebUI.verifyMatch(memberName," ", false)
+		WebUI.verifyMatch(memberName,"", false)
 
 	}
 
