@@ -389,12 +389,6 @@
       <testCaseId>Test Cases/Common/Analytics/TotalAnalyticsEnergyAnalyticsHighLowAvgScoreTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>89fe740e-4550-4349-b52d-7bc4c2430176</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Common/Analytics/TotalAnalyticsEnergyScoreLocalAvgGlobalAvgTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>6a56f18d-8723-478e-a772-ec8f40f96abd</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
