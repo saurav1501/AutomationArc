@@ -13,9 +13,9 @@ public class SendEmail {
 	static String pattern = "yyyy-MM-dd";
 	static SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
 	static String date = simpleDateFormat.format(new Date())
-	public static void sendStatusReport(int TotalTestCase, int TotalPassed, int TotalFailed, long executionTime) {
+	public static void sendStatusReport(int TotalTestCase, int TotalPassed, int TotalFailed, def executionTime) {
 		// Recipient's email ID needs to be mentioned.
-		String to = "abgupta@usgbc.org";
+		String to = "abgupta@usgbc.com";
 		String cc = "abhishekkumar@groupten.com";
 
 		// Sender's email ID needs to be mentioned
@@ -217,8 +217,8 @@ public class SendEmail {
 			throw new RuntimeException(e);
 		}
 	}
-	
-	
+
+
 	public static long executionTime(String endDate, String startDate){
 		SimpleDateFormat format = new SimpleDateFormat("HH:mm:ss")
 		Date d1 = null;
@@ -231,9 +231,9 @@ public class SendEmail {
 			//in milliseconds
 			long diff = d2.getTime() - d1.getTime();
 
-			 diffSeconds = diff / 1000 % 60;
-			 diffMinutes = diff / (60 * 1000) % 60;
-			 diffHours = diff / (60 * 60 * 1000) % 24;
+			diffSeconds = diff / 1000 % 60;
+			diffMinutes = diff / (60 * 1000) % 60;
+			diffHours = diff / (60 * 60 * 1000) % 24;
 			long diffDays = diff / (24 * 60 * 60 * 1000);
 
 			System.out.print(diffDays + " days, ");
@@ -246,5 +246,5 @@ public class SendEmail {
 		}
 		return endDate +"Hrs : "+ diffMinutes +"Min : "+ diffSeconds+ "Secs"
 	}
-	
+
 }

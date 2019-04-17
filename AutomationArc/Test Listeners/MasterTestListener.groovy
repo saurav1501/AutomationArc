@@ -1,6 +1,4 @@
-import java.text.ParseException
 import java.text.SimpleDateFormat
-import java.time.LocalDateTime
 
 import org.testng.annotations.BeforeMethod
 
@@ -357,30 +355,23 @@ public class MasterTestListener extends BaseClass {
 		endTime = format.format(date1);
 		Date d1 = null;
 		Date d2 = null;
-		long diffSeconds,diffMinutes,diffHours
+		def execution
 		try {
 			d1 = format.parse(startTime);
-			println d1
+			println d1.getTime()
 			d2 = format.parse(endTime);
-            println d2
-			//in milliseconds
-			long diff = d2 - d1;
-
-			 diffSeconds = diff / 1000 % 60;
-			 diffMinutes = diff / (60 * 1000) % 60;
-			 diffHours = diff / (60 * 60 * 1000) % 24;
-			long diffDays = diff / (24 * 60 * 60 * 1000);
-
-			System.out.print(diffDays + " days, ");
-			System.out.print(diffHours + " hours, ");
-			System.out.print(diffMinutes + " minutes, ");
-			System.out.print(diffSeconds + " seconds.");
+            println d2.getTime()
+			use(groovy.time.TimeCategory) {
+				def duration = d2 - d1
+				//print "Days: ${duration.days}, Hours: ${duration.hours}"
+				execution= "Hours: ${duration.hours }, Minutes: ${duration.minutes}, Seconds: ${duration.seconds}"
+			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
-		SendEmail.sendStatusReport1(TestCount,TestCasePass, TestCaseFail,  diffMinutes+diffSeconds)
+		SendEmail.sendStatusReport(TestCount,TestCasePass, TestCaseFail,  execution)
 		KeywordUtil.markWarning("After Test Suite Listener : " + testSuite.getTestSuiteId())
 		WebUI.closeBrowser()
 		
