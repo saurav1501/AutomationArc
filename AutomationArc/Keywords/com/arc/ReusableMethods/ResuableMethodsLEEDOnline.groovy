@@ -1003,7 +1003,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 
 	//Mark the leed online credits for review
 	public static void markCreditForReview(){
-
+		WebUI.waitForElementVisible(findTestObject('Object Repository/LEEDOnline/Review/markProjectInformation'), 60)
 		WebUI.click(findTestObject('Object Repository/LEEDOnline/Review/markProjectInformation'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/LEEDOnline/Review/creditStatusProjectInformation'), 20)
 		WebUI.click(findTestObject('Object Repository/LEEDOnline/Review/markEnergyEfficiencyBestMngtPractice'))
