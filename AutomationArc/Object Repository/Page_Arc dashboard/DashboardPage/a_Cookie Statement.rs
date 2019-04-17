@@ -6,15 +6,19 @@
    <elementGuidId>2dea25fc-5ab4-4dd0-8fe8-d1bd8189f178</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>XPATH</key>
+         <value>//*[@id=&quot;user-login-block-form-fields&quot;]/p/a[1]</value>
+      </entry>
+      <entry>
          <key>CSS</key>
-         <value>#user-login-block-form-fields > p > a:nth-child(1)</value>
+         <value>//*[@id=&quot;user-login-block-form-fields&quot;]/p/a[1]</value>
       </entry>
       <entry>
          <key>BASIC</key>
          <value>//a[@href = '/cookie-statement' and (text() = 'Cookie Statement' or . = 'Cookie Statement')]</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>CSS</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
