@@ -13,13 +13,13 @@
    <testCaseLink>
       <guid>dda08a4c-f609-4e29-8aa6-1158fbee7b98</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/LEEDONLINE/LoginIntoLEEDOnlineTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d06e5b76-eb8f-4b75-9d71-fb30fa34153e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/LEEDONLINE/AddNewProjectTest</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
@@ -43,13 +43,13 @@
    <testCaseLink>
       <guid>487e53fd-ea41-4e02-9f9e-2b4f34cf4595</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/LEEDONLINE/GreenBusinessCertificationIncAcceptTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>a347c28b-1a86-40d8-966f-d09174a49977</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/LEEDONLINE/RegPaymentCCTest</testCaseId>
    </testCaseLink>
    <testCaseLink>

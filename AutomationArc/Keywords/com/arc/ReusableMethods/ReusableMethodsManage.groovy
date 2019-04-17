@@ -2157,6 +2157,7 @@ public class ReusableMethodsManage extends BaseClass {
 		String ratingSystem = data.getCellData(sheetName, "RatingSystem", rowNum)
 		String pdflinks= pdfReader(downloadPath+orderId+".pdf")
 		print pdflinks
+		KeywordUtil.markWarning('Billing Receipt is : '+pdflinks)
 		int arr= pdflinks.indexOf(itemDesc)
 		String itemDescription
 		println arr
