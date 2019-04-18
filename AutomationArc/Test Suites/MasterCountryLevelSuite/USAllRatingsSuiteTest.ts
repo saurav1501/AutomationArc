@@ -9,88 +9,88 @@
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>STG-US</profileName>
+            <profileName>QAS-US</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
-         <runEnabled>false</runEnabled>
+         <runEnabled>true</runEnabled>
          <testSuiteEntity>Test Suites/BuildingSuites/Transit/Aboveground/USTransitSuite/USTransitAbovegroundSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>STG-US</profileName>
+            <profileName>QAS-US</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
-         <runEnabled>false</runEnabled>
+         <runEnabled>true</runEnabled>
          <testSuiteEntity>Test Suites/BuildingSuites/BuildingOther/USBuildingOtherSuite/USBuildingOtherSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>STG-US</profileName>
+            <profileName>QAS-US</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
-         <runEnabled>false</runEnabled>
+         <runEnabled>true</runEnabled>
          <testSuiteEntity>Test Suites/RegPageAndDashBoardSuite/DashBoardAndRegPageValidationSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>STG-US</profileName>
+            <profileName>QAS-US</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
-         <runEnabled>false</runEnabled>
+         <runEnabled>true</runEnabled>
          <testSuiteEntity>Test Suites/BuildingSuites/BuildingNone/USBuildingNoneSuite/USBuildingNoneSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>STG-US</profileName>
+            <profileName>QAS-US</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
-         <runEnabled>false</runEnabled>
+         <runEnabled>true</runEnabled>
          <testSuiteEntity>Test Suites/CommunitySuites/USComSuite/USComLEEDForComSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>STG-US</profileName>
+            <profileName>QAS-US</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
-         <runEnabled>false</runEnabled>
+         <runEnabled>true</runEnabled>
          <testSuiteEntity>Test Suites/CommunitySuites/USComSuite/USComNoneSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>STG-US</profileName>
+            <profileName>QAS-US</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
-         <runEnabled>false</runEnabled>
+         <runEnabled>true</runEnabled>
          <testSuiteEntity>Test Suites/CommunitySuites/USComSuite/USComOtherSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>STG-US</profileName>
+            <profileName>QAS-US</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
-         <runEnabled>false</runEnabled>
+         <runEnabled>true</runEnabled>
          <testSuiteEntity>Test Suites/CitiesSuites/USCitySuite/USCitiesOtherSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>STG-US</profileName>
+            <profileName>QAS-US</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
-         <runEnabled>false</runEnabled>
+         <runEnabled>true</runEnabled>
          <testSuiteEntity>Test Suites/CitiesSuites/USCitySuite/USCitiesNoneSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>STG-US</profileName>
+            <profileName>QAS-US</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
          <runEnabled>false</runEnabled>
@@ -99,7 +99,7 @@
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>STG-US</profileName>
+            <profileName>QAS-US</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
          <runEnabled>false</runEnabled>
@@ -108,16 +108,16 @@
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>STG-US</profileName>
+            <profileName>QAS-US</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
-         <runEnabled>true</runEnabled>
+         <runEnabled>false</runEnabled>
          <testSuiteEntity>Test Suites/TrialFullAccess1To5YearsSuite/USBuildingTrialFullAccess1To5YearsSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>STG-US</profileName>
+            <profileName>QAS-US</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
          <runEnabled>false</runEnabled>
@@ -126,7 +126,7 @@
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>STG-US</profileName>
+            <profileName>QAS-US</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
          <runEnabled>false</runEnabled>
@@ -135,7 +135,7 @@
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>STG-US</profileName>
+            <profileName>QAS-US</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
          <runEnabled>false</runEnabled>
@@ -144,7 +144,7 @@
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>STG-US</profileName>
+            <profileName>QAS-US</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
          <runEnabled>false</runEnabled>
@@ -153,7 +153,7 @@
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>STG-US</profileName>
+            <profileName>QAS-US</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
          <runEnabled>false</runEnabled>
@@ -162,7 +162,7 @@
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>STG-US</profileName>
+            <profileName>QAS-US</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
          <runEnabled>false</runEnabled>

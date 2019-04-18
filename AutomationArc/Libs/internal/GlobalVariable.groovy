@@ -408,6 +408,11 @@ Profile STG2D-US : payment via credit card</p>
      */
     public static Object cardPayment
      
+    /**
+     * <p></p>
+     */
+    public static Object TestCount
+     
 
     static {
         try {
@@ -480,6 +485,7 @@ Profile STG2D-US : payment via credit card</p>
             notCertified = selectedVariables['notCertified']
             rowNumTwentyThree = selectedVariables['rowNumTwentyThree']
             cardPayment = selectedVariables['cardPayment']
+            TestCount = selectedVariables['TestCount']
             
         } catch (Exception e) {
             TestCaseMain.logGlobalVariableError(e)

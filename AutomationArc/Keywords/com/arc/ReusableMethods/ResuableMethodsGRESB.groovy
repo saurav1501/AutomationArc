@@ -87,7 +87,7 @@ public class ResuableMethodsGRESB extends BaseClass {
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Portfolio/GRESB/button_UPLOAD'))
 		WebUI.delay(30)
-		WebUI.delay(60)
+		WebUI.delay(200)
 
 	}
 
