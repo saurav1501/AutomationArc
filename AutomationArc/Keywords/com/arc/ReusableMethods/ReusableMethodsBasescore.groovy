@@ -48,7 +48,7 @@ public class ReusableMethodsBasescore {
 		WebUI.click(findTestObject('PreRequisite/button_Next'))
 
 		println 2
-
+		WebUI.delay(3)
 		WebUI.click(findTestObject('PreRequisite/CheckBox1'))
 		WebUI.delay(2)
 		WebUI.click(findTestObject('PreRequisite/button_Attempted'))
@@ -58,7 +58,7 @@ public class ReusableMethodsBasescore {
 		WebUI.click(findTestObject('PreRequisite/button_Next'))
 
 		println 3
-
+		WebUI.delay(3)
 		WebUI.click(findTestObject('PreRequisite/CheckBox1'))
 		WebUI.delay(2)
 		WebUI.click(findTestObject('PreRequisite/button_Attempted'))
@@ -68,7 +68,7 @@ public class ReusableMethodsBasescore {
 		WebUI.click(findTestObject('PreRequisite/button_Next'))
 
 		println 4
-
+		WebUI.delay(3)
 		WebUI.click(findTestObject('PreRequisite/CheckBox1'))
 		WebUI.delay(2)
 		WebUI.click(findTestObject('PreRequisite/button_Attempted'))
@@ -79,7 +79,7 @@ public class ReusableMethodsBasescore {
 
 
 		println 5
-
+		WebUI.delay(3)
 		WebUI.click(findTestObject('PreRequisite/CheckBox1'))
 		WebUI.delay(2)
 		WebUI.click(findTestObject('PreRequisite/span_Attempted'))
@@ -89,7 +89,7 @@ public class ReusableMethodsBasescore {
 		WebUI.click(findTestObject('PreRequisite/button_Next'))
 
 		println 6
-
+		WebUI.delay(3)
 		WebUI.click(findTestObject('PreRequisite/CheckBox1'))
 		WebUI.delay(1)
 		WebUI.click(findTestObject('PreRequisite/CheckBox2'))
@@ -101,7 +101,7 @@ public class ReusableMethodsBasescore {
 		WebUI.click(findTestObject('PreRequisite/button_Next'))
 
 		println 7
-
+		WebUI.delay(3)
 		WebUI.click(findTestObject('PreRequisite/CheckBox1'))
 		WebUI.delay(1)
 		WebUI.click(findTestObject('PreRequisite/CheckBox2'))
@@ -124,7 +124,7 @@ public class ReusableMethodsBasescore {
 		WebUI.click(findTestObject('PreRequisite/button_Next'))
 
 		println 9
-
+		WebUI.delay(3)
 		WebUI.click(findTestObject('PreRequisite/CheckBox1'))
 		WebUI.delay(2)
 		WebUI.click(findTestObject('PreRequisite/button_Attempted'))
@@ -134,7 +134,7 @@ public class ReusableMethodsBasescore {
 		WebUI.click(findTestObject('PreRequisite/button_Next'))
 
 		println 10
-
+		WebUI.delay(3)
 		WebUI.click(findTestObject('PreRequisite/CheckBox1'))
 		WebUI.delay(2)
 		WebUI.click(findTestObject('PreRequisite/span_Attempted'))
