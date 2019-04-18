@@ -4,7 +4,17 @@
    <name>a_Terms of Use</name>
    <tag></tag>
    <elementGuidId>b7b4887e-0eff-4043-9c43-528590d6eff2</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>#user-login-block-form-fields > p > a:nth-child(3)</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//a[@href = '/terms' and (text() = 'Terms of Use' or . = 'Terms of Use')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

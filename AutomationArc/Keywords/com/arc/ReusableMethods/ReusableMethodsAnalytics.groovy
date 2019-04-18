@@ -2738,15 +2738,28 @@ public class ReusableMethodsAnalytics extends BaseClass{
 	@Keyword
 	public void avgoccupainttest(String sheetName ,int rowNum) {
 		String avghumExp = data.getCellData(sheetName, "HumAvgSatisfaction", rowNum)
+	/*	Double avghumexp= Double.parseDouble(avghumExp)
+
+		BigDecimal avghumexperiance = new BigDecimal(avghumexp)
+		avghumexperiance = avghumexperiance .setScale(4, RoundingMode.HALF_UP)
+		String cavghumexperiance = avghumexperiance.toString()
+*/
+		/****************UI Verses Calculated Average occupant satisfaction *****************************/
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Analytics/Nav/AverageOccupaint')),'Very satisfied', false)
+	}
+	@Keyword
+	public void avgoccupainttestv2(String sheetName ,int rowNum) {
+		String avghumExp = data.getCellData(sheetName, "HumAvgSatisfaction", rowNum)
 		Double avghumexp= Double.parseDouble(avghumExp)
 
 		BigDecimal avghumexperiance = new BigDecimal(avghumexp)
 		avghumexperiance = avghumexperiance .setScale(4, RoundingMode.HALF_UP)
 		String cavghumexperiance = avghumexperiance.toString()
 
-		/****************UI Verses Calculated average occupaint satisfacation *****************************/
+		/****************UI Verses Calculated Average occupant satisfaction *****************************/
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Analytics/Nav/AverageOccupaint')), cavghumexperiance, false)
 	}
+	
 	@Keyword
 	public void co2caltest(String sheetName ,int rowNum) {
 

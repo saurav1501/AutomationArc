@@ -4,7 +4,17 @@
    <name>a_Privacy Statement</name>
    <tag></tag>
    <elementGuidId>b8056a5b-9787-4d45-a436-8ea578bcd8bb</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>#user-login-block-form-fields > p > a:nth-child(2)</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//a[@href = '/privacy-statement' and (text() = 'Privacy Statement' or . = 'Privacy Statement')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

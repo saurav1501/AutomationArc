@@ -4,7 +4,21 @@
    <name>a_Cookie Statement</name>
    <tag></tag>
    <elementGuidId>2dea25fc-5ab4-4dd0-8fe8-d1bd8189f178</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@id=&quot;user-login-block-form-fields&quot;]/p/a[1]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>//*[@id=&quot;user-login-block-form-fields&quot;]/p/a[1]</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//a[@href = '/cookie-statement' and (text() = 'Cookie Statement' or . = 'Cookie Statement')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

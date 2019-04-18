@@ -60,6 +60,8 @@ public class ResuableMethodsLandingPage extends BaseClass {
 		/*WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/clickOnLogin'))
 		 WebUI.delay(2)
 		 */
+		
+		WebUI.scrollToElement(findTestObject('Page_Arc dashboard/DashboardPage/a_Cookie Statement'), 12)
 		WebUI.click(findTestObject('Page_Arc dashboard/DashboardPage/a_Cookie Statement'))
 		WebUI.delay(6)
 		WebUI.switchToWindowIndex(1)
@@ -108,6 +110,7 @@ public class ResuableMethodsLandingPage extends BaseClass {
 		/*WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/clickOnLogin'))
 		 WebUI.delay(2)
 		 */	
+		WebUI.scrollToElement(findTestObject('Page_Arc dashboard/DashboardPage/a_Privacy Statement'),6)
 		WebUI.click(findTestObject('Page_Arc dashboard/DashboardPage/a_Privacy Statement'))
 		WebUI.delay(5)
 		WebUI.switchToWindowIndex(1)
@@ -134,7 +137,7 @@ public class ResuableMethodsLandingPage extends BaseClass {
 		/*******Check Hyper links  in Login module for 'privacy policy' clicking on the hyperlinks should redirect to correct web-page.*************************/
 		WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/clickOnLogin'))
 		WebUI.delay(2)
-
+		WebUI.scrollToElement(findTestObject('Page_Arc dashboard/DashboardPage/a_Terms of Use'),6)		
 		WebUI.click(findTestObject('Page_Arc dashboard/DashboardPage/a_Terms of Use'))
 		WebUI.delay(5)
 		WebUI.switchToWindowIndex(1)
