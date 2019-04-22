@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>div:nth-child(1) > div.tMemInfo > span.meta</value>
+         <value>div:nth-child(2) > div.tMemInfo > span.meta</value>
       </entry>
    </selectorCollection>
    <selectorMethod>CSS</selectorMethod>

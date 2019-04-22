@@ -236,7 +236,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'qas2 mishra'</initValue>
+      <initValue>'qas1 mishra'</initValue>
       <name>teamMemberName</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
