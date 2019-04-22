@@ -3845,11 +3845,17 @@ public class ResuableMethodsPortfolio extends BaseClass {
 			System.out.println(ostr1)
 			double eodaily=Double.parseDouble(ostr1)/365
 			BigDecimal eoden = new BigDecimal(eodaily)
-			eoden = eoden.setScale(2, RoundingMode.HALF_UP)
-			String pocccalcuated = eoden.toString()
+			eoden = eoden.setScale(1, RoundingMode.HALF_UP)
+			String calengdailyCarbon = eoden.toString()
 
 			String eodailyCarbon =WebUI.getText(findTestObject('Portfolio/Total/carbon/ODailycarbon'))
-			WebUI.verifyMatch(eodailyCarbon, pocccalcuated, false)
+			BigDecimal deodailyCarbon = new BigDecimal(eodailyCarbon)
+			deodailyCarbon = deodailyCarbon.setScale(1, RoundingMode.HALF_UP)
+			String engdailyCarbon = deodailyCarbon.toString()
+
+			
+			
+			WebUI.verifyMatch(engdailyCarbon, calengdailyCarbon, false)
 			println  "Verified PER OCC DAILY ADJUSTED CARBON EMISSIONS (MTCO2e) Successfully"
 			WebUI.delay(2)
 		}
