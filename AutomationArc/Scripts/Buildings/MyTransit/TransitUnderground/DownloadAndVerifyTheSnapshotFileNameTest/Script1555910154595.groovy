@@ -17,7 +17,7 @@ import internal.GlobalVariable as GlobalVariable
 try {
 		
 		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginArcAdminToolWithGlobalVariable'()
-		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifySnapshotFileNameUploadedBuilding'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSeven,"LEED V4 O+M: TR")
+		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifySnapshotFileNameUploadedBuildingTransit'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSeven,"LEED V4 O+M. TR")
 		
 	} catch (Throwable t) {
 		WebUI.closeWindowIndex(1)

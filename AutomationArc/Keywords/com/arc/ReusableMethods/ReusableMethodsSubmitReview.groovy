@@ -948,7 +948,6 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		println sourceExtractedFileEnergy
 		String sourceExtractedFileWater= RunConfiguration.getProjectDir()+"/Download/"+projectId+"/"+ratingSystem+"/Certification/water/"
 		String sourceExtractedFileWaste= RunConfiguration.getProjectDir()+"/Download/"+projectId+"/"+ratingSystem+"/Certification/waste/"
-		
 		String destinationUnZippedFolder= RunConfiguration.getProjectDir()+"/Download/"
 		println destinationUnZippedFolder
 		//deleteFile(sourceZipFile)
@@ -961,48 +960,30 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/AdminToolReviewSearchButton'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/PerformanceScore/SnapshotLinkToDownload'), 20)
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/SnapshotLinkToDownload'))
-		WebUI.delay(10)
+		WebUI.delay(300)
 		unzip(sourceZipFile, destinationUnZippedFolder)
 		WebUI.delay(5)
 
-		 if((isFileExtracted('Test de téléchargement de fichier(French).txt', sourceExtractedFileEnergy)))
-			 KeywordUtil.markWarning("Test de téléchargement de fichier(French).txt file is present  ")
+		 if((isFileExtracted('Ramayana-01_01.pdf', sourceExtractedFileEnergy)))
+			 KeywordUtil.markWarning("Ramayana-01_01.pdf file is present  ")
 		 else
-		 KeywordUtil.markFailed("Test de téléchargement de fichier(French).txt file not present")
+		 KeywordUtil.markFailed("Ramayana-01_01.pdf file not present")
 		 
-		 if((isFileExtracted('Upload do arquivo de teste(Portugues).txt', sourceExtractedFileEnergy)))
-		 KeywordUtil.markWarning("Upload do arquivo de teste(Portugues).txt file present ")
+		 if((isFileExtracted('Ramayana-02_02.pdf', sourceExtractedFileEnergy)))
+		 KeywordUtil.markWarning("Ramayana-02_02.pdf file present ")
 		 else
-		 KeywordUtil.markFailed("Upload do arquivo de teste(Portugues).txt file not present")
+		 KeywordUtil.markFailed("Ramayana-02_02.pdf file not present")
 			 
-		 if((isFileExtracted('Testen Sie den Datei-Upload(Greman).txt', sourceExtractedFileEnergy)))
-		 KeywordUtil.markWarning("Testen Sie den Datei-Upload(Greman).txt file present ")
+		 if((isFileExtracted('Srimad_Bhagavatam_Canto_01_Hindi.pdf', sourceExtractedFileEnergy)))
+		 KeywordUtil.markWarning("Srimad_Bhagavatam_Canto_01_Hindi.pdf file present ")
 		 else
-		 KeywordUtil.markFailed("Testen Sie den Datei-Upload(Greman).txt file not present")
+		 KeywordUtil.markFailed("Srimad_Bhagavatam_Canto_01_Hindi.pdf file not present")
 		 
-		 if((isFileExtracted('Carga de archivos de prueba(Spanish).txt', sourceExtractedFileEnergy)))
-		 KeywordUtil.markWarning("Carga de archivos de prueba(Spanish).txt file present")
+		 if((isFileExtracted('A College Text-Book of Physics_ 2nd Ed_ Arthur L Kimball_ 1917.pdf', sourceExtractedFileEnergy)))
+		 KeywordUtil.markWarning("A College Text-Book of Physics_ 2nd Ed_ Arthur L Kimball_ 1917.pdf file present")
 		 else
-		 KeywordUtil.markFailed("Carga de archivos de prueba(Spanish).txt file Not present")
+		 KeywordUtil.markFailed("A College Text-Book of Physics_ 2nd Ed_ Arthur L Kimball_ 1917.pdf file Not present")
 		 
-		 if((isFileExtracted('測試文件上傳(ChineseT).txt', sourceExtractedFileEnergy)))
-		 KeywordUtil.markWarning("測試文件上傳(ChineseT).txt file is present  ")
-		 else
-		 KeywordUtil.markFailed("測試文件上傳(ChineseT).txt file Not present")
-		
-		 if((isFileExtracted('测试文件上传(ChineseS).txt', sourceExtractedFileEnergy)))
-		 KeywordUtil.markWarning("测试文件上传(ChineseS).txt file is present  ")
-		 else
-		 KeywordUtil.markFailed("测试文件上传(ChineseS).txt file Not present")
-		 
-		 if((isFileExtracted('테스트 파일 업로드(Korean).txt', sourceExtractedFileEnergy)))
-		 KeywordUtil.markWarning("테스트 파일 업로드(Korean).txt file is present  ")
-		 else
-		 KeywordUtil.markFailed("테스트 파일 업로드(Korean).txt file Not present")
-		 
-		 if((isFileExtracted('Test Dosyası Yüklemesi(Turkish).txt', sourceExtractedFileEnergy)))
-		 KeywordUtil.markWarning("Test Dosyası Yüklemesi(Turkish).txt file is present  ")
-		 else
-		 KeywordUtil.markFailed("Test Dosyası Yüklemesi(Turkish).txt file Not present")	 
+	
 	}
 }

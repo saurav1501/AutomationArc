@@ -13,7 +13,7 @@
    <testCaseLink>
       <guid>7632db0b-d637-452a-a94e-e46cd99ddd02</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/AddNewProjectTest</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
@@ -37,13 +37,13 @@
    <testCaseLink>
       <guid>cf41f40c-2bfe-47b6-aaeb-2c5f13f58a5f</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/PaymentByCheck</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>2a8f7134-393f-4288-8c6f-5713625b9bc1</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/NavigationIndividualRaceTrackToAnalyticsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -145,7 +145,7 @@
    <testCaseLink>
       <guid>f69bce84-57f8-4394-82ec-675afbcb3b6f</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/TransitWasteMeterCreateTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -157,13 +157,13 @@
    <testCaseLink>
       <guid>4b2e9549-5c25-49c0-b791-aec1bbbafcb9</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/TransitEnergyMeterCreateTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>0454e62e-1e49-40cd-8415-44302b8874f9</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/TransitDataInputFileUploadTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -313,7 +313,7 @@
    <testCaseLink>
       <guid>d1a44cdc-1ad6-4e88-a1ca-b8820e5d4a41</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/DownloadAndVerifyTheSnapshotFileNameTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

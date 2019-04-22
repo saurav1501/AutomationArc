@@ -16,4 +16,11 @@
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>ref_element</name>
+      <type>Main</type>
+      <value>Object Repository/Page_Arc dashboard/DashboardPage/NavigationCreditAction/iframe_datainput-widget</value>
+   </webElementProperties>
 </WebElementEntity>
