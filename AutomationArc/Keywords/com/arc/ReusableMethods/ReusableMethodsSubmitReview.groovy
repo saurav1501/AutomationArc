@@ -983,7 +983,56 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		 KeywordUtil.markWarning("A College Text-Book of Physics_ 2nd Ed_ Arthur L Kimball_ 1917.pdf file present")
 		 else
 		 KeywordUtil.markFailed("A College Text-Book of Physics_ 2nd Ed_ Arthur L Kimball_ 1917.pdf file Not present")
-		 
+	}
 	
+	
+	//Transit Above ground
+	@Keyword
+	public void verifySnapshotFileNameUploadedBuildingTransitAboveGround(String sheetName, int rowNum, String ratingSystem){
+
+
+		String projectId = data.getCellData(sheetName, "ProjectID", rowNum)
+		String fileName= projectId+".zip"
+		String sourceZipFile= RunConfiguration.getProjectDir()+"/Download/"+fileName
+		println sourceZipFile
+		String sourceExtractedFileEnergy= RunConfiguration.getProjectDir()+"/Download/"+projectId+"/"+ratingSystem+"/Certification/energy/"
+		println sourceExtractedFileEnergy
+		String sourceExtractedFileWater= RunConfiguration.getProjectDir()+"/Download/"+projectId+"/"+ratingSystem+"/Certification/water/"
+		String sourceExtractedFileWaste= RunConfiguration.getProjectDir()+"/Download/"+projectId+"/"+ratingSystem+"/Certification/waste/"
+		String destinationUnZippedFolder= RunConfiguration.getProjectDir()+"/Download/"
+		println destinationUnZippedFolder
+		//deleteFile(sourceZipFile)
+		//deleteFile(sourceExtractedFile)
+		WebUI.delay(5)
+		WebUI.scrollToElement(findTestObject('Object Repository/PerformanceScore/AdminToolReviewButton'), 4)
+		WebUI.click(findTestObject('Object Repository/PerformanceScore/AdminToolReviewButton'))
+		WebUI.click(findTestObject('Object Repository/PerformanceScore/AdminToolsReviewSearchBar'))
+		WebUI.setText(findTestObject('Object Repository/PerformanceScore/AdminToolsReviewSearchBar'), projectId)
+		WebUI.click(findTestObject('Object Repository/PerformanceScore/AdminToolReviewSearchButton'))
+		WebUI.waitForElementVisible(findTestObject('Object Repository/PerformanceScore/SnapshotLinkToDownload'), 20)
+		WebUI.click(findTestObject('Object Repository/PerformanceScore/SnapshotLinkToDownload'))
+		WebUI.delay(300)
+		unzip(sourceZipFile, destinationUnZippedFolder)
+		WebUI.delay(5)
+
+		 if((isFileExtracted('Ramayana-01_01.pdf', sourceExtractedFileEnergy)))
+			 KeywordUtil.markWarning("Ramayana-01_01.pdf file is present  ")
+		 else
+		 KeywordUtil.markFailed("Ramayana-01_01.pdf file not present")
+		 
+		 if((isFileExtracted('Ramayana-02_02.pdf', sourceExtractedFileEnergy)))
+		 KeywordUtil.markWarning("Ramayana-02_02.pdf file present ")
+		 else
+		 KeywordUtil.markFailed("Ramayana-02_02.pdf file not present")
+			 
+		 if((isFileExtracted('Srimad_Bhagavatam_Canto_01_Hindi.pdf', sourceExtractedFileEnergy)))
+		 KeywordUtil.markWarning("Srimad_Bhagavatam_Canto_01_Hindi.pdf file present ")
+		 else
+		 KeywordUtil.markFailed("Srimad_Bhagavatam_Canto_01_Hindi.pdf file not present")
+		 
+		 if((isFileExtracted('A College Text-Book of Physics_ 2nd Ed_ Arthur L Kimball_ 1917.pdf', sourceExtractedFileEnergy)))
+		 KeywordUtil.markWarning("A College Text-Book of Physics_ 2nd Ed_ Arthur L Kimball_ 1917.pdf file present")
+		 else
+		 KeywordUtil.markFailed("A College Text-Book of Physics_ 2nd Ed_ Arthur L Kimball_ 1917.pdf file Not present")
 	}
 }
