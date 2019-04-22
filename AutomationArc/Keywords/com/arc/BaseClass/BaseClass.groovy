@@ -7,7 +7,7 @@ import com.kms.katalon.core.testobject.TestObject
 import internal.GlobalVariable
 
 public class BaseClass {
-    
+
 	public static int testCount=0
 	//Excel Font color
 	public static short fontOrange = HSSFColor.ORANGE.index
@@ -91,8 +91,11 @@ public class BaseClass {
 	public static String UploadArcDataTempleteChineseSimple = RunConfiguration.getProjectDir()+"/ARCDataTemplete/测试文件上传(ChineseS).txt"
 	public static String UploadArcDataTempleteChineseTrade = RunConfiguration.getProjectDir()+"/ARCDataTemplete/測試文件上傳(ChineseT).txt"
 
-
-
+	//Large files for snapshot
+	public static String FileSize205="/var/lib/jenkins/workspace/ARC_Kat/Ramayana-01_01.pdf"
+	public static String FileSize173="/var/lib/jenkins/workspace/ARC_Kat/Ramayana-02_02.pdf"
+	public static String FileSize446="/var/lib/jenkins/workspace/ARC_Kat/Srimad_Bhagavatam_Canto_01_Hindi.pdf"
+	public static String FileSize62="/var/lib/jenkins/workspace/ARC_Kat/A College Text-Book of Physics_ 2nd Ed_ Arthur L Kimball_ 1917.pdf"
 
 	//local files
 	/*

@@ -31,7 +31,7 @@ try{
 
 	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSeven)
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToTransitDataInput'()
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.fileUploadDataInput'()
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.largeFileUploadDataInputForSnapshot'()
 
 } catch (Throwable t) {
 	

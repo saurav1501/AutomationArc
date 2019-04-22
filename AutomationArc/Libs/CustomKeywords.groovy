@@ -1996,6 +1996,10 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.fileUploadDataInput
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).fileUploadDataInput()
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.largeFileUploadDataInputForSnapshot"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).largeFileUploadDataInputForSnapshot()
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.fileUploadDataInputWithDifferentLanguages"() {
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).fileUploadDataInputWithDifferentLanguages()
 }
