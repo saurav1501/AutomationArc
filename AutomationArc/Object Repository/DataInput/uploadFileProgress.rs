@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//*[@class=&quot;info_label ng-binding&quot;]</value>
+         <value>//*[@ng-if=&quot;data.upload_meter&quot;]</value>
       </entry>
       <entry>
          <key>BASIC</key>
