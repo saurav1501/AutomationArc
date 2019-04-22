@@ -13,7 +13,7 @@
    <testCaseLink>
       <guid>c8ea35b2-6188-4afc-8fcd-e79bcdc64292</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/LEEDOnlineCity/LoginIntoLEEDOnlineTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
