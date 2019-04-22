@@ -410,7 +410,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 
 		WebUI.setText(findTestObject('Manage/CityCom/LEED/TeamSearch'),GlobalVariable.TeamMember2 )
 		WebUI.click(findTestObject('Manage/CityCom/LEED/teamAddButton'))
-		WebUI.delay(3)
+		WebUI.delay(10)
 
 		String teamMemberDetails = 	WebUI.getText(findTestObject('Manage/CityCom/LEED/TeamUserid2'))
 		WebUI.verifyMatch(teamMemberDetails,GlobalVariable.TeamMember2, false)
