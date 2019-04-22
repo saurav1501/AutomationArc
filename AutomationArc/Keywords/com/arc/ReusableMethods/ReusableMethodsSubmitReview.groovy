@@ -949,6 +949,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		String sourceExtractedFileWater= RunConfiguration.getProjectDir()+"/Download/"+projectId+"/"+ratingSystem+"/Certification/water/"
 		String sourceExtractedFileWaste= RunConfiguration.getProjectDir()+"/Download/"+projectId+"/"+ratingSystem+"/Certification/waste/"
 		String destinationUnZippedFolder= RunConfiguration.getProjectDir()+"/Download/"
+		String sourceExtractedFile= RunConfiguration.getProjectDir()+"/Download/"+projectId
 		println destinationUnZippedFolder
 		//deleteFile(sourceZipFile)
 		//deleteFile(sourceExtractedFile)
@@ -983,6 +984,9 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		 KeywordUtil.markWarning("A College Text-Book of Physics_ 2nd Ed_ Arthur L Kimball_ 1917.pdf file present")
 		 else
 		 KeywordUtil.markFailed("A College Text-Book of Physics_ 2nd Ed_ Arthur L Kimball_ 1917.pdf file Not present")
+		 
+		 deleteFile(sourceZipFile)
+		 deleteFile(sourceExtractedFile)
 	}
 	
 	
