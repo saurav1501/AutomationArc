@@ -4,7 +4,6 @@
    <name>TestSuite</name>
    <tag></tag>
    <isRerun>false</isRerun>
-   <lastRun>2018-11-12T10:32:54</lastRun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>60</pageLoadTimeout>
