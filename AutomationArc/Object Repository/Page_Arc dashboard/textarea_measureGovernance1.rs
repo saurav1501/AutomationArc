@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id = 'PR103.3']</value>
+         <value>//*[@id = 'PR103.3' or @id=&quot;PR903.3&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

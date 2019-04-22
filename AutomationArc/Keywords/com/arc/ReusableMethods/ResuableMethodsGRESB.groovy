@@ -87,7 +87,7 @@ public class ResuableMethodsGRESB extends BaseClass {
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Portfolio/GRESB/button_UPLOAD'))
 		WebUI.delay(30)
-		WebUI.delay(60)
+		WebUI.delay(200)
 
 	}
 
@@ -450,6 +450,7 @@ public class ResuableMethodsGRESB extends BaseClass {
 		WebUI.click(findTestObject('Portfolio/ErrorNotification/Energy/td_District heating and Coolin'))
 		WebUI.delay(4)
 		WebUI.setText(findTestObject('Portfolio/Project/InputTextBox'),'100')
+		WebUI.delay(3)
 		WebUI.click(findTestObject('Portfolio/GRESB/SaveButton'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/SuccessGreenTick'),20)
 		WebUI.delay(5)
@@ -457,12 +458,14 @@ public class ResuableMethodsGRESB extends BaseClass {
 
 		WebUI.click(findTestObject('Portfolio/ErrorNotification/Energy/td_Electricity Meter'))
 		WebUI.setText(findTestObject('Portfolio/Project/InputTextBox'),'100')
+		WebUI.delay(3)
 		WebUI.click(findTestObject('Portfolio/GRESB/SaveButton'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/SuccessGreenTick'),20)
 		WebUI.delay(5)
 
 		WebUI.click(findTestObject('Portfolio/ErrorNotification/Energy/td_Fuel Meter'))
 		WebUI.setText(findTestObject('Portfolio/Project/InputTextBox'),'100')
+		WebUI.delay(3)
 		WebUI.click(findTestObject('Portfolio/GRESB/SaveButton'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/SuccessGreenTick'),20)
 		WebUI.delay(5)
@@ -473,6 +476,7 @@ public class ResuableMethodsGRESB extends BaseClass {
 		WebUI.click(findTestObject('Portfolio/GRESB/Section/td_Water Meter'))
 		WebUI.delay(4)
 		WebUI.setText(findTestObject('Portfolio/Project/InputTextBox'),'100')
+		WebUI.delay(3)
 		WebUI.click(findTestObject('Portfolio/GRESB/SaveButton'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/SuccessGreenTick'),20)
 		WebUI.delay(5)

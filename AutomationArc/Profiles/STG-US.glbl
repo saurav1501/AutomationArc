@@ -259,4 +259,9 @@
       <initValue>'stgr mishra'</initValue>
       <name>teamMemberName</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>0</initValue>
+      <name>TestCount</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

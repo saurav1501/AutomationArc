@@ -231,12 +231,12 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'qas-02@gmail.com'</initValue>
+      <initValue>'qas-01@gmail.com'</initValue>
       <name>TeamMember2</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'qas1 mishra'</initValue>
+      <initValue>'qas2 mishra'</initValue>
       <name>teamMemberName</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

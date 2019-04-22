@@ -7,7 +7,8 @@ import com.kms.katalon.core.testobject.TestObject
 import internal.GlobalVariable
 
 public class BaseClass {
-
+    
+	public static int testCount=0
 	//Excel Font color
 	public static short fontOrange = HSSFColor.ORANGE.index
 	public static short fontWhite = HSSFColor.WHITE.index
@@ -89,10 +90,10 @@ public class BaseClass {
 	public static String UploadArcDataTempleteKorean = RunConfiguration.getProjectDir()+"/ARCDataTemplete/테스트 파일 업로드(Korean).txt"
 	public static String UploadArcDataTempleteChineseSimple = RunConfiguration.getProjectDir()+"/ARCDataTemplete/测试文件上传(ChineseS).txt"
 	public static String UploadArcDataTempleteChineseTrade = RunConfiguration.getProjectDir()+"/ARCDataTemplete/測試文件上傳(ChineseT).txt"
-	
-	
-	
-	
+
+
+
+
 	//local files
 	/*
 	 public static String parkImageUpload = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Parking SJ.jpg"
