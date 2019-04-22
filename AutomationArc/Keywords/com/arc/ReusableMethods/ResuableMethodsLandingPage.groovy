@@ -81,7 +81,7 @@ public class ResuableMethodsLandingPage extends BaseClass {
 		WebUI.closeWindowIndex(1)
 
 
-		/*******Check hyperlinks for 'cookie policy' inside banner clicking on the hyperlinks should redirect to correct webpage.*************************/
+		/*******Check hyperlinks for 'cookie policy' inside banner clicking on the hyperlinks should redirect to correct webpage.*************************//*
 		WebUI.switchToWindowIndex(0)
 		WebUI.scrollToElement(findTestObject('Page_Arc dashboard/DashboardPage/Banner_Cookie Statement'),2)
 		WebUI.click(findTestObject('Page_Arc dashboard/DashboardPage/Banner_Cookie Statement'))
@@ -96,7 +96,7 @@ public class ResuableMethodsLandingPage extends BaseClass {
 		WebUI.verifyTextPresent('Performance is the future of green building', true)
 		WebUI.closeWindowIndex(2)
 		WebUI.closeWindowIndex(1)
-		WebUI.switchToWindowIndex(0)
+*/		WebUI.switchToWindowIndex(0)
 		/*		WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/clickOnLogin'))
 		 WebUI.delay(2)*/
 
@@ -135,8 +135,8 @@ public class ResuableMethodsLandingPage extends BaseClass {
 	@Keyword
 	public void hyperlinksTermsofuse() throws IOException, InterruptedException {
 		/*******Check Hyper links  in Login module for 'privacy policy' clicking on the hyperlinks should redirect to correct web-page.*************************/
-		WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/clickOnLogin'))
-		WebUI.delay(2)
+/*		WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/clickOnLogin'))
+		WebUI.delay(2)*/
 		WebUI.scrollToElement(findTestObject('Page_Arc dashboard/DashboardPage/a_Terms of Use'),6)		
 		WebUI.click(findTestObject('Page_Arc dashboard/DashboardPage/a_Terms of Use'))
 		WebUI.delay(5)

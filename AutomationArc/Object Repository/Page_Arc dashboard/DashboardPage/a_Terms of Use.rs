@@ -6,6 +6,10 @@
    <elementGuidId>b7b4887e-0eff-4043-9c43-528590d6eff2</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>XPATH</key>
+         <value>//a[@href = '/terms' and (text() = 'Terms of Use' or . = 'Terms of Use')]</value>
+      </entry>
+      <entry>
          <key>CSS</key>
          <value>#user-login-block-form-fields > p > a:nth-child(3)</value>
       </entry>
@@ -14,7 +18,7 @@
          <value>//a[@href = '/terms' and (text() = 'Terms of Use' or . = 'Terms of Use')]</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>CSS</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

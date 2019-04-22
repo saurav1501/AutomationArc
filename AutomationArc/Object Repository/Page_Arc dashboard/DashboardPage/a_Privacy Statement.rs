@@ -6,6 +6,10 @@
    <elementGuidId>b8056a5b-9787-4d45-a436-8ea578bcd8bb</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>XPATH</key>
+         <value>//a[@class = 'policy-link' and @href = '/privacy-statement' and (text() = 'Privacy Statement' or . = 'Privacy Statement')]</value>
+      </entry>
+      <entry>
          <key>CSS</key>
          <value>#user-login-block-form-fields > p > a:nth-child(2)</value>
       </entry>
@@ -14,7 +18,7 @@
          <value>//a[@href = '/privacy-statement' and (text() = 'Privacy Statement' or . = 'Privacy Statement')]</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>CSS</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
