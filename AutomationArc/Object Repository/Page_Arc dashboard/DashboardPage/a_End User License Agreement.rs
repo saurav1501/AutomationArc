@@ -6,6 +6,10 @@
    <elementGuidId>3247b69c-3c5e-4911-b426-40a0db5add3d</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>XPATH</key>
+         <value>//a[@href = '/useragreement' and (text() = 'End User License Agreement' or . = 'End User License Agreement')]</value>
+      </entry>
+      <entry>
          <key>CSS</key>
          <value>div.form-type-checkbox.form-item-field-policy-accept.form-item.checkbox > label > a</value>
       </entry>
@@ -14,7 +18,7 @@
          <value>//a[@href = '/useragreement' and (text() = 'End User License Agreement' or . = 'End User License Agreement')]</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>CSS</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

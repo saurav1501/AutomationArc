@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;user-login-block-form-fields&quot;]/p/a[1]</value>
+         <value>//a[@class = 'policy-link' and @href = '/cookie-statement' and (text() = 'Cookie Statement' or . = 'Cookie Statement')]</value>
       </entry>
       <entry>
          <key>CSS</key>
