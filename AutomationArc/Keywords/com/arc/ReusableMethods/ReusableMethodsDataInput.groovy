@@ -886,6 +886,53 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		 */
 	}
 
+	
+	
+	@Keyword
+	public void largeFileUploadDataInputForSnapshot(){
+		//WebUI.delay(18)
+		//WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadFilesViaCloud/EnergyFileUploadTestMeter'))
+		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		WebUI.delay(5)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/CreateEnergyAndWaterMeterWithDifferentCombinations/div_Test Energy Meter'))
+		WebUI.delay(4)
+		WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), "Test Energy Meter", FailureHandling.STOP_ON_FAILURE)
+		WebUI.delay(2)
+		////62 MB file
+		WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
+		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
+		WebUI.delay(2)
+		uploadFile(FileSize62)
+		WebUI.waitForElementNotVisible(findTestObject('Object Repository/DataInput/uploadFileProgress'), 240)
+		//WebUI.delay(4)
+		//173 MB file
+		WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
+		WebUI.delay(2)
+		uploadFile(FileSize173)
+		WebUI.waitForElementNotVisible(findTestObject('Object Repository/DataInput/uploadFileProgress'), 240)
+		//WebUI.delay(4)
+		//205 file
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
+		//WebUI.scrollToElement(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'),3)
+		WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
+		WebUI.delay(2)
+		uploadFile(FileSize205)
+		WebUI.waitForElementNotVisible(findTestObject('Object Repository/DataInput/uploadFileProgress'), 240)
+		//446 MB file
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
+		WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
+		WebUI.delay(2)
+		uploadFile(FileSize446)
+		WebUI.waitForElementNotVisible(findTestObject('Object Repository/DataInput/uploadFileProgress'), 240)
+		WebUI.delay(4)
+	}
+	
 
 	@Keyword
 	public void fileUploadDataInputWithDifferentLanguages(){

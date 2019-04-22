@@ -49,67 +49,67 @@
    <testCaseLink>
       <guid>3b4572b0-d777-40b2-a327-fa171c1c87ba</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/UIScoreWithoutDataTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>128d2a70-60e1-4ae5-bec8-7f4f90f729f1</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/UIScoreFieldIndividualTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>6bb86ebc-fc3d-442d-a5bd-c57ff84c418a</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/UIFieldTotalScoreTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>09104b0c-6c2b-4e35-af6c-570290fe293e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/DefaultCreditStatusSubmitReviewTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>38a527a0-ebb8-47a0-9ac8-b7a902210c41</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/PrerequisiteAndBasepointFileUploadTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>537d48b1-4dc3-4fd5-93c4-0febb378f397</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/PreRequisiteAttemptTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>bbcd7941-c4a8-41be-b89b-9794f2d860b2</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/BasePointCreditTeamAssignTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>22f21159-f4f4-4078-9a1e-c43cdf2e1edb</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/BasePointPromptAttemToReviewTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>e56dce22-d370-4f5a-a2f9-14772f2d4f42</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/BasePointPromptReviewToAttemptedTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>b001f931-9524-4d6f-ad17-eed8114b515d</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/BasePointAttemptTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>bd05e5e3-796f-4de1-b5e2-9461b1568b63</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/CheckSubmitReviewContinueButtonAndErrorMessageTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -145,7 +145,7 @@
    <testCaseLink>
       <guid>f69bce84-57f8-4394-82ec-675afbcb3b6f</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/TransitWasteMeterCreateTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -157,13 +157,13 @@
    <testCaseLink>
       <guid>4b2e9549-5c25-49c0-b791-aec1bbbafcb9</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/TransitEnergyMeterCreateTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>0454e62e-1e49-40cd-8415-44302b8874f9</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/TransitDataInputFileUploadTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
