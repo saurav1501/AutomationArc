@@ -904,6 +904,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(2)
 		uploadFile(FileSize62)
 		WebUI.delay(2)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/uploadFileProgress'), 10)
 		WebUI.waitForElementNotVisible(findTestObject('Object Repository/DataInput/uploadFileProgress'), 240)
 		WebUI.delay(4)
 		//173 MB file
@@ -913,6 +914,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(2)
 		uploadFile(FileSize173)
 		WebUI.delay(2)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/uploadFileProgress'), 10)
 		WebUI.waitForElementNotVisible(findTestObject('Object Repository/DataInput/uploadFileProgress'), 240)
 		WebUI.delay(4)
 		//205 file
@@ -922,6 +924,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(2)
 		uploadFile(FileSize205)
 		WebUI.delay(2)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/uploadFileProgress'), 10)
 		WebUI.waitForElementNotVisible(findTestObject('Object Repository/DataInput/uploadFileProgress'), 240)
 		WebUI.delay(4)
 		//446 MB file
@@ -931,6 +934,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(2)
 		uploadFile(FileSize446)
 		WebUI.delay(2)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/uploadFileProgress'), 10)
 		WebUI.waitForElementNotVisible(findTestObject('Object Repository/DataInput/uploadFileProgress'), 240)
 		WebUI.delay(4)
 	}
