@@ -36,4 +36,3 @@ try{
  }
 
 
-findTestObject('Object Repository/PreRequisite/AffirmationTextPrerequisite')
