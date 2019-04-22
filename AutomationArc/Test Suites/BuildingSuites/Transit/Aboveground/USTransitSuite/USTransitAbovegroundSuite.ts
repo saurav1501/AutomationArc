@@ -952,4 +952,10 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/TeamVerifyWhenAuthLevelNoneUserNotAbleToAccessProjectTest</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>2e31df67-9a43-4c32-9db3-d350e06b496c</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/DownloadAndVerifyTheSnapshotFileNameTest</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>

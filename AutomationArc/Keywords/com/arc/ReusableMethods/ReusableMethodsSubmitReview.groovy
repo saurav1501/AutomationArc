@@ -763,18 +763,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.delay(6)
 		unzip(sourceZipFile, destinationUnZippedFolder)
 		WebUI.delay(5)
-		/*println isFileExtracted('Test de téléchargement de fichier(French).txt')
-		 println isFileExtracted('Upload do arquivo de teste(Portugues).txt')
-		 println isFileExtracted('Testen Sie den Datei-Upload(Greman).txt')
-		 println isFileExtracted('Carga de archivos de prueba(Spanish).txt')
-		 println isFileExtracted('測試文件上傳(ChineseT).txt')
-		 println isFileExtracted('测试文件上传(ChineseS).txt')
-		 println isFileExtracted('테스트 파일 업로드(Korean).txt')
-		 println isFileExtracted('Test Dosyası Yüklemesi(Turkish).txt')*/
-
-		/*Assert.assertTrue(isFileExtracted('GBCI PAN Card.pdf'), "GBCI PAN Card File Didn't downloaded successfully")
-		 Assert.assertTrue(isFileExtracted('GBCI-Noida-GST Registration Certificate.pdf'), "GBCI-Noida-GST Registration Certificate File Didn't downloaded successfully")
-		 */
+		
 	     if((isFileExtracted('Parking SJ.jpg', sourceExtractedFile)))
 			 KeywordUtil.markWarning("Parking Sj.jpg file is present  ")
 		 else
@@ -1014,7 +1003,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.setText(findTestObject('Object Repository/PerformanceScore/AdminToolsReviewSearchBar'), projectId)
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/AdminToolReviewSearchButton'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/PerformanceScore/SnapshotLinkToDownload'), 20)
-		WebUI.click(findTestObject('Object Repository/PerformanceScore/SnapshotLinkToDownload'))
+		/*WebUI.click(findTestObject('Object Repository/PerformanceScore/SnapshotLinkToDownload'))
 		WebUI.delay(300)
 		unzip(sourceZipFile, destinationUnZippedFolder)
 		WebUI.delay(5)
@@ -1037,6 +1026,6 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		 if((isFileExtracted('A College Text-Book of Physics_ 2nd Ed_ Arthur L Kimball_ 1917.pdf', sourceExtractedFileEnergy)))
 		 KeywordUtil.markWarning("A College Text-Book of Physics_ 2nd Ed_ Arthur L Kimball_ 1917.pdf file present")
 		 else
-		 KeywordUtil.markFailed("A College Text-Book of Physics_ 2nd Ed_ Arthur L Kimball_ 1917.pdf file Not present")
+		 KeywordUtil.markFailed("A College Text-Book of Physics_ 2nd Ed_ Arthur L Kimball_ 1917.pdf file Not present")*/
 	}
 }
