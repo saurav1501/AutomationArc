@@ -3004,6 +3004,16 @@ def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifySnapshotFi
          , 	ratingSystem)
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifySnapshotFileNameUploadedBuildingTransit"(
+    	String sheetName	
+     , 	int rowNum	
+     , 	String ratingSystem	) {
+    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).verifySnapshotFileNameUploadedBuildingTransit(
+        	sheetName
+         , 	rowNum
+         , 	ratingSystem)
+}
+
 def static "com.arc.ReusableMethods.ResuableMethodsGRESB.downloadGresbtemplete"() {
     (new com.arc.ReusableMethods.ResuableMethodsGRESB()).downloadGresbtemplete()
 }

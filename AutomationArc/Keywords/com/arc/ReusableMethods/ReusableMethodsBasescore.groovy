@@ -51,7 +51,7 @@ public class ReusableMethodsBasescore {
 		println 2
 		WebUI.delay(3)
 		WebUI.click(findTestObject('PreRequisite/CheckBox1'))
-		WebUI.delay(2)
+		//WebUI.delay(2)
 		WebUI.waitForElementNotVisible(findTestObject('Object Repository/PreRequisite/AffirmationTextPrerequisite'), 10, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.click(findTestObject('PreRequisite/button_Attempted'))
 		WebUI.click(findTestObject('PreRequisite/a_Ready for Review'))
@@ -62,7 +62,7 @@ public class ReusableMethodsBasescore {
 		println 3
 		WebUI.delay(3)
 		WebUI.click(findTestObject('PreRequisite/CheckBox1'))
-		WebUI.delay(2)
+		//WebUI.delay(2)
 		WebUI.waitForElementNotVisible(findTestObject('Object Repository/PreRequisite/AffirmationTextPrerequisite'), 10, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.click(findTestObject('PreRequisite/button_Attempted'))
 		WebUI.click(findTestObject('PreRequisite/a_Ready for Review'))
@@ -73,7 +73,7 @@ public class ReusableMethodsBasescore {
 		println 4
 		WebUI.delay(3)
 		WebUI.click(findTestObject('PreRequisite/CheckBox1'))
-		WebUI.delay(2)
+		//WebUI.delay(2)
 		WebUI.waitForElementNotVisible(findTestObject('Object Repository/PreRequisite/AffirmationTextPrerequisite'), 10, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.click(findTestObject('PreRequisite/button_Attempted'))
 		WebUI.click(findTestObject('PreRequisite/a_Ready for Review'))
@@ -85,7 +85,7 @@ public class ReusableMethodsBasescore {
 		println 5
 		WebUI.delay(3)
 		WebUI.click(findTestObject('PreRequisite/CheckBox1'))
-		WebUI.delay(2)
+		//WebUI.delay(2)
 		WebUI.waitForElementNotVisible(findTestObject('Object Repository/PreRequisite/AffirmationTextPrerequisite'), 10, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.click(findTestObject('PreRequisite/span_Attempted'))
 		WebUI.click(findTestObject('PreRequisite/a_Ready for Review'))
@@ -121,7 +121,7 @@ public class ReusableMethodsBasescore {
 		println 8
 		WebUI.delay(5)
 		WebUI.click(findTestObject('PreRequisite/CheckBox1'))
-		WebUI.delay(2)
+		//WebUI.delay(2)
 		WebUI.waitForElementNotVisible(findTestObject('Object Repository/PreRequisite/AffirmationTextPrerequisite'), 10, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.click(findTestObject('PreRequisite/button_Attempted'))
 		WebUI.click(findTestObject('PreRequisite/a_Ready for Review'))
@@ -132,7 +132,7 @@ public class ReusableMethodsBasescore {
 		println 9
 		WebUI.delay(3)
 		WebUI.click(findTestObject('PreRequisite/CheckBox1'))
-		WebUI.delay(2)
+		//WebUI.delay(2)
 		WebUI.waitForElementNotVisible(findTestObject('Object Repository/PreRequisite/AffirmationTextPrerequisite'), 10, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.click(findTestObject('PreRequisite/button_Attempted'))
 		WebUI.click(findTestObject('PreRequisite/a_Ready for Review'))
