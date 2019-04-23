@@ -27,6 +27,8 @@ import java.sql.ResultSet as ResultSet
 import java.text.SimpleDateFormat as SimpleDateFormat
 
 try {
+	
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariable'()
     CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToBuildingTransit'()
 	
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsAddNewProject.buildingTransitAddNewProject'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumThree)
