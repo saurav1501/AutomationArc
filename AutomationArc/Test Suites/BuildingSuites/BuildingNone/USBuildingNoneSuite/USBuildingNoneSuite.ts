@@ -49,18 +49,21 @@
    <testCaseLink>
       <guid>b579a9ec-ffce-4449-b0f8-b3e97cc43ef0</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/SearchProgramTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>1f2e9b06-c0a5-4b33-b420-a89e5280fd3f</guid>
       <isReuseDriver>false</isReuseDriver>
+<<<<<<< HEAD
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/Next/DataInputNavigationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>5317b7d9-c886-4b0b-b3b1-3296865bb6e9</guid>
       <isReuseDriver>false</isReuseDriver>
+=======
+>>>>>>> 6145abcb98b056faf594e4f26844dbc38132bfe8
       <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ProjectDetailsVerificationTest</testCaseId>
    </testCaseLink>

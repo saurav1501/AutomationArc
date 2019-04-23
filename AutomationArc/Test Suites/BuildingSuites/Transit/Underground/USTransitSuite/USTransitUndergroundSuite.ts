@@ -43,7 +43,7 @@
    <testCaseLink>
       <guid>2a8f7134-393f-4288-8c6f-5713625b9bc1</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/NavigationIndividualRaceTrackToAnalyticsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -151,7 +151,7 @@
    <testCaseLink>
       <guid>ddeec0a6-6739-444d-963a-04225a34bac9</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/DataInputWasteFileUploadTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
