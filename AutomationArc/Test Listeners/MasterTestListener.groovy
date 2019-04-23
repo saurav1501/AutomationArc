@@ -58,9 +58,9 @@ public class MasterTestListener extends BaseClass {
 		println TestCasePass= data.getCellIntData(GlobalVariable.Result, "Passed", GlobalVariable.rowNumTwo)
 		println TestCaseFail= data.getCellIntData(GlobalVariable.Result, "Failed", GlobalVariable.rowNumTwo)
 		//println diff=data.getCellData(GlobalVariable.Result, "Duration", GlobalVariable.rowNumTwo)
-		date= new Date(System.currentTimeMillis());
-		startTime = format.format(date);
-		println startTime
+		//date= new Date(System.currentTimeMillis());
+		//startTime = format.format(date);
+		//println startTime
 		println "This is before Test Suit"
 		println("Before Test Suite Listener : " + testSuite.getTestSuiteId())
 		KeywordUtil.markWarning("Before Test Suite Listener : " + testSuite.getTestSuiteId())
@@ -356,7 +356,7 @@ public class MasterTestListener extends BaseClass {
 	
 	@AfterTestSuite
 	public void afterTestSuite(TestSuiteContext testSuite){
-		date1= new Date(System.currentTimeMillis());
+		/*date1= new Date(System.currentTimeMillis());
 		endTime = format.format(date1);
 		Date d1 = null;
 		Date d2 = null;
@@ -381,7 +381,7 @@ public class MasterTestListener extends BaseClass {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-         println TestCount
+         println TestCount*/
 		 data.setCellIntData(GlobalVariable.Result, "Total", GlobalVariable.rowNumTwo,TestCount)
 		 data.setCellIntData(GlobalVariable.Result, "Passed", GlobalVariable.rowNumTwo,TestCasePass)
 		 data.setCellIntData(GlobalVariable.Result, "Failed", GlobalVariable.rowNumTwo,TestCaseFail)
