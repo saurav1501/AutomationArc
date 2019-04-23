@@ -73,19 +73,19 @@
    <testCaseLink>
       <guid>b59e78e1-3ef1-4a0d-9150-d6c822787cb4</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/LEEDOnlineCommunity/SearchAddedProj(LEEDOnline)UnderArcTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>7b15bdbf-3947-4cb6-97df-138f9cc0c44e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/LEEDOnlineCommunity/SignAgreementInArcTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>1311c783-dcc1-4e1b-bd68-e59917fb2951</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/LEEDOnlineCommunity/AddendumAgreementVerificationTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
