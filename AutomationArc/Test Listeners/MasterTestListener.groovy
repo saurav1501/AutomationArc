@@ -49,9 +49,7 @@ public class MasterTestListener extends BaseClass {
 	@BeforeTestSuite
 	public void beforeTestSuiteListener(TestSuiteContext testSuite)
 	{
-		println TestCount= data.getCellIntData(GlobalVariable.Result, "Total", GlobalVariable.rowNumTwo)
-		println TestCasePass= data.getCellIntData(GlobalVariable.Result, "Passed", GlobalVariable.rowNumTwo)
-		println TestCaseFail= data.getCellIntData(GlobalVariable.Result, "Failed", GlobalVariable.rowNumTwo)
+		
 		println "This is before Test Suit"
 		println("Before Test Suite Listener : " + testSuite.getTestSuiteId())
 		KeywordUtil.markWarning("Before Test Suite Listener : " + testSuite.getTestSuiteId())
@@ -158,18 +156,6 @@ public class MasterTestListener extends BaseClass {
 		WebUI.switchToDefaultContent()
 		KeywordUtil.markWarning("Test Case Name : " + testCase.getTestCaseId())
 		KeywordUtil.markWarning("Test Case Status : " + testCase.getTestCaseStatus())
-		/*if("FAILED".equalsIgnoreCase(testCase.getTestCaseStatus())){
-			println "Test case Fail taking Screenshot"
-		try {
-				Date data = new Date(System.currentTimeMillis())
-				SimpleDateFormat formatarDate = new SimpleDateFormat('yyyyMMddHHmmss')
-				WebUI.takeScreenshot((BaseClass.screenShot + testCase.getTestCaseId() +formatarDate.format(data)) + '.png')
-			}
-			catch (Exception e {
-				e.printStackTrace()
-			}
-		}*/
-		
 		
 		result = testCase.getTestCaseStatus()
 		//cunt the tota no of test cases
@@ -347,9 +333,7 @@ public class MasterTestListener extends BaseClass {
 	
 	@AfterTestSuite
 	public void afterTestSuite(TestSuiteContext testSuite){
-		 data.setCellIntData(GlobalVariable.Result, "Total", GlobalVariable.rowNumTwo,TestCount)
-		 data.setCellIntData(GlobalVariable.Result, "Passed", GlobalVariable.rowNumTwo,TestCasePass)
-		 data.setCellIntData(GlobalVariable.Result, "Failed", GlobalVariable.rowNumTwo,TestCaseFail)
+		 
 		 //data.setCellData(GlobalVariable.Result, "Duration", GlobalVariable.rowNumTwo, duration)
 		 //SendEmail.sendStatusReport(TestCaseFail, TestCaseFail, TestCaseFail)
 		KeywordUtil.markWarning("After Test Suite Listener : " + testSuite.getTestSuiteId())
