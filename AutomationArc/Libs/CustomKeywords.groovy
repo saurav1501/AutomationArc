@@ -2252,6 +2252,10 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.percentageSurveyRes
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).percentageSurveyResponseRateCalculationBuiding()
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.dataInputNavigationTest"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).dataInputNavigationTest()
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.checkEnergyAndWaterMeterCreateTabDataInput"() {
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).checkEnergyAndWaterMeterCreateTabDataInput()
 }

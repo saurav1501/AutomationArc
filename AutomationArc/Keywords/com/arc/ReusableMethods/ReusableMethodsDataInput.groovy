@@ -886,8 +886,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		 */
 	}
 
-	
-	
+
+
 	@Keyword
 	public void largeFileUploadDataInputForSnapshot(){
 		//WebUI.delay(18)
@@ -932,7 +932,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForElementNotVisible(findTestObject('Object Repository/DataInput/uploadFileProgress'), 240)
 		WebUI.delay(4)
 	}
-	
+
 
 	@Keyword
 	public void fileUploadDataInputWithDifferentLanguages(){
@@ -4467,7 +4467,46 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	}
 
+	@Keyword
+	public void dataInputNavigationTest() throws IOException, InterruptedException, Exception{
+		WebUI.delay(3)
+		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+		WebUI.delay(15)
+		WebUI.verifyElementPresent(findTestObject('DataInput/Nav/No Energy meter present'), 5, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.click(findTestObject('DataInput/Nav/button_Next'))
+		WebUI.delay(5)
+		WebUI.click(findTestObject('DataInput/Nav/button_Next'))
+		WebUI.delay(5)
+		WebUI.verifyElementPresent(findTestObject('DataInput/Nav/No Water meter present'), 5, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.click(findTestObject('DataInput/Nav/button_Next'))
+		WebUI.delay(5)
 
+		WebUI.verifyElementPresent(findTestObject('DataInput/Nav/No readings present for Was'), 5, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.click(findTestObject('DataInput/Nav/button_Next'))
+		WebUI.delay(5)
+
+		WebUI.verifyElementPresent(findTestObject('DataInput/Nav/Transportation Survey'), 5, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.click(findTestObject('DataInput/Nav/button_Next'))
+		WebUI.delay(5)
+
+		WebUI.verifyElementPresent(findTestObject('DataInput/Nav/Hum Exp Satisfaction'), 5, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.click(findTestObject('DataInput/Nav/button_Next'))
+		WebUI.delay(5)
+
+		WebUI.click(findTestObject('DataInput/Nav/button_Next'))
+		WebUI.delay(5)
+
+		WebUI.verifyElementPresent(findTestObject('DataInput/Nav/No Energy meter present'), 5, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.click(findTestObject('DataInput/Nav/button_Next'))
+		WebUI.delay(5)
+
+
+	}
+
+	@Keyword
+	public void allActionNavigationTest() throws IOException, InterruptedException, Exception{
+
+	}
 	//Add New Meter" in Energy Tab, should be present, to create a new meter
 	@Keyword
 	public void checkEnergyAndWaterMeterCreateTabDataInput(){
@@ -4843,21 +4882,21 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/GiniCoefficientActionsLabel')), "Actions", false)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianHouseholdYearLabel')), "Year", false)
 		//WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianHouseholdUSDollarPerYearLabel')), "US Dollars/Year", false)
-		WebUI.verifyElementPresent(findTestObject('Manage/CityCom/USDollar'), 3, FailureHandling.CONTINUE_ON_FAILURE)	
-	/*	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianHouseholdActionLabel')), "Actions", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/UnemploymentYearLabel')), "Year", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/UnemploymentPercentLabel')), "Percent", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/UnemploymentActionsLabel')), "Actions", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianAirQualityYearLabel')), "Year", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianAirQualityValueLabel')), "Value (Between 0 And 500)", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianAirQualityActionsLabel')), "Actions", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/AirQulaityDaysYearLabel')), "Year", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/AirQualityDaysValueLabel')), "Value (Between 0 And 365)", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/AirQualityDaysActionsLabel')), "Actions", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/ViolentCrimeYearLabel')), "Year", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/ViolentCrimeValueLabel')), "Value", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/ViolentCrimeActionsLabel')), "Actions", false)
-*/
+		WebUI.verifyElementPresent(findTestObject('Manage/CityCom/USDollar'), 3, FailureHandling.CONTINUE_ON_FAILURE)
+		/*	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianHouseholdActionLabel')), "Actions", false)
+		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/UnemploymentYearLabel')), "Year", false)
+		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/UnemploymentPercentLabel')), "Percent", false)
+		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/UnemploymentActionsLabel')), "Actions", false)
+		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianAirQualityYearLabel')), "Year", false)
+		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianAirQualityValueLabel')), "Value (Between 0 And 500)", false)
+		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianAirQualityActionsLabel')), "Actions", false)
+		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/AirQulaityDaysYearLabel')), "Year", false)
+		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/AirQualityDaysValueLabel')), "Value (Between 0 And 365)", false)
+		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/AirQualityDaysActionsLabel')), "Actions", false)
+		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/ViolentCrimeYearLabel')), "Year", false)
+		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/ViolentCrimeValueLabel')), "Value", false)
+		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/ViolentCrimeActionsLabel')), "Actions", false)
+		 */
 	}
 
 
