@@ -1,36 +1,29 @@
 package com.arc.ReusableMethods
 
-import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
-import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
-import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
-import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
-
-import org.testng.reporters.EmailableReporter
+import java.text.SimpleDateFormat
 
 import com.arc.BaseClass.BaseClass
 import com.arc.BaseClass.SendEmail
 import com.kms.katalon.core.annotation.Keyword
-import com.kms.katalon.core.checkpoint.Checkpoint
-import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
-import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
-import com.kms.katalon.core.model.FailureHandling
-import com.kms.katalon.core.testcase.TestCase
-import com.kms.katalon.core.testdata.TestData
-import com.kms.katalon.core.testobject.TestObject
-import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
-import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 import internal.GlobalVariable
 
 public class ReusableMethodSendEmailReport extends BaseClass {
-
+	
 
 	@Keyword
 	public static void sendEmailReport(){
 		int totalTest = data.getCellIntData(GlobalVariable.Result, "Total", GlobalVariable.rowNumTwo)
 		int totalPass = data.getCellIntData(GlobalVariable.Result, "Passed", GlobalVariable.rowNumTwo)
 		int totalFail =  data.getCellIntData(GlobalVariable.Result, "Failed", GlobalVariable.rowNumTwo)
-
-		SendEmail.sendStatusReport(totalTest, totalPass, totalFail)
+		def duration = data.getCellIntData(GlobalVariable.Result, "Duration", GlobalVariable.rowNumTwo)
+        def execution
+		//Date d1 = format.parse(duration)
+		 use(groovy.time.TimeCategory) {
+				println duration
+				//print "Days: ${duration.days}, Hours: ${duration.hours}"
+				execution= "Hours: ${duration.hours }, Minutes: ${duration.minutes}, Seconds: ${duration.seconds}"
+			}
+		SendEmail.sendStatusReport(totalTest, totalPass, totalFail, execution)
 	}
 }

@@ -41,10 +41,11 @@ public class MasterTestListener extends BaseClass {
 	public static int TestCount
 	public static  int TestCasePass
 	public static  int TestCaseFail
-	SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss")
+	public static SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss")
 	Date date, date1
 	String startTime
 	String endTime
+	Date diff
 	@SetUp
 	void Setup() {		
 		
@@ -56,6 +57,7 @@ public class MasterTestListener extends BaseClass {
 		println TestCount= data.getCellIntData(GlobalVariable.Result, "Total", GlobalVariable.rowNumTwo)
 		println TestCasePass= data.getCellIntData(GlobalVariable.Result, "Passed", GlobalVariable.rowNumTwo)
 		println TestCaseFail= data.getCellIntData(GlobalVariable.Result, "Failed", GlobalVariable.rowNumTwo)
+		//println diff=data.getCellData(GlobalVariable.Result, "Duration", GlobalVariable.rowNumTwo)
 		date= new Date(System.currentTimeMillis());
 		startTime = format.format(date);
 		println startTime
@@ -359,13 +361,19 @@ public class MasterTestListener extends BaseClass {
 		Date d1 = null;
 		Date d2 = null;
 		def execution
+		Date duration
+		long executionTime
 		try {
 			d1 = format.parse(startTime);
 			println d1.getTime()
 			d2 = format.parse(endTime);
             println d2.getTime()
+			println executionTime=d2.getTime()-d1.getTime()
+			//diff+=executionTime
+			println "time diff  "+diff
 			use(groovy.time.TimeCategory) {
-				def duration = d2 - d1
+				duration = d2 - d1
+				println duration
 				//print "Days: ${duration.days}, Hours: ${duration.hours}"
 				execution= "Hours: ${duration.hours }, Minutes: ${duration.minutes}, Seconds: ${duration.seconds}"
 			}
@@ -377,6 +385,7 @@ public class MasterTestListener extends BaseClass {
 		 data.setCellIntData(GlobalVariable.Result, "Total", GlobalVariable.rowNumTwo,TestCount)
 		 data.setCellIntData(GlobalVariable.Result, "Passed", GlobalVariable.rowNumTwo,TestCasePass)
 		 data.setCellIntData(GlobalVariable.Result, "Failed", GlobalVariable.rowNumTwo,TestCaseFail)
+		 //data.setCellData(GlobalVariable.Result, "Duration", GlobalVariable.rowNumTwo, duration)
 		 //SendEmail.sendStatusReport(TestCaseFail, TestCaseFail, TestCaseFail)
 		KeywordUtil.markWarning("After Test Suite Listener : " + testSuite.getTestSuiteId())
 		WebUI.closeBrowser()
