@@ -232,7 +232,7 @@ public class XlsReader extends BaseClass {
 	 * @param data
 	 * @return True/False
 	 */
-	public boolean setCellData(String sheetName,String colName,int rowNum, String data)
+	public boolean setCellData(String sheetName, String colName,int rowNum, String data)
 	{
 		try
 		{
@@ -349,8 +349,8 @@ public class XlsReader extends BaseClass {
 	}
 
 
-
-public boolean setCellData(String sheetName,int colName,int rowNum, String data)
+	
+	public boolean setCellData(String sheetName,int colName,int rowNum, String data)
 	{
 		try
 		{
@@ -368,7 +368,64 @@ public boolean setCellData(String sheetName,int colName,int rowNum, String data)
 
 			sheet = workbook.getSheetAt(index);
 			Cell cell2Update = sheet.getRow(rowNum).getCell(colName);
-            cell2Update.setCellValue(data);
+			cell2Update.setCellValue(data);
+
+			fileOut = new FileOutputStream(path);
+
+			workbook.write(fileOut);
+
+			fileOut.close();
+
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+			return false;
+		}
+		return true;
+	}
+
+	//Save the integer value
+	public boolean setCellIntData(String sheetName, String colName,int rowNum, int data)
+	{
+		try
+		{
+			fis = new FileInputStream(path);
+			workbook = new XSSFWorkbook(fis);
+
+			if(rowNum<=0)
+				return false;
+
+			int index = workbook.getSheetIndex(sheetName);
+			int colNum=-1;
+			if(index==-1)
+				return false;
+
+
+			sheet = workbook.getSheetAt(index);
+
+
+			row=sheet.getRow(0);
+			for(int i=0;i<row.getLastCellNum();i++)
+			{
+				System.out.println(row.getCell(i).getStringCellValue().trim());
+				if(row.getCell(i).getStringCellValue().trim().equals(colName))
+					colNum=i;
+			}
+			if(colNum==-1)
+				return false;
+
+			sheet.autoSizeColumn(colNum);
+			row = sheet.getRow(rowNum-1);
+			if (row == null)
+				row = sheet.createRow(rowNum-1);
+
+			cell = row.getCell(colNum);
+			if (cell == null)
+				cell = row.createCell(colNum);
+
+
+			cell.setCellValue(data);
 
 			fileOut = new FileOutputStream(path);
 
@@ -386,27 +443,77 @@ public boolean setCellData(String sheetName,int colName,int rowNum, String data)
 	}
 
 
+	//get integer value
+	public int getCellIntData(String sheetName,String colName,int rowNum)
+	{
+		try
+		{
+			if(rowNum <=0)
+				return "";
+
+			int index = workbook.getSheetIndex(sheetName);
+			int col_Num=-1;
+			if(index==-1)
+				return "";
+
+			sheet = workbook.getSheetAt(index);
+			row=sheet.getRow(0);
+			for(int i=0;i<row.getLastCellNum();i++)
+			{
+				//System.out.println(row.getCell(i).getStringCellValue().trim());
+				if(row.getCell(i).getStringCellValue().trim().equals(colName.trim()))
+					col_Num=i;
+			}
+			if(col_Num==-1)
+				return "";
+
+			sheet = workbook.getSheetAt(index);
+			row = sheet.getRow(rowNum-1);
+			if(row==null)
+				return "";
+			cell = row.getCell(col_Num);
+
+			if(cell==null)
+				return "";
+			//System.out.println(cell.getCellType());
+			if(cell.getCellType()==Cell.CELL_TYPE_STRING)
+				return cell.getStringCellValue();
+			else if(cell.getCellType()==Cell.CELL_TYPE_NUMERIC || cell.getCellType()==Cell.CELL_TYPE_FORMULA )
+			{
+
+				int cellText  = cell.getNumericCellValue();
+				if (HSSFDateUtil.isCellDateFormatted(cell))
+				{
+					// format in form of M/D/YY
+					double d = cell.getNumericCellValue();
+
+					Calendar cal =Calendar.getInstance();
+					cal.setTime(HSSFDateUtil.getJavaDate(d));
+					cellText = (String.valueOf(cal.get(Calendar.YEAR))).substring(2);
+					cellText = cal.get(Calendar.MONTH)+1 + "/" + cal.get(Calendar.DAY_OF_MONTH) + "/" + cellText;
+					//System.out.println(cellText);
+				}
+
+				return cellText;
+			}
+			else if(cell.getCellType()==Cell.CELL_TYPE_BLANK)
+				return "";
+			else
+				return String.valueOf(cell.getBooleanCellValue());
 
 
+		}
+		catch(Exception e)
+		{
+
+			e.printStackTrace();
+			return "row "+rowNum+" or column "+colName +" does not exist in xls";
+		}
+	}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	
+	
 }
 
 

@@ -1,4 +1,3 @@
-package com.arc.BaseClass
 
 import javax.mail.Message;
 import javax.mail.MessagingException;
@@ -81,7 +80,7 @@ public class SendEmail {
 					" </tr>"+
 					" <tr>"+
 					"  <th>Build Execution Time</th>"+
-					"  <td></td>"+
+					"  <td>"+10+"</td>"+
 					" </tr>"+
 
 					"</table>"+
@@ -246,5 +245,18 @@ public class SendEmail {
 		}
 		return endDate +"Hrs : "+ diffMinutes +"Min : "+ diffSeconds+ "Secs"
 	}
+
+
+	public static void static main(args[]) {
+	    String filePath= System.getProperty("user.dir")+"\\ARCDataTemplete\\QasArcTest.xlsx"
+	    XlsReader data = new XlsReader(filePath)
+	    TestCount= data.getCellIntData(GlobalVariable.Result, "Total", GlobalVariable.rowNumTwo)
+		TestCasePass= data.getCellIntData(GlobalVariable.Result, "Passed", GlobalVariable.rowNumTwo)
+		TestCaseFail= data.getCellIntData(GlobalVariable.Result, "Failed", GlobalVariable.rowNumTwo)
+		SendEmail email= new SendEmail();
+		email.sendStatusReport(TestCount, TestCasePass, TestCaseFail);
+
+	}
+
 
 }

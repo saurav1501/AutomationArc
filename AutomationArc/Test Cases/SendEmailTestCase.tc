@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>SendEmailTestCase</name>
+   <tag>SendEmailReport</tag>
+   <comment></comment>
+   <testCaseGuid>b30d3a15-f227-4103-b74a-61512d77646c</testCaseGuid>
+</TestCaseEntity>

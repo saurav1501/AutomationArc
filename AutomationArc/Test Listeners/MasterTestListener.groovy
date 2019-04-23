@@ -38,9 +38,9 @@ public class MasterTestListener extends BaseClass {
 	public static int count1
 	public static String [] testName
 	//Count the no of test Cases
-	public static TestCount =0
-	public static TestCasePass = 0
-	public static TestCaseFail = 0
+	public static int TestCount
+	public static  int TestCasePass
+	public static  int TestCaseFail
 	SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss")
 	Date date, date1
 	String startTime
@@ -53,6 +53,9 @@ public class MasterTestListener extends BaseClass {
 	@BeforeTestSuite
 	public void beforeTestSuiteListener(TestSuiteContext testSuite)
 	{
+		println TestCount= data.getCellIntData(GlobalVariable.Result, "Total", GlobalVariable.rowNumTwo)
+		println TestCasePass= data.getCellIntData(GlobalVariable.Result, "Passed", GlobalVariable.rowNumTwo)
+		println TestCaseFail= data.getCellIntData(GlobalVariable.Result, "Failed", GlobalVariable.rowNumTwo)
 		date= new Date(System.currentTimeMillis());
 		startTime = format.format(date);
 		println startTime
@@ -192,7 +195,7 @@ public class MasterTestListener extends BaseClass {
 		testCaseName=testName[count1-1]
 		sheetName= Country+testName[count1-2]
 		
-		if(sheetName.equals(testSuite[0])){
+		/*if(sheetName.equals(testSuite[0])){
 			//Record the Test Name
 			arcSheet.setCellData(sheetName, "TestCase", rowNumTAG, testCaseName)
 			//Record the Test Result
@@ -344,7 +347,7 @@ public class MasterTestListener extends BaseClass {
 		arcSheet.setCellData(FailedSheet, "TestCase", rowNumError, sheetName +"/"+ testCaseName)
 		arcSheet.setCellData(FailedSheet, "Status", rowNumError, result,fontWhite, Red)
 		rowNumError=rowNumError+1
-	    }
+	    }*/
 		//WebUI.closeBrowser()
 	     
 	}
@@ -370,8 +373,11 @@ public class MasterTestListener extends BaseClass {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-         println testCount+1
-		SendEmail.sendStatusReport(TestCount,TestCasePass, TestCaseFail,  execution)
+         println TestCount
+		 data.setCellIntData(GlobalVariable.Result, "Total", GlobalVariable.rowNumTwo,TestCount)
+		 data.setCellIntData(GlobalVariable.Result, "Passed", GlobalVariable.rowNumTwo,TestCasePass)
+		 data.setCellIntData(GlobalVariable.Result, "Failed", GlobalVariable.rowNumTwo,TestCaseFail)
+		
 		KeywordUtil.markWarning("After Test Suite Listener : " + testSuite.getTestSuiteId())
 		WebUI.closeBrowser()
 		

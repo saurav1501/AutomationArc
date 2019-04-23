@@ -376,6 +376,11 @@ Profile STG-US - Test : Project team admin and arc administrator email id</p>
     public static Object teamMemberName
      
     /**
+     * <p>Profile QAS-US : Result sheet to store the result</p>
+     */
+    public static Object Result
+     
+    /**
      * <p>Profile STG-US : Certified project
 Profile STG-US - Test : Certified project
 Profile STG2D-US : Certified project</p>
@@ -480,6 +485,7 @@ Profile STG2D-US : payment via credit card</p>
             UserId = selectedVariables['UserId']
             TeamMember2 = selectedVariables['TeamMember2']
             teamMemberName = selectedVariables['teamMemberName']
+            Result = selectedVariables['Result']
             rowNumTwentyOne = selectedVariables['rowNumTwentyOne']
             rowNumTwentyTwo = selectedVariables['rowNumTwentyTwo']
             notCertified = selectedVariables['notCertified']

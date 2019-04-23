@@ -32,8 +32,8 @@ public class BaseClass {
 	public static rowNumINBN=2
 	public static rowNumDASH=2
 
-	public static String arcReportFile= RunConfiguration.getProjectDir()+"/ARCDataTemplete/ARCReport.xlsx"
-	public static XlsReader arcSheet = new XlsReader(arcReportFile)
+	//public static String arcReportFile= RunConfiguration.getProjectDir()+"/ARCDataTemplete/ARCReport.xlsx"
+	//public static XlsReader arcSheet = new XlsReader(arcReportFile)
 
 	//Review submit leed online
 	public static String leedReviewForm= RunConfiguration.getProjectDir()+"/ARCDataTemplete/v4.1 Precertification Worksheet.xlsx"
@@ -92,18 +92,17 @@ public class BaseClass {
 	public static String UploadArcDataTempleteChineseTrade = RunConfiguration.getProjectDir()+"/ARCDataTemplete/測試文件上傳(ChineseT).txt"
 
 	//Large files for snapshot
-	 public static String FileSize205="/var/lib/jenkins/workspace/ARC_Kat/Ramayana-01_01.pdf"
-	 public static String FileSize173="/var/lib/jenkins/workspace/ARC_Kat/Ramayana-02_02.pdf"
-	 public static String FileSize446="/var/lib/jenkins/workspace/ARC_Kat/Srimad_Bhagavatam_Canto_01_Hindi.pdf"
-	 public static String FileSize62="/var/lib/jenkins/workspace/ARC_Kat/A College Text-Book of Physics_ 2nd Ed_ Arthur L Kimball_ 1917.pdf"
-	 
+	public static String FileSize205="/var/lib/jenkins/workspace/ARC_Kat/Ramayana-01_01.pdf"
+	public static String FileSize173="/var/lib/jenkins/workspace/ARC_Kat/Ramayana-02_02.pdf"
+	public static String FileSize446="/var/lib/jenkins/workspace/ARC_Kat/Srimad_Bhagavatam_Canto_01_Hindi.pdf"
+	public static String FileSize62="/var/lib/jenkins/workspace/ARC_Kat/A College Text-Book of Physics_ 2nd Ed_ Arthur L Kimball_ 1917.pdf"
+
 	//Large files for snapshot
 	/*public static String FileSize205=System.getProperty("user.dir")+"\\Download\\solved problems in modern physics.pdf"
-	public static String FileSize173=System.getProperty("user.dir")+"\\Download\\solved problems in modern physics.pdf"
-	public static String FileSize446=System.getProperty("user.dir")+"\\Download\\solved problems in modern physics.pdf"
-	public static String FileSize62=System.getProperty("user.dir")+"\\Download\\solved problems in modern physics.pdf"
-
-*/
+	 public static String FileSize173=System.getProperty("user.dir")+"\\Download\\solved problems in modern physics.pdf"
+	 public static String FileSize446=System.getProperty("user.dir")+"\\Download\\solved problems in modern physics.pdf"
+	 public static String FileSize62=System.getProperty("user.dir")+"\\Download\\solved problems in modern physics.pdf"
+	 */
 	//local files
 	/*
 	 public static String parkImageUpload = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Parking SJ.jpg"

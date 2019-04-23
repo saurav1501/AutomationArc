@@ -239,4 +239,9 @@
       <initValue>'qas1 mishra'</initValue>
       <name>teamMemberName</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Result sheet to store the result</description>
+      <initValue>'Result'</initValue>
+      <name>Result</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
