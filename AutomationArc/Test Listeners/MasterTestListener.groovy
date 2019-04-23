@@ -377,7 +377,7 @@ public class MasterTestListener extends BaseClass {
 		 data.setCellIntData(GlobalVariable.Result, "Total", GlobalVariable.rowNumTwo,TestCount)
 		 data.setCellIntData(GlobalVariable.Result, "Passed", GlobalVariable.rowNumTwo,TestCasePass)
 		 data.setCellIntData(GlobalVariable.Result, "Failed", GlobalVariable.rowNumTwo,TestCaseFail)
-		
+		 //SendEmail.sendStatusReport(TestCaseFail, TestCaseFail, TestCaseFail)
 		KeywordUtil.markWarning("After Test Suite Listener : " + testSuite.getTestSuiteId())
 		WebUI.closeBrowser()
 		

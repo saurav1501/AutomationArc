@@ -22,18 +22,15 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 import internal.GlobalVariable
 
-public class SendEmailReport extends BaseClass {
-	
+public class ReusableMethodSendEmailReport extends BaseClass {
+
 
 	@Keyword
 	public static void sendEmailReport(){
 		int totalTest = data.getCellIntData(GlobalVariable.Result, "Total", GlobalVariable.rowNumTwo)
 		int totalPass = data.getCellIntData(GlobalVariable.Result, "Passed", GlobalVariable.rowNumTwo)
 		int totalFail =  data.getCellIntData(GlobalVariable.Result, "Failed", GlobalVariable.rowNumTwo)
-	
+
 		SendEmail.sendStatusReport(totalTest, totalPass, totalFail)
-		
-	} 
-	
-	
+	}
 }

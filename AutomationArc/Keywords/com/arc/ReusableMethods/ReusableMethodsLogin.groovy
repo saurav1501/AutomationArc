@@ -118,6 +118,7 @@ public class ReusableMethodsLogin extends BaseClass{
 		waitForPageLoad(60)
 		//RemoteWebDriver  driver= DriverFactory.getWebDriver()
 		//driver.setFileDetector(new LocalFileDetector())
+		WebUI.setViewPortSize(1366,1280)
 		WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/button_ACCEPT AND CLOSE'))
 		WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/clickOnLogin'))
 		WebUI.delay(2)
@@ -131,7 +132,6 @@ public class ReusableMethodsLogin extends BaseClass{
 
 		//WebUI.waitForPageLoad(10)
 		//WebUI.delay(10)
-		WebUI.setViewPortSize(1366,1280)
 		waitForPageLoad(60)
 		//WebUI.click(findTestObject('Object Repository/Page_Home  Arc/WelcomeArcText'))
 		//WebUI.waitForElementVisible(findTestObject('Object Repository/Page_Home  Arc/ClickNavProjectText'), 30)

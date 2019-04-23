@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>SendEmailTestSuite</name>
+   <name>Report</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -9,11 +9,11 @@
    <pageLoadTimeout>120</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
-   <testSuiteGuid>1064be9b-e43b-4804-968b-f3ffab9548b5</testSuiteGuid>
+   <testSuiteGuid>b5d73c51-d20a-46dd-b1c5-403c801dcf99</testSuiteGuid>
    <testCaseLink>
-      <guid>f8c67908-fb84-4234-8f2e-fa8f84ff5c59</guid>
+      <guid>9f2b13ad-e563-42d1-902d-01060fd752e3</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/SendEmailTestCase</testCaseId>
+      <testCaseId>Test Cases/TestReport</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

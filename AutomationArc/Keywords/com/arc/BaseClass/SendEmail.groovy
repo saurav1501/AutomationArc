@@ -25,7 +25,6 @@ public class SendEmail {
 
 		// Assuming you are sending email through relay.jangosmtp.net
 		String host = "smtp.gmail.com";
-
 		Properties props = new Properties();
 		props.put("mail.smtp.auth", "true");
 		props.put("mail.smtp.starttls.enable", "true");
