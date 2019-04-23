@@ -112,7 +112,7 @@ public class ReusableMethodsLogin extends BaseClass{
 		String userName= GlobalVariable.userName
 		String password= GlobalVariable.password
 		WebUI.openBrowser('')
-		WebUI.maximizeWindow()
+		//WebUI.maximizeWindow()
 		WebUI.waitForPageLoad(GlobalVariable.timeOut)
 		WebUI.navigateToUrl(url)
 		waitForPageLoad(60)
