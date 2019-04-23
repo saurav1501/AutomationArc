@@ -112,6 +112,7 @@ public class ReusableMethodsLogin extends BaseClass{
 		String userName= GlobalVariable.userName
 		String password= GlobalVariable.password
 		WebUI.openBrowser('')
+		WebUI.setViewPortSize(1366,1280)
 		//WebUI.maximizeWindow()
 		WebUI.waitForPageLoad(GlobalVariable.timeOut)
 		WebUI.navigateToUrl(url)
@@ -128,7 +129,7 @@ public class ReusableMethodsLogin extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/input_Forgot Password_field_po'))
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/button_Log in'))
-		WebUI.setViewPortSize(1366,1280)
+		
 		//WebUI.waitForPageLoad(10)
 		//WebUI.delay(10)
 		waitForPageLoad(60)
