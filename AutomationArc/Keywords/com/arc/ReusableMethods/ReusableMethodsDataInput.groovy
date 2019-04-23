@@ -4475,7 +4475,46 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	}
 
+	@Keyword
+	public void dataInputNavigationTest() throws IOException, InterruptedException, Exception{
+		WebUI.delay(3)
+		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+		WebUI.delay(15)
+		WebUI.verifyElementPresent(findTestObject('DataInput/Nav/No Energy meter present'), 5, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.click(findTestObject('DataInput/Nav/button_Next'))
+		WebUI.delay(5)
+		WebUI.click(findTestObject('DataInput/Nav/button_Next'))
+		WebUI.delay(5)
+		WebUI.verifyElementPresent(findTestObject('DataInput/Nav/No Water meter present'), 5, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.click(findTestObject('DataInput/Nav/button_Next'))
+		WebUI.delay(5)
 
+		WebUI.verifyElementPresent(findTestObject('DataInput/Nav/No readings present for Was'), 5, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.click(findTestObject('DataInput/Nav/button_Next'))
+		WebUI.delay(5)
+
+		WebUI.verifyElementPresent(findTestObject('DataInput/Nav/Transportation Survey'), 5, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.click(findTestObject('DataInput/Nav/button_Next'))
+		WebUI.delay(5)
+
+		WebUI.verifyElementPresent(findTestObject('DataInput/Nav/Hum Exp Satisfaction'), 5, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.click(findTestObject('DataInput/Nav/button_Next'))
+		WebUI.delay(5)
+
+		WebUI.click(findTestObject('DataInput/Nav/button_Next'))
+		WebUI.delay(5)
+
+		WebUI.verifyElementPresent(findTestObject('DataInput/Nav/No Energy meter present'), 5, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.click(findTestObject('DataInput/Nav/button_Next'))
+		WebUI.delay(5)
+
+
+	}
+
+	@Keyword
+	public void allActionNavigationTest() throws IOException, InterruptedException, Exception{
+
+	}
 	//Add New Meter" in Energy Tab, should be present, to create a new meter
 	@Keyword
 	public void checkEnergyAndWaterMeterCreateTabDataInput(){

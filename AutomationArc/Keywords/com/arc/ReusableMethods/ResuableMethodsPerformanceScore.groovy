@@ -138,7 +138,7 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.delay(2)
 		WebUI.click(findTestObject('PerformanceScore/RecomputeScore'))
 		WebUI.delay(22)
-        WebUI.waitForElementVisible(findTestObject('PerformanceScore/Score/EnergyScore'), 20)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/Score/EnergyScore'), 20)
 		String energyScore = WebUI.getText(findTestObject('PerformanceScore/Score/EnergyScore'))
 		String waterScore = WebUI.getText(findTestObject('PerformanceScore/Score/WaterSocre'))
 		String wasteScore = WebUI.getText(findTestObject('PerformanceScore/Score/WasteScore'))
@@ -244,7 +244,7 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.delay(2)
 		WebUI.click(findTestObject('PerformanceScore/RecomputeScore'))
 		WebUI.delay(22)
-        WebUI.waitForElementVisible(findTestObject('PerformanceScore/Score/EnergyScore'), 60)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/Score/EnergyScore'), 60)
 		String energyScore = WebUI.getText(findTestObject('PerformanceScore/Score/EnergyScore'))
 		String waterScore = WebUI.getText(findTestObject('PerformanceScore/Score/WaterSocre'))
 		String wasteScore = WebUI.getText(findTestObject('PerformanceScore/Score/WasteScore'))
@@ -1008,7 +1008,7 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 
 	@Keyword
 	public void trialProjectScoreVerificaion(){
-		
+
 		WebUI.click(findTestObject('Object Repository/TrialScore/scoreTotal'))
 		WebUI.delay(10)
 		String performanceScoreText = WebUI.getText(findTestObject('Object Repository/TrialScore/scorePerformanceScoreText'))
@@ -1034,9 +1034,9 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		//WebUI.verifyMatch(totalScore, "47", false, FailureHandling.CONTINUE_ON_FAILURE)
 
 	}
-	
-	
-	
+
+
+
 	@Keyword
 	public void genratePerformanceScoreAdminToolTrial(String sheetName,int rowNum) throws IOException, InterruptedException {
 		String projectId = data.getCellData(sheetName,"ProjectID",rowNum)
@@ -1088,6 +1088,4 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.verifyMatch(totalperformaceScore , totalperformanceScore, false)
 
 	}
-	
-	
 }

@@ -221,6 +221,18 @@
       <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/CertiVerifyCertificationDetailsForNotCertfiedProjectsTest.java</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>49e71778-b165-40b4-861d-62785ebb6308</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/ManageEntity/ManagingEntityShouldReadOnlyArcTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>e03c4fc8-463c-435a-9191-ab17f125f128</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/ManageEntity/ManageEditProjectDetailsArcTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>b09023c0-841f-4c91-be74-ef37018f3d2f</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

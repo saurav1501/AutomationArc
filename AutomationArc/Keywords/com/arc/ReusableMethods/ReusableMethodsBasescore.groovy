@@ -41,7 +41,7 @@ public class ReusableMethodsBasescore {
 		WebUI.delay(1)
 		WebUI.click(findTestObject('PreRequisite/CheckBox2'))
 		WebUI.delay(2)
-	    //WebUI.waitForElementClickable(findTestObject('PreRequisite/button_Attempted'), 10)
+		//WebUI.waitForElementClickable(findTestObject('PreRequisite/button_Attempted'), 10)
 		WebUI.click(findTestObject('PreRequisite/button_Attempted'))
 		WebUI.click(findTestObject('PreRequisite/a_Ready for Review'))
 		WebUI.delay(3)

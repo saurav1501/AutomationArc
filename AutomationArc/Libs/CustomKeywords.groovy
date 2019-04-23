@@ -7,8 +7,6 @@ import java.lang.String
 
 import com.kms.katalon.core.testobject.TestObject
 
-import com.kms.katalon.core.model.FailureHandling
-
 import java.sql.Connection
 
 
@@ -2272,6 +2270,14 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.percentageSurveyRes
 
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.percentageSurveyResponseRateCalculationBuiding"() {
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).percentageSurveyResponseRateCalculationBuiding()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.dataInputNavigationTest"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).dataInputNavigationTest()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.allActionNavigationTest"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).allActionNavigationTest()
 }
 
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.checkEnergyAndWaterMeterCreateTabDataInput"() {

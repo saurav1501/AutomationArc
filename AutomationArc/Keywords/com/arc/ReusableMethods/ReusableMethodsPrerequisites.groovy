@@ -339,42 +339,33 @@ public class ReusableMethodsPrerequisites extends BaseClass {
 				WebUI.verifyTextPresent('Human Experience', false ,FailureHandling.CONTINUE_ON_FAILURE)
 
 			if(count==11)
-			WebUI.verifyElementPresent(findTestObject('Manage/CityCom/AddData'),3, FailureHandling.CONTINUE_ON_FAILURE)
-			
-			  // WebUI.verifyTextPresent('Additional data', false ,FailureHandling.CONTINUE_ON_FAILURE)
-				//Assert.assertTrue(WebUI.getText(findTestObject('Page_Arc dashboard/Credit/CityCom/span_Additional dataLEED')).equalsIgnoreCase("Additional data"))
-				//WebUI.verifyElementPresent(findTestObject('Object Repository/PreRequisite/CityCom/span_Additional Data'),5, FailureHandling.STOP_ON_FAILURE)
+				WebUI.verifyElementPresent(findTestObject('Manage/CityCom/AddData'),3, FailureHandling.CONTINUE_ON_FAILURE)
+
+			// WebUI.verifyTextPresent('Additional data', false ,FailureHandling.CONTINUE_ON_FAILURE)
+			//Assert.assertTrue(WebUI.getText(findTestObject('Page_Arc dashboard/Credit/CityCom/span_Additional dataLEED')).equalsIgnoreCase("Additional data"))
+			//WebUI.verifyElementPresent(findTestObject('Object Repository/PreRequisite/CityCom/span_Additional Data'),5, FailureHandling.STOP_ON_FAILURE)
 
 			if(count==12)
-			   WebUI.verifyTextPresent('Base Points', false ,FailureHandling.CONTINUE_ON_FAILURE)
-				/*WebUI.verifyTextPresent('Certification Plan', false ,FailureHandling.CONTINUE_ON_FAILURE)
-
-			if(count==13)
-				WebUI.verifyTextPresent('Benchmarking and evaluation plan', false ,FailureHandling.CONTINUE_ON_FAILURE)
-
-			if(count==14)
-				WebUI.verifyTextPresent('Carbon reduction plan', false ,FailureHandling.CONTINUE_ON_FAILURE)
-
-			if(count==15)
-				WebUI.verifyTextPresent('Resilience plan', false ,FailureHandling.CONTINUE_ON_FAILURE)
-
-			if(count==16)
-				WebUI.verifyTextPresent('Healthy community plan', false ,FailureHandling.CONTINUE_ON_FAILURE)
-
-			if(count==17)
-				WebUI.verifyTextPresent('Basic services plan', false ,FailureHandling.CONTINUE_ON_FAILURE)
-
-			if(count==18)
-				WebUI.verifyTextPresent('Biodiversity plan', false ,FailureHandling.CONTINUE_ON_FAILURE)
-
-			if(count==19)
-				WebUI.verifyTextPresent('Watershed, Coastal areas, or Ocean resources plan', false ,FailureHandling.CONTINUE_ON_FAILURE)
-
-			if(count==20)
-				WebUI.verifyTextPresent('Culture and heritage plan', false ,FailureHandling.CONTINUE_ON_FAILURE)
-
-			if(count==21)
-				WebUI.verifyTextPresent('Green infrastructure plan', false ,FailureHandling.CONTINUE_ON_FAILURE)*/
+				WebUI.verifyTextPresent('Base Points', false ,FailureHandling.CONTINUE_ON_FAILURE)
+			/*WebUI.verifyTextPresent('Certification Plan', false ,FailureHandling.CONTINUE_ON_FAILURE)
+			 if(count==13)
+			 WebUI.verifyTextPresent('Benchmarking and evaluation plan', false ,FailureHandling.CONTINUE_ON_FAILURE)
+			 if(count==14)
+			 WebUI.verifyTextPresent('Carbon reduction plan', false ,FailureHandling.CONTINUE_ON_FAILURE)
+			 if(count==15)
+			 WebUI.verifyTextPresent('Resilience plan', false ,FailureHandling.CONTINUE_ON_FAILURE)
+			 if(count==16)
+			 WebUI.verifyTextPresent('Healthy community plan', false ,FailureHandling.CONTINUE_ON_FAILURE)
+			 if(count==17)
+			 WebUI.verifyTextPresent('Basic services plan', false ,FailureHandling.CONTINUE_ON_FAILURE)
+			 if(count==18)
+			 WebUI.verifyTextPresent('Biodiversity plan', false ,FailureHandling.CONTINUE_ON_FAILURE)
+			 if(count==19)
+			 WebUI.verifyTextPresent('Watershed, Coastal areas, or Ocean resources plan', false ,FailureHandling.CONTINUE_ON_FAILURE)
+			 if(count==20)
+			 WebUI.verifyTextPresent('Culture and heritage plan', false ,FailureHandling.CONTINUE_ON_FAILURE)
+			 if(count==21)
+			 WebUI.verifyTextPresent('Green infrastructure plan', false ,FailureHandling.CONTINUE_ON_FAILURE)*/
 
 			count++
 
