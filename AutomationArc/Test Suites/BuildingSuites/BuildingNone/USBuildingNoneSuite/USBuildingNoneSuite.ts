@@ -19,7 +19,7 @@
    <testCaseLink>
       <guid>6c31a15c-c991-4053-9f2b-bea2afd4591a</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/AddNewProjectTest</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
@@ -53,22 +53,9 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/SearchProgramTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>1f2e9b06-c0a5-4b33-b420-a89e5280fd3f</guid>
-      <isReuseDriver>false</isReuseDriver>
-<<<<<<< HEAD
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/Next/DataInputNavigationTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>5317b7d9-c886-4b0b-b3b1-3296865bb6e9</guid>
       <isReuseDriver>false</isReuseDriver>
-<<<<<<< HEAD
       <isRun>true</isRun>
-=======
-=======
->>>>>>> 6145abcb98b056faf594e4f26844dbc38132bfe8
-      <isRun>false</isRun>
->>>>>>> 330e80a7774d982ca2ca61b3596533ab5b776723
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ProjectDetailsVerificationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -700,17 +687,5 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ProjectDownloadCalculatorTemplateAndUploadTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>87e0067c-9063-454f-8de1-803354762157</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/Next/SearchAndNavigateTransitABProjectTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>e9a1f97a-d395-484a-b602-0edb9d6a04a2</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/Next/SearchAndNavigateNoneDataInputTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
