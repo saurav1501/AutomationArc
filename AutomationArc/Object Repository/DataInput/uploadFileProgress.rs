@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//*[@ng-if=&quot;data.upload_meter&quot;]</value>
+         <value>//span[contains(text(),'Uploading')]</value>
       </entry>
       <entry>
          <key>BASIC</key>

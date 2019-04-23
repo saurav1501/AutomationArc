@@ -886,11 +886,11 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		 */
 	}
 
-	
-	
+
+
 	@Keyword
 	public void largeFileUploadDataInputForSnapshot(){
-		//WebUI.delay(18)
+		//WebUI.delay(10)
 		//WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadFilesViaCloud/EnergyFileUploadTestMeter'))
 		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		WebUI.delay(5)
@@ -903,9 +903,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
 		WebUI.delay(2)
 		uploadFile(FileSize62)
-		WebUI.delay(2)
-		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/uploadFileProgress'), 10)
-		WebUI.waitForElementNotVisible(findTestObject('Object Repository/DataInput/uploadFileProgress'), 240)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/uploadFileProgress'), 10)
+		WebUI.waitForElementNotPresent(findTestObject('Object Repository/DataInput/uploadFileProgress'), 240)
 		WebUI.delay(4)
 		//173 MB file
 		WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
@@ -914,8 +913,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(2)
 		uploadFile(FileSize173)
 		WebUI.delay(2)
-		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/uploadFileProgress'), 10)
-		WebUI.waitForElementNotVisible(findTestObject('Object Repository/DataInput/uploadFileProgress'), 240)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/uploadFileProgress'), 10)
+		WebUI.waitForElementNotPresent(findTestObject('Object Repository/DataInput/uploadFileProgress'), 240)
 		WebUI.delay(4)
 		//205 file
 		WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
@@ -924,8 +923,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(2)
 		uploadFile(FileSize205)
 		WebUI.delay(2)
-		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/uploadFileProgress'), 10)
-		WebUI.waitForElementNotVisible(findTestObject('Object Repository/DataInput/uploadFileProgress'), 240)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/uploadFileProgress'), 10)
+		WebUI.waitForElementNotPresent(findTestObject('Object Repository/DataInput/uploadFileProgress'), 240)
 		WebUI.delay(4)
 		//446 MB file
 		WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
@@ -934,11 +933,11 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(2)
 		uploadFile(FileSize446)
 		WebUI.delay(2)
-		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/uploadFileProgress'), 10)
-		WebUI.waitForElementNotVisible(findTestObject('Object Repository/DataInput/uploadFileProgress'), 240)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/uploadFileProgress'), 10)
+		WebUI.waitForElementNotPresent(findTestObject('Object Repository/DataInput/uploadFileProgress'), 240)
 		WebUI.delay(4)
 	}
-	
+
 
 	@Keyword
 	public void fileUploadDataInputWithDifferentLanguages(){
@@ -4852,21 +4851,21 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/GiniCoefficientActionsLabel')), "Actions", false)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianHouseholdYearLabel')), "Year", false)
 		//WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianHouseholdUSDollarPerYearLabel')), "US Dollars/Year", false)
-		WebUI.verifyElementPresent(findTestObject('Manage/CityCom/USDollar'), 3, FailureHandling.CONTINUE_ON_FAILURE)	
-	/*	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianHouseholdActionLabel')), "Actions", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/UnemploymentYearLabel')), "Year", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/UnemploymentPercentLabel')), "Percent", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/UnemploymentActionsLabel')), "Actions", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianAirQualityYearLabel')), "Year", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianAirQualityValueLabel')), "Value (Between 0 And 500)", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianAirQualityActionsLabel')), "Actions", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/AirQulaityDaysYearLabel')), "Year", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/AirQualityDaysValueLabel')), "Value (Between 0 And 365)", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/AirQualityDaysActionsLabel')), "Actions", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/ViolentCrimeYearLabel')), "Year", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/ViolentCrimeValueLabel')), "Value", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/ViolentCrimeActionsLabel')), "Actions", false)
-*/
+		WebUI.verifyElementPresent(findTestObject('Manage/CityCom/USDollar'), 3, FailureHandling.CONTINUE_ON_FAILURE)
+		/*	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianHouseholdActionLabel')), "Actions", false)
+		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/UnemploymentYearLabel')), "Year", false)
+		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/UnemploymentPercentLabel')), "Percent", false)
+		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/UnemploymentActionsLabel')), "Actions", false)
+		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianAirQualityYearLabel')), "Year", false)
+		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianAirQualityValueLabel')), "Value (Between 0 And 500)", false)
+		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianAirQualityActionsLabel')), "Actions", false)
+		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/AirQulaityDaysYearLabel')), "Year", false)
+		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/AirQualityDaysValueLabel')), "Value (Between 0 And 365)", false)
+		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/AirQualityDaysActionsLabel')), "Actions", false)
+		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/ViolentCrimeYearLabel')), "Year", false)
+		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/ViolentCrimeValueLabel')), "Value", false)
+		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/ViolentCrimeActionsLabel')), "Actions", false)
+		 */
 	}
 
 
