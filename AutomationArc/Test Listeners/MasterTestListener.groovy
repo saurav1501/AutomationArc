@@ -361,7 +361,7 @@ public class MasterTestListener extends BaseClass {
 		Date d1 = null;
 		Date d2 = null;
 		def execution
-		Date duration
+		def duration
 		long executionTime
 		try {
 			d1 = format.parse(startTime);

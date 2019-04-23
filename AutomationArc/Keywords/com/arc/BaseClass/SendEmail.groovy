@@ -13,7 +13,7 @@ public class SendEmail {
 	static String pattern = "yyyy-MM-dd";
 	static SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
 	static String date = simpleDateFormat.format(new Date())
-	public static void sendStatusReport(int TotalTestCase, int TotalPassed, int TotalFailed, def executionTime) {
+	public static void sendStatusReport(int TotalTestCase, int TotalPassed, int TotalFailed) {
 		// Recipient's email ID needs to be mentioned.
 		String to = "abgupta@usgbc.com";
 		String cc = "abhishekkumar@groupten.com";
@@ -80,7 +80,7 @@ public class SendEmail {
 					" </tr>"+
 					" <tr>"+
 					"  <th>Build Execution Time</th>"+
-					"  <td>"+executionTime +"</td>"+
+					"  <td></td>"+
 					" </tr>"+
 
 					"</table>"+
