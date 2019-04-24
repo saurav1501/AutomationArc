@@ -264,4 +264,9 @@
       <initValue>0</initValue>
       <name>TestCount</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Result'</initValue>
+      <name>Result</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

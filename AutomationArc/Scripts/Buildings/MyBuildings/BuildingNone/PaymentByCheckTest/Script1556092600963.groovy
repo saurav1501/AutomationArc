@@ -25,7 +25,7 @@ import org.openqa.selenium.Keys as Keys
 		
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.selectPayNow'()
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.paymentPageBuildingOtherNoneDetails'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix,5)
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.paymentRegistration'(GlobalVariable.checkPayment , GlobalVariable.rowNumTwo,GlobalVariable.creditCard)
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.paymentRegistration'(GlobalVariable.CCPayment , GlobalVariable.rowNumTwo,GlobalVariable.checkPayment)
 	
 	 
 	} catch (Throwable t) {

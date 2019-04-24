@@ -26,7 +26,7 @@ import org.openqa.selenium.Keys as Keys
 	try {	
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.selectPayNow'()
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSchools.paymentPageSchoolsDetails'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumEleven,5)
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.paymentRegistration'(GlobalVariable.checkPayment , GlobalVariable.rowNumSix, GlobalVariable.creditCard)
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.paymentRegistration'(GlobalVariable.CCPayment , GlobalVariable.rowNumSix, GlobalVariable.checkPayment)
 	
 	} catch (Throwable t) {
 			CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.tearDown'()

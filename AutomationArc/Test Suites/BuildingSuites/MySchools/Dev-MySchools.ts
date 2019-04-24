@@ -14,7 +14,7 @@
       <guid>1627cd15-18d8-42aa-b213-fa47d5ec5e0c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/MySchools/AddNewSchoolProjectTest</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyBuildings/MySchools/AddNewProjectTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>561f6957-8f69-4279-9444-b48924d4a06e</guid>

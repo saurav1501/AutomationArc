@@ -37,13 +37,13 @@
    <testCaseLink>
       <guid>26a4ff89-eed2-4885-9c89-174cdb76eb0e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/ManageEntity/ManagingEntityShouldReadOnlyArcTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>943bbbcd-fa12-475d-91f3-02d83f2e411d</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/ManageEntity/ManageEditProjectDetailsArcTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
