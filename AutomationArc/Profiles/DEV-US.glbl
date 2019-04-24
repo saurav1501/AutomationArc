@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GlobalVariableEntities>
    <description></description>
-   <name>STG2D-US</name>
+   <name>DEV-US</name>
    <tag></tag>
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
@@ -106,7 +106,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>Team Member DEV</description>
-      <initValue>'testuser2@gmail.com'</initValue>
+      <initValue>'dev-01@gmail.com'</initValue>
       <name>TeamMember</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -151,7 +151,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Test User'</initValue>
+      <initValue>'Dev User'</initValue>
       <name>teamMemName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -243,5 +243,15 @@
       <description></description>
       <initValue>''</initValue>
       <name>UserId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'dev-02@gmail.com'</initValue>
+      <name>TeamMember2</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Result'</initValue>
+      <name>Result</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

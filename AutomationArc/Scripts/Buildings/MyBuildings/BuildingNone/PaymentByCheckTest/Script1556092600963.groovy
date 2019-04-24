@@ -18,13 +18,16 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
 
 
-	try {
+	try {	
+		
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.selectPayNow'()
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.paymentPageBuildingTrasit'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumThree)
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.paymentRegistration'(GlobalVariable.checkPayment, GlobalVariable.rowNumSix, GlobalVariable.creditCard)
-		 
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.paymentPageBuildingOtherNoneDetails'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix,5)
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.paymentRegistration'(GlobalVariable.CCPayment , GlobalVariable.rowNumTwo,GlobalVariable.checkPayment)
+	
+	 
 	} catch (Throwable t) {
 			CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.tearDown'()
 			System.out.println(t.getLocalizedMessage())
@@ -33,5 +36,3 @@ import internal.GlobalVariable as GlobalVariable
 			e1.printStackTrace()
 	}
 
-	
-	

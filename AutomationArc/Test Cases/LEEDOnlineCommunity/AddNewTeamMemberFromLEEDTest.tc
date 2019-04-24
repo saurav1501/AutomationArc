@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>NavigateToCommunityArcTest</name>
+   <name>AddNewTeamMemberFromLEEDTest</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>d647e414-972b-4bae-9b30-61e4e54a24e7</testCaseGuid>
+   <testCaseGuid>7c1b8828-b5e2-4d1e-8ee8-2e5781ddc969</testCaseGuid>
 </TestCaseEntity>

@@ -68,7 +68,7 @@
       <guid>236143e6-442d-4d80-826b-61ad80e859ea</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/LEEDOnlineCommunity/NavigateToCommunityArcTest</testCaseId>
+      <testCaseId>Test Cases/LEEDOnlineCommunity/LoginWithAddedTeamMemNavToCommunityArcTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>b59e78e1-3ef1-4a0d-9150-d6c822787cb4</guid>

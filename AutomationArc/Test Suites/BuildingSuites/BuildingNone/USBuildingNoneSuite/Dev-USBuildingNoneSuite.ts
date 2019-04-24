@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>USBuildingNoneSuite</name>
+   <name>Dev-USBuildingNoneSuite</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -9,7 +9,7 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
-   <testSuiteGuid>e3aff0cd-c4b9-4611-abc8-c2f1fd12859d</testSuiteGuid>
+   <testSuiteGuid>14a790d7-ac0b-4975-8c15-ef144fd68635</testSuiteGuid>
    <testCaseLink>
       <guid>7db0da00-36eb-4bc0-945d-7533f2028ee0</guid>
       <isReuseDriver>false</isReuseDriver>
@@ -41,22 +41,28 @@
       </variableLink>
    </testCaseLink>
    <testCaseLink>
-      <guid>1554fca6-c969-471c-8a36-e0e0ad0cb3e4</guid>
+      <guid>4cd8c9a8-9218-475d-b8d0-d67be647469d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/PaymentByCheckTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>1554fca6-c969-471c-8a36-e0e0ad0cb3e4</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/PaymentByCreditCardTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>b579a9ec-ffce-4449-b0f8-b3e97cc43ef0</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/SearchProgramTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>1f2e9b06-c0a5-4b33-b420-a89e5280fd3f</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/SearchProgramTest</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/Next/DataInputNavigationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>5317b7d9-c886-4b0b-b3b1-3296865bb6e9</guid>
@@ -457,241 +463,253 @@
    <testCaseLink>
       <guid>96a6fdbc-8a7f-4ad0-8164-09d0f0cecb9e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/INTPerformanceScoreVerificationCCTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>69f7c574-1740-41d0-9787-97fa40ea3959</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/AgreementVerifyDateSignedAndTypeTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>68d7ac71-4522-4753-a55f-d37473cefe75</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/AgreementFileDownloadTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>c8b2a937-014f-46a8-bb41-c751ccdcc47d</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/AppVerifyEnergyPortfolioManagerAppInstalledByDefaultAndUninstallCheckMsgTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>e0f4da80-9ac9-4262-9931-5a081fc7bb53</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/AppVerifyAllAppsAvailableInstallAndCheckSuccessMessageTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>4b809347-bda4-4b1f-b7c8-f24177206f96</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/AppVerifyAllAppsInstalledOnDataInputPageTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>a39ed197-0949-4379-bf40-3557a7f37e6d</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/AppVerifyUninstalledMessageWhileUninstallingAppsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>939bd170-6f2b-4e6c-bdf0-2b3b88a02ccb</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/AppVerifyAllAppInstallInDataInputByDefaultEvenAfterUnIstallingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>b7faa486-9c29-4fd2-968e-09cc95267dd0</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Notification/BuildingEnergyNotificationDeleteReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>26073cb1-51a2-44ed-a989-f110f334933c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Notification/BuildingWaterNotificationDeleteReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>094a4c71-176e-41d1-9150-4fed216a5ed6</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Notification/BuildingWasteNotificationDeleteReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>e32f0ab6-db2b-4d8c-b19b-b86718210f08</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/BillingDateAndStatusTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>ae08e67e-d5ba-4bd3-9284-b27af5870150</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/VerifyAndDownloadBillingReceiptTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>5f809b1f-c347-4d8a-873a-92cf11092692</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/TeamAddTeamMemberTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>429f1c7f-46e9-4c2c-8c06-219a1211e78c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/TeamAddingSameRoleForAMemberAgainTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>670034cc-4353-431c-8688-dd280849496e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/TeamVerifyPrjAdminAndArcAdministratorCreateBydefaultInNewProjectTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>fe809c39-16c9-471f-81cf-ef641c02e89c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/TeamVerifyProjectAdminCanNotEditTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>b0b7b531-b57a-4881-8464-169dfa705714</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/TeamVerifyArcAdministratorCanNotEditWhenOnePresentTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>0891a597-2db8-4159-a044-9f1ac3bf5b85</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/TeamEditTeamMemberRole</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>54ebcef2-00fd-4d66-bbdc-1e599f4e8677</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/TeamEditTeamManagerRoleAndAddSecondArcAdministratorRoleTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>7e3e3abd-1ab6-4483-8466-cca2370f23bf</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/TeamVerifyProjectShouldNotHaveoreThanOneAdminTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>25c153ec-49a0-4600-9672-c4a94dba4c68</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/SettingVerifyLobbySurveyBtnRemainOnEvenAfterNavigatingFromOtherpageTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>6afd9480-d78c-438b-b845-f7a773260a6e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/SettingVerifyLobbySurveyBtnAllowUserToSubmitSurveyManyTimesTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>75347457-579a-46ab-ac70-405f499fe6db</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/SettingVerifyPlaqueAnimationURLVisibleTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d712a9ef-8b9c-41a2-86d2-f071d62f7f17</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/SettingVerifyPlaqueAnimationWorkInNewWindowTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>51099cb5-b05c-4987-aa7f-782242ad735e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/SettingVerifySettingsPageDetailsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>37f9b735-62ce-4b6b-b784-0eec494d9826</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ProjectVerifyOccAndOprHrsNotZeroTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>266dc868-3689-40bc-ae4a-4f9ad44a8d51</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ProjectVerifyFieldPresentOnAffiliatedHigherEduInstituteOptionIsYesTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>e993b623-aeb7-4449-a94e-0e67b32b8f86</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ProjectVerifyFieldPresentOnContainsResUnitsOptionYesTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d3137fe0-100d-49c4-8237-0a1ab2b49f9b</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ProjectVerifyGrossFloorAreaUnitOnSelectionOfIPSITest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>c8ecb2da-6bbd-4f18-bf96-1c97bd7bce86</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ProjectVerifyCalculatorHyperlinkPresentTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>11efd279-4a2e-4361-9ffa-86d08e6625f2</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/CertiVerifyCertificationDetailsForReviewSubmittedProjectTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>3c76c98e-7c52-4609-9794-940b2d3b78c5</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/CertiVerifyCertificationDetailsForProjectsPointsAddedFromAdminToolTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>341da435-1498-48cb-ace7-ab0c8789c286</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ProjectEditFieldsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>957ab976-7cfd-4ef8-b0d0-99e3de36ac22</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ChangeBuildingSettingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>599a2926-3166-4118-8aa1-a31bf96bd1c1</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/AgreementVerifyServiceAgreementPdfDetailsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>ed3ffc72-97e0-4521-af03-5784fc24ca8f</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/VerifyBillingReceiptTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>856a7eca-dab0-41a4-9b25-dcfca8e61325</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/VerifyReviewBillingDetailsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>19299410-af74-4512-956e-f5b6b5c783f9</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/CertiVerifyCertificationLogoVisibleTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>7e2c1fcd-31b4-43ff-b3be-adbddd5653a9</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ProjectDownloadCalculatorTemplateAndUploadTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>87e0067c-9063-454f-8de1-803354762157</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/Next/SearchAndNavigateTransitABProjectTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>e9a1f97a-d395-484a-b602-0edb9d6a04a2</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/Next/SearchAndNavigateNoneDataInputTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
