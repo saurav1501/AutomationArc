@@ -23,7 +23,7 @@ import internal.GlobalVariable as GlobalVariable
 	try {
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.selectPayNow'()
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.paymentPageBuildingTrasit'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumThree)
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.paymentRegistration'(GlobalVariable.checkPayment, GlobalVariable.rowNumSix, GlobalVariable.creditCard)
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.paymentRegistration'(GlobalVariable.CCPayment, GlobalVariable.rowNumSix, GlobalVariable.creditCard)
 		 
 	} catch (Throwable t) {
 			CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.tearDown'()

@@ -3756,6 +3756,14 @@ def static "com.arc.ReusableMethods.ReusableMethodsManage.billingStatusTransit"(
          , 	rowNum)
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsManage.devbillingStatusTransit"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsManage()).devbillingStatusTransit(
+        	sheetName
+         , 	rowNum)
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsManage.billingStatusParking"(
     	String sheetName	
      , 	int rowNum	) {

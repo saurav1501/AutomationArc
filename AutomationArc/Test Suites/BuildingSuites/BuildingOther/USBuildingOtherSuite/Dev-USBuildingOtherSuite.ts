@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>USBuildingOtherSuite</name>
+   <name>Dev-USBuildingOtherSuite</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -9,7 +9,7 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
-   <testSuiteGuid>81a6a283-390c-42a6-8ca0-1e979abbce03</testSuiteGuid>
+   <testSuiteGuid>cfb864e3-8c35-4406-8075-522fe7d99a8f</testSuiteGuid>
    <testCaseLink>
       <guid>ddaf6661-bc9b-4394-90eb-4807e8ee882c</guid>
       <isReuseDriver>false</isReuseDriver>
