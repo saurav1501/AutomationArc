@@ -94,6 +94,7 @@ public class GlobalVariable {
 Profile QAS-CN : Explicit Wait Timeout
 Profile QAS-IND : Explicit Wait Timeout
 Profile QAS-US : Explicit Wait Timeout
+Profile QAS-US - Test : Explicit Wait Timeout
 Profile QAS-US-User2 : Explicit Wait Timeout
 Profile STG-CA : Explicit Wait Timeout
 Profile STG-CN : Explicit Wait Timeout
@@ -114,6 +115,7 @@ Profile STG2D-US : Explicit Wait Timeout</p>
 Profile QAS-CN : Adding china projects
 Profile QAS-IND : Adding India projects
 Profile QAS-US : Adding US projects
+Profile QAS-US - Test : Adding US projects
 Profile QAS-US-User2 : Adding US projects
 Profile STG-CA : Adding canada projects
 Profile STG-CN : Adding china projects
@@ -129,6 +131,7 @@ Profile STG2D-US : Adding US projects</p>
 Profile QAS-CN : Adding new team member 
 Profile QAS-IND : Adding new team member 
 Profile QAS-US : Adding new team member 
+Profile QAS-US - Test : Adding new team member 
 Profile QAS-US-User2 : Adding new team member 
 Profile STG-CA : Adding new team member 
 Profile STG-CN : Adding new team member 
@@ -144,6 +147,7 @@ Profile STG2D-US : Adding new team member </p>
 Profile QAS-CN : Adding Credit Card payment details 
 Profile QAS-IND : Adding Credit Card payment details 
 Profile QAS-US : Adding Credit Card payment details 
+Profile QAS-US - Test : Adding Credit Card payment details 
 Profile QAS-US-User2 : Adding Credit Card payment details 
 Profile STG-CA : Adding Credit Card payment details 
 Profile STG-CN : Adding Credit Card payment details 
@@ -237,6 +241,7 @@ Profile STG-IND : Adding new Inida community projects </p>
      
     /**
      * <p>Profile QAS-US : old score version project of Building
+Profile QAS-US - Test : old score version project of Building
 Profile QAS-US-User2 : old score version project of Building
 Profile STG-US : old score version of Buiding
 Profile STG-US - Test : old score version of Buiding
@@ -271,12 +276,100 @@ Profile STG2D-US : old score version of Buiding</p>
      
     /**
      * <p>Profile QAS-US : Human Experience and Transportation
+Profile QAS-US - Test : Human Experience and Transportation
 Profile QAS-US-User2 : Human Experience and Transportation</p>
      */
     public static Object TemplateHE
      
     /**
+     * <p>Profile QAS-US : Result sheet to store the result
+Profile QAS-US - Test : Result sheet to store the result</p>
+     */
+    public static Object Result
+     
+    /**
+     * <p>Profile QAS-US : Old score version project of Transit
+Profile QAS-US - Test : Old score version project of Transit
+Profile QAS-US-User2 : Old score version project of Transit
+Profile STG-US : old score version of Transit
+Profile STG-US - Test : old score version of Transit
+Profile STG2D-US : old score version of Transit</p>
+     */
+    public static Object rowNumTen
+     
+    /**
+     * <p></p>
+     */
+    public static Object rowNumEleven
+     
+    /**
+     * <p></p>
+     */
+    public static Object TeamMemberPassword
+     
+    /**
+     * <p></p>
+     */
+    public static Object creditCard
+     
+    /**
+     * <p></p>
+     */
+    public static Object checkPayment
+     
+    /**
+     * <p>Profile QAS-US : Pricing sheet for checking the pricing for different countries.
+Profile QAS-US - Test : Pricing sheet for checking the pricing for different countries.
+Profile STG-US : Pricing Sheet
+Profile STG-US - Test : Pricing Sheet
+Profile STG2D-US : Pricing sheet </p>
+     */
+    public static Object pricingSheet
+     
+    /**
+     * <p></p>
+     */
+    public static Object LEEDURL
+     
+    /**
+     * <p></p>
+     */
+    public static Object UserId
+     
+    /**
+     * <p></p>
+     */
+    public static Object LEEDData
+     
+    /**
+     * <p>Profile QAS-US : Project team admin and arc administrator name
+Profile QAS-US - Test : Project team admin and arc administrator name
+Profile STG-US : Project team admin and arc administrator name
+Profile STG-US - Test : Project team admin and arc administrator name</p>
+     */
+    public static Object projectTeamAdminAndArcAdminName
+     
+    /**
+     * <p>Profile QAS-US : Project team admin and arc administrator email
+Profile QAS-US - Test : Project team admin and arc administrator email
+Profile STG-US : Project team admin and arc administrator email id
+Profile STG-US - Test : Project team admin and arc administrator email id</p>
+     */
+    public static Object projectTeamAdminAndArcAdminEmail
+     
+    /**
+     * <p></p>
+     */
+    public static Object TeamMember2
+     
+    /**
+     * <p></p>
+     */
+    public static Object teamMemberName
+     
+    /**
      * <p>Profile QAS-US : Team Member QAS
+Profile QAS-US - Test : Team Member QAS
 Profile QAS-US-User2 : Team Member QAS
 Profile STG-US : Team Member STG
 Profile STG-US - Test : Team Member STG
@@ -292,93 +385,12 @@ Profile STG2D-US : Team Member DEV</p>
     /**
      * <p></p>
      */
-    public static Object TeamMemberPassword
-     
-    /**
-     * <p>Profile QAS-US : Old score version project of Transit
-Profile QAS-US-User2 : Old score version project of Transit
-Profile STG-US : old score version of Transit
-Profile STG-US - Test : old score version of Transit
-Profile STG2D-US : old score version of Transit</p>
-     */
-    public static Object rowNumTen
-     
-    /**
-     * <p></p>
-     */
     public static Object appUrl
      
     /**
      * <p></p>
      */
-    public static Object rowNumEleven
-     
-    /**
-     * <p></p>
-     */
-    public static Object creditCard
-     
-    /**
-     * <p></p>
-     */
-    public static Object checkPayment
-     
-    /**
-     * <p>Profile QAS-US : Pricing sheet for checking the pricing for different countries.
-Profile STG-US : Pricing Sheet
-Profile STG-US - Test : Pricing Sheet
-Profile STG2D-US : Pricing sheet </p>
-     */
-    public static Object pricingSheet
-     
-    /**
-     * <p></p>
-     */
-    public static Object LEEDURL
-     
-    /**
-     * <p></p>
-     */
     public static Object validationSheet
-     
-    /**
-     * <p></p>
-     */
-    public static Object LEEDData
-     
-    /**
-     * <p>Profile QAS-US : Project team admin and arc administrator name
-Profile STG-US : Project team admin and arc administrator name
-Profile STG-US - Test : Project team admin and arc administrator name</p>
-     */
-    public static Object projectTeamAdminAndArcAdminName
-     
-    /**
-     * <p>Profile QAS-US : Project team admin and arc administrator email
-Profile STG-US : Project team admin and arc administrator email id
-Profile STG-US - Test : Project team admin and arc administrator email id</p>
-     */
-    public static Object projectTeamAdminAndArcAdminEmail
-     
-    /**
-     * <p></p>
-     */
-    public static Object UserId
-     
-    /**
-     * <p></p>
-     */
-    public static Object TeamMember2
-     
-    /**
-     * <p></p>
-     */
-    public static Object teamMemberName
-     
-    /**
-     * <p>Profile QAS-US : Result sheet to store the result</p>
-     */
-    public static Object Result
      
     /**
      * <p>Profile STG-US : Certified project
@@ -468,24 +480,24 @@ Profile STG2D-US : payment via credit card</p>
             TemplateWasteData = selectedVariables['TemplateWasteData']
             AllProjectUrl = selectedVariables['AllProjectUrl']
             TemplateHE = selectedVariables['TemplateHE']
-            TeamMember = selectedVariables['TeamMember']
-            teamMemName = selectedVariables['teamMemName']
-            TeamMemberPassword = selectedVariables['TeamMemberPassword']
+            Result = selectedVariables['Result']
             rowNumTen = selectedVariables['rowNumTen']
-            appUrl = selectedVariables['appUrl']
             rowNumEleven = selectedVariables['rowNumEleven']
+            TeamMemberPassword = selectedVariables['TeamMemberPassword']
             creditCard = selectedVariables['creditCard']
             checkPayment = selectedVariables['checkPayment']
             pricingSheet = selectedVariables['pricingSheet']
             LEEDURL = selectedVariables['LEEDURL']
-            validationSheet = selectedVariables['validationSheet']
+            UserId = selectedVariables['UserId']
             LEEDData = selectedVariables['LEEDData']
             projectTeamAdminAndArcAdminName = selectedVariables['projectTeamAdminAndArcAdminName']
             projectTeamAdminAndArcAdminEmail = selectedVariables['projectTeamAdminAndArcAdminEmail']
-            UserId = selectedVariables['UserId']
             TeamMember2 = selectedVariables['TeamMember2']
             teamMemberName = selectedVariables['teamMemberName']
-            Result = selectedVariables['Result']
+            TeamMember = selectedVariables['TeamMember']
+            teamMemName = selectedVariables['teamMemName']
+            appUrl = selectedVariables['appUrl']
+            validationSheet = selectedVariables['validationSheet']
             rowNumTwentyOne = selectedVariables['rowNumTwentyOne']
             rowNumTwentyTwo = selectedVariables['rowNumTwentyTwo']
             notCertified = selectedVariables['notCertified']

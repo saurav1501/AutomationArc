@@ -149,4 +149,74 @@
       <initValue>'HumanExp'</initValue>
       <name>TemplateHE</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Result'</initValue>
+      <name>Result</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>10</initValue>
+      <name>rowNumTen</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>11</initValue>
+      <name>rowNumEleven</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'initpass'</initValue>
+      <name>TeamMemberPassword</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'creditCard'</initValue>
+      <name>creditCard</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'check'</initValue>
+      <name>checkPayment</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Pricing'</initValue>
+      <name>pricingSheet</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://leedonline-qas.usgbc.org/'</initValue>
+      <name>LEEDURL</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'0010639470'</initValue>
+      <name>UserId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'LEEDData'</initValue>
+      <name>LEEDData</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'ARC USGBC'</initValue>
+      <name>projectTeamAdminAndArcAdminName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'usgbcarc@gmail.com'</initValue>
+      <name>projectTeamAdminAndArcAdminEmail</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'qas-02@gmail.com'</initValue>
+      <name>TeamMember2</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'qas1 mishra'</initValue>
+      <name>teamMemberName</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
