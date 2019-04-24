@@ -557,7 +557,7 @@ public class ReusableMethodsPayment extends BaseClass{
 	@Keyword
 	public void verifyNavigationPageFrize(){
 		/*WebUI.click(findTestObject('DashboardNavigationNewUI/payment/Cancel'))
-		WebUI.delay(5)*/
+		 WebUI.delay(5)*/
 		WebUI.click(findTestObject('DashboardNavigationNewUI/payment/FirstProjectScore'))
 		WebUI.delay(10)
 		WebUI.verifyElementPresent(findTestObject('Object Repository/DataInput/a_ Data Input'),5, FailureHandling.CONTINUE_ON_FAILURE)
@@ -1537,8 +1537,8 @@ public class ReusableMethodsPayment extends BaseClass{
 
 		}
 	}
-	
-	
+
+
 	@Keyword
 	public void paymentRegistrationCheck(String sheetName , int rowNum, String paymentMode){
 		/********************Fetching the data via Excel Sheet ******************************/
@@ -1567,10 +1567,10 @@ public class ReusableMethodsPayment extends BaseClass{
 
 		WebUI.click(findTestObject('Object Repository/paymentPageNewUI/paymentPagePayByCheckOption'))
 		WebUI.click(findTestObject('Object Repository/paymentPageNewUI/submitPayment'))
-		
+
 		WebUI.delay(20)
 		WebUI.waitForElementVisible(findTestObject('PaymenntLocator/NextButton'), 40)
-	
+
 	}
 
 }
