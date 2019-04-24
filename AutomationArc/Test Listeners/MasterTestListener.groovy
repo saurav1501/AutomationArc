@@ -41,10 +41,6 @@ public class MasterTestListener extends BaseClass {
 	public static int TestCount
 	public static  int TestCasePass
 	public static  int TestCaseFail
-	SimpleDateFormat format = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss")
-	Date date, date1
-	String startTime
-	String endTime
 	@SetUp
 	void Setup() {		
 		
@@ -53,12 +49,12 @@ public class MasterTestListener extends BaseClass {
 	@BeforeTestSuite
 	public void beforeTestSuiteListener(TestSuiteContext testSuite)
 	{
+		
 		println TestCount= data.getCellIntData(GlobalVariable.Result, "Total", GlobalVariable.rowNumTwo)
 		println TestCasePass= data.getCellIntData(GlobalVariable.Result, "Passed", GlobalVariable.rowNumTwo)
 		println TestCaseFail= data.getCellIntData(GlobalVariable.Result, "Failed", GlobalVariable.rowNumTwo)
-		date= new Date(System.currentTimeMillis());
-		startTime = format.format(date);
-		println startTime
+
+		
 		println "This is before Test Suit"
 		println("Before Test Suite Listener : " + testSuite.getTestSuiteId())
 		KeywordUtil.markWarning("Before Test Suite Listener : " + testSuite.getTestSuiteId())
@@ -74,12 +70,16 @@ public class MasterTestListener extends BaseClass {
 		
 		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariable'()
 
+<<<<<<< HEAD
 	//	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariableAppUrl'()
 
 		//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariable'()
 	   // CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariableAppUrl'()
 
 		
+=======
+		//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariableAppUrl'()
+>>>>>>> 67ca7856cb824e81aadbde5deadfab66d7be9b53
 	}
 	
 	
@@ -165,18 +165,6 @@ public class MasterTestListener extends BaseClass {
 		WebUI.switchToDefaultContent()
 		KeywordUtil.markWarning("Test Case Name : " + testCase.getTestCaseId())
 		KeywordUtil.markWarning("Test Case Status : " + testCase.getTestCaseStatus())
-		/*if("FAILED".equalsIgnoreCase(testCase.getTestCaseStatus())){
-			println "Test case Fail taking Screenshot"
-		try {
-				Date data = new Date(System.currentTimeMillis())
-				SimpleDateFormat formatarDate = new SimpleDateFormat('yyyyMMddHHmmss')
-				WebUI.takeScreenshot((BaseClass.screenShot + testCase.getTestCaseId() +formatarDate.format(data)) + '.png')
-			}
-			catch (Exception e {
-				e.printStackTrace()
-			}
-		}*/
-		
 		
 		result = testCase.getTestCaseStatus()
 		//cunt the tota no of test cases
@@ -354,29 +342,14 @@ public class MasterTestListener extends BaseClass {
 	
 	@AfterTestSuite
 	public void afterTestSuite(TestSuiteContext testSuite){
-		date1= new Date(System.currentTimeMillis());
-		endTime = format.format(date1);
-		Date d1 = null;
-		Date d2 = null;
-		def execution
-		try {
-			d1 = format.parse(startTime);
-			println d1.getTime()
-			d2 = format.parse(endTime);
-            println d2.getTime()
-			use(groovy.time.TimeCategory) {
-				def duration = d2 - d1
-				//print "Days: ${duration.days}, Hours: ${duration.hours}"
-				execution= "Hours: ${duration.hours }, Minutes: ${duration.minutes}, Seconds: ${duration.seconds}"
-			}
+		println TestCount
+		println TestCasePass
+		println TestCaseFail
+		data.setCellIntData(GlobalVariable.Result, "Total", GlobalVariable.rowNumTwo,TestCount)
+		data.setCellIntData(GlobalVariable.Result, "Passed", GlobalVariable.rowNumTwo,TestCasePass)
+		data.setCellIntData(GlobalVariable.Result, "Failed", GlobalVariable.rowNumTwo,TestCaseFail)
 
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-         println TestCount
-		 data.setCellIntData(GlobalVariable.Result, "Total", GlobalVariable.rowNumTwo,TestCount)
-		 data.setCellIntData(GlobalVariable.Result, "Passed", GlobalVariable.rowNumTwo,TestCasePass)
-		 data.setCellIntData(GlobalVariable.Result, "Failed", GlobalVariable.rowNumTwo,TestCaseFail)
+		 //data.setCellData(GlobalVariable.Result, "Duration", GlobalVariable.rowNumTwo, duration)
 		 //SendEmail.sendStatusReport(TestCaseFail, TestCaseFail, TestCaseFail)
 		KeywordUtil.markWarning("After Test Suite Listener : " + testSuite.getTestSuiteId())
 		WebUI.closeBrowser()

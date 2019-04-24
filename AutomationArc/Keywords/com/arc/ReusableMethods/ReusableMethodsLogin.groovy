@@ -112,13 +112,16 @@ public class ReusableMethodsLogin extends BaseClass{
 		String userName= GlobalVariable.userName
 		String password= GlobalVariable.password
 		WebUI.openBrowser('')
-		WebUI.maximizeWindow()
+		java.awt.Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize()
+		println screenSize.getHeight()
+		println screenSize.getWidth()
+		WebUI.setViewPortSize(1366,1280)
+		//WebUI.maximizeWindow()
 		WebUI.waitForPageLoad(GlobalVariable.timeOut)
 		WebUI.navigateToUrl(url)
 		waitForPageLoad(60)
 		//RemoteWebDriver  driver= DriverFactory.getWebDriver()
 		//driver.setFileDetector(new LocalFileDetector())
-		WebUI.setViewPortSize(1366,1280)
 		WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/button_ACCEPT AND CLOSE'))
 		WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/clickOnLogin'))
 		WebUI.delay(2)
@@ -129,7 +132,7 @@ public class ReusableMethodsLogin extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/input_Forgot Password_field_po'))
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/button_Log in'))
-
+		
 		//WebUI.waitForPageLoad(10)
 		//WebUI.delay(10)
 		waitForPageLoad(60)

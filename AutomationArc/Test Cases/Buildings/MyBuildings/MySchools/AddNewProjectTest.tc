@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description>Add a new school project under building schools.</description>
-   <name>AddNewSchoolProjectTest</name>
+   <name>AddNewProjectTest</name>
    <tag>Add New Project Building Schools.</tag>
    <comment></comment>
    <testCaseGuid>119dd09c-5b32-4286-8b53-9d7e279cca91</testCaseGuid>

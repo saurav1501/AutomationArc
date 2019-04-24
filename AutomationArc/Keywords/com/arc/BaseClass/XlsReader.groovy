@@ -386,7 +386,7 @@ public class XlsReader extends BaseClass {
 	}
 
 	//Save the integer value
-	public boolean setCellIntData(String sheetName, String colName,int rowNum, int data)
+	public boolean setCellIntData(String sheetName, String colName,int rowNum, long data)
 	{
 		try
 		{
