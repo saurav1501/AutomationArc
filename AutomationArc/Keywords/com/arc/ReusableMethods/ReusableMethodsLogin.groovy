@@ -112,6 +112,9 @@ public class ReusableMethodsLogin extends BaseClass{
 		String userName= GlobalVariable.userName
 		String password= GlobalVariable.password
 		WebUI.openBrowser('')
+		java.awt.Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize()
+		println screenSize.getHeight()
+		println screenSize.getWidth()
 		WebUI.setViewPortSize(1366,1280)
 		//WebUI.maximizeWindow()
 		WebUI.waitForPageLoad(GlobalVariable.timeOut)
