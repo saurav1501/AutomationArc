@@ -25,12 +25,6 @@ try {
 	//*************Serach By Project ID ****************************************************/
 	 CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
 	
-	/*  WebUI.delay(3)
-	  WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalytics'))
-	  WebUI.delay(3)
-	  WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
-	  WebUI.delay(2)
-*/ 
 } catch (Throwable t) {
 	System.out.println(t.getLocalizedMessage())
 	Error e1 = new Error(t.getMessage())

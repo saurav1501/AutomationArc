@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@ng-if=&quot;!appData.payment_data.promocode_applied &amp;&amp; only_IGST()&quot;]/td</value>
+         <value>//*[@ng-if=&quot;taxes != false &amp;&amp; !paymentdata.is_sez&quot;]//td[4]//span[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

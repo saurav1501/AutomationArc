@@ -47,12 +47,6 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/PaymentByCreditCardTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>b579a9ec-ffce-4449-b0f8-b3e97cc43ef0</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/SearchProgramTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>1f2e9b06-c0a5-4b33-b420-a89e5280fd3f</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

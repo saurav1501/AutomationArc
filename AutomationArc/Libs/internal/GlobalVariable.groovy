@@ -1,12 +1,8 @@
 package internal
 
 import com.kms.katalon.core.configuration.RunConfiguration
-import com.kms.katalon.core.testobject.ObjectRepository as ObjectRepository
-import com.kms.katalon.core.testdata.TestDataFactory as TestDataFactory
-import com.kms.katalon.core.testcase.TestCaseFactory as TestCaseFactory
-import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
-import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
-import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
+import com.kms.katalon.core.main.TestCaseMain
+
 
 /**
  * This class is generated automatically by Katalon Studio and should not be modified or deleted.
@@ -99,6 +95,7 @@ Profile QAS-CA : Explicit Wait Timeout
 Profile QAS-CN : Explicit Wait Timeout
 Profile QAS-IND : Explicit Wait Timeout
 Profile QAS-US : Explicit Wait Timeout
+Profile QAS-US - Test : Explicit Wait Timeout
 Profile QAS-US-User2 : Explicit Wait Timeout
 Profile STG-CA : Explicit Wait Timeout
 Profile STG-CN : Explicit Wait Timeout
@@ -119,6 +116,7 @@ Profile QAS-CA : Adding canada projects
 Profile QAS-CN : Adding china projects
 Profile QAS-IND : Adding India projects
 Profile QAS-US : Adding US projects
+Profile QAS-US - Test : Adding US projects
 Profile QAS-US-User2 : Adding US projects
 Profile STG-CA : Adding canada projects
 Profile STG-CN : Adding china projects
@@ -134,6 +132,7 @@ Profile QAS-CA : Adding new team member
 Profile QAS-CN : Adding new team member 
 Profile QAS-IND : Adding new team member 
 Profile QAS-US : Adding new team member 
+Profile QAS-US - Test : Adding new team member 
 Profile QAS-US-User2 : Adding new team member 
 Profile STG-CA : Adding new team member 
 Profile STG-CN : Adding new team member 
@@ -149,6 +148,7 @@ Profile QAS-CA : Adding Credit Card payment details
 Profile QAS-CN : Adding Credit Card payment details 
 Profile QAS-IND : Adding Credit Card payment details 
 Profile QAS-US : Adding Credit Card payment details 
+Profile QAS-US - Test : Adding Credit Card payment details 
 Profile QAS-US-User2 : Adding Credit Card payment details 
 Profile STG-CA : Adding Credit Card payment details 
 Profile STG-CN : Adding Credit Card payment details 
@@ -227,6 +227,7 @@ Profile STG-IND : Adding new Inida community projects </p>
     /**
      * <p>Profile DEV-US : Team Member DEV
 Profile QAS-US : Team Member QAS
+Profile QAS-US - Test : Team Member QAS
 Profile QAS-US-User2 : Team Member QAS
 Profile STG-US : Team Member STG
 Profile STG-US - Test : Team Member STG</p>
@@ -277,6 +278,7 @@ Profile STG-US - Test : New Added Project</p>
     /**
      * <p>Profile DEV-US : old score version of Buiding
 Profile QAS-US : old score version project of Building
+Profile QAS-US - Test : old score version project of Building
 Profile QAS-US-User2 : old score version project of Building
 Profile STG-US : old score version of Buiding
 Profile STG-US - Test : old score version of Buiding</p>
@@ -316,6 +318,7 @@ Profile STG-US - Test : old score version of Buiding</p>
     /**
      * <p>Profile DEV-US : old score version of Transit
 Profile QAS-US : Old score version project of Transit
+Profile QAS-US - Test : Old score version project of Transit
 Profile QAS-US-User2 : Old score version project of Transit
 Profile STG-US : old score version of Transit
 Profile STG-US - Test : old score version of Transit</p>
@@ -329,6 +332,7 @@ Profile STG-US - Test : old score version of Transit</p>
      
     /**
      * <p>Profile QAS-US : Human Experience and Transportation
+Profile QAS-US - Test : Human Experience and Transportation
 Profile QAS-US-User2 : Human Experience and Transportation</p>
      */
     public static Object TemplateHE
@@ -353,6 +357,7 @@ Profile STG-US - Test : payment via credit card</p>
     /**
      * <p>Profile DEV-US : Pricing sheet 
 Profile QAS-US : Pricing sheet for checking the pricing for different countries.
+Profile QAS-US - Test : Pricing sheet for checking the pricing for different countries.
 Profile STG-US : Pricing Sheet
 Profile STG-US - Test : Pricing Sheet</p>
      */
@@ -375,6 +380,7 @@ Profile STG-US - Test : Pricing Sheet</p>
      
     /**
      * <p>Profile QAS-US : Project team admin and arc administrator name
+Profile QAS-US - Test : Project team admin and arc administrator name
 Profile STG-US : Project team admin and arc administrator name
 Profile STG-US - Test : Project team admin and arc administrator name</p>
      */
@@ -382,6 +388,7 @@ Profile STG-US - Test : Project team admin and arc administrator name</p>
      
     /**
      * <p>Profile QAS-US : Project team admin and arc administrator email
+Profile QAS-US - Test : Project team admin and arc administrator email
 Profile STG-US : Project team admin and arc administrator email id
 Profile STG-US - Test : Project team admin and arc administrator email id</p>
      */
@@ -398,14 +405,10 @@ Profile STG-US - Test : Project team admin and arc administrator email id</p>
     public static Object TeamMember2
      
     /**
-     * <p>Profile QAS-US : Result sheet to store the result</p>
+     * <p>Profile QAS-US : Result sheet to store the result
+Profile QAS-US - Test : Result sheet to store the result</p>
      */
     public static Object Result
-     
-    /**
-     * <p></p>
-     */
-    public static Object validationSheet
      
     /**
      * <p></p>
@@ -420,10 +423,16 @@ Profile STG-US - Test : Project team admin and arc administrator email id</p>
     /**
      * <p></p>
      */
+    public static Object validationSheet
+     
+    /**
+     * <p></p>
+     */
     public static Object TestCount
      
 
     static {
+<<<<<<< HEAD
         def allVariables = [:]        
         allVariables.put('default', ['StgUrl' : 'http://www.stg.arconline.io/', 'StgUserName' : 'Saurav@groupten.com', 'StgPassword' : 'LEEDg10', 'DelayTime' : 3, 'TimeOut' : 40, 'Env' : 'qas', 'QasUrl' : 'http://www.qas.arconline.io', 'QasUserName' : 'usgbcarc@gmail.com', 'QasPassword' : 'initpass', 'DevUrl' : 'http://www.dev.arconline.io', 'DevUserName' : 'rmishra@usgbc.org', 'DevPassword' : 'initpass', 'downloadPath' : 'D:\\Katalon\\AutomationArc\\Automation\\Download\\'])
         allVariables.put('DEV-US', allVariables['default'] + ['url' : 'https://dev.app.arconline.io/login', 'userName' : 'devusgbcarc@gmail.com', 'password' : 'initpass', 'timeOut' : 40, 'env' : 'ARCDataTemplete/QasArcTest.xlsx', 'BuildingSheet' : 'USBuildingProject', 'BuildingTeam' : 'BTeam', 'CCPayment' : 'Payment', 'rowNumTwo' : 2, 'rowNumThree' : 3, 'rowNumFour' : 4, 'rowNumFive' : 5, 'rowNumSix' : 6, 'CitySheet' : 'USCityProject', 'CommunitySheet' : 'USCommunityProject', 'CDataInput' : 'CDataInput', 'PortfoliosSheet' : 'PortfolioDev', 'rowNumSeven' : 7, 'rowNumEight' : 8, 'BDataInput' : 'BDataInput', 'TeamMember' : 'dev-01@gmail.com', 'adminUrl' : 'https://dev.app.arconline.io/admin', 'adminUserName' : 'devgbciadmin@usgbc.org', 'adminPassword' : 'initpass', 'rowNumTwentyOne' : 21, 'rowNumTwentyTwo' : 22, 'notCertified' : 'notCertified', 'rowNumTwentyThree' : 23, 'rowNumNine' : 9, 'teamMemName' : 'Dev User', 'ExcelTemplateData' : 'ExcelTemplateDataVerificationSheet.xlsx', 'TemplateEnergyData' : 'Energy', 'TemplateWaterData' : 'Water', 'TeamMemberPassword' : 'initpass', 'TemplateWasteData' : 'Waste', 'rowNumTen' : 10, 'AllProjectUrl' : 'https://dev.app.arconline.io/app/projects/my-projects/?project-type=all', 'TemplateHE' : 'HumanExp', 'cardPayment' : 'creditCard', 'checkPayment' : 'check', 'appUrl' : 'https://dev.app.arconline.io/login', 'pricingSheet' : 'Pricing', 'rowNumEleven' : 11, 'creditCard' : 'creditCard', 'LEEDURL' : 'https://leedonline-dev.usgbc.org/', 'projectTeamAdminAndArcAdminName' : 'Saurav K', 'projectTeamAdminAndArcAdminEmail' : 'devusgbcarc@gmail.com', 'UserId' : '', 'TeamMember2' : 'dev-02@gmail.com', 'Result' : 'Result'])
@@ -516,5 +525,83 @@ Profile STG-US - Test : Project team admin and arc administrator email id</p>
         teamMemberName = selectedVariables["teamMemberName"]
         TestCount = selectedVariables["TestCount"]
         
+=======
+        try {
+            def selectedVariables = TestCaseMain.getGlobalVariables("default")
+			selectedVariables += TestCaseMain.getGlobalVariables(RunConfiguration.getExecutionProfile())
+            selectedVariables += RunConfiguration.getOverridingParameters()
+    
+            StgUrl = selectedVariables['StgUrl']
+            StgUserName = selectedVariables['StgUserName']
+            StgPassword = selectedVariables['StgPassword']
+            DelayTime = selectedVariables['DelayTime']
+            TimeOut = selectedVariables['TimeOut']
+            Env = selectedVariables['Env']
+            QasUrl = selectedVariables['QasUrl']
+            QasUserName = selectedVariables['QasUserName']
+            QasPassword = selectedVariables['QasPassword']
+            DevUrl = selectedVariables['DevUrl']
+            DevUserName = selectedVariables['DevUserName']
+            DevPassword = selectedVariables['DevPassword']
+            downloadPath = selectedVariables['downloadPath']
+            url = selectedVariables['url']
+            userName = selectedVariables['userName']
+            password = selectedVariables['password']
+            timeOut = selectedVariables['timeOut']
+            env = selectedVariables['env']
+            BuildingSheet = selectedVariables['BuildingSheet']
+            BuildingTeam = selectedVariables['BuildingTeam']
+            CCPayment = selectedVariables['CCPayment']
+            rowNumTwo = selectedVariables['rowNumTwo']
+            rowNumThree = selectedVariables['rowNumThree']
+            rowNumFour = selectedVariables['rowNumFour']
+            rowNumFive = selectedVariables['rowNumFive']
+            rowNumSix = selectedVariables['rowNumSix']
+            CitySheet = selectedVariables['CitySheet']
+            CommunitySheet = selectedVariables['CommunitySheet']
+            CDataInput = selectedVariables['CDataInput']
+            PortfoliosSheet = selectedVariables['PortfoliosSheet']
+            rowNumSeven = selectedVariables['rowNumSeven']
+            rowNumEight = selectedVariables['rowNumEight']
+            BDataInput = selectedVariables['BDataInput']
+            TeamMember = selectedVariables['TeamMember']
+            adminUrl = selectedVariables['adminUrl']
+            adminUserName = selectedVariables['adminUserName']
+            adminPassword = selectedVariables['adminPassword']
+            rowNumTwentyOne = selectedVariables['rowNumTwentyOne']
+            rowNumTwentyTwo = selectedVariables['rowNumTwentyTwo']
+            notCertified = selectedVariables['notCertified']
+            rowNumTwentyThree = selectedVariables['rowNumTwentyThree']
+            rowNumNine = selectedVariables['rowNumNine']
+            teamMemName = selectedVariables['teamMemName']
+            ExcelTemplateData = selectedVariables['ExcelTemplateData']
+            TemplateEnergyData = selectedVariables['TemplateEnergyData']
+            TemplateWaterData = selectedVariables['TemplateWaterData']
+            TeamMemberPassword = selectedVariables['TeamMemberPassword']
+            TemplateWasteData = selectedVariables['TemplateWasteData']
+            rowNumTen = selectedVariables['rowNumTen']
+            AllProjectUrl = selectedVariables['AllProjectUrl']
+            TemplateHE = selectedVariables['TemplateHE']
+            cardPayment = selectedVariables['cardPayment']
+            checkPayment = selectedVariables['checkPayment']
+            appUrl = selectedVariables['appUrl']
+            pricingSheet = selectedVariables['pricingSheet']
+            rowNumEleven = selectedVariables['rowNumEleven']
+            creditCard = selectedVariables['creditCard']
+            LEEDURL = selectedVariables['LEEDURL']
+            projectTeamAdminAndArcAdminName = selectedVariables['projectTeamAdminAndArcAdminName']
+            projectTeamAdminAndArcAdminEmail = selectedVariables['projectTeamAdminAndArcAdminEmail']
+            UserId = selectedVariables['UserId']
+            TeamMember2 = selectedVariables['TeamMember2']
+            Result = selectedVariables['Result']
+            LEEDData = selectedVariables['LEEDData']
+            teamMemberName = selectedVariables['teamMemberName']
+            validationSheet = selectedVariables['validationSheet']
+            TestCount = selectedVariables['TestCount']
+            
+        } catch (Exception e) {
+            TestCaseMain.logGlobalVariableError(e)
+        }
+>>>>>>> 1062572bdeab3fc4eb17171738f499b9f1d8b8df
     }
 }

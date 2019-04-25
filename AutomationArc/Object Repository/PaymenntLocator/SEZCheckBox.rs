@@ -7,11 +7,14 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//*[@ng-click=&quot;check_sez(paymentData.is_sez)&quot;]</value>
+         <value>//label[@for = 'checkbox' and (text() = 'Does this project belong to Special Economic Zone (SEZ)?' or . = 'Does this project belong to Special Economic Zone (SEZ)?')]</value>
       </entry>
       <entry>
          <key>BASIC</key>
-         <value></value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>#details-form > table > tbody > tr:nth-child(5) > td.pt30 > div > label</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -67,25 +67,25 @@
    <testCaseLink>
       <guid>fb80ba41-e434-4216-9a6f-b7df005d63d9</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/MyCity/5YearTrailFullAccessCity/5YearRegPaymentCheckTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>df8aea75-cde0-4408-9c72-9a187e26ba3b</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/MyCity/5YearTrailFullAccessCity/VerifyThePayNowPopUpAfterPaymentTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>cfd2d845-08ac-4e5e-8a21-320e02d00fe2</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/MyCity/5YearTrailFullAccessCity/5YearBillingAmountAndStatusTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>9bab4c18-93fe-4792-a9a4-34537171be8e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/Community/AddNewProjectTest</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
@@ -109,31 +109,31 @@
    <testCaseLink>
       <guid>cce2522a-1f96-4d86-b789-1e3d384b5796</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/Community/CreateEnergyMeterReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>265c33af-c90a-4c60-8c26-8b249f779850</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/Community/CreateWaterMeterReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>ee27ecd5-cba6-4449-80ed-2b39cd33191a</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/Community/DashboardNavigationEndToEndTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>00d51286-2c6b-468d-9f80-16c1a98434b5</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/Community/TrialProjectDetailsVerificationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>bb74d843-6df1-44e0-8e80-0c9e5f08c822</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/Community/TrialProjectScoreVerificationTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

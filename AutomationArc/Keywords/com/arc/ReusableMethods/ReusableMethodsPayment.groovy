@@ -557,7 +557,7 @@ public class ReusableMethodsPayment extends BaseClass{
 	@Keyword
 	public void verifyNavigationPageFrize(){
 		/*WebUI.click(findTestObject('DashboardNavigationNewUI/payment/Cancel'))
-		WebUI.delay(5)*/
+		 WebUI.delay(5)*/
 		WebUI.click(findTestObject('DashboardNavigationNewUI/payment/FirstProjectScore'))
 		WebUI.delay(10)
 		WebUI.verifyElementPresent(findTestObject('Object Repository/DataInput/a_ Data Input'),5, FailureHandling.CONTINUE_ON_FAILURE)
@@ -1175,19 +1175,19 @@ public class ReusableMethodsPayment extends BaseClass{
 	@Keyword
 	public void verifySezCheckBoxPresentAndClausePopUpOpens(){
 		WebUI.delay(5)
-		Assert.assertTrue(WebUI.verifyElementPresent(findTestObject('Object Repository/PaymenntLocator/SEZCheckBox'), 10))
-		Assert.assertTrue(WebUI.verifyElementClickable(findTestObject('Object Repository/PaymenntLocator/SEZCheckBox')))
+		WebUI.scrollToElement(findTestObject('Object Repository/PaymenntLocator/SEZCheckBox'), 5)
+		WebUI.verifyElementPresent(findTestObject('Object Repository/PaymenntLocator/SEZCheckBox'), 10, FailureHandling.STOP_ON_FAILURE)
+		WebUI.verifyElementClickable(findTestObject('Object Repository/PaymenntLocator/SEZCheckBox'))
 		WebUI.check(findTestObject('Object Repository/PaymenntLocator/SEZCheckBox'))
 		WebUI.delay(5)
 		WebUI.verifyTextPresent("Clause X: Taxes", false)
-		Assert.assertTrue(WebUI.verifyElementPresent(findTestObject('Object Repository/PaymenntLocator/SEZAgreeButton'), 10))
-		Assert.assertTrue(WebUI.verifyElementPresent(findTestObject('Object Repository/PaymenntLocator/SEZCancelButton'), 10))
+		WebUI.verifyElementPresent(findTestObject('Object Repository/PaymenntLocator/SEZAgreeButton'), 10, FailureHandling.STOP_ON_FAILURE)
+		WebUI.verifyElementPresent(findTestObject('Object Repository/PaymenntLocator/SEZCancelButton'), 10, FailureHandling.STOP_ON_FAILURE)
 		WebUI.delay(4)
 		WebUI.click(findTestObject('Object Repository/PaymenntLocator/SEZCancelButton'))
-		Assert.assertTrue(WebUI.verifyElementNotChecked(findTestObject('Object Repository/PaymenntLocator/SEZCheckBox'), 5))
+		WebUI.verifyElementNotChecked(findTestObject('Object Repository/PaymenntLocator/SEZCheckBox'), 5,, FailureHandling.STOP_ON_FAILURE)
 		WebUI.delay(5)
-		println WebUI.getText(findTestObject('Object Repository/PaymenntLocator/IGSTTaxApplicableOnSubTotalRegAmountIND'))
-		WebUI.verifyNotMatch(WebUI.getText(findTestObject('Object Repository/PaymenntLocator/IGSTTaxApplicableOnSubTotalRegAmountIND')), "₹ 0.00", false)
+		WebUI.verifyElementPresent(findTestObject('Object Repository/PaymenntLocator/IGSTTaxApplicableOnSubTotalRegAmountIND'),10)
 		WebUI.delay(2)
 		WebUI.uncheck(findTestObject('Object Repository/PaymenntLocator/SEZCheckBox'))
 		WebUI.delay(3)
@@ -1195,15 +1195,15 @@ public class ReusableMethodsPayment extends BaseClass{
 
 	@Keyword
 	public void verifyOnclickingSezCheckBoxTaxBecomeZero(){
-		WebUI.delay(5)
-		Assert.assertTrue(WebUI.verifyElementPresent(findTestObject('Object Repository/PaymenntLocator/SEZCheckBox'), 10))
+		WebUI.scrollToElement(findTestObject('Object Repository/PaymenntLocator/SEZCheckBox'), 5)
+		WebUI.verifyElementPresent(findTestObject('Object Repository/PaymenntLocator/SEZCheckBox'), 10, FailureHandling.STOP_ON_FAILURE)
 		WebUI.check(findTestObject('Object Repository/PaymenntLocator/SEZCheckBox'))
 		WebUI.delay(5)
-		WebUI.verifyTextPresent("Clause X: Taxes", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/PaymenntLocator/ClauseTaxesPopupText')), "Clause X: Taxes", false, FailureHandling.STOP_ON_FAILURE)
 		WebUI.delay(4)
 		WebUI.click(findTestObject('Object Repository/PaymenntLocator/SEZAgreeButton'))
 		WebUI.delay(5)
-		WebUI.verifyEqual(WebUI.getText(findTestObject('Object Repository/PaymenntLocator/IGSTTaxApplicableOnSubTotalRegAmountIND')), "₹ 0.00")
+		WebUI.verifyElementNotPresent(findTestObject('Object Repository/PaymenntLocator/IGSTTaxApplicableOnSubTotalRegAmountIND'),10, FailureHandling.STOP_ON_FAILURE)
 		WebUI.delay(2)
 		WebUI.uncheck(findTestObject('Object Repository/PaymenntLocator/SEZCheckBox'))
 		WebUI.delay(3)
@@ -1537,8 +1537,8 @@ public class ReusableMethodsPayment extends BaseClass{
 
 		}
 	}
-	
-	
+
+
 	@Keyword
 	public void paymentRegistrationCheck(String sheetName , int rowNum, String paymentMode){
 		/********************Fetching the data via Excel Sheet ******************************/
@@ -1567,10 +1567,10 @@ public class ReusableMethodsPayment extends BaseClass{
 
 		WebUI.click(findTestObject('Object Repository/paymentPageNewUI/paymentPagePayByCheckOption'))
 		WebUI.click(findTestObject('Object Repository/paymentPageNewUI/submitPayment'))
-		
+
 		WebUI.delay(20)
 		WebUI.waitForElementVisible(findTestObject('PaymenntLocator/NextButton'), 40)
-	
+
 	}
 
 }

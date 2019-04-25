@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>SEZAgreeButton</name>
+   <name>ClauseTaxesPopupText</name>
    <tag></tag>
-   <elementGuidId>84c1cfed-502b-4fc7-804f-ef728787c511</elementGuidId>
+   <elementGuidId>36515e52-0f61-4fe1-90b5-6e824c8680a9</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@ng-click=&quot;set_sez(true)&quot;]</value>
+         <value>//*[text()='Clause X: Taxes']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
