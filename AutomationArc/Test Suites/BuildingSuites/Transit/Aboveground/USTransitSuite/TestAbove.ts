@@ -37,13 +37,13 @@
    <testCaseLink>
       <guid>8d26d5f0-1628-442d-83b0-fd0d33d100d9</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/RegistrationPaymentCCtest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>c914e8d3-916e-41f8-9c73-507c02d8962c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/GRESB/TransportSubmitSurveyTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -55,7 +55,7 @@
    <testCaseLink>
       <guid>00de8447-ec57-40c4-a490-abc981eefa99</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/Analytics/TotalAnalyticsTransportationScoreLocalAvgGlobalAvgTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
