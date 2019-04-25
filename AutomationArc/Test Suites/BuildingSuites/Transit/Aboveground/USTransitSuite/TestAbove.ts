@@ -37,7 +37,7 @@
    <testCaseLink>
       <guid>8d26d5f0-1628-442d-83b0-fd0d33d100d9</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/RegistrationPaymentCCtest</testCaseId>
    </testCaseLink>
    <testCaseLink>
