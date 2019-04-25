@@ -933,10 +933,10 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		String fileName= projectId+".zip"
 		String sourceZipFile= RunConfiguration.getProjectDir()+"/Download/"+fileName
 		println sourceZipFile
-		String sourceExtractedFileEnergy= RunConfiguration.getProjectDir()+"/Download/"+projectId+"/"+ratingSystem+"/Certification/energy/"
+		String sourceExtractedFileEnergy= RunConfiguration.getProjectDir()+"/Download/"+projectId+"/"+ratingSystem+"/Pre-Certification/energy/"
 		println sourceExtractedFileEnergy
-		String sourceExtractedFileWater= RunConfiguration.getProjectDir()+"/Download/"+projectId+"/"+ratingSystem+"/Certification/water/"
-		String sourceExtractedFileWaste= RunConfiguration.getProjectDir()+"/Download/"+projectId+"/"+ratingSystem+"/Certification/waste/"
+		String sourceExtractedFileWater= RunConfiguration.getProjectDir()+"/Download/"+projectId+"/"+ratingSystem+"/Pre-Certification/water/"
+		String sourceExtractedFileWaste= RunConfiguration.getProjectDir()+"/Download/"+projectId+"/"+ratingSystem+"/Pre-Certification/waste/"
 		String destinationUnZippedFolder= RunConfiguration.getProjectDir()+"/Download/"
 		String sourceExtractedFile= RunConfiguration.getProjectDir()+"/Download/"+projectId
 		println destinationUnZippedFolder
@@ -950,7 +950,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/AdminToolReviewSearchButton'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/PerformanceScore/SnapshotLinkToDownload'), 20, FailureHandling.STOP_ON_FAILURE)
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/SnapshotLinkToDownload'))
-		WebUI.delay(300)
+		WebUI.delay(100)
 		unzip(sourceZipFile, destinationUnZippedFolder)
 		WebUI.delay(5)
 
