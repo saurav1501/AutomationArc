@@ -1576,6 +1576,81 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		WebUI.verifyMatch(etransGlobal, ttransGlobal, false)
 		WebUI.verifyMatch(etransLocal, ttransLocal, false)
 	}
+	
+	@Keyword
+	public void ttlocalAvgGlobalAvg() {
+		/*	WebUI.delay(5)
+		 WebUI.click(findTestObject('PerformanceScore/Score/a_ Score'))
+		 WebUI.delay(3)
+		 */
+		ReusableMethodsNavigation.clickScoreLabel()
+		WebUI.click(findTestObject('PerformanceScore/Score/a_ Transportation'))
+		WebUI.delay(8)
+		WebUI.waitForElementVisible(findTestObject('Analytics/Cal/TransitComm'), 20)
+		
+		boolean transCommon = WebUI.getText(findTestObject('Analytics/Cal/TransitComm'))
+		println transCommon
+		boolean transGlobal = WebUI.getText(findTestObject('Analytics/TotalPage/TransGlobalAvg'))
+		println transGlobal
+		
+		
+		boolean transLocal = WebUI.verifyElementPresent(findTestObject('Analytics/TotalPage/TransLocalAvg'),3)
+
+
+		println transGlobal
+		println transLocal
+		
+		if (transGlobal && transLocal == ''){	
+			transGlobal = transCommon
+			transLocal  = transCommon
+			String etransGlobal = "Global average: ".concat(transGlobal)
+			String etransLocal = "Local average: ".concat(transLocal)
+			
+			WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
+			WebUI.delay(3)
+	
+			String ttransGlobal = WebUI.getText(findTestObject('Analytics/TotalPage/TTransGlobalAvg'))
+			String ttransLocal = WebUI.getText(findTestObject('Analytics/TotalPage/TTransLocalAvg'))
+			println ttransGlobal
+			println ttransLocal
+			WebUI.verifyMatch(etransGlobal, ttransGlobal, false)
+			WebUI.verifyMatch(etransLocal, ttransLocal, false)
+			
+		}
+		else if(transGlobal == ''){
+			transGlobal = transCommon
+			String etransGlobal = "Global average: ".concat(transGlobal)
+			String etransLocal = "Local average: ".concat(transLocal)
+			
+			WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
+			WebUI.delay(3)
+	
+			String ttransGlobal = WebUI.getText(findTestObject('Analytics/TotalPage/TTransGlobalAvg'))
+			String ttransLocal = WebUI.getText(findTestObject('Analytics/TotalPage/TTransLocalAvg'))
+			println ttransGlobal
+			println ttransLocal
+			WebUI.verifyMatch(etransGlobal, ttransGlobal, false)
+			WebUI.verifyMatch(etransLocal, ttransLocal, false)
+
+			
+		}
+		else (transLocal == ''){
+			transLocal = transCommon
+		}
+		
+		/*	WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ClickOnAnalytics'), 3)
+		 WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalytics'))
+		 */
+		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
+		WebUI.delay(3)
+
+		String ttransGlobal = WebUI.getText(findTestObject('Analytics/TotalPage/TTransGlobalAvg'))
+		String ttransLocal = WebUI.getText(findTestObject('Analytics/TotalPage/TTransLocalAvg'))
+		println ttransGlobal
+		println ttransLocal
+		WebUI.verifyMatch(etransGlobal, ttransGlobal, false)
+		WebUI.verifyMatch(etransLocal, ttransLocal, false)
+	}
 	@Keyword
 	public void transHighLowAvgScore(String sheetName ,int rowNum) {
 		/*WebUI.delay(2)

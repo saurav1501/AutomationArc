@@ -2474,6 +2474,10 @@ def static "com.arc.ReusableMethods.ReusableMethodsAnalytics.tlocalAvgGlobalAvg"
     (new com.arc.ReusableMethods.ReusableMethodsAnalytics()).tlocalAvgGlobalAvg()
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsAnalytics.ttlocalAvgGlobalAvg"() {
+    (new com.arc.ReusableMethods.ReusableMethodsAnalytics()).ttlocalAvgGlobalAvg()
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsAnalytics.transHighLowAvgScore"(
     	String sheetName	
      , 	int rowNum	) {
