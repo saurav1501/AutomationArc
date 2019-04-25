@@ -24,7 +24,8 @@ try {
 	
 	//*************Serach By Project ID ****************************************************/
 	 CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
-	
+	 WebUI.delay(10)
+	 
 } catch (Throwable t) {
 	System.out.println(t.getLocalizedMessage())
 	Error e1 = new Error(t.getMessage())

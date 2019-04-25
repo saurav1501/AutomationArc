@@ -49,7 +49,7 @@
    <testCaseLink>
       <guid>d3d318d7-f4df-4600-9320-82118d57bd61</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/SubmitSurveyTest</testCaseId>
    </testCaseLink>
    <testCaseLink>

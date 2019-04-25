@@ -11,7 +11,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>Gold membership user</description>
-      <initValue>'sswaminathan@usgbc.org'</initValue>
+      <initValue>'devusgbcarc@gmail.com'</initValue>
       <name>userName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -86,7 +86,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Portfolio'</initValue>
+      <initValue>'PortfolioDev'</initValue>
       <name>PortfoliosSheet</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -231,12 +231,12 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Sureka Swaminathan'</initValue>
+      <initValue>'Saurav K'</initValue>
       <name>projectTeamAdminAndArcAdminName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'sswaminathan@usgbc.org'</initValue>
+      <initValue>'devusgbcarc@gmail.com'</initValue>
       <name>projectTeamAdminAndArcAdminEmail</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

@@ -22,8 +22,10 @@ import com.arc.BaseClass.BaseClass
 
 try {
 	
-	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumThree)	
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsAnalytics.tlocalAvgGlobalAvg'()
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumThree)	
+	WebUI.delay(10)
+	
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsAnalytics.ttlocalAvgGlobalAvg'()
  
  } catch (Throwable t) {
 	 System.out.println(t.getLocalizedMessage())

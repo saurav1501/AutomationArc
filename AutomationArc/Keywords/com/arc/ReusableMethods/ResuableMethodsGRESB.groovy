@@ -87,7 +87,7 @@ public class ResuableMethodsGRESB extends BaseClass {
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Portfolio/GRESB/button_UPLOAD'))
 		WebUI.delay(30)
-		WebUI.delay(400)
+		WebUI.delay(500)
 
 	}
 
@@ -170,11 +170,8 @@ public class ResuableMethodsGRESB extends BaseClass {
 		data.setCellData(sheetName,"GOwnerOrg", rowNum, OwnerName)
 
 		WebUI.sendKeys(findTestObject('Portfolio/GRESB/Owner/input_Organization Name_name'), OwnerName)
-
-
 		WebUI.sendKeys(findTestObject('Portfolio/GRESB/Owner/input_Owner Contact Email_owne'), ownerMail)
 		WebUI.sendKeys(findTestObject('Portfolio/GRESB/Owner/input_concat(Owner  s Represen'), ownerMail)
-
 		WebUI.sendKeys(findTestObject('Portfolio/GRESB/Owner/input_Website_form-control ng'),'www.testautomation.com')
 
 		WebUI.delay(2)
@@ -194,13 +191,10 @@ public class ResuableMethodsGRESB extends BaseClass {
 
 		WebUI.click(findTestObject('Add_Project_Details/Payment/ClickHere'))
 		WebUI.delay(2)
-
 		String ownerName = "test"
 		WebUI.sendKeys(findTestObject('Add_Project_Details/Payment/OwnerName'), ownerName)
-
 		WebUI.sendKeys(findTestObject('Add_Project_Details/Payment/Email'), ownerMail)
 		WebUI.sendKeys(findTestObject('Add_Project_Details/Payment/OwnerRepresentative'), ownerMail)
-
 		WebUI.sendKeys(findTestObject('Add_Project_Details/Payment/WebSite'),'www.testautomation.com')
 
 		WebUI.delay(2)

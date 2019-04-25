@@ -12,8 +12,13 @@
             <profileName>STG-US</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
+<<<<<<< HEAD
          <runEnabled>false</runEnabled>
          <testSuiteEntity>Test Suites/BuildingSuites/BuildingNone/USBuildingNoneSuite/USBuildingNoneSuite</testSuiteEntity>
+=======
+         <runEnabled>true</runEnabled>
+         <testSuiteEntity>Test Suites/BuildingSuites/Transit/Aboveground/USTransitSuite/USTransitAbovegroundSuite</testSuiteEntity>
+>>>>>>> e44b9ff408f723e31ed26560d48c9cb186dace08
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>
