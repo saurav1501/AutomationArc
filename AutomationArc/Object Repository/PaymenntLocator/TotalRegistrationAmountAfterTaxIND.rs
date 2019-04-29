@@ -6,12 +6,15 @@
    <elementGuidId>2d62948b-9660-4686-b23a-74eceb680def</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>(//*[@ng-if=&quot;appData.buildingData.project_type == 'building' || appData.buildingData.project_type == 'school'&quot;])[2]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>(//*[@class=&quot;price-td text-right ng-binding&quot;])[3]</value>
+         <key>BASIC</key>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>#details-form > table > tbody > tr:nth-child(2) > td.fontSize16.pt10.ng-scope</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -2800,7 +2800,7 @@ public class ReusableMethodsManage extends BaseClass {
 		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))*/
 		WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
-
+        WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/BillingSection/RegistrationOrderId'), 10)
 		//Registration Payment details verification
 		WebUI.delay(6)
 		String regOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationOrderId'))
