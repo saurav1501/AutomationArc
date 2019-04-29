@@ -101,7 +101,7 @@ public class MasterTestListener extends BaseClass {
 		println testCount
 		println testCaseId[testCount-1]
 		println testSuiteId[count-1]
-		if((testCaseId[testCount-2].contains("LEEDOnline") || testCaseId[testCount-1].contains("AddNewProject") || testCaseId[testCount-1].contains("PaymentByCreditCard") || testCaseId[testCount-1].contains("RegistrationPaymentCC") || testCaseId[testCount-1].contains("PaymentByCheck")|| testCaseId[testCount-1].contains("Login") || testCaseId[testCount-1].contains("INDVerifyTaxZeroIfSezIsCheckedTest") || testCaseId[testCount-1].contains("INDSEZCheckBoxVisibilityAndClausePopUpTest") || testCaseId[testCount-1].contains("INDPaymentPageTaxAndRegAmountVerificationTest") || testCaseId[testCount-1].contains("INDVerifyUploadedFileSEZAreVisibleToTheUserTest")) || testCaseId[testCount-1].contains("INDRegPaymentByCheckTest")){
+		if((testCaseId[testCount-2].contains("LEEDOnline") || testCaseId[testCount-1].contains("AddNewProject") || testCaseId[testCount-1].contains("PaymentByCreditCard") || testCaseId[testCount-1].contains("RegistrationPaymentCC") || testCaseId[testCount-1].contains("PaymentByCheck")|| testCaseId[testCount-1].contains("Login") || testCaseId[testCount-1].contains("INDVerifyTaxZeroIfSezIsCheckedTest") || testCaseId[testCount-1].contains("INDSEZCheckBoxVisibilityAndClausePopUpTest") || testCaseId[testCount-1].contains("INDPaymentPageTaxAndRegAmountVerificationTest") || testCaseId[testCount-1].contains("INDVerifyUploadedFileSEZAreVisibleToTheUserTest"))){
 			KeywordUtil.markWarning("LEED Online Test : " + testCaseId[testCount-1])
 		}
 		else{
