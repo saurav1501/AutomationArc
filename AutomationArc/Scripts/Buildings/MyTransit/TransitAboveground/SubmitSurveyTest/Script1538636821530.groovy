@@ -24,7 +24,7 @@ import internal.GlobalVariable as GlobalVariable
 try{
 	
 	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumThree)
-	WebUI.delay(10)
+	//WebUI.delay(10)
 	
 	if(GlobalVariable.environment=='dev')
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.surveySubmit'(GlobalVariable.BDataInput)
