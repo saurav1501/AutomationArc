@@ -55,7 +55,7 @@ public class MasterTestListener extends BaseClass {
 		println TestCaseFail= data.getCellIntData(GlobalVariable.Result, "Failed", GlobalVariable.rowNumTwo)*/
 
 		
-	/*	println "This is before Test Suit"
+		println "This is before Test Suit"
 		println("Before Test Suite Listener : " + testSuite.getTestSuiteId())
 		KeywordUtil.markWarning("Before Test Suite Listener : " + testSuite.getTestSuiteId())
 		KeywordLogger log = new KeywordLogger()
@@ -64,12 +64,12 @@ public class MasterTestListener extends BaseClass {
 		println count
 		println testSuiteId[count-1] 
 		Country= testSuiteId[count-1].substring(0,2)
-		println Country*/
+		println Country
 		//WebUI.openBrowser('')
 		
-		//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariable'()
+		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariable'()
 
-		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariableAppUrl'()
+		//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariableAppUrl'()
 
 	}
 	
@@ -89,9 +89,9 @@ public class MasterTestListener extends BaseClass {
 		println RunConfiguration.getProjectDir()
 		println RunConfiguration.getAppVersion()
 		
-		if((DriverFactory.getWebDriver().getCurrentUrl()).equalsIgnoreCase(GlobalVariable.url)){
+		/*if((DriverFactory.getWebDriver().getCurrentUrl()).equalsIgnoreCase(GlobalVariable.url)){
 			CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariable'()
-		}
+		}*/
 		
 		println "Hey"
 		println testCase.getTestCaseId()
@@ -100,6 +100,7 @@ public class MasterTestListener extends BaseClass {
 		
 		println testCount
 		println testCaseId[testCount-1]
+		println "Test Suite ID: "
 		println testSuiteId[count-1]
 		if((testCaseId[testCount-2].contains("LEEDOnline") || testCaseId[testCount-1].contains("AddNewProject") || testCaseId[testCount-1].contains("PaymentByCreditCard") || testCaseId[testCount-1].contains("RegistrationPaymentCC") || testCaseId[testCount-1].contains("PaymentByCheck")|| testCaseId[testCount-1].contains("Login") || testCaseId[testCount-1].contains("INDVerifyTaxZeroIfSezIsCheckedTest") || testCaseId[testCount-1].contains("INDSEZCheckBoxVisibilityAndClausePopUpTest") || testCaseId[testCount-1].contains("INDPaymentPageTaxAndRegAmountVerificationTest") || testCaseId[testCount-1].contains("INDVerifyUploadedFileSEZAreVisibleToTheUserTest"))){
 			KeywordUtil.markWarning("LEED Online Test : " + testCaseId[testCount-1])
