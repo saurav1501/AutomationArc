@@ -4,6 +4,7 @@
    <name>closeMeterTab</name>
    <tag></tag>
    <elementGuidId>59968fc9-a1e8-4c02-b8cc-e77e585017b8</elementGuidId>
+   <imagePath></imagePath>
    <selectorCollection>
       <entry>
          <key>BASIC</key>

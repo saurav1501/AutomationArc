@@ -25,7 +25,7 @@ try{
 
 		//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
 		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.selectPayNow'()
-		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.paymentPageBuildingOtherNoneDetails'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix,5)
+		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.paymentPageBuildingOtherNoneDetails'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix,1)
 		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.verifyOnclickingSezCheckBoxTaxBecomeZero'()
 
 	  } catch (Throwable t) {

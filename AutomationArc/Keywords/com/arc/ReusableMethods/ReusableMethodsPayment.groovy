@@ -295,6 +295,39 @@ public class ReusableMethodsPayment extends BaseClass{
 
 	}
 
+	
+	@Keyword
+	public void paymentPageBillingDetailsIndiaProject(String sheetName , int rowNum){
+		/********************Fetching the data via Excel Sheet ******************************/
+		String cardName   = data.getCellData(sheetName, "CardName", rowNum)
+		String cardNum    = data.getCellData(sheetName, "CardNumber", rowNum)
+		String cardDate   = data.getCellData(sheetName, "Date ", rowNum)
+		String cardCvv    = data.getCellData(sheetName, "CVV", rowNum)
+		String partyName  = data.getCellData(sheetName, "PartyName", rowNum)
+		String partyEmail = data.getCellData(sheetName, "PartyEmail", rowNum)
+		String address    = data.getCellData(sheetName, "Address", rowNum)
+		String city       = data.getCellData(sheetName, "City", rowNum)
+		String country    = data.getCellData(sheetName, "Country", rowNum)
+		String state      = data.getCellData(sheetName, "State", rowNum)
+		String zip        = data.getCellData(sheetName, "Zip", rowNum)
+		String phone      = data.getCellData(sheetName, "Mobile", rowNum)
+
+		WebUI.waitForElementVisible(findTestObject('Object Repository/paymentPageNewUI/billingName'), 10, FailureHandling.STOP_ON_FAILURE)
+		WebUI.clearText(findTestObject('Object Repository/paymentPageNewUI/billingName'))
+		WebUI.setText(findTestObject('Object Repository/paymentPageNewUI/billingName'),partyName)
+		WebUI.clearText(findTestObject('Object Repository/paymentPageNewUI/billingEmail'))
+		WebUI.setText(findTestObject('Object Repository/paymentPageNewUI/billingEmail'), partyEmail)
+		WebUI.clearText(findTestObject('Object Repository/paymentPageNewUI/billingAddress'))
+		WebUI.setText(findTestObject('Object Repository/paymentPageNewUI/billingAddress'), address)
+		WebUI.clearText(findTestObject('Object Repository/paymentPageNewUI/billingCity'))
+		WebUI.setText(findTestObject('Object Repository/paymentPageNewUI/billingCity'), city)
+		WebUI.selectOptionByLabel(findTestObject('Object Repository/paymentPageNewUI/billingCountry'), country, false)
+		WebUI.selectOptionByLabel(findTestObject('Object Repository/paymentPageNewUI/billingState'), state , false)
+		WebUI.clearText(findTestObject('Object Repository/paymentPageNewUI/billingZip'))
+		WebUI.setText(findTestObject('Object Repository/paymentPageNewUI/billingZip'),zip )
+		
+	}	
+	
 
 	@Keyword
 	public void paymentRegistration(String sheetName , int rowNum, String paymentMode){
@@ -434,6 +467,10 @@ public class ReusableMethodsPayment extends BaseClass{
 	@Keyword
 	public void regPaymentByCheckIND(String sheetName , int rowNum){
 		/********************Fetching the data via Excel Sheet ******************************/
+		String cardName   = data.getCellData(sheetName, "CardName", rowNum)
+		String cardNum    = data.getCellData(sheetName, "CardNumber", rowNum)
+		String cardDate   = data.getCellData(sheetName, "Date ", rowNum)
+		String cardCvv    = data.getCellData(sheetName, "CVV", rowNum)
 		String partyName  = data.getCellData(sheetName, "PartyName", rowNum)
 		String partyEmail = data.getCellData(sheetName, "PartyEmail", rowNum)
 		String address    = data.getCellData(sheetName, "Address", rowNum)
@@ -441,27 +478,32 @@ public class ReusableMethodsPayment extends BaseClass{
 		String country    = data.getCellData(sheetName, "Country", rowNum)
 		String state      = data.getCellData(sheetName, "State", rowNum)
 		String zip        = data.getCellData(sheetName, "Zip", rowNum)
-		WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		WebUI.delay(1)
-		Assert.assertEquals(WebUI.verifyElementClickable(findTestObject('PaymenntLocator/PromoCodeTextfieldRegPayment')),true)
-		WebUI.clearText(findTestObject('Object Repository/PaymenntLocator/input_party_name'))
-		WebUI.setText(findTestObject('Object Repository/PaymenntLocator/input_party_name'),partyName)
-		WebUI.clearText(findTestObject('Object Repository/PaymenntLocator/input_email'))
-		WebUI.setText(findTestObject('Object Repository/PaymenntLocator/input_email'), partyEmail)
-		WebUI.clearText(findTestObject('Object Repository/PaymenntLocator/input_street'))
-		WebUI.setText(findTestObject('Object Repository/PaymenntLocator/input_street'), address)
-		WebUI.clearText(findTestObject('Object Repository/PaymenntLocator/input_city'))
-		WebUI.setText(findTestObject('Object Repository/PaymenntLocator/input_city'), city)
-		WebUI.selectOptionByLabel(findTestObject('PaymenntLocator/Country'), country, false)
-		WebUI.selectOptionByLabel(findTestObject('PaymenntLocator/Select_State'),state , false)
-		WebUI.delay(2)
-		WebUI.setText(findTestObject('Object Repository/PaymenntLocator/input_zip_code'),zip )
-		WebUI.click(findTestObject('Object Repository/PaymenntLocator/button_Next'))
-		WebUI.delay(5)
-		WebUI.click(findTestObject('Object Repository/PaymenntLocator/button_Continue'))
+		String phone      = data.getCellData(sheetName, "Mobile", rowNum)
+
+		WebUI.waitForElementVisible(findTestObject('Object Repository/paymentPageNewUI/billingName'), 10, FailureHandling.STOP_ON_FAILURE)
+		WebUI.clearText(findTestObject('Object Repository/paymentPageNewUI/billingName'))
+		WebUI.setText(findTestObject('Object Repository/paymentPageNewUI/billingName'),partyName)
+		WebUI.clearText(findTestObject('Object Repository/paymentPageNewUI/billingEmail'))
+		WebUI.setText(findTestObject('Object Repository/paymentPageNewUI/billingEmail'), partyEmail)
+		WebUI.clearText(findTestObject('Object Repository/paymentPageNewUI/billingAddress'))
+		WebUI.setText(findTestObject('Object Repository/paymentPageNewUI/billingAddress'), address)
+		WebUI.clearText(findTestObject('Object Repository/paymentPageNewUI/billingCity'))
+		WebUI.setText(findTestObject('Object Repository/paymentPageNewUI/billingCity'), city)
+		WebUI.selectOptionByLabel(findTestObject('Object Repository/paymentPageNewUI/billingCountry'), country, false)
+		WebUI.selectOptionByLabel(findTestObject('Object Repository/paymentPageNewUI/billingState'), state , false)
+		WebUI.clearText(findTestObject('Object Repository/paymentPageNewUI/billingZip'))
+		WebUI.setText(findTestObject('Object Repository/paymentPageNewUI/billingZip'),zip )
+		WebUI.waitForElementClickable(findTestObject('Object Repository/paymentPageNewUI/submitPayment'), 10)
+		WebUI.delay(3)
+		WebUI.click(findTestObject('Object Repository/paymentPageNewUI/submitPayment'))
+		WebUI.waitForElementVisible(findTestObject('Object Repository/paymentPageNewUI/ContinueButtonIndiaPaymentPopUp'), 10)
+		WebUI.click(findTestObject('Object Repository/paymentPageNewUI/ContinueButtonIndiaPaymentPopUp'))
 		WebUI.delay(20)
-		Boolean testCongratulations = WebUI.verifyTextPresent('Congratulations', false)
-		Assert.assertTrue(testCongratulations)
+		WebUI.waitForElementVisible(findTestObject('PaymenntLocator/NextButton'), 40)
+		WebUI.click(findTestObject('PaymenntLocator/NextButton'))
+		WebUI.delay(5)
+		
+		
 	}
 
 	@Keyword
@@ -540,6 +582,7 @@ public class ReusableMethodsPayment extends BaseClass{
 		//WebUI.click(findTestObject('PayNowRegistrationPaymentIN/a_ Manage'))
 		WebUI.scrollToElement(findTestObject('PayNowRegistrationPaymentIN/a_ Billing'), 2)
 		WebUI.click(findTestObject('PayNowRegistrationPaymentIN/a_ Billing'))
+		WebUI.waitForElementVisible(findTestObject('PayNowRegistrationPaymentIN/button_Pay now'), 10)
 		WebUI.verifyElementPresent(findTestObject('PayNowRegistrationPaymentIN/button_Pay now'), 5)
 		WebUI.click(findTestObject('PayNowRegistrationPaymentIN/button_Pay now'))
 		WebUI.switchToWindowTitle('')
@@ -1163,8 +1206,9 @@ public class ReusableMethodsPayment extends BaseClass{
 			//pending for uttar pradesh
 		}else{
 
-			WebUI.verifyEqual(WebUI.getText(findTestObject('Object Repository/PaymenntLocator/TotalRegistrationAmountAfterTaxIND')), regAmount + " for 5 years"  )
-			WebUI.verifyEqual(WebUI.getText(findTestObject('Object Repository/PaymenntLocator/SubTotalRegistrationAmountIND')),subTotal + " for 5 years")
+			WebUI.verifyEqual(WebUI.getText(findTestObject('Object Repository/PaymenntLocator/TotalRegistrationAmountAfterTaxIND')), regAmount + " for 1 Year"  )
+			WebUI.waitForElementPresent(findTestObject('Object Repository/PaymenntLocator/SubTotalRegistrationAmountIND'), 10)
+			WebUI.verifyEqual(WebUI.getText(findTestObject('Object Repository/PaymenntLocator/SubTotalRegistrationAmountIND')),subTotal + " for 1 Year")
 			WebUI.verifyEqual(WebUI.getText(findTestObject('Object Repository/PaymenntLocator/IGSTTaxApplicableOnSubTotalRegAmountIND')),taxAmount)
 
 		}
@@ -1213,6 +1257,7 @@ public class ReusableMethodsPayment extends BaseClass{
 	@Keyword
 	public void SezFileUploadAndVerifyItIsDisplaying(){
 		WebUI.delay(5)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/PaymenntLocator/SEZCheckBox'), 10)
 		WebUI.check(findTestObject('Object Repository/PaymenntLocator/SEZCheckBox'))
 		WebUI.delay(5)
 		WebUI.click(findTestObject('Object Repository/PaymenntLocator/SEZAgreeButton'))
@@ -1220,53 +1265,38 @@ public class ReusableMethodsPayment extends BaseClass{
 		//pdf file upload
 		WebUI.click(findTestObject('Object Repository/PaymenntLocator/ClickOnUploadButtonSEZ'))
 		WebUI.delay(3)
-		WebUI.sendKeys(findTestObject('Object Repository/PaymenntLocator/FileUploadSez'), UploadDocumentDataInput)
-		WebUI.delay(2)
-		ReusableMethodsDataInput.clickCancel()
+		ReusableMethodsDataInput.uploadFile(UploadDocumentDataInput)
 		WebUI.delay(5)
 		//text file upload
 		WebUI.click(findTestObject('Object Repository/PaymenntLocator/ClickOnUploadButtonSEZ'))
 		WebUI.delay(3)
-		WebUI.sendKeys(findTestObject('Object Repository/PaymenntLocator/FileUploadSez'), UploadTextFile)
-		WebUI.delay(2)
-		ReusableMethodsDataInput.clickCancel()
+		ReusableMethodsDataInput.uploadFile(UploadTextFile)
 		WebUI.delay(5)
 		//jpg file upload
 		WebUI.click(findTestObject('Object Repository/PaymenntLocator/ClickOnUploadButtonSEZ'))
 		WebUI.delay(3)
-		WebUI.sendKeys(findTestObject('Object Repository/PaymenntLocator/FileUploadSez'), UploadJpeg)
-		WebUI.delay(2)
-		ReusableMethodsDataInput.clickCancel()
+		ReusableMethodsDataInput.uploadFile(UploadJpeg)
 		WebUI.delay(5)
 		//png file upload
 		WebUI.click(findTestObject('Object Repository/PaymenntLocator/ClickOnUploadButtonSEZ'))
 		WebUI.delay(3)
-		WebUI.sendKeys(findTestObject('Object Repository/PaymenntLocator/FileUploadSez'), UploadPng)
-		WebUI.delay(2)
-		ReusableMethodsDataInput.clickCancel()
+		ReusableMethodsDataInput.uploadFile(UploadPng)
 		WebUI.delay(5)
 		//gif file upload
 		WebUI.click(findTestObject('Object Repository/PaymenntLocator/ClickOnUploadButtonSEZ'))
 		WebUI.delay(3)
-		WebUI.sendKeys(findTestObject('Object Repository/PaymenntLocator/FileUploadSez'), UploadGif)
-		WebUI.delay(2)
-		ReusableMethodsDataInput.clickCancel()
+		ReusableMethodsDataInput.uploadFile(UploadGif)
 		WebUI.delay(5)
 		//xls file upload
 		WebUI.click(findTestObject('Object Repository/PaymenntLocator/ClickOnUploadButtonSEZ'))
 		WebUI.delay(3)
-		WebUI.sendKeys(findTestObject('Object Repository/PaymenntLocator/FileUploadSez'), UploadXls)
-		WebUI.delay(2)
-		ReusableMethodsDataInput.clickCancel()
+		ReusableMethodsDataInput.uploadFile(UploadXls)
 		WebUI.delay(5)
 		//doc file upload
 		WebUI.click(findTestObject('Object Repository/PaymenntLocator/ClickOnUploadButtonSEZ'))
 		WebUI.delay(3)
-		WebUI.sendKeys(findTestObject('Object Repository/PaymenntLocator/FileUploadSez'), UploadDocs)
-		WebUI.delay(2)
-		ReusableMethodsDataInput.clickCancel()
+		ReusableMethodsDataInput.uploadFile(UploadDocs)
 		WebUI.delay(5)
-
 
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/PaymenntLocator/UploadedFileSEZOne')), "uploadDoc.docx", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/PaymenntLocator/UploadedFileSEZTwo')), "uploasExcel.xlsx", false, FailureHandling.CONTINUE_ON_FAILURE)

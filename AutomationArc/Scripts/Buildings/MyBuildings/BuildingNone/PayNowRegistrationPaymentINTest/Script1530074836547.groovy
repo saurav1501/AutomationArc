@@ -25,7 +25,7 @@ import org.testng.Assert
 //Pay Now Registration Payment Ind
 
 try {
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
+	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
 
     CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.payNowRegistrationPaymentIND'()
 

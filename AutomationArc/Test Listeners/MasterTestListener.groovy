@@ -49,8 +49,8 @@ public class MasterTestListener extends BaseClass {
 	@BeforeTestSuite
 	public void beforeTestSuiteListener(TestSuiteContext testSuite)
 	{
-		
-	/*	println TestCount= data.getCellIntData(GlobalVariable.Result, "Total", GlobalVariable.rowNumTwo)
+
+		/*println TestCount= data.getCellIntData(GlobalVariable.Result, "Total", GlobalVariable.rowNumTwo)
 		println TestCasePass= data.getCellIntData(GlobalVariable.Result, "Passed", GlobalVariable.rowNumTwo)
 		println TestCaseFail= data.getCellIntData(GlobalVariable.Result, "Failed", GlobalVariable.rowNumTwo)*/
 
@@ -67,9 +67,9 @@ public class MasterTestListener extends BaseClass {
 		println Country*/
 		//WebUI.openBrowser('')
 		
-		//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariable'()
+		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariable'()
 
-		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariableAppUrl'()
+		//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariableAppUrl'()
 
 	}
 	
@@ -77,7 +77,17 @@ public class MasterTestListener extends BaseClass {
 	@BeforeTestCase
 	public void beforeTestListener(TestSuiteContext testSuite, TestCaseContext testCase)
 	{
-		
+		println "Test Description"
+		println RunConfiguration.getProjectDir()
+		println RunConfiguration.getExecutionProfile()
+		println RunConfiguration.getExecutionSource()
+		println RunConfiguration.getExecutionSourceDescription()
+		println RunConfiguration.getExecutionSourceName()
+		println RunConfiguration.getHostAddress()
+		println RunConfiguration.getHostName()
+		println RunConfiguration.getOS()
+		println RunConfiguration.getProjectDir()
+		println RunConfiguration.getAppVersion()
 		
 		if((DriverFactory.getWebDriver().getCurrentUrl()).equalsIgnoreCase(GlobalVariable.url)){
 			CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariable'()
