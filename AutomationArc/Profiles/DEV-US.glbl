@@ -254,4 +254,9 @@
       <initValue>'Result'</initValue>
       <name>Result</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'dev'</initValue>
+      <name>environment</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
