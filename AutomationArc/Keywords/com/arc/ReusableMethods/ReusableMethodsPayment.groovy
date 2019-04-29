@@ -1180,17 +1180,17 @@ public class ReusableMethodsPayment extends BaseClass{
 		WebUI.verifyElementClickable(findTestObject('Object Repository/PaymenntLocator/SEZCheckBox'))
 		WebUI.check(findTestObject('Object Repository/PaymenntLocator/SEZCheckBox'))
 		WebUI.delay(5)
-		WebUI.verifyTextPresent("Clause X: Taxes", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/PaymenntLocator/ClauseTaxesPopupText')), "Clause X: Taxes", false, FailureHandling.STOP_ON_FAILURE)
 		WebUI.verifyElementPresent(findTestObject('Object Repository/PaymenntLocator/SEZAgreeButton'), 10, FailureHandling.STOP_ON_FAILURE)
 		WebUI.verifyElementPresent(findTestObject('Object Repository/PaymenntLocator/SEZCancelButton'), 10, FailureHandling.STOP_ON_FAILURE)
 		WebUI.delay(4)
 		WebUI.click(findTestObject('Object Repository/PaymenntLocator/SEZCancelButton'))
-		WebUI.verifyElementNotChecked(findTestObject('Object Repository/PaymenntLocator/SEZCheckBox'), 5,, FailureHandling.STOP_ON_FAILURE)
+		WebUI.verifyElementNotChecked(findTestObject('Object Repository/PaymenntLocator/SEZCheckBox'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.delay(5)
-		WebUI.verifyElementPresent(findTestObject('Object Repository/PaymenntLocator/IGSTTaxApplicableOnSubTotalRegAmountIND'),10)
-		WebUI.delay(2)
-		WebUI.uncheck(findTestObject('Object Repository/PaymenntLocator/SEZCheckBox'))
-		WebUI.delay(3)
+		WebUI.verifyElementPresent(findTestObject('Object Repository/PaymenntLocator/IGSTTaxApplicableOnSubTotalRegAmountIND'),10,FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.delay(5)
+		/*WebUI.check(findTestObject('Object Repository/PaymenntLocator/SEZCheckBox'))
+		WebUI.delay(3)*/
 	}
 
 	@Keyword
@@ -1198,14 +1198,14 @@ public class ReusableMethodsPayment extends BaseClass{
 		WebUI.scrollToElement(findTestObject('Object Repository/PaymenntLocator/SEZCheckBox'), 5)
 		WebUI.verifyElementPresent(findTestObject('Object Repository/PaymenntLocator/SEZCheckBox'), 10, FailureHandling.STOP_ON_FAILURE)
 		WebUI.check(findTestObject('Object Repository/PaymenntLocator/SEZCheckBox'))
-		WebUI.delay(5)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/PaymenntLocator/ClauseTaxesPopupText'), 10)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/PaymenntLocator/ClauseTaxesPopupText')), "Clause X: Taxes", false, FailureHandling.STOP_ON_FAILURE)
 		WebUI.delay(4)
 		WebUI.click(findTestObject('Object Repository/PaymenntLocator/SEZAgreeButton'))
 		WebUI.delay(5)
 		WebUI.verifyElementNotPresent(findTestObject('Object Repository/PaymenntLocator/IGSTTaxApplicableOnSubTotalRegAmountIND'),10, FailureHandling.STOP_ON_FAILURE)
-		WebUI.delay(2)
-		WebUI.uncheck(findTestObject('Object Repository/PaymenntLocator/SEZCheckBox'))
+		WebUI.delay(5)
+		WebUI.check(findTestObject('Object Repository/PaymenntLocator/SEZCheckBox'))
 		WebUI.delay(3)
 	}
 

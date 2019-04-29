@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//label[@for = 'checkbox' and (text() = 'Does this project belong to Special Economic Zone (SEZ)?' or . = 'Does this project belong to Special Economic Zone (SEZ)?')]</value>
+         <value>//*[@for = 'checkbox' and (text() = 'Does this project belong to Special Economic Zone (SEZ)?' or . = 'Does this project belong to Special Economic Zone (SEZ)?')]</value>
       </entry>
       <entry>
          <key>BASIC</key>

@@ -131,7 +131,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'ARC USGBC'</initValue>
+      <initValue>'Abhishek Kumar'</initValue>
       <name>teamMemName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

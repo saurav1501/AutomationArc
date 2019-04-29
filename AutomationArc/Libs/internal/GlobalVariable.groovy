@@ -1,12 +1,8 @@
 package internal
 
 import com.kms.katalon.core.configuration.RunConfiguration
-import com.kms.katalon.core.testobject.ObjectRepository as ObjectRepository
-import com.kms.katalon.core.testdata.TestDataFactory as TestDataFactory
-import com.kms.katalon.core.testcase.TestCaseFactory as TestCaseFactory
-import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
-import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
-import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
+import com.kms.katalon.core.main.TestCaseMain
+
 
 /**
  * This class is generated automatically by Katalon Studio and should not be modified or deleted.
@@ -442,6 +438,7 @@ Profile STG-US - Test : payment via credit card</p>
      
 
     static {
+<<<<<<< HEAD
         def allVariables = [:]        
         allVariables.put('default', ['StgUrl' : 'http://www.stg.arconline.io/', 'StgUserName' : 'Saurav@groupten.com', 'StgPassword' : 'LEEDg10', 'DelayTime' : 3, 'TimeOut' : 40, 'Env' : 'qas', 'QasUrl' : 'http://www.qas.arconline.io', 'QasUserName' : 'usgbcarc@gmail.com', 'QasPassword' : 'initpass', 'DevUrl' : 'http://www.dev.arconline.io', 'DevUserName' : 'rmishra@usgbc.org', 'DevPassword' : 'initpass', 'downloadPath' : 'D:\\Katalon\\AutomationArc\\Automation\\Download\\'])
         allVariables.put('DEV-IND', allVariables['default'] + ['url' : 'https://dev.app.arconline.io/login', 'userName' : 'test-05@gmail.com', 'password' : 'initpass', 'timeOut' : 40, 'env' : 'ARCDataTemplete/ArcTest.xlsx', 'BuildingSheet' : 'BuildingIndiaProject', 'BuildingTeam' : 'BTeam', 'CCPayment' : 'Payment', 'rowNumTwo' : 2, 'rowNumThree' : 3, 'rowNumFour' : 4, 'rowNumFive' : 5, 'rowNumSix' : 6, 'CitySheet' : 'CityIndiaProject', 'CommunitySheet' : 'CommunityIndiaProject', 'CDataInput' : 'CDataInput', 'rowNumSeven' : 7, 'rowNumEight' : 8, 'PortfoliosSheet' : 'Portfolio', 'BDataInput' : 'BDataInput', 'adminUrl' : 'stg.app.arconline.io/admin', 'adminUserName' : 'stggbciadmin@gbci.com', 'adminPassword' : 'initpass', 'rowNumNine' : 9, 'ExcelTemplateData' : 'ExcelTemplateDataVerificationSheet.xlsx', 'TemplateEnergyData' : 'Energy', 'TemplateWaterData' : 'Water', 'TemplateWasteData' : 'Waste', 'AllProjectUrl' : 'https://dev.app.arconline.io/app/projects/my-projects/?project-type=all', 'Result' : 'Result', 'rowNumTen' : 10, 'rowNumEleven' : 11, 'TeamMemberPassword' : 'initpass', 'creditCard' : 'creditCard', 'checkPayment' : 'check', 'pricingSheet' : 'Pricing', 'LEEDURL' : 'https://leedonline-stg.usgbc.org/', 'UserId' : '0010544805', 'teamMemberName' : 'stgr mishra', 'TeamMember2' : 'stg-02@gmail.com', 'projectTeamAdminAndArcAdminName' : 'Saurav K', 'projectTeamAdminAndArcAdminEmail' : 'saurav@groupten.com', 'LEEDData' : 'LEEDData', 'appUrl' : 'https://dev.app.arconline.io/login'])
@@ -536,5 +533,83 @@ Profile STG-US - Test : payment via credit card</p>
         validationSheet = selectedVariables["validationSheet"]
         TestCount = selectedVariables["TestCount"]
         
+=======
+        try {
+            def selectedVariables = TestCaseMain.getGlobalVariables("default")
+			selectedVariables += TestCaseMain.getGlobalVariables(RunConfiguration.getExecutionProfile())
+            selectedVariables += RunConfiguration.getOverridingParameters()
+    
+            StgUrl = selectedVariables['StgUrl']
+            StgUserName = selectedVariables['StgUserName']
+            StgPassword = selectedVariables['StgPassword']
+            DelayTime = selectedVariables['DelayTime']
+            TimeOut = selectedVariables['TimeOut']
+            Env = selectedVariables['Env']
+            QasUrl = selectedVariables['QasUrl']
+            QasUserName = selectedVariables['QasUserName']
+            QasPassword = selectedVariables['QasPassword']
+            DevUrl = selectedVariables['DevUrl']
+            DevUserName = selectedVariables['DevUserName']
+            DevPassword = selectedVariables['DevPassword']
+            downloadPath = selectedVariables['downloadPath']
+            url = selectedVariables['url']
+            userName = selectedVariables['userName']
+            password = selectedVariables['password']
+            timeOut = selectedVariables['timeOut']
+            env = selectedVariables['env']
+            BuildingSheet = selectedVariables['BuildingSheet']
+            BuildingTeam = selectedVariables['BuildingTeam']
+            CCPayment = selectedVariables['CCPayment']
+            rowNumTwo = selectedVariables['rowNumTwo']
+            rowNumThree = selectedVariables['rowNumThree']
+            rowNumFour = selectedVariables['rowNumFour']
+            rowNumFive = selectedVariables['rowNumFive']
+            rowNumSix = selectedVariables['rowNumSix']
+            CitySheet = selectedVariables['CitySheet']
+            CommunitySheet = selectedVariables['CommunitySheet']
+            CDataInput = selectedVariables['CDataInput']
+            PortfoliosSheet = selectedVariables['PortfoliosSheet']
+            rowNumSeven = selectedVariables['rowNumSeven']
+            rowNumEight = selectedVariables['rowNumEight']
+            BDataInput = selectedVariables['BDataInput']
+            TeamMember = selectedVariables['TeamMember']
+            adminUrl = selectedVariables['adminUrl']
+            adminUserName = selectedVariables['adminUserName']
+            adminPassword = selectedVariables['adminPassword']
+            rowNumTwentyOne = selectedVariables['rowNumTwentyOne']
+            rowNumTwentyTwo = selectedVariables['rowNumTwentyTwo']
+            notCertified = selectedVariables['notCertified']
+            rowNumTwentyThree = selectedVariables['rowNumTwentyThree']
+            rowNumNine = selectedVariables['rowNumNine']
+            teamMemName = selectedVariables['teamMemName']
+            ExcelTemplateData = selectedVariables['ExcelTemplateData']
+            TemplateEnergyData = selectedVariables['TemplateEnergyData']
+            TemplateWaterData = selectedVariables['TemplateWaterData']
+            TeamMemberPassword = selectedVariables['TeamMemberPassword']
+            TemplateWasteData = selectedVariables['TemplateWasteData']
+            rowNumTen = selectedVariables['rowNumTen']
+            AllProjectUrl = selectedVariables['AllProjectUrl']
+            TemplateHE = selectedVariables['TemplateHE']
+            cardPayment = selectedVariables['cardPayment']
+            checkPayment = selectedVariables['checkPayment']
+            appUrl = selectedVariables['appUrl']
+            pricingSheet = selectedVariables['pricingSheet']
+            rowNumEleven = selectedVariables['rowNumEleven']
+            creditCard = selectedVariables['creditCard']
+            LEEDURL = selectedVariables['LEEDURL']
+            projectTeamAdminAndArcAdminName = selectedVariables['projectTeamAdminAndArcAdminName']
+            projectTeamAdminAndArcAdminEmail = selectedVariables['projectTeamAdminAndArcAdminEmail']
+            UserId = selectedVariables['UserId']
+            TeamMember2 = selectedVariables['TeamMember2']
+            Result = selectedVariables['Result']
+            LEEDData = selectedVariables['LEEDData']
+            teamMemberName = selectedVariables['teamMemberName']
+            validationSheet = selectedVariables['validationSheet']
+            TestCount = selectedVariables['TestCount']
+            
+        } catch (Exception e) {
+            TestCaseMain.logGlobalVariableError(e)
+        }
+>>>>>>> 9810d7880629841420b852fbdd2aa42505457c21
     }
 }
