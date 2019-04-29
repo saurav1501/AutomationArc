@@ -612,7 +612,7 @@ public class ReusableMethodsPayment extends BaseClass{
 		//WebUI.delay(1)
 		//WebUI.click(findTestObject('PayNowRegistrationPaymentIN/a_ Manage'))
 		WebUI.click(findTestObject('PayNowRegistrationPaymentIN/a_ Billing'))
-		WebUI.verifyElementPresent(findTestObject('PayNowRegistrationPaymentIN/button_Pay now'), 5)
+		WebUI.verifyElementPresent(findTestObject('PayNowRegistrationPaymentIN/button_Pay now'), 10)
 		WebUI.click(findTestObject('PayNowRegistrationPaymentIN/button_Pay now'))
 		WebUI.switchToWindowTitle('')
 		WebUI.setText(findTestObject('PayNowRegistrationPaymentIN/input_phone'), '9486861522')
