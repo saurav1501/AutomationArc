@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GlobalVariableEntities>
    <description></description>
-   <name>DEV-US</name>
+   <name>DEV-IND</name>
    <tag></tag>
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
@@ -10,8 +10,8 @@
       <name>url</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description>Gold membership user</description>
-      <initValue>'devusgbcarc@gmail.com'</initValue>
+      <description></description>
+      <initValue>'test-05@gmail.com'</initValue>
       <name>userName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -26,12 +26,12 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'ARCDataTemplete/QasArcTest.xlsx'</initValue>
+      <initValue>'ARCDataTemplete/ArcTest.xlsx'</initValue>
       <name>env</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description>Adding US projects</description>
-      <initValue>'USBuildingProject'</initValue>
+      <description>Adding India projects</description>
+      <initValue>'BuildingIndiaProject'</initValue>
       <name>BuildingSheet</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -70,24 +70,19 @@
       <name>rowNumSix</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description></description>
-      <initValue>'USCityProject'</initValue>
+      <description>Adding new  india city projects </description>
+      <initValue>'CityIndiaProject'</initValue>
       <name>CitySheet</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description></description>
-      <initValue>'USCommunityProject'</initValue>
+      <description>Adding new Inida community projects </description>
+      <initValue>'CommunityIndiaProject'</initValue>
       <name>CommunitySheet</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'CDataInput'</initValue>
       <name>CDataInput</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'PortfolioDev'</initValue>
-      <name>PortfoliosSheet</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
@@ -101,22 +96,22 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
+      <initValue>'Portfolio'</initValue>
+      <name>PortfoliosSheet</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
       <initValue>'BDataInput'</initValue>
       <name>BDataInput</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description>Team Member DEV</description>
-      <initValue>'dev-01@gmail.com'</initValue>
-      <name>TeamMember</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://dev.app.arconline.io/admin'</initValue>
+      <initValue>'stg.app.arconline.io/admin'</initValue>
       <name>adminUrl</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'devgbciadmin@usgbc.org'</initValue>
+      <initValue>'stggbciadmin@gbci.com'</initValue>
       <name>adminUserName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -125,34 +120,9 @@
       <name>adminPassword</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description>Certified project</description>
-      <initValue>21</initValue>
-      <name>rowNumTwentyOne</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description>Certified Transit Abovegroun Project</description>
-      <initValue>22</initValue>
-      <name>rowNumTwentyTwo</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
       <description></description>
-      <initValue>'notCertified'</initValue>
-      <name>notCertified</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description>New Added Project</description>
-      <initValue>23</initValue>
-      <name>rowNumTwentyThree</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description>old score version of Buiding</description>
       <initValue>9</initValue>
       <name>rowNumNine</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'Dev User'</initValue>
-      <name>teamMemName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
@@ -171,18 +141,8 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'initpass'</initValue>
-      <name>TeamMemberPassword</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
       <initValue>'Waste'</initValue>
       <name>TemplateWasteData</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description>old score version of Transit</description>
-      <initValue>10</initValue>
-      <name>rowNumTen</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
@@ -191,28 +151,13 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'HumanExp'</initValue>
-      <name>TemplateHE</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description>payment via credit card</description>
-      <initValue>'creditCard'</initValue>
-      <name>cardPayment</name>
+      <initValue>'Result'</initValue>
+      <name>Result</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'check'</initValue>
-      <name>checkPayment</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'https://dev.app.arconline.io/login'</initValue>
-      <name>appUrl</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description>Pricing sheet </description>
-      <initValue>'Pricing'</initValue>
-      <name>pricingSheet</name>
+      <initValue>10</initValue>
+      <name>rowNumTen</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
@@ -221,13 +166,43 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
+      <initValue>'initpass'</initValue>
+      <name>TeamMemberPassword</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
       <initValue>'creditCard'</initValue>
       <name>creditCard</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://leedonline-dev.usgbc.org/'</initValue>
+      <initValue>'check'</initValue>
+      <name>checkPayment</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Pricing'</initValue>
+      <name>pricingSheet</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://leedonline-stg.usgbc.org/'</initValue>
       <name>LEEDURL</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'0010544805'</initValue>
+      <name>UserId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'stgr mishra'</initValue>
+      <name>teamMemberName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'stg-02@gmail.com'</initValue>
+      <name>TeamMember2</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
@@ -236,27 +211,17 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'devusgbcarc@gmail.com'</initValue>
+      <initValue>'saurav@groupten.com'</initValue>
       <name>projectTeamAdminAndArcAdminEmail</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>''</initValue>
-      <name>UserId</name>
+      <initValue>'LEEDData'</initValue>
+      <name>LEEDData</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'dev-02@gmail.com'</initValue>
-      <name>TeamMember2</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'Result'</initValue>
-      <name>Result</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'dev'</initValue>
-      <name>environment</name>
+      <initValue>'https://dev.app.arconline.io/login'</initValue>
+      <name>appUrl</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

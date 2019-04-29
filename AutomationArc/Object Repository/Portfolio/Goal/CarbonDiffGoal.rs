@@ -4,7 +4,17 @@
    <name>CarbonDiffGoal</name>
    <tag></tag>
    <elementGuidId>da25633a-44ee-44e9-a96c-acf7af63c43b</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>id(&quot;content&quot;)/section[@class=&quot;widget performance-report-padding ng-scope&quot;]/div[@class=&quot;row m0 p30&quot;]/div[@class=&quot;col-sm-12&quot;]/div[@class=&quot;row mt50 pl30&quot;]/div[@class=&quot;row pull-left align-center w100p&quot;]/div[@class=&quot;col-md-6&quot;]/div[@class=&quot;col-md-6&quot;]/table[@class=&quot;table b_lgrey&quot;]/tbody[1]/tr[1]/td[@class=&quot;fs18 bc_lgr fw-semi-bold ng-binding&quot;]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@id=&quot;content&quot;]/section/div[6]/div/div[1]/div[2]/div[2]/div[2]/table/tbody/tr/td</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

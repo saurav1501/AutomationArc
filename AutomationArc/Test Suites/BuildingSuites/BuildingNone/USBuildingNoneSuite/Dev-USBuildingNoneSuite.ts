@@ -43,421 +43,421 @@
    <testCaseLink>
       <guid>4cd8c9a8-9218-475d-b8d0-d67be647469d</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/PaymentByCheckTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>1554fca6-c969-471c-8a36-e0e0ad0cb3e4</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/PaymentByCreditCardTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>b579a9ec-ffce-4449-b0f8-b3e97cc43ef0</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/SearchProgramTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>1f2e9b06-c0a5-4b33-b420-a89e5280fd3f</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/Next/DataInputNavigationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>5317b7d9-c886-4b0b-b3b1-3296865bb6e9</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ProjectDetailsVerificationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>ae97b5cb-4955-4800-a69e-ad1b08467126</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/VerifyMessageUpdateOccupancyAndOprHrsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>92042244-785b-4075-b662-c787f51291b5</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/UploadArcDataTemplateTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>dd02c210-aca9-43b9-a3e1-8f2038b5aa9d</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/SubmitSurveyTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>779327bb-bb7e-479e-84d5-9ec0dfc18891</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/PercentageSurveyResponseRateCalculationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>dbd19a24-bf25-4714-ba00-f95189339d14</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/AdminToolScoreRecomputeTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>2bf47c72-8c30-417b-93d4-b6fce494475c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/SearchProgramRefreshToRecomputeAanlyticsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>6638b92d-fa96-4548-90ad-477c92184188</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/TotalAnalyticsEnergyAnalyticsHighLowAvgScoreTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>6a56f18d-8723-478e-a772-ec8f40f96abd</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/AnnualCarbonEmissions (MTCO2e)PersqftTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>e08661b1-88bd-4ef0-899a-dea3bb3fd580</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/AnnualCarbonEmissions(MTCO2e)PerOccupancyTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>537a2ece-f195-499a-a146-e21effad6eb4</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/AnnualCarbonEmissions(MTCO2e)ProjectTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>70dc7c4a-eb5b-45c7-96c6-fcf8eb1fbc60</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/AnnualWaterConsumption(gal)PerOccupancyTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>7059771c-f4c7-436f-b574-0b97eb77c35c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/AnnualWaterConsumption(gal)PerSqftTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>56829e8d-cb1e-43d1-ad60-edb9f6bdb5f7</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/AnnualWaterConsumption(gal)ProjectTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>02cc47a8-c62a-4c9a-8883-a50c16034697</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/AverageDailyWasteDiverted(lbs)PerOccupancyTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>eee00a77-d231-40a8-b7cb-0da7543c531c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/AverageDailyWasteDiverted(lbs)PerSqftTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>edc14031-5985-4978-95c4-ab56d6e32673</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/AverageDailyWasteDiverted(lbs)ProjectTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>8ac2f555-b18b-478a-8f00-3e351a364390</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/AverageDailyWasteGenerated (lbs)ProjectTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>75228884-5522-45a3-ad8c-09ad29bb26ff</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/AverageDailyWasteGenerated(lbs)PerSqftTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>e27b5ac4-b2a5-40f2-b1a3-4ba7b8a17d1f</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/AverageDailyWasteGenerated(lbs)PerOccupancyTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>75b191cc-1c10-4496-9117-ae78da58def4</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/CarbonTotalAnnualCarbonEmissionsMTCO2eCalTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>dfa76c87-e4f6-48fc-a106-274eae2167e2</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/CarbonTotalCarbonAnalyticsCalculationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>bdb6c2d2-ed76-4ac7-ad52-bc4cbfd9ce6e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/CarbonTotalDailyCarbonEmissionsMTCO2eCalTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>cb959355-a6ed-401d-9d50-3350758b36c3</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/CarbonTransportationAnnualCarbonEmissionsMTCO2ECalTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d77f8fdf-24a3-4ea8-a07f-4b38b474e374</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/CarbonTransportationDailyCarbonEmissionsMTCO2ECalTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>57f3b288-ce55-4ad0-8ba9-58f98954f914</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/DailyCarbonEmissions(MTCO2e)ProjectSqftOccupancyTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>8e75c92e-ab64-4f58-8160-03a8cd075819</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/DailyWaterConsumption(gal)PerOccupancyTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>92bc541c-cad0-4937-ba7f-80dc5e36ae15</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/DailyWaterConsumption(gal)PerSqftTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>949460c6-7d9a-499f-b2c8-02bb4359cf87</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/DailyWaterConsumption(gal)ProjectTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d7d38433-b1ae-4fc5-8fc8-bde7af0d413a</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/DailyWaterConsumptionCalFromAnnualWaterConsumptionTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>5e9382fa-9ebb-46c0-9987-060746af5f1f</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/HumExpAverageOccupantSatisfactionTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>504302ac-2c02-4350-abbb-d355e9673844</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/HumExpInteriorCarbonDioxideLevels(ppm)Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>98cd9c15-b466-470f-af6c-e0321a869441</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/HumExpInteriorTotalVolatileOrganicCompoundlevels(ugAndm3)Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>3d6b42e8-a497-4823-9780-a29e3ae692cb</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/MonthlyWaterConsumption(gal)PerOccupancyTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>0cfdef47-59b5-492f-ae6b-87b67f6108f2</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/MonthlyWaterConsumption(gal)PerSqftTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>e70d7224-c18a-4871-b593-2526fad58a3f</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/MonthlyWaterConsumption(gal)ProjectTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>76d810e9-f58a-413f-91f4-8b3142ca6754</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/TotalAnalyticsHuman ExpAnalyticsHighLowAvgScoreTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d1a9beb8-7e03-4f05-a16f-596a85704730</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/TotalAnalyticsHumanExpScoreLocalAvgGlobalAvgTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>30aa4d58-3d82-40a6-bdc7-93a031be6ba6</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/TotalAnalyticsTransportationAnalyticsHighLowAvgScoreTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>345cf7f3-b025-420a-a063-aa7e6c416351</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/TotalAnalyticsTransportationScoreLocalAvgGlobalAvgTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>770d88c0-07cb-412d-b821-02699c64f637</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/TotalAnalyticsWasteAnalyticsHighLowAvgScoreTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>da331fd5-da06-4f19-9ebf-f2e2358948b4</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/TotalAnalyticsWasteScoreLocalAvgGlobalAvgTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>3822b5ce-3c25-46c5-9272-95f2723e8f1b</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/TotalAnalyticsWaterAnalyticsHighLowAvgScoreTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>8e5323c1-0a90-4c5e-a9fc-025e7cb1a3e3</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/TotalAnalyticsWaterScoreLocalAvgGlobalAvgTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>a87f5452-6ed0-47fb-96d2-7ee23b6234e2</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/TotalAnalyticTranHumDataInputSurveyResRateTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>603f6668-e97e-4bae-9f7e-dc98ba338335</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/TransportationAnnualCarbonEmissions(lbs)ProjectTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>0ac42215-3ff1-49fe-97e3-bfd1f07ae38c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/TransportationAnnualCarbonEmissionsOccupancyTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>47d748b3-50a2-4f93-a8c1-2480ed285023</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/TransportationDailyCarbonEmissions(lbs)PerOccupancyTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>09ad06ba-222b-4086-b571-7ee10cfab38d</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/TransportationDailyCarbonEmissions(lbs)ProjectTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>9cb8d039-1961-439e-851a-73f8712353b1</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/DownloadAndVerifyExportedDataTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>ca4f5b3d-3a1f-4a51-a86f-b2431c992ed9</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/WaterMunicipalitySuppliedReclaimedScoreShouldNotRecomputeTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>49cb35a0-adfc-4c8b-91b8-7b85d85eeaa2</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/WaterReclaimedOnsiteScoreShouldNotRecomputeTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>7cddec34-66c1-4891-b7ad-f3e373ab1826</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/WaterReclaimedOnsiteToPortWaterScoreShouldRecomputeTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>2d5a7a3e-391f-4593-891f-94aac6ad2417</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Notification/Not/CarbonDioxideNotificationNotDisplayTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>091ebea7-7e07-4b1e-86b7-4dbc465ed9b1</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Notification/Not/EnergyNotificationNotDisplayTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>5deb61ee-21e0-4ad2-9ec0-8d7c771281af</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Notification/Not/OccupantSatisfactionSurveyNotificationNotDisplayTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>6bf5d680-e819-416e-83c1-768aee9151d5</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Notification/Not/TransportationSurveyNotificationNotDisplayTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>f8b75bbb-bd3c-49c5-9bec-ed212b2093e6</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Notification/Not/TVOCDNotificationNotDisplayTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>b118b959-9664-48f0-8c72-2345e289d5cb</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Notification/Not/WasteNotificationNotDisplayTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>8f7d31b3-d8e5-4eec-93a4-5e01a22d6cdd</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Notification/Not/WaterNotificationNotDisplayTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>9fc39838-ba4a-42f7-a698-bf544917fab4</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Notification/BuildingCarbonDioxideNotificationDeleteReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d8ce2238-09d6-4248-ac7a-bd2a779049e8</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Notification/BuildingTVOCDeleteReadingNotificationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>533570e4-2e92-451d-aec7-542268fc6461</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/CheckChangeCreditNavigatesToSelectionPageTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>a89ccef6-c1c9-480a-9bca-7579dec8857c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ValidateCreditCardsSubmitReviewPaymentTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>6a69e25e-51ca-4c9d-b41e-288cc1853dfc</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/CertiVerifyCertificationDetailsForNotCertfiedProjectsTest.java</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>a6bc9c54-6959-4f5d-87b0-201a5fe93d61</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ReportingPeriodSelectionTest</testCaseId>
    </testCaseLink>
    <testCaseLink>

@@ -50,12 +50,16 @@ public class MasterTestListener extends BaseClass {
 	public void beforeTestSuiteListener(TestSuiteContext testSuite)
 	{
 		
+<<<<<<< HEAD
 		/*println TestCount= data.getCellIntData(GlobalVariable.Result, "Total", GlobalVariable.rowNumTwo)
+=======
+	/*	println TestCount= data.getCellIntData(GlobalVariable.Result, "Total", GlobalVariable.rowNumTwo)
+>>>>>>> 925f0fdaf61100f6c56aa138fe2106557dbc6e85
 		println TestCasePass= data.getCellIntData(GlobalVariable.Result, "Passed", GlobalVariable.rowNumTwo)
 		println TestCaseFail= data.getCellIntData(GlobalVariable.Result, "Failed", GlobalVariable.rowNumTwo)*/
 
 		
-		println "This is before Test Suit"
+	/*	println "This is before Test Suit"
 		println("Before Test Suite Listener : " + testSuite.getTestSuiteId())
 		KeywordUtil.markWarning("Before Test Suite Listener : " + testSuite.getTestSuiteId())
 		KeywordLogger log = new KeywordLogger()
@@ -64,12 +68,12 @@ public class MasterTestListener extends BaseClass {
 		println count
 		println testSuiteId[count-1] 
 		Country= testSuiteId[count-1].substring(0,2)
-		println Country
+		println Country*/
 		//WebUI.openBrowser('')
 		
-		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariable'()
+		//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariable'()
 
-		//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariableAppUrl'()
+		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariableAppUrl'()
 
 	}
 	
