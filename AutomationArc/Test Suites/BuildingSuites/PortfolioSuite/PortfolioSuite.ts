@@ -389,6 +389,12 @@
       <testCaseId>Test Cases/Buildings/MyPortfolios/AnalyticHumanExperienceTop5ProjHighScoreTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>4c71aa39-0efa-4ab5-a42e-d0ce2ad2187f</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyPortfolios/HistoryAddedProjectDetailsTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>6cb0a38b-cf8c-426e-86ba-b6f199159736</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -441,11 +447,5 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyPortfolios/ManagePorjectNavigationScorePageTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>4c71aa39-0efa-4ab5-a42e-d0ce2ad2187f</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyPortfolios/HistoryAddedProjectDetailsTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

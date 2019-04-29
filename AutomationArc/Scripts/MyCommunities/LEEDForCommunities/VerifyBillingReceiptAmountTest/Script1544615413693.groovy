@@ -16,8 +16,16 @@ import internal.GlobalVariable as GlobalVariable
 
 try{
 	
+	if(GlobalVariable.environment=='dev')
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.verifyBillingReceiptAmountDetailDev'(GlobalVariable.CommunitySheet, GlobalVariable.rowNumTwo)
+ 	else
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.verifyBillingReceiptAmountDetail'(GlobalVariable.CommunitySheet, GlobalVariable.rowNumTwo)
  
+	
+	
+		
+	
+	
 	} catch (Throwable t) {
 	 System.out.println(t.getLocalizedMessage())
 	 Error e1 = new Error(t.getMessage())

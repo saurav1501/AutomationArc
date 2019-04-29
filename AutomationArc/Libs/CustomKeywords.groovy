@@ -792,6 +792,14 @@ def static "com.arc.ReusableMethods.ResuableMethodsLEEDOnline.billingDetails"(
          , 	rowNum)
 }
 
+def static "com.arc.ReusableMethods.ResuableMethodsLEEDOnline.billingDetailsDev"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ResuableMethodsLEEDOnline()).billingDetailsDev(
+        	sheetName
+         , 	rowNum)
+}
+
 def static "com.arc.ReusableMethods.ResuableMethodsLEEDOnline.navigateToCreditsSection"() {
     (new com.arc.ReusableMethods.ResuableMethodsLEEDOnline()).navigateToCreditsSection()
 }
@@ -1148,6 +1156,28 @@ def static "com.arc.ReusableMethods.ReusableMethodSendEmailReport.sendEmailRepor
     (new com.arc.ReusableMethods.ReusableMethodSendEmailReport()).sendEmailReport()
 }
 
+def static "com.helper.grid.GridHelper.GetValueFromGrid"(
+    	TestObject baseTestObject	
+     , 	int rowIndex	
+     , 	int colIndex	) {
+    (new com.helper.grid.GridHelper()).GetValueFromGrid(
+        	baseTestObject
+         , 	rowIndex
+         , 	colIndex)
+}
+
+def static "com.helper.grid.GridHelper.getValueOrClickOnColumn"(
+    	TestObject baseTestObject	
+     , 	int rowIndex	
+     , 	int colIndex	
+     , 	String type	) {
+    (new com.helper.grid.GridHelper()).getValueOrClickOnColumn(
+        	baseTestObject
+         , 	rowIndex
+         , 	colIndex
+         , 	type)
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsSchools.addNewSchoolProjectRegistration"(
     	String sheetName	
      , 	int rowNum	) {
@@ -1170,6 +1200,14 @@ def static "com.arc.ReusableMethods.ReusableMethodsSchools.billingStatus"(
     	String sheetName	
      , 	int rowNum	) {
     (new com.arc.ReusableMethods.ReusableMethodsSchools()).billingStatus(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsSchools.billingStatusDev"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsSchools()).billingStatusDev(
         	sheetName
          , 	rowNum)
 }
@@ -1290,28 +1328,6 @@ def static "com.arc.ReusableMethods.ReusableMethodsSchools.verifyFormaldehydeTot
 
 def static "com.arc.ReusableMethods.ReusableMethodsSchools.navigateToBuildingSchools"() {
     (new com.arc.ReusableMethods.ReusableMethodsSchools()).navigateToBuildingSchools()
-}
-
-def static "com.helper.grid.GridHelper.GetValueFromGrid"(
-    	TestObject baseTestObject	
-     , 	int rowIndex	
-     , 	int colIndex	) {
-    (new com.helper.grid.GridHelper()).GetValueFromGrid(
-        	baseTestObject
-         , 	rowIndex
-         , 	colIndex)
-}
-
-def static "com.helper.grid.GridHelper.getValueOrClickOnColumn"(
-    	TestObject baseTestObject	
-     , 	int rowIndex	
-     , 	int colIndex	
-     , 	String type	) {
-    (new com.helper.grid.GridHelper()).getValueOrClickOnColumn(
-        	baseTestObject
-         , 	rowIndex
-         , 	colIndex
-         , 	type)
 }
 
 def static "com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToBuilding"() {
@@ -3864,6 +3880,14 @@ def static "com.arc.ReusableMethods.ReusableMethodsManage.verifyBillingReceiptAm
     	String sheetName	
      , 	int rowNum	) {
     (new com.arc.ReusableMethods.ReusableMethodsManage()).verifyBillingReceiptAmountDetail(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsManage.verifyBillingReceiptAmountDetailDev"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsManage()).verifyBillingReceiptAmountDetailDev(
         	sheetName
          , 	rowNum)
 }

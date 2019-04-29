@@ -529,6 +529,30 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 
 	}
 
+	@Keyword
+	public void billingDetailsDev(String sheetName, int rowNum){
+		WebUI.delay(2)
+		String regdAmt = data.getCellData(sheetName, "RegAmount", rowNum)
+		String registrationDate = data.getCellData(sheetName, "RegDate", rowNum)
+
+		WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
+		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
+
+		//Registration Payment details verification
+
+		WebUI.delay(5)
+		String regOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationOrderId'))
+		data.setCellData(sheetName, "OrderId", rowNum,regOrderId)
+		String regDate= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/registrationPaymentDate'))
+		String regOrderType= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/span_REGISTRATION'))
+		//String regAmount= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationAmount'))
+		String regStatus= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationPaymentStatus'))
+		WebUI.verifyMatch(regDate,registrationDate, false,FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.verifyMatch(regAmount, regdAmt,false,FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(regOrderType,'REGISTRATION',false,FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(regStatus,'Completed',false,FailureHandling.CONTINUE_ON_FAILURE)
+
+	}
 
 
 	//Data input validation for the data populated via ARC

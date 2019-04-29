@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>AOccupanit</name>
+   <name>FTopSocre3</name>
    <tag></tag>
-   <elementGuidId>f390cc27-1ad6-4cf6-a377-5b4807348d33</elementGuidId>
+   <elementGuidId>4d07fc3e-79bf-42f6-9d4f-19d29f457386</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;content&quot;]/div/div[1]/section/div[3]/table/tbody/tr[2]/td[3]</value>
+         <value>//*[@id=&quot;content&quot;]/section/div[4]/div[3]/table/tbody/tr[4]/td[5]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -31,13 +31,13 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>1</value>
+      <value>8</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;content&quot;)/div[@class=&quot;row bg-white ng-scope&quot;]/div[@class=&quot;col-sm-12&quot;]/section[@class=&quot;widget performance_section&quot;]/div[@class=&quot;w100p&quot;]/div[@class=&quot;pull-right col-md-6&quot;]/table[@class=&quot;table analytics_table&quot;]/tbody[1]/tr[@class=&quot;b_lgrey align-center fw-semi-bold&quot;]/td[@class=&quot;b_lgrey ng-binding&quot;]</value>
+      <value>id(&quot;content&quot;)/section[@class=&quot;widget performance-report-padding ng-scope&quot;]/div[@class=&quot;row m0 mt40&quot;]/table[@class=&quot;table avg_analytics_table fontSize10 mt20&quot;]/tbody[1]/tr[@class=&quot;ng-scope&quot;]/td[@class=&quot;b_lgrey ng-binding&quot;]</value>
    </webElementProperties>
 </WebElementEntity>
