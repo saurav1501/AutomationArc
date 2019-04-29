@@ -219,4 +219,9 @@
       <initValue>'LEEDData'</initValue>
       <name>LEEDData</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://stg.app.arconline.io'</initValue>
+      <name>appUrl</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
