@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//*[@class = 'fs18 bc_lgr fw-semi-bold ng-binding'])[2]</value>
+         <value>//*[@id=&quot;content&quot;]/section/div[6]/div/div[2]/div[2]/div[2]/div[2]/table/tbody/tr/td</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

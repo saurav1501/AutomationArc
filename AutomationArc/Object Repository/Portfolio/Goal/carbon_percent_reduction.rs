@@ -4,6 +4,16 @@
    <name>carbon_percent_reduction</name>
    <tag></tag>
    <elementGuidId>b7bb0c65-0e01-444a-a764-2d4d779fdd41</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//input[@ng-model = 'carbon_percent_reduction' and @ng-blur = concat('saveGoals(this, ' , &quot;'&quot; , 'carbon' , &quot;'&quot; , ', carbon_percent_reduction, ' , &quot;'&quot; , 'target_change' , &quot;'&quot; , ')')]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>

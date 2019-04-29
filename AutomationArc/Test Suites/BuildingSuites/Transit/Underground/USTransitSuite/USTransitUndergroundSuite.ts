@@ -13,7 +13,7 @@
    <testCaseLink>
       <guid>7632db0b-d637-452a-a94e-e46cd99ddd02</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/AddNewProjectTest</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
@@ -37,7 +37,7 @@
    <testCaseLink>
       <guid>cf41f40c-2bfe-47b6-aaeb-2c5f13f58a5f</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/PaymentByCheck</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -205,7 +205,7 @@
    <testCaseLink>
       <guid>69b3dcae-a1e0-435d-8e27-daad0499b184</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/SubmitSurveyTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -229,7 +229,7 @@
    <testCaseLink>
       <guid>1c70ce6d-3a49-4ccc-ab7c-c8d28c4da8ca</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/PayNowRegistrationPaymentUSTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -295,7 +295,7 @@
    <testCaseLink>
       <guid>51703b3e-1ea9-4d02-a3f0-48d629ba6192</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/PayNowSubmitReviewPaymentUSTest</testCaseId>
    </testCaseLink>
    <testCaseLink>

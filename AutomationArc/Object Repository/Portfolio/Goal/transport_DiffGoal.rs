@@ -6,11 +6,16 @@
    <elementGuidId>9fdcbfed-c518-4c95-96fe-915e4657d013</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>BASIC</key>
+         <value>//*[@class = 'fs18 b_lgrey fw-semi-bold ng-binding']</value>
+      </entry>
+      <entry>
          <key>XPATH</key>
-         <value>(//*[@class = 'fs18 b_lgrey fw-semi-bold ng-binding'])[6]</value>
+         <value>//*[@id=&quot;content&quot;]/section/div[6]/div/div[5]/div[2]/div[2]/div[2]/table/tbody/tr/td
+</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

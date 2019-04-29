@@ -132,7 +132,7 @@ public class ReusableMethodsLogin extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/input_Forgot Password_field_po'))
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/button_Log in'))
-		
+
 		//WebUI.waitForPageLoad(10)
 		//WebUI.delay(10)
 		waitForPageLoad(60)
