@@ -20,10 +20,10 @@ public class ReusableMethodSendEmailReport extends BaseClass {
 		//def execution
 		//Date d1 = format.parse(duration)
 		/*use(groovy.time.TimeCategory) {
-			println duration
-			//print "Days: ${duration.days}, Hours: ${duration.hours}"
-			execution= "Hours: ${duration.hours }, Minutes: ${duration.minutes}, Seconds: ${duration.seconds}"
-		}*/
+		 println duration
+		 //print "Days: ${duration.days}, Hours: ${duration.hours}"
+		 execution= "Hours: ${duration.hours }, Minutes: ${duration.minutes}, Seconds: ${duration.seconds}"
+		 }*/
 		SendEmail.sendStatusReport(totalTest, totalPass, totalFail)
 	}
 }
