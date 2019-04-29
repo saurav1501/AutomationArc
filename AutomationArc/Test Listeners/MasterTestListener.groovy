@@ -89,9 +89,9 @@ public class MasterTestListener extends BaseClass {
 		println RunConfiguration.getProjectDir()
 		println RunConfiguration.getAppVersion()
 		
-		if((DriverFactory.getWebDriver().getCurrentUrl()).equalsIgnoreCase(GlobalVariable.url)){
+		/*if((DriverFactory.getWebDriver().getCurrentUrl()).equalsIgnoreCase(GlobalVariable.url)){
 			CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariable'()
-		}
+		}*/
 		
 		println "Hey"
 		println testCase.getTestCaseId()
