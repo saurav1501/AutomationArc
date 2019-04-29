@@ -49,12 +49,8 @@ public class MasterTestListener extends BaseClass {
 	@BeforeTestSuite
 	public void beforeTestSuiteListener(TestSuiteContext testSuite)
 	{
-		
-<<<<<<< HEAD
+
 		/*println TestCount= data.getCellIntData(GlobalVariable.Result, "Total", GlobalVariable.rowNumTwo)
-=======
-	/*	println TestCount= data.getCellIntData(GlobalVariable.Result, "Total", GlobalVariable.rowNumTwo)
->>>>>>> 925f0fdaf61100f6c56aa138fe2106557dbc6e85
 		println TestCasePass= data.getCellIntData(GlobalVariable.Result, "Passed", GlobalVariable.rowNumTwo)
 		println TestCaseFail= data.getCellIntData(GlobalVariable.Result, "Failed", GlobalVariable.rowNumTwo)*/
 
@@ -71,9 +67,9 @@ public class MasterTestListener extends BaseClass {
 		println Country*/
 		//WebUI.openBrowser('')
 		
-		//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariable'()
+		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariable'()
 
-		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariableAppUrl'()
+		//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariableAppUrl'()
 
 	}
 	
