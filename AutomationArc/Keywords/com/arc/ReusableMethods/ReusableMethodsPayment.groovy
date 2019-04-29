@@ -117,7 +117,7 @@ public class ReusableMethodsPayment extends BaseClass{
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/ownerCountry'), ownerCountry, false)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/ratingSystem'), prjRating , false)
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/saveButtonProjectDetails'))
-		WebUI.delay(10)
+		WebUI.delay(30)
 
 		//************* Select the yearly subscription *****************//
 		if(yearOfSubscription==1)
@@ -372,8 +372,8 @@ public class ReusableMethodsPayment extends BaseClass{
 			WebUI.click(findTestObject('Object Repository/paymentPageNewUI/paymentPagePayByCheckOption'))
 			WebUI.click(findTestObject('Object Repository/paymentPageNewUI/submitPayment'))
 		}
-		WebUI.delay(20)
-		WebUI.waitForElementVisible(findTestObject('PaymenntLocator/NextButton'), 40)
+		WebUI.delay(30)
+		WebUI.waitForElementVisible(findTestObject('PaymenntLocator/NextButton'), 70)
 		WebUI.click(findTestObject('PaymenntLocator/NextButton'))
 		WebUI.delay(5)
 	}
