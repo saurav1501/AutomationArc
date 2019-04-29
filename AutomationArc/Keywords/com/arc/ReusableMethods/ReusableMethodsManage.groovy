@@ -2218,7 +2218,49 @@ public class ReusableMethodsManage extends BaseClass {
 
 	}
 
+	@Keyword
+	public void verifyBillingReceiptAmountDetailDev(String sheetName, int rowNum){
+		String orderId= data.getCellData(sheetName, "OrderId", rowNum)
+		String regAmt= data.getCellData(sheetName, "RegAmountReceipt", rowNum)
+		String listPrice= data.getCellData(sheetName, "ListPrice", rowNum)
+		String shipping= data.getCellData(sheetName, "Shipping", rowNum)
+		String salesTax= data.getCellData(sheetName, "SalesTax", rowNum)
+		String itemDesc= data.getCellData(sheetName, "ItemDesc1", rowNum)
+		String itemDisc= data.getCellData(sheetName, "ItemDisc1", rowNum)
+		String ratingSystem = data.getCellData(sheetName, "RatingSystem", rowNum)
+		String pdflinks= pdfReader(downloadPath+orderId+".pdf")
+		print pdflinks
+		KeywordUtil.markWarning('Billing Receipt is : '+pdflinks)
+		int arr= pdflinks.indexOf(itemDesc)
+		String itemDescription
+		println arr
+		String subString= pdflinks.substring(arr, pdflinks.indexOf("Total Paid")+25)
+		//print arr
+		//println subString
+		def result = []
+		def userName= []
+		def userEmail=[]
+		result = subString.split("\\r?\\n")
+		//println result[0].trim()
+		//println result[1].trim()
+		//println result[2].trim()
+		//println result[3].trim()
+		if(ratingSystem.equalsIgnoreCase("Parksmart")){
+			itemDescription= itemDesc+" 1  "+ regAmt +"     ("+itemDisc+")  "+ regAmt
+		}
+		else{
+			itemDescription= itemDesc+" 1.000  "+ listPrice +"     ("+itemDisc+")  "+ regAmt
+		}
 
+		String shippingHandling= "Shipping/Handling  "+ shipping
+		String saleTax="Sales Tax   "+salesTax
+		String totalPaid="Total Paid   "+regAmt
+		WebUI.verifyMatch(itemDescription, result[0].trim() , false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(shippingHandling, result[1].trim(), false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(saleTax, result[2].trim(), false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(totalPaid, result[3].trim(), false, FailureHandling.CONTINUE_ON_FAILURE)
+
+	}
 
 	@Keyword
 	public void ReadAgreementPDF(String sheetName, int rowNum)

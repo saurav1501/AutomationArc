@@ -149,7 +149,29 @@ public class ReusableMethodsSchools extends BaseClass{
 		WebUI.verifyMatch(regStatus, "Completed", false, FailureHandling.CONTINUE_ON_FAILURE)
 	}
 
+	@Keyword
+	public void billingStatusDev(String sheetName, int rowNum){
+		WebUI.delay(2)
+	//	String regdAmt = data.getCellData(sheetName, "RegAmount", rowNum)
+	//	String reviewAmt = data.getCellData(sheetName, "ReviewAmount", rowNum)
+		String registrationDate = data.getCellData(sheetName, "RegDate", rowNum)
 
+		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
+		 WebUI.delay(1)
+		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))*/
+		WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
+		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
+		//Registration Payment details verification
+		WebUI.delay(5)
+		String regDate= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/registrationPaymentDate'))
+		WebUI.verifyMatch(regDate, registrationDate, false , FailureHandling.CONTINUE_ON_FAILURE)
+		String regOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationOrderId'))
+		data.setCellData(sheetName, "OrderId", rowNum,regOrderId)
+		String regOrderType= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/span_REGISTRATION'))
+		WebUI.verifyMatch(regOrderType, "REGISTRATION", false, FailureHandling.CONTINUE_ON_FAILURE)
+		String regStatus= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationPaymentStatus'))
+		WebUI.verifyMatch(regStatus, "Completed", false, FailureHandling.CONTINUE_ON_FAILURE)
+	}
 	//Upload Data Template Schools
 	@Keyword
 	public void uploadArcDataTemplateSchools(){

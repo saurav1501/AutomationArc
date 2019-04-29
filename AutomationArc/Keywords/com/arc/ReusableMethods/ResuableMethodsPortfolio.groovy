@@ -441,7 +441,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		 WebUI.delay(5)*/
 
 		String prjScore1   = data.getCellData(sheetName, "carbonEmission", 2)
-		String uiScore1 =  WebUI.getText(findTestObject('Portfolio/Common/FTopSocre1'))
+		String uiScore1 =  WebUI.getText(findTestObject('Portfolio/Common/Car/FTopSocre1'))
 		double dcprjScore1 = Double.parseDouble(uiScore1)
 		BigDecimal bcprjScore1 = new BigDecimal(dcprjScore1)
 		bcprjScore1 =  bcprjScore1 .setScale(1, RoundingMode.HALF_UP)
@@ -451,7 +451,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		println "Filter for First carbon top verified Successfully" +  prjScore1
 
 		String prjScore2   =data.getCellData(sheetName, "carbonEmission", 3)
-		String uiScore2 =  WebUI.getText(findTestObject('Portfolio/Common/FTopSocre2'))
+		String uiScore2 =  WebUI.getText(findTestObject('Portfolio/Common/Car/FTopSocre2'))
 		double dcprjScore2 = Double.parseDouble(uiScore2)
 		BigDecimal bcprjScore2 = new BigDecimal(dcprjScore2)
 		bcprjScore2 =  bcprjScore2.setScale(1, RoundingMode.HALF_UP)
@@ -461,7 +461,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		println "Filter for  2nd carbon top verified Successfully" +  prjScore2
 
 		String prjScore3   =data.getCellData(sheetName, "carbonEmission", 4)
-		String uiScore3 =  WebUI.getText(findTestObject('Portfolio/Common/FTopSocre3'))
+		String uiScore3 =  WebUI.getText(findTestObject('Portfolio/Common/Car/FTopSocre3'))
 		double dcprjScore3 = Double.parseDouble(uiScore3)
 		BigDecimal bcprjScore3 = new BigDecimal(dcprjScore3)
 		bcprjScore3 =  bcprjScore3.setScale(1, RoundingMode.HALF_UP)
@@ -470,7 +470,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		println "Filter for 3rd carbon top  verified Successfully" +  prjScore3
 
 		String prjScore4   =data.getCellData(sheetName, "carbonEmission", 5)
-		String uiScore4 =  WebUI.getText(findTestObject('Portfolio/Common/FTopSocre4'))
+		String uiScore4 =  WebUI.getText(findTestObject('Portfolio/Common/Car/FTopSocre4'))
 		double dcprjScore4 = Double.parseDouble(uiScore4)
 		BigDecimal bcprjScore4 = new BigDecimal(dcprjScore4)
 		bcprjScore4 =  bcprjScore4.setScale(1, RoundingMode.HALF_UP)
@@ -479,7 +479,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		println "Filter for carbon 4th  score verified Successfully" +  prjScore4
 
 		String prjScore5   =data.getCellData(sheetName, "carbonEmission", 6)
-		String uiScore5 =  WebUI.getText(findTestObject('Portfolio/Common/FTopSocre5'))
+		String uiScore5 =  WebUI.getText(findTestObject('Portfolio/Common/Car/FTopSocre5'))
 		double dcprjScore5 = Double.parseDouble(uiScore5)
 		BigDecimal bcprjScore5 = new BigDecimal(dcprjScore5)
 		bcprjScore5 =  bcprjScore5.setScale(1, RoundingMode.HALF_UP)

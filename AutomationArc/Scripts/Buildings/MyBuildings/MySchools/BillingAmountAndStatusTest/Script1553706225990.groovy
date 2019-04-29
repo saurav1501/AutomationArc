@@ -15,8 +15,18 @@ import internal.GlobalVariable as GlobalVariable
 
 try {
 	
+	
+	
+	if(GlobalVariable.environment=='dev')
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSchools.billingStatusDev'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumEleven)
+	 else
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSchools.billingStatus'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumEleven)
-} catch (Throwable t) {
+
+		
+	/*CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSchools.billingStatus'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumEleven)
+*/
+	
+	} catch (Throwable t) {
 	System.out.println(t.getLocalizedMessage())
 	Error e1 = new Error(t.getMessage())
 	e1.setStackTrace(t.getStackTrace())
