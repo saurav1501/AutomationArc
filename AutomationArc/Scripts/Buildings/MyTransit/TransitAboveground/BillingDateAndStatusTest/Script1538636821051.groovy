@@ -29,9 +29,13 @@ import internal.GlobalVariable as GlobalVariable
 
 try{
 
-//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumThree)
+	
+	if(GlobalVariable.environment=='dev')
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.devbillingStatusTransit'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumThree)
+	else
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.billingStatusTransit'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumThree)
 
-CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.billingStatusTransit'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumThree)
+
 
 } catch (Throwable t) {
 System.out.println(t.getLocalizedMessage())

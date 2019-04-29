@@ -1576,7 +1576,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		WebUI.verifyMatch(etransGlobal, ttransGlobal, false)
 		WebUI.verifyMatch(etransLocal, ttransLocal, false)
 	}
-	
+
 	@Keyword
 	public void ttlocalAvgGlobalAvg() {
 		/*	WebUI.delay(5)
@@ -1587,44 +1587,28 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Transportation'))
 		WebUI.delay(8)
 		WebUI.waitForElementVisible(findTestObject('Analytics/Cal/TransitComm'), 20)
-		
+
 		boolean transCommon = WebUI.getText(findTestObject('Analytics/Cal/TransitComm'))
 		println transCommon
 		boolean transGlobal = WebUI.getText(findTestObject('Analytics/TotalPage/TransGlobalAvg'))
 		println transGlobal
-		
-		
+
+
 		boolean transLocal = WebUI.verifyElementPresent(findTestObject('Analytics/TotalPage/TransLocalAvg'),3)
 
 
 		println transGlobal
 		println transLocal
-		
-		if (transGlobal && transLocal == ''){	
+
+		if (transGlobal && transLocal == ''){
 			transGlobal = transCommon
 			transLocal  = transCommon
 			String etransGlobal = "Global average: ".concat(transGlobal)
 			String etransLocal = "Local average: ".concat(transLocal)
-			
+
 			WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
 			WebUI.delay(3)
-	
-			String ttransGlobal = WebUI.getText(findTestObject('Analytics/TotalPage/TTransGlobalAvg'))
-			String ttransLocal = WebUI.getText(findTestObject('Analytics/TotalPage/TTransLocalAvg'))
-			println ttransGlobal
-			println ttransLocal
-			WebUI.verifyMatch(etransGlobal, ttransGlobal, false)
-			WebUI.verifyMatch(etransLocal, ttransLocal, false)
-			
-		}
-		else if(transGlobal == ''){
-			transGlobal = transCommon
-			String etransGlobal = "Global average: ".concat(transGlobal)
-			String etransLocal = "Local average: ".concat(transLocal)
-			
-			WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
-			WebUI.delay(3)
-	
+
 			String ttransGlobal = WebUI.getText(findTestObject('Analytics/TotalPage/TTransGlobalAvg'))
 			String ttransLocal = WebUI.getText(findTestObject('Analytics/TotalPage/TTransLocalAvg'))
 			println ttransGlobal
@@ -1632,12 +1616,26 @@ public class ReusableMethodsAnalytics extends BaseClass{
 			WebUI.verifyMatch(etransGlobal, ttransGlobal, false)
 			WebUI.verifyMatch(etransLocal, ttransLocal, false)
 
-			
 		}
-		else (transLocal == ''){
-			transLocal = transCommon
+		else if(transGlobal == ''){
+			transGlobal = transCommon
+			String etransGlobal = "Global average: ".concat(transGlobal)
+			String etransLocal = "Local average: ".concat(transLocal)
+
+			WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
+			WebUI.delay(3)
+
+			String ttransGlobal = WebUI.getText(findTestObject('Analytics/TotalPage/TTransGlobalAvg'))
+			String ttransLocal = WebUI.getText(findTestObject('Analytics/TotalPage/TTransLocalAvg'))
+			println ttransGlobal
+			println ttransLocal
+			WebUI.verifyMatch(etransGlobal, ttransGlobal, false)
+			WebUI.verifyMatch(etransLocal, ttransLocal, false)
+
+
 		}
-		
+		else (transLocal == ''){ transLocal = transCommon }
+
 		/*	WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ClickOnAnalytics'), 3)
 		 WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalytics'))
 		 */
@@ -2513,8 +2511,8 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		String UIdaily_carbon_Emissionin_Lbs =  UIdaily_carbon_Emissionin_lbs.replace(',', '')
 		BigDecimal Uidaily_carbon_Emissionin_Lbs = new BigDecimal(UIdaily_carbon_Emissionin_Lbs)
 		Uidaily_carbon_Emissionin_Lbs = Uidaily_carbon_Emissionin_Lbs.setScale(2,RoundingMode.HALF_UP)
-        String UiDaily_carbon_Emissionin_Lbs = Uidaily_carbon_Emissionin_Lbs.toString()
-		
+		String UiDaily_carbon_Emissionin_Lbs = Uidaily_carbon_Emissionin_Lbs.toString()
+
 		WebUI.verifyMatch(UiDaily_carbon_Emissionin_Lbs, daily_carbon_Emissionin_lbs, false)
 	}
 
@@ -2813,12 +2811,11 @@ public class ReusableMethodsAnalytics extends BaseClass{
 	@Keyword
 	public void avgoccupainttest(String sheetName ,int rowNum) {
 		String avghumExp = data.getCellData(sheetName, "HumAvgSatisfaction", rowNum)
-	/*	Double avghumexp= Double.parseDouble(avghumExp)
-
-		BigDecimal avghumexperiance = new BigDecimal(avghumexp)
-		avghumexperiance = avghumexperiance .setScale(4, RoundingMode.HALF_UP)
-		String cavghumexperiance = avghumexperiance.toString()
-*/
+		/*	Double avghumexp= Double.parseDouble(avghumExp)
+		 BigDecimal avghumexperiance = new BigDecimal(avghumexp)
+		 avghumexperiance = avghumexperiance .setScale(4, RoundingMode.HALF_UP)
+		 String cavghumexperiance = avghumexperiance.toString()
+		 */
 		/****************UI Verses Calculated Average occupant satisfaction *****************************/
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Analytics/Nav/AverageOccupaint')),'Very satisfied', false)
 	}
@@ -2834,7 +2831,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		/****************UI Verses Calculated Average occupant satisfaction *****************************/
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Analytics/Nav/AverageOccupaint')), cavghumexperiance, false)
 	}
-	
+
 	@Keyword
 	public void co2caltest(String sheetName ,int rowNum) {
 
