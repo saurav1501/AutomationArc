@@ -43,13 +43,13 @@
    <testCaseLink>
       <guid>a658b898-9dfc-4044-b67a-0cad4aeccf60</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/INDVerifyTaxZeroIfSezIsCheckedTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>192d3fe2-9bb4-451e-95eb-91f2b51bc465</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/INDSEZCheckBoxVisibilityAndClausePopUpTest</testCaseId>
    </testCaseLink>
    <testCaseLink>

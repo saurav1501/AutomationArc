@@ -24,7 +24,7 @@ import internal.GlobalVariable as GlobalVariable
 try{
 
 	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
-	
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.paymentPageBillingDetailsIndiaProject'(GlobalVariable.CCPayment , GlobalVariable.rowNumThree )
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.verifyRegistrationAmountWithTaxIndia'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
 
 } catch (Throwable t) {

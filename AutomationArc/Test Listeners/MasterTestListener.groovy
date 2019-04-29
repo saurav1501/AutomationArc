@@ -50,9 +50,9 @@ public class MasterTestListener extends BaseClass {
 	public void beforeTestSuiteListener(TestSuiteContext testSuite)
 	{
 		
-		println TestCount= data.getCellIntData(GlobalVariable.Result, "Total", GlobalVariable.rowNumTwo)
+		/*println TestCount= data.getCellIntData(GlobalVariable.Result, "Total", GlobalVariable.rowNumTwo)
 		println TestCasePass= data.getCellIntData(GlobalVariable.Result, "Passed", GlobalVariable.rowNumTwo)
-		println TestCaseFail= data.getCellIntData(GlobalVariable.Result, "Failed", GlobalVariable.rowNumTwo)
+		println TestCaseFail= data.getCellIntData(GlobalVariable.Result, "Failed", GlobalVariable.rowNumTwo)*/
 
 		
 		println "This is before Test Suit"
@@ -77,7 +77,17 @@ public class MasterTestListener extends BaseClass {
 	@BeforeTestCase
 	public void beforeTestListener(TestSuiteContext testSuite, TestCaseContext testCase)
 	{
-		
+		println "Test Description"
+		println RunConfiguration.getProjectDir()
+		println RunConfiguration.getExecutionProfile()
+		println RunConfiguration.getExecutionSource()
+		println RunConfiguration.getExecutionSourceDescription()
+		println RunConfiguration.getExecutionSourceName()
+		println RunConfiguration.getHostAddress()
+		println RunConfiguration.getHostName()
+		println RunConfiguration.getOS()
+		println RunConfiguration.getProjectDir()
+		println RunConfiguration.getAppVersion()
 		
 		if((DriverFactory.getWebDriver().getCurrentUrl()).equalsIgnoreCase(GlobalVariable.url)){
 			CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariable'()

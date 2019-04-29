@@ -295,6 +295,38 @@ public class ReusableMethodsPayment extends BaseClass{
 
 	}
 
+	
+	@Keyword
+	public void paymentPageBillingDetailsIndiaProject(String sheetName , int rowNum){
+		/********************Fetching the data via Excel Sheet ******************************/
+		String cardName   = data.getCellData(sheetName, "CardName", rowNum)
+		String cardNum    = data.getCellData(sheetName, "CardNumber", rowNum)
+		String cardDate   = data.getCellData(sheetName, "Date ", rowNum)
+		String cardCvv    = data.getCellData(sheetName, "CVV", rowNum)
+		String partyName  = data.getCellData(sheetName, "PartyName", rowNum)
+		String partyEmail = data.getCellData(sheetName, "PartyEmail", rowNum)
+		String address    = data.getCellData(sheetName, "Address", rowNum)
+		String city       = data.getCellData(sheetName, "City", rowNum)
+		String country    = data.getCellData(sheetName, "Country", rowNum)
+		String state      = data.getCellData(sheetName, "State", rowNum)
+		String zip        = data.getCellData(sheetName, "Zip", rowNum)
+		String phone      = data.getCellData(sheetName, "Mobile", rowNum)
+
+		WebUI.clearText(findTestObject('Object Repository/paymentPageNewUI/billingName'))
+		WebUI.setText(findTestObject('Object Repository/paymentPageNewUI/billingName'),partyName)
+		WebUI.clearText(findTestObject('Object Repository/paymentPageNewUI/billingEmail'))
+		WebUI.setText(findTestObject('Object Repository/paymentPageNewUI/billingEmail'), partyEmail)
+		WebUI.clearText(findTestObject('Object Repository/paymentPageNewUI/billingAddress'))
+		WebUI.setText(findTestObject('Object Repository/paymentPageNewUI/billingAddress'), address)
+		WebUI.clearText(findTestObject('Object Repository/paymentPageNewUI/billingCity'))
+		WebUI.setText(findTestObject('Object Repository/paymentPageNewUI/billingCity'), city)
+		WebUI.selectOptionByLabel(findTestObject('Object Repository/paymentPageNewUI/billingCountry'), country, false)
+		WebUI.selectOptionByLabel(findTestObject('Object Repository/paymentPageNewUI/billingState'), state , false)
+		WebUI.clearText(findTestObject('Object Repository/paymentPageNewUI/billingZip'))
+		WebUI.setText(findTestObject('Object Repository/paymentPageNewUI/billingZip'),zip )
+		
+	}	
+	
 
 	@Keyword
 	public void paymentRegistration(String sheetName , int rowNum, String paymentMode){
