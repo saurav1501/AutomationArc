@@ -3907,12 +3907,15 @@ public class ResuableMethodsPortfolio extends BaseClass {
 			System.out.println(ostr6)
 			double eodaily=Double.parseDouble(ostr6)/365
 			BigDecimal eoden = new BigDecimal(eodaily)
-			eoden = eoden.setScale(2, RoundingMode.HALF_UP)
+			eoden = eoden.setScale(1, RoundingMode.HALF_UP)
 			String waterOcc = eoden.toString()
 
 			String eodailyCarbon =WebUI.getText(findTestObject('Portfolio/Total/carbon/WODailycarbon'))
-			System.out.println(eoden)
-			WebUI.verifyMatch(eodailyCarbon, waterOcc, true, FailureHandling.CONTINUE_ON_FAILURE)
+			BigDecimal waterAnnualCarbon = new BigDecimal(eodailyCarbon)
+			waterAnnualCarbon = waterAnnualCarbon.setScale(1, RoundingMode.HALF_UP)
+			String waterdailyCarbon = waterAnnualCarbon.toString()
+
+			WebUI.verifyMatch(waterdailyCarbon, waterOcc, true, FailureHandling.CONTINUE_ON_FAILURE)
 			println "Verified Water PER OCC DAILY WATER CONSUMPTION Successfully"
 		}
 	}

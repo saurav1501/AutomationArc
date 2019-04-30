@@ -6,6 +6,10 @@
    <elementGuidId>06c61b9d-6d01-4c89-9ffc-bc680dfa8533</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>XPATH</key>
+         <value>//div[@id='meter_item']/div[2]/div[2]/form/div[3]/div/div/ul/li[16]/a</value>
+      </entry>
+      <entry>
          <key>BASIC</key>
          <value>//a[(text() = 'Municipality supplied reclaimed water
                                                             
@@ -13,12 +17,8 @@
                                                             
                                                         ') and @ref_element = 'Object Repository/DataInput/MeterWater/iframe_Error Sending Feedback_']</value>
       </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>//div[@id='meter_item']/div[2]/div[2]/form/div[3]/div/div/ul/li[7]/a</value>
-      </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

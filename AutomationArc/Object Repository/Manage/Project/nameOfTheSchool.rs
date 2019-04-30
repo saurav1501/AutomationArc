@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//*[@ng-if=&quot;projectInfo.AffiliatedHigherEduIns&quot;]/td[1]</value>
+         <value>//td[(text() = 'Name of the School' or . = 'Name of the School')]</value>
       </entry>
       <entry>
          <key>BASIC</key>

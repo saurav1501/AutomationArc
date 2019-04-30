@@ -4,7 +4,17 @@
    <name>input_email2</name>
    <tag></tag>
    <elementGuidId>15a18c4a-202f-4534-98f3-9e976c0e55cf</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@id=&quot;email&quot; and @ng-blur=&quot;validateEmailCheck()&quot; or  @name = 'email2']</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//input[@type = 'text' and @id = 'email2' and @name = 'email2']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//a[contains(text(),'Municipality supplied potable water')]</value>
+         <value>//div[@id='meter_item']/div[2]/div[2]/form/div[3]/div/div/ul/li[15]/a</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

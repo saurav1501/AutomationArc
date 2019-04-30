@@ -244,4 +244,9 @@
       <initValue>'Result'</initValue>
       <name>Result</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'qas'</initValue>
+      <name>environment</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

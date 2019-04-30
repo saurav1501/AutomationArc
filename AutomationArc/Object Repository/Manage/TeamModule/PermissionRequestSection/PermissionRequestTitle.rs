@@ -6,12 +6,11 @@
    <elementGuidId>80317082-465c-42de-be0b-b928b24c7bbe</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//span[(text() = 'Permission Requests' or . = 'Permission Requests')]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>(//*[@class=&quot;page-title ng-scope&quot;])[2]</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

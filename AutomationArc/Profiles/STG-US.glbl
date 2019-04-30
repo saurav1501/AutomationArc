@@ -269,4 +269,9 @@
       <initValue>'Result'</initValue>
       <name>Result</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'stg'</initValue>
+      <name>environment</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
