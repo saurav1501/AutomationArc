@@ -22,7 +22,7 @@ import internal.GlobalVariable as GlobalVariable
 try {
 	 
 	
-	 CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToBuilding'()
+	 //CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToBuilding'()
 	
 	//*************Serach By Project ID ****************************************************/
 	 CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
