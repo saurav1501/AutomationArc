@@ -201,10 +201,10 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 			WebUI.setText(findTestObject('LEEDOnline/ProjReg/Area'),'48' )
 		}
 		else{
-		WebUI.setText(findTestObject('LEEDOnline/ProjReg/Area'),prjArea )
+			WebUI.setText(findTestObject('LEEDOnline/ProjReg/Area'),prjArea )
 		}
-		
-		
+
+
 		WebUI.setText(findTestObject('LEEDOnline/ProjReg/Population'), population)
 		WebUI.delay(2)
 		WebUI.scrollToElement(findTestObject('LEEDOnline/ProjReg/Owner'), 2)
@@ -380,9 +380,9 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.click(findTestObject('LEEDOnline/Login/submit btn'))
 		ReusableMethodsLogin.waitForPageLoad(60)
 		WebUI.delay(2)
-	/*	String createNewProj = WebUI.getText(findTestObject('LEEDOnline/Login/a_Create new Project'))
-		WebUI.verifyMatch(createNewProj, 'CREATE NEW PROJECT', false, FailureHandling.CONTINUE_ON_FAILURE)
-	*/	WebUI.delay(2)
+		/*	String createNewProj = WebUI.getText(findTestObject('LEEDOnline/Login/a_Create new Project'))
+		 WebUI.verifyMatch(createNewProj, 'CREATE NEW PROJECT', false, FailureHandling.CONTINUE_ON_FAILURE)
+		 */	WebUI.delay(2)
 	}
 
 	@Keyword
@@ -546,7 +546,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 			WebUI.verifyMatch(regOrderType,'REGISTRATION',false,FailureHandling.CONTINUE_ON_FAILURE)
 			WebUI.verifyMatch(regStatus,'Completed',false,FailureHandling.CONTINUE_ON_FAILURE)
 		}
-		
+
 
 	}
 
