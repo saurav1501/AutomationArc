@@ -80,7 +80,8 @@ public class GlobalVariable {
     public static Object url
      
     /**
-     * <p>Profile DEV-US : Gold membership user</p>
+     * <p>Profile DEV-US : Gold membership user
+Profile DEV-US - Test : Gold membership user</p>
      */
     public static Object userName
      
@@ -92,6 +93,7 @@ public class GlobalVariable {
     /**
      * <p>Profile DEV-IND : Explicit Wait Timeout
 Profile DEV-US : Explicit Wait Timeout
+Profile DEV-US - Test : Explicit Wait Timeout
 Profile QAS-CA : Explicit Wait Timeout
 Profile QAS-CN : Explicit Wait Timeout
 Profile QAS-IND : Explicit Wait Timeout
@@ -114,6 +116,7 @@ Profile STG-US - Test : Explicit Wait Timeout</p>
     /**
      * <p>Profile DEV-IND : Adding India projects
 Profile DEV-US : Adding US projects
+Profile DEV-US - Test : Adding US projects
 Profile QAS-CA : Adding canada projects
 Profile QAS-CN : Adding china projects
 Profile QAS-IND : Adding India projects
@@ -131,6 +134,7 @@ Profile STG-US - Test : Adding US projects</p>
     /**
      * <p>Profile DEV-IND : Adding new team member 
 Profile DEV-US : Adding new team member 
+Profile DEV-US - Test : Adding new team member 
 Profile QAS-CA : Adding new team member 
 Profile QAS-CN : Adding new team member 
 Profile QAS-IND : Adding new team member 
@@ -148,6 +152,7 @@ Profile STG-US - Test : Adding new team member </p>
     /**
      * <p>Profile DEV-IND : Adding Credit Card payment details 
 Profile DEV-US : Adding Credit Card payment details 
+Profile DEV-US - Test : Adding Credit Card payment details 
 Profile QAS-CA : Adding Credit Card payment details 
 Profile QAS-CN : Adding Credit Card payment details 
 Profile QAS-IND : Adding Credit Card payment details 
@@ -247,6 +252,7 @@ Profile STG-IND : Adding new Inida community projects </p>
      
     /**
      * <p>Profile DEV-US : old score version of Buiding
+Profile DEV-US - Test : old score version of Buiding
 Profile QAS-US : old score version project of Building
 Profile QAS-US - Test : old score version project of Building
 Profile QAS-US-User2 : old score version project of Building
@@ -288,6 +294,7 @@ Profile QAS-US - Test : Result sheet to store the result</p>
      
     /**
      * <p>Profile DEV-US : old score version of Transit
+Profile DEV-US - Test : old score version of Transit
 Profile QAS-US : Old score version project of Transit
 Profile QAS-US - Test : Old score version project of Transit
 Profile QAS-US-User2 : Old score version project of Transit
@@ -318,6 +325,7 @@ Profile STG-US - Test : old score version of Transit</p>
      
     /**
      * <p>Profile DEV-US : Pricing sheet 
+Profile DEV-US - Test : Pricing sheet 
 Profile QAS-US : Pricing sheet for checking the pricing for different countries.
 Profile QAS-US - Test : Pricing sheet for checking the pricing for different countries.
 Profile STG-US : Pricing Sheet
@@ -373,6 +381,7 @@ Profile STG-US - Test : Project team admin and arc administrator email id</p>
      
     /**
      * <p>Profile DEV-US : Team Member DEV
+Profile DEV-US - Test : Team Member DEV
 Profile QAS-US : Team Member QAS
 Profile QAS-US - Test : Team Member QAS
 Profile QAS-US-User2 : Team Member QAS
@@ -383,6 +392,7 @@ Profile STG-US - Test : Team Member STG</p>
      
     /**
      * <p>Profile DEV-US : Certified project
+Profile DEV-US - Test : Certified project
 Profile STG-US : Certified project
 Profile STG-US - Test : Certified project</p>
      */
@@ -390,6 +400,7 @@ Profile STG-US - Test : Certified project</p>
      
     /**
      * <p>Profile DEV-US : Certified Transit Abovegroun Project
+Profile DEV-US - Test : Certified Transit Abovegroun Project
 Profile STG-US : Certified Transit Abovegroun Project
 Profile STG-US - Test : Certified Transit Abovegroun Project</p>
      */
@@ -402,6 +413,7 @@ Profile STG-US - Test : Certified Transit Abovegroun Project</p>
      
     /**
      * <p>Profile DEV-US : New Added Project
+Profile DEV-US - Test : New Added Project
 Profile STG-US : New Added Project
 Profile STG-US - Test : New Added Project</p>
      */
@@ -421,6 +433,7 @@ Profile QAS-US-User2 : Human Experience and Transportation</p>
      
     /**
      * <p>Profile DEV-US : payment via credit card
+Profile DEV-US - Test : payment via credit card
 Profile STG-US : payment via credit card
 Profile STG-US - Test : payment via credit card</p>
      */
