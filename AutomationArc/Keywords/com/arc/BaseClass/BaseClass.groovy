@@ -97,7 +97,7 @@ public class BaseClass {
 	public static String FileSize446="/var/lib/jenkins/workspace/ARC_Kat/Srimad_Bhagavatam_Canto_01_Hindi.pdf"
 	public static String FileSize62="/var/lib/jenkins/workspace/ARC_Kat/A College Text-Book of Physics_ 2nd Ed_ Arthur L Kimball_ 1917.pdf"
 
-	
+
 	//Large files for snapshot
 	/*public static String FileSize205=System.getProperty("user.dir")+"\\Download\\solved problems in modern physics.pdf"
 	 public static String FileSize173=System.getProperty("user.dir")+"\\Download\\solved problems in modern physics.pdf"

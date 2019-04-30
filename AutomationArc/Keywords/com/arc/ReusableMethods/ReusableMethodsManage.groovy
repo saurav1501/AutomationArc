@@ -1729,7 +1729,7 @@ public class ReusableMethodsManage extends BaseClass {
 		String regdAmt = data.getCellData(sheetName, "RegAmount", rowNum)
 		String reviewAmt = data.getCellData(sheetName, "ReviewAmount", rowNum)
 		String registrationDate = data.getCellData(sheetName, "RegDate", rowNum)
-
+		
 		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
 		 WebUI.delay(1)
 		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))*/
@@ -2154,6 +2154,10 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(6)
 		print reviewId +".pdf"
 		Assert.assertTrue(ReusDataInput.isFileDownloaded(reviewId +".pdf"), "Order File Didn't downloaded successfully")
+		if(GlobalVariable.environment=='dev'){
+			KeywordUtil.markWarning("Review Order file downloaded successfully")
+		}
+		else{
 		String pdflinks= pdfReader(downloadPath+reviewId+".pdf")
 		print pdflinks
 		int arr= pdflinks.indexOf(itemDesc)
@@ -2170,6 +2174,8 @@ public class ReusableMethodsManage extends BaseClass {
 		totalPaid="Total Paid   "+reviewAmt
 		//	WebUI.verifyMatch(itemDescription, result[0].trim() , false, FailureHandling.CONTINUE_ON_FAILURE)
 		//	WebUI.verifyMatch(totalPaid, result[1].trim(), false, FailureHandling.CONTINUE_ON_FAILURE)
+		}
+		
 	}
 
 
@@ -2186,6 +2192,10 @@ public class ReusableMethodsManage extends BaseClass {
 		String ratingSystem = data.getCellData(sheetName, "RatingSystem", rowNum)
 		String pdflinks= pdfReader(downloadPath+orderId+".pdf")
 		print pdflinks
+		if(GlobalVariable.environment=='dev'){
+			KeywordUtil.markWarning('Billing Receipt is : '+pdflinks)
+		}
+		else{
 		KeywordUtil.markWarning('Billing Receipt is : '+pdflinks)
 		int arr= pdflinks.indexOf(itemDesc)
 		String itemDescription
@@ -2215,7 +2225,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyMatch(shippingHandling, result[1].trim(), false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(saleTax, result[2].trim(), false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(totalPaid, result[3].trim(), false, FailureHandling.CONTINUE_ON_FAILURE)
-
+	   }
 	}
 
 	@Keyword

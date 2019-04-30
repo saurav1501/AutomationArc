@@ -259,4 +259,9 @@
       <initValue>'dev'</initValue>
       <name>environment</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'LEEDData'</initValue>
+      <name>LEEDData</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
