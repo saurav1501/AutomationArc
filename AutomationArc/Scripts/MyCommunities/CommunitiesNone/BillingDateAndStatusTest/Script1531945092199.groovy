@@ -29,9 +29,7 @@ import internal.GlobalVariable as GlobalVariable
 
 try{
 
-	if(GlobalVariable.environment=='dev')
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.verifyBillingReceiptAmountDetailDev'(GlobalVariable.CommunitySheet, GlobalVariable.rowNumFour)
-	else
+	
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.verifyBillingReceiptAmountDetail'(GlobalVariable.CommunitySheet, GlobalVariable.rowNumFour)
 
 	

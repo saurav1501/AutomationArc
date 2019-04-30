@@ -204,7 +204,13 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		WebUI.delay(3)
 		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/projectName'), ProjectName)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/selectProjectType'), prjType, true)
+		if(GlobalVariable.environment=='dev'){
+		    WebUI.selectOptionByLabel(findTestObject('Object Repository/Add_Project_Details/UnitType'), 'Square kilo meters', false)
+			WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/grossArea'),'48')
+		}
+		else{
 		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/grossArea'),prjArea )
+		}
 		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/population'),prjPopulation )
 		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/streetName'),prjAddress)
 		WebUI.delay(2)

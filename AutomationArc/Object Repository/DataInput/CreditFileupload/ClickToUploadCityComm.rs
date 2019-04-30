@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//*[@data-tooltip=&quot;Upload using computer&quot;]</value>
+         <value>//*[@data-tooltip=&quot;Upload using computer&quot; or @data-tooltip=&quot;Upload using &quot;]</value>
       </entry>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

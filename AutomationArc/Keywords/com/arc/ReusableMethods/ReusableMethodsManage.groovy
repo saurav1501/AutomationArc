@@ -425,7 +425,13 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(3)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectName'),'value'),prjName, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectId'),'value'),prjId, false, FailureHandling.CONTINUE_ON_FAILURE)
+		if(GlobalVariable.environment=='dev'){
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/unitType'),'value'),"string:SI", false, FailureHandling.CONTINUE_ON_FAILURE)
+		}
+		else{
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/unitType'),'value'),"string:IP", false, FailureHandling.CONTINUE_ON_FAILURE)
+		}
+		
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/prjAddress'),'value'),prjAddress, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectCity'),'value'), prjCity, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectState'),'value'), prjState, false, FailureHandling.CONTINUE_ON_FAILURE)
@@ -1226,6 +1232,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Manage/TeamModule/button_Add Member'))
 		WebUI.delay(12)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/TeamModule/newMemberAddedAuthorizationLevel'), 20)
 		WebUI.verifyOptionSelectedByLabel(findTestObject('Object Repository/Manage/TeamModule/newMemberAddedAuthorizationLevel'),"Team Member", false,10)
 	}
 
@@ -1738,17 +1745,31 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Loaders/ProjectDashboardLoader'), 30)
 		//Registration Payment details verification
 		WebUI.delay(5)
-		String regDate= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/registrationPaymentDate'))
-		WebUI.verifyMatch(regDate, registrationDate, false , FailureHandling.CONTINUE_ON_FAILURE)
-		String regOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationOrderId'))
-		data.setCellData(sheetName, "OrderId", rowNum,regOrderId)
-		String regOrderType= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/span_REGISTRATION'))
-		WebUI.verifyMatch(regOrderType, "REGISTRATION", false, FailureHandling.CONTINUE_ON_FAILURE)
-		String regStatus= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationPaymentStatus'))
-		WebUI.verifyMatch(regStatus, "Completed", false, FailureHandling.CONTINUE_ON_FAILURE)
-		String reviewOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/ReviewOrderId'))
-		data.setCellData(sheetName, "ReviewId", rowNum,reviewOrderId)
-
+		if(GlobalVariable.environment=='dev'){
+			
+			String regDate= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/registrationPaymentDate'))
+			WebUI.verifyMatch(regDate, registrationDate, false , FailureHandling.CONTINUE_ON_FAILURE)
+			String regOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationOrderId'))
+			data.setCellData(sheetName, "OrderId", rowNum,regOrderId)
+			String regOrderType= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/span_REGISTRATION'))
+			WebUI.verifyMatch(regOrderType, "REGISTRATION", false, FailureHandling.CONTINUE_ON_FAILURE)
+			String regStatus= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationPaymentStatus'))
+			WebUI.verifyMatch(regStatus, "Completed", false, FailureHandling.CONTINUE_ON_FAILURE)
+		}else{
+		
+		
+			String regDate= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/registrationPaymentDate'))
+			WebUI.verifyMatch(regDate, registrationDate, false , FailureHandling.CONTINUE_ON_FAILURE)
+			String regOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationOrderId'))
+			data.setCellData(sheetName, "OrderId", rowNum,regOrderId)
+			String regOrderType= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/span_REGISTRATION'))
+			WebUI.verifyMatch(regOrderType, "REGISTRATION", false, FailureHandling.CONTINUE_ON_FAILURE)
+			String regStatus= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationPaymentStatus'))
+			WebUI.verifyMatch(regStatus, "Completed", false, FailureHandling.CONTINUE_ON_FAILURE)
+			String reviewOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/ReviewOrderId'))
+			data.setCellData(sheetName, "ReviewId", rowNum,reviewOrderId)
+		}
+		
 		//Assert.assertEquals(regAmount, regdAmt)
 		/*	String reviewAmount= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/ReviewAmount'))
 		 WebUI.verifyMatch(reviewAmt, reviewAmount, false,FailureHandling.CONTINUE_ON_FAILURE)
@@ -1778,17 +1799,31 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
 		//Registration Payment details verification
 		WebUI.delay(5)
-		String regDate= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/registrationPaymentDate'))
-		String regOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationOrderId'))
-		data.setCellData(sheetName, "OrderId", rowNum,regOrderId)
-		String regOrderType= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/span_REGISTRATION'))
-		WebUI.verifyMatch(regOrderType, "REGISTRATION",false, FailureHandling.CONTINUE_ON_FAILURE)
-		String regAmount= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationAmount'))
-		String regStatus= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationPaymentStatus'))
-		WebUI.verifyMatch(regStatus, "Completed",false, FailureHandling.CONTINUE_ON_FAILURE)
-		String reviewOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/ReviewOrderId'))
-		data.setCellData(sheetName, "ReviewId", rowNum,reviewOrderId)
-		WebUI.verifyMatch(regDate,registrationDate , false, FailureHandling.CONTINUE_ON_FAILURE)
+		if(GlobalVariable.environment=='dev'){
+			String regDate= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/registrationPaymentDate'))
+			String regOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationOrderId'))
+			data.setCellData(sheetName, "OrderId", rowNum,regOrderId)
+			String regOrderType= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/span_REGISTRATION'))
+			WebUI.verifyMatch(regOrderType, "REGISTRATION",false, FailureHandling.CONTINUE_ON_FAILURE)
+			String regAmount= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationAmount'))
+			String regStatus= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationPaymentStatus'))
+			WebUI.verifyMatch(regStatus, "Completed",false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(regDate,registrationDate , false, FailureHandling.CONTINUE_ON_FAILURE)
+		}
+		else{
+			String regDate= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/registrationPaymentDate'))
+			String regOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationOrderId'))
+			data.setCellData(sheetName, "OrderId", rowNum,regOrderId)
+			String regOrderType= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/span_REGISTRATION'))
+			WebUI.verifyMatch(regOrderType, "REGISTRATION",false, FailureHandling.CONTINUE_ON_FAILURE)
+			String regAmount= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationAmount'))
+			String regStatus= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationPaymentStatus'))
+			WebUI.verifyMatch(regStatus, "Completed",false, FailureHandling.CONTINUE_ON_FAILURE)
+			String reviewOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/ReviewOrderId'))
+			data.setCellData(sheetName, "ReviewId", rowNum,reviewOrderId)
+			WebUI.verifyMatch(regDate,registrationDate , false, FailureHandling.CONTINUE_ON_FAILURE)
+		}
+		
 		// Assert.assertEquals(regAmount, regdAmt)
 
 
@@ -1804,38 +1839,6 @@ public class ReusableMethodsManage extends BaseClass {
 		 //	Assert.assertEquals(reviewAmount, reviewAmt)
 		 Assert.assertEquals(reviewStatus, "Completed")*/
 	}
-
-	@Keyword
-	public void devbillingStatusTransit(String sheetName, int rowNum){
-		WebUI.delay(2)
-		String regdAmt = data.getCellData(sheetName, "DiscRegAmount", rowNum)
-		String reviewAmt = data.getCellData(sheetName, "DiscReviewAmount", rowNum)
-		String registrationDate = data.getCellData(sheetName, "RegDate", rowNum)
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)
-		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))*/
-		WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
-		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
-		//Registration Payment details verification
-		WebUI.delay(5)
-		String regDate= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/registrationPaymentDate'))
-		String regOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationOrderId'))
-	//	data.setCellData(sheetName, "OrderId", rowNum,regOrderId)
-		String regOrderType= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/span_REGISTRATION'))
-		WebUI.verifyMatch(regOrderType, "REGISTRATION",false, FailureHandling.CONTINUE_ON_FAILURE)
-	//	String regAmount= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationAmount'))
-	//	String regStatus= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationPaymentStatus'))
-	//	WebUI.verifyMatch(regStatus, "Completed",false, FailureHandling.CONTINUE_ON_FAILURE)
-	//	String reviewOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/ReviewOrderId'))
-	//	data.setCellData(sheetName, "ReviewId", rowNum,reviewOrderId)
-		WebUI.verifyMatch(regDate,registrationDate , false, FailureHandling.CONTINUE_ON_FAILURE)
-		// Assert.assertEquals(regAmount, regdAmt)
-
-
-
-	}
-
-
 
 	@Keyword
 	public void billingStatusParking(String sheetName, int rowNum){

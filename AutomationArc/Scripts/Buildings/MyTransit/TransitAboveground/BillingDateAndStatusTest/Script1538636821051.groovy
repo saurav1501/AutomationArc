@@ -28,11 +28,6 @@ import internal.GlobalVariable as GlobalVariable
 
 
 try{
-
-	
-	if(GlobalVariable.environment=='dev')
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.devbillingStatusTransit'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumThree)
-	else
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.billingStatusTransit'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumThree)
 
 

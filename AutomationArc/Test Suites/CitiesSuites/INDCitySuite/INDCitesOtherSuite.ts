@@ -21,6 +21,24 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/MyCities/CitiesOther/AddNewProjectTest</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>8dd84820-cc78-431f-8d88-9f8fa570c820</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>148121b8-7542-4d53-92e7-0950107bd446</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>004a71f5-2958-4d56-9ba9-1ef0d9880fca</variableId>
+      </variableLink>
    </testCaseLink>
    <testCaseLink>
       <guid>10b7eb00-8a9c-476e-8a24-ead71af5c085</guid>

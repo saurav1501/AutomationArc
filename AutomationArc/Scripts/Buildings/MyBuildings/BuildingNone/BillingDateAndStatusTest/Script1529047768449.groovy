@@ -29,13 +29,8 @@ import internal.GlobalVariable as GlobalVariable
 
 	try{
 	
-		if(GlobalVariable.environment=='dev')
-		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.billingStatus'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
-		else
-		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.billingStatus'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
-	
-	
 		
+		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.billingStatus'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)		
 		
 	  /* // CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
 	    CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.billingStatus'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
