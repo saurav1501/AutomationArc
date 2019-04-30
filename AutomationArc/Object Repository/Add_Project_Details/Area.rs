@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>selectProjectType</name>
+   <name>Area</name>
    <tag></tag>
-   <elementGuidId>fa0e1917-b5eb-4c5a-a263-3e56ecbd4d4e</elementGuidId>
+   <elementGuidId>7fd46e2c-cbdf-49dd-a74c-1f824652b7ad</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//select[@name = 'project_type']</value>
+         <value>//*[@id=&quot;gross_area&quot;]</value>
       </entry>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

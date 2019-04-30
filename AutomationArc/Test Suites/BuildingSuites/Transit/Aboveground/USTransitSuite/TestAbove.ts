@@ -43,7 +43,7 @@
    <testCaseLink>
       <guid>c914e8d3-916e-41f8-9c73-507c02d8962c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/GRESB/TransportSubmitSurveyTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -57,5 +57,11 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/Analytics/TotalAnalyticsTransportationScoreLocalAvgGlobalAvgTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>57fdd4e3-ee4b-4cfb-8c90-f3217c0db516</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/SubmitSurveyTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>selectProjectType</name>
+   <name>Humidity</name>
    <tag></tag>
-   <elementGuidId>fa0e1917-b5eb-4c5a-a263-3e56ecbd4d4e</elementGuidId>
+   <elementGuidId>9ba39b5e-6608-488c-a86b-12c92bfa8da0</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//select[@name = 'project_type']</value>
+         <value>(//*[(text() = 'Habitat for Humanity' or . = 'Habitat for Humanity')])[1]</value>
       </entry>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

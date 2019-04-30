@@ -7,8 +7,6 @@ import java.lang.String
 
 import com.kms.katalon.core.testobject.TestObject
 
-import com.kms.katalon.core.model.FailureHandling
-
 import java.sql.Connection
 
 
@@ -1858,22 +1856,6 @@ def static "com.arc.ReusableMethods.ReusableMethodsMeasuresParking.permissionReq
     (new com.arc.ReusableMethods.ReusableMethodsMeasuresParking()).permissionRequestsTeamMan()
 }
 
-def static "com.katalon.plugin.keyword.calendar.SetDateCalendarKeyword.setDate"(
-    	TestObject to	
-     , 	int day	
-     , 	int month	
-     , 	int year	
-     , 	int slideTimeOut	
-     , 	FailureHandling flowControl	) {
-    (new com.katalon.plugin.keyword.calendar.SetDateCalendarKeyword()).setDate(
-        	to
-         , 	day
-         , 	month
-         , 	year
-         , 	slideTimeOut
-         , 	flowControl)
-}
-
 def static "com.arc.BaseClass.CommonMethod.clickCancel"() {
     (new com.arc.BaseClass.CommonMethod()).clickCancel()
 }
@@ -2237,6 +2219,12 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createADMeterReadin
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.surveySubmit"(
     	String sheetName	) {
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).surveySubmit(
+        	sheetName)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.devsurveySubmit"(
+    	String sheetName	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).devsurveySubmit(
         	sheetName)
 }
 
