@@ -27,7 +27,7 @@ try{
 	
 	
 	if(GlobalVariable.environment=='dev')
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.surveySubmit'(GlobalVariable.BDataInput)
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.devsurveySubmit'(GlobalVariable.BDataInput)
 	else
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.surveySubmitTr'(GlobalVariable.BDataInput)
 	

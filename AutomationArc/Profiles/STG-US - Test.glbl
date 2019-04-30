@@ -261,7 +261,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'stgr2 mishra'</initValue>
+      <initValue>'stgr mishra'</initValue>
       <name>teamMemberName</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

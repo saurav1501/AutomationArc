@@ -3972,6 +3972,161 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(2)
 	}
 
+	
+	
+	@Keyword
+	public void devsurveySubmit(String sheetName) throws IOException, InterruptedException, Exception{
+		WebUI.delay(5)
+		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+		WebUI.delay(12)
+		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
+		WebUI.delay(5)
+		String MainWindowHandle = driver.getWindowHandle()
+		WebUI.click(findTestObject('DataInput/Survey/CopySurveyLink'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('DataInput/Survey/English'))
+		WebUI.delay(5)
+		for( int rowNum=2;rowNum<=5;rowNum++)
+		{
+			if(rowNum==2)
+			{
+				String walk1 = data.getCellData(sheetName, "Walk", rowNum)
+				String walk2 = data.getCellData(sheetName, "Bus", rowNum)
+				String walk3 = data.getCellData(sheetName, "Tram", rowNum)
+				String walk4 = data.getCellData(sheetName, "Heavyrail", rowNum)
+				String walk5 = data.getCellData(sheetName, "Motorcycle", rowNum)
+				String walk6 = data.getCellData(sheetName, "Carsolo", rowNum)
+				String walk7 = data.getCellData(sheetName, "Carpool", rowNum)
+				String walk8 = data.getCellData(sheetName, "Caralternative", rowNum)
+				String name = data.getCellData(sheetName, "Name", rowNum)
+
+				Robot r = new Robot();
+				r.keyPress(KeyEvent.VK_CONTROL);
+				r.keyPress(KeyEvent.VK_T);
+				r.keyRelease(KeyEvent.VK_CONTROL)
+				r.keyRelease(KeyEvent.VK_T)
+				WebUI.delay(7)
+				//To switch to the new tab
+				WebUI.switchToWindowIndex(1)
+				WebUI.delay(2)
+				r.keyPress(KeyEvent.VK_CONTROL)
+				r.keyPress(KeyEvent.VK_V)
+				r.keyRelease(KeyEvent.VK_CONTROL)
+				r.keyRelease(KeyEvent.VK_V)
+				WebUI.delay(2)
+				r.keyPress(KeyEvent.VK_ENTER)
+				r.keyRelease(KeyEvent.VK_ENTER)
+				WebUI.delay(17)
+
+				WebUI.click(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'))
+				int it=1;
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk1)
+				it++
+
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk2)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk3)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk4)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk5)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk6)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk7)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk8)
+				it++
+				WebUI.delay(1)
+				WebUI.click(findTestObject('Object Repository/DataInput/Survey/SaveButtonToRecordSurveyData'))
+				WebUI.delay(4)
+				WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'),4)
+
+				WebUI.dragAndDropToObject(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'), findTestObject('Object Repository/DataInput/Survey/ExtremelySatisfySpanText'))
+				WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
+				WebUI.delay(2)
+				WebUI.click(findTestObject('DataInput/Survey/Submit1'))
+				WebUI.delay(3)
+				WebUI.verifyMatch(WebUI.getText(findTestObject('DataInput/Survey/Thank')), "Options that enhance your satisfaction", false)
+				WebUI.delay(3)
+
+				println "Survey Submited Successufully"
+			}
+			else
+			{
+
+				String walk1 = data.getCellData(sheetName, "Walk", rowNum)
+				String walk2 = data.getCellData(sheetName, "Bus", rowNum)
+				String walk3 = data.getCellData(sheetName, "Tram", rowNum)
+				String walk4 = data.getCellData(sheetName, "Heavyrail", rowNum)
+				String walk5 = data.getCellData(sheetName, "Motorcycle", rowNum)
+				String walk6 = data.getCellData(sheetName, "Carsolo", rowNum)
+				String walk7 = data.getCellData(sheetName, "Carpool", rowNum)
+				String walk8 = data.getCellData(sheetName, "Caralternative", rowNum)
+				String name = data.getCellData(sheetName, "Name", rowNum)
+				Robot r = new Robot();
+				r.keyPress(KeyEvent.VK_CONTROL);
+				r.keyPress(KeyEvent.VK_T);
+				r.keyRelease(KeyEvent.VK_CONTROL)
+				r.keyRelease(KeyEvent.VK_T)
+				WebUI.delay(4)
+				WebUI.switchToWindowIndex(2)
+				WebUI.delay(3)
+				r.keyPress(KeyEvent.VK_CONTROL)
+				r.keyPress(KeyEvent.VK_V)
+				r.keyRelease(KeyEvent.VK_CONTROL)
+				r.keyRelease(KeyEvent.VK_V)
+
+				WebUI.delay(2)
+				r.keyPress(KeyEvent.VK_ENTER)
+				r.keyRelease(KeyEvent.VK_ENTER)
+				WebUI.delay(10)
+				WebUI.click(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'))
+				int it=1;
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk1)
+				WebUI.delay(1)
+				it++
+
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk2)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk3)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk4)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk5)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk6)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk7)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk8)
+				it++
+
+				WebUI.click(findTestObject('Object Repository/DataInput/Survey/SaveButtonToRecordSurveyData'))
+				WebUI.delay(4)
+
+				WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'),4)
+
+				WebUI.dragAndDropToObject(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'), findTestObject('Object Repository/DataInput/Survey/ExtremelySatisfySpanText'))
+				WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
+				WebUI.delay(1)
+
+				WebUI.click(findTestObject('DataInput/Survey/Submit'))
+				WebUI.delay(3)
+				WebUI.verifyMatch(WebUI.getText(findTestObject('DataInput/Survey/Thank')), "Options that enhance your satisfaction", false)
+				WebUI.delay(3)
+				println "Survey Submited Successufully"
+				WebUI.closeWindowIndex(2)
+			}
+			WebUI.switchToWindowIndex(0)
+		}
+		WebUI.closeWindowIndex(1)
+		WebUI.delay(2)
+		WebUI.switchToWindowIndex(0)
+		WebUI.delay(2)
+	}
+
+
 
 	@Keyword
 	public void surveyLanguageCopySurveyLink(){

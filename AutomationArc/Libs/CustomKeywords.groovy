@@ -2222,6 +2222,12 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.surveySubmit"(
         	sheetName)
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.devsurveySubmit"(
+    	String sheetName	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).devsurveySubmit(
+        	sheetName)
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.surveyLanguageCopySurveyLink"() {
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).surveyLanguageCopySurveyLink()
 }
