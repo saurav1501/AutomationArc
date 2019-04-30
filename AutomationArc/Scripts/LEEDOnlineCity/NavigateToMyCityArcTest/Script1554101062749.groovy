@@ -14,7 +14,13 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
 try{
+	
+	if(GlobalVariable.environment=='dev'){
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariableAppUrl'()
+	}
+	else{
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariableT'()
+	}
 	WebUI.delay(4)
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToCities'()
 	

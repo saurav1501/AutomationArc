@@ -4,6 +4,16 @@
    <name>UserName</name>
    <tag></tag>
    <elementGuidId>9ea8d173-5868-4e34-8a8b-91c39b9b80e8</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//input[@type = 'email' and @placeholder = 'Username']</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
