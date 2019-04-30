@@ -4713,9 +4713,11 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/button_Municipality supplied'))
 		WebUI.delay(2)
-
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/WaterScore'),30)
+		
 		WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/a_Municipality supplied reclai'))
-		WebUI.delay(35)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/WaterScore'),40)
+		WebUI.delay(40)
 
 		String waterScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/WaterScore'))
 		WebUI.verifyMatch(waterScore,'0', false)
@@ -4731,7 +4733,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(2)
 
 		WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/a_Reclaimed onsite'))
-		WebUI.delay(25)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/WaterScore'),40)
+		WebUI.delay(40)
 
 		String rwaterScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/WaterScore'))
 
@@ -4744,7 +4747,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(3)
 
 		WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/Municipality'))
-		WebUI.delay(26)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/WaterScore'),40)
+		WebUI.delay(40)
 
 		/*WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/a_Municipality supplied potabl'))
 		 WebUI.delay(5)*/
