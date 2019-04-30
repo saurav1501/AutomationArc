@@ -1,9 +1,6 @@
-import java.text.SimpleDateFormat
-
 import org.testng.annotations.BeforeMethod
 
 import com.arc.BaseClass.BaseClass
-import com.arc.BaseClass.SendEmail
 import com.kms.katalon.core.annotation.AfterTestCase
 import com.kms.katalon.core.annotation.AfterTestSuite
 import com.kms.katalon.core.annotation.BeforeTestCase
@@ -17,9 +14,8 @@ import com.kms.katalon.core.context.TestCaseContext
 import com.kms.katalon.core.context.TestSuiteContext
 import com.kms.katalon.core.logging.KeywordLogger
 import com.kms.katalon.core.util.KeywordUtil
-import com.kms.katalon.core.webui.driver.DriverFactory
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
-
+import com.kms.katalon.composer.report.*
 import internal.GlobalVariable
 
 public class MasterTestListener extends BaseClass {
@@ -344,12 +340,13 @@ public class MasterTestListener extends BaseClass {
 	
 	@AfterTestSuite
 	public void afterTestSuite(TestSuiteContext testSuite){
+		
 		println TestCount
 		println TestCasePass
 		println TestCaseFail
-		data.setCellIntData(GlobalVariable.Result, "Total", GlobalVariable.rowNumTwo,TestCount)
+		/*data.setCellIntData(GlobalVariable.Result, "Total", GlobalVariable.rowNumTwo,TestCount)
 		data.setCellIntData(GlobalVariable.Result, "Passed", GlobalVariable.rowNumTwo,TestCasePass)
-		data.setCellIntData(GlobalVariable.Result, "Failed", GlobalVariable.rowNumTwo,TestCaseFail)
+		data.setCellIntData(GlobalVariable.Result, "Failed", GlobalVariable.rowNumTwo,TestCaseFail)*/
 
 		 //data.setCellData(GlobalVariable.Result, "Duration", GlobalVariable.rowNumTwo, duration)
 		 //SendEmail.sendStatusReport(TestCaseFail, TestCaseFail, TestCaseFail)
