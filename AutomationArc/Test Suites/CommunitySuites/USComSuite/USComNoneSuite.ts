@@ -139,7 +139,7 @@
    <testCaseLink>
       <guid>725daec2-6b74-4fde-b18f-31161b92565c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/MyCommunities/CommunitiesNone/VerifyBillingReceiptTest</testCaseId>
    </testCaseLink>
    <testCaseLink>

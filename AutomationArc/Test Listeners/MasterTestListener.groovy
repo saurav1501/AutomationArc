@@ -1,6 +1,7 @@
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.firefox.FirefoxDriver
 import org.openqa.selenium.remote.DesiredCapabilities
+import org.testng.annotations.AfterGroups
 import org.testng.annotations.BeforeMethod
 
 import com.arc.BaseClass.BaseClass
@@ -20,6 +21,8 @@ import com.kms.katalon.core.logging.KeywordLogger
 import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.driver.DriverFactory
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+
+import internal.GlobalVariable
 
 public class MasterTestListener extends BaseClass {
 	public String FailedSheet='FailedTestsSheet'
@@ -48,7 +51,6 @@ public class MasterTestListener extends BaseClass {
 	@BeforeTestSuite
 	public void beforeTestSuiteListener(TestSuiteContext testSuite)
 	{
-
 		/*println TestCount= data.getCellIntData(GlobalVariable.Result, "Total", GlobalVariable.rowNumTwo)
 		println TestCasePass= data.getCellIntData(GlobalVariable.Result, "Passed", GlobalVariable.rowNumTwo)
 		println TestCaseFail= data.getCellIntData(GlobalVariable.Result, "Failed", GlobalVariable.rowNumTwo)*/
@@ -358,5 +360,6 @@ public class MasterTestListener extends BaseClass {
 		
 	
 	}
+	
 	
 }

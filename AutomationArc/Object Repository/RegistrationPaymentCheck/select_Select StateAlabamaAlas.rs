@@ -4,6 +4,12 @@
    <name>select_Select StateAlabamaAlas</name>
    <tag></tag>
    <elementGuidId>9f23d47b-747b-40fe-878e-b07b30ee38b5</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//select[@id = 'state' and @name = 'state']</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
@@ -63,7 +69,7 @@
       <value>2</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>

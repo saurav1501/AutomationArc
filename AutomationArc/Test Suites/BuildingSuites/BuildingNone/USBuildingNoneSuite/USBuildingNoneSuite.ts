@@ -667,13 +667,13 @@
    <testCaseLink>
       <guid>ed3ffc72-97e0-4521-af03-5784fc24ca8f</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/VerifyBillingReceiptTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>856a7eca-dab0-41a4-9b25-dcfca8e61325</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/VerifyReviewBillingDetailsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>

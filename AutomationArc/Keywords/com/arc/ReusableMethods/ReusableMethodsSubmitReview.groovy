@@ -307,6 +307,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		 //WebUI.refresh()
 		 Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/SubmitReview/SubmitReviewTextAreaAdditionalMessage'),'value'),'Submit Certification Test Message')
 		 Assert.assertEquals(WebUI.getText(findTestObject('Object Repository/SubmitReview/VerifyTotalCredits')),'38')*/
+		WebUI.waitForElementClickable(findTestObject('Object Repository/SubmitReview/button_Continue'), 40)
 		WebUI.click(findTestObject('Object Repository/SubmitReview/button_Continue'))
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/CertificationTextSummaryCityProject')), "Certification", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.setText(findTestObject('SubmitReview/input_form-control ng-untouche'), 'abhishekkumar@groupten.com')
