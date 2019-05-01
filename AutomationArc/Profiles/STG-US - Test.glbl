@@ -151,7 +151,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Abhishek Kumar'</initValue>
+      <initValue>'Saurav K'</initValue>
       <name>teamMemName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -231,7 +231,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>Project team admin and arc administrator name</description>
-      <initValue>'Abhishek Kumar'</initValue>
+      <initValue>'Saurav K'</initValue>
       <name>projectTeamAdminAndArcAdminName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -261,7 +261,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'stgr mishra'</initValue>
+      <initValue>'RoshanOne Mishra'</initValue>
       <name>teamMemberName</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
