@@ -371,8 +371,6 @@ public class ReusableMethodsManage extends BaseClass {
 		String projectOccupancy= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectCityPopulation'), 'value')
 		String projectIntendPrecertify= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectIntendToPrecertify'), 'value')
 		String projectTargetCertDate= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectTragetCertiDetails'), 'value')
-		String projectPopulationdayTime= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectPopulationDayTime'), 'value')
-		String projectPopulationNightTime= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectPopulationNightTime'), 'value')
 		String projectManageEntityName= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectManageEntityName'), 'value')
 		String projectManageEntityAdd1= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectManageEntityAdd1'), 'value')
 		String projectManageEntityAdd2= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectManageEntityAdd2'), 'value')
@@ -393,8 +391,6 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyMatch(projectOccupancy, population, false)
 		WebUI.verifyMatch(projectIntendPrecertify, "boolean:false", false)
 		WebUI.verifyMatch(projectTargetCertDate, "", false)
-		WebUI.verifyMatch(projectPopulationdayTime, "", false)
-		WebUI.verifyMatch(projectPopulationNightTime, "", false)
 		WebUI.verifyMatch(projectManageEntityName, "", false)
 		WebUI.verifyMatch(projectManageEntityAdd1, "", false)
 		WebUI.verifyMatch(projectManageEntityAdd2, "", false)
@@ -1263,19 +1259,8 @@ public class ReusableMethodsManage extends BaseClass {
 
 		WebUI.setText(findTestObject('Manage/CityCom/New/Population'),'SDF')
 		WebUI.delay(1)
-		WebUI.click(findTestObject('Manage/CityCom/New/input_Population - Daytime_pop'))
+		WebUI.click(findTestObject('Object Repository/Manage/ManageEntity/Managing entity Name'))
 		WebUI.verifyElementPresent(findTestObject('Object Repository/Manage/ErrorMessage/populationErrorMessage'),2)
-
-		WebUI.setText(findTestObject('Manage/CityCom/New/input_Population - Daytime_pop'),'SDF')
-		WebUI.click(findTestObject('Manage/CityCom/New/input_Population - Daytime_pop'))
-		WebUI.delay(1)
-		WebUI.verifyElementPresent(findTestObject('Object Repository/Manage/ErrorMessage/populationDayTime'),2)
-
-		WebUI.setText(findTestObject('Manage/CityCom/New/input_Population - Nighttime_p'),'SDF')
-		WebUI.click(findTestObject('Manage/CityCom/New/input_Population - Daytime_pop'))
-		WebUI.delay(1)
-		WebUI.verifyElementPresent(findTestObject('Object Repository/Manage/ErrorMessage/populationNightTime'),2)
-
 	}
 
 	@Keyword
@@ -2108,7 +2093,7 @@ public class ReusableMethodsManage extends BaseClass {
 		//ReusableMethodsLogin.waitForPageToLoadCompletely(60)
 		WebUI.click(findTestObject('Object Repository/USGBCAccount/ClickOnOrderHistory'))
 
-		ReusableMethodsLogin.waitForPageToLoadCompletely(60)
+		ReusableMethodsLogin.waitForPageToLoad(60)
 		WebUI.delay(4)
 		WebUI.click(findTestObject('Object Repository/USGBCAccount/SearchBarUSGBC'))
 		WebUI.sendKeys(findTestObject('Object Repository/USGBCAccount/SearchBarUSGBC'),orderId )

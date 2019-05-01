@@ -29,10 +29,7 @@ import internal.GlobalVariable as GlobalVariable
 
 try{
 
-	
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.verifyBillingReceiptAmountDetail'(GlobalVariable.CommunitySheet, GlobalVariable.rowNumFour)
-
-	
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.billingStatus'(GlobalVariable.CommunitySheet, GlobalVariable.rowNumFour)
 	
 /*//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.CommunitySheet, GlobalVariable.rowNumFour)
 CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.billingStatus'(GlobalVariable.CommunitySheet, GlobalVariable.rowNumFour)

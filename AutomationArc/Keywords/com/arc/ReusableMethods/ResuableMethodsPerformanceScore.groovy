@@ -1016,6 +1016,7 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.waitForElementPresent(findTestObject('Object Repository/TrialScore/plaqueEnergyScore'), 20)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/TrialScore/plaqueEnergyScore'), 20)
 		String energyScore= WebUI.getText(findTestObject('Object Repository/TrialScore/plaqueEnergyScore'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/TrialScore/plaqueWaterScore'), 20)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/TrialScore/plaqueWaterScore'), 20)
 		String waterScore= WebUI.getText(findTestObject('Object Repository/TrialScore/plaqueWaterScore'))
 		String wasteScore= WebUI.getText(findTestObject('Object Repository/TrialScore/plaqueWasteScore'))

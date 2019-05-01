@@ -6,12 +6,11 @@
    <elementGuidId>d6c70b1d-73f0-440b-869f-c7f5a8b4be33</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//p[text()='Plaque Animation']</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//p[text()='Score Animation']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
