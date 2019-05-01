@@ -6,12 +6,12 @@
    <elementGuidId>3c07113e-56dd-4661-939d-5bc9d608aeec</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//input[@type = 'text' and @id = 'project_name' and @name = 'name']</value>
+         <key>CSS</key>
+         <value>//input[@ng-model ='formdata.name']</value>
       </entry>
       <entry>
-         <key>CSS</key>
-         <value>#details-form > table > tbody > tr:nth-child(1) > td > div > input</value>
+         <key>BASIC</key>
+         <value>//input[@type = 'text' and @id = 'project_name' and @name = 'name']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>CSS</selectorMethod>

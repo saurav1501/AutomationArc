@@ -4,7 +4,17 @@
    <name>ProjectTypeOption</name>
    <tag></tag>
    <elementGuidId>7ce3d6ec-8e65-451c-86bd-aa5086b236f8</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//select[@name='project_type']</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//select[@name = 'project_type' and (text() = 'CommunitiesCitiesBuildingsBuildings - TransitBuildings - Parking' or . = 'CommunitiesCitiesBuildingsBuildings - TransitBuildings - Parking')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
