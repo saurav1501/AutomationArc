@@ -306,10 +306,13 @@ public class ReusableMethodsBasePoint extends BaseClass{
 	}
 	@Keyword
 	public void basePromptMessageAttemptedToReadyForReview(){
-
+		WebUI.delay(2)
 		WebUI.scrollToElement(findTestObject('Object Repository/BasePoint/a_ Base Points (1)'), 10)
+		WebUI.delay(2)
 		WebUI.doubleClick(findTestObject('Object Repository/BasePoint/a_ Base Points (1)'))
-		WebUI.delay(8)
+	//	WebUI.w
+		WebUI.delay(5)
+		
 
 		WebUI.click(findTestObject('Object Repository/BasePoint/span_Site Development - Protec'))
 		WebUI.delay(5)

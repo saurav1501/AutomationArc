@@ -205,7 +205,7 @@ public class ReusableMethodsNavigation {
 	public void ArclogoNavigation() throws IOException, InterruptedException {
 		/*******Verify clicking on the ARC LOGO takes you back to the ARC log-in page *************************/
 		WebUI.click(findTestObject('Page_Arc dashboard/DashboardPage/a_appLogo'))
-		WebUI.delay(3)
+		WebUI.delay(5)
 		String LogOut = WebUI.getText(findTestObject('DashboardNavigationNewUI/Dash/Logout'))
 		WebUI.verifyMatch(LogOut,'Logout', false)	
 		WebUI.click(findTestObject('DashboardNavigationNewUI/Dash/Logout'))

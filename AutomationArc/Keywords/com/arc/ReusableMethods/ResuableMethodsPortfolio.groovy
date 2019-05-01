@@ -3845,12 +3845,12 @@ public class ResuableMethodsPortfolio extends BaseClass {
 			System.out.println(ostr1)
 			double eodaily=Double.parseDouble(ostr1)/365
 			BigDecimal eoden = new BigDecimal(eodaily)
-			eoden = eoden.setScale(1, RoundingMode.HALF_UP)
+			eoden = eoden.setScale(1, RoundingMode.HALF_EVEN)
 			String calengdailyCarbon = eoden.toString()
 
 			String eodailyCarbon =WebUI.getText(findTestObject('Portfolio/Total/carbon/ODailycarbon'))
 			BigDecimal deodailyCarbon = new BigDecimal(eodailyCarbon)
-			deodailyCarbon = deodailyCarbon.setScale(1, RoundingMode.HALF_UP)
+			deodailyCarbon = deodailyCarbon.setScale(1, RoundingMode.HALF_EVEN)
 			String engdailyCarbon = deodailyCarbon.toString()
 
 			

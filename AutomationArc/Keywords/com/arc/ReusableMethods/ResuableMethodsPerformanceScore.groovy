@@ -521,8 +521,13 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 	@Keyword
 	public void setdefaultpagePerformanceScoreOtherNone(String sheetName, int rowNum) throws IOException, InterruptedException {
 		WebUI.delay(3)
+		
+		WebUI.scrollToElement(findTestObject('PerformanceScore/a_ Settings'), 5)
+		WebUI.delay(1)
 		WebUI.click(findTestObject('PerformanceScore/a_ Settings'))
 		WebUI.delay(7)
+		
+		
 		WebUI.focus(findTestObject('Page_Arc dashboard/DashboardPage/AllProject/span_Data Input'))
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Page_Arc dashboard/DashboardPage/AllProject/span_Data Input'))
@@ -961,6 +966,9 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		 WebUI.delay(1)
 		 WebUI.click(findTestObject('PerformanceScore/Score/a_ Score'))
 		 WebUI.delay(3)*/
+		
+		WebUI.scrollToElement(findTestObject('PerformanceScore/Score/a_ Energy'),2)
+		WebUI.delay(1)
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Energy'))
 		WebUI.delay(5)
 		WebUI.click(findTestObject('PerformanceScore/RaceTrack/CURRENT ENERGY'))
@@ -968,6 +976,8 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		Boolean analyticsEnergy = WebUI.verifyTextPresent('CARBON CONSUMPTION', false)
 		Assert.assertTrue(analyticsEnergy)
 
+		WebUI.scrollToElement(findTestObject('PerformanceScore/Score/a_ Score'),2)
+		WebUI.delay(1)
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Score'))
 		WebUI.delay(3)
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Water'))
@@ -977,6 +987,7 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		Boolean analyticsWater = WebUI.verifyTextPresent('WATER CONSUMPTION', false)
 		Assert.assertTrue(analyticsWater)
 
+	
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Score'))
 		WebUI.delay(1)
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Waste'))

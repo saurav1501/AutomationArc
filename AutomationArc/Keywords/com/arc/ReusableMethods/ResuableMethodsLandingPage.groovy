@@ -354,7 +354,7 @@ public class ResuableMethodsLandingPage extends BaseClass {
 		 WebUI.click(findTestObject('Object Repository/Add_Project_Details/button_ Add'))*/
 		String optionValue = WebUI.getText(findTestObject('Object Repository/Page_Arc dashboard/DashboardPage/New Folder/ProjectTypeOption'))
 		String optionPresent= optionValue.replaceAll("\\s+","")
-		WebUI.verifyMatch(optionPresent,"CommunitiesCitiesBuildingsBuildings-TransitBuildings-Parking", false)
+		WebUI.verifyMatch(optionPresent,"CommunitiesCitiesBuildingsBuildings-TransitBuildings-Parking(Parksmart)", false)
 	}
 
 	@Keyword
@@ -379,7 +379,7 @@ public class ResuableMethodsLandingPage extends BaseClass {
 		WebUI.delay(3)
 		WebUI.scrollToElement(findTestObject('Object Repository/Add_Project_Details/button_ Add'), 3)
 		WebUI.click(findTestObject('Object Repository/Add_Project_Details/button_ Add'))
-		WebUI.delay(1)
+		WebUI.delay(3)
 
 		WebUI.setText(findTestObject('Object Repository/Add_Project_Details/input_name'),'ProjectNameUp40CharacterTestVerifyUPTo40')
 		WebUI.verifyElementNotPresent(findTestObject('Object Repository/Page_Arc dashboard/DashboardPage/New Folder/Page_Arc dashboard/StateThis field is required'),7)
