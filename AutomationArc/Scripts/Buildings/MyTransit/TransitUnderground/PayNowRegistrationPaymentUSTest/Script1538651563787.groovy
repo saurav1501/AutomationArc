@@ -23,6 +23,8 @@ import org.openqa.selenium.Keys as Keys
 //PayNow Registration Payment US
 
 try {
+	
+	//WebUI.delay(5)
 	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSeven)
 
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.payNowRegistrationPaymentINT'()
