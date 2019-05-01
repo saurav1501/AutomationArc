@@ -157,13 +157,13 @@
    <testCaseLink>
       <guid>547a12a4-c153-4579-855a-80f86c66b063</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/MyCities/CitiesOther/VerifyBillingReceiptAmountTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>e5de2fc9-80a4-49ac-9edf-5d8d41c58ebd</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/MyCities/CitiesOther/VerifyReviewAmountBillingDetailsTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

@@ -331,7 +331,7 @@
    <testCaseLink>
       <guid>494f0b05-fd4b-4493-b838-96f4b3ab32a4</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/VerifyBillingReceiptAmountTest</testCaseId>
    </testCaseLink>
    <testCaseLink>

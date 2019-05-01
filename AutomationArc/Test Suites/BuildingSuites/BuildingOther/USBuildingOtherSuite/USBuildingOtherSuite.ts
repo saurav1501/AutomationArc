@@ -367,7 +367,7 @@
    <testCaseLink>
       <guid>868c3ce8-6260-455d-bf2c-03f515908ab3</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyBillingReceiptTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -379,7 +379,7 @@
    <testCaseLink>
       <guid>9fc8bd4e-9e06-4292-91b4-249af7c8202d</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyReviewBillingDetailsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>

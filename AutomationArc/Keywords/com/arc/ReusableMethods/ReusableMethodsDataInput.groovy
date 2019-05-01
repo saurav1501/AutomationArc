@@ -335,8 +335,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/DetailsTab'))
 		WebUI.delay(5)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Graphs/WasteMeterUnitDisplayedOnGraph')), "lbs", false)
-		int j=10
-		(1..9).each{
+		int j=9
+		(1..8).each{
 			String reading1 = dataExcelTemplate.getCellData(sheetName, "Reading2", j)
 			WebUI.focus(findTestObject('Object Repository/DataInput/CreateMeterBuilding/WasteDivertedGraph',[index: it]))
 			String[] reading=WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ToolTipGraph')).split(" ")
@@ -363,8 +363,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	}
 
 	public void getGraphReading(String sheetName, String colName){
-		int j=10
-		(1..9).each{
+		int j=9
+		(1..8).each{
 
 			String reading1 = dataExcelTemplate.getCellData(sheetName, colName, j)
 			WebUI.focus(findTestObject('Object Repository/DataInput/CreateMeterBuilding/WasteGeneratedGraph',[index: it]))

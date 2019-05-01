@@ -391,49 +391,49 @@
    <testCaseLink>
       <guid>659aca15-ffce-4403-a35e-8f20cfd08afc</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/MyCities/LEEDForCities/VerifyBillingReceiptAmountTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>03b0b076-4891-46f1-b779-aae045729a0b</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDOnlineCity/NavigateToCityLEEDOnlineTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>018407ca-1606-4dbb-9cd4-2948cbde5c64</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDOnlineCity/VerifyCityDeatilsSyncDataFromArcTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>2c9ef751-361e-45e3-97d7-9ae4a8f66fd9</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDOnlineCity/VerifyAddedTeamAdministratorDetailsFromArcTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>deea3490-8acd-49f4-84db-b3df1a5dffcb</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDOnlineCity/AddNewTeamMemberFromLEEDTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>b8493cdd-4727-4345-9e67-3c77a7326880</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDOnlineCity/ChangeAuthorizationProjectAdministratorTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d44cc223-edf7-4f6f-8213-6ffe4549a1a1</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDOnlineCity/CreditTabNavigateToArc(AllAction)Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>91f8a9fc-2b5b-470d-85af-6c6924d6428d</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDOnlineCity/VerifyAddedTeamMemberFromLEEDInArcTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

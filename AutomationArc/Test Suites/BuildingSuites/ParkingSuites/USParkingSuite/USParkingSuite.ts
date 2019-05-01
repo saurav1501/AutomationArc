@@ -211,7 +211,7 @@
    <testCaseLink>
       <guid>e659d5e3-e866-4c8e-9e80-42607ba5391e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyParking/VerifyBillingReceiptTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
