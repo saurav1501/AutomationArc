@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>plaqueAnimationText</name>
+   <name>UnitTypeLeedOnline</name>
    <tag></tag>
-   <elementGuidId>d6c70b1d-73f0-440b-869f-c7f5a8b4be33</elementGuidId>
+   <elementGuidId>2198b8ce-131a-49d4-b376-a7db318617e5</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//*[@name=&quot;unitType&quot; and @value='SI']</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//p[text()='Score Animation']</value>
+         <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

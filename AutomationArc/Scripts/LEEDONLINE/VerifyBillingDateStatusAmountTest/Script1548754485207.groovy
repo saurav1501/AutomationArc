@@ -15,18 +15,7 @@ import internal.GlobalVariable as GlobalVariable
 
 try {
 	
-	
-	
-	
-	if(GlobalVariable.environment=='dev')
-	CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsLEEDOnline.billingDetailsDev'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumTwo)
-   	else
 	CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsLEEDOnline.billingDetails'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumTwo)
-   
-	
-	 
-	
-	
    
    } catch (Throwable t) {
    

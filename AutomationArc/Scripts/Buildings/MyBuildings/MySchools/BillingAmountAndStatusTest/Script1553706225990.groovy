@@ -15,11 +15,6 @@ import internal.GlobalVariable as GlobalVariable
 
 try {
 	
-	
-	
-	if(GlobalVariable.environment=='dev')
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSchools.billingStatusDev'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumEleven)
-	 else
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSchools.billingStatus'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumEleven)
 
 		

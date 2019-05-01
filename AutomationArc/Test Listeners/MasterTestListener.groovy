@@ -1,6 +1,10 @@
+import org.openqa.selenium.WebDriver
+import org.openqa.selenium.firefox.FirefoxDriver
+import org.openqa.selenium.remote.DesiredCapabilities
 import org.testng.annotations.BeforeMethod
 
 import com.arc.BaseClass.BaseClass
+import com.kms.katalon.composer.report.*
 import com.kms.katalon.core.annotation.AfterTestCase
 import com.kms.katalon.core.annotation.AfterTestSuite
 import com.kms.katalon.core.annotation.BeforeTestCase
@@ -14,9 +18,8 @@ import com.kms.katalon.core.context.TestCaseContext
 import com.kms.katalon.core.context.TestSuiteContext
 import com.kms.katalon.core.logging.KeywordLogger
 import com.kms.katalon.core.util.KeywordUtil
+import com.kms.katalon.core.webui.driver.DriverFactory
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
-import com.kms.katalon.composer.report.*
-import internal.GlobalVariable
 
 public class MasterTestListener extends BaseClass {
 	public String FailedSheet='FailedTestsSheet'

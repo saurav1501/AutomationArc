@@ -204,7 +204,13 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		WebUI.delay(3)
 		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/projectName'), ProjectName)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/selectProjectType'), prjType, true)
-		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/grossArea'),prjArea )
+		if(GlobalVariable.environment=='dev'){
+			WebUI.selectOptionByLabel(findTestObject('Object Repository/Add_Project_Details/UnitType'), 'Square kilo meters', false)
+			WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/grossArea'),'48')
+		}
+		else{
+			WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/grossArea'),prjArea )
+		}
 		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/population'),prjPopulation )
 		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/streetName'),prjAddress)
 		WebUI.delay(2)
@@ -288,7 +294,7 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		String prjState 	= data.getCellData(sheetName, "State", rowNum)
 		String prjZip 		= data.getCellData(sheetName, "Zip", rowNum)
 		String area 		= data.getCellData(sheetName, "Area", rowNum)
-		
+
 		Date date = new Date(System.currentTimeMillis())
 
 		String proName
@@ -316,12 +322,12 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/noOfParkingLevel'),parkingStructure)
 		//WebUI.click(findTestObject('Object Repository/AddProjectNewUI/spaceType'))
 		/*List<WebElement> list= driver.findElements(By.xpath("//*[@ng-repeat='type in spaceType']"))
-		int size = list.size()
-		int randonNumber = ThreadLocalRandom.current().nextInt(0, size)
-		println list.get(randonNumber).getText()
-		data.setCellData(sheetName, "SpaceType", rowNum,list.get(randonNumber).getText())
-		list.get(randonNumber).click()
-		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/ownerType'))*/
+		 int size = list.size()
+		 int randonNumber = ThreadLocalRandom.current().nextInt(0, size)
+		 println list.get(randonNumber).getText()
+		 data.setCellData(sheetName, "SpaceType", rowNum,list.get(randonNumber).getText())
+		 list.get(randonNumber).click()
+		 WebUI.click(findTestObject('Object Repository/AddProjectNewUI/ownerType'))*/
 		List<WebElement> list1= driver.findElements(By.xpath("//*[@ng-repeat='type in ownerType']"))
 		int size1 = list1.size()
 		int randonNumber1 = ThreadLocalRandom.current().nextInt(0, size1)
@@ -330,20 +336,20 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		data.setCellData(sheetName, "OwnerType", rowNum,list1.get(randonNumber1).getText())
 		/*WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/spaceType'), spaceType, true)
 		 WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/ownerType'), ownerType, true)*/
-		
+
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/organization'),ownerOrg)
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/organization'))
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Add_Project_Details/Humidity'))
 		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/ownerEmail'), ownerMail)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/ownerCountry'), ownerCountry, false)
-		
+
 		WebUI.sendKeys(findTestObject('Add_Project_Details/Area'), area)
 		WebUI.delay(1)
-		
+
 		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/streetName'), prjAddress)
 		WebUI.delay(2)
-		
+
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/cityName'), prjCity)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/countryName'), prjCountry, false)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/stateName'),prjState, false)

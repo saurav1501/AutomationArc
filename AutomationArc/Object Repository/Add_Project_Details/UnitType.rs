@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description></description>
-   <name>plaqueAnimationText</name>
+   <description>Select the Unit type either SI or IP</description>
+   <name>UnitType</name>
    <tag></tag>
-   <elementGuidId>d6c70b1d-73f0-440b-869f-c7f5a8b4be33</elementGuidId>
+   <elementGuidId>5354bc19-6da5-490c-a2a6-92573704450c</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//*[@name=&quot;unitType&quot;]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//p[text()='Score Animation']</value>
+         <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

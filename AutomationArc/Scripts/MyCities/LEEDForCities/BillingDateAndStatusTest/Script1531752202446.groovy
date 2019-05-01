@@ -29,9 +29,7 @@ import internal.GlobalVariable as GlobalVariable
 
 try{
 	
-	if(GlobalVariable.environment=='dev')
-	CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsLEEDOnline.billingDetailsDev'(GlobalVariable.CitySheet, GlobalVariable.rowNumTwo)
-	else
+	
 	CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsLEEDOnline.billingDetails'(GlobalVariable.CitySheet, GlobalVariable.rowNumTwo)
 
 

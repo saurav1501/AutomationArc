@@ -31,3 +31,4 @@ import internal.GlobalVariable as GlobalVariable
 		e1.setStackTrace(t.getStackTrace())
 		e1.printStackTrace()
 	}
+	

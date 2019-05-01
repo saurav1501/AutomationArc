@@ -29,10 +29,6 @@ import internal.GlobalVariable as GlobalVariable
 
 try{
 	
-	
-	if(GlobalVariable.environment=='dev')
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.billingStatusDev'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumFive)
- else
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.billingStatus'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumFive)
 
 
