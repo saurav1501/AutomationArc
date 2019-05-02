@@ -314,7 +314,6 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		String ProjectName = proName +formatarDate.format(date)
 		data.setCellData(sheetName,"ProjectName", rowNum, ProjectName)
 
-		navigation.clickAddProject()
 		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/projectName'), ProjectName)
 		WebUI.delay(1)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/selectProjectType'),prjRating,false )

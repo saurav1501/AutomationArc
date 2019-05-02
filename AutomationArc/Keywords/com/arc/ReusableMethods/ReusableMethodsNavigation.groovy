@@ -62,6 +62,10 @@ public class ReusableMethodsNavigation {
 		String postNavigationLoginText = WebUI.getText(findTestObject('Page_Arc dashboard/span_My Parking'))
 		WebUI.verifyMatch(postNavigationLoginText,'My Parking',false)
 	}
+	
+	
+
+	
 	@Keyword
 	public void navigateToPortfolio(){
 		WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)

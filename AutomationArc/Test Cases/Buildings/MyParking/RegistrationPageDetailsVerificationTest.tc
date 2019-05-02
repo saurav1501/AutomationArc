@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>•	verify if  option “Project Type” Buildings – Parking (Parksmart)” should be available .
+•	verify if Parksmart logo displays for the parking project registration page .
+•	verify if “Space Type” should not display for parking. 
+•	verify if  “Gross Area” and “Unit Type” fields. Under the “Gross Area” field include the following text “Enter total parking structure area”</description>
+   <name>RegistrationPageDetailsVerificationTest</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>2b6a6e9a-d745-4676-b9d4-faf79102be36</testCaseGuid>
+</TestCaseEntity>

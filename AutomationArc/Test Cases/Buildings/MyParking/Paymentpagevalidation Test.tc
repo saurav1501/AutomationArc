@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>•	verify if  “Let's GET STARTED” Box should not display in the payment page.
+•	verify if  “Selected ” Box should not display in the payment page.</description>
+   <name>Paymentpagevalidation Test</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>674aaff4-907a-4298-a494-936e005a6084</testCaseGuid>
+</TestCaseEntity>

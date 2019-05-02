@@ -1848,6 +1848,14 @@ def static "com.arc.ReusableMethods.ReusableMethodsMeasuresParking.contactHyperl
     (new com.arc.ReusableMethods.ReusableMethodsMeasuresParking()).contactHyperlink()
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsMeasuresParking.PaymentPageTextNotVisible"() {
+    (new com.arc.ReusableMethods.ReusableMethodsMeasuresParking()).PaymentPageTextNotVisible()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsMeasuresParking.RegPageValidation"() {
+    (new com.arc.ReusableMethods.ReusableMethodsMeasuresParking()).RegPageValidation()
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsMeasuresParking.toolTip"() {
     (new com.arc.ReusableMethods.ReusableMethodsMeasuresParking()).toolTip()
 }

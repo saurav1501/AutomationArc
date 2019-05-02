@@ -1653,6 +1653,24 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyParking/AddNewProjectTest</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>2f77e7d7-ed36-4da0-9d65-397284c3289d</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>46a8e663-3863-4a79-9c08-217612bf0088</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>e2266d4e-8ce5-4f0b-aa49-f649b9216dc2</variableId>
+      </variableLink>
    </testCaseLink>
    <testCaseLink>
       <guid>1478f3cc-27c6-4fa9-a66b-bbb517b1cf91</guid>
