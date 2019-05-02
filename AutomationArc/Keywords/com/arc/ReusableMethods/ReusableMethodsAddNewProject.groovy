@@ -55,7 +55,7 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		String ProjectName = proName +prjRating +formatarDate.format(date)
 		data.setCellData(sheetName,"ProjectName", rowNum, ProjectName)
 
-		navigation.clickAddProject()
+		//navigation.clickAddProject()
 		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/projectName'), ProjectName)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/selectProjectType'), prjType, true)
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/grossArea'),prjArea )
