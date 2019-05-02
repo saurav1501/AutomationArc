@@ -6,6 +6,10 @@
    <elementGuidId>b9cdaa75-04e8-4a35-97d5-bbabd97cdbee</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>XPATH</key>
+         <value>(//button[@type='button'])[3]</value>
+      </entry>
+      <entry>
          <key>BASIC</key>
          <value>//button[@type = 'button' and (text() = '
                                                     Municipality supplied potable water
@@ -19,12 +23,8 @@
                                                     
                                                 ') and @ref_element = 'Object Repository/DataInput/MeterWater/iframe_Error Sending Feedback_']</value>
       </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>//div[@id='meter_item']/ul/li[2]/span</value>
-      </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

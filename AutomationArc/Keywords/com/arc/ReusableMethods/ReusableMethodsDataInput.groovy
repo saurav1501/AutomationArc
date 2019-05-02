@@ -4713,8 +4713,12 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/button_Municipality supplied'))
 		WebUI.delay(2)
+<<<<<<< HEAD
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/WaterScore'),30)
 
+=======
+			
+>>>>>>> f19d033c5de60c8d68c578b60ea2a748619ca299
 		WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/a_Municipality supplied reclai'))
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/WaterScore'),40)
 		WebUI.delay(40)
@@ -4728,8 +4732,9 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	public void waterScoreShouldNotrecomputemunReclaimedonsite(){
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
 		WebUI.delay(5)
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/MeterWater/svg_Municipality'),2)
-		WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/svg_Municipality'))
+		
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/MeterWater/button_Municipality supplied'),4)
+		WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/button_Municipality supplied'))
 		WebUI.delay(2)
 
 		WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/a_Reclaimed onsite'))
@@ -4742,16 +4747,13 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	}
 	@Keyword
 	public void waterScoreShouldrecomput(String sheetName){
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/MeterWater/button_Municipality supplied'),4)
+		WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/button_Municipality supplied'))
 		WebUI.delay(2)
-		WebUI.click(findTestObject('DataInput/MeterWater/Reclaimed onsite'))
-		WebUI.delay(3)
 
 		WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/Municipality'))
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/WaterScore'),40)
 		WebUI.delay(40)
-
-		/*WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/a_Municipality supplied potabl'))
-		 WebUI.delay(5)*/
 
 		/********************Changing to the default score of water ***********************************************/
 		WebUI.scrollToElement(findTestObject('PerformanceScore/DataInput/WaterScore'),5)
