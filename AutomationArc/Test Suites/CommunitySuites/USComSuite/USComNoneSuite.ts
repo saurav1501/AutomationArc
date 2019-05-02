@@ -137,12 +137,6 @@
       <testCaseId>Test Cases/MyCommunities/CommunitiesNone/VerifyAndDownloadBillingReceiptTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>725daec2-6b74-4fde-b18f-31161b92565c</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/MyCommunities/CommunitiesNone/VerifyBillingReceiptTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>720678b5-60ad-4d1f-a923-89beb1dbdf74</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

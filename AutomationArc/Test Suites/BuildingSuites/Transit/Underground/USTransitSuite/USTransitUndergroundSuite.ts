@@ -299,18 +299,6 @@
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/PayNowSubmitReviewPaymentUSTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>5dd3f524-a9ab-4f89-a0b8-2399882b9b30</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/VerifyBillingReceiptTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>3c831e31-c089-4b7e-875c-07996c818997</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/VerifyReviewBillingDetailsTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>d1a44cdc-1ad6-4e88-a1ca-b8820e5d4a41</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

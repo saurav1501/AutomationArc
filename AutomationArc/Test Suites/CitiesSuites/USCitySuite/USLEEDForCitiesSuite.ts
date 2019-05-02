@@ -389,12 +389,6 @@
       <testCaseId>Test Cases/MyCities/LEEDForCities/AppVerifyAllUninstalledAppRemovedFromAddSupportingSectionTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>659aca15-ffce-4403-a35e-8f20cfd08afc</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/MyCities/LEEDForCities/VerifyBillingReceiptAmountTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>03b0b076-4891-46f1-b779-aae045729a0b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
