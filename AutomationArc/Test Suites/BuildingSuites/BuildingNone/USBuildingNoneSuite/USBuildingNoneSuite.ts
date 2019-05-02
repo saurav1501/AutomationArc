@@ -440,7 +440,7 @@
       <guid>6a69e25e-51ca-4c9d-b41e-288cc1853dfc</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/CertiVerifyCertificationDetailsForNotCertfiedProjectsTest.java</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/CertiVerifyCertificationDetailsForNotCertfiedProjectsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>a6bc9c54-6959-4f5d-87b0-201a5fe93d61</guid>
@@ -663,18 +663,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/AgreementVerifyServiceAgreementPdfDetailsTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>ed3ffc72-97e0-4521-af03-5784fc24ca8f</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/VerifyBillingReceiptTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>856a7eca-dab0-41a4-9b25-dcfca8e61325</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/VerifyReviewBillingDetailsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>19299410-af74-4512-956e-f5b6b5c783f9</guid>

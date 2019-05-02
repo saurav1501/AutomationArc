@@ -1412,7 +1412,7 @@
       <guid>6a69e25e-51ca-4c9d-b41e-288cc1853dfc</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/CertiVerifyCertificationDetailsForNotCertfiedProjectsTest.java</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/CertiVerifyCertificationDetailsForNotCertfiedProjectsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>96a6fdbc-8a7f-4ad0-8164-09d0f0cecb9e</guid>

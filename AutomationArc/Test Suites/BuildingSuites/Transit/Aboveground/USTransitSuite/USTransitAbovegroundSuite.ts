@@ -905,18 +905,6 @@
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/TotalCertificationDetailsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>e1a6bb2b-28a8-482f-bebc-2a244d56834e</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/VerifyBillingReceiptTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>2c9e7a74-a5a4-4189-b63c-3ac0eab5a209</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/VerifyReviewBillingDetailsTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>589ccd43-957f-4242-9ebb-8782bc512e8f</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

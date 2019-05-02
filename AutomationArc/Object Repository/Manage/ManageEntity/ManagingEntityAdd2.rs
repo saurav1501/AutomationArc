@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//table[@id='manage-project-details']/tbody/tr[16]/td[2]/input</value>
+         <value>//*[@ng-model=&quot;projectInfo.managEntityAdd2&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

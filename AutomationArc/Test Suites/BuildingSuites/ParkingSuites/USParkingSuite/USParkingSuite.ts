@@ -221,12 +221,15 @@
       <testCaseId>Test Cases/Common/Team/TeamEditRoleMemberToArcAdministratorTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+<<<<<<< HEAD
       <guid>e659d5e3-e866-4c8e-9e80-42607ba5391e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyParking/VerifyBillingReceiptTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+=======
+>>>>>>> 8ba2370abad7f6b7cc9d11f2720cad2ac7609b83
       <guid>74f4e383-04cd-4b7c-ba76-2223680da409</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

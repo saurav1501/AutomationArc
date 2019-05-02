@@ -92,7 +92,7 @@
       <guid>6b852d4d-8e61-4c10-b1a1-bca96a45e5bc</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/LEEDONLINE/DataInput/UploadArcDataTemplateLEEDV4.1Test</testCaseId>
+      <testCaseId>Test Cases/LEEDONLINE/DataInput/UploadArcDataTemplateLEEDNewV4Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>712ce288-3e0e-4195-8406-27932017a597</guid>

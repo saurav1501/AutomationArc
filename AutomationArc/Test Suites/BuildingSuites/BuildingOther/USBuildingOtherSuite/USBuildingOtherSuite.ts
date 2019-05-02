@@ -365,22 +365,10 @@
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/SettingVerifyLobbySurveyBtnRemainOnEvenAfterNavigatingFromOtherpageTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>868c3ce8-6260-455d-bf2c-03f515908ab3</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyBillingReceiptTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>97e07fbb-ee08-475c-a4c1-5985bd6af479</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/SettingVerifyLobbySurveyBtnAllowUserToSubmitSurveyManyTimesTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>9fc8bd4e-9e06-4292-91b4-249af7c8202d</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyReviewBillingDetailsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>adaa1d95-6f0e-4b40-8565-548561167d7a</guid>
