@@ -1100,7 +1100,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		WebUI.focus(findTestObject('Analytics/TotalPage/engScore7'))
 		WebUI.delay(1)
 		String engScore7 = WebUI.getText(findTestObject('Analytics/TotalPage/ScoreText'))
-		String engScorenumberOnly7= engScore1.replaceAll("[^0-9]", "")
+		String engScorenumberOnly7= engScore7.replaceAll("[^0-9]", "")
 		println engScorenumberOnly7
 		int engScoreInt7= Integer.parseInt(engScorenumberOnly7)
 
@@ -1170,17 +1170,21 @@ public class ReusableMethodsAnalytics extends BaseClass{
 				data.setCellData(sheetName,"energyScore", 3, loweset)
 			}
 		}
-		float energyAvgcal = (engScoreInt1 + engScoreInt2 +engScoreInt3 +engScoreInt4 +engScoreInt5 + engScoreInt6 + engScoreInt7 + engScoreInt8 + engScoreInt9 + engScoreInt10 + engScoreInt11 + engScoreInt12 ) / 12
-		String energyAvgCal = Math.round(energyAvgcal)
-
+		double energyAvgcal = (engScoreInt1 + engScoreInt2 +engScoreInt3 +engScoreInt4 +engScoreInt5 + engScoreInt6 + engScoreInt7 + engScoreInt8 + engScoreInt9 + engScoreInt10 + engScoreInt11 + engScoreInt12 ) / 12
+	//	double ctransavgscore = Double.parseDouble(energyAvgcal)
+		BigDecimal ctransAvgscore = new BigDecimal(energyAvgcal)
+		ctransAvgscore = ctransAvgscore.setScale(2, RoundingMode.HALF_UP)
+		String AvgscoreCal = ctransAvgscore.toString()
+		
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
 		WebUI.delay(5)
 
 		String UIEngAvgScore = WebUI.getText(findTestObject('Analytics/TotalPage/TotalEngAvg'))
-		double UIEngAvgscore = Double.parseDouble(UIEngAvgScore)
-		int UiEngAvgScore = Math.round(UIEngAvgscore)
-		String UIengAvgScore = UiEngAvgScore.toString()
-
+		double UItransAvgscore = Double.parseDouble(UIEngAvgScore)
+		BigDecimal UtransAvgscore = new BigDecimal(UItransAvgscore)
+		UtransAvgscore = UtransAvgscore.setScale(2, RoundingMode.HALF_UP)
+		String Avgscore = UtransAvgscore.toString()
+		
 		String cehighScore = data.getCellData(sheetName,"energyScore",2)
 		String celowScore = data.getCellData(sheetName,"energyScore",3)
 
@@ -1189,7 +1193,10 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		/****************************Verifying lowest Energy Score **************************************************/
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Analytics/TotalPage/TotalEngLow')), celowScore, true,FailureHandling.CONTINUE_ON_FAILURE)
 		/****************************Verifying Average Energy Score **************************************************/
-		WebUI.verifyMatch(UIengAvgScore,energyAvgCal,true,FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(Avgscore,AvgscoreCal,true,FailureHandling.CONTINUE_ON_FAILURE)
+		
+		
+	
 	}
 	@Keyword
 	public void waterlocalAvgGlobalAvg() {
@@ -1275,7 +1282,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		WebUI.focus(findTestObject('Analytics/TotalPage/waterScore7'))
 		WebUI.delay(1)
 		String waterScore7 = WebUI.getText(findTestObject('Analytics/TotalPage/ScoreText'))
-		String waterScorenumberOnly7= waterScore1.replaceAll("[^0-9]", "")
+		String waterScorenumberOnly7= waterScore7.replaceAll("[^0-9]", "")
 		println waterScorenumberOnly7
 		int waterScoreInt7= Integer.parseInt(waterScorenumberOnly7)
 
@@ -1345,17 +1352,21 @@ public class ReusableMethodsAnalytics extends BaseClass{
 				data.setCellData(sheetName,"waterScore", 3, loweset)
 			}
 		}
-		float waterAvgcal = (waterScoreInt1 + waterScoreInt2 +waterScoreInt3 +waterScoreInt4 +waterScoreInt5 + waterScoreInt6 + waterScoreInt7 + waterScoreInt8 + waterScoreInt9 + waterScoreInt10 + waterScoreInt11 + waterScoreInt12 ) / 12
-		String waterAvgCal = Math.round(waterAvgcal)
+		double waterAvgcal = (waterScoreInt1 + waterScoreInt2 +waterScoreInt3 +waterScoreInt4 +waterScoreInt5 + waterScoreInt6 + waterScoreInt7 + waterScoreInt8 + waterScoreInt9 + waterScoreInt10 + waterScoreInt11 + waterScoreInt12 ) / 12
+		//double ctransavgscore = Double.parseDouble(waterAvgcal)
+		BigDecimal ctransAvgscore = new BigDecimal(waterAvgcal)
+		ctransAvgscore = ctransAvgscore.setScale(2, RoundingMode.HALF_UP)
+		String AvgscoreCal = ctransAvgscore.toString()
 
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
 		WebUI.delay(5)
 
 		String UIwaterAvgScore = WebUI.getText(findTestObject('Analytics/TotalPage/TotalwaterAvg'))
-		double UIwaterAvgscore = Double.parseDouble(UIwaterAvgScore)
-		int UiwaterAvgScore = Math.round(UIwaterAvgscore)
-		String UIwaterAvgScor = UiwaterAvgScore.toString()
-
+		double UItransAvgscore = Double.parseDouble(UIwaterAvgScore)
+		BigDecimal UtransAvgscore = new BigDecimal(UItransAvgscore)
+		UtransAvgscore = UtransAvgscore.setScale(2, RoundingMode.HALF_UP)
+		String Avgscore = UtransAvgscore.toString()
+				
 		String cehighScore = data.getCellData(sheetName,"waterScore",2)
 		String celowScore = data.getCellData(sheetName,"waterScore",3)
 
@@ -1364,7 +1375,10 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		/****************************Verifying lowest water Score **************************************************/
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Analytics/TotalPage/TotalwaterLow')), celowScore, true,FailureHandling.CONTINUE_ON_FAILURE)
 		/****************************Verifying Average water Score **************************************************/
-		WebUI.verifyMatch(UIwaterAvgScor,waterAvgCal,true,FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(Avgscore,AvgscoreCal,true,FailureHandling.CONTINUE_ON_FAILURE)
+		
+		
+
 	}
 
 
@@ -1453,7 +1467,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		WebUI.focus(findTestObject('Analytics/TotalPage/wasteScore7'))
 		WebUI.delay(1)
 		String wasteScore7 = WebUI.getText(findTestObject('Analytics/TotalPage/ScoreText'))
-		String wasteScorenumberOnly7= wasteScore1.replaceAll("[^0-9]", "")
+		String wasteScorenumberOnly7= wasteScore7.replaceAll("[^0-9]", "")
 		println wasteScorenumberOnly7
 		int wasteScoreInt7= Integer.parseInt(wasteScorenumberOnly7)
 
@@ -1523,16 +1537,20 @@ public class ReusableMethodsAnalytics extends BaseClass{
 				data.setCellData(sheetName,"wasteScore", 3, loweset)
 			}
 		}
-		float wasteAvgcal = (wasteScoreInt1 + wasteScoreInt2 +wasteScoreInt3 +wasteScoreInt4 +wasteScoreInt5 + wasteScoreInt6 + wasteScoreInt7 + wasteScoreInt8 + wasteScoreInt9 + wasteScoreInt10 + wasteScoreInt11 + wasteScoreInt12 ) / 12
-		String wasteAvgCal = Math.round(wasteAvgcal)
+		double wasteAvgcal = (wasteScoreInt1 + wasteScoreInt2 +wasteScoreInt3 +wasteScoreInt4 +wasteScoreInt5 + wasteScoreInt6 + wasteScoreInt7 + wasteScoreInt8 + wasteScoreInt9 + wasteScoreInt10 + wasteScoreInt11 + wasteScoreInt12 ) / 12
+		//double ctransavgscore = Double.parseDouble(wasteAvgcal)
+		BigDecimal ctransAvgscore = new BigDecimal(wasteAvgcal)
+		ctransAvgscore = ctransAvgscore.setScale(2, RoundingMode.HALF_UP)
+		String AvgscoreCal = ctransAvgscore.toString()
 
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
 		WebUI.delay(5)
 
 		String UIwasteAvgScore = WebUI.getText(findTestObject('Analytics/TotalPage/TotalwasteAvg'))
-		double UIwasteAvgscore = Double.parseDouble(UIwasteAvgScore)
-		int UiwasteAvgScore = Math.round(UIwasteAvgscore)
-		String UIWasteAvgScore = UiwasteAvgScore.toString()
+	    double UItransAvgscore = Double.parseDouble(UIwasteAvgScore)
+		BigDecimal UtransAvgscore = new BigDecimal(UItransAvgscore)
+		UtransAvgscore = UtransAvgscore.setScale(2, RoundingMode.HALF_UP)
+		String Avgscore = UtransAvgscore.toString()
 
 		String cehighScore = data.getCellData(sheetName,"wasteScore",2)
 		String celowScore = data.getCellData(sheetName,"wasteScore",3)
@@ -1542,7 +1560,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		/****************************Verifying lowest waste Score **************************************************/
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Analytics/TotalPage/TotalwasteLow')), celowScore, true,FailureHandling.CONTINUE_ON_FAILURE)
 		/****************************Verifying Average waste Score **************************************************/
-		WebUI.verifyMatch(UIWasteAvgScore,wasteAvgCal,true,FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(Avgscore,AvgscoreCal,true,FailureHandling.CONTINUE_ON_FAILURE)
 	}
 
 	@Keyword
@@ -1704,7 +1722,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		WebUI.focus(findTestObject('Analytics/TotalPage/transScore7'))
 		WebUI.delay(1)
 		String transScore7 = WebUI.getText(findTestObject('Analytics/TotalPage/ScoreText'))
-		String transScorenumberOnly7= transScore1.replaceAll("[^0-9]", "")
+		String transScorenumberOnly7= transScore7.replaceAll("[^0-9]", "")
 		println transScorenumberOnly7
 		int transScoreInt7= Integer.parseInt(transScorenumberOnly7)
 
@@ -1775,17 +1793,22 @@ public class ReusableMethodsAnalytics extends BaseClass{
 				data.setCellData(sheetName,"transportation", 3, loweset)
 			}
 		}
-		float transAvgcal = (transScoreInt1 + transScoreInt2 +transScoreInt3 +transScoreInt4 +transScoreInt5 + transScoreInt6 + transScoreInt7 + transScoreInt8 + transScoreInt9 + transScoreInt10 + transScoreInt11 + transScoreInt12 ) / 12
-		String transAvgCal = Math.round(transAvgcal)
+		double transAvgcal = (transScoreInt1 + transScoreInt2 +transScoreInt3 +transScoreInt4 +transScoreInt5 + transScoreInt6 + transScoreInt7 + transScoreInt8 + transScoreInt9 + transScoreInt10 + transScoreInt11 + transScoreInt12 ) / 12
+		//double ctransavgscore = Double.parseDouble(transAvgcal)
+		BigDecimal ctransAvgscore = new BigDecimal(transAvgcal)
+		ctransAvgscore = ctransAvgscore.setScale(2, RoundingMode.HALF_UP)
+		String AvgscoreCal = ctransAvgscore.toString()
+		
 
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
 		WebUI.delay(5)
 
 		String UItransAvgScore = WebUI.getText(findTestObject('Analytics/TotalPage/TotaltransAvg'))
 		double UItransAvgscore = Double.parseDouble(UItransAvgScore)
-		int UitransAvgScore = Math.round(UItransAvgscore)
-		String UITransAvgScore = UitransAvgScore.toString()
-
+		BigDecimal UtransAvgscore = new BigDecimal(UItransAvgscore)
+		UtransAvgscore = UtransAvgscore.setScale(2, RoundingMode.HALF_UP)
+		String Avgscore = UtransAvgscore.toString()
+		
 		String cehighScore = data.getCellData(sheetName,"transportation",2)
 		String celowScore = data.getCellData(sheetName,"transportation",3)
 
@@ -1794,7 +1817,12 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		/****************************Verifying lowest trans Score **************************************************/
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Analytics/TotalPage/TotaltransLow')), celowScore, true,FailureHandling.CONTINUE_ON_FAILURE)
 		/****************************Verifying Average trans Score **************************************************/
-		WebUI.verifyMatch(UITransAvgScore,transAvgCal,true,FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(Avgscore,AvgscoreCal,true,FailureHandling.CONTINUE_ON_FAILURE)
+		
+		
+	
+
+		
 	}
 
 	@Keyword
@@ -1880,7 +1908,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		WebUI.focus(findTestObject('Analytics/TotalPage/humScore7'))
 		WebUI.delay(1)
 		String humScore7 = WebUI.getText(findTestObject('Analytics/TotalPage/ScoreText'))
-		String humScorenumberOnly7= humScore1.replaceAll("[^0-9]", "")
+		String humScorenumberOnly7= humScore7.replaceAll("[^0-9]", "")
 		println humScorenumberOnly7
 		int humScoreInt7= Integer.parseInt(humScorenumberOnly7)
 
@@ -1950,16 +1978,24 @@ public class ReusableMethodsAnalytics extends BaseClass{
 				data.setCellData(sheetName,"humanExperience", 3, loweset)
 			}
 		}
-		float humAvgcal = (humScoreInt1 + humScoreInt2 +humScoreInt3 +humScoreInt4 +humScoreInt5 + humScoreInt6 + humScoreInt7 + humScoreInt8 + humScoreInt9 + humScoreInt10 + humScoreInt11 + humScoreInt12 ) / 12
-		String humAvgCal = Math.round(humAvgcal)
+		double humAvgcal = (humScoreInt1 + humScoreInt2 +humScoreInt3 +humScoreInt4 +humScoreInt5 + humScoreInt6 + humScoreInt7 + humScoreInt8 + humScoreInt9 + humScoreInt10 + humScoreInt11 + humScoreInt12 ) 	
+		println humAvgcal
+		double humAvgcal1= humAvgcal/12
+		
+		BigDecimal chumAvgcal = new BigDecimal(humAvgcal1)
+		chumAvgcal = chumAvgcal.setScale(2, RoundingMode.HALF_UP)
+		String AvgscoreCal = chumAvgcal.toString()
 
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
 		WebUI.delay(5)
 
-		String UIhumAvgScore = WebUI.getText(findTestObject('Analytics/TotalPage/TotalhumAvg'))
-		double UIhumAvgscore = Double.parseDouble(UIhumAvgScore)
-		int UihumAvgScore = Math.round(UIhumAvgscore)
-		String UIHumAvgScore = UihumAvgScore.toString()
+		String UhumAvgScore = WebUI.getText(findTestObject('Analytics/TotalPage/TotalhumAvg'))
+		double humavgscore = Double.parseDouble(UhumAvgScore)
+		BigDecimal humAvgscore = new BigDecimal(humavgscore)
+		humAvgscore = humAvgscore.setScale(2, RoundingMode.HALF_UP)
+		String UAvgscore = humAvgscore.toString()
+		
+
 
 		String cehighScore = data.getCellData(sheetName,"humanExperience",2)
 		String celowScore = data.getCellData(sheetName,"humanExperience",3)
@@ -1969,7 +2005,9 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		/****************************Verifying lowest hum Score **************************************************/
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Analytics/TotalPage/TotalhumLow')), celowScore, true,FailureHandling.CONTINUE_ON_FAILURE)
 		/****************************Verifying Average hum Score **************************************************/
-		WebUI.verifyMatch(UIHumAvgScore,humAvgCal,true,FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(UAvgscore,AvgscoreCal,true,FailureHandling.CONTINUE_ON_FAILURE)
+		
+		
 	}
 
 	@Keyword
