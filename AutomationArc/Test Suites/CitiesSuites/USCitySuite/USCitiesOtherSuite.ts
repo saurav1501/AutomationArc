@@ -154,7 +154,6 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/MyCities/CitiesOther/ScoreVersionVerificationTest</testCaseId>
    </testCaseLink>
-<<<<<<< HEAD
    <testCaseLink>
       <guid>547a12a4-c153-4579-855a-80f86c66b063</guid>
       <isReuseDriver>false</isReuseDriver>
@@ -167,6 +166,5 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/MyCities/CitiesOther/VerifyReviewAmountBillingDetailsTest</testCaseId>
    </testCaseLink>
-=======
->>>>>>> 8ba2370abad7f6b7cc9d11f2720cad2ac7609b83
+
 </TestSuiteEntity>
