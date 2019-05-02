@@ -1424,7 +1424,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void projectStateNotAvaliable(){
-		WebUI.delay(1)
+		WebUI.delay(10)
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
 		WebUI.delay(3)
 
@@ -1434,8 +1434,8 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(4)
 		/****************Navigating to Manage project section *********************************/
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
-		WebUI.delay(3)
-		WebUI.verifyOptionNotSelectedByLabel(findTestObject('Object Repository/Manage/CityCom/New/ManageState'), 'Alabama', false, 4, FailureHandling.STOP_ON_FAILURE)
+		WebUI.delay(6)
+		WebUI.verifyOptionSelectedByLabel(findTestObject('Object Repository/Manage/CityCom/New/ManageState'), 'Alabama', false, 4, FailureHandling.STOP_ON_FAILURE)
 
 
 	}

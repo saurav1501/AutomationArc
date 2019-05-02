@@ -669,6 +669,26 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 	}
 
 	@Keyword
+	public void PaymentPageTextNotVisible(){
+	WebUI.delay(3)
+	WebUI.verifyElementNotVisible(findTestObject('Add_Project_Details/Par/p_LETS GET STARTED'))
+	WebUI.verifyElementNotPresent(findTestObject('Add_Project_Details/Par/p_Select a term to access the'),3)
+	
+}
+	
+	@Keyword
+	public void RegPageValidation(){
+	
+	WebUI.delay(3)
+	WebUI.verifyOptionSelectedByLabel(findTestObject('Object Repository/AddProjectNewUI/selectProjectType'),'Buildings - Parking (Parksmart)', false, 5)
+	WebUI.verifyElementPresent(findTestObject('Add_Project_Details/Par/img'),3)
+	WebUI.verifyElementPresent(findTestObject('Add_Project_Details/Par/Area'), 2)
+	WebUI.verifyElementPresent(findTestObject('Add_Project_Details/Par/Unit'), 2)
+	WebUI.verifyElementNotPresent(findTestObject('Add_Project_Details/Par/SpaceType'), 4)
+		
+	}
+	
+	@Keyword
 	public void toolTip()throws IOException, InterruptedException {
 		WebUI.delay(7)
 		WebUI.click(findTestObject('Page_Arc dashboard/span_A1 - Parking Pricing'))

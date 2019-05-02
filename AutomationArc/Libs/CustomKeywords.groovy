@@ -7,8 +7,6 @@ import java.lang.String
 
 import com.kms.katalon.core.testobject.TestObject
 
-import com.kms.katalon.core.model.FailureHandling
-
 import java.sql.Connection
 
 
@@ -1850,28 +1848,20 @@ def static "com.arc.ReusableMethods.ReusableMethodsMeasuresParking.contactHyperl
     (new com.arc.ReusableMethods.ReusableMethodsMeasuresParking()).contactHyperlink()
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsMeasuresParking.PaymentPageTextNotVisible"() {
+    (new com.arc.ReusableMethods.ReusableMethodsMeasuresParking()).PaymentPageTextNotVisible()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsMeasuresParking.RegPageValidation"() {
+    (new com.arc.ReusableMethods.ReusableMethodsMeasuresParking()).RegPageValidation()
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsMeasuresParking.toolTip"() {
     (new com.arc.ReusableMethods.ReusableMethodsMeasuresParking()).toolTip()
 }
 
 def static "com.arc.ReusableMethods.ReusableMethodsMeasuresParking.permissionRequestsTeamMan"() {
     (new com.arc.ReusableMethods.ReusableMethodsMeasuresParking()).permissionRequestsTeamMan()
-}
-
-def static "com.katalon.plugin.keyword.calendar.SetDateCalendarKeyword.setDate"(
-    	TestObject to	
-     , 	int day	
-     , 	int month	
-     , 	int year	
-     , 	int slideTimeOut	
-     , 	FailureHandling flowControl	) {
-    (new com.katalon.plugin.keyword.calendar.SetDateCalendarKeyword()).setDate(
-        	to
-         , 	day
-         , 	month
-         , 	year
-         , 	slideTimeOut
-         , 	flowControl)
 }
 
 def static "com.arc.BaseClass.CommonMethod.clickCancel"() {

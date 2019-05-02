@@ -17,6 +17,12 @@
       <testCaseId>Test Cases/Buildings/MyParking/LoginWithParkingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>02f9a3c6-e3a3-4fd9-bbe5-fd9b9b6e12ab</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyParking/RegistrationPageDetailsVerificationTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>2d20b961-566b-45da-b38b-314a23b39ca0</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -39,6 +45,12 @@
          <value></value>
          <variableId>e2266d4e-8ce5-4f0b-aa49-f649b9216dc2</variableId>
       </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>a8c61f3b-3736-496f-9685-f0585c492ece</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyParking/Paymentpagevalidation Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>da4bdce1-a704-4a3d-bcfb-8d2131706d95</guid>
@@ -209,15 +221,15 @@
       <testCaseId>Test Cases/Common/Team/TeamEditRoleMemberToArcAdministratorTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>e659d5e3-e866-4c8e-9e80-42607ba5391e</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyParking/VerifyBillingReceiptTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>74f4e383-04cd-4b7c-ba76-2223680da409</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Common/Team/TeamAuthLevelChangeNoneToMemberUserTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>48c6fadc-cfce-4633-9ec3-deb6856dda7e</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Common/Team/TeamVerifyWhenAuthLevelNoneUserNotAbleToAccessProjectTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
