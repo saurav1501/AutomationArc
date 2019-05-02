@@ -1959,6 +1959,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/TestWaterMeter'))
 		WebUI.delay(5)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/MeterDetails'))
+		WebUI.delay(4)
 		WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/EditMeterName'), "Test Water Meter New")
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/MeterDetails'))
 		WebUI.delay(5)
@@ -1968,6 +1969,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(5)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/EditFuelSource'), 20)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/EditFuelSource'))
+		WebUI.delay(2)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/MunicipalitySuppliedReclaimWater'), 5)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/MunicipalitySuppliedReclaimWater'))
 		WebUI.delay(5)
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/EditMeterName'),'value'),"Test Water Meter New")
@@ -4713,12 +4716,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/button_Municipality supplied'))
 		WebUI.delay(2)
-<<<<<<< HEAD
-		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/WaterScore'),30)
 
-=======
-			
->>>>>>> f19d033c5de60c8d68c578b60ea2a748619ca299
 		WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/a_Municipality supplied reclai'))
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/WaterScore'),40)
 		WebUI.delay(40)
