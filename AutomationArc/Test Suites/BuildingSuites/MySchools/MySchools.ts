@@ -290,7 +290,7 @@
       <guid>de20dc33-dfc6-4df1-afb4-ff7de07c01c8</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/MySchools/ValidateHumaExperienceDataForv4.1Test</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyBuildings/MySchools/ValidateHumaExperienceDataForNewV4Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>b8018fec-f86a-4fb7-89e1-70249c94252c</guid>

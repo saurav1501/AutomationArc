@@ -95,11 +95,13 @@ public class ReusableMethodsManage extends BaseClass {
 		String prjState 	= data.getCellData(sheetName, "State", rowNum)
 		String population 	= data.getCellData(sheetName, "Population", rowNum)
 
-
 		WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/manageProject'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DashboardNavigationNewUI/projectPageProjectTextVerification'), 20)
 		String projectTextVerification= WebUI.getText(findTestObject('Object Repository/DashboardNavigationNewUI/projectPageProjectTextVerification'))
 		WebUI.verifyMatch("Project", projectTextVerification, false)
+		if((WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectName'),'value').equalsIgnoreCase(''))){
+			WebUI.delay(10)
+		}
 		String projectName= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectName'),'value')
 		String projectId= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectId'),'value')
 		String projectUnit= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/unitType'),'value')
@@ -2094,9 +2096,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(5)
 		//ReusableMethodsLogin.waitForPageToLoadCompletely(60)
 		WebUI.click(findTestObject('Object Repository/USGBCAccount/ClickOnOrderHistory'))
-
-		ReusableMethodsLogin.waitForPageToLoad(60)
-		WebUI.delay(4)
+		WebUI.delay(20)
 		WebUI.click(findTestObject('Object Repository/USGBCAccount/SearchBarUSGBC'))
 		WebUI.sendKeys(findTestObject('Object Repository/USGBCAccount/SearchBarUSGBC'),orderId )
 		WebUI.delay(1)

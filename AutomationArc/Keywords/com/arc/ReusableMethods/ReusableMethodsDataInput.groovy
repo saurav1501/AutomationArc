@@ -3972,8 +3972,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(2)
 	}
 
-	
-	
+
+
 	@Keyword
 	public void devsurveySubmit(String sheetName) throws IOException, InterruptedException, Exception{
 		WebUI.delay(5)
@@ -4714,7 +4714,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/button_Municipality supplied'))
 		WebUI.delay(2)
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/WaterScore'),30)
-		
+
 		WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/a_Municipality supplied reclai'))
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/WaterScore'),40)
 		WebUI.delay(40)
