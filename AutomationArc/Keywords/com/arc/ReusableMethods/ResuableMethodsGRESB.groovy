@@ -286,13 +286,16 @@ public class ResuableMethodsGRESB extends BaseClass {
 		WebUI.delay(2)
 
 		WebUI.click(findTestObject('Object Repository/Portfolio/GRESB/input_Click here_gresb-search'))
-		WebUI.delay(1)
+		WebUI.delay(2)
+		
+		WebUI.click(findTestObject('Object Repository/Portfolio/GRESB/input_Click here_gresb-search'))
+		WebUI.delay(2)
 
 		WebUI.sendKeys(findTestObject('Object Repository/Portfolio/GRESB/input_Click here_gresb-search'), OwnerName)
 		WebUI.delay(4)
 
 		WebUI.click(findTestObject('Object Repository/Portfolio/GRESB/input_Click here_gresb-search'))
-		WebUI.delay(5)
+		WebUI.delay(10)
 
 		String regMemberName = WebUI.getText(findTestObject('Object Repository/Portfolio/GRESB/Owner/OwnerOrgList'))
 		WebUI.verifyMatch(regMemberName,OwnerName,false )

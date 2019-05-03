@@ -825,19 +825,34 @@ public class ReusableMethodsAnalytics extends BaseClass{
 			double mSqarefoot = SqarefootTotal/12
 
 			BigDecimal pmOccupant = new BigDecimal(mOccupant)
-			pmOccupant = pmOccupant.setScale(4, RoundingMode.HALF_UP)
+			pmOccupant = pmOccupant.setScale(2, RoundingMode.HALF_UP)
 
 			BigDecimal pmSqarefoot = new BigDecimal(mSqarefoot)
-			pmSqarefoot = pmSqarefoot.setScale(4, RoundingMode.HALF_UP)
+			pmSqarefoot = pmSqarefoot.setScale(2, RoundingMode.HALF_UP)
 
 			String cpmOccupant =pmOccupant.toString()
 			String cpmSqarefoot =pmSqarefoot.toString()
 
 			String uOccupant = WebUI.getText(findTestObject('Analytics/yearsCal/Occupant'))
+			
+			Double UOccupant= Double.parseDouble(uOccupant)
+			BigDecimal Uoccupant = new BigDecimal(UOccupant)
+			Uoccupant = Uoccupant .setScale(2, RoundingMode.HALF_UP)
+			System.out.println(Uoccupant)
+			String UIoccupant = Uoccupant.toString()
+	
+			
 			String uSqarefoot = WebUI.getText(findTestObject('Analytics/yearsCal/Sqarefoot'))
+			Double USqarefoot= Double.parseDouble(uSqarefoot)
+			BigDecimal Usqarefoot = new BigDecimal(USqarefoot)
+			Usqarefoot = Usqarefoot .setScale(2, RoundingMode.HALF_UP)
+			System.out.println(Usqarefoot)
+			String UIsqarefoot = Usqarefoot.toString()
+			
 
-			WebUI.verifyMatch(cpmOccupant, uOccupant, false)
-			WebUI.verifyMatch(cpmSqarefoot, uSqarefoot, false)
+			WebUI.verifyMatch(UIoccupant ,cpmOccupant, false)
+			
+			WebUI.verifyMatch(UIsqarefoot ,cpmSqarefoot, false)
 
 			WebUI.selectOptionByLabel(findTestObject('Analytics/yearsCal/Peryear'), 'Per day', false, FailureHandling.STOP_ON_FAILURE)
 			WebUI.delay(3)
@@ -845,19 +860,30 @@ public class ReusableMethodsAnalytics extends BaseClass{
 			double dSqarefoot = SqarefootTotal/365
 
 			BigDecimal dpOccupant = new BigDecimal(dOccupant)
-			dpOccupant = dpOccupant.setScale(4, RoundingMode.HALF_UP)
+			dpOccupant = dpOccupant.setScale(2, RoundingMode.HALF_UP)
 
 			BigDecimal dpSqarefoot = new BigDecimal(dSqarefoot)
-			dpSqarefoot = dpSqarefoot.setScale(4, RoundingMode.HALF_UP)
+			dpSqarefoot = dpSqarefoot.setScale(2, RoundingMode.HALF_UP)
 
 			String cdOccupant =dpOccupant.toString()
 			String cdSqarefoot =dpSqarefoot.toString()
 
 			String udOccupant = WebUI.getText(findTestObject('Analytics/yearsCal/Occupant'))
+			Double uDOccupant= Double.parseDouble(udOccupant)
+			BigDecimal uDoccupant = new BigDecimal(uDOccupant)
+			uDoccupant = uDoccupant .setScale(2, RoundingMode.HALF_UP)
+			System.out.println(uDoccupant)
+			String UIDoccupant = uDoccupant.toString()
+			
 			String udSqarefoot = WebUI.getText(findTestObject('Analytics/yearsCal/Sqarefoot'))
-
-			WebUI.verifyMatch(cdOccupant, udOccupant, false)
-			WebUI.verifyMatch(cdSqarefoot, udSqarefoot, false)
+			Double uDSqarefoot= Double.parseDouble(udSqarefoot)
+			BigDecimal uDsqarefoot = new BigDecimal(uDSqarefoot)
+			uDsqarefoot = uDsqarefoot .setScale(2, RoundingMode.HALF_UP)
+			System.out.println(uDsqarefoot)
+			String UIDsqarefoot = uDsqarefoot.toString()
+			
+			WebUI.verifyMatch(UIDoccupant ,cdOccupant, false)
+			WebUI.verifyMatch(UIDsqarefoot, cdSqarefoot, false)
 		}
 	}
 	@Keyword

@@ -31,12 +31,14 @@ public class ReusableMethodsSearch extends BaseClass{
 		WebUI.setText(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'), projectId)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))
 		WebUI.delay(3)
+		WebUI.waitForElementVisible(findTestObject('Page_Arc dashboard/no_Project (1 project)'),4)
+	//	WebUI.waitForElementPresent(findTestObject('Page_Arc dashboard/no_Project (1 project)'),3)
 		String nuberOfProjects = WebUI.getText(findTestObject('Page_Arc dashboard/no_Project (1 project)'))
 		println nuberOfProjects
 		WebUI.verifyMatch(nuberOfProjects,'Project (1 project)', false)
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/search_Result'))
-		WebUI.delay(1)
+		WebUI.delay(4)
 
 	}
 
