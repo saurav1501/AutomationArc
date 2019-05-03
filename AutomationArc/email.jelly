@@ -22,7 +22,7 @@
 
 <div class="container">
 <div class="container">
-  <j:set var="spc" value="&amp;nbsp;&amp;nbsp;" />
+  <j:set var="spc" value=" " />
  <table class="table table-hover table-bordered" >
   <thead >
     <tr >
@@ -117,15 +117,14 @@
       <j:set var="changeSet" value="${build.changeSet}" />
       <j:if test="${changeSet!=null}">
         <j:set var="hadChanges" value="false" />
-       
+       <p>
+        <a href="${rooturl}${build.url}/changes"><h4>Changes</h4></a>
+          </p>
         <j:forEach var="cs" items="${changeSet.logs}" varStatus="loop">
           <j:set var="hadChanges" value="true" />
-          <h2>${cs.msgAnnotated}</h2>
+          <h4>${cs.msgAnnotated}</h4>
           <p>by <em>${cs.author}</em></p>
-          <table class="table table-hover">
-          <tr>
-        <a href="${rooturl}${build.url}/changes"><h3>Changes</h3></a>
-          </tr>
+          <table>
             <j:forEach var="p" items="${cs.affectedFiles}">
               <tr>
                 <td width="10%">${spc}${p.editType.name}</td>
@@ -174,10 +173,10 @@
                 <td class="active">
                   <tt>${packageResult.getName()}</tt>
                 </td>
-                <td class="danger">${packageResult.getFailCount()}</td>
-              <td class="success">${packageResult.getPassCount()}</td>
-              <td class="warning">${packageResult.getSkipCount()}</td>
-              <td class="active">
+                <td class="danger">&amp;nbsp;&amp;nbsp; ${packageResult.getFailCount()}</td>
+              <td class="success">&amp;nbsp;&amp;nbsp; ${packageResult.getPassCount()}</td>
+              <td class="warning"><font color="black">&amp;nbsp;&amp;nbsp;${packageResult.getSkipCount()}</font></td>
+              <td class="active"> &amp;nbsp;&amp;nbsp;
 <b>${packageResult.getPassCount()+packageResult.getFailCount()+packageResult.getSkipCount()}</b>
                 </td>
               </tr>
