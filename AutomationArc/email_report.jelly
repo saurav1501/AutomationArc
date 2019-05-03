@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define">
 <html>
@@ -15,8 +15,6 @@
   <j:set var="spc" value="&amp;nbsp;&amp;nbsp;" />
  <table class="table table-hover">
   <thead>
-  
-  
     <tr>
       <th scope="col"></th>
       <th scope="col">
@@ -58,7 +56,7 @@
     <tr>
       <td class="info">Build Cause : </td>
        <td colspan="2" class="active">
-       <j:forEach var="cause"                  items="${build.causes}">${cause.shortDescription} </j:forEach>
+       <j:forEach var="cause" items="${build.causes}">${cause.shortDescription} </j:forEach>
        </td>
     </tr>
     <tr>
@@ -69,7 +67,7 @@
       <td class="info">Built on : </td>
        <td colspan="2" class="active">
        <j:choose>
-         <j:when test="${build.builtOnStr!=''}">${build.builtOnStr}            </j:when>
+         <j:when test="${build.builtOnStr!=''}">${build.builtOnStr}</j:when>
            <j:otherwise>master</j:otherwise>
        </j:choose>
        </td>
@@ -124,7 +122,7 @@
   <thead>
     <tr>
       <th scope="col" > 
-        <a style="font-size: 150%;"          href="${rooturl}${build.url}/changes">Changes</a> 
+        <a style="font-size: 150%;"href="${rooturl}${build.url}/changes">Changes</a> 
        <h4>${cs.msgAnnotated}</h4>
         <p>by <em>${cs.author}</em></p>
       </th>
@@ -135,8 +133,7 @@
        <j:forEach var="cs" items="${changeSet.logs}" varStatus="loop">
           <j:set var="hadChanges" value="true" />
             <j:forEach var="p" items="${cs.affectedFiles}">
-              <tr >
-        <td  class="success" width="10%">${spc}${p.editType.name}</td>
+              <tr ><td  class="success" width="10%">${spc}${p.editType.name}</td>
                 <td class="warning">
                   <tt>${p.path}</tt>
                 </td>
@@ -157,26 +154,25 @@
  <!-- JUnit TEMPLATE -->
     <j:set var="junitResultList" value="${it.JUnitTestResult}" />
     <j:if test="${junitResultList.isEmpty()!=true}">
-       <p scope="col" >
-    <a href="${rooturl}${build.url}/testReport">
+       <p scope="col" ><a href="${rooturl}${build.url}/testReport">
           <h4>Frontend Automation Result</h4>
         </a>       
       </p>
       <div class="container">
- <table class="table table-hover">
-  <thead>
+       <table class="table table-hover">
+        <thead>
 
-  </thead>
-      <tbody>
-    <tr >
-      <th class="info">Package</td>
-      <th class="info">Failed </td>
-      <th class="info">Passed </td>
-      <th class="info">Skipped </td>
-      <th class="info">Total </td>
-    </tr>
-      <j:forEach var="junitResult" items="${it.JUnitTestResult}">
-  <j:forEach var="packageResult" items="${junitResult.getChildren()}">
+        </thead>
+            <tbody>
+          <tr >
+            <th class="info">Package</td>
+            <th class="info">Failed </td>
+            <th class="info">Passed </td>
+            <th class="info">Skipped </td>
+            <th class="info">Total </td>
+          </tr>
+            <j:forEach var="junitResult" items="${it.JUnitTestResult}">
+        <j:forEach var="packageResult" items="${junitResult.getChildren()}">
             <tr>
               <td><tt>Frontend_Test_Suite</tt></td>
               <td style ="color:red">${packageResult.getFailCount()}</td>
@@ -202,18 +198,18 @@
 
  <div class="container">
       <!-- CONSOLE OUTPUT -->
-      <p><a href="${rooturl}${build.url}/console">
-        <h3>Console Output</h3>
-      </a></p>
+      <p><a href="${rooturl}${build.url}/console"><h3>Console Output</h3></a></p>
       <table class="table table-hover">
       <tbody>
-    <tr >
-    <j:forEach var="line" items="${build.getLog(50)}">
+      <tr >
+      <j:forEach var="line" items="${build.getLog(50)}">
         <tr class="info">
           <td><tt>${line}</tt></td>
         </tr>
-        </j:forEach>
-    </tr>
+      </j:forEach>
+      </tr>
+     </tbody>
+   </table>
     </div>
 </div>
     
