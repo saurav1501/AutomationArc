@@ -182,7 +182,7 @@
               </tr>
               <j:forEach var="failed_test" items="${packageResult.getFailedTests()}">
                 <tr class="active">
-                  <td class="test_failed" colspan="5">
+                  <td>
                     <tt>${failed_test.getFullName()}</tt>
                   </td>
                 </tr>
