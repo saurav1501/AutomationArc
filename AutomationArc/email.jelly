@@ -87,7 +87,7 @@
 
 
     <!-- HEALTH TEMPLATE -->
-    <div class="container row-md-4">
+    
       <j:set var="healthIconSize" value="16x16" />
       <j:set var="healthReports" value="${project.buildHealthReports}" />
       <j:if test="${healthReports!=null}">
@@ -110,10 +110,10 @@
         </table>
         <br />
       </j:if>
-    </div>
+    
 
     <!-- CHANGE SET -->
-    <div class="container">
+    
       <j:set var="changeSet" value="${build.changeSet}" />
       <j:if test="${changeSet!=null}">
         <j:set var="hadChanges" value="false" />
@@ -146,13 +146,13 @@
         </j:if>
         <br />
       </j:if>
-    </div>
+    
 
 
     <!-- JUnit TEMPLATE -->
     <j:set var="junitResultList" value="${it.JUnitTestResult}" />
     <j:if test="${junitResultList.isEmpty()!=true}">
-      <div class="container">
+
         
         <table class="table table-hover table-bordered">
         <tr>
@@ -181,9 +181,9 @@
                 </td>
               </tr>
               <j:forEach var="failed_test" items="${packageResult.getFailedTests()}">
-                <tr class="active">
+                <tr class="danget">
                   <td class="active" colspan="5">
-                    <tt>${failed_test.getFullName()}</tt>
+                    <tt><font color="red">${failed_test.getFullName()}</font></tt>
                   </td>
                 </tr>
               </j:forEach>
@@ -191,12 +191,11 @@
           </j:forEach>
         </table>
         <br />
-      </div>
     </j:if>
 
    
       <!-- CONSOLE OUTPUT -->
-     <div class="container">
+     
       <p><a href="${rooturl}${build.url}/console"></a>
         <h4>Console Output</h4></p>
       <table >
@@ -208,7 +207,7 @@
       </table>
      
       </div>
-    </div>
+
   </body>
 </html>
 </j:jelly>
