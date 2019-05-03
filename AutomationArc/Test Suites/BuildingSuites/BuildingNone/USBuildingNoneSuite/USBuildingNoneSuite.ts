@@ -361,13 +361,13 @@
    <testCaseLink>
       <guid>49cb35a0-adfc-4c8b-91b8-7b85d85eeaa2</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/WaterReclaimedOnsiteScoreShouldNotRecomputeTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>7cddec34-66c1-4891-b7ad-f3e373ab1826</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/WaterReclaimedOnsiteToPortWaterScoreShouldRecomputeTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -601,7 +601,7 @@
    <testCaseLink>
       <guid>51099cb5-b05c-4987-aa7f-782242ad735e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/SettingVerifySettingsPageDetailsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
