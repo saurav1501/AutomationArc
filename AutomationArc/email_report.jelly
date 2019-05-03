@@ -122,7 +122,7 @@
   <thead>
     <tr>
       <th scope="col" > 
-        <a style="font-size: 150%;"href="${rooturl}${build.url}/changes">Changes</a> 
+        <a style="font-size: 150%;" href="${rooturl}${build.url}/changes">Changes</a> 
        <h4>${cs.msgAnnotated}</h4>
         <p>by <em>${cs.author}</em></p>
       </th>
