@@ -1,7 +1,7 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define">
-<head>
 <title>${project.name}</title>
+<head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
@@ -233,7 +233,7 @@
 
         </thead>
             <tbody>
-          <tr >
+          <tr>
             <th class="info">Package</td>
             <th class="info">Failed </td>
             <th class="info">Passed </td>
@@ -243,7 +243,7 @@
             <j:forEach var="junitResult" items="${it.JUnitTestResult}">
         <j:forEach var="packageResult" items="${junitResult.getChildren()}">
             <tr>
-              <td><tt>Frontend_Test_Suite</tt></td>
+              <td><tt>${packageResult.getName()}</tt></td>
               <td style ="color:red">${packageResult.getFailCount()}</td>
               <td style ="color:green">${packageResult.getPassCount()}</td>
               <td style ="color:blue">${packageResult.getSkipCount()}</td>
@@ -281,6 +281,6 @@
    </table>
     </div>
 </div>
-    
+   </div> 
 </body>
 </j:jelly>
