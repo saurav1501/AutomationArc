@@ -124,7 +124,7 @@
           <j:set var="hadChanges" value="true" />
           <h4>${cs.msgAnnotated}</h4>
           <p>by <em>${cs.author}</em></p>
-          <table>
+          <table class="table table-hover table-bordered" >
             <j:forEach var="p" items="${cs.affectedFiles}">
               <tr>
                 <td width="10%">${spc}${p.editType.name}</td>
