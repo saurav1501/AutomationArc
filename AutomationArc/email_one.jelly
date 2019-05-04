@@ -1,22 +1,43 @@
-
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define">
-<head>
-<title>${project.name}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-</head>
-<body>
+<html>
+  <head>
+      <title>${project.name}</title>
+        
+<style>  
+table.brownshade {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th.brownshade, td.brownshade {
+  text-align: left;
+  padding: 8px;
+}
+
+th.greencolor {
+  background-color:  #ffa366;
+  color: white;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+table.border, td.border, th.border {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+      </style>
+
+  </head>
+  <body>
+
+
 <div class="container">
-<div class="container">
-  <j:set var="spc" value="&amp;nbsp;&amp;nbsp;" />
- <table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col"></th>
-      <th scope="col">
+
+  <j:set var="spc" value=" " />
+ <table class="brownshade border" >
+  <thead >
+    <tr class="border">
+      <th class="brownshade border greencolor" style="text-align:right">
        <j:choose>
           <j:when test="${build.result=='SUCCESS'}">
          <img src="${rooturl}static/e59dfe28/images/32x32/blue.gif" />
@@ -28,43 +49,43 @@
        <img src="${rooturl}static/e59dfe28/images/32x32/yellow.gif" />
           </j:otherwise>
         </j:choose>
-      <b style="font-size: 150%;">BUILD ${build.result}</b>      
+            
       </th>
-     
+      <th scope="col" class="brownshade border greencolor"><b style="font-size: 150%;">BUILD ${build.result}</b></th>
     </tr>
     
   </thead>
   <tbody>
-    <tr >
-      <td class="info">Build URL : </td>
-      <td colspan="2" class="active">
+    <tr class="border">
+      <td class="brownshade"><b> &amp;nbsp;&amp;nbsp; Build URL : </b></td>
+      <td colspan="2" class="brownshade">
       <a href="${rooturl}${build.url}">${rooturl}${build.url}</a></td>
     </tr>
-    <tr>
-      <td class="info">Project : </td>
-      <td colspan="2" class="active">${project.name}</td>
+    <tr class="border">
+      <td class="brownshade"><b> &amp;nbsp;&amp;nbsp; Project : </b></td>
+      <td colspan="2" class="brownshade">${project.name}</td>
     </tr>
-    <tr>
-      <td class="info">Date of build : </td>
-       <td colspan="2" class="active">${it.timestampString}</td>
+    <tr class="border">
+      <td class="brownshade"><b> &amp;nbsp;&amp;nbsp; Date of build : </b></td>
+       <td colspan="2" class="brownshade">${it.timestampString}</td>
     </tr>
-    <tr>
-      <td class="info">Build Duration : </td>
-       <td colspan="2" class="active">${build.durationString}</td>
+    <tr class="border">
+      <td class="brownshade"><b> &amp;nbsp;&amp;nbsp; Build Duration : </b></td>
+       <td colspan="2" class="brownshade">${build.durationString}</td>
     </tr>
-    <tr>
-      <td class="info">Build Cause : </td>
-       <td colspan="2" class="active">
+    <tr class="border">
+      <td class="brownshade"> <b>&amp;nbsp;&amp;nbsp; Build Cause : </b></td>
+       <td colspan="2" class="brownshade">
        <j:forEach var="cause" items="${build.causes}">${cause.shortDescription} </j:forEach>
        </td>
     </tr>
-    <tr>
-      <td class="info">Build Description : </td>
-       <td colspan="2" class="active">${build.description}</td>
+    <tr class="border">
+      <td class="brownshade"><b> &amp;nbsp;&amp;nbsp; Build Description : </b></td>
+       <td colspan="2" class="brownshade">${build.description}</td>
     </tr>
-    <tr>
-      <td class="info">Built on : </td>
-       <td colspan="2" class="active">
+    <tr class="border">
+      <td class="brownshade"><b> &amp;nbsp;&amp;nbsp; Built on : </b></td>
+       <td colspan="2" class="brownshade">
        <j:choose>
          <j:when test="${build.builtOnStr!=''}">${build.builtOnStr}</j:when>
            <j:otherwise>master</j:otherwise>
@@ -73,101 +94,51 @@
     </tr>
   </tbody>
  </table>
-</div>
 
 
- <!-- HEALTH TEMPLATE -->
-  <div class="container">
-  <j:set var="healthIconSize" value="16x16" />
-   <j:set var="healthReports" value="${project.buildHealthReports}" />
-      <j:if test="${healthReports!=null}">
-  <table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col"></th>
-      <th scope="col" >
-    <b style="font-size: 150%;"> Health Report</b>       
-      </th>
-    </tr>
-  </thead>
-      <tbody>
-    <tr >
-      <th class="info">W </td>
-      <th class="info">Description </td>
-      <th class="info">Score </td>
-    </tr>
-   <j:forEach var="healthReport" items="${healthReports}">
-     <tr class="warning">
-       <td>
-    <img src="${rooturl}${healthReport.getIconUrl(healthIconSize)}" />
-      </td>
-       <td >${healthReport.description}</td>
-       <td>${healthReport.score}</td>
-       </tr>
-          </j:forEach>
-        <br />
-      </j:if>
-      
-      </tbody>
-      </table>
-    </div>
+    <!-- HEALTH TEMPLATE -->
     
-    <div class="container">
-     <j:set var="changeSet" value="${build.changeSet}" />
-      <j:if test="${changeSet!=null}">
-        <j:set var="hadChanges" value="false" />
-   
-   <table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col" > 
-        <a style="font-size: 150%;" href="${rooturl}${build.url}/changes">Changes</a> 
-       <h4>${cs.msgAnnotated}</h4>
-        <p>by <em>${cs.author}</em></p>
-      </th>
-    </tr>
-  </thead>
-    <tbody>
-     
-       <j:forEach var="cs" items="${changeSet.logs}" varStatus="loop">
-          <j:set var="hadChanges" value="true" />
-            <j:forEach var="p" items="${cs.affectedFiles}">
-              <tr ><td  class="success" width="10%">${spc}${p.editType.name}</td>
-                <td class="warning">
-                  <tt>${p.path}</tt>
-                </td>
-              </tr>
-            </j:forEach>
-        </j:forEach>
-        <j:if test="${!hadChanges}">
-         <tr >
-        <td><p>No Changes</p></td></td>
-         </tr>
-        </j:if>
+      <j:set var="healthIconSize" value="16x16" />
+      <j:set var="healthReports" value="${project.buildHealthReports}" />
+      <j:if test="${healthReports!=null}">
+        <table class="brownshade border">
+        <tr><b><h3>Health Report</h3></b></tr>
+          <tr >
+            <th class="brownshade border greencolor">W</th>
+            <th class="brownshade border greencolor">Description</th>
+            <th class="brownshade border greencolor">Score</th>
+          </tr>
+          <j:forEach var="healthReport" items="${healthReports}">
+            <tr class="border">
+              <td class="brownshade border">
+                <img src="${rooturl}${healthReport.getIconUrl(healthIconSize)}" />
+              </td>
+              <td class="brownshade border">${healthReport.description}</td>
+              <td class="brownshade border">${healthReport.score}</td>
+            </tr>
+          </j:forEach>
+        </table>
         <br />
       </j:if>
-      <tbody>
-      <table>
-    </div>
+    
 
-
- <!-- CHANGE SET -->
-    <div class="content">
+    <!-- CHANGE SET -->
+    
       <j:set var="changeSet" value="${build.changeSet}" />
       <j:if test="${changeSet!=null}">
         <j:set var="hadChanges" value="false" />
-        <a href="${rooturl}${build.url}/changes">
-          <h1>Changes</h1>
-        </a>
+       <p>
+        <a href="${rooturl}${build.url}/changes"><h3>Changes</h3></a>
+          </p>
         <j:forEach var="cs" items="${changeSet.logs}" varStatus="loop">
           <j:set var="hadChanges" value="true" />
-          <h2>${cs.msgAnnotated}</h2>
+          <h4>${cs.msgAnnotated}</h4>
           <p>by <em>${cs.author}</em></p>
-          <table>
+          <table class="brownshade border">
             <j:forEach var="p" items="${cs.affectedFiles}">
-              <tr>
-                <td width="10%">${spc}${p.editType.name}</td>
-                <td>
+              <tr class="border">
+                <td class="brownshade border" width="10%">${spc}${p.editType.name}</td>
+                <td class="brownshade border">
                   <tt>${p.path}</tt>
                 </td>
               </tr>
@@ -175,86 +146,54 @@
           </table>
         </j:forEach>
         <j:if test="${!hadChanges}">
+        <table class="brownshade ">
+        <tbody>
+        <th class="brownshade border">
           <p>No Changes</p>
+          </th>
+         </tbody> 
+         </table> 
         </j:if>
         <br />
       </j:if>
-    </div>
-
-    <!-- ARTIFACTS -->
-    <j:set var="artifacts" value="${build.artifacts}" />
-    <j:if test="${artifacts!=null and artifacts.size()&gt;0}">
-      <div class="content">
-        <h1>Build Artifacts</h1>
-        <ul>
-          <j:forEach var="f" items="${artifacts}">
-            <li>
-              <a href="${rooturl}${build.url}artifact/${f}">${f}</a>
-            </li>
-          </j:forEach>
-        </ul>
-      </div>
-    </j:if>
-
-    <!-- MAVEN ARTIFACTS -->
-    <j:set var="mbuilds" value="${build.moduleBuilds}" />
-    <j:if test="${mbuilds!=null}">
-      <div class="content">
-        <h1>Build Artifacts</h1>
-        <j:forEach var="m" items="${mbuilds}">
-          <h2>${m.key.displayName}</h2>
-          <j:forEach var="mvnbld" items="${m.value}">
-            <j:set var="artifacts" value="${mvnbld.artifacts}" />
-            <j:if test="${artifacts!=null and artifacts.size()&gt;0}">
-              <ul>
-                <j:forEach var="f" items="${artifacts}">
-                  <li>
-                    <a href="${rooturl}${mvnbld.url}artifact/${f}">${f}</a>
-                  </li>
-                </j:forEach>
-              </ul>
-            </j:if>
-          </j:forEach>
-        </j:forEach>
-        <br />
-      </div>
-    </j:if>
+    
 
 
- <!-- JUnit TEMPLATE -->
+    <!-- JUnit TEMPLATE -->
     <j:set var="junitResultList" value="${it.JUnitTestResult}" />
     <j:if test="${junitResultList.isEmpty()!=true}">
-       <p scope="col" ><a href="${rooturl}${build.url}/testReport">
-          <h4>Frontend Automation Result</h4>
-        </a>       
-      </p>
-      <div class="container">
-       <table class="table table-hover">
-        <thead>
 
-        </thead>
-            <tbody>
-          <tr >
-            <th class="info">Package</td>
-            <th class="info">Failed </td>
-            <th class="info">Passed </td>
-            <th class="info">Skipped </td>
-            <th class="info">Total </td>
+        
+        <table class="brownshade border">
+        <tr>
+          <a href="${rooturl}${build.url}/testReport">
+          <h4>JUnit Tests</h4>
+        </a>
+        </tr>
+          <tr>
+            <th class="brownshade border greencolor">Package</th>
+            <th class="brownshade border greencolor">Failed</th>
+            <th class="brownshade border greencolor">Passed</th>
+            <th class="brownshade border greencolor">Skipped</th>
+            <th class="brownshade border greencolor">Total</th>
           </tr>
-            <j:forEach var="junitResult" items="${it.JUnitTestResult}">
-        <j:forEach var="packageResult" items="${junitResult.getChildren()}">
-            <tr>
-              <td><tt>Frontend_Test_Suite</tt></td>
-              <td style ="color:red">${packageResult.getFailCount()}</td>
-              <td style ="color:green">${packageResult.getPassCount()}</td>
-              <td style ="color:blue">${packageResult.getSkipCount()}</td>
-              <td>           <b>${packageResult.getPassCount()+packageResult.getFailCount()+packageResult.getSkipCount()}</b>
+          <j:forEach var="junitResult" items="${it.JUnitTestResult}">
+            <j:forEach var="packageResult" items="${junitResult.getChildren()}">
+              <tr class="border">
+                <td class="brownshade">
+                  <tt>ARC Frontend Tests</tt>
+                </td>
+        <td class="brownshade"><font color="red">&amp;nbsp;&amp;nbsp; ${packageResult.getFailCount()}</font></td>
+        <td class="brownshade">&amp;nbsp;&amp;nbsp; ${packageResult.getPassCount()}</td>
+              <td class="brownshade"><font color="black">&amp;nbsp;&amp;nbsp;${packageResult.getSkipCount()}</font></td>
+              <td class="brownshade"> &amp;nbsp;&amp;nbsp;
+<b>${packageResult.getPassCount()+packageResult.getFailCount()+packageResult.getSkipCount()}</b>
                 </td>
               </tr>
               <j:forEach var="failed_test" items="${packageResult.getFailedTests()}">
-                <tr>
-                  <td class="danger">
-                    <tt>${failed_test.getFullName()}</tt>
+                <tr class="brownshade">
+                  <td class="brownshade" colspan="5">
+                    <tt><font color="red">${failed_test.getFullName()}</font></tt>
                   </td>
                 </tr>
               </j:forEach>
@@ -262,26 +201,24 @@
           </j:forEach>
         </table>
         <br />
-      </div>
     </j:if>
 
-
- <div class="container">
+   
       <!-- CONSOLE OUTPUT -->
-      <p><a href="${rooturl}${build.url}/console"><h3>Console Output</h3></a></p>
-      <table class="table table-hover">
-      <tbody>
-      <tr >
-      <j:forEach var="line" items="${build.getLog(50)}">
-        <tr class="info">
-          <td><tt>${line}</tt></td>
+     
+      <p><a href="${rooturl}${build.url}/console"></a>
+        <h4>Console Output</h4></p>
+      <table class="brownshade border">
+        <j:forEach var="line" items="${build.getLog(50)}">
+        <tr class="brownshade">
+            <td><tt>${line}</tt></td>
         </tr>
-      </j:forEach>
-      </tr>
-     </tbody>
-   </table>
-    </div>
-</div>
-    
-</body>
+        </j:forEach>
+      </table>
+     
+      </div>
+
+
+  </body>
+</html>
 </j:jelly>
