@@ -180,13 +180,13 @@ table.border, td.border, th.border {
           <j:forEach var="junitResult" items="${it.JUnitTestResult}">
             <j:forEach var="packageResult" items="${junitResult.getChildren()}">
               <tr class="border">
-                <td class="brownshade">
+                <td class="brownshade border">
                   <tt>ARC Frontend Tests</tt>
                 </td>
-        <td class="brownshade"><font color="red">&amp;nbsp;&amp;nbsp; ${packageResult.getFailCount()}</font></td>
-        <td class="brownshade">&amp;nbsp;&amp;nbsp; ${packageResult.getPassCount()}</td>
-              <td class="brownshade"><font color="black">&amp;nbsp;&amp;nbsp;${packageResult.getSkipCount()}</font></td>
-              <td class="brownshade"> &amp;nbsp;&amp;nbsp;
+        <td class="brownshade border"><font color="red">&amp;nbsp;&amp;nbsp; ${packageResult.getFailCount()}</font></td>
+        <td class="brownshade order">&amp;nbsp;&amp;nbsp; ${packageResult.getPassCount()}</td>
+              <td class="brownshade border"><font color="black">&amp;nbsp;&amp;nbsp;${packageResult.getSkipCount()}</font></td>
+              <td class="brownshade order"> &amp;nbsp;&amp;nbsp;
 <b>${packageResult.getPassCount()+packageResult.getFailCount()+packageResult.getSkipCount()}</b>
                 </td>
               </tr>
