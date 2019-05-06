@@ -10,13 +10,18 @@ table.brownshade {
   width: 100%;
 }
 
+table.brownshade1 {
+  border-collapse: collapse;
+  width: 60%;
+}
+
 th.brownshade, td.brownshade {
   text-align: left;
   padding: 8px;
 }
 
 th.greencolor {
-  background-color:  #ffa366;
+  background-color: #b37700;
   color: white;
 }
 tr:nth-child(even) {background-color: #f2f2f2;}
@@ -208,7 +213,7 @@ table.border, td.border, th.border {
      
       <p><a href="${rooturl}${build.url}/console"></a>
         <h4>Console Output</h4></p>
-      <table class="brownshade border">
+      <table class="brownshade1 border">
         <j:forEach var="line" items="${build.getLog(50)}">
         <tr class="brownshade">
             <td><tt>${line}</tt></td>
