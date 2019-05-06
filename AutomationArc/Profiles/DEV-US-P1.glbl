@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GlobalVariableEntities>
    <description></description>
-   <name>QAS-US</name>
+   <name>DEV-US-P1</name>
    <tag></tag>
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'http://www.qas.arconline.io/'</initValue>
+      <initValue>'https://dev.app.arconline.io/login'</initValue>
       <name>url</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description></description>
-      <initValue>'usgbcarc@gmail.com'</initValue>
+      <description>Gold membership user</description>
+      <initValue>'devusgbcarc@gmail.com'</initValue>
       <name>userName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -86,7 +86,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'PortfolioQAS'</initValue>
+      <initValue>'PortfolioDev'</initValue>
       <name>PortfoliosSheet</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -105,18 +105,18 @@
       <name>BDataInput</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description>Team Member QAS</description>
-      <initValue>'qas-01@gmail.com'</initValue>
+      <description>Team Member DEV</description>
+      <initValue>'dev-01@gmail.com'</initValue>
       <name>TeamMember</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'qas.app.arconline.io/admin'</initValue>
+      <initValue>'https://dev.app.arconline.io/admin'</initValue>
       <name>adminUrl</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'qasgbciadmin@gbci.com'</initValue>
+      <initValue>'devgbciadmin@usgbc.org'</initValue>
       <name>adminUserName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -125,7 +125,27 @@
       <name>adminPassword</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description>old score version project of Building</description>
+      <description>Certified project</description>
+      <initValue>21</initValue>
+      <name>rowNumTwentyOne</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Certified Transit Abovegroun Project</description>
+      <initValue>22</initValue>
+      <name>rowNumTwentyTwo</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'notCertified'</initValue>
+      <name>notCertified</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>New Added Project</description>
+      <initValue>23</initValue>
+      <name>rowNumTwentyThree</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>old score version of Buiding</description>
       <initValue>9</initValue>
       <name>rowNumNine</name>
    </GlobalVariableEntity>
@@ -160,24 +180,39 @@
       <name>TemplateWasteData</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description>Old score version project of Transit</description>
+      <description>old score version of Transit</description>
       <initValue>10</initValue>
       <name>rowNumTen</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://qas.app.arconline.io/app/projects/my-projects/?project-type=all'</initValue>
+      <initValue>'https://dev.app.arconline.io/app/projects/my-projects/?project-type=all'</initValue>
       <name>AllProjectUrl</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description>Human Experience and Transportation</description>
+      <description></description>
       <initValue>'HumanExp'</initValue>
       <name>TemplateHE</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
+      <description>payment via credit card</description>
+      <initValue>'creditCard'</initValue>
+      <name>cardPayment</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://qas.app.arconline.io/'</initValue>
+      <initValue>'check'</initValue>
+      <name>checkPayment</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://dev.app.arconline.io/login'</initValue>
       <name>appUrl</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description>Pricing sheet </description>
+      <initValue>'Pricing'</initValue>
+      <name>pricingSheet</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
@@ -191,23 +226,38 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'check'</initValue>
-      <name>checkPayment</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description>Pricing sheet for checking the pricing for different countries.</description>
-      <initValue>'Pricing'</initValue>
-      <name>pricingSheet</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'https://leedonline-qas.usgbc.org/'</initValue>
+      <initValue>'https://leedonline-dev.usgbc.org/'</initValue>
       <name>LEEDURL</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Validation'</initValue>
-      <name>validationSheet</name>
+      <initValue>'Saurav K'</initValue>
+      <name>projectTeamAdminAndArcAdminName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'devusgbcarc@gmail.com'</initValue>
+      <name>projectTeamAdminAndArcAdminEmail</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>UserId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'dev-02@gmail.com'</initValue>
+      <name>TeamMember2</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Result'</initValue>
+      <name>Result</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'dev'</initValue>
+      <name>environment</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
@@ -215,38 +265,8 @@
       <name>LEEDData</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description>Project team admin and arc administrator name</description>
-      <initValue>'Saurav K'</initValue>
-      <name>projectTeamAdminAndArcAdminName</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description>Project team admin and arc administrator email</description>
-      <initValue>'usgbcarc@gmail.com'</initValue>
-      <name>projectTeamAdminAndArcAdminEmail</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
       <description></description>
-      <initValue>'0010639470'</initValue>
-      <name>UserId</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'qas-02@gmail.com'</initValue>
-      <name>TeamMember2</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'qas1 mishra'</initValue>
-      <name>teamMemberName</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description>Result sheet to store the result</description>
-      <initValue>'Result'</initValue>
-      <name>Result</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'qas'</initValue>
-      <name>environment</name>
+      <initValue>'/var/lib/jenkins/Downloads/'</initValue>
+      <name>downloadDir</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

@@ -39,9 +39,9 @@ public class BaseClass {
 	public static String leedReviewForm= RunConfiguration.getProjectDir()+"/ARCDataTemplete/v4.1 Precertification Worksheet.xlsx"
 	public static XlsReader leedReview = new XlsReader(leedReviewForm)
 	//GBCI Documentation folder
-	String sourceZipFile= RunConfiguration.getProjectDir()+"/Download/GBCI-India.zip"
-	String sourceExtractedFile= RunConfiguration.getProjectDir()+"/Download/GBCI-India/"
-	String destinationUnZippedFolder= RunConfiguration.getProjectDir()+"/Download/"
+	String sourceZipFile= GlobalVariable.downloadDir+"GBCI-India.zip"
+	String sourceExtractedFile= GlobalVariable.downloadDir+"GBCI-India/"
+	String destinationUnZippedFolder= GlobalVariable.downloadDir
 	public static final int BUFFER_SIZE = 9096
 	//Data Template and files
 
@@ -57,11 +57,11 @@ public class BaseClass {
 	public static String gresbUpload = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Gresb.xlsx"
 
 	public static String parkImageUpload = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Parking SJ.jpg"
-	public static String downloadPath = RunConfiguration.getProjectDir()+"/Download/"
+	public static String downloadPath = GlobalVariable.downloadDir
 	public static String pdfFile = RunConfiguration.getProjectDir()+"/ARCDataTemplete/USGBC.pdf"
-	public String UnzippedNewFolder= RunConfiguration.getProjectDir()+"/Download/GBCI-India/"
-	public static String Addendum = RunConfiguration.getProjectDir()+"/Download/Agreement.pdf"
-	public static String ServiceAgreement = RunConfiguration.getProjectDir()+"/Download/Agreement.pdf"
+	public String UnzippedNewFolder= GlobalVariable.downloadDir+"GBCI-India/"
+	public static String Addendum = GlobalVariable.downloadDir+"Agreement.pdf"
+	public static String ServiceAgreement = GlobalVariable.downloadDir+"Agreement.pdf"
 
 	public static String UploadArcDataTempleteTransit = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Arc_Data_Template_transit_above.xlsm"
 	public static String UploadArcDataTempleteLEEDV4 = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Arc_Data_Template_building_v4.xlsm"
@@ -77,9 +77,9 @@ public class BaseClass {
 	public static String UploadXls=RunConfiguration.getProjectDir()+"/ARCDataTemplete/uploasExcel.xlsx"
 	public static String UploadDocs=RunConfiguration.getProjectDir()+"/ARCDataTemplete/uploadDoc.docx"
 	public static String UploadManageCalculatorExcel = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Arc_Data_Template_building.xlsm"
-	public static String DownloadManageCalculatorExcel = RunConfiguration.getProjectDir()+"/Download/Arc_Data_Template_building.xlsm"
-	public static String DataResourcesPdf = RunConfiguration.getProjectDir()+"/Download/DataResources.pdf"
-	public static String DataReviewChecklistPdf = RunConfiguration.getProjectDir()+"/Download/Data Review Checklist.pdf"
+	public static String DownloadManageCalculatorExcel = GlobalVariable.downloadDir+"Arc_Data_Template_building.xlsm"
+	public static String DataResourcesPdf = GlobalVariable.downloadDir+"DataResources.pdf"
+	public static String DataReviewChecklistPdf = GlobalVariable.downloadDir+"Data Review Checklist.pdf"
 	public static String UploadArcDataTempleteSchools = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Arc_Data_Template_building_School_v4.1.xlsm"
 	//International Languages for  snapshot validation
 	public static String UploadArcDataTempleteSpanish = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Carga de archivos de prueba(Spanish).txt"
