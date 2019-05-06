@@ -19,6 +19,8 @@ import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
+import internal.GlobalVariable
+
 public class ReusableMethodsSubmitReview extends BaseClass{
 	public static String reviewAmount
 
@@ -805,11 +807,11 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 
 		String projectId = data.getCellData(sheetName, "ProjectID", rowNum)
 		String fileName= projectId+".zip"
-		String sourceZipFile= RunConfiguration.getProjectDir()+"/Download/"+fileName
+		String sourceZipFile= GlobalVariable.downloadDir+fileName
 		println sourceZipFile
-		String sourceExtractedFile= RunConfiguration.getProjectDir()+"/Download/"+projectId+"/"+ ratingSystem+"/Performance Score Verification/energy/"
+		String sourceExtractedFile= GlobalVariable.downloadDir+projectId+"/"+ ratingSystem+"/Performance Score Verification/energy/"
 		println sourceExtractedFile
-		String destinationUnZippedFolder= RunConfiguration.getProjectDir()+"/Download/"
+		String destinationUnZippedFolder= GlobalVariable.downloadDir
 		println destinationUnZippedFolder
 		//deleteFile(sourceZipFile)
 		//deleteFile(sourceExtractedFile)
@@ -909,14 +911,14 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 
 		String projectId = data.getCellData(sheetName, "ProjectID", rowNum)
 		String fileName= projectId+".zip"
-		String sourceZipFile= RunConfiguration.getProjectDir()+"/Download/"+fileName
+		String sourceZipFile= GlobalVariable.downloadDir+fileName
 		println sourceZipFile
-		String sourceExtractedFileEnergy= RunConfiguration.getProjectDir()+"/Download/"+projectId+"/"+ratingSystem+"/Performance Score Verification/energy/"
+		String sourceExtractedFileEnergy= GlobalVariable.downloadDir+projectId+"/"+ratingSystem+"/Performance Score Verification/energy/"
 		println sourceExtractedFileEnergy
-		String sourceExtractedFileWater= RunConfiguration.getProjectDir()+"/Download/"+projectId+"/"+ratingSystem+"/Performance Score Verification/water/"
-		String sourceExtractedFileWaste= RunConfiguration.getProjectDir()+"/Download/"+projectId+"/"+ratingSystem+"/Performance Score Verification/waste/"
+		String sourceExtractedFileWater= GlobalVariable.downloadDir+projectId+"/"+ratingSystem+"/Performance Score Verification/water/"
+		String sourceExtractedFileWaste= GlobalVariable.downloadDir+projectId+"/"+ratingSystem+"/Performance Score Verification/waste/"
 
-		String destinationUnZippedFolder= RunConfiguration.getProjectDir()+"/Download/"
+		String destinationUnZippedFolder= GlobalVariable.downloadDir
 		println destinationUnZippedFolder
 		//deleteFile(sourceZipFile)
 		//deleteFile(sourceExtractedFile)
@@ -992,14 +994,14 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 
 		String projectId = data.getCellData(sheetName, "ProjectID", rowNum)
 		String fileName= projectId+".zip"
-		String sourceZipFile= RunConfiguration.getProjectDir()+"/Download/"+fileName
+		String sourceZipFile= GlobalVariable.downloadDir+fileName
 		println sourceZipFile
-		String sourceExtractedFileEnergy= RunConfiguration.getProjectDir()+"/Download/"+projectId+"/"+ratingSystem+"/Pre-Certification/energy/"
+		String sourceExtractedFileEnergy= GlobalVariable.downloadDir+projectId+"/"+ratingSystem+"/Pre-Certification/energy/"
 		println sourceExtractedFileEnergy
-		String sourceExtractedFileWater= RunConfiguration.getProjectDir()+"/Download/"+projectId+"/"+ratingSystem+"/Pre-Certification/water/"
-		String sourceExtractedFileWaste= RunConfiguration.getProjectDir()+"/Download/"+projectId+"/"+ratingSystem+"/Pre-Certification/waste/"
-		String destinationUnZippedFolder= RunConfiguration.getProjectDir()+"/Download/"
-		String sourceExtractedFile= RunConfiguration.getProjectDir()+"/Download/"+projectId
+		String sourceExtractedFileWater= GlobalVariable.downloadDir+projectId+"/"+ratingSystem+"/Pre-Certification/water/"
+		String sourceExtractedFileWaste= GlobalVariable.downloadDir+projectId+"/"+ratingSystem+"/Pre-Certification/waste/"
+		String destinationUnZippedFolder= GlobalVariable.downloadDir
+		String sourceExtractedFile= GlobalVariable.downloadDir+projectId
 		println destinationUnZippedFolder
 		//deleteFile(sourceZipFile)
 		//deleteFile(sourceExtractedFile)
@@ -1047,13 +1049,13 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 
 		String projectId = data.getCellData(sheetName, "ProjectID", rowNum)
 		String fileName= projectId+".zip"
-		String sourceZipFile= RunConfiguration.getProjectDir()+"/Download/"+fileName
+		String sourceZipFile= GlobalVariable.downloadDir+fileName
 		println sourceZipFile
-		String sourceExtractedFileEnergy= RunConfiguration.getProjectDir()+"/Download/"+projectId+"/"+ratingSystem+"/Certification/energy/"
+		String sourceExtractedFileEnergy= GlobalVariable.downloadDir+projectId+"/"+ratingSystem+"/Certification/energy/"
 		println sourceExtractedFileEnergy
-		String sourceExtractedFileWater= RunConfiguration.getProjectDir()+"/Download/"+projectId+"/"+ratingSystem+"/Certification/water/"
-		String sourceExtractedFileWaste= RunConfiguration.getProjectDir()+"/Download/"+projectId+"/"+ratingSystem+"/Certification/waste/"
-		String destinationUnZippedFolder= RunConfiguration.getProjectDir()+"/Download/"
+		String sourceExtractedFileWater= GlobalVariable.downloadDir+projectId+"/"+ratingSystem+"/Certification/water/"
+		String sourceExtractedFileWaste= GlobalVariable.downloadDir+projectId+"/"+ratingSystem+"/Certification/waste/"
+		String destinationUnZippedFolder= GlobalVariable.downloadDir
 		println destinationUnZippedFolder
 		//deleteFile(sourceZipFile)
 		//deleteFile(sourceExtractedFile)

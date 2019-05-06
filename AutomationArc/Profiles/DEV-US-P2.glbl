@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GlobalVariableEntities>
    <description></description>
-   <name>DEV-US - Test</name>
+   <name>DEV-US-P2</name>
    <tag></tag>
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
@@ -263,5 +263,10 @@
       <description></description>
       <initValue>'LEEDData'</initValue>
       <name>LEEDData</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'/var/lib/jenkins/Downloads/'</initValue>
+      <name>downloadDir</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

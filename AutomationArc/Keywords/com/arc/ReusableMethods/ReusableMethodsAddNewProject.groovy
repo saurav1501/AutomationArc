@@ -21,6 +21,7 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 	WebDriver driver = DriverFactory.getWebDriver()
 	SimpleDateFormat formatarDate = new SimpleDateFormat(' HH:mm:ss')
 	@Keyword
+	//Add project new Building
 	public void buildingAddNewProject(String sheetName , int rowNum) {
 		/**************Reading data form excel sheet*************************/
 		String prjName      = data.getCellData(sheetName,"ProjectName", rowNum)
