@@ -398,7 +398,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 
 		WebUI.verifyMatch(projectname, 'Changed Data LEEDV4 CityCom project',false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(population, '1000',false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(Area, '1000 sq mi' , false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(Area, '1000 sq km' , false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(Isprivate, 'Yes', false, FailureHandling.CONTINUE_ON_FAILURE)
 
 	}
@@ -436,6 +436,9 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.switchToWindowIndex(1)
 		String allAction = WebUI.getText(findTestObject('Manage/CityCom/LEED/All Actions'))
 		WebUI.verifyMatch(allAction,'All Actions', false)
+		
+		WebUI.closeWindowIndex(0)
+		WebUI.delay(2)
 
 	}
 

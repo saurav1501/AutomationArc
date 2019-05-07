@@ -14,8 +14,8 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
 try {
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginArcAdminToolWithGlobalVariable'()
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSubmitReview.add3StarCertificationFromAdminToolForCity'(GlobalVariable.CommunitySheet, GlobalVariable.rowNumTwo)
+	
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.cityComcertificationDetailVerificationForPointsAddedFromAdminTool'(GlobalVariable.CitySheet, GlobalVariable.rowNumTwo)
 		 
 } catch (Throwable t) {
 	WebUI.closeWindowIndex(1)

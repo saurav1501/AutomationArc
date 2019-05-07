@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify if below text is added for building and city project .
+1.  The language illustrating the difference in versions (based on language provided in the score version summary relevant to that project type i.e. ruleset)
+2.  Scores before and after version change
+3.  Date of version change
+4.  Person authorizing the score version change</description>
+   <name>SettingScoreVersionPageUpdate_1_15_4Test</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>c40dbe29-6a74-4c57-a6af-877225a11090</testCaseGuid>
+</TestCaseEntity>

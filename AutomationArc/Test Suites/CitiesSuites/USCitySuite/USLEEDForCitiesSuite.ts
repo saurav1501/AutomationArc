@@ -245,18 +245,6 @@
       <testCaseId>Test Cases/MyCities/LEEDForCities/AdminToolScoreRecomputeTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>ec4db78f-d6d9-4bdb-8886-adb0046aa4e2</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCities/LEEDForCities/ScoreVersionVerificationTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>d2f99995-ee18-41be-ba9b-8374e970957f</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCities/LEEDForCities/CertiVerifyCertificationDetailsForNotCertfiedProjectsTest.java</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>458f74f5-5664-4a2c-a950-88a142fdeb0d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -279,6 +267,30 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/MyCities/LEEDForCities/ProjectDetailsVerificationTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>11d55f4e-34e1-4d41-987d-a3db60e7c7f9</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCities/LEEDForCities/ManageEntity/ManagingEntityShouldReadOnlyArcTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>920fbc7a-b244-4058-998b-e6fb89383ee3</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCities/LEEDForCities/ManageEntity/ManageEditProjectDetailsArcTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>ec4db78f-d6d9-4bdb-8886-adb0046aa4e2</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCities/LEEDForCities/ScoreVersionVerificationTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>d2f99995-ee18-41be-ba9b-8374e970957f</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCities/LEEDForCities/CertiVerifyCertificationDetailsForNotCertfiedProjectsTest.java</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>22a34b2d-da30-418d-9e77-4f6217ff1e67</guid>
@@ -327,18 +339,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/MyCities/LEEDForCities/TeamEditTeamManagerRoleAndAddSecondArcAdministratorRoleTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>11d55f4e-34e1-4d41-987d-a3db60e7c7f9</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCities/LEEDForCities/ManageEntity/ManagingEntityShouldReadOnlyArcTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>920fbc7a-b244-4058-998b-e6fb89383ee3</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCities/LEEDForCities/ManageEntity/ManageEditProjectDetailsArcTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>c08f8f7c-c676-4380-a65b-040a8e5d24e8</guid>
@@ -391,43 +391,55 @@
    <testCaseLink>
       <guid>03b0b076-4891-46f1-b779-aae045729a0b</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/LEEDOnlineCity/NavigateToCityLEEDOnlineTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>018407ca-1606-4dbb-9cd4-2948cbde5c64</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/LEEDOnlineCity/VerifyCityDeatilsSyncDataFromArcTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>2c9ef751-361e-45e3-97d7-9ae4a8f66fd9</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/LEEDOnlineCity/VerifyAddedTeamAdministratorDetailsFromArcTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>deea3490-8acd-49f4-84db-b3df1a5dffcb</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/LEEDOnlineCity/AddNewTeamMemberFromLEEDTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>b8493cdd-4727-4345-9e67-3c77a7326880</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/LEEDOnlineCity/ChangeAuthorizationProjectAdministratorTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d44cc223-edf7-4f6f-8213-6ffe4549a1a1</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/LEEDOnlineCity/CreditTabNavigateToArc(AllAction)Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>91f8a9fc-2b5b-470d-85af-6c6924d6428d</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/LEEDOnlineCity/VerifyAddedTeamMemberFromLEEDInArcTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>25ac3b5f-305f-4dae-8844-c883231e081d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCities/LEEDForCities/NavigateToAdminToolAddStarCertification_1_15_4Test</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>87165744-18eb-4607-9e3b-82b91bda1871</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCities/LEEDForCities/VerifyAddedStarCertificationInsideProject_1_15_4Test</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

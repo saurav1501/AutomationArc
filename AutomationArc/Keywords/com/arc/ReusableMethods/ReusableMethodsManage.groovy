@@ -1343,20 +1343,28 @@ public class ReusableMethodsManage extends BaseClass {
 		String population 	= data.getCellData(sheetName, "Population", rowNum)
 
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
-		WebUI.delay(2)
+		WebUI.delay(3)
 		WebUI.setText(findTestObject('Manage/ProjectDetailVerification/projectName'),'Changed Data LEEDV4 CityCom project')
-		WebUI.delay(3)
-		WebUI.selectOptionByLabel(findTestObject('Manage/CityCom/New/unitType'), 'SI', false)
-		WebUI.delay(3)
-		WebUI.setText(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),'1000')
-		WebUI.delay(3)
-		WebUI.setText(findTestObject('Manage/ProjectDetailVerification/population'),'1000')
-		WebUI.delay(3)
-		WebUI.selectOptionByLabel(findTestObject('Manage/CityCom/New/private'), 'Yes', false)
-		WebUI.delay(3)
+		WebUI.delay(1)
 		WebUI.click(findTestObject('Manage/CityCom/New/Save'))
-
 		WebUI.delay(5)
+		
+		WebUI.selectOptionByLabel(findTestObject('Manage/CityCom/New/unitType'), 'SI', false)
+		WebUI.delay(1)
+		WebUI.click(findTestObject('Manage/CityCom/New/Save'))
+		WebUI.delay(5)
+		WebUI.setText(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),'1000')
+		WebUI.delay(1)
+		WebUI.click(findTestObject('Manage/CityCom/New/Save'))
+		WebUI.delay(5)
+		WebUI.setText(findTestObject('Manage/ProjectDetailVerification/population'),'1000')
+		WebUI.delay(1)
+		WebUI.click(findTestObject('Manage/CityCom/New/Save'))
+		WebUI.delay(5)
+		WebUI.selectOptionByLabel(findTestObject('Manage/CityCom/New/private'), 'Yes', false)
+		WebUI.delay(1)
+		WebUI.click(findTestObject('Manage/CityCom/New/Save'))
+		WebUI.delay(10)
 
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectName'),'value'),'Changed Data LEEDV4 CityCom project', false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/unitType'),'value'),"string:SI", false, FailureHandling.CONTINUE_ON_FAILURE)
@@ -1513,6 +1521,12 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(7)
 		WebUI.verifyOptionSelectedByLabel(findTestObject('Object Repository/Manage/TeamModule/TeamRole'),"Arc Administrator", false,10)
 
+	}
+	
+	@Keyword
+	public void scoretextUpdate(){
+
+	
 	}
 
 	@Keyword
@@ -1924,7 +1938,9 @@ public class ReusableMethodsManage extends BaseClass {
 		String certiDate = commMethod.dateNew()
 		print certiDate
 		WebUI.delay(5)
-		WebUI.doubleClick(findTestObject('Manage/CertificationAndScore/a_ Certifications'))
+		WebUI.scrollToElement(findTestObject('Manage/CertificationAndScore/a_ Certifications'),5)
+		WebUI.delay(1)
+		WebUI.click(findTestObject('Manage/CertificationAndScore/a_ Certifications'))
 		WebUI.delay(5)
 		/*	WebUI.refresh()
 		 WebUI.delay(5)*/
