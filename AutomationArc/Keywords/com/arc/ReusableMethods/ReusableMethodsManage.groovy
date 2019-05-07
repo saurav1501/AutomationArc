@@ -1926,8 +1926,8 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(5)
 		WebUI.doubleClick(findTestObject('Manage/CertificationAndScore/a_ Certifications'))
 		WebUI.delay(5)
-	/*	WebUI.refresh()
-		WebUI.delay(5)*/
+		/*	WebUI.refresh()
+		 WebUI.delay(5)*/
 
 		String certificationType= WebUI.getText(findTestObject('Manage/CertificationAndScore/CertificationType'))
 		WebUI.verifyMatch(certificationType, 'STAR', false, FailureHandling.CONTINUE_ON_FAILURE)
@@ -1941,7 +1941,7 @@ public class ReusableMethodsManage extends BaseClass {
 		String certificationDate = WebUI.getText(findTestObject('Add_Project_Details/Star/Date'))
 		WebUI.verifyMatch(certificationDate, certiDate, false, FailureHandling.CONTINUE_ON_FAILURE)
 		print certificationDate
-	
+
 	}
 
 	@Keyword
@@ -2111,12 +2111,26 @@ public class ReusableMethodsManage extends BaseClass {
 
 	}
 
+
+	public String usgbcDate(String date){
+
+		// This object can interpret strings representing dates in the format MM/dd/yyyy
+		DateFormat df = new SimpleDateFormat("MMM d, yyyy")
+		// Convert from String to Date
+		Date startDate = df.parse(date)
+		// Once converted to a Date object, you can convert
+		// back to a String using any desired format.
+		return  df.format(startDate)
+	}
+
+
 	//Verify the order history
 	@Keyword
 	public void verifyOrderHistoryUSGBC(String sheetName, int rowNum){
 		String name  = data.getCellData(sheetName, "OrderId", rowNum)
 		String orderId = data.getCellData(sheetName, "ReviewId", rowNum)
 		String orderDate = data.getCellData(sheetName, "RegDate", rowNum)
+		String date= usgbcDate(orderDate);
 		String amount = data.getCellData(sheetName, "ReviewAmountReceipt", rowNum)
 		//ReusableMethodsLogin.waitForPageLoad(60)
 		WebUI.click(findTestObject('Object Repository/USGBCAccount/ClickOnAccountMenu'))

@@ -698,7 +698,8 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		robot.keyRelease(KeyEvent.VK_ENTER)
 		robot.keyPress(KeyEvent.VK_ENTER)
 		robot.keyRelease(KeyEvent.VK_ENTER)
-		WebUI.delay(8)
+		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),20)
+		WebUI.delay(10)
 		String reportingDate= WebUI.getAttribute(findTestObject('Object Repository/SubmitReview/ReviewDate'),'value')
 		//Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/SubmitReview/ReviewDate'),'value'), '02/02/2017')
 

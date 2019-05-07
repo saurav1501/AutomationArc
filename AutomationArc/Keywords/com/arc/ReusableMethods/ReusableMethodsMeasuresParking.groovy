@@ -585,12 +585,12 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 		println  "Verifying edited functionlity for no of parking space , level , website , about parking fields after refresh"
 	}
 
-	
+
 	@Keyword
 	public void verifyUnitTypeParking() throws IOException, InterruptedException {
 		WebUI.delay(5)
 		WebUI.verifyElementNotPresent(findTestObject('Manage/CityCom/New/td_Unit type'),4)
-		
+
 	}
 	@Keyword
 	public void verifyProjectDetailsParking(String sheetName,int rowNum) throws IOException, InterruptedException {
@@ -670,24 +670,24 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 
 	@Keyword
 	public void PaymentPageTextNotVisible(){
-	WebUI.delay(3)
-	WebUI.verifyElementNotVisible(findTestObject('Add_Project_Details/Par/p_LETS GET STARTED'))
-	WebUI.verifyElementNotPresent(findTestObject('Add_Project_Details/Par/p_Select a term to access the'),3)
-	
-}
-	
+		WebUI.delay(3)
+		WebUI.verifyElementNotVisible(findTestObject('Add_Project_Details/Par/p_LETS GET STARTED'))
+		WebUI.verifyElementNotPresent(findTestObject('Add_Project_Details/Par/p_Select a term to access the'),3)
+
+	}
+
 	@Keyword
 	public void RegPageValidation(){
-	
-	WebUI.delay(3)
-	WebUI.verifyOptionSelectedByLabel(findTestObject('Object Repository/AddProjectNewUI/selectProjectType'),'Buildings - Parking (Parksmart)', false, 5)
-	WebUI.verifyElementPresent(findTestObject('Add_Project_Details/Par/img'),3)
-	WebUI.verifyElementPresent(findTestObject('Add_Project_Details/Par/Area'), 2)
-	WebUI.verifyElementPresent(findTestObject('Add_Project_Details/Par/Unit'), 2)
-	WebUI.verifyElementNotPresent(findTestObject('Add_Project_Details/Par/SpaceType'), 4)
-		
+
+		WebUI.delay(3)
+		WebUI.verifyOptionSelectedByLabel(findTestObject('Object Repository/AddProjectNewUI/selectProjectType'),'Buildings - Parking (Parksmart)', false, 5)
+		WebUI.verifyElementPresent(findTestObject('Add_Project_Details/Par/img'),3)
+		WebUI.verifyElementPresent(findTestObject('Add_Project_Details/Par/Area'), 2)
+		WebUI.verifyElementPresent(findTestObject('Add_Project_Details/Par/Unit'), 2)
+		WebUI.verifyElementNotPresent(findTestObject('Add_Project_Details/Par/SpaceType'), 4)
+
 	}
-	
+
 	@Keyword
 	public void toolTip()throws IOException, InterruptedException {
 		WebUI.delay(7)

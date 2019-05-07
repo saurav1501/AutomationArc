@@ -2507,7 +2507,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_ADD'))
 		WebUI.waitForElementNotVisible(findTestObject('DataInput/CreateMeterBuilding/button_ADD'), 20)
 		//reading one
-		//WebUI.delay(5)
+		WebUI.delay(8)
 		WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'),meterName, FailureHandling.STOP_ON_FAILURE)
 		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'),2)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
@@ -3643,6 +3643,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.scrollToElement(findTestObject('DataInput/CityCom/BachelorAddYear'), 2)
 		WebUI.click(findTestObject('DataInput/CityCom/BachelorAddYear'))
 		WebUI.delay(5)
+		WebUI.waitForElementPresent(findTestObject('DataInput/CityCom/BachelorAddPrevYear'), 20)
+		WebUI.waitForElementVisible(findTestObject('DataInput/CityCom/BachelorAddPrevYear'), 20)
 		WebUI.scrollToElement(findTestObject('DataInput/CityCom/BachelorAddPrevYear'),5)
 		WebUI.click(findTestObject('DataInput/CityCom/BachelorAddPrevYear'))
 		WebUI.delay(5)
@@ -3651,6 +3653,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.scrollToElement(findTestObject('DataInput/CityCom/EquAddYear'), 2)
 		WebUI.click(findTestObject('DataInput/CityCom/EquAddYear'))
 		WebUI.delay(5)
+		WebUI.waitForElementPresent(findTestObject('DataInput/CityCom/EquAddPrevYear'), 20)
+		WebUI.waitForElementVisible(findTestObject('DataInput/CityCom/EquAddPrevYear'), 20)
 		WebUI.scrollToElement(findTestObject('DataInput/CityCom/EquAddPrevYear'), 2)
 		WebUI.click(findTestObject('DataInput/CityCom/EquAddPrevYear'))
 		WebUI.delay(5)
@@ -3658,6 +3662,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.sendKeys(findTestObject('DataInput/CityCom/HTextboxValue6'), reading2)
 		WebUI.click(findTestObject('DataInput/CityCom/GiniAddYear'))
 		WebUI.delay(5)
+		WebUI.waitForElementPresent(findTestObject('DataInput/CityCom/GiniAddPrevYear'), 20)
+		WebUI.waitForElementVisible(findTestObject('DataInput/CityCom/GiniAddPrevYear'), 20)
 		WebUI.scrollToElement(findTestObject('DataInput/CityCom/GiniAddPrevYear'), 2)
 		WebUI.click(findTestObject('DataInput/CityCom/GiniAddPrevYear'))
 		WebUI.delay(5)
@@ -4732,7 +4738,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	public void waterScoreShouldNotrecomputemunReclaimedonsite(){
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
 		WebUI.delay(5)
-		
+
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/MeterWater/button_Municipality supplied'),4)
 		WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/button_Municipality supplied'))
 		WebUI.delay(2)
@@ -5149,6 +5155,14 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		 Assert.assertEquals(fileName5,"uploadGif.gif")
 		 Assert.assertEquals(fileName6,"uploasExcel.xlsx")
 		 Assert.assertEquals(fileName7,"uploadDoc.docx")*/
+	}
+
+
+	//Verify data upload template present and can be download in resources section
+
+	public void verifyTheDataUploadTemplateInResourcesTab(){
+
+
 	}
 
 
