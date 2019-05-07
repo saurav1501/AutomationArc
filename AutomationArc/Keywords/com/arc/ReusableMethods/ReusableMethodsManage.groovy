@@ -1522,6 +1522,12 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyOptionSelectedByLabel(findTestObject('Object Repository/Manage/TeamModule/TeamRole'),"Arc Administrator", false,10)
 
 	}
+	
+	@Keyword
+	public void scoretextUpdate(){
+
+	
+	}
 
 	@Keyword
 	public void editTeamMemberRole(){
@@ -1932,7 +1938,9 @@ public class ReusableMethodsManage extends BaseClass {
 		String certiDate = commMethod.dateNew()
 		print certiDate
 		WebUI.delay(5)
-		WebUI.doubleClick(findTestObject('Manage/CertificationAndScore/a_ Certifications'))
+		WebUI.scrollToElement(findTestObject('Manage/CertificationAndScore/a_ Certifications'),5)
+		WebUI.delay(1)
+		WebUI.click(findTestObject('Manage/CertificationAndScore/a_ Certifications'))
 		WebUI.delay(5)
 		/*	WebUI.refresh()
 		 WebUI.delay(5)*/

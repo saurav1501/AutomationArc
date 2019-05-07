@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>ScoreVersionPageUpdate_1_15_4Test</name>
+   <name>VerifyAddedStarCertificationInsideProject_1_15_4Test</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>c40dbe29-6a74-4c57-a6af-877225a11090</testCaseGuid>
+   <testCaseGuid>48690e34-6904-4784-8b79-76d6f109d8ef</testCaseGuid>
 </TestCaseEntity>

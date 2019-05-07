@@ -16,7 +16,6 @@ import internal.GlobalVariable as GlobalVariable
 try {
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginArcAdminToolWithGlobalVariable'()
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSubmitReview.add3StarCertificationFromAdminToolForCity'(GlobalVariable.CitySheet, GlobalVariable.rowNumTwo)
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.cityComcertificationDetailVerificationForPointsAddedFromAdminTool'(GlobalVariable.CitySheet, GlobalVariable.rowNumTwo)
 		 
 } catch (Throwable t) {
 	WebUI.closeWindowIndex(1)

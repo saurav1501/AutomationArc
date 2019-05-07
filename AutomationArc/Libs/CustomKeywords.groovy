@@ -3742,6 +3742,10 @@ def static "com.arc.ReusableMethods.ReusableMethodsManage.editTeamManagerAndAddS
     (new com.arc.ReusableMethods.ReusableMethodsManage()).editTeamManagerAndAddSecondArcAdministratorRole()
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsManage.scoretextUpdate"() {
+    (new com.arc.ReusableMethods.ReusableMethodsManage()).scoretextUpdate()
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsManage.editTeamMemberRole"() {
     (new com.arc.ReusableMethods.ReusableMethodsManage()).editTeamMemberRole()
 }
