@@ -6,6 +6,7 @@ import java.awt.Robot
 import java.awt.event.KeyEvent
 import java.text.DateFormat
 import java.text.SimpleDateFormat
+import java.util.concurrent.ThreadLocalRandom
 import java.util.zip.ZipEntry
 import java.util.zip.ZipInputStream
 
@@ -568,6 +569,64 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		//Assert.assertEquals(WebUI.getText(findTestObject('Object Repository/Manage/adminToolNew/MessageSuccessfullySubmitted')), "Project Certification added")
 		//WebUI.closeWindowIndex(2)
 		//WebUI.delay(2)
+		WebUI.closeWindowIndex(1)
+		WebUI.delay(2)
+		WebUI.switchToWindowIndex(0)
+	}
+	
+	@Keyword
+	public void add3StarCertificationFromAdminToolForCity(String sheetName, int rowNum){
+		String prjId   =   data.getCellData(sheetName, "ProjectID", rowNum)
+		
+		WebUI.click(findTestObject('Manage/adminToolNew/a_ Certification'))
+		WebUI.delay(3)
+		WebUI.setText(findTestObject('Manage/adminToolNew/leedId'),prjId )
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/Manage/adminToolNew/ratingSystemDownArrow'))
+		WebUI.delay(2)
+		WebUI.scrollToElement(findTestObject('Add_Project_Details/Star/a_STAR (STAR)'), 2)
+		WebUI.click(findTestObject('Add_Project_Details/Star/a_STAR (STAR)'))
+		WebUI.delay(2)
+		
+		WebUI.click(findTestObject('Add_Project_Details/Star/span_platinum_caret'))
+		WebUI.delay(2)
+		 def star = [3,4,5]	
+		 int size1 = star.size()
+		 int randonStar = ThreadLocalRandom.current().nextInt(0, size1)
+		
+		 println randonStar
+		
+		 if(randonStar==0)
+		 {		
+		 WebUI.scrollToElement(findTestObject('Add_Project_Details/Star/a_5-STAR'), 2)
+		 WebUI.click(findTestObject('Add_Project_Details/Star/a_5-STAR'))
+		 WebUI.delay(2)
+		 String star_5 = '5-STAR'
+		 data.setCellData(sheetName, "CertiTypeForCertifiedProjects", rowNum ,star_5)
+		 }
+		 else if (randonStar==1)
+		  {
+			WebUI.scrollToElement(findTestObject('Add_Project_Details/Star/a_4-STAR'), 2)
+			WebUI.click(findTestObject('Add_Project_Details/Star/a_4-STAR'))
+			WebUI.delay(2)
+			String star_5 = '4-STAR'
+			data.setCellData(sheetName, "CertiTypeForCertifiedProjects", rowNum ,star_5)
+		  }
+		else
+		  {
+			WebUI.scrollToElement(findTestObject('Add_Project_Details/Star/a_3-STAR'), 2)
+			WebUI.click(findTestObject('Add_Project_Details/Star/a_3-STAR'))
+			WebUI.delay(2)
+			String star_5 = '3-STAR'
+			data.setCellData(sheetName, "CertiTypeForCertifiedProjects", rowNum ,star_5)
+	     }
+		
+		WebUI.setText(findTestObject('Object Repository/Manage/adminTool/SourceId'), prjId)
+		WebUI.delay(2)
+		WebUI.setText(findTestObject('Object Repository/Manage/adminToolNew/certificationPoints'),"80" )
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/Manage/adminToolNew/button_Save'))
+		WebUI.delay(10)
 		WebUI.closeWindowIndex(1)
 		WebUI.delay(2)
 		WebUI.switchToWindowIndex(0)

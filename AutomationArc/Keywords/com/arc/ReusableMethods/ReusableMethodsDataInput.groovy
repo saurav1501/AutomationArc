@@ -4743,7 +4743,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/button_Municipality supplied'))
 		WebUI.delay(2)
 
-		WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/a_Reclaimed onsite'))
+		WebUI.click(findTestObject('Add_Project_Details/Star/a_Reclaimed onsite'))
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/WaterScore'),40)
 		WebUI.delay(40)
 
@@ -4757,7 +4757,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/button_Municipality supplied'))
 		WebUI.delay(2)
 
-		WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/Municipality'))
+		WebUI.click(findTestObject('Add_Project_Details/Star/a_Municipality supplied potabl'))
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/WaterScore'),40)
 		WebUI.delay(40)
 

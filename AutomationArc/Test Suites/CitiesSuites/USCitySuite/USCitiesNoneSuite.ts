@@ -88,4 +88,10 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/MyCities/CitiesNone/ScoreVersionVerificationTest</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>1185dba2-0d28-4886-aa5a-600eccf05198</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCities/CitiesNone/NavigateToAdminToolAddStarCertification_1_15_4Test</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>

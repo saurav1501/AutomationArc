@@ -3030,6 +3030,14 @@ def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.addCertification
          , 	rowNum)
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.add3StarCertificationFromAdminToolForCity"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).add3StarCertificationFromAdminToolForCity(
+        	sheetName
+         , 	rowNum)
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.addCertificationFromAdminToolForTransit"(
     	String sheetName	
      , 	int rowNum	) {
@@ -3836,6 +3844,14 @@ def static "com.arc.ReusableMethods.ReusableMethodsManage.certificationDetailVer
     	String sheetName	
      , 	int rowNum	) {
     (new com.arc.ReusableMethods.ReusableMethodsManage()).certificationDetailVerificationForPointsAddedFromAdminTool(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsManage.cityComcertificationDetailVerificationForPointsAddedFromAdminTool"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsManage()).cityComcertificationDetailVerificationForPointsAddedFromAdminTool(
         	sheetName
          , 	rowNum)
 }

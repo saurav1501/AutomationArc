@@ -1918,6 +1918,31 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/CertificationAndScore/leedLogo'))
 	}
 
+	@Keyword
+	public void cityComcertificationDetailVerificationForPointsAddedFromAdminTool(String sheetName ,int rowNum){
+		String certiType= data.getCellData(sheetName, "CertiTypeForCertifiedProjects", rowNum)
+		String certiDate = commMethod.dateNew()
+		print certiDate
+		WebUI.delay(5)
+		WebUI.doubleClick(findTestObject('Manage/CertificationAndScore/a_ Certifications'))
+		WebUI.delay(5)
+	/*	WebUI.refresh()
+		WebUI.delay(5)*/
+
+		String certificationType= WebUI.getText(findTestObject('Manage/CertificationAndScore/CertificationType'))
+		WebUI.verifyMatch(certificationType, 'STAR', false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.delay(1)
+		String certificationLevel = WebUI.getText(findTestObject('Add_Project_Details/Star/Level'))
+		WebUI.verifyMatch(certificationLevel, certiType, false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.delay(1)
+		String certificationPoints= WebUI.getText(findTestObject('Add_Project_Details/Star/Point'))
+		WebUI.verifyMatch(certificationPoints, 'N/A', false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.delay(1)
+		String certificationDate = WebUI.getText(findTestObject('Add_Project_Details/Star/Date'))
+		WebUI.verifyMatch(certificationDate, certiDate, false, FailureHandling.CONTINUE_ON_FAILURE)
+		print certificationDate
+	
+	}
 
 	@Keyword
 	public void verifyLogoVisible(String sheetName ,int rowNum){
