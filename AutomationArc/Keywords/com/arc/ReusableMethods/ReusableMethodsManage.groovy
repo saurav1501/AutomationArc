@@ -2085,6 +2085,19 @@ public class ReusableMethodsManage extends BaseClass {
 
 
 	}
+	
+	
+	public String usgbcDate(String date){
+		
+		// This object can interpret strings representing dates in the format MM/dd/yyyy
+		DateFormat df = new SimpleDateFormat("MMM d, yyyy")
+		// Convert from String to Date
+		Date startDate = df.parse(date)
+		// Once converted to a Date object, you can convert
+		// back to a String using any desired format.
+		return  df.format(startDate)
+	} 
+	
 
 	//Verify the order history
 	@Keyword
@@ -2092,6 +2105,7 @@ public class ReusableMethodsManage extends BaseClass {
 		String name  = data.getCellData(sheetName, "OrderId", rowNum)
 		String orderId = data.getCellData(sheetName, "ReviewId", rowNum)
 		String orderDate = data.getCellData(sheetName, "RegDate", rowNum)
+		String date= usgbcDate(orderDate);
 		String amount = data.getCellData(sheetName, "ReviewAmountReceipt", rowNum)
 		//ReusableMethodsLogin.waitForPageLoad(60)
 		WebUI.click(findTestObject('Object Repository/USGBCAccount/ClickOnAccountMenu'))

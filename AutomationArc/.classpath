@@ -72,6 +72,18 @@
 	<classpathentry kind="lib" path="C:/Users/Lenovo/Downloads/Katalon_Studio_Windows_64-6.1.1/plugins/org.apache.ant.launcher_1.9.6.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Lenovo/Downloads/Katalon_Studio_Windows_64-6.1.1/plugins/com.kms.katalon.core.appium_1.0.0.201904051842.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Lenovo/Downloads/Katalon_Studio_Windows_64-6.1.1/plugins/org.eclipse.equinox.common_3.8.0.v20160509-1230.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/Downloads/Katalon_Studio_Windows_64-6.1.1/plugins/com.kms.katalon.core.webui_1.0.0.201904051842.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/C:/Users/Lenovo/Downloads/Katalon_Studio_Windows_64-6.1.1/configuration/resources/apidocs/com.kms.katalon.core.webui/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/Downloads/Katalon_Studio_Windows_64-6.1.1/plugins/org.json_20140107.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/Downloads/Katalon_Studio_Windows_64-6.1.1/plugins/com.kms.katalon.core.mobile_1.0.0.201904051842.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/C:/Users/Lenovo/Downloads/Katalon_Studio_Windows_64-6.1.1/configuration/resources/apidocs/com.kms.katalon.core.mobile/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Lenovo/Downloads/Katalon_Studio_Windows_64-6.1.1/plugins/org.apache.commons.validator_1.5.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Lenovo/Downloads/Katalon_Studio_Windows_64-6.1.1/plugins/com.kms.katalon.core.cucumber_1.0.0.201904051842.jar">
 		<attributes>
 			<attribute name="javadoc_location" value="file:/C:/Users/Lenovo/Downloads/Katalon_Studio_Windows_64-6.1.1/configuration/resources/apidocs/com.kms.katalon.core.cucumber/"/>
@@ -86,12 +98,6 @@
 	<classpathentry kind="lib" path="C:/Users/Lenovo/Downloads/Katalon_Studio_Windows_64-6.1.1/plugins/io.cucumber.java_3.0.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Lenovo/Downloads/Katalon_Studio_Windows_64-6.1.1/plugins/io.cucumber.tag-expressions_1.1.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Lenovo/Downloads/Katalon_Studio_Windows_64-6.1.1/plugins/io.cucumber.junit_3.0.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Lenovo/Downloads/Katalon_Studio_Windows_64-6.1.1/plugins/com.kms.katalon.core.mobile_1.0.0.201904051842.jar">
-		<attributes>
-			<attribute name="javadoc_location" value="file:/C:/Users/Lenovo/Downloads/Katalon_Studio_Windows_64-6.1.1/configuration/resources/apidocs/com.kms.katalon.core.mobile/"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Lenovo/Downloads/Katalon_Studio_Windows_64-6.1.1/plugins/org.apache.commons.validator_1.5.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Lenovo/Downloads/Katalon_Studio_Windows_64-6.1.1/plugins/com.kms.katalon.core.webservice_1.0.0.201904051842.jar">
 		<attributes>
 			<attribute name="javadoc_location" value="file:/C:/Users/Lenovo/Downloads/Katalon_Studio_Windows_64-6.1.1/configuration/resources/apidocs/com.kms.katalon.core.webservice/"/>
@@ -100,12 +106,6 @@
 	<classpathentry kind="lib" path="C:/Users/Lenovo/Downloads/Katalon_Studio_Windows_64-6.1.1/plugins/wsdl4j_1.6.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Lenovo/Downloads/Katalon_Studio_Windows_64-6.1.1/plugins/com.google.oauth-client.google-oauth-client_1.22.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Lenovo/Downloads/Katalon_Studio_Windows_64-6.1.1/plugins/com.google.http-client.google-http-client_1.22.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Lenovo/Downloads/Katalon_Studio_Windows_64-6.1.1/plugins/com.kms.katalon.core.webui_1.0.0.201904051842.jar">
-		<attributes>
-			<attribute name="javadoc_location" value="file:/C:/Users/Lenovo/Downloads/Katalon_Studio_Windows_64-6.1.1/configuration/resources/apidocs/com.kms.katalon.core.webui/"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Lenovo/Downloads/Katalon_Studio_Windows_64-6.1.1/plugins/org.json_20140107.0.0.jar"/>
 	<classpathentry kind="lib" path="D:/AutomationArc/AutomationArc/Drivers/activation-1.1.jar"/>
 	<classpathentry kind="lib" path="D:/AutomationArc/AutomationArc/Drivers/calendar-plugin.jar"/>
 	<classpathentry kind="lib" path="D:/AutomationArc/AutomationArc/Drivers/commons-codec-1.10.jar"/>
