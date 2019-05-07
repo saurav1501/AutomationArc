@@ -353,15 +353,57 @@
       <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/Team/VerifyTeamLabelShouldBeDisplayDataInputTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>b2c74d88-747b-4d75-a368-c0a746079343</guid>
+      <guid>2ec30e0c-da1f-4e1e-a9dd-01ba391a2296</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/NavigateToAdminToolAddStarCertification_1_15_4Test</testCaseId>
+      <testCaseId>Test Cases/LEEDOnlineCommunity/NavigateToCommunityLEEDOnlineTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>bf806377-d000-42af-93f1-e9f1d4ac16ab</guid>
+      <guid>1dc19331-d61f-4683-8982-f350981bdae9</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/VerifyAddedStarCertificationInsideProject_1_15_4Test</testCaseId>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/LEEDOnlineCommunity/VerifyCommunityDeatilsSyncDataFromArcTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>a56613b2-77dc-4b5b-8ebc-75a78714ea60</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/LEEDOnlineCommunity/VerifyAddedTeamMemberDetailsFromArcTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>fb154992-de54-45a4-a2c8-346739c3ba1f</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/LEEDOnlineCommunity/AddNewTeamMemberFromLEEDTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>1c6a81b7-2f3f-4228-a933-17867a8abb43</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/LEEDOnlineCommunity/ChangeAuthorizationProjectAdministratorTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>7b1f6267-d67c-4040-8aab-a9c86c918ea3</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/LEEDOnlineCommunity/LoginWithAddedTeamMemNavToCommunityArcTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>858eda4b-f36e-44d9-8a88-a51f8f309938</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/LEEDOnlineCommunity/VerifyAddedTeamMemberFromLEEDInArcTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>3899095d-0379-4779-af86-426ede215d35</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/LEEDOnlineCommunity/VerifyPermissionRequestsOptionTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>ae44600e-1783-4586-a5fe-c80f256b02b2</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/LEEDOnlineCommunity/LoginWithAddedTeamMemNavToCommunityArcTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
