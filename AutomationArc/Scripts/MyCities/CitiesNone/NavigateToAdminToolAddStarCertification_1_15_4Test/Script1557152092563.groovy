@@ -17,7 +17,7 @@ try {
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginArcAdminToolWithGlobalVariable'()
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSubmitReview.add3StarCertificationFromAdminToolForCity'(GlobalVariable.CitySheet, GlobalVariable.rowNumFour)
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.cityComcertificationDetailVerificationForPointsAddedFromAdminTool'(GlobalVariable.CitySheet, GlobalVariable.rowNumFour)
-	 	
+		 
 } catch (Throwable t) {
 	WebUI.closeWindowIndex(1)
 	WebUI.delay(2)
