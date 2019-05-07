@@ -191,6 +191,12 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/EditEnergyMeterReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>780e5f78-892b-4d48-ad70-cbb4bdebd44d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyThatTheIncompleteMeterCanBeDeleted_1_15_4Test</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>a94aa142-f1c4-4deb-95ba-001d841d0334</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -243,6 +249,12 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyFilterDataInputForWasteReadingTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>1b99ebd6-75bb-404d-8860-a932458edde0</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyDataUploadTemplatePresentInResourcesTab_1_15_4Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>6b4b3eac-5747-4ec5-9dc0-54b084a055c9</guid>

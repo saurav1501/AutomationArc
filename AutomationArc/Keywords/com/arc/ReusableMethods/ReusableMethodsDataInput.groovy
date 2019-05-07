@@ -5159,13 +5159,56 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 
 	//Verify data upload template present and can be download in resources section
-
+	@Keyword
 	public void verifyTheDataUploadTemplateInResourcesTab(){
-
-
+		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+		WebUI.delay(5)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Resources/div_Guides'), 4)
+		WebUI.click(findTestObject('Object Repository/DataInput/Resources/div_Guides'))
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Resources/div_Guides (1)'),10)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Resources/div_Guides (1)')),"Guides", false)
+		WebUI.delay(4)
+		WebUI.click(findTestObject('Object Repository/DataInput/Resources/a_ENERGY STAR Template'))
+		WebUI.delay(5)
+		Assert.assertTrue(isFileDownloaded('Arc_Data_Template_building_v4.1.xlsm'), 'Failed to download Expected document')
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Resources/a_ENERGY STAR Integration Guide')), "ENERGY STAR Integration Guide", false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Resources/a_Data Guide for Buildings')), "Data Guide for Buildings", false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Resources/a_Data Review Checklist')), "Data Review Checklist", false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Resources/a_ENERGY STAR Template')), "ENERGY STAR Template ", false, FailureHandling.CONTINUE_ON_FAILURE)
 	}
-
-
-
+	
+	@Keyword
+	public void deleteIncompleteMeterReading(){
+		WebUI.delay(12)
+		ReusableMethodsLogin.waitForIframeLoad(60)
+		WebUI.delay(2)
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'))
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/a_Add New Meter'))
+		WebUI.delay(3)
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_Next'))
+		WebUI.delay(3)
+		WebUI.sendKeys(findTestObject('DataInput/CreateMeterBuilding/input_addMeterModal-body-Eleme'),"Energy Meter for Incomplete Readings")
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_ELECTRICITY'))
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/a_ELECTRICITY'))
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/CreateEnergyAndWaterMeterWithDifferentCombinations/ClickOnSelectUnit'))
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/CreateEnergyAndWaterMeterWithDifferentCombinations/SelectKBtu'))
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/CreateEnergyAndWaterMeterWithDifferentCombinations/ClickOnFuelSource'))
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/CreateEnergyAndWaterMeterWithDifferentCombinations/SelectOnGenerateOnSiteSolar'))
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_ADD'))
+		WebUI.waitForElementNotVisible(findTestObject('DataInput/CreateMeterBuilding/button_ADD'), 20)
+		WebUI.delay(5)
+		WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'),"Energy Meter for Incomplete Readings", FailureHandling.STOP_ON_FAILURE)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), 5)
+		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'),2)
+		WebUI.delay(3)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
+		WebUI.delay(4)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/DeletereadingOne'))
+		WebUI.delay(4)
+	    WebUI.verifyElementNotPresent(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter start_'), 3)
+	   
+		
+		
+	}
 }
 

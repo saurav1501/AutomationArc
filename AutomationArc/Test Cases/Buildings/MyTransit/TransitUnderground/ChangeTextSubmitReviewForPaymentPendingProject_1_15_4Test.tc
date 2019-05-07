@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify if the review is returned for the review submitted project then there will be text change for the review status and there is link to navigate to the  billing section</description>
+   <name>ChangeTextSubmitReviewForPaymentPendingProject_1_15_4Test</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d9b877ae-45b1-4211-921e-4b1b96695c15</testCaseGuid>
+</TestCaseEntity>

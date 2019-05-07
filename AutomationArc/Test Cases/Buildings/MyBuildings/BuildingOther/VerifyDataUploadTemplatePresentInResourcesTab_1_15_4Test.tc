@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Verify the data upload template is present and downloadale in resources section. And the other documets present in this section.</description>
+   <description>Verify the data upload template is present and downloadale in resources section.</description>
    <name>VerifyDataUploadTemplatePresentInResourcesTab_1_15_4Test</name>
    <tag>Verify Data Upload Template Present and Downloadable</tag>
    <comment></comment>

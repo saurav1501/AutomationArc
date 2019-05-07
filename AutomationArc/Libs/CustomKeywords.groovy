@@ -2396,6 +2396,14 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.fileUploadDataInput
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).fileUploadDataInputWasteTest()
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyTheDataUploadTemplateInResourcesTab"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyTheDataUploadTemplateInResourcesTab()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.deleteIncompleteMeterReading"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).deleteIncompleteMeterReading()
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsAnalytics.downloadAndVerifySurveyExportedData"() {
     (new com.arc.ReusableMethods.ReusableMethodsAnalytics()).downloadAndVerifySurveyExportedData()
 }
@@ -3088,6 +3096,18 @@ def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifySnapshotFi
         	sheetName
          , 	rowNum
          , 	ratingSystem)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.VerifyChangeTextInSubmitReviewWhenPaymentIsPending"() {
+    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).VerifyChangeTextInSubmitReviewWhenPaymentIsPending()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.adminToolReturnReview"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).adminToolReturnReview(
+        	sheetName
+         , 	rowNum)
 }
 
 def static "com.arc.ReusableMethods.ResuableMethodsGRESB.downloadGresbtemplete"() {
