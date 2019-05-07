@@ -4721,7 +4721,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/a_Municipality supplied reclai'))
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/WaterScore'),40)
-		WebUI.delay(40)
+		WebUI.delay(50)
 
 		String waterScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/WaterScore'))
 		WebUI.verifyMatch(waterScore,'0', false)
@@ -4739,7 +4739,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		WebUI.click(findTestObject('Add_Project_Details/Star/a_Reclaimed onsite'))
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/WaterScore'),40)
-		WebUI.delay(40)
+		WebUI.delay(50)
 
 		String rwaterScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/WaterScore'))
 
@@ -4753,7 +4753,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		WebUI.click(findTestObject('Add_Project_Details/Star/a_Municipality supplied potabl'))
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/WaterScore'),40)
-		WebUI.delay(40)
+		WebUI.delay(50)
 
 		/********************Changing to the default score of water ***********************************************/
 		WebUI.scrollToElement(findTestObject('PerformanceScore/DataInput/WaterScore'),5)
