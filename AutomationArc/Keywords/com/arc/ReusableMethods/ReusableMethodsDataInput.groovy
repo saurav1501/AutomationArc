@@ -4738,7 +4738,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	public void waterScoreShouldNotrecomputemunReclaimedonsite(){
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
 		WebUI.delay(5)
-		
+
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/MeterWater/button_Municipality supplied'),4)
 		WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/button_Municipality supplied'))
 		WebUI.delay(2)
@@ -5155,6 +5155,14 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		 Assert.assertEquals(fileName5,"uploadGif.gif")
 		 Assert.assertEquals(fileName6,"uploasExcel.xlsx")
 		 Assert.assertEquals(fileName7,"uploadDoc.docx")*/
+	}
+
+
+	//Verify data upload template present and can be download in resources section
+
+	public void verifyTheDataUploadTemplateInResourcesTab(){
+
+
 	}
 
 
