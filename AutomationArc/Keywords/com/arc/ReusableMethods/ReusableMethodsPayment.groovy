@@ -7,6 +7,7 @@ import java.util.concurrent.ThreadLocalRandom
 import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.WebElement
+import org.openqa.selenium.support.ui.Select
 import org.testng.Assert
 
 import com.arc.BaseClass.BaseClass
@@ -93,8 +94,6 @@ public class ReusableMethodsPayment extends BaseClass{
 		else
 			KeywordUtil.markFailedAndStop("Trial project is not created")
 
-
-
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/spaceType'))
 		List<WebElement> list= driver.findElements(By.xpath("//*[@ng-repeat='type in spaceType']"))
 		int size = list.size()
@@ -102,6 +101,11 @@ public class ReusableMethodsPayment extends BaseClass{
 		println list.get(randonNumber).getText()
 		data.setCellData(sheetName, "SpaceType", rowNum,list.get(randonNumber).getText())
 		list.get(randonNumber).click()
+		if((list.get(randonNumber).getText()=="Industrial Manufacturing") || (list.get(randonNumber).getText()=="Laboratory") || (list.get(randonNumber).getText()=="Data Center") ||
+			(list.get(randonNumber).getText()=="Warehouse: Nonrefrigerated Distribution/Shipping") || (list.get(randonNumber).getText()=="Warehouse: Refrigerated")|| (list.get(randonNumber).getText()=="Warehouse: Self Storage Units") ||
+			 (list.get(randonNumber).getText()=="Warehouse: General")){
+			 uniqueSpaceTypesFlag=true
+		}	 
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/ownerType'))
 		List<WebElement> list1= driver.findElements(By.xpath("//*[@ng-repeat='type in ownerType']"))
 		int size1 = list1.size()
@@ -271,6 +275,15 @@ public class ReusableMethodsPayment extends BaseClass{
 		println list.get(randonNumber).getText()
 		data.setCellData(sheetName, "SpaceType", rowNum,list.get(randonNumber).getText())
 		list.get(randonNumber).click()
+		WebUI.delay(2)
+		String stype=list.get(randonNumber).getText()	
+		
+		if((stype.equals("Industrial Manufacturing")) || (stype.equals("Laboratory")) || (stype.equals("Data Center")) ||
+			(stype.equals("Warehouse: Nonrefrigerated Distribution/Shipping")) || (stype.equals("Warehouse: Refrigerated"))|| (stype.equals("Warehouse: Self Storage Units")) ||
+			 (stype.equals("Warehouse: General"))){
+			 uniqueSpaceTypesFlag=true
+		}
+		println uniqueSpaceTypesFlag
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/ownerType'))
 		List<WebElement> list1= driver.findElements(By.xpath("//*[@ng-repeat='type in ownerType']"))
 		int size1 = list1.size()
@@ -295,7 +308,7 @@ public class ReusableMethodsPayment extends BaseClass{
 
 	}
 
-	
+
 	@Keyword
 	public void paymentPageBillingDetailsIndiaProject(String sheetName , int rowNum){
 		/********************Fetching the data via Excel Sheet ******************************/
@@ -325,9 +338,9 @@ public class ReusableMethodsPayment extends BaseClass{
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/paymentPageNewUI/billingState'), state , false)
 		WebUI.clearText(findTestObject('Object Repository/paymentPageNewUI/billingZip'))
 		WebUI.setText(findTestObject('Object Repository/paymentPageNewUI/billingZip'),zip )
-		
-	}	
-	
+
+	}
+
 
 	@Keyword
 	public void paymentRegistration(String sheetName , int rowNum, String paymentMode){
@@ -373,6 +386,17 @@ public class ReusableMethodsPayment extends BaseClass{
 			WebUI.click(findTestObject('Object Repository/paymentPageNewUI/submitPayment'))
 		}
 		WebUI.delay(30)
+		if((uniqueSpaceTypesFlag==true)){
+			println "Space type matched"
+			WebUI.waitForElementVisible(findTestObject('Object Repository/PayNowRegistrationPaymentUSTest/RegistrationPaymentConfirmationPopCloseButton'), 20)
+			WebUI.delay(2)
+			WebUI.click(findTestObject('Object Repository/PayNowRegistrationPaymentUSTest/RegistrationPaymentConfirmationPopCloseButton'))
+			uniqueSpaceTypesFlag=false
+		}
+		else{
+			println "Space type not matched"
+			uniqueSpaceTypesFlag=false
+		}
 		WebUI.waitForElementVisible(findTestObject('PaymenntLocator/NextButton'), 70)
 		WebUI.click(findTestObject('PaymenntLocator/NextButton'))
 		WebUI.delay(5)
@@ -502,8 +526,8 @@ public class ReusableMethodsPayment extends BaseClass{
 		WebUI.waitForElementVisible(findTestObject('PaymenntLocator/NextButton'), 40)
 		WebUI.click(findTestObject('PaymenntLocator/NextButton'))
 		WebUI.delay(5)
-		
-		
+
+
 	}
 
 	@Keyword
@@ -644,11 +668,11 @@ public class ReusableMethodsPayment extends BaseClass{
 		WebUI.setText(findTestObject('PayNowRegistrationPaymentUSTest/input_CC_number'), '999')
 		//WebUI.click(findTestObject('PayNowRegistrationPaymentUSTest/div_Street Address  This field'))
 		//WebUI.clearText(findTestObject('PayNowRegistrationPaymentUSTest/input_streetaddress'))
-		
+
 		WebUI.selectOptionByLabel(findTestObject('PayNowRegistrationPaymentUSTest/select_AfghanistanAland Island'), 'United States', false)
 		WebUI.delay(3)
 		WebUI.selectOptionByLabel(findTestObject('RegistrationPaymentCheck/select_Select StateAlabamaAlas'), 'Alabama', false)
-		
+
 		WebUI.setText(findTestObject('PayNowRegistrationPaymentUSTest/input_streetaddress'), 'GBCI BUILDING')
 		//WebUI.clearText(findTestObject('PayNowRegistrationPaymentUSTest/input_city'))
 		WebUI.setText(findTestObject('PayNowRegistrationPaymentUSTest/input_city'), 'Gurgaon')
@@ -1238,7 +1262,7 @@ public class ReusableMethodsPayment extends BaseClass{
 		WebUI.verifyElementPresent(findTestObject('Object Repository/PaymenntLocator/IGSTTaxApplicableOnSubTotalRegAmountIND'),10,FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.delay(5)
 		/*WebUI.check(findTestObject('Object Repository/PaymenntLocator/SEZCheckBox'))
-		WebUI.delay(3)*/
+		 WebUI.delay(3)*/
 	}
 
 	@Keyword

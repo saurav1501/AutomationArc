@@ -254,6 +254,8 @@ public class ReusableMethodsNavigation {
 
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
 		WebUI.delay(10)
+		WebUI.waitForElementPresent(findTestObject('Page_Arc dashboard/DashboardPage/NavigationCreditAction/span_Meters  Surveys'), 40)
+		WebUI.waitForElementVisible(findTestObject('Page_Arc dashboard/DashboardPage/NavigationCreditAction/span_Meters  Surveys'), 40)
 		String dataInput = WebUI.getText(findTestObject('Page_Arc dashboard/DashboardPage/NavigationCreditAction/span_Meters  Surveys'))
 		WebUI.verifyMatch(dataInput,'Meters & Surveys', false)
 

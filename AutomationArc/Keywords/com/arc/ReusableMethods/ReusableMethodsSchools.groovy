@@ -88,6 +88,11 @@ public class ReusableMethodsSchools extends BaseClass{
 		println list.get(randonNumber).getText()
 		data.setCellData(sheetName, "SpaceType", rowNum,list.get(randonNumber).getText())
 		list.get(randonNumber).click()
+		if((list.get(randonNumber).getText()=="Industrial Manufacturing") || (list.get(randonNumber).getText()=="Laboratory") || (list.get(randonNumber).getText()=="Data Center") ||
+			(list.get(randonNumber).getText()=="Warehouse: Nonrefrigerated Distribution/Shipping") || (list.get(randonNumber).getText()=="Warehouse: Refrigerated")|| (list.get(randonNumber).getText()=="Warehouse: Self Storage Units") ||
+			 (list.get(randonNumber).getText()=="Warehouse: General")){
+			 uniqueSpaceTypesFlag=true
+		}
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/ownerType'))
 		List<WebElement> list1= driver.findElements(By.xpath("//*[@ng-repeat='type in ownerType']"))
 		int size1 = list1.size()

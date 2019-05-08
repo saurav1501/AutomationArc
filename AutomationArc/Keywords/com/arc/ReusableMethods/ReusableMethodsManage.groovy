@@ -2168,7 +2168,9 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/USGBCAccount/TotalAmount')), amount, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/USGBCAccount/OrderStatus')), 'Completed', false, FailureHandling.CONTINUE_ON_FAILURE)
 		//WebUI.verifyElementVisible(findTestObject('Object Repository/USGBCAccount/PayNowButton'), FailureHandling.CONTINUE_ON_FAILURE)
-	}
+		WebUI.closeWindowIndex(1)
+		WebUI.switchToWindowIndex(0)
+		}
 
 	public static String pdfReader(String pdfFilePath){
 		FileInputStream fis
@@ -2719,7 +2721,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Manage/Setting/a_setting'))
 		WebUI.delay(8)
 		WebUI.click(findTestObject('Object Repository/Manage/Setting/lobbySurveyBtn'))
-		WebUI.delay(3)
+		WebUI.delay(5)
 		WebUI.click(findTestObject('Object Repository/Manage/App/a_ Apps'))
 		WebUI.delay(3)
 		WebUI.click(findTestObject('Object Repository/Manage/Setting/a_setting'))
