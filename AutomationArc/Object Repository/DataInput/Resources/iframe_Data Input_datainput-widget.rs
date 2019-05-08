@@ -4,6 +4,12 @@
    <name>iframe_Data Input_datainput-widget</name>
    <tag></tag>
    <elementGuidId>1afd1aeb-fd0d-4807-97e5-6a5ba1afebb9</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//iframe[@id = 'datainput-widget']</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
@@ -28,7 +34,7 @@
       <value>https://api.usgbc.org/stg/leed/assets/LEED:1000164039/widget/meter/?access-token=rbKkX4qrTR0pqZNI5i6xdvdP1NX8mT&amp;subscription-key=8e0baacec376430ba0f81a5d960ccbb0&amp;type=all&amp;version=1</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>src</name>
       <type>Main</type>

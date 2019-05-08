@@ -1156,6 +1156,28 @@ def static "com.arc.ReusableMethods.ReusableMethodSendEmailReport.sendEmailRepor
     (new com.arc.ReusableMethods.ReusableMethodSendEmailReport()).sendEmailReport()
 }
 
+def static "com.helper.grid.GridHelper.GetValueFromGrid"(
+    	TestObject baseTestObject	
+     , 	int rowIndex	
+     , 	int colIndex	) {
+    (new com.helper.grid.GridHelper()).GetValueFromGrid(
+        	baseTestObject
+         , 	rowIndex
+         , 	colIndex)
+}
+
+def static "com.helper.grid.GridHelper.getValueOrClickOnColumn"(
+    	TestObject baseTestObject	
+     , 	int rowIndex	
+     , 	int colIndex	
+     , 	String type	) {
+    (new com.helper.grid.GridHelper()).getValueOrClickOnColumn(
+        	baseTestObject
+         , 	rowIndex
+         , 	colIndex
+         , 	type)
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsSchools.addNewSchoolProjectRegistration"(
     	String sheetName	
      , 	int rowNum	) {
@@ -1306,28 +1328,6 @@ def static "com.arc.ReusableMethods.ReusableMethodsSchools.verifyFormaldehydeTot
 
 def static "com.arc.ReusableMethods.ReusableMethodsSchools.navigateToBuildingSchools"() {
     (new com.arc.ReusableMethods.ReusableMethodsSchools()).navigateToBuildingSchools()
-}
-
-def static "com.helper.grid.GridHelper.GetValueFromGrid"(
-    	TestObject baseTestObject	
-     , 	int rowIndex	
-     , 	int colIndex	) {
-    (new com.helper.grid.GridHelper()).GetValueFromGrid(
-        	baseTestObject
-         , 	rowIndex
-         , 	colIndex)
-}
-
-def static "com.helper.grid.GridHelper.getValueOrClickOnColumn"(
-    	TestObject baseTestObject	
-     , 	int rowIndex	
-     , 	int colIndex	
-     , 	String type	) {
-    (new com.helper.grid.GridHelper()).getValueOrClickOnColumn(
-        	baseTestObject
-         , 	rowIndex
-         , 	colIndex
-         , 	type)
 }
 
 def static "com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToBuilding"() {
@@ -2378,6 +2378,14 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.fileUploadDataInput
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).fileUploadDataInputWasteTest()
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyTheDataUploadTemplateInResourcesTab"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyTheDataUploadTemplateInResourcesTab()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.deleteIncompleteMeterReading"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).deleteIncompleteMeterReading()
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsAnalytics.downloadAndVerifySurveyExportedData"() {
     (new com.arc.ReusableMethods.ReusableMethodsAnalytics()).downloadAndVerifySurveyExportedData()
 }
@@ -3070,6 +3078,18 @@ def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifySnapshotFi
         	sheetName
          , 	rowNum
          , 	ratingSystem)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.VerifyChangeTextInSubmitReviewWhenPaymentIsPending"() {
+    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).VerifyChangeTextInSubmitReviewWhenPaymentIsPending()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.adminToolReturnReview"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).adminToolReturnReview(
+        	sheetName
+         , 	rowNum)
 }
 
 def static "com.arc.ReusableMethods.ResuableMethodsGRESB.downloadGresbtemplete"() {
@@ -3944,6 +3964,10 @@ def static "com.arc.ReusableMethods.ReusableMethodsManage.scoreVersionVerComTest
 
 def static "com.arc.ReusableMethods.ReusableMethodsManage.scoreVersionVerification3"() {
     (new com.arc.ReusableMethods.ReusableMethodsManage()).scoreVersionVerification3()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsManage.scoreVersionVerification1_1"() {
+    (new com.arc.ReusableMethods.ReusableMethodsManage()).scoreVersionVerification1_1()
 }
 
 def static "com.arc.ReusableMethods.ReusableMethodsManage.verifyScoreUpdatePopupAndComparisionPage"() {

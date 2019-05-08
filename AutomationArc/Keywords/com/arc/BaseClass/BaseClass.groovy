@@ -31,6 +31,7 @@ public class BaseClass {
 	public static rowNumError=2
 	public static rowNumINBN=2
 	public static rowNumDASH=2
+	public static boolean uniqueSpaceTypesFlag=false
 
 	//public static String arcReportFile= RunConfiguration.getProjectDir()+"/ARCDataTemplete/ARCReport.xlsx"
 	//public static XlsReader arcSheet = new XlsReader(arcReportFile)

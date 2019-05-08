@@ -127,43 +127,6 @@ table.border, td.border, th.border {
       </j:if>
     
 
-    <!-- CHANGE SET -->
-    
-      <j:set var="changeSet" value="${build.changeSet}" />
-      <j:if test="${changeSet!=null}">
-        <j:set var="hadChanges" value="false" />
-       <p>
-        <a href="${rooturl}${build.url}/changes"><h3>Changes</h3></a>
-          </p>
-        <j:forEach var="cs" items="${changeSet.logs}" varStatus="loop">
-          <j:set var="hadChanges" value="true" />
-          <h4>${cs.msgAnnotated}</h4>
-          <p>by <em>${cs.author}</em></p>
-          <table class="brownshade border">
-            <j:forEach var="p" items="${cs.affectedFiles}">
-              <tr class="border">
-                <td class="brownshade border" width="10%">${spc}${p.editType.name}</td>
-                <td class="brownshade border">
-                  <tt>${p.path}</tt>
-                </td>
-              </tr>
-            </j:forEach>
-          </table>
-        </j:forEach>
-        <j:if test="${!hadChanges}">
-        <table class="brownshade ">
-        <tbody>
-        <th class="brownshade border">
-          <p>No Changes</p>
-          </th>
-         </tbody> 
-         </table> 
-        </j:if>
-        <br />
-      </j:if>
-    
-
-
     <!-- JUnit TEMPLATE -->
     <j:set var="junitResultList" value="${it.JUnitTestResult}" />
     <j:if test="${junitResultList.isEmpty()!=true}">
@@ -186,13 +149,15 @@ table.border, td.border, th.border {
             <j:forEach var="packageResult" items="${junitResult.getChildren()}">
               <tr class="border">
                 <td class="brownshade border">
-                  <tt>ARC Frontend Tests</tt>
+                  <tt><b>ARC Frontend Tests</b></tt>
                 </td>
-        <td class="brownshade border"><font color="red">&amp;nbsp;&amp;nbsp; ${packageResult.getFailCount()}</font></td>
-        <td class="brownshade order">&amp;nbsp;&amp;nbsp; ${packageResult.getPassCount()}</td>
-              <td class="brownshade border"><font color="black">&amp;nbsp;&amp;nbsp;${packageResult.getSkipCount()}</font></td>
-              <td class="brownshade order"> &amp;nbsp;&amp;nbsp;
-<b>${packageResult.getPassCount()+packageResult.getFailCount()+packageResult.getSkipCount()}</b>
+        <td class="brownshade border">
+        <b><font color="red">&amp;nbsp;&amp;nbsp; ${packageResult.getFailCount()}</font></b></td>
+        <td class="brownshade order"><b>&amp;nbsp;&amp;nbsp; ${packageResult.getPassCount()}</b></td>
+              <td class="brownshade border"><b><font color="black">&amp;nbsp;&amp;nbsp;${packageResult.getSkipCount()}</font>
+              </b></td>
+              <td class="brownshade order"> <b>&amp;nbsp;&amp;nbsp;
+${packageResult.getPassCount()+packageResult.getFailCount()+packageResult.getSkipCount()}</b>
                 </td>
               </tr>
               <j:forEach var="failed_test" items="${packageResult.getFailedTests()}">
@@ -209,17 +174,7 @@ table.border, td.border, th.border {
     </j:if>
 
    
-      <!-- CONSOLE OUTPUT -->
      
-      <p><a href="${rooturl}${build.url}/console"></a>
-        <h4>Console Output</h4></p>
-      <table class="brownshade1 border">
-        <j:forEach var="line" items="${build.getLog(50)}">
-        <tr class="brownshade">
-            <td><tt>${line}</tt></td>
-        </tr>
-        </j:forEach>
-      </table>
      
       </div>
 

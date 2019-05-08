@@ -89,11 +89,12 @@
       <testCaseId>Test Cases/MyCities/CitiesNone/ScoreVersionVerificationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>24d0c582-df8a-40c0-80cf-f63799612c4e</guid>
+      <guid>1185dba2-0d28-4886-aa5a-600eccf05198</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
       <testCaseId>Test Cases/MyCities/CitiesNone/NavigateToAdminToolAddStarCertification_1_15_4Test</testCaseId>
    </testCaseLink>
+<<<<<<< HEAD
    <testCaseLink>
       <guid>7a4b9107-d4e8-451e-9691-a66198383683</guid>
       <isReuseDriver>false</isReuseDriver>
@@ -178,4 +179,6 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/Common/1_15_4/NoneOtherToolTipText_1_15_4Test</testCaseId>
    </testCaseLink>
+=======
+>>>>>>> 4d499c204a4d0d000cfeb3dac2c3792378136df8
 </TestSuiteEntity>
