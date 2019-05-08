@@ -62,10 +62,10 @@ public class ReusableMethodsNavigation {
 		String postNavigationLoginText = WebUI.getText(findTestObject('Page_Arc dashboard/span_My Parking'))
 		WebUI.verifyMatch(postNavigationLoginText,'My Parking',false)
 	}
-	
-	
 
-	
+
+
+
 	@Keyword
 	public void navigateToPortfolio(){
 		WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
@@ -211,7 +211,7 @@ public class ReusableMethodsNavigation {
 		WebUI.click(findTestObject('Page_Arc dashboard/DashboardPage/a_appLogo'))
 		WebUI.delay(5)
 		String LogOut = WebUI.getText(findTestObject('DashboardNavigationNewUI/Dash/Logout'))
-		WebUI.verifyMatch(LogOut,'Logout', false)	
+		WebUI.verifyMatch(LogOut,'Logout', false)
 		WebUI.click(findTestObject('DashboardNavigationNewUI/Dash/Logout'))
 		WebUI.delay(8)
 	}
