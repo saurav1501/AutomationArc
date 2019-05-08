@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verified text for None/other ratings if the text for BP is not displayed as they don’t have BP</description>
+   <name>NoneOtherToolTipText_1_15_4Test</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>3d49d062-4b70-4c49-b26e-1ddc572847f2</testCaseGuid>
+</TestCaseEntity>

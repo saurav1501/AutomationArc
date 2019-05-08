@@ -1102,4 +1102,58 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.verifyMatch(totalperformaceScore , totalperformanceScore, false)
 
 	}
+	
+	@Keyword
+	public void totalPerformanceScoreToolTipLEED() throws IOException, InterruptedException {
+		WebUI.setViewPortSize(1024,768)
+		WebUI.delay(5)
+		WebUI.click(findTestObject('PerformanceScore/Score/a_ Total'))
+		WebUI.delay(10)
+		WebUI.waitForElementClickable(findTestObject('Manage/CityCom/New/PerformanceToolTip'),30)
+		WebUI.click(findTestObject('Manage/CityCom/New/PerformanceToolTip'))
+		WebUI.delay(5)	
+		//WebUI.verifyElementPresent(findTestObject('Manage/CityCom/New/LEEDPerformance scoreThe total'), 22)
+		WebUI.verifyElementVisible(findTestObject('Manage/CityCom/New/CategoryScore'), FailureHandling.CONTINUE_ON_FAILURE)	
+		WebUI.verifyElementVisible(findTestObject('Manage/CityCom/New/Performance scoreThe total'), FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyElementVisible(findTestObject('Manage/CityCom/New/Base pointsAchieve'), FailureHandling.CONTINUE_ON_FAILURE)
+		
+		
+		WebUI.waitForElementClickable(findTestObject('Manage/CityCom/New/PerformanceToolTip'),30)
+		WebUI.click(findTestObject('Manage/CityCom/New/PerformanceToolTip'))
+		WebUI.delay(5)
+		
+		WebUI.verifyElementNotPresent(findTestObject('Manage/CityCom/New/CategoryScore'),3)
+		WebUI.verifyElementNotPresent(findTestObject('Manage/CityCom/New/Performance scoreThe total'),3)
+		WebUI.verifyElementNotPresent(findTestObject('Manage/CityCom/New/Base pointsAchieve'),3)
+	
+		WebUI.setViewPortSize(1366,1280)
+		WebUI.delay(5)
+		
+}
+	
+	@Keyword
+	public void totalPerformanceScoreToolTipOtherNone() throws IOException, InterruptedException {
+		WebUI.setViewPortSize(1024,768)
+		WebUI.delay(5)
+		WebUI.click(findTestObject('PerformanceScore/Score/a_ Total'))
+		WebUI.delay(10)
+		WebUI.waitForElementClickable(findTestObject('Manage/CityCom/New/PerformanceToolTip'),30)
+		WebUI.click(findTestObject('Manage/CityCom/New/PerformanceToolTip'))
+		WebUI.delay(5)	
+		//WebUI.verifyElementPresent(findTestObject('Manage/CityCom/New/LEEDPerformance scoreThe total'), 22)
+		WebUI.verifyElementVisible(findTestObject('Manage/CityCom/New/CategoryScore'), FailureHandling.CONTINUE_ON_FAILURE)	
+		WebUI.verifyElementVisible(findTestObject('Manage/CityCom/New/Performance scoreThe total'), FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyElementNotPresent(findTestObject('Manage/CityCom/New/Base pointsAchieve'),3)
+		
+		WebUI.waitForElementClickable(findTestObject('Manage/CityCom/New/PerformanceToolTip'),30)
+		WebUI.click(findTestObject('Manage/CityCom/New/PerformanceToolTip'))
+		WebUI.delay(5)
+		
+		WebUI.verifyElementNotPresent(findTestObject('Manage/CityCom/New/CategoryScore'),3)
+		WebUI.verifyElementNotPresent(findTestObject('Manage/CityCom/New/Performance scoreThe total'),3)
+		
+		WebUI.setViewPortSize(1366,1280)
+		WebUI.delay(5)
+		
+	}
 }

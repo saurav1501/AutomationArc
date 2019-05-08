@@ -152,7 +152,7 @@
       <guid>e6bbd36f-48c3-43c8-a55d-dfb21914442d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyParking/ManageUnitTypeShouldNotDisplayTest</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyParking/ManageProjectDeatilFieldVerification_1_15_4Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>bb80602c-a000-40d6-aadc-0ce06d2edb1d</guid>

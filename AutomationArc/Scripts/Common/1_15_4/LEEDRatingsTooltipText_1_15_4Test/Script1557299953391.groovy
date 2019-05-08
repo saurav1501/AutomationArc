@@ -14,17 +14,18 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
 try {
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginArcAdminToolWithGlobalVariable'()
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSubmitReview.add5StarCertificationFromAdminToolForCity'(GlobalVariable.CitySheet, GlobalVariable.rowNumTwo)
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.cityComcertificationDetailVerificationForPointsAddedFromAdminTool'(GlobalVariable.CitySheet, GlobalVariable.rowNumTwo)
-		 
+	
+	CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsPerformanceScore.totalPerformanceScoreToolTipLEED'()
+	
 } catch (Throwable t) {
-	WebUI.closeWindowIndex(1)
-	WebUI.delay(2)
-	WebUI.switchToWindowIndex(0)
+
+    WebUI.click(findTestObject('Manage/CityCom/New/PerformanceToolTip'))
+    WebUI.delay(4)
+    WebUI.setViewPortSize(1366,1280)
+    WebUI.delay(5)
+
 	System.out.println(t.getLocalizedMessage())
 	Error e1 = new Error(t.getMessage())
 	e1.setStackTrace(t.getStackTrace())
 	e1.printStackTrace()
 }
-
