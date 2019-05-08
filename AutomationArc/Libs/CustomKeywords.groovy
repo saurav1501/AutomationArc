@@ -3976,6 +3976,10 @@ def static "com.arc.ReusableMethods.ReusableMethodsManage.scoreVersionVerificati
     (new com.arc.ReusableMethods.ReusableMethodsManage()).scoreVersionVerification3()
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsManage.scoreVersionVerification1_1"() {
+    (new com.arc.ReusableMethods.ReusableMethodsManage()).scoreVersionVerification1_1()
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsManage.verifyScoreUpdatePopupAndComparisionPage"() {
     (new com.arc.ReusableMethods.ReusableMethodsManage()).verifyScoreUpdatePopupAndComparisionPage()
 }

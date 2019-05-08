@@ -2499,6 +2499,24 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyMatch(scoreStatus, "You are all up to date!",false,FailureHandling.CONTINUE_ON_FAILURE )
 		print scoreStatus
 	}
+	
+	
+	@Keyword
+	public void scoreVersionVerification1_1(){
+		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
+		 WebUI.delay(1)
+		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+		 WebUI.delay(5)*/
+		WebUI.scrollToElement(findTestObject('Manage/CertificationAndScore/a_ Score Version'),2)
+		WebUI.click(findTestObject('Manage/CertificationAndScore/a_ Score Version'))
+		String scoreVersion = WebUI.getText(findTestObject('Manage/CertificationAndScore/h3_Arc score v2.0'))
+		WebUI.verifyMatch(scoreVersion, "Arc score v1.1",false, FailureHandling.CONTINUE_ON_FAILURE)
+		print scoreVersion
+		String scoreStatus= WebUI.getText(findTestObject('Manage/CertificationAndScore/h4_You are all up to date'))
+		WebUI.verifyMatch(scoreStatus, "You are all up to date!",false,FailureHandling.CONTINUE_ON_FAILURE )
+		print scoreStatus
+	}
+	
 	@Keyword
 	public void verifyScoreUpdatePopupAndComparisionPage(){
 		WebUI.delay(6)
