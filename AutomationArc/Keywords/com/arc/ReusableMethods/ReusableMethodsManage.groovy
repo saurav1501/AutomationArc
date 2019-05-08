@@ -2163,7 +2163,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.doubleClick(findTestObject('Object Repository/USGBCAccount/ClickOnSearchButton'))
 		WebUI.delay(15)
 		//	ReusableMethodsLogin.waitForPageLoad(60)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/USGBCAccount/OrderDate')), orderDate, false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/USGBCAccount/OrderDate')), date, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/USGBCAccount/OrderId')), orderId, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/USGBCAccount/TotalAmount')), amount, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/USGBCAccount/OrderStatus')), 'Completed', false, FailureHandling.CONTINUE_ON_FAILURE)

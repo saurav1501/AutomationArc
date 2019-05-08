@@ -251,12 +251,6 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyFilterDataInputForWasteReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>1b99ebd6-75bb-404d-8860-a932458edde0</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyDataUploadTemplatePresentInResourcesTab_1_15_4Test</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>6b4b3eac-5747-4ec5-9dc0-54b084a055c9</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -321,6 +315,12 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/AdminToolScoreRecomputeTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>1b99ebd6-75bb-404d-8860-a932458edde0</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyDataUploadTemplatePresentInResourcesTab_1_15_4Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>690053d8-6410-4714-ac1f-1327d30a8b33</guid>
