@@ -70,4 +70,16 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/Common/CityComValidation/VerifyNonUSGBCMemAddInsideTeamTest</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>5268155a-95af-455f-8d6f-44cc8b2365c6</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Common/1_15_4/NoneOtherToolTipText_1_15_4Test</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>1932cb47-4d3d-4afa-a2d4-317b72df065f</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Common/1_15_4/SettingScoreVersionPageUpdate_1_15_4Test</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>

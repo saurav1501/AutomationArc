@@ -3406,6 +3406,14 @@ def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.genratePerfo
          , 	rowNum)
 }
 
+def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.totalPerformanceScoreToolTipLEED"() {
+    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).totalPerformanceScoreToolTipLEED()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.totalPerformanceScoreToolTipOtherNone"() {
+    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).totalPerformanceScoreToolTipOtherNone()
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsBasePoint.preRequisiteAttemptTransit"() {
     (new com.arc.ReusableMethods.ReusableMethodsBasePoint()).preRequisiteAttemptTransit()
 }

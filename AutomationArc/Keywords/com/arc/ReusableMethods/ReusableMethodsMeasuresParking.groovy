@@ -2,11 +2,11 @@ package com.arc.ReusableMethods
 
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
-import org.openqa.selenium.Keys
 import org.testng.Assert
 
 import com.arc.BaseClass.BaseClass
 import com.kms.katalon.core.annotation.Keyword
+import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 public class ReusableMethodsMeasuresParking extends BaseClass {
@@ -589,8 +589,10 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 	@Keyword
 	public void verifyUnitTypeParking() throws IOException, InterruptedException {
 		WebUI.delay(5)
-		WebUI.verifyElementNotPresent(findTestObject('Manage/CityCom/New/td_Unit type'),4)
-
+		WebUI.verifyElementVisible(findTestObject('Manage/Parking/Project/Unit type'), FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyElementVisible(findTestObject('Manage/Parking/Project/td_Gross floor area'), FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyElementNotVisible(findTestObject('Manage/Parking/Project/Space type'), FailureHandling.CONTINUE_ON_FAILURE)
+		
 	}
 	@Keyword
 	public void verifyProjectDetailsParking(String sheetName,int rowNum) throws IOException, InterruptedException {

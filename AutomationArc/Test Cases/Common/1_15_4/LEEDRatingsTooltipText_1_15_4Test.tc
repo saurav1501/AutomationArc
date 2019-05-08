@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>NavigateToAdminToolAddStarCertification_1_15_4Test</name>
+   <name>LEEDRatingsTooltipText_1_15_4Test</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>aff3c251-fa70-44ed-8268-5e7fc2b1958d</testCaseGuid>
+   <testCaseGuid>90a32849-605e-4d34-9b83-7427ced535a9</testCaseGuid>
 </TestCaseEntity>

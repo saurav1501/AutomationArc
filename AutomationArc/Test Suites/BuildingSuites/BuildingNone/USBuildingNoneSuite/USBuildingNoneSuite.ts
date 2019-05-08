@@ -676,4 +676,10 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ProjectDownloadCalculatorTemplateAndUploadTest</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>74be4d57-cf91-4422-aa45-1e87cfd43f91</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Common/1_15_4/SettingScoreVersionPageUpdate_1_15_4Test</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>

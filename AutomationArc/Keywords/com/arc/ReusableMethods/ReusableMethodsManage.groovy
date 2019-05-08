@@ -1525,7 +1525,16 @@ public class ReusableMethodsManage extends BaseClass {
 	
 	@Keyword
 	public void scoretextUpdate(){
-
+		WebUI.delay(2)
+		WebUI.scrollToElement(findTestObject('Manage/Setting/a_setting'), 5)
+		WebUI.click(findTestObject('Manage/Setting/a_setting'))
+	    WebUI.delay(3)
+		WebUI.verifyElementVisible(findTestObject('Add_Project_Details/Star/Receive emails only when y'))
+		WebUI.verifyElementVisible(findTestObject('Add_Project_Details/Star/Selecting Yes will show the'))
+		WebUI.verifyElementVisible(findTestObject('Add_Project_Details/Star/Make Performance score pub'))
+		WebUI.verifyElementVisible(findTestObject('Add_Project_Details/Star/p_Score Animation'))
+		WebUI.verifyElementVisible(findTestObject('Add_Project_Details/Star/Get a detailed report when t'))
+		
 	
 	}
 
