@@ -1330,6 +1330,152 @@ def static "com.helper.grid.GridHelper.getValueOrClickOnColumn"(
          , 	type)
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToBuilding"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).navigateToBuilding()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.clickAddProject"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).clickAddProject()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToCities"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).navigateToCities()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToCommunities"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).navigateToCommunities()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToParking"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).navigateToParking()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToPortfolio"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).navigateToPortfolio()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToBuildingTransit"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).navigateToBuildingTransit()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToTransitDataInput"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).navigateToTransitDataInput()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToDataTransport"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).navigateToDataTransport()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToDataAQI"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).navigateToDataAQI()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToDataCO"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).navigateToDataCO()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToDataND"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).navigateToDataND()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToDataOS"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).navigateToDataOS()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToDataOzone"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).navigateToDataOzone()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToDataPM10"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).navigateToDataPM10()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToDataPM25"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).navigateToDataPM25()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToDataRid"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).navigateToDataRid()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToDataSD"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).navigateToDataSD()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToDataInput"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).navigateToDataInput()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.ArcLogoNavigation"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).ArcLogoNavigation()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.ArclogoNavigation"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).ArclogoNavigation()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToManageSection"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).navigateToManageSection()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToAnalyticsTotal"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).navigateToAnalyticsTotal()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.navigateCreditAction"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).navigateCreditAction()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToAnalyticsEnergy"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).navigateToAnalyticsEnergy()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToAnalyticsWater"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).navigateToAnalyticsWater()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToAnalyticsWaste"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).navigateToAnalyticsWaste()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToAnalyticstransport"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).navigateToAnalyticstransport()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToAnalyticsHumExp"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).navigateToAnalyticsHumExp()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.clickOnSidebar"(
+    	String suitId	) {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).clickOnSidebar(
+        	suitId)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.payNow"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).payNow()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.projectDashboardNavigationEndToEnd"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).projectDashboardNavigationEndToEnd()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.projectDashboardNavigationEndToEndAfterPaymentBuildingTransit"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).projectDashboardNavigationEndToEndAfterPaymentBuildingTransit()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.projectDashboardNavigationEndToEndAfterPaymentBOtherNone"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).projectDashboardNavigationEndToEndAfterPaymentBOtherNone()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.projectDashboardNavigationCityCommEndToEnd"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).projectDashboardNavigationCityCommEndToEnd()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.projectDashboardNavigationAfterPaymentCityCommEndToEnd"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).projectDashboardNavigationAfterPaymentCityCommEndToEnd()
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsPayment.selectTrial"() {
     (new com.arc.ReusableMethods.ReusableMethodsPayment()).selectTrial()
 }
