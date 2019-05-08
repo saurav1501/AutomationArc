@@ -253,17 +253,13 @@ public class ReusableMethodsNavigation {
 		WebUI.verifyMatch(basePoint,'Base Points', false)
 
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
-<<<<<<< HEAD
 		WebUI.delay(14)
-		String dataInput = WebUI.getText(findTestObject('DataInput/Data/span_Data Input'))
-		WebUI.verifyMatch(dataInput,'Data Input', false)
-=======
-		WebUI.delay(10)
+		String dataInput1 = WebUI.getText(findTestObject('DataInput/Data/span_Data Input'))
+		WebUI.verifyMatch(dataInput1,'Data Input', false)
 		WebUI.waitForElementPresent(findTestObject('Page_Arc dashboard/DashboardPage/NavigationCreditAction/span_Meters  Surveys'), 40)
 		WebUI.waitForElementVisible(findTestObject('Page_Arc dashboard/DashboardPage/NavigationCreditAction/span_Meters  Surveys'), 40)
 		String dataInput = WebUI.getText(findTestObject('Page_Arc dashboard/DashboardPage/NavigationCreditAction/span_Meters  Surveys'))
 		WebUI.verifyMatch(dataInput,'Meters & Surveys', false)
->>>>>>> 4d499c204a4d0d000cfeb3dac2c3792378136df8
 
 		WebUI.click(findTestObject('Page_Arc dashboard/DashboardPage/NavigationCreditAction/a_ My Actions'))
 		WebUI.delay(5)
