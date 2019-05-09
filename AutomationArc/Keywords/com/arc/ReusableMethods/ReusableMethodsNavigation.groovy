@@ -80,7 +80,7 @@ public class ReusableMethodsNavigation {
 
 	@Keyword
 	public void navigateToBuildingTransit() {
-		WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
+		//WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
 		WebUI.delay(3)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ Buildings'))
 		WebUI.delay(2)
