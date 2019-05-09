@@ -62,10 +62,10 @@ public class ReusableMethodsNavigation {
 		String postNavigationLoginText = WebUI.getText(findTestObject('Page_Arc dashboard/span_My Parking'))
 		WebUI.verifyMatch(postNavigationLoginText,'My Parking',false)
 	}
-	
-	
 
-	
+
+
+
 	@Keyword
 	public void navigateToPortfolio(){
 		WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
@@ -211,7 +211,7 @@ public class ReusableMethodsNavigation {
 		WebUI.click(findTestObject('Page_Arc dashboard/DashboardPage/a_appLogo'))
 		WebUI.delay(5)
 		String LogOut = WebUI.getText(findTestObject('DashboardNavigationNewUI/Dash/Logout'))
-		WebUI.verifyMatch(LogOut,'Logout', false)	
+		WebUI.verifyMatch(LogOut,'Logout', false)
 		WebUI.click(findTestObject('DashboardNavigationNewUI/Dash/Logout'))
 		WebUI.delay(8)
 	}
@@ -253,13 +253,16 @@ public class ReusableMethodsNavigation {
 		WebUI.verifyMatch(basePoint,'Base Points', false)
 
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+
 		WebUI.delay(14)
 		String dataInput1 = WebUI.getText(findTestObject('DataInput/Data/span_Data Input'))
 		WebUI.verifyMatch(dataInput1,'Data Input', false)
+
 		WebUI.waitForElementPresent(findTestObject('Page_Arc dashboard/DashboardPage/NavigationCreditAction/span_Meters  Surveys'), 40)
 		WebUI.waitForElementVisible(findTestObject('Page_Arc dashboard/DashboardPage/NavigationCreditAction/span_Meters  Surveys'), 40)
 		String dataInput = WebUI.getText(findTestObject('Page_Arc dashboard/DashboardPage/NavigationCreditAction/span_Meters  Surveys'))
 		WebUI.verifyMatch(dataInput,'Meters & Surveys', false)
+
 
 		WebUI.click(findTestObject('Page_Arc dashboard/DashboardPage/NavigationCreditAction/a_ My Actions'))
 		WebUI.delay(5)
