@@ -6,7 +6,7 @@
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'dev.arconline.io'</initValue>
+      <initValue>'https://dev.app.arconline.io/login'</initValue>
       <name>url</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
