@@ -1471,8 +1471,10 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Manage/TeamModule/button_Add Member'))
 		WebUI.delay(2)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/TeamModule/sameRoleAddAgainErrMsg'), 20)
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/TeamModule/sameRoleAddAgainErrMsg'))
 		WebUI.clearText(findTestObject('Manage/TeamModule/input_input'))
+		
 	}
 
 	@Keyword
@@ -1641,6 +1643,7 @@ public class ReusableMethodsManage extends BaseClass {
 	//Permission requests section is present
 	@Keyword
 	public void permissionRequestFieldVerification(){
+		
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/TeamModule/PermissionRequestSection/PermissionRequestTitle'))
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/TeamModule/PermissionRequestSection/EmailField'))
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/TeamModule/PermissionRequestSection/DataRequestField'))

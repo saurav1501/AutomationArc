@@ -247,67 +247,67 @@
    <testCaseLink>
       <guid>0306031c-fd4e-41e2-b5d0-c78083e12f18</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/PreCertificationReviewTransitUnderGroundTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>c9a0b37d-9219-4e50-aa3f-ba3176bbc584</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/AgreementFileDownloadTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>76eede93-56a5-4b3c-bb5e-74d02f767608</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/DownloadAndVerifyExportedDataTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>07668467-118e-463e-8bc6-bcddf9984692</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/ResourcesButtonNavigationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>da743a95-800c-48f0-874c-8d6cd1b3dc11</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/ScoreVersionVerificationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>2d3cbc43-cc41-470b-ad02-78be2c218b83</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/BillingDateAndStatusTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>61fb0ed3-bcd8-47c4-b50b-055aa0437228</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/VerifyAndDownloadBillingReceiptTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>914aad10-ab11-4d4c-87f7-bc50985ee13a</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/ChangeBuildingSettingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>1a856f81-e0d3-4067-8c32-b8a749199928</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/ChangeTextSubmitReviewForPaymentPendingProject_1_15_4Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>51703b3e-1ea9-4d02-a3f0-48d629ba6192</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/PayNowSubmitReviewPaymentUSTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d1a44cdc-1ad6-4e88-a1ca-b8820e5d4a41</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/DownloadAndVerifyTheSnapshotFileNameTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

@@ -342,6 +342,7 @@ public class ReusableMethodsNavigation {
 				println "Scores"
 				WebUI.delay(2)
 				WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
+				WebUI.delay(2)
 			}
 			if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "aria-expanded", FailureHandling.OPTIONAL).equals("false"))){
 				println "Manage"
@@ -363,6 +364,7 @@ public class ReusableMethodsNavigation {
 				println "Scores"
 				WebUI.delay(2)
 				WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
+				WebUI.delay(2)
 			}
 
 			if((WebUI.getAttribute(findTestObject('Object Repository/Analytics/ClickOnAnalytics1'), "aria-expanded", FailureHandling.OPTIONAL).equals("false"))){

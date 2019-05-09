@@ -4,7 +4,25 @@
    <name>a_Reclaimed onsite</name>
    <tag></tag>
    <elementGuidId>d06ffa2f-18fb-42e7-beb0-2face5fb6231</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@ng-click=&quot;updateMeter(selected_meter.name, selected_meter.native_unit, fuel.id)&quot;]//a[contains(text(),'Reclaimed onsite')]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//a[(text() = 'Reclaimed onsite
+                                                            
+                                                        ' or . = 'Reclaimed onsite
+                                                            
+                                                        ') and @ref_element = 'Object Repository/Add_Project_Details/Star/iframe_Data Input_datainput-wi']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
