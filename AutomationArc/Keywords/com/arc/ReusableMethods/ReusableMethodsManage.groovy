@@ -1526,6 +1526,7 @@ public class ReusableMethodsManage extends BaseClass {
 		//WebUI.delay(1)
 		//WebUI.verifyElementVisible(findTestObject('Manage/TeamModule/TeamMemberUpdateSuccessMsg'))
 		WebUI.delay(7)
+		WebUI.waitForElementNotClickable(findTestObject('Object Repository/Manage/TeamModule/TeamRole'), 40)
 		WebUI.verifyOptionSelectedByLabel(findTestObject('Object Repository/Manage/TeamModule/TeamRole'),"Arc Administrator", false,10)
 
 	}
@@ -1564,6 +1565,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(4)
 		WebUI.click(findTestObject('Manage/TeamModule/button_Save'))
 		WebUI.delay(8)
+		WebUI.waitForElementNotClickable(findTestObject('Object Repository/Manage/TeamModule/TeamRole'), 40)
 		WebUI.verifyOptionSelectedByLabel(findTestObject('Object Repository/Manage/TeamModule/TeamRole'),"Team Manager", false,10)
 	}
 	@Keyword
@@ -1597,6 +1599,7 @@ public class ReusableMethodsManage extends BaseClass {
 		/*	WebUI.delay(2)
 		 WebUI.verifyElementVisible(findTestObject('Manage/TeamModule/TeamMemberUpdateSuccessMsg'))*/
 		WebUI.delay(8)
+		WebUI.waitForElementNotClickable(findTestObject('Object Repository/Manage/TeamModule/TeamRole'), 40)
 		WebUI.verifyOptionSelectedByLabel(findTestObject('Object Repository/Manage/TeamModule/TeamRole'),"Team Member", false,10)
 	}
 
