@@ -389,7 +389,7 @@ public class ReusableMethodsPayment extends BaseClass{
 		WebUI.delay(30)
 		if((uniqueSpaceTypesFlag==true)){
 			println "Space type matched"
-			WebUI.waitForElementVisible(findTestObject('Object Repository/PayNowRegistrationPaymentUSTest/RegistrationPaymentConfirmationPopCloseButton'), 20)
+			WebUI.waitForElementVisible(findTestObject('Object Repository/PayNowRegistrationPaymentUSTest/RegistrationPaymentConfirmationPopCloseButton'), 70)
 			WebUI.delay(2)
 			WebUI.click(findTestObject('Object Repository/PayNowRegistrationPaymentUSTest/RegistrationPaymentConfirmationPopCloseButton'))
 			uniqueSpaceTypesFlag=false

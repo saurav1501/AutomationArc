@@ -22,6 +22,8 @@ import internal.GlobalVariable as GlobalVariable
 
 try {
 	
+	   // CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToParking'()
+	    CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsNavigation.clickAddProject'()
 		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsAddNewProject.parkingAddNewProject'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumFour)
 		
 	} catch (Throwable t) {
