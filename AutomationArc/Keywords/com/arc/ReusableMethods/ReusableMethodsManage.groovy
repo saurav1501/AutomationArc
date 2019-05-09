@@ -1236,8 +1236,8 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.setText(findTestObject('Manage/TeamModule/input_input'),GlobalVariable.TeamMember)
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Manage/TeamModule/button_Add Member'))
-		WebUI.delay(12)
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/TeamModule/newMemberAddedAuthorizationLevel'), 20)
+		WebUI.delay(15)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/TeamModule/newMemberAddedAuthorizationLevel'),30)
 		WebUI.verifyOptionSelectedByLabel(findTestObject('Object Repository/Manage/TeamModule/newMemberAddedAuthorizationLevel'),"Team Member", false,10)
 	}
 
