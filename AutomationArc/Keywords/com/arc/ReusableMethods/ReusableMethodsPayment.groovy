@@ -85,14 +85,14 @@ public class ReusableMethodsPayment extends BaseClass{
 		String purchase= WebUI.getText(findTestObject('Object Repository/paymentPageNewUI/paymentPageTextPurchase'))
 		WebUI.verifyMatch("Purchase", purchase, false)
 
-		String url= DriverFactory.getWebDriver().getCurrentUrl()
+		/*String url= DriverFactory.getWebDriver().getCurrentUrl()
 		println url
-		String NotSyncProject_ID= url.substring(url.indexOf('9'),url.indexOf('1')+10 )
+		String NotSyncProject_ID= url.substring(url.indexOf('9'),url.indexOf('9')+10 )
 		println NotSyncProject_ID
 		if(NotSyncProject_ID.startsWith('9'))
 			KeywordUtil.logInfo("Trial Project is Created")
 		else
-			KeywordUtil.markFailedAndStop("Trial project is not created")
+			KeywordUtil.markFailedAndStop("Trial project is not created")*/
 
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/spaceType'))
 		List<WebElement> list= driver.findElements(By.xpath("//*[@ng-repeat='type in spaceType']"))
@@ -151,15 +151,15 @@ public class ReusableMethodsPayment extends BaseClass{
 		String purchase= WebUI.getText(findTestObject('Object Repository/paymentPageNewUI/paymentPageTextPurchase'))
 		WebUI.verifyMatch("Purchase", purchase, false)
 
-		String url= DriverFactory.getWebDriver().getCurrentUrl()
+		/*String url= DriverFactory.getWebDriver().getCurrentUrl()
 		println url
-		String NotSyncProject_ID= url.substring(url.indexOf('9'),url.indexOf('1')+10 )
+		String NotSyncProject_ID= url.substring(url.indexOf('9'),url.indexOf('9')+10 )
 		println NotSyncProject_ID
 		if(NotSyncProject_ID.startsWith('9'))
 			KeywordUtil.logInfo("Trial Project is Created")
 		else
 			KeywordUtil.markFailedAndStop("Trial project is not created")
-
+*/
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/DashboardNavigationNewUI/Dash/select_LEED for CitiesOtherNon'), prjRating , false)
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/saveButtonProjectDetails'))
 		WebUI.delay(20)
@@ -293,7 +293,8 @@ public class ReusableMethodsPayment extends BaseClass{
 		data.setCellData(sheetName, "OwnerType", rowNum,list1.get(randonNumber1).getText())
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/organization'),ownerOrg)
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/organization'))
-		WebUI.delay(2)
+		WebUI.delay(3)
+		WebUI.waitForElementVisible(findTestObject('Add_Project_Details/span_Habitat for Humanity'), 60)
 		WebUI.click(findTestObject('Add_Project_Details/span_Habitat for Humanity'))
 		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/ownerEmail'), ownerMail)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/ownerCountry'), ownerCountry, false)
