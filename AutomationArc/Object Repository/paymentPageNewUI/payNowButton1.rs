@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//*[@ng-click=&quot;goToPayment(appData.buildingData)&quot;])[3]</value>
+         <value>(//*[@ng-click=&quot;goToPayment(appData.buildingData)&quot;])[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

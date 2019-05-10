@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify if ability to add  base point additional meter reading with option A  &amp; respective total point based on selection of checkbox.</description>
+   <name>BasePointADMeterOptionAPointTest</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>fdda55c9-1a48-443d-8e63-c40cea504402</testCaseGuid>
+</TestCaseEntity>

@@ -3495,7 +3495,7 @@ public class ReusableMethodsManage extends BaseClass {
 			String regStatus= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Status'))
 			//WebUI.verifyMatch(regAmount,regdAmt,false,FailureHandling.CONTINUE_ON_FAILURE)
 		}
-
+        else{
 		WebUI.delay(2)
 		String regdAmt = data.getCellData(sheetName,"BillingPrice", rowNum)
 		String paymentStatus = data.getCellData(sheetName, "PaymentStatus", rowNum)
@@ -3515,6 +3515,6 @@ public class ReusableMethodsManage extends BaseClass {
 
 		WebUI.verifyMatch(regAmount,regdAmt,false,FailureHandling.CONTINUE_ON_FAILURE)
 		//WebUI.verifyMatch(regStatus,'Completed',false,FailureHandling.CONTINUE_ON_FAILURE)
+	   }
 	}
-
 }

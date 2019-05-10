@@ -2196,6 +2196,14 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createWasteGenerati
          , 	rowNum)
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createWasteGenerationMeterReadingTrial"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createWasteGenerationMeterReadingTrial(
+        	sheetName
+         , 	rowNum)
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createTransportReading"(
     	String sheetName	
      , 	int rowNum	) {
@@ -2204,10 +2212,26 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createTransportRead
          , 	rowNum)
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createTransportReadingTrial"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createTransportReadingTrial(
+        	sheetName
+         , 	rowNum)
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createHumanExpMeterReading"(
     	String sheetName	
      , 	int rowNum	) {
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createHumanExpMeterReading(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createHumanExpMeterReadingTrial"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createHumanExpMeterReadingTrial(
         	sheetName
          , 	rowNum)
 }
@@ -3450,6 +3474,14 @@ def static "com.arc.ReusableMethods.ReusableMethodsBasePoint.basePointOptionB"(
     	String sheetName	
      , 	int rowNum	) {
     (new com.arc.ReusableMethods.ReusableMethodsBasePoint()).basePointOptionB(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsBasePoint.basePointOptionBTrial"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsBasePoint()).basePointOptionBTrial(
         	sheetName
          , 	rowNum)
 }

@@ -3513,6 +3513,91 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 
 	}
+	
+	
+	@Keyword
+	public void createWasteGenerationMeterReadingTrial(String sheetName,int rowNum) throws IOException, InterruptedException {
+
+		/*************************Reading data from excel sheet ************************************/
+		String reading1  = data.getCellData(sheetName, "wastegeneration1", rowNum)
+		String reading2  = data.getCellData(sheetName, "wastegeneration2", rowNum)
+		String reading3  = data.getCellData(sheetName, "wastegeneration3", rowNum)
+		String reading4  = data.getCellData(sheetName, "wastegeneration4", rowNum)
+		String reading5  = data.getCellData(sheetName, "wastegeneration5", rowNum)
+
+		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
+		 */
+		WebUI.delay(5)
+		WebUI.click(findTestObject('DataInput/CityCom/a_ Data Input'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('DataInput/CityCom/span_Waste'))
+		WebUI.delay(5)
+		WebUI.click(findTestObject('DataInput/CityCom/GwAddYear'))
+		WebUI.delay(8)
+		WebUI.click(findTestObject('DataInput/CityCom/button_Next Year'))
+		WebUI.delay(3)
+		WebUI.click(findTestObject('DataInput/CityCom/button_Previous Year'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('DataInput/CityCom/button_Previous Year'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('DataInput/CityCom/button_Previous Year'))
+		WebUI.delay(2)
+		WebUI.scrollToElement(findTestObject('DataInput/CityCom/CWTextboxValue1'),2)
+		WebUI.sendKeys(findTestObject('DataInput/CityCom/CWTextboxValue1'), reading1)
+		WebUI.sendKeys(findTestObject('DataInput/CityCom/CWTextboxValue2'), reading2)
+		WebUI.sendKeys(findTestObject('DataInput/CityCom/CWTextboxValue3'), reading3)
+		WebUI.sendKeys(findTestObject('DataInput/CityCom/CWTextboxValue4'), reading4)
+		WebUI.sendKeys(findTestObject('DataInput/CityCom/CWTextboxValue5'), reading5)
+		WebUI.delay(1)
+		for(int count = 1; count<=5; count++){
+			WebUI.delay(4)
+			WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+count))
+			WebUI.delay(6)
+		}
+		(1..5).each{
+			WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CityCom/DeleteButton',[index: it]), 60)
+		}
+	
+		//waste diversion
+
+		WebUI.delay(8)
+		WebUI.click(findTestObject('DataInput/CityCom/a_ Data Input'))
+		WebUI.delay(1)
+		WebUI.click(findTestObject('DataInput/CityCom/span_Waste'))
+		WebUI.delay(4)
+		//WebUI.scrollToElement(findTestObject('DataInput/CityCom/ScrollToTextWasteDiversion'), 3)
+		WebUI.scrollToElement(findTestObject('DataInput/CityCom/DwAddYear'),2)
+		WebUI.delay(3)
+		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/DwAddYear'), 4)
+		WebUI.click(findTestObject('DataInput/CityCom/DwAddYear'))
+		WebUI.delay(6)
+		WebUI.scrollToElement(findTestObject('DataInput/CityCom/DPreviousYear'),2)
+		WebUI.click(findTestObject('DataInput/CityCom/DPreviousYear'))
+		WebUI.delay(2)
+		WebUI.scrollToElement(findTestObject('DataInput/CityCom/DPreviousYear'),2)
+		WebUI.click(findTestObject('DataInput/CityCom/DPreviousYear'))
+		WebUI.delay(2)
+		WebUI.scrollToElement(findTestObject('DataInput/CityCom/DPreviousYear'),2)
+		WebUI.click(findTestObject('DataInput/CityCom/DPreviousYear'))
+		WebUI.delay(2)
+		WebUI.scrollToElement(findTestObject('DataInput/CityCom/DNextButton'),2)
+		WebUI.click(findTestObject('DataInput/CityCom/DNextButton'))
+		WebUI.delay(2)
+		WebUI.sendKeys(findTestObject('DataInput/CityCom/dWTextboxValue1'), reading1)
+		WebUI.sendKeys(findTestObject('DataInput/CityCom/dWTextboxValue2'), reading2)
+		WebUI.sendKeys(findTestObject('DataInput/CityCom/dWTextboxValue3'), reading3)
+		WebUI.sendKeys(findTestObject('DataInput/CityCom/dWTextboxValue4'), reading4)
+		WebUI.delay(1)
+		for(int count = 6; count<=9; count++){
+			WebUI.delay(4)
+			WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+count))
+			WebUI.delay(6)
+		}
+		(6..9).each{
+			WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CityCom/DeleteButton',[index: it]), 60)
+		}
+		
+	}
 
 	/*@Keyword
 	 public void createWasteDiversionMeterReading(String sheetName, int rowNum) throws IOException, InterruptedException{
@@ -3615,6 +3700,52 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/TextboxValue5'),"value"),reading5,"Not Valid")
 	}
 
+	
+	@Keyword
+	public void createTransportReadingTrial(String sheetName, int rowNum) throws IOException, InterruptedException{
+		/*************************Reading data from excel sheet ************************************/
+		String reading1  = data.getCellData(sheetName, "TReading1", rowNum)
+		String reading2  = data.getCellData(sheetName, "TReading2", rowNum)
+		String reading3  = data.getCellData(sheetName, "TReading3", rowNum)
+		String reading4  = data.getCellData(sheetName, "TReading4", rowNum)
+		String reading5  = data.getCellData(sheetName, "TReading5", rowNum)
+
+		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
+		 */
+		WebUI.delay(5)
+		WebUI.click(findTestObject('DataInput/CityCom/a_ Data Input'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('DataInput/CityCom/span_Transportation'))
+		WebUI.delay(10)
+		WebUI.scrollToElement(findTestObject('DataInput/CityCom/button_Add Year'), 4)
+		WebUI.click(findTestObject('DataInput/CityCom/button_Add Year'))
+		WebUI.delay(8)
+		WebUI.scrollToElement(findTestObject('DataInput/CityCom/button_Next Year'), 2)
+		WebUI.click(findTestObject('DataInput/CityCom/button_Next Year'))
+		WebUI.delay(2)
+		WebUI.scrollToElement(findTestObject('DataInput/CityCom/button_Previous Year'),2)
+		WebUI.click(findTestObject('DataInput/CityCom/button_Previous Year'))
+		WebUI.delay(2)
+		WebUI.scrollToElement(findTestObject('DataInput/CityCom/button_Previous Year'),2)
+		WebUI.click(findTestObject('DataInput/CityCom/button_Previous Year'))
+		WebUI.delay(2)
+		WebUI.scrollToElement(findTestObject('DataInput/CityCom/button_Previous Year'),2)
+		WebUI.click(findTestObject('DataInput/CityCom/button_Previous Year'))
+		WebUI.delay(2)
+		WebUI.sendKeys(findTestObject('DataInput/CityCom/TextboxValue1'), reading1)
+		WebUI.sendKeys(findTestObject('DataInput/CityCom/TextboxValue2'), reading2)
+		WebUI.sendKeys(findTestObject('DataInput/CityCom/TextboxValue3'), reading3)
+		WebUI.sendKeys(findTestObject('DataInput/CityCom/TextboxValue4'), reading4)
+		WebUI.sendKeys(findTestObject('DataInput/CityCom/TextboxValue5'), reading5)
+		for(int count = 1; count<=5; count++){
+			WebUI.delay(3)
+			WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+count))
+			WebUI.delay(6)
+		}
+
+	}
+
+	
 	@Keyword
 	public void createHumanExpMeterReading(String sheetName, int rowNum)throws IOException, InterruptedException {
 		/*************************Reading data from excel sheet ************************************/
@@ -3697,6 +3828,80 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/HTextboxValue8'),"value"),reading4,"Not Valid")
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/HTextboxValue9'),"value"),reading5,"Not Valid")
 	}
+	
+	
+	@Keyword
+	public void createHumanExpMeterReadingTrial(String sheetName, int rowNum)throws IOException, InterruptedException {
+		/*************************Reading data from excel sheet ************************************/
+		String reading1  = data.getCellData(sheetName, "EPReading1", rowNum)
+		String reading2  = data.getCellData(sheetName, "EPReading2", rowNum)
+		String reading3  = data.getCellData(sheetName, "HGiniReading1", rowNum)
+		String reading4  = data.getCellData(sheetName, "HGiniReading2", rowNum)
+		String reading5  = data.getCellData(sheetName, "Hincome1", rowNum)
+		String reading6  = data.getCellData(sheetName, "Hincome2", rowNum)
+
+		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
+		 WebUI.delay(1)*/
+		WebUI.delay(5)
+		WebUI.click(findTestObject('DataInput/CityCom/a_ Data Input'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('DataInput/CityCom/span_Human Experience'))
+		WebUI.delay(5)
+		//WebUI.waitForPageLoad(10)
+		WebUI.click(findTestObject('DataInput/CityCom/EducationAddYear'))
+		WebUI.delay(8)
+		WebUI.scrollToElement(findTestObject('DataInput/CityCom/EducationAddPrevYear'),2)
+		WebUI.click(findTestObject('DataInput/CityCom/EducationAddPrevYear'))
+		WebUI.delay(5)
+		//WebUI.waitForPageLoad(10)
+		WebUI.setText(findTestObject('DataInput/CityCom/TextboxValue1'), reading1)
+		WebUI.setText(findTestObject('DataInput/CityCom/TextboxValue2'), reading2)
+		WebUI.scrollToElement(findTestObject('DataInput/CityCom/BachelorAddYear'), 2)
+		WebUI.click(findTestObject('DataInput/CityCom/BachelorAddYear'))
+		WebUI.delay(5)
+		WebUI.waitForElementPresent(findTestObject('DataInput/CityCom/BachelorAddPrevYear'), 20)
+		WebUI.waitForElementVisible(findTestObject('DataInput/CityCom/BachelorAddPrevYear'), 20)
+		WebUI.scrollToElement(findTestObject('DataInput/CityCom/BachelorAddPrevYear'),5)
+		WebUI.click(findTestObject('DataInput/CityCom/BachelorAddPrevYear'))
+		WebUI.delay(5)
+		WebUI.sendKeys(findTestObject('DataInput/CityCom/HTextboxValue3'), reading1)
+		WebUI.sendKeys(findTestObject('DataInput/CityCom/HTextboxValue4'), reading2)
+		WebUI.scrollToElement(findTestObject('DataInput/CityCom/EquAddYear'), 2)
+		WebUI.click(findTestObject('DataInput/CityCom/EquAddYear'))
+		WebUI.delay(5)
+		WebUI.waitForElementPresent(findTestObject('DataInput/CityCom/EquAddPrevYear'), 20)
+		WebUI.waitForElementVisible(findTestObject('DataInput/CityCom/EquAddPrevYear'), 20)
+		WebUI.scrollToElement(findTestObject('DataInput/CityCom/EquAddPrevYear'), 2)
+		WebUI.click(findTestObject('DataInput/CityCom/EquAddPrevYear'))
+		WebUI.delay(5)
+		WebUI.sendKeys(findTestObject('DataInput/CityCom/HTextboxValue5'), reading1)
+		WebUI.sendKeys(findTestObject('DataInput/CityCom/HTextboxValue6'), reading2)
+		WebUI.click(findTestObject('DataInput/CityCom/GiniAddYear'))
+		WebUI.delay(5)
+		WebUI.waitForElementPresent(findTestObject('DataInput/CityCom/GiniAddPrevYear'), 20)
+		WebUI.waitForElementVisible(findTestObject('DataInput/CityCom/GiniAddPrevYear'), 20)
+		WebUI.scrollToElement(findTestObject('DataInput/CityCom/GiniAddPrevYear'), 2)
+		WebUI.click(findTestObject('DataInput/CityCom/GiniAddPrevYear'))
+		WebUI.delay(5)
+		WebUI.sendKeys(findTestObject('DataInput/CityCom/HTextboxValue7'), reading3)
+		WebUI.sendKeys(findTestObject('DataInput/CityCom/HTextboxValue8'), reading4)
+		WebUI.scrollToElement(findTestObject('DataInput/CityCom/ProsperityAddYear'), 2)
+		WebUI.click(findTestObject('DataInput/CityCom/ProsperityAddYear'))
+		//WebUI.delay(2)
+		//WebUI.scrollToElement(findTestObject('DataInput/CityCom/ProsperityAddPrevYear'), 2)
+		//WebUI.click(findTestObject('DataInput/CityCom/ProsperityAddPrevYear'))
+		WebUI.delay(5)
+		WebUI.sendKeys(findTestObject('DataInput/CityCom/HTextboxValue9'), reading5)
+
+		for(int count = 1; count<=9; count++){
+			WebUI.delay(4)
+			WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+count))
+			WebUI.delay(6)
+		}
+	}
+	
+	
+	
 
 	@Keyword
 	public void humanExpMeterReading()throws IOException, InterruptedException {
