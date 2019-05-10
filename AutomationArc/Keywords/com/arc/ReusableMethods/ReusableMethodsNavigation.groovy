@@ -360,7 +360,7 @@ public class ReusableMethodsNavigation {
 				WebUI.delay(2)
 				WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ CreditsActions'))
 			}
-			if((WebUI.getAttribute(findTestObject('Object Repository/PerformanceScore/Score/a_ Score1'), "aria-expanded", FailureHandling.OPTIONAL).equals("false")) && WebUI.getAttribute(findTestObject('Object Repository/PerformanceScore/Score/a_ Score1'),"class",FailureHandling.OPTIONAL).equals("collapse") ){
+			if((WebUI.getAttribute(findTestObject('Object Repository/PerformanceScore/Score/a_ Score1'), "aria-expanded", FailureHandling.OPTIONAL).equals("false"))){
 
 				println WebUI.getAttribute(findTestObject('Object Repository/PerformanceScore/Score/a_ Score1'),"class")
 				println "Scores"

@@ -736,7 +736,7 @@ public class ReusableMethodsPayment extends BaseClass{
 	@Keyword
 	public void reviewPaymentByCheckINT(){
 		//WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		//WebUI.delay(4)
+		WebUI.delay(6)
 		Assert.assertEquals(WebUI.verifyElementClickable(findTestObject('Object Repository/SubmitReview/PromocodeTextFieldReviewPayment')),true)
 		WebUI.click(findTestObject('Object Repository/PaymenntLocator/payment-typeCheck'))
 		WebUI.delay(2)

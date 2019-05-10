@@ -215,16 +215,16 @@
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/AllActionBasePointTotalCreditTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>c6604916-a896-451e-85cb-2d44761c092b</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/SetPerformanceScoreDefaultTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>e22764ad-c03f-466d-b602-619eb140e9fb</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/AdminToolScoreRecomputeTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>c6604916-a896-451e-85cb-2d44761c092b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/SetPerformanceScoreDefaultTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>1c70ce6d-3a49-4ccc-ab7c-c8d28c4da8ca</guid>
@@ -283,7 +283,7 @@
    <testCaseLink>
       <guid>61fb0ed3-bcd8-47c4-b50b-055aa0437228</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/VerifyAndDownloadBillingReceiptTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
