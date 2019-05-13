@@ -3116,6 +3116,10 @@ def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.adminToolReturnR
          , 	rowNum)
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifyTheHereLinkRedirectToGivenRespectiveLink"() {
+    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).verifyTheHereLinkRedirectToGivenRespectiveLink()
+}
+
 def static "com.arc.ReusableMethods.ResuableMethodsGRESB.downloadGresbtemplete"() {
     (new com.arc.ReusableMethods.ResuableMethodsGRESB()).downloadGresbtemplete()
 }

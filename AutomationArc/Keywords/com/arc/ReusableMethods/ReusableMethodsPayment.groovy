@@ -400,7 +400,7 @@ public class ReusableMethodsPayment extends BaseClass{
 		}
 		WebUI.waitForElementVisible(findTestObject('PaymenntLocator/NextButton'), 70)
 		WebUI.click(findTestObject('PaymenntLocator/NextButton'))
-		WebUI.delay(5)
+		WebUI.delay(10)
 	}
 
 	@Keyword

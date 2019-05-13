@@ -752,6 +752,8 @@ public class ReusableMethodsNavigation {
 		verifyFullAccessPopupNotVisible()*/
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/SubmitReview/a_ Review'))
+		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),15)
+		WebUI.delay(7)
 		verifyFullAccessPopupNotVisible()
 		WebUI.delay(2)
 		/*WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreBasePoint'))
