@@ -57,7 +57,7 @@ public class BaseClass {
 	public static Date dateNew = new Date()
 	public static String gresbUpload = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Gresb.xlsx"
 
-	/*public static String parkImageUpload = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Parking SJ.jpg"
+	public static String parkImageUpload = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Parking SJ.jpg"
 	 public static String downloadPath = GlobalVariable.downloadDir
 	 public static String pdfFile = RunConfiguration.getProjectDir()+"/ARCDataTemplete/USGBC.pdf"
 	 public String UnzippedNewFolder= GlobalVariable.downloadDir+"GBCI-India/"
@@ -79,7 +79,7 @@ public class BaseClass {
 	 public static String UploadManageCalculatorExcel = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Arc_Data_Template_building.xlsm"
 	 public static String DownloadManageCalculatorExcel = GlobalVariable.downloadDir+"Arc_Data_Template_building.xlsm"
 	 public static String DataResourcesPdf = GlobalVariable.downloadDir+"DataResources.pdf"
-	 public static String DataReviewChecklistPdf = GlobalVariable.downloadDir+"Data Review Checklist.pdf"*/
+	 public static String DataReviewChecklistPdf = GlobalVariable.downloadDir+"Data Review Checklist.pdf"
 	public static String UploadArcDataTempleteSchools = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Arc_Data_Template_building_School_v4.1.xlsm"
 	//International Languages for  snapshot validation
 	public static String UploadArcDataTempleteSpanish = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Carga de archivos de prueba(Spanish).txt"
@@ -105,7 +105,7 @@ public class BaseClass {
 	 public static String FileSize62=System.getProperty("user.dir")+"\\Download\\solved problems in modern physics.pdf"
 	 */
 	//local files
-
+/*
 	public static String parkImageUpload = System.getProperty("user.dir")+"\\ARCDataTemplete\\Parking SJ.jpg"
 	public static String downloadPath = RunConfiguration.getProjectDir()+"\\Download\\"
 	public static String pdfFile = System.getProperty("user.dir")+"\\ARCDataTemplete\\USGBC.pdf"
@@ -128,7 +128,7 @@ public class BaseClass {
 	public static String UploadManageCalculatorExcel = System.getProperty("user.dir")+"\\ARCDataTemplete\\Arc_Data_Template_building.xlsm"
 	public static String DownloadManageCalculatorExcel = System.getProperty("user.dir")+"\\Download\\Arc_Data_Template_building.xlsm"
 	public static String DataResourcesPdf = System.getProperty("user.dir")+"\\Download\\DataResources.pdf"
-	public static String DataReviewChecklistPdf = System.getProperty("user.dir")+"\\Download\\Data Review Checklist.pdf"
+	public static String DataReviewChecklistPdf = System.getProperty("user.dir")+"\\Download\\Data Review Checklist.pdf"*/
 
 
 }
