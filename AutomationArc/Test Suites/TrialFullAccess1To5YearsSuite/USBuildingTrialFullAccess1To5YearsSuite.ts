@@ -343,7 +343,7 @@
    <testCaseLink>
       <guid>69fed6b8-3bde-41dd-aa11-3957689441a3</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/MySchools/TrialProjectScoreVerificationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
