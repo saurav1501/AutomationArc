@@ -15,7 +15,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable
 
 public class ReusableMethodsNavigation {
-    WebDriver driver=DriverFactory.getWebDriver()
+	WebDriver driver=DriverFactory.getWebDriver()
 
 	@Keyword
 	public void navigateToBuilding() {
@@ -335,9 +335,8 @@ public class ReusableMethodsNavigation {
 	public void clickHiddenElement(WebElement element){
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		js.executeScript("arguments[0].click();", element);
-		
 	}
-	
+
 	@Keyword
 	public void clickOnSidebar(String suitId){
 		if((suitId.contains("Cities")) || (suitId.contains("Com"))){
@@ -363,14 +362,14 @@ public class ReusableMethodsNavigation {
 
 
 		else if((suitId.contains("Building")) || (suitId.contains("BuildingOther")) || (suitId.contains("Transit")) || (suitId.contains("MySchools")) ) {
-			WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ CreditsActions'), FailureHandling.OPTIONAL)
+			//WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ CreditsActions'), FailureHandling.OPTIONAL)
 			WebUI.delay(2)
-			if((WebUI.getAttribute(findTestObject('Object Repository/Page_Arc dashboard/a_ CreditsActions1'), "aria-expanded", FailureHandling.OPTIONAL).equals("false"))){
+			if((WebUI.getAttribute(findTestObject('Object Repository/Page_Arc dashboard/a_ CreditsActions1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
 				println "credit action "
 				WebUI.delay(2)
 				WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ CreditsActions'))
 			}
-			if((WebUI.getAttribute(findTestObject('Object Repository/PerformanceScore/Score/a_ Score1'), "aria-expanded", FailureHandling.OPTIONAL).equals("false"))){
+			if((WebUI.getAttribute(findTestObject('Object Repository/PerformanceScore/Score/a_ Score1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
 
 				println WebUI.getAttribute(findTestObject('Object Repository/PerformanceScore/Score/a_ Score1'),"class")
 				println "Scores"
@@ -379,14 +378,14 @@ public class ReusableMethodsNavigation {
 				WebUI.delay(2)
 			}
 
-			if((WebUI.getAttribute(findTestObject('Object Repository/Analytics/ClickOnAnalytics1'), "aria-expanded", FailureHandling.OPTIONAL).equals("false"))){
+			if((WebUI.getAttribute(findTestObject('Object Repository/Analytics/ClickOnAnalytics1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
 				println "Analytics"
 				WebUI.delay(2)
 				WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalytics'))
 			}
 
 
-			if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "aria-expanded", FailureHandling.OPTIONAL).equals("false"))){
+			if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
 
 				println "Manage"
 				WebUI.delay(2)
@@ -458,22 +457,22 @@ public class ReusableMethodsNavigation {
 		closeFullAccessPopup()
 		WebUI.delay(2)
 		/*WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreBasePoint'))
-		closeFullAccessPopup()
-		WebUI.delay(2)
-		WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreEnergy'))
-		closeFullAccessPopup()
-		WebUI.delay(2)
-		WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreWater'))
-		closeFullAccessPopup()
-		WebUI.delay(2)
-		WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreWaste'))
-		closeFullAccessPopup()
-		WebUI.delay(2)
-		WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreTransportation'))
-		closeFullAccessPopup()
-		WebUI.delay(2)
-		WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreHumanExperience'))
-		closeFullAccessPopup()*/
+		 closeFullAccessPopup()
+		 WebUI.delay(2)
+		 WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreEnergy'))
+		 closeFullAccessPopup()
+		 WebUI.delay(2)
+		 WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreWater'))
+		 closeFullAccessPopup()
+		 WebUI.delay(2)
+		 WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreWaste'))
+		 closeFullAccessPopup()
+		 WebUI.delay(2)
+		 WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreTransportation'))
+		 closeFullAccessPopup()
+		 WebUI.delay(2)
+		 WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreHumanExperience'))
+		 closeFullAccessPopup()*/
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/analyticsTotal'))
 		closeFullAccessPopup()
@@ -518,8 +517,8 @@ public class ReusableMethodsNavigation {
 		closeFullAccessPopup()
 		WebUI.delay(2)
 		/*WebUI.scrollToElement(findTestObject('Object Repository/DashboardNavigationNewUI/manageScoreVersion'), 4)
-		WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/manageScoreVersion'))
-		closeFullAccessPopup()*/
+		 WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/manageScoreVersion'))
+		 closeFullAccessPopup()*/
 
 	}
 
@@ -605,23 +604,23 @@ public class ReusableMethodsNavigation {
 		verifyFullAccessPopupNotVisible()
 		WebUI.delay(2)
 		/*WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreBasePoint'))
-		verifyFullAccessPopupNotVisible()
-		WebUI.delay(2)
-		WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreEnergy'))
-		verifyFullAccessPopupNotVisible()
-		WebUI.delay(2)
-		WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreWater'))
-		verifyFullAccessPopupNotVisible()
-		WebUI.delay(2)
-		WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreWaste'))
-		verifyFullAccessPopupNotVisible()
-		WebUI.delay(2)
-		WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreTransportation'))
-		verifyFullAccessPopupNotVisible()
-		WebUI.delay(2)
-		WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreHumanExperience'))
-		verifyFullAccessPopupNotVisible()
-		WebUI.delay(2)*/
+		 verifyFullAccessPopupNotVisible()
+		 WebUI.delay(2)
+		 WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreEnergy'))
+		 verifyFullAccessPopupNotVisible()
+		 WebUI.delay(2)
+		 WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreWater'))
+		 verifyFullAccessPopupNotVisible()
+		 WebUI.delay(2)
+		 WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreWaste'))
+		 verifyFullAccessPopupNotVisible()
+		 WebUI.delay(2)
+		 WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreTransportation'))
+		 verifyFullAccessPopupNotVisible()
+		 WebUI.delay(2)
+		 WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreHumanExperience'))
+		 verifyFullAccessPopupNotVisible()
+		 WebUI.delay(2)*/
 		WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/analyticsTotal'))
 		verifyFullAccessPopupNotVisible()
 		WebUI.delay(2)
@@ -666,9 +665,9 @@ public class ReusableMethodsNavigation {
 		verifyFullAccessPopupNotVisible()
 		WebUI.delay(2)
 		/*WebUI.scrollToElement(findTestObject('Object Repository/DashboardNavigationNewUI/manageScoreVersion'), 4)
-		WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/manageScoreVersion'))
-		verifyFullAccessPopupNotVisible()
-*/
+		 WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/manageScoreVersion'))
+		 verifyFullAccessPopupNotVisible()
+		 */
 	}
 
 	@Keyword
@@ -679,38 +678,38 @@ public class ReusableMethodsNavigation {
 		String dataInputText=WebUI.getText(findTestObject('Object Repository/dataInputNewUI/dataInputTextVerification'))
 		WebUI.verifyMatch(dataInputText,"Data Input", false)
 		/*WebUI.click(findTestObject('Object Repository/dataInputNewUI/wasteCityComm'))
-		closeFullAccessPopup()
-		WebUI.delay(2)
-		WebUI.click(findTestObject('Object Repository/dataInputNewUI/transportationCityComm'))
-		closeFullAccessPopup()
-		WebUI.delay(2)
-		WebUI.click(findTestObject('Object Repository/dataInputNewUI/humanExpCityComm'))
-		closeFullAccessPopup()
-		WebUI.delay(2)
-		WebUI.click(findTestObject('Object Repository/dataInputNewUI/additionalDataCityComm'))
-		closeFullAccessPopup()*/
+		 closeFullAccessPopup()
+		 WebUI.delay(2)
+		 WebUI.click(findTestObject('Object Repository/dataInputNewUI/transportationCityComm'))
+		 closeFullAccessPopup()
+		 WebUI.delay(2)
+		 WebUI.click(findTestObject('Object Repository/dataInputNewUI/humanExpCityComm'))
+		 closeFullAccessPopup()
+		 WebUI.delay(2)
+		 WebUI.click(findTestObject('Object Repository/dataInputNewUI/additionalDataCityComm'))
+		 closeFullAccessPopup()*/
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/SubmitReview/a_ Review'))
 		closeFullAccessPopup()
 		WebUI.delay(2)
 		/*WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreBasePoint'))
-		closeFullAccessPopup()
-		WebUI.delay(2)
-		WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreEnergy'))
-		closeFullAccessPopup()
-		WebUI.delay(2)
-		WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreWater'))
-		closeFullAccessPopup()
-		WebUI.delay(2)
-		WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreWaste'))
-		closeFullAccessPopup()
-		WebUI.delay(2)
-		WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreTransportation'))
-		closeFullAccessPopup()
-		WebUI.delay(2)
-		WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreHumanExperience'))
-		closeFullAccessPopup()
-		WebUI.delay(2)*/
+		 closeFullAccessPopup()
+		 WebUI.delay(2)
+		 WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreEnergy'))
+		 closeFullAccessPopup()
+		 WebUI.delay(2)
+		 WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreWater'))
+		 closeFullAccessPopup()
+		 WebUI.delay(2)
+		 WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreWaste'))
+		 closeFullAccessPopup()
+		 WebUI.delay(2)
+		 WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreTransportation'))
+		 closeFullAccessPopup()
+		 WebUI.delay(2)
+		 WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreHumanExperience'))
+		 closeFullAccessPopup()
+		 WebUI.delay(2)*/
 		WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/manageCertification'))
 		closeFullAccessPopup()
 		WebUI.delay(2)
@@ -727,7 +726,7 @@ public class ReusableMethodsNavigation {
 		closeFullAccessPopup()
 		WebUI.delay(2)
 		/*WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/manageScoreVersion'))
-		closeFullAccessPopup()*/
+		 closeFullAccessPopup()*/
 
 	}
 
@@ -738,27 +737,22 @@ public class ReusableMethodsNavigation {
 
 		//WebUI.click(findTestObject('Object Repository/Add_Project_Details/a_Projects'))
 		/*WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
-
-		String dataInputText=WebUI.getText(findTestObject('Object Repository/dataInputNewUI/dataInputTextVerification'))
-		WebUI.verifyMatch(dataInputText,"Data Input", false)
-
-		WebUI.click(findTestObject('Object Repository/dataInputNewUI/wasteCityComm'))
-		verifyFullAccessPopupNotVisible()
-		WebUI.delay(2)
-
-		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
-		WebUI.click(findTestObject('Object Repository/dataInputNewUI/transportationCityComm'))
-		verifyFullAccessPopupNotVisible()
-		WebUI.delay(2)
-
-		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
-		WebUI.click(findTestObject('Object Repository/dataInputNewUI/humanExpCityComm'))
-		verifyFullAccessPopupNotVisible()
-		WebUI.delay(2)
-
-		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
-		WebUI.click(findTestObject('Object Repository/dataInputNewUI/additionalDataCityComm'))
-		verifyFullAccessPopupNotVisible()*/
+		 String dataInputText=WebUI.getText(findTestObject('Object Repository/dataInputNewUI/dataInputTextVerification'))
+		 WebUI.verifyMatch(dataInputText,"Data Input", false)
+		 WebUI.click(findTestObject('Object Repository/dataInputNewUI/wasteCityComm'))
+		 verifyFullAccessPopupNotVisible()
+		 WebUI.delay(2)
+		 WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		 WebUI.click(findTestObject('Object Repository/dataInputNewUI/transportationCityComm'))
+		 verifyFullAccessPopupNotVisible()
+		 WebUI.delay(2)
+		 WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		 WebUI.click(findTestObject('Object Repository/dataInputNewUI/humanExpCityComm'))
+		 verifyFullAccessPopupNotVisible()
+		 WebUI.delay(2)
+		 WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		 WebUI.click(findTestObject('Object Repository/dataInputNewUI/additionalDataCityComm'))
+		 verifyFullAccessPopupNotVisible()*/
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/SubmitReview/a_ Review'))
 		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),15)
@@ -766,23 +760,23 @@ public class ReusableMethodsNavigation {
 		verifyFullAccessPopupNotVisible()
 		WebUI.delay(2)
 		/*WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreBasePoint'))
-		verifyFullAccessPopupNotVisible()
-		WebUI.delay(2)
-		WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreEnergy'))
-		verifyFullAccessPopupNotVisible()
-		WebUI.delay(2)
-		WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreWater'))
-		verifyFullAccessPopupNotVisible()
-		WebUI.delay(2)
-		WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreWaste'))
-		verifyFullAccessPopupNotVisible()
-		WebUI.delay(2)
-		WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreTransportation'))
-		verifyFullAccessPopupNotVisible()
-		WebUI.delay(2)
-		WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreHumanExperience'))
-		verifyFullAccessPopupNotVisible()
-		WebUI.delay(2)*/
+		 verifyFullAccessPopupNotVisible()
+		 WebUI.delay(2)
+		 WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreEnergy'))
+		 verifyFullAccessPopupNotVisible()
+		 WebUI.delay(2)
+		 WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreWater'))
+		 verifyFullAccessPopupNotVisible()
+		 WebUI.delay(2)
+		 WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreWaste'))
+		 verifyFullAccessPopupNotVisible()
+		 WebUI.delay(2)
+		 WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreTransportation'))
+		 verifyFullAccessPopupNotVisible()
+		 WebUI.delay(2)
+		 WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreHumanExperience'))
+		 verifyFullAccessPopupNotVisible()
+		 WebUI.delay(2)*/
 		WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/manageCertification'))
 		verifyFullAccessPopupNotVisible()
 		WebUI.delay(2)
@@ -799,7 +793,7 @@ public class ReusableMethodsNavigation {
 		verifyFullAccessPopupNotVisible()
 		WebUI.delay(2)
 		/*WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/manageScoreVersion'))
-		verifyFullAccessPopupNotVisible()*/
+		 verifyFullAccessPopupNotVisible()*/
 	}
 
 

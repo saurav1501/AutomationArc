@@ -21,9 +21,9 @@ import org.openqa.selenium.WebElement
 import org.testng.Assert
 
 import com.arc.BaseClass.BaseClass
-import com.katalon.plugin.keyword.calendar.SetDateCalendarKeyword
 import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.model.FailureHandling
+import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.driver.DriverFactory
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
@@ -34,7 +34,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	WebDriver driver  = DriverFactory.getWebDriver()
 	public static Robot robot = new Robot()
 	@Keyword
-	public void uploadArcDataTemplate(){
+	public void uploadArcDataTemplate(){ 
 
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		WebUI.delay(5)
@@ -3513,8 +3513,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 
 	}
-	
-	
+
+
 	@Keyword
 	public void createWasteGenerationMeterReadingTrial(String sheetName,int rowNum) throws IOException, InterruptedException {
 
@@ -3557,7 +3557,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		(1..5).each{
 			WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CityCom/DeleteButton',[index: it]), 60)
 		}
-	
+
 		//waste diversion
 
 		WebUI.delay(8)
@@ -3596,7 +3596,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		(6..9).each{
 			WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CityCom/DeleteButton',[index: it]), 60)
 		}
-		
+
 	}
 
 	/*@Keyword
@@ -3700,7 +3700,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/TextboxValue5'),"value"),reading5,"Not Valid")
 	}
 
-	
+
 	@Keyword
 	public void createTransportReadingTrial(String sheetName, int rowNum) throws IOException, InterruptedException{
 		/*************************Reading data from excel sheet ************************************/
@@ -3745,7 +3745,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	}
 
-	
+
 	@Keyword
 	public void createHumanExpMeterReading(String sheetName, int rowNum)throws IOException, InterruptedException {
 		/*************************Reading data from excel sheet ************************************/
@@ -3828,8 +3828,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/HTextboxValue8'),"value"),reading4,"Not Valid")
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/HTextboxValue9'),"value"),reading5,"Not Valid")
 	}
-	
-	
+
+
 	@Keyword
 	public void createHumanExpMeterReadingTrial(String sheetName, int rowNum)throws IOException, InterruptedException {
 		/*************************Reading data from excel sheet ************************************/
@@ -3899,9 +3899,9 @@ public class ReusableMethodsDataInput  extends BaseClass{
 			WebUI.delay(6)
 		}
 	}
-	
-	
-	
+
+
+
 
 	@Keyword
 	public void humanExpMeterReading()throws IOException, InterruptedException {
@@ -5390,7 +5390,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Resources/a_Data Review Checklist')), "Data Review Checklist", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Resources/a_ENERGY STAR Template')), "ENERGY STAR Template", false, FailureHandling.CONTINUE_ON_FAILURE)
 	}
-	
+
 	@Keyword
 	public void deleteIncompleteMeterReading(){
 		WebUI.delay(12)
@@ -5419,10 +5419,23 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(4)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/DeletereadingOne'))
 		WebUI.delay(4)
-	    WebUI.verifyElementNotPresent(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter start_'), 3)
-	   
-		
-		
+		WebUI.verifyElementNotPresent(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter start_'), 3)
+
 	}
+
+	@Keyword
+	public void verifyTheCommentCityCommunityDoesnotIncludeMeterName(){
+		
+		WebUI.delay(4)
+		if((WebUI.getText(findTestObject('Object Repository/DataInput/ActivityCommentCityComm')).contains("Saurav K has added new data for GHG Emissions for the period"))){
+			KeywordUtil.markPassed("Meter name is not included in the activity comment")
+		}
+		else{
+			KeywordUtil.markFailed("Meter name is not included in the acivity comment ")
+		}
+		
+		
+	}	
+	
 }
 

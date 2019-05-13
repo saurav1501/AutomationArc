@@ -2410,6 +2410,10 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.deleteIncompleteMet
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).deleteIncompleteMeterReading()
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyTheCommentCityCommunityDoesnotIncludeMeterName"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyTheCommentCityCommunityDoesnotIncludeMeterName()
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsAnalytics.downloadAndVerifySurveyExportedData"() {
     (new com.arc.ReusableMethods.ReusableMethodsAnalytics()).downloadAndVerifySurveyExportedData()
 }
