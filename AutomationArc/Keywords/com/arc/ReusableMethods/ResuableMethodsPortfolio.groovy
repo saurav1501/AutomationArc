@@ -47,6 +47,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.setText(findTestObject('Portfolio/Common/textarea_Description'), desc)
 		WebUI.click(findTestObject('Portfolio/Common/button_Create'))
 		WebUI.delay(7)
+		WebUI.waitForElementVisible(findTestObject('Portfolio/Common/button_Done'), 50)
 		WebUI.click(findTestObject('Portfolio/Common/button_Done'))
 		WebUI.delay(5)
 		String started = WebUI.getText(findTestObject('Portfolio/Common/p_Get Started'))
@@ -2308,7 +2309,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		String prjDesc       = data.getCellData(sheetName, "portfolioDesc", 3)
 
 		WebUI.click(findTestObject('Portfolio/Total/span_Edit'))
-		WebUI.delay(2)
+		WebUI.delay(5)
 		WebUI.clearText(findTestObject('Portfolio/Total/portfolio_name'))
 
 		WebUI.sendKeys(findTestObject('Portfolio/Total/portfolio_name'), projectName)
