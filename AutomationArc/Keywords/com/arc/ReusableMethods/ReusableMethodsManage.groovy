@@ -387,12 +387,18 @@ public class ReusableMethodsManage extends BaseClass {
 
 		WebUI.verifyMatch(projectName, prjName, false)
 		WebUI.verifyMatch(projectId, prjId, false)
-		WebUI.verifyMatch(projectUnit,"string:IP", false)
+		
+		if(GlobalVariable.environment=='dev'){
+			WebUI.verifyMatch(projectUnit,"string:SI", false)
+            WebUI.verifyMatch(projectArea, "48", false)		}
+		else{
+			WebUI.verifyMatch(projectUnit,"string:IP", false)
+			WebUI.verifyMatch(projectArea, prjArea, false)
+		}
 		WebUI.verifyMatch(projectAddress, prjAddress, false)
 		WebUI.verifyMatch(projectCity, prjCity, false)
 		WebUI.verifyMatch(projectState, prjState, false)
 		WebUI.verifyMatch(projectCountry, prjCountry, false)
-		WebUI.verifyMatch(projectArea, prjArea, false)
 		WebUI.verifyMatch(projectPrivate, "boolean:false", false)
 		WebUI.verifyMatch(projectYearBuilt, "?", false)
 		WebUI.verifyMatch(projectOccupancy, population, false)
