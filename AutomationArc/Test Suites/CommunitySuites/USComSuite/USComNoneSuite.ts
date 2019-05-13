@@ -107,16 +107,16 @@
       <testCaseId>Test Cases/MyCommunities/CommunitiesNone/CreateADMeterReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>65ca41b9-493a-4a2d-8dbd-165637959ed7</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCommunities/CommunitiesNone/SetPerformanceScoreDefaultTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>2e06bdf0-5ca1-40b2-8671-83a0850bca53</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/MyCommunities/CommunitiesNone/AdminToolAddCertificationTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>65ca41b9-493a-4a2d-8dbd-165637959ed7</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCommunities/CommunitiesNone/SetPerformanceScoreDefaultTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>3a465baf-ee1c-407f-b7bc-f6894f28a4a0</guid>

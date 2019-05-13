@@ -39,7 +39,7 @@
             <profileName>DEV-US-P1</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
-         <runEnabled>false</runEnabled>
+         <runEnabled>true</runEnabled>
          <testSuiteEntity>Test Suites/BuildingSuites/MySchools/MySchools</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
@@ -68,6 +68,15 @@
          </configuration>
          <runEnabled>true</runEnabled>
          <testSuiteEntity>Test Suites/BuildingSuites/PortfolioSuite/GRESBSuite</testSuiteEntity>
+      </TestSuiteRunConfiguration>
+      <TestSuiteRunConfiguration>
+         <configuration>
+            <groupName>Web Desktop</groupName>
+            <profileName>DEV-US-P1</profileName>
+            <runConfigurationId>Firefox</runConfigurationId>
+         </configuration>
+         <runEnabled>true</runEnabled>
+         <testSuiteEntity>Test Suites/BuildingSuites/ParkingSuites/USParkingSuite/USParkingSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
    </testSuiteRunConfigurations>
 </TestSuiteCollectionEntity>

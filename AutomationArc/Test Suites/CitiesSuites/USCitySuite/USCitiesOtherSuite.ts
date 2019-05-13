@@ -113,16 +113,16 @@
       <testCaseId>Test Cases/MyCities/CitiesOther/CreateWaterMeterReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>e1d9e04f-82f8-472f-95b9-46bdffbaeea3</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCities/CitiesOther/SetPerformanceScoreDefaultTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>e85a748d-325c-4f13-8b8d-b2b69c4d61b6</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/MyCities/CitiesOther/AdminToolScoreRecomputeTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>e1d9e04f-82f8-472f-95b9-46bdffbaeea3</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCities/CitiesOther/SetPerformanceScoreDefaultTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d91127b6-818e-4ff9-acd6-f956cf53e025</guid>

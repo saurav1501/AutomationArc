@@ -54,7 +54,7 @@ public class ReusableMethodsNavigation {
 
 	@Keyword
 	public void navigateToParking(){
-		WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
+		//WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ Buildings'))
 		WebUI.delay(3)
 		WebUI.click(findTestObject('Page_Arc dashboard/a_ My Parking'))
@@ -80,7 +80,7 @@ public class ReusableMethodsNavigation {
 
 	@Keyword
 	public void navigateToBuildingTransit() {
-		WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
+		//WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
 		WebUI.delay(3)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ Buildings'))
 		WebUI.delay(2)
@@ -342,6 +342,7 @@ public class ReusableMethodsNavigation {
 				println "Scores"
 				WebUI.delay(2)
 				WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
+				WebUI.delay(2)
 			}
 			if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "aria-expanded", FailureHandling.OPTIONAL).equals("false"))){
 				println "Manage"
@@ -353,6 +354,7 @@ public class ReusableMethodsNavigation {
 
 		else if((suitId.contains("Building")) || (suitId.contains("BuildingOther")) || (suitId.contains("Transit")) || (suitId.contains("MySchools")) ) {
 			WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ CreditsActions'), FailureHandling.OPTIONAL)
+			WebUI.delay(2)
 			if((WebUI.getAttribute(findTestObject('Object Repository/Page_Arc dashboard/a_ CreditsActions1'), "aria-expanded", FailureHandling.OPTIONAL).equals("false"))){
 				println "credit action "
 				WebUI.delay(2)
@@ -360,9 +362,11 @@ public class ReusableMethodsNavigation {
 			}
 			if((WebUI.getAttribute(findTestObject('Object Repository/PerformanceScore/Score/a_ Score1'), "aria-expanded", FailureHandling.OPTIONAL).equals("false"))){
 
+				println WebUI.getAttribute(findTestObject('Object Repository/PerformanceScore/Score/a_ Score1'),"class")
 				println "Scores"
 				WebUI.delay(2)
 				WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
+				WebUI.delay(2)
 			}
 
 			if((WebUI.getAttribute(findTestObject('Object Repository/Analytics/ClickOnAnalytics1'), "aria-expanded", FailureHandling.OPTIONAL).equals("false"))){

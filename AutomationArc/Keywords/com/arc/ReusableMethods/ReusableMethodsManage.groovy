@@ -430,9 +430,11 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectId'),'value'),prjId, false, FailureHandling.CONTINUE_ON_FAILURE)
 		if(GlobalVariable.environment=='dev'){
 			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/unitType'),'value'),"string:SI", false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),'value'),"48", false, FailureHandling.CONTINUE_ON_FAILURE)
 		}
 		else{
 			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/unitType'),'value'),"string:IP", false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),'value'),prjArea, false, FailureHandling.CONTINUE_ON_FAILURE)
 		}
 
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/prjAddress'),'value'),prjAddress, false, FailureHandling.CONTINUE_ON_FAILURE)
@@ -446,7 +448,10 @@ public class ReusableMethodsManage extends BaseClass {
 		//Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/ownerEmail'),'value'),ownerEmail)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/population'),'value'),population, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/precertify'),'value'),"boolean:false", false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),'value'),prjArea, false, FailureHandling.CONTINUE_ON_FAILURE)
+		
+	
+		
+		
 	}
 
 	@Keyword
@@ -1466,8 +1471,10 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Manage/TeamModule/button_Add Member'))
 		WebUI.delay(2)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/TeamModule/sameRoleAddAgainErrMsg'), 20)
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/TeamModule/sameRoleAddAgainErrMsg'))
 		WebUI.clearText(findTestObject('Manage/TeamModule/input_input'))
+		
 	}
 
 	@Keyword
@@ -1518,7 +1525,8 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Manage/TeamModule/button_Save'))
 		//WebUI.delay(1)
 		//WebUI.verifyElementVisible(findTestObject('Manage/TeamModule/TeamMemberUpdateSuccessMsg'))
-		WebUI.delay(7)
+		WebUI.delay(12)
+		//WebUI.waitForElementNotClickable(findTestObject('Object Repository/Manage/TeamModule/TeamRole'), 40)
 		WebUI.verifyOptionSelectedByLabel(findTestObject('Object Repository/Manage/TeamModule/TeamRole'),"Arc Administrator", false,10)
 
 	}
@@ -1556,7 +1564,8 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.selectOptionByLabel(findTestObject('Manage/TeamModule/newMemberAddedAuthorizationLevel'), 'Team Manager', false)
 		WebUI.delay(4)
 		WebUI.click(findTestObject('Manage/TeamModule/button_Save'))
-		WebUI.delay(8)
+		WebUI.delay(12)
+		//WebUI.waitForElementNotClickable(findTestObject('Object Repository/Manage/TeamModule/TeamRole'), 40)
 		WebUI.verifyOptionSelectedByLabel(findTestObject('Object Repository/Manage/TeamModule/TeamRole'),"Team Manager", false,10)
 	}
 	@Keyword
@@ -1590,6 +1599,7 @@ public class ReusableMethodsManage extends BaseClass {
 		/*	WebUI.delay(2)
 		 WebUI.verifyElementVisible(findTestObject('Manage/TeamModule/TeamMemberUpdateSuccessMsg'))*/
 		WebUI.delay(8)
+		WebUI.waitForElementNotClickable(findTestObject('Object Repository/Manage/TeamModule/TeamRole'), 40)
 		WebUI.verifyOptionSelectedByLabel(findTestObject('Object Repository/Manage/TeamModule/TeamRole'),"Team Member", false,10)
 	}
 
@@ -1636,6 +1646,7 @@ public class ReusableMethodsManage extends BaseClass {
 	//Permission requests section is present
 	@Keyword
 	public void permissionRequestFieldVerification(){
+		
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/TeamModule/PermissionRequestSection/PermissionRequestTitle'))
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/TeamModule/PermissionRequestSection/EmailField'))
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/TeamModule/PermissionRequestSection/DataRequestField'))

@@ -83,12 +83,6 @@
       <testCaseId>Test Cases/Common/CityComValidation/UIValidationGiniCoefficient(for income distribution)HumanExperienceTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>2c77d49d-43c8-4942-ae4d-cb7465232cf8</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCities/CitiesNone/ScoreVersionVerificationTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>24d0c582-df8a-40c0-80cf-f63799612c4e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

@@ -17,12 +17,6 @@
       <testCaseId>Test Cases/Buildings/MyParking/LoginWithParkingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>02f9a3c6-e3a3-4fd9-bbe5-fd9b9b6e12ab</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyParking/RegistrationPageDetailsVerificationTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>2d20b961-566b-45da-b38b-314a23b39ca0</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

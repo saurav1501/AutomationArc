@@ -191,16 +191,16 @@
       <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/PreRequisiteAttemptTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>f9bb78ac-b77e-4ef8-aff0-211c84c67871</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/SetPerformanceScoreDefaultTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>ccd9e0dc-6631-496a-86d1-427a97320eb9</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/AdminToolScoreRecomputeTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>f9bb78ac-b77e-4ef8-aff0-211c84c67871</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/SetPerformanceScoreDefaultTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>8b44ae8e-cc76-494a-a42f-505a8c04b113</guid>
