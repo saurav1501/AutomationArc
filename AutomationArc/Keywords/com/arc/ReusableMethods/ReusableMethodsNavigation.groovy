@@ -341,20 +341,20 @@ public class ReusableMethodsNavigation {
 	@Keyword
 	public void clickOnSidebar(String suitId){
 		if((suitId.contains("Cities")) || (suitId.contains("Com"))){
-			WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ CreditsActions'), FailureHandling.CONTINUE_ON_FAILURE)
-			if((WebUI.getAttribute(findTestObject('Object Repository/Page_Arc dashboard/a_ CreditsActions1'), "aria-expanded", FailureHandling.OPTIONAL).equals("false"))){
+			//WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ CreditsActions'), FailureHandling.CONTINUE_ON_FAILURE)
+			if((WebUI.getAttribute(findTestObject('Object Repository/Page_Arc dashboard/a_ CreditsActions1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
 
 				println "credit action "
 				WebUI.delay(2)
 				WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ CreditsActions'))
 			}
-			if((WebUI.getAttribute(findTestObject('Object Repository/PerformanceScore/Score/a_ Score1'), "aria-expanded", FailureHandling.OPTIONAL).equals("false"))){
+			if((WebUI.getAttribute(findTestObject('Object Repository/PerformanceScore/Score/a_ Score1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
 				println "Scores"
 				WebUI.delay(2)
 				WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
 				WebUI.delay(2)
 			}
-			if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "aria-expanded", FailureHandling.OPTIONAL).equals("false"))){
+			if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
 				println "Manage"
 				WebUI.delay(2)
 				WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
