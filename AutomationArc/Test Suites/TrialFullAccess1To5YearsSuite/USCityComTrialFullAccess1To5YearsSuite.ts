@@ -65,18 +65,6 @@
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/MyCity/5YearTrailFullAccessCity/CreateHumanExpMeterReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>064dc61c-65eb-4621-b0ae-32182851ac1c</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/MyCity/5YearTrailFullAccessCity/BasePointADMeterOptionBPointTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>821a8880-cd2b-42cb-bed3-dc5e6a8d475b</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/MyCity/5YearTrailFullAccessCity/BasePointADMeterOptionAPointTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>0efd79ab-9102-4c0d-94f5-7d3e88b44976</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -165,18 +153,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/Community/CreateHumanExpMeterReadingTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>96f34807-8808-462b-8200-f9f3a49410a5</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/Community/BasePointADMeterOptionBPointTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>a0945123-f3d2-4dec-9afb-613040d5de97</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/Community/BasePointADMeterOptionAPointTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>ee27ecd5-cba6-4449-80ed-2b39cd33191a</guid>
