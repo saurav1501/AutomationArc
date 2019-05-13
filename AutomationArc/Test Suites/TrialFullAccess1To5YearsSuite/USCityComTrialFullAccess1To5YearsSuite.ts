@@ -47,6 +47,24 @@
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/MyCity/5YearTrailFullAccessCity/CreateWaterMeterReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>d30520e8-e429-4245-92b4-7605a47d2b7b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/MyCity/5YearTrailFullAccessCity/CreateWasteGenerationMeterReadingTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>54888514-bd32-4a26-bb94-84c6e81f4ab7</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/MyCity/5YearTrailFullAccessCity/CreateTrasportMeterReadingTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>d6172f50-b24d-46b1-8e05-0c4a659137b4</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/MyCity/5YearTrailFullAccessCity/CreateHumanExpMeterReadingTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>0efd79ab-9102-4c0d-94f5-7d3e88b44976</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -117,6 +135,24 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/Community/CreateWaterMeterReadingTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>ec170c84-1f80-4961-84ef-31b094f45f47</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/Community/CreateWasteGenerationMeterReadingTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>00f81bc9-e624-4823-b801-77b2f4bca921</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/Community/CreateTrasportMeterReadingTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>a7ace757-a3c0-47b2-ad98-4a09fe2d67af</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/Community/CreateHumanExpMeterReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>ee27ecd5-cba6-4449-80ed-2b39cd33191a</guid>
