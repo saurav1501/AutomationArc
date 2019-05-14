@@ -257,12 +257,6 @@
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingTransit/5YearTrialFullAccessBuildingTRAG/TrialProjectDetailVerificationAfterExcelUploadTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>ebe605bc-6e74-473e-a349-f2d80c92ecdc</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingTransit/5YearTrialFullAccessBuildingTRAG/TrialProjectScoreVerificationTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>4f07138e-1683-49fa-a16a-6aafaed10338</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -333,12 +327,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/MySchools/AdminToolScoreRecomputeTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>69fed6b8-3bde-41dd-aa11-3957689441a3</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/MySchools/TrialProjectScoreVerificationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>92e4952a-79af-46e7-b2f7-103cad6c8b8b</guid>
