@@ -587,6 +587,7 @@ public class ResuableMethodsLandingPage extends BaseClass {
 
 	@Keyword
 	public void verifyBuildingPopup(){
+		WebUI.waitForElementVisible(findTestObject('Object Repository/Add_Project_Details/BuildingPop/yourBuildingScore'), 15)
 		String popup = WebUI.getText(findTestObject('Object Repository/Add_Project_Details/BuildingPop/yourBuildingScore'))
 
 		WebUI.verifyMatch(popup, "Your Building's Score", false)

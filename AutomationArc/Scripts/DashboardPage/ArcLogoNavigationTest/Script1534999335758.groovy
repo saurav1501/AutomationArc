@@ -22,7 +22,7 @@ import internal.GlobalVariable as GlobalVariable
 
 try{
 	
-    CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.navigateToURL'()
+    //CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.navigateToURL'()
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsNavigation.ArclogoNavigation'()
 	
 	} catch (Throwable t) {

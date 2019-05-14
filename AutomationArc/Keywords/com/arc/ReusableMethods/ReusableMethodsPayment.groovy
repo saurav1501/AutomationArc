@@ -86,13 +86,13 @@ public class ReusableMethodsPayment extends BaseClass{
 		WebUI.verifyMatch("Purchase", purchase, false)
 
 		/*String url= DriverFactory.getWebDriver().getCurrentUrl()
-		println url
-		String NotSyncProject_ID= url.substring(url.indexOf('9'),url.indexOf('9')+10 )
-		println NotSyncProject_ID
-		if(NotSyncProject_ID.startsWith('9'))
-			KeywordUtil.logInfo("Trial Project is Created")
-		else
-			KeywordUtil.markFailedAndStop("Trial project is not created")*/
+		 println url
+		 String NotSyncProject_ID= url.substring(url.indexOf('9'),url.indexOf('9')+10 )
+		 println NotSyncProject_ID
+		 if(NotSyncProject_ID.startsWith('9'))
+		 KeywordUtil.logInfo("Trial Project is Created")
+		 else
+		 KeywordUtil.markFailedAndStop("Trial project is not created")*/
 
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/spaceType'))
 		List<WebElement> list= driver.findElements(By.xpath("//*[@ng-repeat='type in spaceType']"))
@@ -102,10 +102,10 @@ public class ReusableMethodsPayment extends BaseClass{
 		data.setCellData(sheetName, "SpaceType", rowNum,list.get(randonNumber).getText())
 		list.get(randonNumber).click()
 		if((list.get(randonNumber).getText()=="Industrial Manufacturing") || (list.get(randonNumber).getText()=="Laboratory") || (list.get(randonNumber).getText()=="Data Center") ||
-			(list.get(randonNumber).getText()=="Warehouse: Nonrefrigerated Distribution/Shipping") || (list.get(randonNumber).getText()=="Warehouse: Refrigerated")|| (list.get(randonNumber).getText()=="Warehouse: Self Storage Units") ||
-			 (list.get(randonNumber).getText()=="Warehouse: General")){
-			 uniqueSpaceTypesFlag=true
-		}	 
+		(list.get(randonNumber).getText()=="Warehouse: Nonrefrigerated Distribution/Shipping") || (list.get(randonNumber).getText()=="Warehouse: Refrigerated")|| (list.get(randonNumber).getText()=="Warehouse: Self Storage Units") ||
+		(list.get(randonNumber).getText()=="Warehouse: General")){
+			uniqueSpaceTypesFlag=true
+		}
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/ownerType'))
 		List<WebElement> list1= driver.findElements(By.xpath("//*[@ng-repeat='type in ownerType']"))
 		int size1 = list1.size()
@@ -152,14 +152,14 @@ public class ReusableMethodsPayment extends BaseClass{
 		WebUI.verifyMatch("Purchase", purchase, false)
 
 		/*String url= DriverFactory.getWebDriver().getCurrentUrl()
-		println url
-		String NotSyncProject_ID= url.substring(url.indexOf('9'),url.indexOf('9')+10 )
-		println NotSyncProject_ID
-		if(NotSyncProject_ID.startsWith('9'))
-			KeywordUtil.logInfo("Trial Project is Created")
-		else
-			KeywordUtil.markFailedAndStop("Trial project is not created")
-*/
+		 println url
+		 String NotSyncProject_ID= url.substring(url.indexOf('9'),url.indexOf('9')+10 )
+		 println NotSyncProject_ID
+		 if(NotSyncProject_ID.startsWith('9'))
+		 KeywordUtil.logInfo("Trial Project is Created")
+		 else
+		 KeywordUtil.markFailedAndStop("Trial project is not created")
+		 */
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/DashboardNavigationNewUI/Dash/select_LEED for CitiesOtherNon'), prjRating , false)
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/saveButtonProjectDetails'))
 		WebUI.delay(20)
@@ -179,7 +179,8 @@ public class ReusableMethodsPayment extends BaseClass{
 		WebUI.verifyMatch("Purchase", purchase, false)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/DashboardNavigationNewUI/Dash/select_LEED for CitiesOtherNon'), prjRating , false)
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/saveButtonProjectDetails'))
-		WebUI.delay(8)
+		WebUI.delay(20)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/AddProjectNewUI/saveButtonProjectDetails'),10)
 		boolean notEditable = WebUI.setText(findTestObject('Object Repository/DashboardNavigationNewUI/Dash/select_LEED for CitiesOtherNon'),'None', FailureHandling.OPTIONAL)
 		println ("DEBUG boolean value "+notEditable)
 		println ("Existing Rating System " +prjRating)
@@ -202,15 +203,16 @@ public class ReusableMethodsPayment extends BaseClass{
 		WebUI.verifyMatch("Project Setup", projectSetUpText, false)
 		String daysForFreeTrialText= WebUI.getText(findTestObject('Object Repository/paymentPageNewUI/90DaysTrialText'))
 		WebUI.verifyMatch("90 Days", daysForFreeTrialText, false)
-
+		WebUI.delay(3)
 		WebUI.click(findTestObject('Object Repository/paymentPageNewUI/freeTrialButtonPaymentPage'))
 		WebUI.delay(5)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/paymentPageNewUI/introTooltipProjectDashboard'), 20)
 		WebUI.click(findTestObject('Object Repository/paymentPageNewUI/navigateToProjectButtonDashBoard'))
 		WebUI.delay(8)
+		
+		WebUI.click(findTestObject('Add_Project_Details/PayNow'))
+		WebUI.delay(8)
 
-		WebUI.click(findTestObject('Object Repository/paymentPageNewUI/payNowButton1'))
-		WebUI.delay(10)
 		String purhanse = WebUI.getText(findTestObject("Object Repository/paymentPageNewUI/Purchase"))
 		WebUI.verifyMatch(purhanse,'Purchase', false)
 
@@ -276,12 +278,12 @@ public class ReusableMethodsPayment extends BaseClass{
 		data.setCellData(sheetName, "SpaceType", rowNum,list.get(randonNumber).getText())
 		list.get(randonNumber).click()
 		WebUI.delay(2)
-		String stype=list.get(randonNumber).getText()	
-		
+		String stype=list.get(randonNumber).getText()
+
 		if((stype.equals("Industrial Manufacturing")) || (stype.equals("Laboratory")) || (stype.equals("Data Center")) ||
-			(stype.equals("Warehouse: Nonrefrigerated Distribution/Shipping")) || (stype.equals("Warehouse: Refrigerated"))|| (stype.equals("Warehouse: Self Storage Units")) ||
-			 (stype.equals("Warehouse: General"))){
-			 uniqueSpaceTypesFlag=true
+		(stype.equals("Warehouse: Nonrefrigerated Distribution/Shipping")) || (stype.equals("Warehouse: Refrigerated"))|| (stype.equals("Warehouse: Self Storage Units")) ||
+		(stype.equals("Warehouse: General"))){
+			uniqueSpaceTypesFlag=true
 		}
 		println uniqueSpaceTypesFlag
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/ownerType'))

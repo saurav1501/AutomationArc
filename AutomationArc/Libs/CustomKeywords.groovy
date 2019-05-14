@@ -958,6 +958,24 @@ def static "com.arc.ReusableMethods.ResuableMethodsLEEDOnline.checkPreCertPrelim
     (new com.arc.ReusableMethods.ResuableMethodsLEEDOnline()).checkPreCertPreliminaryReviewStatus()
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodValidation.buildingAddNewProjectPageValidation"(
+    	String sheetName	
+     , 	int rowNum1	) {
+    (new com.arc.ReusableMethods.ReusableMethodValidation()).buildingAddNewProjectPageValidation(
+        	sheetName
+         , 	rowNum1)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodValidation.paymentPageProjectDataValidation"(
+    	String sheetName	
+     , 	int rowNum1	
+     , 	int yearOfSubscription	) {
+    (new com.arc.ReusableMethods.ReusableMethodValidation()).paymentPageProjectDataValidation(
+        	sheetName
+         , 	rowNum1
+         , 	yearOfSubscription)
+}
+
 def static "com.arc.ReusableMethods.ResuableMethodsLandingPage.invalidIDLoginTest"() {
     (new com.arc.ReusableMethods.ResuableMethodsLandingPage()).invalidIDLoginTest()
 }
@@ -1084,24 +1102,6 @@ def static "com.arc.ReusableMethods.ResuableMethodsLandingPage.verifyBuildingPop
 
 def static "com.arc.ReusableMethods.ResuableMethodsLandingPage.verifyNavigationPopup"() {
     (new com.arc.ReusableMethods.ResuableMethodsLandingPage()).verifyNavigationPopup()
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodValidation.buildingAddNewProjectPageValidation"(
-    	String sheetName	
-     , 	int rowNum1	) {
-    (new com.arc.ReusableMethods.ReusableMethodValidation()).buildingAddNewProjectPageValidation(
-        	sheetName
-         , 	rowNum1)
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodValidation.paymentPageProjectDataValidation"(
-    	String sheetName	
-     , 	int rowNum1	
-     , 	int yearOfSubscription	) {
-    (new com.arc.ReusableMethods.ReusableMethodValidation()).paymentPageProjectDataValidation(
-        	sheetName
-         , 	rowNum1
-         , 	yearOfSubscription)
 }
 
 def static "com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram"(
@@ -2386,6 +2386,22 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.deleteIncompleteMet
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).deleteIncompleteMeterReading()
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createEmissionFactor"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createEmissionFactor(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.scoreShouldNotChangeVerify"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).scoreShouldNotChangeVerify(
+        	sheetName
+         , 	rowNum)
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsAnalytics.downloadAndVerifySurveyExportedData"() {
     (new com.arc.ReusableMethods.ReusableMethodsAnalytics()).downloadAndVerifySurveyExportedData()
 }
@@ -3322,6 +3338,14 @@ def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.genratePerfo
     	String sheetName	
      , 	int rowNum	) {
     (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).genratePerformanceScoreAdminToolOtherNone(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.analyticsgenratePerformanceScoreAdminToolOtherNone"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).analyticsgenratePerformanceScoreAdminToolOtherNone(
         	sheetName
          , 	rowNum)
 }

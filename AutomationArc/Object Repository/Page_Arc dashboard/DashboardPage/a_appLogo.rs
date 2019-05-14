@@ -11,14 +11,14 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>#navbar > div > div > div:nth-child(1) > a > img</value>
+         <value>//*[@id=&quot;sidebar&quot;]/div/div[1]/header/a</value>
       </entry>
       <entry>
          <key>CSS</key>
          <value>#navbar > div > div > div:nth-child(1) > a > img</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>CSS</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

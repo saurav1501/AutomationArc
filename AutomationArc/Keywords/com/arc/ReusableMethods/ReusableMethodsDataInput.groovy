@@ -5219,5 +5219,115 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		
 		
 	}
+	
+	@Keyword
+	public void createEmissionFactor(String sheetName, int rowNum){
+
+		String emissionFactor  = data.getCellData(sheetName, "EmissionFactor", rowNum)
+		WebUI.delay(5)
+	
+		WebUI.scrollToElement(findTestObject('DataInput/Survey/a_ Data Input'),5)
+		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+	
+		ReusableMethodsLogin.waitForPageLoad(60)
+		ReusableMethodsLogin.waitForIframeLoad(60)
+		WebUI.delay(8)
+		
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'),10)
+		//Verifying the Performance score
+		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
+		data.setCellData(GlobalVariable.BDataInput,"TotalScore", GlobalVariable.rowNumTwo,totalPerformaceScore)
+		
+		WebUI.doubleClick(findTestObject('Analytics/17/Building Settings'))
+		WebUI.delay(4)
+		
+		WebUI.waitForElementClickable(findTestObject('Analytics/17/span_Emission Factor'), 10)
+		WebUI.scrollToElement(findTestObject('Analytics/17/span_Emission Factor'), 3)
+		WebUI.click(findTestObject('Analytics/17/span_Emission Factor'))
+		WebUI.delay(5)
+		
+		WebUI.waitForElementClickable(findTestObject('Analytics/17/Custom Emission Facto'), 10)
+		WebUI.scrollToElement(findTestObject('Analytics/17/Custom Emission Facto'), 3)
+		WebUI.click(findTestObject('Analytics/17/Custom Emission Facto'))
+		WebUI.delay(5)
+		
+		WebUI.waitForElementClickable(findTestObject('Analytics/17/Manually Enter Emission'), 10)
+		WebUI.scrollToElement(findTestObject('Analytics/17/Manually Enter Emission'), 3)
+		WebUI.click(findTestObject('Analytics/17/Manually Enter Emission'))
+		WebUI.delay(5)
+	
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), 10)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
+		WebUI.delay(4)
+			
+		WebUI.waitForElementClickable(findTestObject('Analytics/Cal/StartDate'), 10)
+		WebUI.scrollToElement(findTestObject('Analytics/Cal/StartDate'), 2)
+		WebUI.click(findTestObject('Analytics/Cal/StartDate'))
+		WebUI.delay(2)
+		
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.mouseOver(findTestObject('DataInput/CreateMeterBuilding/year_2018'))
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/year_2018'))
+	
+		WebUI.scrollToElement(findTestObject('Analytics/17/span_Aug'), 2)
+		WebUI.mouseOver(findTestObject('Analytics/17/span_Aug'))
+		WebUI.click(findTestObject('Analytics/17/span_Aug'))
+		WebUI.delay(2)
+		
+		WebUI.scrollToElement(findTestObject('Analytics/17/1Aug2018'), 2)
+		WebUI.mouseOver(findTestObject('Analytics/17/1Aug2018'))
+		WebUI.click(findTestObject('Analytics/17/1Aug2018'))
+		WebUI.delay(4)
+		WebUI.setText(findTestObject('Analytics/17/Reading1'),emissionFactor)
+		
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
+		WebUI.delay(4)
+	
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/deleteButtonOne'), 20)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), 20)
+
+
+
+	}
+	
+	@Keyword
+	public void scoreShouldNotChangeVerify(String sheetName, int rowNum){
+
+	String totalScore  = data.getCellData(sheetName, "TotalScore", rowNum)
+	String actotalScore  = data.getCellData(sheetName, "ATotalScore", rowNum)
+	
+	
+	/********* Verifying the Generated score for total score & Energy & Water & Waste & Transport & Human Experience under data Input section ********/
+	WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
+	WebUI.delay(8)
+	WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'),10)
+	//Verifying the Performance score
+	String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
+	print totalPerformaceScore
+	WebUI.verifyMatch(totalPerformaceScore ,totalScore, false)
+	WebUI.verifyMatch(totalPerformaceScore , actotalScore, false)
+	
+	WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
+	WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TotalPerformanceScore'),10)
+	WebUI.delay(15)
+	//Verifying the Performance score
+	String totalperformaceScore = WebUI.getText(findTestObject('PerformanceScore/Score/TotalPerformanceScore'))
+	print totalperformaceScore
+	WebUI.verifyMatch(totalperformaceScore , totalScore, false)
+	WebUI.verifyMatch(totalperformaceScore , actotalScore, false)
+	
+	
+	WebUI.delay(6)
+	//WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
+	WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
+	WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TotalPerformanceScore'),10)
+	WebUI.delay(15)
+
+
+	
+	
+	}
 }
 

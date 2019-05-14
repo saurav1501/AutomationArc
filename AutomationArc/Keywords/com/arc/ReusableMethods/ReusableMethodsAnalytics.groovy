@@ -2818,7 +2818,6 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		String scope1Dailay = WebUI.getText(findTestObject('Object Repository/Analytics/Transport/EnergyDailyScope1'))
 		Double scoped1ailay= Double.parseDouble(scope1Dailay)
 
-
 		double totaltransprotAnnaual = scoped1ailay + scope2dailay + dtransprotDaily
 
 		BigDecimal totaltransprotannaual = new BigDecimal(totaltransprotAnnaual)
