@@ -591,12 +591,11 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 		WebUI.delay(5)
 		WebUI.verifyElementVisible(findTestObject('Manage/Parking/Project/Unit type'), FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyElementVisible(findTestObject('Manage/Parking/Project/td_Gross floor area'), FailureHandling.CONTINUE_ON_FAILURE)
-<<<<<<< HEAD
-		WebUI.verifyElementNotVisible(findTestObject('Manage/Parking/Project/Space type'), FailureHandling.CONTINUE_ON_FAILURE)
-=======
+
+	//	WebUI.verifyElementNotVisible(findTestObject('Manage/Parking/Project/Space type'), FailureHandling.CONTINUE_ON_FAILURE)
+
 		WebUI.verifyElementNotPresent(findTestObject('Manage/Parking/Project/Space type'), 5)
-		//WebUI.verifyElementNotVisible(findTestObject('Manage/Parking/Project/Space type'), FailureHandling.CONTINUE_ON_FAILURE)
->>>>>>> c9cc7cd1a0ea2138b4ec7a272fdc22255985f377
+
 
 	}
 	@Keyword
