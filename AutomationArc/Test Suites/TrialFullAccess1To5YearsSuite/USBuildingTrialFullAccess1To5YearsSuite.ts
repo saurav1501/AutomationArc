@@ -139,7 +139,7 @@
    <testCaseLink>
       <guid>671e01ce-8347-49f3-993c-e9fae62d48ba</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/1YearFullAccessBuildingOther/1YearBillingAmountAndStatusTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -181,7 +181,7 @@
    <testCaseLink>
       <guid>f987f950-c544-4ee2-b628-928e5ec859d7</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/2YearFullAccessBuildingOther/2YearBillingAmountAndStatusTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -199,7 +199,7 @@
    <testCaseLink>
       <guid>4d770666-6f6f-469a-bbac-e67430d25094</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingNone/3YearFullAccessBuildingNone/3YearBillingAmountAndStatusTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -217,7 +217,7 @@
    <testCaseLink>
       <guid>4ee0f81e-1047-44c0-899a-64f36a41b8ea</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingNone/4YearFullAccessBuildingNone/4YearBillingAmountAndStatusTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -265,7 +265,7 @@
    <testCaseLink>
       <guid>ebe605bc-6e74-473e-a349-f2d80c92ecdc</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingTransit/5YearTrialFullAccessBuildingTRAG/TrialProjectScoreVerificationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -277,7 +277,7 @@
    <testCaseLink>
       <guid>c1c961dc-50ef-4d0a-8182-8f6bc2b7b843</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingTransit/5YearTrialFullAccessBuildingTRAG/5YearBillingAmountAndStatusTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -361,7 +361,7 @@
    <testCaseLink>
       <guid>afccc6bf-f324-4337-af7b-db978c957def</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/MySchools/BillingAmountAndStatusTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
