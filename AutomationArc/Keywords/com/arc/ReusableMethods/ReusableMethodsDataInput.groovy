@@ -34,7 +34,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	WebDriver driver  = DriverFactory.getWebDriver()
 	public static Robot robot = new Robot()
 	@Keyword
-	public void uploadArcDataTemplate(){ 
+	public void uploadArcDataTemplate(){
 
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		WebUI.delay(5)
@@ -5425,7 +5425,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	@Keyword
 	public void verifyTheCommentCityCommunityDoesnotIncludeMeterName(){
-		
+
 		WebUI.delay(4)
 		if((WebUI.getText(findTestObject('Object Repository/DataInput/ActivityCommentCityComm')).contains("Saurav K has added new data for GHG Emissions for the period"))){
 			KeywordUtil.markPassed("Meter name is not included in the activity comment")
@@ -5433,9 +5433,9 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		else{
 			KeywordUtil.markFailed("Meter name is not included in the acivity comment ")
 		}
-		
-		
-	}	
-	
+
+
+	}
+
 }
 
