@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//*[@ng-change=&quot;satisfactionChange(satisfaction)&quot;]</value>
+         <value>//*[@class=&quot;rangeslider__handle&quot;]</value>
       </entry>
       <entry>
          <key>CSS</key>

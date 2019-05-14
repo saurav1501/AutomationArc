@@ -62,6 +62,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		WebUI.delay(7)
+		WebUI.doubleClick(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'))
+		WebUI.delay(6)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/span_Upload.XLS'), 20)
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/span_Upload.XLS'))
 		WebUI.delay(3)
