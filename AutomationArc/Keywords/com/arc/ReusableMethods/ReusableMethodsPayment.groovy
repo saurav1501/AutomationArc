@@ -205,11 +205,12 @@ public class ReusableMethodsPayment extends BaseClass{
 		WebUI.verifyMatch("90 Days", daysForFreeTrialText, false)
 		WebUI.delay(3)
 		WebUI.click(findTestObject('Object Repository/paymentPageNewUI/freeTrialButtonPaymentPage'))
-		WebUI.delay(5)
+		WebUI.delay(15)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/paymentPageNewUI/introTooltipProjectDashboard'), 20)
 		WebUI.click(findTestObject('Object Repository/paymentPageNewUI/navigateToProjectButtonDashBoard'))
-		WebUI.delay(8)
+		WebUI.delay(15)
 		
+		WebUI.waitForElementClickable(findTestObject('Add_Project_Details/PayNow'), 6)
 		WebUI.click(findTestObject('Add_Project_Details/PayNow'))
 		WebUI.delay(8)
 
