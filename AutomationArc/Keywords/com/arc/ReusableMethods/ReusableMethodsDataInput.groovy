@@ -3493,10 +3493,10 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.scrollToElement(findTestObject('DataInput/CityCom/DNextButton'),2)
 		WebUI.click(findTestObject('DataInput/CityCom/DNextButton'))
 		WebUI.delay(2)
-		WebUI.sendKeys(findTestObject('DataInput/CityCom/dWTextboxValue1'), reading1)
-		WebUI.sendKeys(findTestObject('DataInput/CityCom/dWTextboxValue2'), reading2)
-		WebUI.sendKeys(findTestObject('DataInput/CityCom/dWTextboxValue3'), reading3)
-		WebUI.sendKeys(findTestObject('DataInput/CityCom/dWTextboxValue4'), reading4)
+		WebUI.sendKeys(findTestObject('DataInput/CityCom/dWTextboxValue1'), "80")
+		WebUI.sendKeys(findTestObject('DataInput/CityCom/dWTextboxValue2'), "70")
+		WebUI.sendKeys(findTestObject('DataInput/CityCom/dWTextboxValue3'), "60")
+		WebUI.sendKeys(findTestObject('DataInput/CityCom/dWTextboxValue4'), "50")
 		WebUI.delay(1)
 		for(int count = 6; count<=9; count++){
 			WebUI.delay(4)
@@ -3508,12 +3508,10 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		}
 		WebUI.refresh()
 		WebUI.delay(10)
-		Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/dWTextboxValue1'),"value"),reading1,"Not Valid")
-		Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/dWTextboxValue2'),"value"), reading2,"Not Valid")
-		Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/dWTextboxValue3'),"value"), reading3,"Not Valid")
-		Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/dWTextboxValue4'),"value"), reading4,"Not Valid")
-
-
+		Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/dWTextboxValue1'),"value"),"80","Not Valid")
+		Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/dWTextboxValue2'),"value"),"70","Not Valid")
+		Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/dWTextboxValue3'),"value"),"60","Not Valid")
+		Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/dWTextboxValue4'),"value"),"50","Not Valid")
 	}
 
 
@@ -3585,10 +3583,10 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.scrollToElement(findTestObject('DataInput/CityCom/DNextButton'),2)
 		WebUI.click(findTestObject('DataInput/CityCom/DNextButton'))
 		WebUI.delay(2)
-		WebUI.sendKeys(findTestObject('DataInput/CityCom/dWTextboxValue1'), reading1)
-		WebUI.sendKeys(findTestObject('DataInput/CityCom/dWTextboxValue2'), reading2)
-		WebUI.sendKeys(findTestObject('DataInput/CityCom/dWTextboxValue3'), reading3)
-		WebUI.sendKeys(findTestObject('DataInput/CityCom/dWTextboxValue4'), reading4)
+		WebUI.sendKeys(findTestObject('DataInput/CityCom/dWTextboxValue1'), "80")
+		WebUI.sendKeys(findTestObject('DataInput/CityCom/dWTextboxValue2'), "70")
+		WebUI.sendKeys(findTestObject('DataInput/CityCom/dWTextboxValue3'), "60")
+		WebUI.sendKeys(findTestObject('DataInput/CityCom/dWTextboxValue4'), "50")
 		WebUI.delay(1)
 		for(int count = 6; count<=9; count++){
 			WebUI.delay(4)
@@ -4098,7 +4096,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				WebUI.delay(1)
 				WebUI.click(findTestObject('Object Repository/DataInput/Survey/SaveButtonToRecordSurveyData'))
 				WebUI.delay(4)
-				WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'),4)
+				//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'),4)
 
 				WebUI.dragAndDropToObject(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'), findTestObject('Object Repository/DataInput/Survey/ExtremelySatisfySpanText'))
 				WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
@@ -4170,7 +4168,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				WebUI.click(findTestObject('Object Repository/DataInput/Survey/SaveButtonToRecordSurveyData'))
 				WebUI.delay(4)
 
-				WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'),4)
+				//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'),4)
 
 				WebUI.dragAndDropToObject(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'), findTestObject('Object Repository/DataInput/Survey/ExtremelySatisfySpanText'))
 				WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)

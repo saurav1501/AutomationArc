@@ -170,7 +170,7 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		reusableMethodsSearch.searchProgram(sheetName,rowNum)
 
 		WebUI.delay(15)
-		WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
+		//WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TotalPerformanceScore'),10)
 		WebUI.delay(15)
@@ -372,7 +372,7 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 
 		WebUI.delay(5)
 
-		//WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
+		WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TotalPerformanceScore'),10)
 		WebUI.delay(15)

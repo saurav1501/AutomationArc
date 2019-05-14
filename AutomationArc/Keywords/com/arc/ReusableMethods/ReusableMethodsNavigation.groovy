@@ -20,7 +20,7 @@ public class ReusableMethodsNavigation {
 	@Keyword
 	public void navigateToBuilding() {
 		WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
-		WebUI.delay(2)
+		WebUI.delay(4)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ Buildings'))
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ My Buildings'))
@@ -39,6 +39,7 @@ public class ReusableMethodsNavigation {
 	@Keyword
 	public void navigateToCities(){
 		WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
+		WebUI.delay(3)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ My Cities'))
 		WebUI.delay(3)
 		String postNavigationLoginText = WebUI.getText(findTestObject('Object Repository/Page_Arc dashboard/span_My Cities'))
@@ -58,7 +59,8 @@ public class ReusableMethodsNavigation {
 
 	@Keyword
 	public void navigateToParking(){
-		//WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
+		WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
+		WebUI.delay(3)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ Buildings'))
 		WebUI.delay(3)
 		WebUI.click(findTestObject('Page_Arc dashboard/a_ My Parking'))
@@ -72,7 +74,9 @@ public class ReusableMethodsNavigation {
 
 	@Keyword
 	public void navigateToPortfolio(){
+		
 		WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
+		WebUI.delay(3)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ Buildings'))
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Portfolio/Common/a_ My Portfolios'))
@@ -84,7 +88,7 @@ public class ReusableMethodsNavigation {
 
 	@Keyword
 	public void navigateToBuildingTransit() {
-		//WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
+		WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
 		WebUI.delay(3)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ Buildings'))
 		WebUI.delay(2)

@@ -2361,9 +2361,9 @@ public class ReusableMethodsManage extends BaseClass {
 		String ownerEmail = data.getCellData(sheetName, "OwnerEmail", rowNum)
 
 		//String[] pdfText= readAgreement(BaseClass.ServiceAgreement)
-
 		String pdflinks= pdfReader(BaseClass.ServiceAgreement)
 		print pdflinks
+		KeywordUtil.markWarning('Agreement details are : '+pdflinks)
 		int arr= pdflinks.indexOf("User Name")
 		String subString= pdflinks.substring(arr, pdflinks.length())
 		print arr

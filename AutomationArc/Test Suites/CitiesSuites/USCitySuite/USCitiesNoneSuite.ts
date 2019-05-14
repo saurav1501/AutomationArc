@@ -137,12 +137,6 @@
       <testCaseId>Test Cases/MyCities/CitiesNone/SearchProgramTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>67d66939-eeea-4601-8eeb-cf83173f0c75</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCities/CitiesNone/AgreementFileDownloadTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>04d63b4b-f2f4-4b8a-9f51-f973d0276a3b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
