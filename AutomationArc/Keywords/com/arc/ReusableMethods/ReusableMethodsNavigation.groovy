@@ -74,7 +74,7 @@ public class ReusableMethodsNavigation {
 
 	@Keyword
 	public void navigateToPortfolio(){
-		
+
 		WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
 		WebUI.delay(3)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ Buildings'))
