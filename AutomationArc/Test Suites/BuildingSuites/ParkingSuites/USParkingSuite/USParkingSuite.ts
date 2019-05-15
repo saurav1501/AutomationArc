@@ -44,7 +44,7 @@
       <guid>a8c61f3b-3736-496f-9685-f0585c492ece</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyParking/Paymentpagevalidation Test</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyParking/Paymentpagevalidation_1_15_5Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>da4bdce1-a704-4a3d-bcfb-8d2131706d95</guid>
