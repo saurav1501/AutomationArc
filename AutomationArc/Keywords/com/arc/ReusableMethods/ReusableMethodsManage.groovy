@@ -2076,7 +2076,11 @@ public class ReusableMethodsManage extends BaseClass {
 		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
 		 WebUI.delay(8)
 		 WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Manage'))*/
-		WebUI.click(findTestObject('Manage/Parking/Manage'))
+		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+			println "Manage"
+			WebUI.delay(2)
+			WebUI.click(findTestObject('Manage/Parking/Manage'))
+		}
 		WebUI.delay(2)
 		WebUI.scrollToElement(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'),2)
 		WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'))
