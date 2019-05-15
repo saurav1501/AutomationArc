@@ -133,9 +133,9 @@ public class ReusableMethodsLogin extends BaseClass{
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/button_Log in'))
 
-		//WebUI.waitForPageLoad(10)
-		//WebUI.delay(10)
 		waitForPageLoad(60)
+		WebUI.delay(10)
+	
 		//WebUI.click(findTestObject('Object Repository/Page_Home  Arc/WelcomeArcText'))
 		//WebUI.waitForElementVisible(findTestObject('Object Repository/Page_Home  Arc/ClickNavProjectText'), 30)
 		WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/span_Projects'))
@@ -143,7 +143,7 @@ public class ReusableMethodsLogin extends BaseClass{
 		waitForloaderToDisappear(60)
 		String postLoginText = WebUI.getText(findTestObject('Page_Arc dashboard/span_My Projects'))
 		WebUI.verifyMatch(postLoginText, 'My Projects',true)
-		WebUI.delay(3)
+		WebUI.delay(10)
 	}
 	@Keyword
 	public void loginIntoArcWithGlobalVariableT() {
@@ -231,12 +231,13 @@ public class ReusableMethodsLogin extends BaseClass{
 		WebUI.setText(findTestObject('Object Repository/LoginViaAppUrl/UserPassword'), password)
 		WebUI.click(findTestObject('Object Repository/LoginViaAppUrl/AcceptAgreement'))
 		WebUI.click(findTestObject('Object Repository/LoginViaAppUrl/ClickLOGIN'))
-		WebUI.delay(5)
+		WebUI.delay(15)
+		waitForPageLoad(60)
 		//WebUI.click(findTestObject('Object Repository/SubmitReview/clickOnSideBar'))
 		WebUI.waitForElementPresent(findTestObject('Page_Arc dashboard/span_My Projects'), 30)
 		String postLoginText = WebUI.getText(findTestObject('Page_Arc dashboard/span_My Projects'))
 		WebUI.verifyMatch(postLoginText, 'My Projects',true)
-		WebUI.delay(3)
+		WebUI.delay(12)
 	}
 
 

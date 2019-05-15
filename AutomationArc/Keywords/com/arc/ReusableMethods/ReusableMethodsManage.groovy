@@ -448,10 +448,10 @@ public class ReusableMethodsManage extends BaseClass {
 		//Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/ownerEmail'),'value'),ownerEmail)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/population'),'value'),population, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/precertify'),'value'),"boolean:false", false, FailureHandling.CONTINUE_ON_FAILURE)
-		
-	
-		
-		
+
+
+
+
 	}
 
 	@Keyword
@@ -1353,7 +1353,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(1)
 		WebUI.click(findTestObject('Manage/CityCom/New/Save'))
 		WebUI.delay(5)
-		
+
 		WebUI.selectOptionByLabel(findTestObject('Manage/CityCom/New/unitType'), 'SI', false)
 		WebUI.delay(1)
 		WebUI.click(findTestObject('Manage/CityCom/New/Save'))
@@ -1474,7 +1474,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/TeamModule/sameRoleAddAgainErrMsg'), 20)
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/TeamModule/sameRoleAddAgainErrMsg'))
 		WebUI.clearText(findTestObject('Manage/TeamModule/input_input'))
-		
+
 	}
 
 	@Keyword
@@ -1530,20 +1530,20 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyOptionSelectedByLabel(findTestObject('Object Repository/Manage/TeamModule/TeamRole'),"Arc Administrator", false,10)
 
 	}
-	
+
 	@Keyword
 	public void scoretextUpdate(){
 		WebUI.delay(2)
 		WebUI.scrollToElement(findTestObject('Manage/Setting/a_setting'), 5)
 		WebUI.click(findTestObject('Manage/Setting/a_setting'))
-	    WebUI.delay(3)
+		WebUI.delay(3)
 		WebUI.verifyElementVisible(findTestObject('Add_Project_Details/Star/Receive emails only when y'))
 		WebUI.verifyElementVisible(findTestObject('Add_Project_Details/Star/Selecting Yes will show the'))
 		WebUI.verifyElementVisible(findTestObject('Add_Project_Details/Star/Make Performance score pub'))
 		WebUI.verifyElementVisible(findTestObject('Add_Project_Details/Star/p_Score Animation'))
 		WebUI.verifyElementVisible(findTestObject('Add_Project_Details/Star/Get a detailed report when t'))
-		
-	
+
+
 	}
 
 	@Keyword
@@ -1646,7 +1646,7 @@ public class ReusableMethodsManage extends BaseClass {
 	//Permission requests section is present
 	@Keyword
 	public void permissionRequestFieldVerification(){
-		
+
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/TeamModule/PermissionRequestSection/PermissionRequestTitle'))
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/TeamModule/PermissionRequestSection/EmailField'))
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/TeamModule/PermissionRequestSection/DataRequestField'))
@@ -2190,7 +2190,7 @@ public class ReusableMethodsManage extends BaseClass {
 		//WebUI.verifyElementVisible(findTestObject('Object Repository/USGBCAccount/PayNowButton'), FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.closeWindowIndex(1)
 		WebUI.switchToWindowIndex(0)
-		}
+	}
 
 	public static String pdfReader(String pdfFilePath){
 		FileInputStream fis
@@ -2521,8 +2521,8 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyMatch(scoreStatus, "You are all up to date!",false,FailureHandling.CONTINUE_ON_FAILURE )
 		print scoreStatus
 	}
-	
-	
+
+
 	@Keyword
 	public void scoreVersionVerification1_1(){
 		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
@@ -2538,7 +2538,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyMatch(scoreStatus, "You are all up to date!",false,FailureHandling.CONTINUE_ON_FAILURE )
 		print scoreStatus
 	}
-	
+
 	@Keyword
 	public void verifyScoreUpdatePopupAndComparisionPage(){
 		WebUI.delay(6)
