@@ -2192,7 +2192,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/USGBCAccount/OrderDate')), date, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/USGBCAccount/OrderId')), orderId, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/USGBCAccount/TotalAmount')), amount, false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/USGBCAccount/OrderStatus')), 'Completed', false, FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/USGBCAccount/OrderStatus')), 'Completed', false, FailureHandling.CONTINUE_ON_FAILURE)
 		//WebUI.verifyElementVisible(findTestObject('Object Repository/USGBCAccount/PayNowButton'), FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.closeWindowIndex(1)
 		WebUI.switchToWindowIndex(0)

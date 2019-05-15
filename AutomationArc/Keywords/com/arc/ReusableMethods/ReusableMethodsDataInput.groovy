@@ -4575,7 +4575,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				WebUI.setText(findTestObject('DataInput/Survey/carSoloR1'), walk6)
 				WebUI.setText(findTestObject('DataInput/Survey/car23R1'), walk7)
 				WebUI.setText(findTestObject('DataInput/Survey/cars4R1'), walk8)
-				WebUI.click(findTestObject('DataInput/Survey/ACCEPTANDCLOSE'),FailureHandling.CONTINUE_ON_FAILURE)
+				//WebUI.click(findTestObject('DataInput/Survey/ACCEPTANDCLOSE'),FailureHandling.CONTINUE_ON_FAILURE)
 				WebUI.delay(2)
 				//WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
 				WebUI.delay(2)
