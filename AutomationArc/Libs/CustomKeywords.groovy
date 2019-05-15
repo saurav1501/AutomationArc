@@ -2410,7 +2410,6 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.deleteIncompleteMet
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).deleteIncompleteMeterReading()
 }
 
-<<<<<<< HEAD
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createEmissionFactor"(
     	String sheetName	
      , 	int rowNum	) {
@@ -2425,10 +2424,10 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.scoreShouldNotChang
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).scoreShouldNotChangeVerify(
         	sheetName
          , 	rowNum)
-=======
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyTheCommentCityCommunityDoesnotIncludeMeterName"() {
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyTheCommentCityCommunityDoesnotIncludeMeterName()
->>>>>>> DEV
 }
 
 def static "com.arc.ReusableMethods.ReusableMethodsAnalytics.downloadAndVerifySurveyExportedData"() {

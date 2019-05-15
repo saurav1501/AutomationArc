@@ -19,19 +19,18 @@ public class ReusableMethodsNavigation {
 
 	@Keyword
 	public void navigateToBuilding() {
+		WebUI.delay(3)
 		WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
-<<<<<<< HEAD
 		WebUI.delay(5)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/Page_Arc dashboard/a_ Buildings'), 10)
-=======
 		WebUI.delay(4)
->>>>>>> DEV
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ Buildings'))
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ My Buildings'))
 		String postNavigationLoginText = WebUI.getText(findTestObject('Object Repository/Page_Arc dashboard/span_My Buildings'))
 		WebUI.verifyMatch(postNavigationLoginText,'My Buildings',true)
 	}
+	
 	@Keyword
 	public void clickAddProject() {
 		WebUI.delay(2)
@@ -41,14 +40,13 @@ public class ReusableMethodsNavigation {
 		String postNavigationLoginText = WebUI.getText(findTestObject('Object Repository/Add_Project_Details/h1_Project Registration'))
 		WebUI.verifyMatch(postNavigationLoginText,'Project Registration',true)
 	}
+	
 	@Keyword
 	public void navigateToCities(){
+		WebUI.delay(3)
 		WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
 		WebUI.delay(3)
-<<<<<<< HEAD
 		WebUI.waitForElementClickable(findTestObject('Object Repository/Page_Arc dashboard/a_ My Cities'),20)
-=======
->>>>>>> DEV
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ My Cities'))
 		WebUI.delay(3)
 		String postNavigationLoginText = WebUI.getText(findTestObject('Object Repository/Page_Arc dashboard/span_My Cities'))
@@ -68,12 +66,10 @@ public class ReusableMethodsNavigation {
 
 	@Keyword
 	public void navigateToParking(){
+		WebUI.delay(3)
 		WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
 		WebUI.delay(3)
-<<<<<<< HEAD
 		WebUI.waitForElementClickable(findTestObject('Object Repository/Page_Arc dashboard/a_ Buildings'),10)
-=======
->>>>>>> DEV
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ Buildings'))
 		WebUI.delay(3)
 		WebUI.click(findTestObject('Page_Arc dashboard/a_ My Parking'))
@@ -83,18 +79,13 @@ public class ReusableMethodsNavigation {
 	}
 
 
-
-
 	@Keyword
 	public void navigateToPortfolio(){
-
+		WebUI.delay(3)
 		WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
-<<<<<<< HEAD
 		WebUI.delay(2)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/Page_Arc dashboard/a_ Buildings'), 10)
-=======
 		WebUI.delay(3)
->>>>>>> DEV
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ Buildings'))
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Portfolio/Common/a_ My Portfolios'))

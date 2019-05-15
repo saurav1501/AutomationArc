@@ -5422,7 +5422,6 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.verifyElementNotPresent(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter start_'), 3)
 
 	}
-<<<<<<< HEAD
 	
 	@Keyword
 	public void createEmissionFactor(String sheetName, int rowNum){
@@ -5533,7 +5532,6 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	
 	
 	}
-=======
 
 	@Keyword
 	public void verifyTheCommentCityCommunityDoesnotIncludeMeterName(){
@@ -5548,7 +5546,5 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 
 	}
-
->>>>>>> DEV
 }
 
