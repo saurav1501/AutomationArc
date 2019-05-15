@@ -13,7 +13,11 @@
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
          <runEnabled>false</runEnabled>
+<<<<<<< HEAD
          <testSuiteEntity></testSuiteEntity>
+=======
+         <testSuiteEntity>Test Suites/CitiesSuites/USCitySuite/USLEEDForCitiesSuite</testSuiteEntity>
+>>>>>>> 9e76d2c96056b032c4226a168e44a876e9c61f98
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>

@@ -235,24 +235,15 @@
    <testCaseLink>
       <guid>972813db-97ef-4067-aa61-006fe248f16c</guid>
       <isReuseDriver>false</isReuseDriver>
-<<<<<<< HEAD
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/MyCities/LEEDForCities/SetPerformanceScoreDefaultTest</testCaseId>
-=======
+
       <isRun>true</isRun>
       <testCaseId>Test Cases/MyCities/LEEDForCities/AdminToolScoreRecomputeTest</testCaseId>
->>>>>>> 711fd7fda442a0e113571d198be8795ec29b9a79
    </testCaseLink>
    <testCaseLink>
       <guid>72c843e8-049e-44a1-a541-9175f3294074</guid>
       <isReuseDriver>false</isReuseDriver>
-<<<<<<< HEAD
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/MyCities/LEEDForCities/AdminToolScoreRecomputeTest</testCaseId>
-=======
       <isRun>true</isRun>
       <testCaseId>Test Cases/MyCities/LEEDForCities/SetPerformanceScoreDefaultTest</testCaseId>
->>>>>>> 711fd7fda442a0e113571d198be8795ec29b9a79
    </testCaseLink>
    <testCaseLink>
       <guid>458f74f5-5664-4a2c-a950-88a142fdeb0d</guid>

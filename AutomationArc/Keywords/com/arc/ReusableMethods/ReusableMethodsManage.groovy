@@ -524,13 +524,13 @@ public class ReusableMethodsManage extends BaseClass {
 
 		WebUI.clearText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/buildingArea'))
 		WebUI.sendKeys(findTestObject('Object Repository/DataInput/CreateMeterBuilding/buildingArea'), '10000')
-
+		
+		
 		WebUI.click(findTestObject('Object Repository/DataInput/Data/svg_Imperial system (IP)_svg-i'))
 		WebUI.scrollToElement(findTestObject('DataInput/Data/a_Metric system (SI)'), 2)
 		WebUI.click(findTestObject('DataInput/Data/a_Metric system (SI)'))
-
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/updateBuildingSettingButton'))
-		WebUI.delay(10)
+		WebUI.delay(40)
 
 		/************************Verifying under Manage Section *****************************************/
 
