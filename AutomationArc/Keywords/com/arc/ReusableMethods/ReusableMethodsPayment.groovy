@@ -608,7 +608,7 @@ public class ReusableMethodsPayment extends BaseClass{
 	@Keyword
 	public void payNowRegistrationPaymentIND(){
 		//WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		WebUI.delay(10)
+		WebUI.delay(3)
 		//WebUI.click(findTestObject('PayNowRegistrationPaymentIN/a_ Manage'))
 		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
 			println "Manage"
