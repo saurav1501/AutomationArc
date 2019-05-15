@@ -22,8 +22,9 @@ import internal.GlobalVariable as GlobalVariable
 
 try{
 	
+	 CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.logoutFromArcApplication'()
     //CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.navigateToURL'()
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsNavigation.ArclogoNavigation'()
+	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsNavigation.ArclogoNavigation'()
 	
 	} catch (Throwable t) {
 	  WebUI.click(findTestObject('LoginArc/Page_Arc Skoru  Sustainability perf/Logout'))
