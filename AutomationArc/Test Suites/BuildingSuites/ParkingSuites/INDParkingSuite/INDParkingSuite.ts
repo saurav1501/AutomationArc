@@ -9,17 +9,17 @@
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
-   <testSuiteGuid>7a77744b-31ac-4f73-9752-cf15efdfacaa</testSuiteGuid>
+   <testSuiteGuid>ddab2db5-227f-47d7-baca-8607ba55cff2</testSuiteGuid>
    <testCaseLink>
-      <guid>14767f8b-1bb6-45c1-ae5a-e9e611c4bf83</guid>
+      <guid>b96ce9be-b67f-4d08-a256-c595f10d24ed</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyParking/LoginWithParkingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>cb5edbe5-bf92-4abd-9a10-f6d76bac79ec</guid>
+      <guid>2d20b961-566b-45da-b38b-314a23b39ca0</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyParking/AddNewProjectTest</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
@@ -41,81 +41,183 @@
       </variableLink>
    </testCaseLink>
    <testCaseLink>
-      <guid>c01a0f9f-cf8e-4633-a509-2e23d6b7fe23</guid>
+      <guid>a8c61f3b-3736-496f-9685-f0585c492ece</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyParking/SearchProgramTest</testCaseId>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Buildings/MyParking/Paymentpagevalidation_1_15_5Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>0e0dc04c-a5de-48f8-865f-3d839e387626</guid>
+      <guid>58a39548-02ee-44c4-8f75-9fa52d805aeb</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyParking/INDRegPaymentByCheckTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>3ea883e7-442b-4861-bbd0-f1e76c36f223</guid>
+      <guid>7d6494d6-cbf9-4eda-9a74-fc206b6daac3</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyParking/AllInnovationTotalPointTest</testCaseId>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Buildings/MyParking/ToolTipTextAndStatusAndNextAllCreditTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>7dfd5416-8102-4d80-ade4-77bbac93ac15</guid>
+      <guid>e31100c8-639b-4c59-ba2b-5f000c7a01fa</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyParking/AllManagementTotalPointTest</testCaseId>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Buildings/MyParking/ContactUsHyperlinkNaviagationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>6c1e9412-0099-4da0-8748-c86a3f2644cd</guid>
+      <guid>b47f06b0-5af9-40ee-8970-63102cb2e37a</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyParking/AllProgramsTotalPointTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>94ef93c5-e652-4e82-b759-c42956884f47</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyParking/AllTechStructureDesignTotalPointTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>903fade2-b3c6-44d8-8037-7b3e7533d456</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyParking/MeasureDuplicateFileUploadTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>f69c9d4d-c0ab-4b3a-9ebe-b631adff7a41</guid>
+      <guid>c4eceff2-d64c-4109-95ae-7458b4871100</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyParking/ManageProjectDetailsVerificationTest</testCaseId>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Buildings/MyParking/DeleteUploadPdfFileTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>8d46bc31-3119-47ea-afc7-09bc95f43332</guid>
+      <guid>3d9f3f93-ded5-4b63-8619-8a66fde78334</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyParking/ManageProjectImageUploadTest</testCaseId>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Buildings/MyParking/FAQSNavigationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>4bf2d94b-908b-4b34-a791-0e2707c314a1</guid>
+      <guid>4212d2bb-4658-46ea-8bf2-804dc6fa6eb2</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyParking/ManageAgreementFileDownloadTest</testCaseId>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Buildings/MyParking/ParksmartResourceNavigationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>d649f609-ce68-44bd-b951-da56dd0a5aa8</guid>
+      <guid>16dd6680-8986-4496-87c7-3d60f5c2b9f3</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyParking/ManageProjectEditDetailsTest</testCaseId>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Buildings/MyParking/AllInnovationTotalPointTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>e1b73ef4-559d-4c7b-bf5d-19515114314c</guid>
+      <guid>3a3d1e22-5039-491a-889d-77423caf0b7b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Buildings/MyParking/AllManagementTotalPointTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>f0e485b6-6617-4c50-92b7-5bbbbc753429</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Buildings/MyParking/AllProgramsTotalPointTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>ff83510e-5755-4b22-8794-831568585297</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Buildings/MyParking/AllTechStructureDesignTotalPointTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>de2f291a-60c5-42fe-9542-a1d1a6d36a61</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyParking/INDRegPaymentPayNowTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>9162ccb4-24c9-4e58-a21b-e86ac88a7b99</guid>
+      <guid>f04ea949-d1cf-4a62-a711-cf03ff9ef493</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Buildings/MyParking/ManageAgreementFileDownloadTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>3e85a775-259a-469a-abd4-a643639de7f2</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Buildings/MyParking/ManageAgreementRegDateSignedAndTypeTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>3832e245-9dc2-4402-83ce-b5d4c46fa541</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Buildings/MyParking/ManageAgreementSignedPDFDetailsTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>cd283bbe-babb-44f4-81fc-0db94831b2fe</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Buildings/MyParking/ManageProjectDetailsVerificationTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>24c8718c-0477-422c-a82d-5ce0e376d0dd</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Buildings/MyParking/ManageProjectImageUploadTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>e6bbd36f-48c3-43c8-a55d-dfb21914442d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Buildings/MyParking/ManageProjectDeatilFieldVerification_1_15_4Test</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>bb80602c-a000-40d6-aadc-0ce06d2edb1d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Buildings/MyParking/ManageProjectEditDetailsTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>728b17a6-090a-4fc0-a530-70b8f838ccdb</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyParking/ManageBillingDateAndStatusTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>7bdf6501-1811-496a-98e3-6bb0011746e0</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Buildings/MyParking/VerifyAndDownloadBillingReceiptTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>e9d12662-16f7-4556-8ffb-d6a7b5279751</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Buildings/MyParking/TeamAddTeamMemberTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>7a130b35-cfee-4d45-98f3-3ae57a4c7395</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Common/Team/VerifyDefautRoleTeamMemberTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>43960193-ebd7-490f-8e88-52065b1c711a</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Common/Team/TeamAddingSameRoleForAMemberAgainTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>701649eb-d531-4eeb-aa18-6716c451f728</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Common/Team/TeamVerifyPrjAdminAndArcAdministratorCreateBydefaultInNewProjectTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>d887b601-8c81-448d-ac15-96dd02727bca</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Common/Team/TeamVerifyProjectAdminCanNotEditTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>786acbb3-1322-4820-867c-517c95c59308</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Common/Team/TeamArcAdministratorCanNotEditWhenOnePresentTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>23685259-86bb-42b0-ab0d-041058e69ac6</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Common/Team/TeamVerifyProjectShouldNotHaveoreThanOneAdminTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>f077ab87-856b-4622-9665-fcef93317eaf</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Common/Team/TeamEditRoleMemberToArcAdministratorTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
