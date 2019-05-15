@@ -53,7 +53,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 				WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreditFileupload/GetDataInputFileCountSubmitReview',[index: it])),'8', false, FailureHandling.CONTINUE_ON_FAILURE)
 			}
 			else
-			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreditFileupload/GetDataInputFileCountSubmitReview',[index: it])),'7', false, FailureHandling.CONTINUE_ON_FAILURE)
+				WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreditFileupload/GetDataInputFileCountSubmitReview',[index: it])),'7', false, FailureHandling.CONTINUE_ON_FAILURE)
 		}
 	}
 
@@ -77,7 +77,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 			}
 
 			else
-			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreditFileupload/GetCreditFileCountCityComm',[index: it])),'1', false, FailureHandling.CONTINUE_ON_FAILURE)
+				WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreditFileupload/GetCreditFileCountCityComm',[index: it])),'1', false, FailureHandling.CONTINUE_ON_FAILURE)
 		}
 		//Assert.assertEquals(WebUI.getText(findTestObject('Object Repository/DataInput/CreditFileupload/BasePointFileCountCityComm')),'1')
 	}
@@ -276,7 +276,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 				WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreditFileupload/GetCreditFileCountCityComm',[index: it])),'7', false, FailureHandling.CONTINUE_ON_FAILURE)
 			}
 			else
-			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreditFileupload/GetCreditFileCountCityComm',[index: it])),'1', false, FailureHandling.CONTINUE_ON_FAILURE)
+				WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreditFileupload/GetCreditFileCountCityComm',[index: it])),'1', false, FailureHandling.CONTINUE_ON_FAILURE)
 		}
 		(34..36).each{
 			if(it==34)
@@ -284,7 +284,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 				WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreditFileupload/GetCreditFileCountCityComm',[index: it])),'8', false, FailureHandling.CONTINUE_ON_FAILURE)
 			}
 			else
-			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreditFileupload/GetCreditFileCountCityComm',[index: it])),'7', false, FailureHandling.CONTINUE_ON_FAILURE)
+				WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreditFileupload/GetCreditFileCountCityComm',[index: it])),'7', false, FailureHandling.CONTINUE_ON_FAILURE)
 		}
 	}
 
@@ -829,78 +829,78 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.delay(5)
 
 		if((isFileExtracted('Parking SJ.jpg', sourceExtractedFile)))
-		KeywordUtil.markWarning("Parking Sj.jpg file is present  ")
+			KeywordUtil.markWarning("Parking Sj.jpg file is present  ")
 		else
-		KeywordUtil.markFailed("Parking Sj.jpg file Not present")
+			KeywordUtil.markFailed("Parking Sj.jpg file Not present")
 
 		if((isFileExtracted('USGBC.pdf', sourceExtractedFile)))
-		KeywordUtil.markWarning("USGBC.pdf file is present  ")
+			KeywordUtil.markWarning("USGBC.pdf file is present  ")
 		else
-		KeywordUtil.markFailed("USGBC.pdf file Not present")
+			KeywordUtil.markFailed("USGBC.pdf file Not present")
 
 		if((isFileExtracted('txtFileUpload.txt', sourceExtractedFile)))
-		KeywordUtil.markWarning("txtFileUpload.txt file is present ")
+			KeywordUtil.markWarning("txtFileUpload.txt file is present ")
 		else
-		KeywordUtil.markFailed("txtFileUpload.txt file Not present")
+			KeywordUtil.markFailed("txtFileUpload.txt file Not present")
 
 		if((isFileExtracted('uploadPng.png', sourceExtractedFile)))
-		KeywordUtil.markWarning("uploadPng.png file is present  ")
+			KeywordUtil.markWarning("uploadPng.png file is present  ")
 		else
-		KeywordUtil.markFailed("uploadPng.png file Not present")
+			KeywordUtil.markFailed("uploadPng.png file Not present")
 
 		if((isFileExtracted('uploadGif.gif', sourceExtractedFile)))
-		KeywordUtil.markWarning("uploadGif.gif file is present  ")
+			KeywordUtil.markWarning("uploadGif.gif file is present  ")
 		else
-		KeywordUtil.markFailed("uploadGif.gif file Not present")
+			KeywordUtil.markFailed("uploadGif.gif file Not present")
 
 		if((isFileExtracted('uploasExcel.xlsx', sourceExtractedFile)))
-		KeywordUtil.markWarning("uploasExcel.xlsx file is present  ")
+			KeywordUtil.markWarning("uploasExcel.xlsx file is present  ")
 		else
-		KeywordUtil.markFailed("uploasExcel.xlsx file Not present")
+			KeywordUtil.markFailed("uploasExcel.xlsx file Not present")
 
 		if((isFileExtracted('uploadDoc.docx', sourceExtractedFile)))
-		KeywordUtil.markWarning("uploadDoc.docx file is present  ")
+			KeywordUtil.markWarning("uploadDoc.docx file is present  ")
 		else
-		KeywordUtil.markFailed("uploadDoc.docx file Not present")
+			KeywordUtil.markFailed("uploadDoc.docx file Not present")
 	}
 
 
 	public void verifyFilePresent(String sourceExtractedFile){
 
 		if((isFileExtracted('Parking SJ.jpg', sourceExtractedFile)))
-		KeywordUtil.markWarning("Parking Sj.jpg file is present  ")
+			KeywordUtil.markWarning("Parking Sj.jpg file is present  ")
 		else
-		KeywordUtil.markFailed("Parking Sj.jpg file Not present")
+			KeywordUtil.markFailed("Parking Sj.jpg file Not present")
 
 		if((isFileExtracted('USGBC.pdf', sourceExtractedFile)))
-		KeywordUtil.markWarning("USGBC.pdf file is present  ")
+			KeywordUtil.markWarning("USGBC.pdf file is present  ")
 		else
-		KeywordUtil.markFailed("USGBC.pdf file Not present")
+			KeywordUtil.markFailed("USGBC.pdf file Not present")
 
 		if((isFileExtracted('txtFileUpload.txt', sourceExtractedFile)))
-		KeywordUtil.markWarning("txtFileUpload.txt file is present ")
+			KeywordUtil.markWarning("txtFileUpload.txt file is present ")
 		else
-		KeywordUtil.markFailed("txtFileUpload.txt file Not present")
+			KeywordUtil.markFailed("txtFileUpload.txt file Not present")
 
 		if((isFileExtracted('uploadPng.png', sourceExtractedFile)))
-		KeywordUtil.markWarning("uploadPng.png file is present  ")
+			KeywordUtil.markWarning("uploadPng.png file is present  ")
 		else
-		KeywordUtil.markFailed("uploadPng.png file Not present")
+			KeywordUtil.markFailed("uploadPng.png file Not present")
 
 		if((isFileExtracted('uploadGif.gif', sourceExtractedFile)))
-		KeywordUtil.markWarning("uploadGif.gif file is present  ")
+			KeywordUtil.markWarning("uploadGif.gif file is present  ")
 		else
-		KeywordUtil.markFailed("uploadGif.gif file Not present")
+			KeywordUtil.markFailed("uploadGif.gif file Not present")
 
 		if((isFileExtracted('uploasExcel.xlsx', sourceExtractedFile)))
-		KeywordUtil.markWarning("uploasExcel.xlsx file is present  ")
+			KeywordUtil.markWarning("uploasExcel.xlsx file is present  ")
 		else
-		KeywordUtil.markFailed("uploasExcel.xlsx file Not present")
+			KeywordUtil.markFailed("uploasExcel.xlsx file Not present")
 
 		if((isFileExtracted('uploadDoc.docx', sourceExtractedFile)))
-		KeywordUtil.markWarning("uploadDoc.docx file is present  ")
+			KeywordUtil.markWarning("uploadDoc.docx file is present  ")
 		else
-		KeywordUtil.markFailed("uploadDoc.docx file Not present")
+			KeywordUtil.markFailed("uploadDoc.docx file Not present")
 
 	}
 
@@ -947,44 +947,44 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		 Assert.assertTrue(isFileExtracted('GBCI-Noida-GST Registration Certificate.pdf'), "GBCI-Noida-GST Registration Certificate File Didn't downloaded successfully")
 		 */
 		if((isFileExtracted('Test de téléchargement de fichier(French).txt', sourceExtractedFileEnergy)))
-		KeywordUtil.markWarning("Test de téléchargement de fichier(French).txt file is present  ")
+			KeywordUtil.markWarning("Test de téléchargement de fichier(French).txt file is present  ")
 		else
-		KeywordUtil.markFailed("Test de téléchargement de fichier(French).txt file not present")
+			KeywordUtil.markFailed("Test de téléchargement de fichier(French).txt file not present")
 
 		if((isFileExtracted('Upload do arquivo de teste(Portugues).txt', sourceExtractedFileEnergy)))
-		KeywordUtil.markWarning("Upload do arquivo de teste(Portugues).txt file present ")
+			KeywordUtil.markWarning("Upload do arquivo de teste(Portugues).txt file present ")
 		else
-		KeywordUtil.markFailed("Upload do arquivo de teste(Portugues).txt file not present")
+			KeywordUtil.markFailed("Upload do arquivo de teste(Portugues).txt file not present")
 
 		if((isFileExtracted('Testen Sie den Datei-Upload(Greman).txt', sourceExtractedFileEnergy)))
-		KeywordUtil.markWarning("Testen Sie den Datei-Upload(Greman).txt file present ")
+			KeywordUtil.markWarning("Testen Sie den Datei-Upload(Greman).txt file present ")
 		else
-		KeywordUtil.markFailed("Testen Sie den Datei-Upload(Greman).txt file not present")
+			KeywordUtil.markFailed("Testen Sie den Datei-Upload(Greman).txt file not present")
 
 		if((isFileExtracted('Carga de archivos de prueba(Spanish).txt', sourceExtractedFileEnergy)))
-		KeywordUtil.markWarning("Carga de archivos de prueba(Spanish).txt file present")
+			KeywordUtil.markWarning("Carga de archivos de prueba(Spanish).txt file present")
 		else
-		KeywordUtil.markFailed("Carga de archivos de prueba(Spanish).txt file Not present")
+			KeywordUtil.markFailed("Carga de archivos de prueba(Spanish).txt file Not present")
 
 		if((isFileExtracted('測試文件上傳(ChineseT).txt', sourceExtractedFileEnergy)))
-		KeywordUtil.markWarning("測試文件上傳(ChineseT).txt file is present  ")
+			KeywordUtil.markWarning("測試文件上傳(ChineseT).txt file is present  ")
 		else
-		KeywordUtil.markFailed("測試文件上傳(ChineseT).txt file Not present")
+			KeywordUtil.markFailed("測試文件上傳(ChineseT).txt file Not present")
 
 		if((isFileExtracted('测试文件上传(ChineseS).txt', sourceExtractedFileEnergy)))
-		KeywordUtil.markWarning("测试文件上传(ChineseS).txt file is present  ")
+			KeywordUtil.markWarning("测试文件上传(ChineseS).txt file is present  ")
 		else
-		KeywordUtil.markFailed("测试文件上传(ChineseS).txt file Not present")
+			KeywordUtil.markFailed("测试文件上传(ChineseS).txt file Not present")
 
 		if((isFileExtracted('테스트 파일 업로드(Korean).txt', sourceExtractedFileEnergy)))
-		KeywordUtil.markWarning("테스트 파일 업로드(Korean).txt file is present  ")
+			KeywordUtil.markWarning("테스트 파일 업로드(Korean).txt file is present  ")
 		else
-		KeywordUtil.markFailed("테스트 파일 업로드(Korean).txt file Not present")
+			KeywordUtil.markFailed("테스트 파일 업로드(Korean).txt file Not present")
 
 		if((isFileExtracted('Test Dosyası Yüklemesi(Turkish).txt', sourceExtractedFileEnergy)))
-		KeywordUtil.markWarning("Test Dosyası Yüklemesi(Turkish).txt file is present  ")
+			KeywordUtil.markWarning("Test Dosyası Yüklemesi(Turkish).txt file is present  ")
 		else
-		KeywordUtil.markFailed("Test Dosyası Yüklemesi(Turkish).txt file Not present")
+			KeywordUtil.markFailed("Test Dosyası Yüklemesi(Turkish).txt file Not present")
 	}
 
 
@@ -1019,24 +1019,24 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.delay(5)
 
 		if((isFileExtracted('Ramayana-01_01.pdf', sourceExtractedFileEnergy)))
-		KeywordUtil.markWarning("Ramayana-01_01.pdf file is present  ")
+			KeywordUtil.markWarning("Ramayana-01_01.pdf file is present  ")
 		else
-		KeywordUtil.markFailed("Ramayana-01_01.pdf file not present")
+			KeywordUtil.markFailed("Ramayana-01_01.pdf file not present")
 
 		if((isFileExtracted('Ramayana-02_02.pdf', sourceExtractedFileEnergy)))
-		KeywordUtil.markWarning("Ramayana-02_02.pdf file present ")
+			KeywordUtil.markWarning("Ramayana-02_02.pdf file present ")
 		else
-		KeywordUtil.markFailed("Ramayana-02_02.pdf file not present")
+			KeywordUtil.markFailed("Ramayana-02_02.pdf file not present")
 
 		if((isFileExtracted('Srimad_Bhagavatam_Canto_01_Hindi.pdf', sourceExtractedFileEnergy)))
-		KeywordUtil.markWarning("Srimad_Bhagavatam_Canto_01_Hindi.pdf file present ")
+			KeywordUtil.markWarning("Srimad_Bhagavatam_Canto_01_Hindi.pdf file present ")
 		else
-		KeywordUtil.markFailed("Srimad_Bhagavatam_Canto_01_Hindi.pdf file not present")
+			KeywordUtil.markFailed("Srimad_Bhagavatam_Canto_01_Hindi.pdf file not present")
 
 		if((isFileExtracted('A College Text-Book of Physics_ 2nd Ed_ Arthur L Kimball_ 1917.pdf', sourceExtractedFileEnergy)))
-		KeywordUtil.markWarning("A College Text-Book of Physics_ 2nd Ed_ Arthur L Kimball_ 1917.pdf file present")
+			KeywordUtil.markWarning("A College Text-Book of Physics_ 2nd Ed_ Arthur L Kimball_ 1917.pdf file present")
 		else
-		KeywordUtil.markFailed("A College Text-Book of Physics_ 2nd Ed_ Arthur L Kimball_ 1917.pdf file Not present")
+			KeywordUtil.markFailed("A College Text-Book of Physics_ 2nd Ed_ Arthur L Kimball_ 1917.pdf file Not present")
 
 		deleteFile(sourceZipFile)
 		deleteFile(sourceExtractedFile)
@@ -1088,19 +1088,19 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		 else
 		 KeywordUtil.markFailed("A College Text-Book of Physics_ 2nd Ed_ Arthur L Kimball_ 1917.pdf file Not present")*/
 	}
-	
-	
+
+
 	@Keyword
 	public void VerifyChangeTextInSubmitReviewWhenPaymentIsPending(){
-		WebUI.delay(4) 
+		WebUI.delay(4)
 		WebUI.click(findTestObject('SubmitReview/a_ Review'))
 		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),15)
 		WebUI.delay(7)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/SubmitReviewText')), "Submit for Review", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/ProjectIsStillUnderReviewText')), "Project is still under review", false)
-		
+
 	}
-	
+
 	@Keyword
 	public void adminToolReturnReview(String sheetName, int rowNum){
 		String id = data.getCellData(sheetName, "ProjectID", rowNum)
@@ -1123,7 +1123,27 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.delay(5)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/BillingSection/BillingPageTitle'), 10)
 	}
-	
-	
-	
+
+
+	//Redirect to this link-> https://www.usgbc.org/resources/leed-v41-om-proposed-rating-system-clean
+	@Keyword
+	public void verifyTheHereLinkRedirectToGivenRespectiveLink(){
+		WebUI.delay(3)
+		WebUI.click(findTestObject('SubmitReview/a_ Review'))
+		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),15)
+		WebUI.delay(7)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/SubmitReview/ClickHereLinkInSubmitReview'),10)
+		WebUI.click(findTestObject('Object Repository/SubmitReview/ClickHereLinkInSubmitReview'))
+		WebUI.delay(5)
+		WebUI.switchToWindowIndex(1, FailureHandling.STOP_ON_FAILURE)
+		WebUI.delay(5)
+		WebUI.verifyMatch(WebUI.getUrl(), "https://www.usgbc.org/resources/leed-v41-om-proposed-rating-system-clean", false)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/SubmitReview/SubmitReviewHereLinkForLEEDNewPageDownloadButton'), 10)
+		WebUI.closeWindowIndex(1)
+		WebUI.switchToWindowIndex(0)
+		WebUI.delay(3)
+
+	}
+
+
 }

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Upload the file in the data input section supporting the readings inputted.</description>
+   <name>DataInputEnergyFileUploadTest</name>
+   <tag>File Upload Data Input</tag>
+   <comment></comment>
+   <testCaseGuid>be192397-a889-4401-affd-8107ce8ae299</testCaseGuid>
+</TestCaseEntity>

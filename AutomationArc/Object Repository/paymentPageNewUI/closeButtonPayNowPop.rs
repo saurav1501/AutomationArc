@@ -10,7 +10,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//*[@class=&quot;left-right-align&quot;]//button[@ng-click='cancel()'])[2]</value>
+         <value>//*[@class=&quot;align-right&quot;]//button[@ng-click='cancel()']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

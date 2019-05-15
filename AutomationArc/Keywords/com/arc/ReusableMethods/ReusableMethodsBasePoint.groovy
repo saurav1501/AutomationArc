@@ -247,6 +247,66 @@ public class ReusableMethodsBasePoint extends BaseClass{
 		WebUI.verifyMatch(point, "2", true)
 	}
 
+	
+	@Keyword
+	public void basePointOptionBTrial(String sheetName, int rowNum) throws IOException, InterruptedException{
+		/*************************Reading data from excel sheet ************************************/
+		String reading1  = data.getCellData(sheetName, "ADeatailsValueReading1", rowNum)
+		String reading2  = data.getCellData(sheetName, "ADeatailsValueReading2", rowNum)
+		String reading3  = data.getCellData(sheetName, "ADeatailsValueReading3", rowNum)
+		String reading4  = data.getCellData(sheetName, "ADeatailsValueReading4", rowNum)
+		String ureading1  = data.getCellData(sheetName, "ADeatailsUnitReading1", rowNum)
+		String ureading2  = data.getCellData(sheetName, "ADeatailsUnitReading2", rowNum)
+		String ureading3  = data.getCellData(sheetName, "ADeatailsUnitReading3", rowNum)
+		String ureading4  = data.getCellData(sheetName, "ADeatailsUnitReading4", rowNum)
+
+		WebUI.delay(3)
+		WebUI.doubleClick(findTestObject('BasePoint/CityCom/a_ Base Points'))
+		WebUI.delay(15)
+		myTestObject.addProperty("xpath", ConditionType.EQUALS,"(//input[@type='checkbox'])[12]")
+		WebUI.check(myTestObject)
+		WebUI.delay(1)
+		WebUI.doubleClick(findTestObject('BasePoint/CityCom/ClickOptionB'))
+		WebUI.delay(6)
+
+		WebUI.delay(2)
+		for(int count =1 ;count<=4;count++ ) {
+			WebUI.click(findTestObject('BasePoint/CityCom/ClickDropdown'))
+			WebUI.delay(2)
+			WebUI.scrollToElement(findTestObject('BasePoint/CityCom/Option'+count),10)
+			WebUI.delay(2)
+			WebUI.click(findTestObject('BasePoint/CityCom/Option'+count))
+			WebUI.click(findTestObject('BasePoint/CityCom/AddButton'))
+			WebUI.delay(5)
+		}
+
+		WebUI.sendKeys(findTestObject('BasePoint/CityCom/Avalue1'), reading1)
+		WebUI.sendKeys(findTestObject('BasePoint/CityCom/Aunit1'), ureading1)
+		WebUI.sendKeys(findTestObject('BasePoint/CityCom/Avalue2'), reading2)
+		WebUI.sendKeys(findTestObject('BasePoint/CityCom/Aunit2'), ureading2)
+		WebUI.sendKeys(findTestObject('BasePoint/CityCom/Avalue3'), reading3)
+		WebUI.sendKeys(findTestObject('BasePoint/CityCom/Aunit3'), ureading3)
+		WebUI.sendKeys(findTestObject('BasePoint/CityCom/Avalue4'), reading4)
+		WebUI.sendKeys(findTestObject('BasePoint/CityCom/Aunit4'), ureading4)
+		WebUI.delay(1)
+
+		for(int count=1;count<=4;count++) {
+			WebUI.scrollToElement(findTestObject('BasePoint/CityCom/Checkbox'+count),10)
+			WebUI.click(findTestObject('BasePoint/CityCom/Checkbox'+count))
+			WebUI.delay(2)
+			WebUI.click(findTestObject('DataInput/SaveButton'+count))
+			WebUI.delay(2)
+		}
+		WebUI.delay(6)
+		WebUI.click(findTestObject('BasePoint/CityCom/a_ Base Points'))
+		WebUI.delay(7)
+		//WebUI.scrollToElement(findTestObject('BasePoint/CityCom/OptionPointB'), 6)
+		String point = WebUI.getText(findTestObject('BasePoint/CityCom/OptionPointB'))
+		WebUI.verifyMatch(point, "2", true)
+	}
+
+	
+	
 	@Keyword
 	public void countTotalNumberOfBasePointTransit() throws IOException, InterruptedException{
 		WebUI.scrollToElement(findTestObject('Object Repository/BasePoint/a_ Base Points (1)'), 10)

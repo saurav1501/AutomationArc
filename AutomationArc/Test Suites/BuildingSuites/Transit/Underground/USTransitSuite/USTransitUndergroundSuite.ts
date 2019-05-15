@@ -283,7 +283,7 @@
    <testCaseLink>
       <guid>61fb0ed3-bcd8-47c4-b50b-055aa0437228</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/VerifyAndDownloadBillingReceiptTest</testCaseId>
    </testCaseLink>
    <testCaseLink>

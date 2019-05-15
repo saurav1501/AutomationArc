@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Crate Waste Meter for the Building None Rating System</description>
+   <name>BuildingWasteMeterCreateTest</name>
+   <tag>Create Waste Meter</tag>
+   <comment></comment>
+   <testCaseGuid>901e0d66-f41f-404a-aaf1-7efde4a5891e</testCaseGuid>
+</TestCaseEntity>

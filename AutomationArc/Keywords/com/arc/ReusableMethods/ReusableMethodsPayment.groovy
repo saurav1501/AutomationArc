@@ -31,13 +31,15 @@ public class ReusableMethodsPayment extends BaseClass{
 		String daysForFreeTrialText= WebUI.getText(findTestObject('Object Repository/paymentPageNewUI/90DaysTrialText'))
 		WebUI.verifyMatch("90 Days", daysForFreeTrialText, false)
 		WebUI.click(findTestObject('Object Repository/paymentPageNewUI/freeTrialButtonPaymentPage'))
-
 		WebUI.waitForElementVisible(findTestObject('Object Repository/paymentPageNewUI/introTooltipProjectDashboard'), 20)
+		WebUI.delay(5)
 		WebUI.click(findTestObject('Object Repository/paymentPageNewUI/navigateToProjectButtonDashBoard'))
+		WebUI.delay(3)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/paymentPageNewUI/PayNowPopupTextVerification'),20)
 		//WebUI.waitForElementVisible(findTestObject('Object Repository/paymentPageNewUI/payNowButton1'),20)
+		WebUI.delay(10)
 		WebUI.click(findTestObject('Object Repository/paymentPageNewUI/closeButtonPayNowPop'))
-		WebUI.delay(1)
+		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/Add_Project_Details/a_Projects'))
 
 	}
@@ -403,7 +405,7 @@ public class ReusableMethodsPayment extends BaseClass{
 		}
 		WebUI.waitForElementVisible(findTestObject('PaymenntLocator/NextButton'), 70)
 		WebUI.click(findTestObject('PaymenntLocator/NextButton'))
-		WebUI.delay(5)
+		WebUI.delay(10)
 	}
 
 	@Keyword

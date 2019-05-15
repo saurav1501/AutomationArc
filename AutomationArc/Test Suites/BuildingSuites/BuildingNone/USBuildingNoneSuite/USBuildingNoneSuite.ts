@@ -443,6 +443,12 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/CertiVerifyCertificationDetailsForNotCertfiedProjectsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>f6520adb-513d-4eee-855e-4d1c6d81f104</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/VerifyIfTheHereLinkInSubmitReviewNavigateToGivenLink_1_15_4Test</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>a6bc9c54-6959-4f5d-87b0-201a5fe93d61</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

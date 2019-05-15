@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify if the created report is downloaded or not</description>
+   <name>DownloadAndVerifyExportedDataTest</name>
+   <tag>Create Report Data Input</tag>
+   <comment></comment>
+   <testCaseGuid>e9e4437a-c985-4270-8364-ef5a4d00cd0c</testCaseGuid>
+</TestCaseEntity>

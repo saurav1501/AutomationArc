@@ -23,10 +23,28 @@
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/1YearFullAccessBuildingOther/FullAccess1Year/DataInput/TotalPerformaceScoreRacetrackOutOf100WithoutDataTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>47ddf20d-03dc-401e-8878-8019c8c06240</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/1YearFullAccessBuildingOther/TrialProjectDetailsVerificationTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>d5ace455-6edc-49a3-a3cd-e78392d20eea</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/1YearFullAccessBuildingOther/DashboardNavigationEndToEndTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>75e51441-54d9-4d52-87bc-ce71e941d193</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/1YearFullAccessBuildingOther/BuildingEnergyMeterCreateTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>65a788ad-bb26-466a-a167-aca0ef3a6995</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/1YearFullAccessBuildingOther/DataInputEnergyFileUploadTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>dd13821c-62d3-4167-8f04-e566f701d1a0</guid>
@@ -35,22 +53,58 @@
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/1YearFullAccessBuildingOther/BuildingWaterMeterCreateTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>47ddf20d-03dc-401e-8878-8019c8c06240</guid>
+      <guid>b794c0e1-1184-4cfd-ad34-5733bdd00232</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/1YearFullAccessBuildingOther/TrialProjectDetailsVerificationTest</testCaseId>
+      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/1YearFullAccessBuildingOther/BuildingWasteMeterCreateTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>09ca04d9-da6e-493b-b159-c4dc1659d47c</guid>
+      <guid>e83b0a41-be15-4df3-bac7-e269546a6b4c</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/1YearFullAccessBuildingOther/HumanExperienceMeterCreateTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>f916b831-8422-4997-8807-71774e83936a</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/1YearFullAccessBuildingOther/DownloadAndVerifyExportedDataTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>4be11257-90f6-4d9a-a317-42fd8c89b5f8</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/1YearFullAccessBuildingOther/UploadArcDataTemplateTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>d5ace455-6edc-49a3-a3cd-e78392d20eea</guid>
+      <guid>08f1bdba-d29b-4be3-a4a1-ec122fc708d7</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/1YearFullAccessBuildingOther/DashboardNavigationEndToEndTest</testCaseId>
+      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/1YearFullAccessBuildingOther/FullAccess1Year/DataInput/SubmitSurveyTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>4f87fe7b-c117-4fdc-a55a-5f401f0e71e0</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/1YearFullAccessBuildingOther/PercentageSurveyResponseRateCalculationTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>f32fed3a-5fe7-4734-931c-6a82d3908104</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/1YearFullAccessBuildingOther/ValidateTransportationSurveyGraphTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>271d46b6-6206-4a37-869a-35eefdf6ebae</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/1YearFullAccessBuildingOther/ValidateEnergyMeterGraphTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>e0ce3ade-6f98-480d-9c7a-86276b80bc22</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/1YearFullAccessBuildingOther/ScoreVersionVerificationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>83f0840d-1b0e-46b4-9087-b92edadd02fb</guid>
@@ -87,12 +141,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/1YearFullAccessBuildingOther/FullAccess1Year/DataInput/UploadArcDataTemplateLEEDV4.1Test</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>518ddc61-b5e3-40d7-bc16-b0876c9a4ed6</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/1YearFullAccessBuildingOther/FullAccess1Year/DataInput/SubmitSurveyTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>51473199-17bc-42d7-a43c-b48efca5efb9</guid>
@@ -209,12 +257,6 @@
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingTransit/5YearTrialFullAccessBuildingTRAG/TrialProjectDetailVerificationAfterExcelUploadTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>ebe605bc-6e74-473e-a349-f2d80c92ecdc</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingTransit/5YearTrialFullAccessBuildingTRAG/TrialProjectScoreVerificationTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>4f07138e-1683-49fa-a16a-6aafaed10338</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -285,12 +327,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/MySchools/AdminToolScoreRecomputeTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>69fed6b8-3bde-41dd-aa11-3957689441a3</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/MySchools/TrialProjectScoreVerificationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>92e4952a-79af-46e7-b2f7-103cad6c8b8b</guid>

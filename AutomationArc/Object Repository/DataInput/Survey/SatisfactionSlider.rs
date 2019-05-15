@@ -6,19 +6,18 @@
    <elementGuidId>71eee660-c1e6-435e-8805-753026b28274</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>#js-rangeslider-0 > div.rangeslider__handle</value>
+         <key>XPATH</key>
+         <value>//*[@class=&quot;rangeslider__handle&quot;]</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value></value>
       </entry>
       <entry>
-         <key>XPATH</key>
+         <key>BASIC</key>
          <value>#js-rangeslider-0 > div.rangeslider__handle</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
