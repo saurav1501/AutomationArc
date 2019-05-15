@@ -2196,6 +2196,14 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createWasteGenerati
          , 	rowNum)
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createWasteGenerationMeterReadingTrial"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createWasteGenerationMeterReadingTrial(
+        	sheetName
+         , 	rowNum)
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createTransportReading"(
     	String sheetName	
      , 	int rowNum	) {
@@ -2204,10 +2212,26 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createTransportRead
          , 	rowNum)
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createTransportReadingTrial"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createTransportReadingTrial(
+        	sheetName
+         , 	rowNum)
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createHumanExpMeterReading"(
     	String sheetName	
      , 	int rowNum	) {
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createHumanExpMeterReading(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createHumanExpMeterReadingTrial"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createHumanExpMeterReadingTrial(
         	sheetName
          , 	rowNum)
 }
@@ -2386,6 +2410,7 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.deleteIncompleteMet
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).deleteIncompleteMeterReading()
 }
 
+<<<<<<< HEAD
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createEmissionFactor"(
     	String sheetName	
      , 	int rowNum	) {
@@ -2400,6 +2425,10 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.scoreShouldNotChang
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).scoreShouldNotChangeVerify(
         	sheetName
          , 	rowNum)
+=======
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyTheCommentCityCommunityDoesnotIncludeMeterName"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyTheCommentCityCommunityDoesnotIncludeMeterName()
+>>>>>>> DEV
 }
 
 def static "com.arc.ReusableMethods.ReusableMethodsAnalytics.downloadAndVerifySurveyExportedData"() {
@@ -3108,6 +3137,10 @@ def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.adminToolReturnR
          , 	rowNum)
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifyTheHereLinkRedirectToGivenRespectiveLink"() {
+    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).verifyTheHereLinkRedirectToGivenRespectiveLink()
+}
+
 def static "com.arc.ReusableMethods.ResuableMethodsGRESB.downloadGresbtemplete"() {
     (new com.arc.ReusableMethods.ResuableMethodsGRESB()).downloadGresbtemplete()
 }
@@ -3474,6 +3507,14 @@ def static "com.arc.ReusableMethods.ReusableMethodsBasePoint.basePointOptionB"(
     	String sheetName	
      , 	int rowNum	) {
     (new com.arc.ReusableMethods.ReusableMethodsBasePoint()).basePointOptionB(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsBasePoint.basePointOptionBTrial"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsBasePoint()).basePointOptionBTrial(
         	sheetName
          , 	rowNum)
 }

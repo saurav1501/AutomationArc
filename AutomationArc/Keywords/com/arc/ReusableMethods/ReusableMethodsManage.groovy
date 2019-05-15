@@ -387,12 +387,18 @@ public class ReusableMethodsManage extends BaseClass {
 
 		WebUI.verifyMatch(projectName, prjName, false)
 		WebUI.verifyMatch(projectId, prjId, false)
-		WebUI.verifyMatch(projectUnit,"string:IP", false)
+		
+		if(GlobalVariable.environment=='dev'){
+			WebUI.verifyMatch(projectUnit,"string:SI", false)
+            WebUI.verifyMatch(projectArea, "48", false)		}
+		else{
+			WebUI.verifyMatch(projectUnit,"string:IP", false)
+			WebUI.verifyMatch(projectArea, prjArea, false)
+		}
 		WebUI.verifyMatch(projectAddress, prjAddress, false)
 		WebUI.verifyMatch(projectCity, prjCity, false)
 		WebUI.verifyMatch(projectState, prjState, false)
 		WebUI.verifyMatch(projectCountry, prjCountry, false)
-		WebUI.verifyMatch(projectArea, prjArea, false)
 		WebUI.verifyMatch(projectPrivate, "boolean:false", false)
 		WebUI.verifyMatch(projectYearBuilt, "?", false)
 		WebUI.verifyMatch(projectOccupancy, population, false)
@@ -2355,9 +2361,9 @@ public class ReusableMethodsManage extends BaseClass {
 		String ownerEmail = data.getCellData(sheetName, "OwnerEmail", rowNum)
 
 		//String[] pdfText= readAgreement(BaseClass.ServiceAgreement)
-
 		String pdflinks= pdfReader(BaseClass.ServiceAgreement)
 		print pdflinks
+		KeywordUtil.markWarning('Agreement details are : '+pdflinks)
 		int arr= pdflinks.indexOf("User Name")
 		String subString= pdflinks.substring(arr, pdflinks.length())
 		print arr
@@ -3495,7 +3501,7 @@ public class ReusableMethodsManage extends BaseClass {
 			String regStatus= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Status'))
 			//WebUI.verifyMatch(regAmount,regdAmt,false,FailureHandling.CONTINUE_ON_FAILURE)
 		}
-
+        else{
 		WebUI.delay(2)
 		String regdAmt = data.getCellData(sheetName,"BillingPrice", rowNum)
 		String paymentStatus = data.getCellData(sheetName, "PaymentStatus", rowNum)
@@ -3515,6 +3521,6 @@ public class ReusableMethodsManage extends BaseClass {
 
 		WebUI.verifyMatch(regAmount,regdAmt,false,FailureHandling.CONTINUE_ON_FAILURE)
 		//WebUI.verifyMatch(regStatus,'Completed',false,FailureHandling.CONTINUE_ON_FAILURE)
+	   }
 	}
-
 }

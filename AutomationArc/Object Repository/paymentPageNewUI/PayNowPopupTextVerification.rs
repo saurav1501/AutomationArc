@@ -10,7 +10,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//*[text()='Get full access to the Arc platform'])[2]</value>
+         <value>//*[text()='Get full access to the Arc platform']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

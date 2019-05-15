@@ -591,12 +591,17 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 		WebUI.delay(5)
 		WebUI.verifyElementVisible(findTestObject('Manage/Parking/Project/Unit type'), FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyElementVisible(findTestObject('Manage/Parking/Project/td_Gross floor area'), FailureHandling.CONTINUE_ON_FAILURE)
+<<<<<<< HEAD
 
 	//	WebUI.verifyElementNotVisible(findTestObject('Manage/Parking/Project/Space type'), FailureHandling.CONTINUE_ON_FAILURE)
 
 		WebUI.verifyElementNotPresent(findTestObject('Manage/Parking/Project/Space type'), 5)
 
 
+=======
+		WebUI.verifyElementNotPresent(findTestObject('Manage/Parking/Project/Space type'),4, FailureHandling.CONTINUE_ON_FAILURE)
+		
+>>>>>>> DEV
 	}
 	@Keyword
 	public void verifyProjectDetailsParking(String sheetName,int rowNum) throws IOException, InterruptedException {
