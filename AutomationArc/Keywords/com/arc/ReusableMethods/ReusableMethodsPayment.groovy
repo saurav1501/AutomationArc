@@ -211,7 +211,7 @@ public class ReusableMethodsPayment extends BaseClass{
 		WebUI.waitForElementVisible(findTestObject('Object Repository/paymentPageNewUI/introTooltipProjectDashboard'), 20)
 		WebUI.click(findTestObject('Object Repository/paymentPageNewUI/navigateToProjectButtonDashBoard'))
 		WebUI.delay(15)
-		
+
 		WebUI.waitForElementClickable(findTestObject('Add_Project_Details/PayNow'), 6)
 		WebUI.click(findTestObject('Add_Project_Details/PayNow'))
 		WebUI.delay(8)

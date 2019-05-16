@@ -888,7 +888,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 	}
 	@Keyword
 	public void  Scope1scope2Calcuation(){
-
+		WebUI.delay(7)
 
 		WebUI.verifyElementPresent(findTestObject('Analytics/ElementPre/h4_CARBON CONSUMPTION'),3)
 		WebUI.verifyElementPresent(findTestObject('Analytics/ElementPre/th_Limited Scope 1'),3)
@@ -924,13 +924,13 @@ public class ReusableMethodsAnalytics extends BaseClass{
 			energyoccupantMTCO2escope1 = energyoccupantMTCO2escope1.setScale(4, RoundingMode.HALF_UP)
 
 			BigDecimal energyoccupantMTCO2escope2 = new BigDecimal(energyoccupantMTCO2eScope2)
-			energyoccupantMTCO2escope2 = energyoccupantMTCO2escope2.setScale(4, RoundingMode.HALF_UP)
+			energyoccupantMTCO2escope2 = energyoccupantMTCO2escope2.setScale(2, RoundingMode.HALF_UP)
 
 			BigDecimal energysqFootMTCO2escope1 = new BigDecimal(energysqFootMTCO2eScope1)
 			energysqFootMTCO2escope1 = energysqFootMTCO2escope1.setScale(4, RoundingMode.HALF_UP)
 
 			BigDecimal energysquareFootMTCO2escope2 = new BigDecimal(energysquareFootMTCO2eScope2)
-			energysquareFootMTCO2escope2 = energysquareFootMTCO2escope2.setScale(4, RoundingMode.HALF_UP)
+			energysquareFootMTCO2escope2 = energysquareFootMTCO2escope2.setScale(2, RoundingMode.HALF_UP)
 
 			String energyoccupantmTCO2escope1 =energyoccupantMTCO2escope1.toString()
 			String energyoccupantmTCO2escope2 =energyoccupantMTCO2escope2.toString()
@@ -938,15 +938,27 @@ public class ReusableMethodsAnalytics extends BaseClass{
 			String energysquareFootmTCO2escope2 =energysquareFootMTCO2escope2.toString()
 
 			String mEnergyOccupantMTCO2eScope1 = WebUI.getText(findTestObject('Analytics/yearsCal/EnergyOccupantMTCO2eScope1'))
+			
+			
+			
 			String mEnergyOccupantMTCO2eScope2 = WebUI.getText(findTestObject('Analytics/yearsCal/EnergyOccupantMTCO2eScope2'))
-			String mEnergySqFootMTCO2eScope1 = WebUI.getText(findTestObject('Analytics/yearsCal/EnergySqFootMTCO2eScope1'))
+			BigDecimal UIergyoccupantMTCO2escope2 = new BigDecimal(mEnergyOccupantMTCO2eScope2)
+			UIergyoccupantMTCO2escope2 = UIergyoccupantMTCO2escope2.setScale(2, RoundingMode.HALF_UP)
+			String uIergyoccupantMTCO2escope2 = UIergyoccupantMTCO2escope2.toString()
+		
+			
+			
+			String mEnergySqFootMTCO2eScope1 = WebUI.getText(findTestObject('Analytics/yearsCal/EnergySqFootMTCO2eScope1'))	
+			
 			String mEnergySquareFootMTCO2eScope2 =WebUI.getText(findTestObject('Analytics/yearsCal/EnergySquareFootMTCO2eScope2'))
-
+			BigDecimal UIergyoccupantMTCOescope2 = new BigDecimal(mEnergySquareFootMTCO2eScope2)
+			UIergyoccupantMTCOescope2 = UIergyoccupantMTCOescope2.setScale(2, RoundingMode.HALF_UP)
+			String uIergyoccupantMTCOescope2 = UIergyoccupantMTCOescope2.toString()
 
 			WebUI.verifyMatch(energyoccupantmTCO2escope1, mEnergyOccupantMTCO2eScope1, false)
-			WebUI.verifyMatch(energyoccupantmTCO2escope2, mEnergyOccupantMTCO2eScope2, false)
+			WebUI.verifyMatch(uIergyoccupantMTCO2escope2, energyoccupantmTCO2escope2,false)
 			WebUI.verifyMatch(energysqFootmTCO2escope1, mEnergySqFootMTCO2eScope1, false)
-			WebUI.verifyMatch(energysquareFootmTCO2escope2, mEnergySquareFootMTCO2eScope2, false)
+			WebUI.verifyMatch(uIergyoccupantMTCOescope2,energysquareFootmTCO2escope2, false)
 
 			WebUI.selectOptionByLabel(findTestObject('Analytics/yearsCal/Peryear'), 'Per day', false, FailureHandling.STOP_ON_FAILURE)
 			WebUI.delay(3)
@@ -2062,6 +2074,39 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		WebUI.verifyMatch(UIannualCarbonemissionsMTCO2e, cannualCarbonemissionsMTCO2e, false)
 
 	}
+	
+	
+	@Keyword
+	public void annualcarbonemissionsp(String sheetName ,int rowNum) {
+
+		String KWHReading = data.getCellData(sheetName,"EnergykWh",2)
+		String noOfDays = data.getCellData(sheetName,"ENoOfDays",2)
+
+		Double dnoOfDays =  Double.parseDouble(noOfDays)
+		Double dKWHReading =  Double.parseDouble(KWHReading)
+		
+		String emessionFactor = data.getCellData(sheetName,"EmissionFactor", rowNum)
+		Double demessionFactor =  Double.parseDouble(emessionFactor)
+
+		double meterdatakBtu = dKWHReading * 3.4121416331 // (1 kWh = 3.4121416331 kBtu)
+
+		Double raw_ghg = (meterdatakBtu * demessionFactor)/dnoOfDays
+
+		Double raw_ghginMtCo2e = raw_ghg/1000000
+
+		Double annualcarbonemissionsMTCO2e = raw_ghginMtCo2e * 365
+
+		BigDecimal annualCarbonemissionsMTCO2e = new BigDecimal(annualcarbonemissionsMTCO2e)
+		annualCarbonemissionsMTCO2e = annualCarbonemissionsMTCO2e.setScale(4, RoundingMode.HALF_UP)
+		String cannualCarbonemissionsMTCO2e = annualCarbonemissionsMTCO2e.toString()
+
+		/****************UI Verses Calculated Value of Annual carbon Emissions (MTCO2e)*****************************/
+		String UIannualCarbonemissionsMTCO2e = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualcarbonemissionsProject'))
+		WebUI.verifyMatch(UIannualCarbonemissionsMTCO2e, cannualCarbonemissionsMTCO2e, false)
+
+	}
+	
+	
 	@Keyword
 	public void annualcarbonemissionspersqft(String sheetName ,int rowNum) {
 
@@ -2077,6 +2122,43 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		double meterdatakBtu = dKWHReading * 3.4121416331 // (1 kWh = 3.4121416331 kBtu)
 
 		Double raw_ghg = (meterdatakBtu * 210.904194234467)/dnoOfDays
+
+		Double raw_ghginMtCo2e = raw_ghg/1000000
+
+		Double dUIannualCarbonemissionsMTCO2e = raw_ghginMtCo2e * 365
+
+		String grossAreasqft = data.getCellData(sheetName,"GrossAreasqft",rowNum)
+		Double dgrossAreasqft =  Double.parseDouble(grossAreasqft)
+
+		Double annualcarbonemissionsMTCO2epersqft = dUIannualCarbonemissionsMTCO2e/dgrossAreasqft
+
+		BigDecimal cannualcarbonemissionsMTCO2epersqft = new BigDecimal(annualcarbonemissionsMTCO2epersqft)
+		cannualcarbonemissionsMTCO2epersqft = cannualcarbonemissionsMTCO2epersqft.setScale(4,RoundingMode.HALF_UP)
+
+		String cannulCarbonemissionsMTCO2epersqft = cannualcarbonemissionsMTCO2epersqft.toString()
+
+		String UIcarbonemissionsMTCO2epersqft = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualCarbonPerSQFt'))
+		/****************UI Verses Calculated Value of Annual carbon per square feet*****************************/
+		WebUI.verifyMatch(UIcarbonemissionsMTCO2epersqft, cannulCarbonemissionsMTCO2epersqft, false)
+	}
+	
+	@Keyword
+	public void annualcarbonemissionspersqftp(String sheetName ,int rowNum) {
+
+		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
+		WebUI.delay(2)
+
+		String KWHReading = data.getCellData(sheetName,"EnergykWh",2)
+		String noOfDays = data.getCellData(sheetName,"ENoOfDays",2)
+		String emessionFactor = data.getCellData(sheetName,"EmissionFactor", rowNum)
+		Double demessionFactor =  Double.parseDouble(emessionFactor)
+
+		Double dnoOfDays =  Double.parseDouble(noOfDays)
+		Double dKWHReading =  Double.parseDouble(KWHReading)
+
+		double meterdatakBtu = dKWHReading * 3.4121416331 // (1 kWh = 3.4121416331 kBtu)
+
+		Double raw_ghg = (meterdatakBtu * demessionFactor)/dnoOfDays
 
 		Double raw_ghginMtCo2e = raw_ghg/1000000
 
@@ -2130,6 +2212,45 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		/****************UI Verses Calculated Value of Annual carbon per Occupancy*****************************/
 		WebUI.verifyMatch(UIannualcarbonemissionsMTCO2eperOcc, cannualcarbonemissionsMTCO2ePerOcc, false)
 	}
+	
+	@Keyword
+	public void annualcarbonemissionsperOccupancyp(String sheetName ,int rowNum) {
+
+		String BOccupancy = data.getCellData(sheetName,"BOccupancy",rowNum)
+		Double dBOccupancy =  Double.parseDouble(BOccupancy)
+		
+		String emessionFactor = data.getCellData(sheetName,"EmissionFactor", rowNum)
+		Double demessionFactor =  Double.parseDouble(emessionFactor)
+
+		String KWHReading = data.getCellData(sheetName,"EnergykWh",2)
+		String noOfDays = data.getCellData(sheetName,"ENoOfDays",2)
+
+		Double dnoOfDays =  Double.parseDouble(noOfDays)
+		Double dKWHReading =  Double.parseDouble(KWHReading)
+
+		double meterdatakBtu = dKWHReading * 3.4121416331 // (1 kWh = 3.4121416331 kBtu)
+
+		Double raw_ghg = (meterdatakBtu * demessionFactor)/dnoOfDays
+
+		Double raw_ghginMtCo2e = raw_ghg/1000000
+
+		Double dUIannualCarbonemissionsMTCO2e = raw_ghginMtCo2e * 365
+
+		/*String UIannualCarbonemissionsMTCO2e = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualcarbonemissionsProject'))
+		 Double dUIannualCarbonemissionsMTCO2e =  Double.parseDouble(UIannualCarbonemissionsMTCO2e)
+		 */
+		String annualcarbonemissionsMTCO2eperOcc = dUIannualCarbonemissionsMTCO2e/dBOccupancy
+		BigDecimal annualcarbonemissionsMTCO2ePerOcc = new BigDecimal(annualcarbonemissionsMTCO2eperOcc)
+		annualcarbonemissionsMTCO2ePerOcc = annualcarbonemissionsMTCO2ePerOcc.setScale(4,RoundingMode.HALF_UP)
+
+		String cannualcarbonemissionsMTCO2ePerOcc = annualcarbonemissionsMTCO2ePerOcc.toString()
+		String UIannualcarbonemissionsMTCO2eperOcc = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualCarbonPerOccupancy'))
+
+		/****************UI Verses Calculated Value of Annual carbon per Occupancy*****************************/
+		WebUI.verifyMatch(UIannualcarbonemissionsMTCO2eperOcc, cannualcarbonemissionsMTCO2ePerOcc, false)
+	}
+	
+
 	@Keyword
 	public void annualWaterConsumtionProj(String sheetName ,int rowNum) {
 
