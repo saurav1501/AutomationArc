@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify if ability to make registration payment by check.</description>
+   <name>INDRegPaymentByCheckTest</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>dd04549c-f74a-463f-8c88-b3f441dd47a5</testCaseGuid>
+</TestCaseEntity>
