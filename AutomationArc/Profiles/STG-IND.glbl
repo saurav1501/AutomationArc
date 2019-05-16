@@ -96,7 +96,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'Portfolio'</initValue>
+      <initValue>'PortfolioSTG'</initValue>
       <name>PortfoliosSheet</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -196,7 +196,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'stgr mishra'</initValue>
+      <initValue>'RoshanOne Mishra'</initValue>
       <name>teamMemberName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -223,5 +223,20 @@
       <description></description>
       <initValue>'https://stg.app.arconline.io'</initValue>
       <name>appUrl</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'/var/lib/jenkins/Downloads/'</initValue>
+      <name>downloadDir</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'stg'</initValue>
+      <name>environment</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'stg-01@gmail.com'</initValue>
+      <name>TeamMember</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
