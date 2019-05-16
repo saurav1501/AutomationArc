@@ -55,16 +55,10 @@ public class ResuableMethodsGRESB extends BaseClass {
 
 		WebUI.click(findTestObject('Portfolio/GRESB/button_Import from GRESB'))
 		WebUI.delay(5)
-		
 		Date date = new Date(System.currentTimeMillis())
-		
-
 		data.setCellData(sheetName,"ProjectName",5, "GRESB Portfolio" +" " +formatarDate.format(date))
 		String prjName 	= data.getCellData(sheetName, "ProjectName",5)
-
 		WebUI.sendKeys(findTestObject('Portfolio/GRESB/New/PortfolioName'), prjName)
-
-
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/Portfolio/GRESB/select_Select Owner TypeBusine'), ownerType, false)
 		WebUI.click(findTestObject('Object Repository/Portfolio/GRESB/input_Click here_gresb-search'))
 		WebUI.delay(2)
@@ -72,18 +66,14 @@ public class ResuableMethodsGRESB extends BaseClass {
 		WebUI.delay(4)
 		WebUI.click(findTestObject('Object Repository/Portfolio/GRESB/div_U.S. Army'))
 		WebUI.delay(2)
-
 		WebUI.sendKeys(findTestObject('Portfolio/GRESB/input_Owner Email_form-control'), ownerMail)
 		WebUI.delay(2)
-
 		WebUI.selectOptionByLabel(findTestObject('Portfolio/GRESB/OwnerCountry'),ownerCountry, false)
 		WebUI.delay(2)
-
 		WebUI.click(findTestObject('Portfolio/GRESB/button_Browse'))
 		WebUI.delay(2)
 		ReusableMethodsDataInput.uploadFile(gresbUpload)
 		//WebUI.sendKeys(findTestObject('Portfolio/GRESB/button_Browse'),BaseClass.gresbUpload )
-
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Portfolio/GRESB/button_UPLOAD'))
 		WebUI.delay(30)

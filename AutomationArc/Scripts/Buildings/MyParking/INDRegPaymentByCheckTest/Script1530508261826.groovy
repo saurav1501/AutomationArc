@@ -20,7 +20,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
 try {
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumFour)
+	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumFour)
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.regPaymentByCheckIND'(GlobalVariable.CCPayment , GlobalVariable.rowNumThree)
 			
 } catch (Throwable t) {

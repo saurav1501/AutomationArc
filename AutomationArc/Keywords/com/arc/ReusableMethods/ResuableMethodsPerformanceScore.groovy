@@ -51,6 +51,13 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		//Search the project
 		reusableMethodsSearch.searchProgram(sheetName,rowNum)
 		WebUI.delay(15)
+		if((WebUI.getAttribute(findTestObject('Object Repository/PerformanceScore/Score/a_ Score1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+			println "Scores"
+			WebUI.delay(2)
+			WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
+			WebUI.delay(2)
+		}
+		
 		//WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TotalPerformanceScore'),10)
@@ -170,7 +177,13 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		reusableMethodsSearch.searchProgram(sheetName,rowNum)
 
 		WebUI.delay(15)
-		WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
+		if((WebUI.getAttribute(findTestObject('Object Repository/PerformanceScore/Score/a_ Score1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+			println "Scores"
+			WebUI.delay(2)
+			WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
+			WebUI.delay(2)
+		}
+		
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TotalPerformanceScore'),10)
 		WebUI.delay(15)
