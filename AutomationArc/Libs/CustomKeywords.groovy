@@ -2418,6 +2418,22 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createEmissionFacto
          , 	rowNum)
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.scoreShouldMoreVerify"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).scoreShouldMoreVerify(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.scoreShouldLessVerify"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).scoreShouldLessVerify(
+        	sheetName
+         , 	rowNum)
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.scoreShouldNotChangeVerify"(
     	String sheetName	
      , 	int rowNum	) {
@@ -2596,6 +2612,14 @@ def static "com.arc.ReusableMethods.ReusableMethodsAnalytics.annualcarbonemissio
          , 	rowNum)
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsAnalytics.annualcarbonemissionsp"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsAnalytics()).annualcarbonemissionsp(
+        	sheetName
+         , 	rowNum)
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsAnalytics.annualcarbonemissionspersqft"(
     	String sheetName	
      , 	int rowNum	) {
@@ -2604,10 +2628,26 @@ def static "com.arc.ReusableMethods.ReusableMethodsAnalytics.annualcarbonemissio
          , 	rowNum)
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsAnalytics.annualcarbonemissionspersqftp"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsAnalytics()).annualcarbonemissionspersqftp(
+        	sheetName
+         , 	rowNum)
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsAnalytics.annualcarbonemissionsperOccupancy"(
     	String sheetName	
      , 	int rowNum	) {
     (new com.arc.ReusableMethods.ReusableMethodsAnalytics()).annualcarbonemissionsperOccupancy(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsAnalytics.annualcarbonemissionsperOccupancyp"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsAnalytics()).annualcarbonemissionsperOccupancyp(
         	sheetName
          , 	rowNum)
 }
