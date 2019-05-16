@@ -119,10 +119,10 @@
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/1YearFullAccessBuildingOther/TrialProjectScoreVerificationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>c340b323-a058-4610-840b-b714f23587fb</guid>
+      <guid>fb4f9956-2c12-4962-9380-8286944ca186</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/1YearFullAccessBuildingOther/1YearRegPaymentCCTest</testCaseId>
+      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/1YearFullAccessBuildingOther/1YearINDRegPaymentByCheckTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>a34dd62a-1e3e-4ca8-95a3-0d63a74c2652</guid>
@@ -167,10 +167,10 @@
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/2YearFullAccessBuildingOther/AddNewProjectBuildingOtherTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>9392abe4-5143-4d9a-b1c4-b16ffcbdfc47</guid>
+      <guid>5b26e67c-d7a5-44c9-9a70-79da8ed83231</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/2YearFullAccessBuildingOther/2YearRegPaymentCheckTest</testCaseId>
+      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/2YearFullAccessBuildingOther/2YearsINDRegPaymentByCheckTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>f987f950-c544-4ee2-b628-928e5ec859d7</guid>
@@ -185,10 +185,10 @@
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingNone/3YearFullAccessBuildingNone/AddNewProjectBuildingNoneTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>b9216684-e7b7-46db-8188-2e9bdc8c6dd2</guid>
+      <guid>f0029108-777d-4ca3-857f-c8643a6f141d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingNone/3YearFullAccessBuildingNone/3YearRegPaymentCheckTest</testCaseId>
+      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingNone/3YearFullAccessBuildingNone/3YearsINDRegPaymentByCheckTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>4d770666-6f6f-469a-bbac-e67430d25094</guid>
@@ -203,10 +203,10 @@
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingNone/4YearFullAccessBuildingNone/AddNewProjectBuildingNoneTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>e7b2fa1e-bb6c-47f7-a56a-b23fdc8a88f9</guid>
+      <guid>d52fbc17-8f4d-46d9-8ce3-e0368dd265cf</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingNone/4YearFullAccessBuildingNone/4YearRegPaymentCheckTest</testCaseId>
+      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingNone/4YearFullAccessBuildingNone/4YearsINDRegPaymentByCheckTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>4ee0f81e-1047-44c0-899a-64f36a41b8ea</guid>
@@ -345,11 +345,5 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/MySchools/BillingAmountAndStatusTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>51f3ba25-b5f4-4773-9bed-cfbc1c819671</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/1YearFullAccessBuildingOther/VerifyThePayNowPopUpAfterPaymentTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

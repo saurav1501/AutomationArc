@@ -15,24 +15,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/MyCity/5YearTrailFullAccessCity/AddNewProjectTest</testCaseId>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>eccbff4c-1fc5-4cf2-baeb-1df326b51ef9</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>af679a78-4a46-4d03-9faa-1744b708e570</variableId>
-      </variableLink>
-      <variableLink>
-         <testDataLinkId></testDataLinkId>
-         <type>DEFAULT</type>
-         <value></value>
-         <variableId>baae5fdd-09cf-4e51-87f3-362a5455414b</variableId>
-      </variableLink>
    </testCaseLink>
    <testCaseLink>
       <guid>2346d54a-a411-49d2-8519-06e4f328b0e6</guid>
