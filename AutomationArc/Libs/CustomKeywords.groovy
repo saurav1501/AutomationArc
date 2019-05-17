@@ -1792,6 +1792,34 @@ def static "com.arc.ReusableMethods.ReusableMethodsPayment.paymentRegistrationCh
          , 	paymentMode)
 }
 
+def static "com.arc.ReusableMethods.CityScoreValidation.addNewProjectCityORCom"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.CityScoreValidation()).addNewProjectCityORCom(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.CityScoreValidation.selectTrial"() {
+    (new com.arc.ReusableMethods.CityScoreValidation()).selectTrial()
+}
+
+def static "com.arc.ReusableMethods.CityScoreValidation.createEnergyMeterReadingTrial"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.CityScoreValidation()).createEnergyMeterReadingTrial(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.CityScoreValidation.createWaterMeterReadingTrial"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.CityScoreValidation()).createWaterMeterReadingTrial(
+        	sheetName
+         , 	rowNum)
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsMeasuresParking.measureMangementPoint"() {
     (new com.arc.ReusableMethods.ReusableMethodsMeasuresParking()).measureMangementPoint()
 }
