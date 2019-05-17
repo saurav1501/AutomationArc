@@ -724,8 +724,9 @@ public class ResuableMethodsPortfolio extends BaseClass {
 
 
 		WebUI.click(findTestObject('Object Repository/Portfolio/Goal/a_ Goals'))
-		WebUI.delay(5)
-
+		WebUI.delay(8)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/Portfolio/Goal/CarbonUnit'), 10)
+		
 		println "Test started verifying carbon unit MTCO2E"
 		String mtco2e = WebUI.getText(findTestObject('Object Repository/Portfolio/Goal/CarbonUnit'))
 		System.out.println(mtco2e)
@@ -857,7 +858,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.click(findTestObject('Portfolio/Goal/CarbonCurrentProgess'))
 		WebUI.delay(2)
 		WebUI.refresh()
-		WebUI.delay(5)
+		WebUI.delay(7)
 
 		println "Test started verifying carbon textarea, carbon reducion , base line value after refersh"
 		Assert.assertTrue(WebUI.getAttribute(findTestObject('Portfolio/Goal/energy_baseline_value'),"value").contains(ebValue),"Not Valid")
@@ -2309,7 +2310,8 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		String prjDesc       = data.getCellData(sheetName, "portfolioDesc", 3)
 
 		WebUI.click(findTestObject('Portfolio/Total/span_Edit'))
-		WebUI.delay(5)
+		WebUI.delay(6)
+		WebUI.waitForElementVisible(findTestObject('Portfolio/Total/portfolio_name'), 20)
 		WebUI.clearText(findTestObject('Portfolio/Total/portfolio_name'))
 
 		WebUI.sendKeys(findTestObject('Portfolio/Total/portfolio_name'), projectName)
@@ -2418,10 +2420,10 @@ public class ResuableMethodsPortfolio extends BaseClass {
 	@Keyword
 	public void changeAuthLevelNone() throws IOException, InterruptedException {
 		WebUI.click(findTestObject('Portfolio/Total/a_ Manage'))
-		WebUI.delay(1)
-		WebUI.doubleClick(findTestObject('Portfolio/Total/a_ Team'))
 		WebUI.delay(3)
-
+		WebUI.doubleClick(findTestObject('Portfolio/Total/a_ Team'))
+		WebUI.delay(8)
+		WebUI.waitForElementClickable(findTestObject('Portfolio/Total/EditRole'), 10)
 		WebUI.click(findTestObject('Portfolio/Total/EditRole'))
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Portfolio/Total/EditAuthRight'))
@@ -2429,16 +2431,18 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.scrollToElement(findTestObject('Portfolio/Common/a_None'),5)
 		WebUI.click(findTestObject('Portfolio/Common/a_None'))
 		WebUI.delay(1)
+		WebUI.waitForElementClickable(findTestObject('Portfolio/Total/SaveRole'),10)
 		WebUI.click(findTestObject('Portfolio/Total/SaveRole'))
-		WebUI.delay(2)
+		WebUI.delay(8)
 		WebUI.verifyElementPresent(findTestObject('Portfolio/Common/Atleast one user with Edit Popup'),7)
 	}
 	@Keyword
 	public void manageNavigationTest() throws IOException, InterruptedException {
-		WebUI.delay(2)
+		WebUI.delay(5)
+		WebUI.waitForElementClickable(findTestObject('Portfolio/manage/nav/FirtstProj'),30)
 		WebUI.click(findTestObject('Portfolio/manage/nav/FirtstProj'))
-		WebUI.delay(7)
-		WebUI.verifyElementPresent(findTestObject('Portfolio/manage/nav/PerformaceScore'),4)
+		WebUI.delay(10)
+		WebUI.verifyElementPresent(findTestObject('Portfolio/manage/nav/PerformaceScore'),30)
 	}
 	@Keyword
 	public void addedProjectDetails() throws IOException, InterruptedException {
@@ -2498,20 +2502,20 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.click(findTestObject('Portfolio/Common/button_Done'))
 		WebUI.delay(7)
 
-		//WebUI.scrollToElement(findTestObject('Portfolio/Total/a_ Manage'),2)
-		//WebUI.click(findTestObject('Portfolio/Total/a_ Manage'))
-		//WebUI.delay(3)
 
+		WebUI.waitForElementClickable(findTestObject('Portfolio/Common/PortfolioPage'),10)
 		WebUI.click(findTestObject('Portfolio/Common/PortfolioPage'))
 		WebUI.delay(5)
 
 		WebUI.scrollToElement(findTestObject('Portfolio/Common/ClickScore'),2)
+		WebUI.waitForElementClickable(findTestObject('Portfolio/Common/ClickScore'),10)
 		WebUI.click(findTestObject('Portfolio/Common/ClickScore'))
-		WebUI.delay(5)
+		WebUI.delay(7)
 
 		WebUI.scrollToElement(findTestObject('Object Repository/Portfolio/Common/Fifth'), 3)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/Portfolio/Common/Fifth'),10)
 		WebUI.click(findTestObject('Object Repository/Portfolio/Common/Fifth'))
-		WebUI.delay(9)
+		WebUI.delay(10)
 
 		/***************Verifying project is deleted successfully by count no of projects ********************/
 		WebDriver driver  = DriverFactory.getWebDriver()

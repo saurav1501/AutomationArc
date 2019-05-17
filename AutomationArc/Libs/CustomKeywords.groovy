@@ -2418,6 +2418,14 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createEmissionFacto
          , 	rowNum)
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.updateEmissionFactor"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).updateEmissionFactor(
+        	sheetName
+         , 	rowNum)
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.scoreShouldMoreVerify"(
     	String sheetName	
      , 	int rowNum	) {

@@ -5499,6 +5499,58 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 
 	}
+	
+	@Keyword
+	public void updateEmissionFactor(String sheetName, int rowNum){
+
+		String emissionFactor  = data.getCellData(sheetName, "EmissionFactor", rowNum)
+		WebUI.delay(5)
+
+		WebUI.scrollToElement(findTestObject('DataInput/Survey/a_ Data Input'),5)
+		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+
+		ReusableMethodsLogin.waitForPageLoad(60)
+		ReusableMethodsLogin.waitForIframeLoad(60)
+		WebUI.delay(8)
+
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'),10)
+		//Verifying the Performance score
+		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
+		data.setCellData(GlobalVariable.BDataInput,"TotalScore", GlobalVariable.rowNumTwo,totalPerformaceScore)
+
+		WebUI.doubleClick(findTestObject('Analytics/17/Building Settings'))
+		WebUI.delay(4)
+
+		WebUI.waitForElementClickable(findTestObject('Analytics/17/span_Emission Factor'), 10)
+		WebUI.scrollToElement(findTestObject('Analytics/17/span_Emission Factor'), 3)
+		WebUI.click(findTestObject('Analytics/17/span_Emission Factor'))
+		WebUI.delay(5)
+
+		WebUI.waitForElementClickable(findTestObject('Analytics/17/Custom Emission Facto'), 10)
+		WebUI.scrollToElement(findTestObject('Analytics/17/Custom Emission Facto'), 3)
+		WebUI.click(findTestObject('Analytics/17/Custom Emission Facto'))
+		WebUI.delay(5)
+
+		WebUI.waitForElementClickable(findTestObject('Analytics/17/Manually Enter Emission'), 10)
+		WebUI.scrollToElement(findTestObject('Analytics/17/Manually Enter Emission'), 3)
+		WebUI.click(findTestObject('Analytics/17/Manually Enter Emission'))
+		WebUI.delay(5)
+		
+		WebUI.delay(4)
+		WebUI.clearText(findTestObject('Analytics/17/Reading1'))
+		WebUI.setText(findTestObject('Analytics/17/Reading1'),emissionFactor)
+
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
+		WebUI.delay(4)
+
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/deleteButtonOne'), 20)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), 20)
+
+
+
+	}
+
+
 
 	@Keyword
 	public void scoreShouldMoreVerify(String sheetName, int rowNum){
