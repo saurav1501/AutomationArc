@@ -15,7 +15,7 @@ import internal.GlobalVariable as GlobalVariable
 
 try {
 	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.createEmissionFactor'(GlobalVariable.BDataInput, GlobalVariable.rowNumThree)
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.updateEmissionFactor'(GlobalVariable.BDataInput, GlobalVariable.rowNumThree)
 
 } catch (Throwable t) {
 	System.out.println(t.getLocalizedMessage())

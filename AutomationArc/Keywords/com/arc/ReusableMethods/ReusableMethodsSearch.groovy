@@ -93,8 +93,10 @@ public class ReusableMethodsSearch extends BaseClass{
 		String nuberOfProtfolio = WebUI.getText(findTestObject('Portfolio/Common/TNoPortfolio (1 portfolio)'))
 		println nuberOfProtfolio
 		WebUI.verifyMatch(nuberOfProtfolio,'Portfolio (1 portfolio)', false)
+		
+		WebUI.waitForElementClickable(findTestObject('Object Repository/Page_Arc dashboard/search_Result'), 10)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/search_Result'))
-		WebUI.delay(5)
+		WebUI.delay(8)
 		WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
 		WebUI.delay(1)
 	}

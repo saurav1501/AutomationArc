@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify the complete generated recomputed score for ( Total score , energy , water , waste , transport , human experience , base point ) for admin tool vs Arc front end.</description>
+   <name>AdminToolScoreRecomputeTest</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>dc0fe8b7-0191-422a-9192-84a55844cf8b</testCaseGuid>
+</TestCaseEntity>

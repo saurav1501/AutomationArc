@@ -71,6 +71,24 @@
       <testCaseId>Test Cases/Common/Analytics/1.17/Default/CarbonTotalDailyCarbonEmissionsMTCO2eCalTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>d26fd943-1c26-4a63-a03b-be80e37bb8b0</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Common/Analytics/1.17/More/VerifySet1YearMoreThanDefaultEmissionFactor1_15_7Test</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>aa994c58-59d4-4eed-9ab9-272f47be1bdf</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Common/Analytics/1.17/More/AdminToolScoreRecomputeTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>5dec0b65-0ff3-4439-bb17-d7ba51a60860</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Common/Analytics/1.17/More/VerifyScoreShouldBeLessEmissionFactor1_15_7Test</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>2279306c-722a-4d89-b672-60f69910757e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -105,65 +123,5 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Common/Analytics/1.17/More/CarbonTotalDailyCarbonEmissionsMTCO2eCalTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>5dec0b65-0ff3-4439-bb17-d7ba51a60860</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Common/Analytics/1.17/More/VerifyScoreShouldBeLessEmissionFactor1_15_7Test</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>d26fd943-1c26-4a63-a03b-be80e37bb8b0</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Common/Analytics/1.17/More/VerifySet1YearMoreThanDefaultEmissionFactor1_15_7Test</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>be6b2043-6538-4904-9233-6043b470c10a</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Common/Analytics/1.17/Less/AnnualCarbonEmissions (MTCO2e)PersqftTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>87e51bc3-8dc7-4d60-b98b-f89a6ad6d4eb</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Common/Analytics/1.17/Less/AnnualCarbonEmissions(MTCO2e)PerOccupancyTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>078af8bd-fc6c-4488-b3fc-a7c7a90f5dc9</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Common/Analytics/1.17/Less/AnnualCarbonEmissions(MTCO2e)ProjectTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>e7980935-441d-4751-9821-0b9ed477946b</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Common/Analytics/1.17/Less/CarbonTotalAnnualCarbonEmissionsMTCO2eCalTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>d0218999-69d6-46c7-845c-dd2d2831f3c4</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Common/Analytics/1.17/Less/CarbonTotalCarbonAnalyticsCalculationTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>0896b142-cc02-4c79-aa70-71f44e8a0310</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Common/Analytics/1.17/Less/CarbonTotalDailyCarbonEmissionsMTCO2eCalTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>0c3034ed-9381-45ab-aa9d-f4fe5c00ef24</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Common/Analytics/1.17/Less/VerifyScoreShouldBeMoreEmissionFactor1_15_7Test</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>4881d176-30f9-42c2-8521-0fc75e03cb34</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Common/Analytics/1.17/Less/VerifySet1YearLessThanDefaultEmissionFactor1_15_7Test</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
