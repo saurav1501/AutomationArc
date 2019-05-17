@@ -193,7 +193,7 @@
    <testCaseLink>
       <guid>4d770666-6f6f-469a-bbac-e67430d25094</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingNone/3YearFullAccessBuildingNone/3YearBillingAmountAndStatusTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -211,7 +211,7 @@
    <testCaseLink>
       <guid>4ee0f81e-1047-44c0-899a-64f36a41b8ea</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingNone/4YearFullAccessBuildingNone/4YearBillingAmountAndStatusTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -257,6 +257,12 @@
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingTransit/5YearTrialFullAccessBuildingTRAG/TrialProjectDetailVerificationAfterExcelUploadTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>b9d79286-1896-4a37-ac59-ca8d4d0c7d17</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingTransit/5YearTrialFullAccessBuildingTRAG/5YearsINDRegPaymentByCheckTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>4f07138e-1683-49fa-a16a-6aafaed10338</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -265,7 +271,7 @@
    <testCaseLink>
       <guid>c1c961dc-50ef-4d0a-8182-8f6bc2b7b843</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingTransit/5YearTrialFullAccessBuildingTRAG/5YearBillingAmountAndStatusTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -329,10 +335,10 @@
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/MySchools/AdminToolScoreRecomputeTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>92e4952a-79af-46e7-b2f7-103cad6c8b8b</guid>
+      <guid>a229755d-5593-4ac8-8d90-bdf3d4cc034a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/MySchools/PaymentByCreditCardTest</testCaseId>
+      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/MySchools/1YearINDRegPaymentByCheckTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>e6ea06e8-8941-4268-b899-c79f35ec1bda</guid>
@@ -343,7 +349,7 @@
    <testCaseLink>
       <guid>afccc6bf-f324-4337-af7b-db978c957def</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/MySchools/BillingAmountAndStatusTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
