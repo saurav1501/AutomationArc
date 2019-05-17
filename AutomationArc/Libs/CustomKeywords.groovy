@@ -4268,6 +4268,14 @@ def static "com.arc.ReusableMethods.ReusableMethodsManage.billingStatusPrice"(
          , 	rowNum)
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsManage.billingStatusPriceIND"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsManage()).billingStatusPriceIND(
+        	sheetName
+         , 	rowNum)
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsManage.billingStatusPrice2"(
     	String sheetName	
      , 	int rowNum	) {

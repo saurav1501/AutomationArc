@@ -21,11 +21,14 @@ import internal.GlobalVariable as GlobalVariable
 
 try{
 	
-	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumFour)
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumFour)
+	WebUI.delay(10)
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.payNowRegistrationPaymentIND'()
 
 
 	} catch (Throwable t) {
+	  WebUI.closeWindowIndex(1)
+      WebUI.switchToWindowTitle('Arc dashboard')
 	  System.out.println(t.getLocalizedMessage())
 	  Error e1 = new Error(t.getMessage())
 	  e1.setStackTrace(t.getStackTrace())

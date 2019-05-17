@@ -625,6 +625,7 @@ public class ReusableMethodsPayment extends BaseClass{
 		WebUI.delay(3)
 		WebUI.setText(findTestObject('PayNowRegistrationPaymentIN/input_phone'), '9486861522')
 		WebUI.click(findTestObject('PayNowRegistrationPaymentIN/button_Continue'))
+		WebUI.delay(5)
 		WebUI.selectOptionByValue(findTestObject('PayNowRegistrationPaymentIN/select_Select Bank'), 'AvenuesTest', true)
 		WebUI.click(findTestObject('PayNowRegistrationPaymentIN/a_Make Payment'))
 		WebUI.click(findTestObject('PayNowRegistrationPaymentIN/returnToMerchantSite'))
