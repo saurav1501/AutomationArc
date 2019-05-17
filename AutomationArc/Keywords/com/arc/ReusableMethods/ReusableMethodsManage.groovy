@@ -56,10 +56,13 @@ public class ReusableMethodsManage extends BaseClass {
 		String population 	= data.getCellData(sheetName, "Population", rowNum)
 
 		WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/manageProject'))
+		WebUI.delay(5)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DashboardNavigationNewUI/projectPageProjectTextVerification'), 20)
 		String projectTextVerification= WebUI.getText(findTestObject('Object Repository/DashboardNavigationNewUI/projectPageProjectTextVerification'))
 		WebUI.verifyMatch("Project", projectTextVerification, false)
-		WebUI.delay(5)
+		if((WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectName'),'value').equalsIgnoreCase(''))){
+			WebUI.delay(10)
+		}
 		String projectName= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectName'),'value')
 		String projectId= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectId'),'value')
 		String projectUnit= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/unitType'),'value')
@@ -97,13 +100,13 @@ public class ReusableMethodsManage extends BaseClass {
 		String population 	= data.getCellData(sheetName, "Population", rowNum)
 
 		WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/manageProject'))
+		WebUI.delay(6)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DashboardNavigationNewUI/projectPageProjectTextVerification'), 20)
 		String projectTextVerification= WebUI.getText(findTestObject('Object Repository/DashboardNavigationNewUI/projectPageProjectTextVerification'))
 		WebUI.verifyMatch("Project", projectTextVerification, false)
 		if((WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectName'),'value').equalsIgnoreCase(''))){
 			WebUI.delay(10)
 		}
-		WebUI.delay(4)
 		String projectName= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectName'),'value')
 		String projectId= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectId'),'value')
 		String projectUnit= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/unitType'),'value')
@@ -183,10 +186,14 @@ public class ReusableMethodsManage extends BaseClass {
 		String weeklyOprHrs      = data.getCellData(sheetName,"week_opr_hrs", rowNum)
 
 		WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/manageProject'))
+		WebUI.delay(5)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DashboardNavigationNewUI/projectPageProjectTextVerification'), 20)
 		String projectTextVerification= WebUI.getText(findTestObject('Object Repository/DashboardNavigationNewUI/projectPageProjectTextVerification'))
 		WebUI.verifyMatch("Project", projectTextVerification, false)
-		WebUI.delay(5)
+		if((WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectName'),'value').equalsIgnoreCase(''))){
+			WebUI.delay(10)
+		}
+		
 		String projectName= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectName'),'value')
 		String projectId= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectId'),'value')
 		String projectUnit= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/unitType'),'value')
@@ -274,10 +281,13 @@ public class ReusableMethodsManage extends BaseClass {
 		String weeklyOprHrs      = data.getCellData(sheetName,"week_opr_hrs", rowNum)
 
 		WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/manageProject'))
+		WebUI.delay(5)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DashboardNavigationNewUI/projectPageProjectTextVerification'), 20)
 		String projectTextVerification= WebUI.getText(findTestObject('Object Repository/DashboardNavigationNewUI/projectPageProjectTextVerification'))
 		WebUI.verifyMatch("Project", projectTextVerification, false)
-		WebUI.delay(5)
+		if((WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectName'),'value').equalsIgnoreCase(''))){
+			WebUI.delay(10)
+		}
 		String projectName= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectName'),'value')
 		String projectId= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectId'),'value')
 		String projectUnit= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/unitType'),'value')
@@ -361,10 +371,14 @@ public class ReusableMethodsManage extends BaseClass {
 
 
 		WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/manageProject'))
+		WebUI.delay(5)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DashboardNavigationNewUI/projectPageProjectTextVerification'), 20)
 		String projectTextVerification= WebUI.getText(findTestObject('Object Repository/DashboardNavigationNewUI/projectPageProjectTextVerification'))
 		WebUI.verifyMatch("Project", projectTextVerification, false)
-		WebUI.delay(5)
+		if((WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectName'),'value').equalsIgnoreCase(''))){
+			WebUI.delay(10)
+		}
+		
 		String projectName= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectName'),'value')
 		String projectId= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectId'),'value')
 		String projectUnit= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/unitType'),'value')
@@ -431,7 +445,11 @@ public class ReusableMethodsManage extends BaseClass {
 
 		//ReusNavigate.navigateToManageSection()
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
-		WebUI.delay(3)
+		WebUI.delay(6)
+		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectName'),'value').equalsIgnoreCase(''))){
+			WebUI.delay(10)
+		}
+		
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectName'),'value'),prjName, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectId'),'value'),prjId, false, FailureHandling.CONTINUE_ON_FAILURE)
 		if(GlobalVariable.environment=='dev'){
@@ -785,7 +803,10 @@ public class ReusableMethodsManage extends BaseClass {
 
 		//ReusNavigate.navigateToManageSection()
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
-		WebUI.delay(3)
+		WebUI.delay(6)
+		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectName'),'value').equalsIgnoreCase(''))){
+			WebUI.delay(10)
+		}
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectName'),'value'),prjName, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectId'),'value'),prjId, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/unitType'),'value'),"string:IP", false, FailureHandling.CONTINUE_ON_FAILURE)
@@ -878,7 +899,10 @@ public class ReusableMethodsManage extends BaseClass {
 
 		//ReusNavigate.navigateToManageSection()
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
-		WebUI.delay(3)
+		WebUI.delay(6)
+		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectName'),'value').equalsIgnoreCase(''))){
+			WebUI.delay(10)
+		}
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectName'),'value'),prjName, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/unitType'),'value'),"string:IP", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/spaceType'),'value'),"string:"+spaceType, false, FailureHandling.CONTINUE_ON_FAILURE)
@@ -1471,7 +1495,8 @@ public class ReusableMethodsManage extends BaseClass {
 		/*	WebUI.scrollToElement(findTestObject('Manage/TeamModule/a_ Team'),2)
 		 */
 		WebUI.click(findTestObject('Manage/TeamModule/a_ Team'))
-		// WebUI.delay(5)
+		WebUI.delay(5)
+		WebUI.waitForElementClickable(findTestObject('Manage/TeamModule/input_input'), 10)
 		WebUI.scrollToElement(findTestObject('Manage/TeamModule/input_input'), 2)
 		WebUI.setText(findTestObject('Manage/TeamModule/input_input'),GlobalVariable.TeamMember)
 		WebUI.delay(2)
@@ -1505,7 +1530,8 @@ public class ReusableMethodsManage extends BaseClass {
 		/*	WebUI.scrollToElement(findTestObject('Manage/TeamModule/a_ Team'),2)
 		 */ 
 		WebUI.click(findTestObject('Manage/TeamModule/a_ Team'))
-		//WebUI.delay(5)
+		WebUI.delay(5)
+		WebUI.waitForElementVisible(findTestObject('Manage/TeamModule/ArcAuthLevelSelect'), 20)
 		WebUI.click(findTestObject('Manage/TeamModule/ArcAdministratorEditButton'))
 		WebUI.delay(2)
 		WebUI.selectOptionByLabel(findTestObject('Manage/TeamModule/ArcAuthLevelSelect'), 'Team Member', false)
@@ -1524,6 +1550,7 @@ public class ReusableMethodsManage extends BaseClass {
 		/*	WebUI.scrollToElement(findTestObject('Manage/TeamModule/a_ Team'),2)
 		 */WebUI.click(findTestObject('Manage/TeamModule/a_ Team'))
 		WebUI.delay(5)
+		WebUI.waitForElementVisible(findTestObject('Manage/TeamModule/newMemberAddedAuthorizationLevel'), 20)
 		WebUI.click(findTestObject('Manage/TeamModule/button_Edit'))
 		WebUI.delay(3)
 		WebUI.selectOptionByLabel(findTestObject('Manage/TeamModule/newMemberAddedAuthorizationLevel'), 'Arc Administrator', false)
@@ -1565,10 +1592,14 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(5)
 		WebUI.click(findTestObject('Manage/TeamModule/a_ Team'))
 		WebUI.delay(5)
+		WebUI.waitForElementVisible(findTestObject('Manage/TeamModule/newMemberAddedAuthorizationLevel'),20)
+		
+		WebUI.waitForElementClickable(findTestObject('Manage/TeamModule/button_Edit'),20)
 		WebUI.click(findTestObject('Manage/TeamModule/button_Edit'))
 		WebUI.delay(4)
 		WebUI.selectOptionByLabel(findTestObject('Manage/TeamModule/newMemberAddedAuthorizationLevel'), 'Team Manager', false)
 		WebUI.delay(4)
+		WebUI.waitForElementClickable(findTestObject('Manage/TeamModule/button_Save'),20)
 		WebUI.click(findTestObject('Manage/TeamModule/button_Save'))
 		WebUI.delay(12)
 		//WebUI.waitForElementNotClickable(findTestObject('Object Repository/Manage/TeamModule/TeamRole'), 40)
