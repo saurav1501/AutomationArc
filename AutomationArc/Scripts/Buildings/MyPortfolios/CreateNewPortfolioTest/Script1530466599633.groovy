@@ -24,6 +24,7 @@ try {
 	CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsPortfolio.createNewPortfolio'(GlobalVariable.PortfoliosSheet,GlobalVariable.rowNumTwo)
 	
 } catch (Throwable t) {
+    CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.tearDown'()
 	System.out.println(t.getLocalizedMessage())
 	Error e1 = new Error(t.getMessage())
 	e1.setStackTrace(t.getStackTrace())

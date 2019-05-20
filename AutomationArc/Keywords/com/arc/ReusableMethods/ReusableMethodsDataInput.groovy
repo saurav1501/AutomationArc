@@ -4535,37 +4535,23 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				String walk8 = data.getCellData(sheetName, "Caralternative", rowNum)
 				String name = data.getCellData(sheetName, "Name", rowNum)
 
-
+				r.keyPress(KeyEvent.VK_CONTROL);
+				r.keyPress(KeyEvent.VK_T);
+				r.keyRelease(KeyEvent.VK_CONTROL)
+				r.keyRelease(KeyEvent.VK_T)
 				WebUI.delay(2)
-				((JavascriptExecutor)driver).executeScript('window.open("");')
-				WebUI.delay(4)
-				WebUI.switchToWindowIndex(1)
-				WebUI.delay(2)
-				WebUI.navigateToUrl(url)
-
-				/*r.keyPress(KeyEvent.VK_CONTROL)
+				
+				r.keyPress(KeyEvent.VK_CONTROL)
 				 r.keyPress(KeyEvent.VK_V)
 				 r.keyRelease(KeyEvent.VK_CONTROL)
 				 r.keyRelease(KeyEvent.VK_V)
 				 WebUI.delay(4)
 				 r.keyPress(KeyEvent.VK_ENTER)
 				 r.keyRelease(KeyEvent.VK_ENTER)
-				 WebUI.delay(5)*/
-
-				/*
-				 WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)*/
-				/*WebUI.click(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'))
-				 int j=1
-				 (1..8).each{
-				 WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), "walk" + j)
-				 j++
-				 }
-				 WebUI.click(findTestObject('Object Repository/DataInput/Survey/SaveButtonToRecordSurveyData'))
-				 WebUI.dragAndDropToObject(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'), findTestObject('Object Repository/DataInput/Survey/ExtremelySatisfySpanText'))
-				 WebUI.click(findTestObject('DataInput/Survey/Submit'))
-				 WebUI.delay(3)
-				 WebUI.verifyMatch(WebUI.getText(findTestObject('DataInput/Survey/Thank')), "Thank you for taking our survey! Your responses:", false)
-				 WebUI.delay(3)*/
+				 WebUI.delay(5)
+				 WebUI.switchToWindowIndex(1)
+				 WebUI.delay(10)
+			
 				WebUI.scrollToElement(findTestObject('DataInput/Survey/WalkR1'), 10)
 				WebUI.setText(findTestObject('DataInput/Survey/WalkR1'), walk1)
 				WebUI.setText(findTestObject('DataInput/Survey/BusR1'), walk2)
@@ -4575,14 +4561,12 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				WebUI.setText(findTestObject('DataInput/Survey/carSoloR1'), walk6)
 				WebUI.setText(findTestObject('DataInput/Survey/car23R1'), walk7)
 				WebUI.setText(findTestObject('DataInput/Survey/cars4R1'), walk8)
-				boolean surveyAccept = WebUI.verifyElementVisible(findTestObject('DataInput/Survey/ACCEPTANDCLOSE'))
+				
+				boolean surveyAccept = WebUI.verifyElementVisible(findTestObject('DataInput/Survey/ACCEPTANDCLOSE'),FailureHandling.OPTIONAL)
 				println surveyAccept
 				if((surveyAccept)){
-					WebUI.click(findTestObject('DataInput/Survey/ACCEPTANDCLOSE'),FailureHandling.CONTINUE_ON_FAILURE)
+					WebUI.click(findTestObject('DataInput/Survey/ACCEPTANDCLOSE'))
 				}
-				//WebUI.click(findTestObject('DataInput/Survey/ACCEPTANDCLOSE'),FailureHandling.CONTINUE_ON_FAILURE)
-				WebUI.delay(2)
-				//WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
 				WebUI.delay(2)
 				WebUI.click(findTestObject('DataInput/Survey/Submit'))
 				WebUI.delay(3)
@@ -4592,8 +4576,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				WebUI.waitForPageLoad(GlobalVariable.timeOut)
 				println "Survey Submited Successufully"
 				//WebUI.verifyElementVisible(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/YourWorldIsAliveText'), FailureHandling.CONTINUE_ON_FAILURE)
-				WebUI.closeWindowIndex(1)
-				WebUI.switchToWindowIndex(0)
+				/*WebUI.closeWindowIndex(1)
+				WebUI.switchToWindowIndex(0)*/
 			}
 			else
 			{
@@ -4608,29 +4592,10 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				String walk8 = data.getCellData(sheetName, "Caralternative", rowNum)
 				String name = data.getCellData(sheetName, "Name", rowNum)
 
-
-				//Robot r = new Robot()
-				((JavascriptExecutor)driver).executeScript('window.open("");')
-				WebUI.delay(4)
-				WebUI.switchToWindowIndex(1)
 				WebUI.delay(2)
 				WebUI.navigateToUrl(url)
-				WebUI.delay(2)
-				/*r.keyPress(KeyEvent.VK_CONTROL)
-				 r.keyPress(KeyEvent.VK_T)
-				 r.keyRelease(KeyEvent.VK_CONTROL)
-				 r.keyRelease(KeyEvent.VK_T)
-				 WebUI.delay(2)
-				 WebUI.switchToWindowIndex(1)
-				 WebUI.delay(5)
-				 r.keyPress(KeyEvent.VK_CONTROL)
-				 r.keyPress(KeyEvent.VK_V)
-				 r.keyRelease(KeyEvent.VK_CONTROL)
-				 r.keyRelease(KeyEvent.VK_V)
-				 WebUI.delay(2)
-				 r.keyPress(KeyEvent.VK_ENTER)
-				 r.keyRelease(KeyEvent.VK_ENTER)
-				 WebUI.delay(5)*/
+				WebUI.delay(5)
+				
 				WebUI.scrollToElement(findTestObject('DataInput/Survey/WalkR1'), 10)
 				WebUI.setText(findTestObject('DataInput/Survey/WalkR1'), walk1)
 				WebUI.setText(findTestObject('DataInput/Survey/BusR1'), walk2)
@@ -4647,30 +4612,14 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				WebUI.click(findTestObject('Object Repository/DataInput/Survey/ReloadSurvey'))
 				WebUI.delay(3)
 				WebUI.waitForPageLoad(GlobalVariable.timeOut)
-				/*WebUI.click(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'))
-				 int k=1
-				 (1..8).each{
-				 WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), "walk" + k)
-				 k++
-				 }
-				 WebUI.click(findTestObject('Object Repository/DataInput/Survey/SaveButtonToRecordSurveyData'))
+			
 				 WebUI.delay(3)
-				 WebUI.dragAndDropToObject(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'), findTestObject('Object Repository/DataInput/Survey/ExtremelySatisfySpanText'))
-				 WebUI.click(findTestObject('DataInput/Survey/Submit'))
-				 WebUI.delay(3)
-				 WebUI.verifyMatch(WebUI.getText(findTestObject('DataInput/Survey/Thank')), "Thank you for taking our survey! Your responses:", false)
-				 */WebUI.delay(3)
 				println "Survey Submited Successufully"
-				//WebUI.verifyElementVisible(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/YourWorldIsAliveText'), FailureHandling.CONTINUE_ON_FAILURE)
-				WebUI.closeWindowIndex(1)
-				WebUI.switchToWindowIndex(0)
+				
 			}
-			//WebUI.closeWindowIndex(1)
-			//WebUI.closeWindowIndex(2)
-			//driver.switchTo().window(MainWindowHandle)
+			
 		}
-		//WebUI.closeWindowIndex(1)
-		//driver.switchTo().window(MainWindowHandle)
+		WebUI.closeWindowIndex(1)
 		WebUI.switchToWindowIndex(0)
 
 	}
