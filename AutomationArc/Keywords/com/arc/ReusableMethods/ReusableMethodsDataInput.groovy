@@ -5499,7 +5499,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 
 	}
-	
+
 	@Keyword
 	public void updateEmissionFactor(String sheetName, int rowNum){
 
@@ -5535,7 +5535,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.scrollToElement(findTestObject('Analytics/17/Manually Enter Emission'), 3)
 		WebUI.click(findTestObject('Analytics/17/Manually Enter Emission'))
 		WebUI.delay(5)
-		
+
 		WebUI.delay(4)
 		WebUI.clearText(findTestObject('Analytics/17/Reading1'))
 		WebUI.setText(findTestObject('Analytics/17/Reading1'),emissionFactor)
@@ -5555,75 +5555,75 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	@Keyword
 	public void scoreShouldMoreVerify(String sheetName, int rowNum){
 
-	String totalScore  = data.getCellData(sheetName, "TotalScore", rowNum)
-	int utotalScore = Integer.parseInt(totalScore)
-	
-	String actotalScore  = data.getCellData(sheetName, "ATotalScore", rowNum)
-	
-	
-	/********* Verifying the Generated score for total score & Energy & Water & Waste & Transport & Human Experience under data Input section ********/
-	WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
-	WebUI.delay(8)
-	WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'),10)
-	//Verifying the Performance score
-	String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
-	print totalPerformaceScore
-	int utotalPerformaceScore = Integer.parseInt(totalPerformaceScore)
-	
-	if(utotalPerformaceScore>utotalScore)
-	KeywordUtil.logInfo("!!! Total Score is increased for this Project after changing the emission factor !!!")
-	else
-	KeywordUtil.markFailedAndStop("!!! Total Score is Not increased for this  Project after changing the emission factor !!!")
-	
-	
-	WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
-	WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TotalPerformanceScore'),10)
-	WebUI.delay(15)
-	String totalperformaceScore = WebUI.getText(findTestObject('PerformanceScore/Score/TotalPerformanceScore'))
-	int uTotalPagetotalScore = Integer.parseInt(totalperformaceScore)
-	
-	if(uTotalPagetotalScore>utotalScore)
-	KeywordUtil.logInfo("!!! Total Score is increased for this Project after changing the emission factor !!!")
-	else
-	KeywordUtil.markFailedAndStop("!!! Total Score is Not increased for this  Project after changing the emission factor !!!")
-		
+		String totalScore  = data.getCellData(sheetName, "TotalScore", rowNum)
+		int utotalScore = Integer.parseInt(totalScore)
+
+		String actotalScore  = data.getCellData(sheetName, "ATotalScore", rowNum)
+
+
+		/********* Verifying the Generated score for total score & Energy & Water & Waste & Transport & Human Experience under data Input section ********/
+		WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
+		WebUI.delay(8)
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'),10)
+		//Verifying the Performance score
+		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
+		print totalPerformaceScore
+		int utotalPerformaceScore = Integer.parseInt(totalPerformaceScore)
+
+		if(utotalPerformaceScore>utotalScore)
+			KeywordUtil.logInfo("!!! Total Score is increased for this Project after changing the emission factor !!!")
+		else
+			KeywordUtil.markFailedAndStop("!!! Total Score is Not increased for this  Project after changing the emission factor !!!")
+
+
+		WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TotalPerformanceScore'),10)
+		WebUI.delay(15)
+		String totalperformaceScore = WebUI.getText(findTestObject('PerformanceScore/Score/TotalPerformanceScore'))
+		int uTotalPagetotalScore = Integer.parseInt(totalperformaceScore)
+
+		if(uTotalPagetotalScore>utotalScore)
+			KeywordUtil.logInfo("!!! Total Score is increased for this Project after changing the emission factor !!!")
+		else
+			KeywordUtil.markFailedAndStop("!!! Total Score is Not increased for this  Project after changing the emission factor !!!")
+
 	}
 	@Keyword
 	public void scoreShouldLessVerify(String sheetName, int rowNum){
 
-	String totalScore  = data.getCellData(sheetName, "TotalScore", rowNum)
-	int utotalScore = Integer.parseInt(totalScore)
-	
-	/********* Verifying the Generated score for total score under data Input section ********/
-	WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
-	WebUI.delay(8)
-	WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'),10)
-	//Verifying the Performance score
-	String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
-	print totalPerformaceScore
-	int utotalPerformaceScore = Integer.parseInt(totalPerformaceScore)
-	
-	if(utotalPerformaceScore<utotalScore)
-	KeywordUtil.logInfo("!!! Total Score is decrease for this Project after changing the emission factor !!!")
-	else
-	KeywordUtil.markFailedAndStop("!!! Total Score is Not Decrease for this Project after changing the emission factor !!!")
-	
-	
-	WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
-	WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TotalPerformanceScore'),10)
-	WebUI.delay(15)
-	String totalperformaceScore = WebUI.getText(findTestObject('PerformanceScore/Score/TotalPerformanceScore'))
-	int uTotalPagetotalScore = Integer.parseInt(totalperformaceScore)
-	
-	if(uTotalPagetotalScore>utotalScore)
-	KeywordUtil.logInfo("!!! Total Score is increased for this Project after changing the emission factor !!!")
-	else
-	KeywordUtil.markFailedAndStop("!!! Total Score is Not increased for this  Project after changing the emission factor !!!")
-	
-	
+		String totalScore  = data.getCellData(sheetName, "TotalScore", rowNum)
+		int utotalScore = Integer.parseInt(totalScore)
+
+		/********* Verifying the Generated score for total score under data Input section ********/
+		WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
+		WebUI.delay(8)
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'),10)
+		//Verifying the Performance score
+		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
+		print totalPerformaceScore
+		int utotalPerformaceScore = Integer.parseInt(totalPerformaceScore)
+
+		if(utotalPerformaceScore<utotalScore)
+			KeywordUtil.logInfo("!!! Total Score is decrease for this Project after changing the emission factor !!!")
+		else
+			KeywordUtil.markFailedAndStop("!!! Total Score is Not Decrease for this Project after changing the emission factor !!!")
+
+
+		WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TotalPerformanceScore'),10)
+		WebUI.delay(15)
+		String totalperformaceScore = WebUI.getText(findTestObject('PerformanceScore/Score/TotalPerformanceScore'))
+		int uTotalPagetotalScore = Integer.parseInt(totalperformaceScore)
+
+		if(uTotalPagetotalScore>utotalScore)
+			KeywordUtil.logInfo("!!! Total Score is increased for this Project after changing the emission factor !!!")
+		else
+			KeywordUtil.markFailedAndStop("!!! Total Score is Not increased for this  Project after changing the emission factor !!!")
+
+
 	}
 
-	
+
 	@Keyword
 	public void scoreShouldNotChangeVerify(String sheetName, int rowNum){
 
@@ -5662,7 +5662,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	}
 
-	
+
 	@Keyword
 	public void verifyTheCommentCityCommunityDoesnotIncludeMeterName(){
 

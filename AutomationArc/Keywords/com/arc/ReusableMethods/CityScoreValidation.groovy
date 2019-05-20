@@ -119,8 +119,8 @@ public class CityScoreValidation extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/Add_Project_Details/a_Projects'))
 
 	}
-	
-	
+
+
 	@Keyword
 	public void createEnergyMeterReadingTrial(String sheetName, int rowNum) throws IOException, InterruptedException{
 
@@ -147,7 +147,6 @@ public class CityScoreValidation extends BaseClass{
 		WebUI.delay(2)
 		WebUI.click(findTestObject('DataInput/CityCom/SaveButton2'))
 		WebUI.delay(5)
-		
 	}
 
 
@@ -155,7 +154,7 @@ public class CityScoreValidation extends BaseClass{
 	public void createWaterMeterReadingTrial(String sheetName, int rowNum ) throws IOException, InterruptedException {
 		/*************************Reading data from excel sheet ************************************/
 		String reading1  = data.getCellData(sheetName, "WaterReading1", rowNum)
-		
+
 		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
 		 */
 		WebUI.delay(5)
@@ -181,24 +180,21 @@ public class CityScoreValidation extends BaseClass{
 		WebUI.setText(findTestObject('DataInput/CityCom/TextboxValue2'), reading1)
 		WebUI.delay(4)
 		WebUI.click(findTestObject('DataInput/CityCom/SaveButton2'))
-		WebUI.delay(6)	
-	 }
+		WebUI.delay(6)
+	}
 
-	 public void createEnergyReadingAndValidateScore(String sheetName, int rowNum){
-		 
-		 String score= data.getCellData(sheetName, "Score",rowNum)
-		 WebUI.click(findTestObject('Object Repository/TrialScore/scoreTotal'))
-		 WebUI.delay(10)
-		 String performanceScoreText = WebUI.getText(findTestObject('Object Repository/TrialScore/scorePerformanceScoreText'))
-		 WebUI.verifyMatch(performanceScoreText, "Performance Score", false)
-		 WebUI.delay(15)
-		 WebUI.waitForElementPresent(findTestObject('Object Repository/TrialScore/plaqueEnergyScore'), 20)
-		 //WebUI.waitForElementVisible(findTestObject('Object Repository/TrialScore/plaqueEnergyScore'), 20)
-		 String energyScore= WebUI.getText(findTestObject('Object Repository/TrialScore/plaqueEnergyScore'))
-		 
-		
-	 }
-	
-	
-	
+	public void createEnergyReadingAndValidateScore(String sheetName, int rowNum){
+
+		String score= data.getCellData(sheetName, "Score",rowNum)
+		WebUI.click(findTestObject('Object Repository/TrialScore/scoreTotal'))
+		WebUI.delay(10)
+		String performanceScoreText = WebUI.getText(findTestObject('Object Repository/TrialScore/scorePerformanceScoreText'))
+		WebUI.verifyMatch(performanceScoreText, "Performance Score", false)
+		WebUI.delay(15)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/TrialScore/plaqueEnergyScore'), 20)
+		//WebUI.waitForElementVisible(findTestObject('Object Repository/TrialScore/plaqueEnergyScore'), 20)
+		String energyScore= WebUI.getText(findTestObject('Object Repository/TrialScore/plaqueEnergyScore'))
+
+
+	}
 }
