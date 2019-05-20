@@ -349,7 +349,7 @@ public class XlsReader extends BaseClass {
 	}
 
 
-	
+
 	public boolean setCellData(String sheetName,int colName,int rowNum, String data)
 	{
 		try
@@ -512,8 +512,8 @@ public class XlsReader extends BaseClass {
 	}
 
 
-	
-	
+
+
 }
 
 
