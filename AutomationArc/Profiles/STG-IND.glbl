@@ -96,7 +96,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'PortfolioSTG'</initValue>
+      <initValue>'INDPortfolioSTG'</initValue>
       <name>PortfoliosSheet</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

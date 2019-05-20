@@ -1476,34 +1476,6 @@ def static "com.arc.ReusableMethods.ReusableMethodsNavigation.projectDashboardNa
     (new com.arc.ReusableMethods.ReusableMethodsNavigation()).projectDashboardNavigationAfterPaymentCityCommEndToEnd()
 }
 
-def static "com.arc.ReusableMethods.CityScoreValidation.addNewProjectCityORCom"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.CityScoreValidation()).addNewProjectCityORCom(
-        	sheetName
-         , 	rowNum)
-}
-
-def static "com.arc.ReusableMethods.CityScoreValidation.selectTrial"() {
-    (new com.arc.ReusableMethods.CityScoreValidation()).selectTrial()
-}
-
-def static "com.arc.ReusableMethods.CityScoreValidation.createEnergyMeterReadingTrial"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.CityScoreValidation()).createEnergyMeterReadingTrial(
-        	sheetName
-         , 	rowNum)
-}
-
-def static "com.arc.ReusableMethods.CityScoreValidation.createWaterMeterReadingTrial"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.CityScoreValidation()).createWaterMeterReadingTrial(
-        	sheetName
-         , 	rowNum)
-}
-
 def static "com.arc.ReusableMethods.ReusableMethodsPayment.selectTrial"() {
     (new com.arc.ReusableMethods.ReusableMethodsPayment()).selectTrial()
 }
@@ -3228,6 +3200,14 @@ def static "com.arc.ReusableMethods.ResuableMethodsGRESB.createGresbData"(
          , 	rowNum)
 }
 
+def static "com.arc.ReusableMethods.ResuableMethodsGRESB.createGresbDataIND"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ResuableMethodsGRESB()).createGresbDataIND(
+        	sheetName
+         , 	rowNum)
+}
+
 def static "com.arc.ReusableMethods.ResuableMethodsGRESB.ownerCountry"(
     	String sheetName	
      , 	int rowNum	) {
@@ -3346,6 +3326,14 @@ def static "com.arc.ReusableMethods.ResuableMethodsGRESB.gresbPortfolioDetails"(
     	String sheetName	
      , 	int rowNum	) {
     (new com.arc.ReusableMethods.ResuableMethodsGRESB()).gresbPortfolioDetails(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsGRESB.gresbPortfolioDetailsIND"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ResuableMethodsGRESB()).gresbPortfolioDetailsIND(
         	sheetName
          , 	rowNum)
 }

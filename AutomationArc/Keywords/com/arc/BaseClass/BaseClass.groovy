@@ -56,7 +56,7 @@ public class BaseClass {
 	//public static Date date = new Date(System.currentTimeMillis())
 	public static Date dateNew = new Date()
 	public static String gresbUpload = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Gresb.xlsx"
-	public static String gresbUploadIND = RunConfiguration.getProjectDir()+"/ARCDataTemplete/GresbIND.xlsx"
+	public static String gresbUploadIND = RunConfiguration.getProjectDir()+"/ARCDataTemplete/GRESB_IND.xlsx"
 	public static String parkImageUpload = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Parking SJ.jpg"
 	 public static String downloadPath = GlobalVariable.downloadDir
 	 public static String pdfFile = RunConfiguration.getProjectDir()+"/ARCDataTemplete/USGBC.pdf"

@@ -81,6 +81,43 @@ public class ResuableMethodsGRESB extends BaseClass {
 
 	}
 
+	
+	@Keyword
+	public void  createGresbDataIND(String sheetName, int rowNum) throws IOException, InterruptedException {
+
+		String ownerType 	= data.getCellData(sheetName, "GOwnerType", rowNum);
+		String ownerOrg 	= data.getCellData(sheetName, "GOwnerOrganization", rowNum);
+		String ownerMail 	= data.getCellData(sheetName, "GOwnerEmail", rowNum);
+		String ownerCountry = data.getCellData(sheetName, "GOwnerCountry", rowNum);
+
+		WebUI.click(findTestObject('Portfolio/GRESB/button_Import from GRESB'))
+		WebUI.delay(5)
+		Date date = new Date(System.currentTimeMillis())
+		data.setCellData(sheetName,"ProjectName",5, "INDGRESB Portfolio" +" " +formatarDate.format(date))
+		String prjName 	= data.getCellData(sheetName, "ProjectName",5)
+		WebUI.sendKeys(findTestObject('Portfolio/GRESB/New/PortfolioName'), prjName)
+		WebUI.selectOptionByLabel(findTestObject('Object Repository/Portfolio/GRESB/select_Select Owner TypeBusine'), ownerType, false)
+		WebUI.click(findTestObject('Object Repository/Portfolio/GRESB/input_Click here_gresb-search'))
+		WebUI.delay(2)
+		WebUI.sendKeys(findTestObject('Object Repository/Portfolio/GRESB/input_Click here_gresb-search'), ownerOrg)
+		WebUI.delay(4)
+		WebUI.click(findTestObject('Object Repository/Portfolio/GRESB/div_U.S. Army'))
+		WebUI.delay(2)
+		WebUI.sendKeys(findTestObject('Portfolio/GRESB/input_Owner Email_form-control'), ownerMail)
+		WebUI.delay(2)
+		WebUI.selectOptionByLabel(findTestObject('Portfolio/GRESB/OwnerCountry'),ownerCountry, false)
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Portfolio/GRESB/button_Browse'))
+		WebUI.delay(2)
+		ReusableMethodsDataInput.uploadFile(gresbUploadIND)
+		//WebUI.sendKeys(findTestObject('Portfolio/GRESB/button_Browse'),BaseClass.gresbUpload )
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Portfolio/GRESB/button_UPLOAD'))
+		WebUI.delay(30)
+		WebUI.delay(500)
+
+	}
+	
 	@Keyword
 	public void  ownerCountry(String sheetName, int rowNum) throws IOException, InterruptedException {
 
@@ -397,6 +434,30 @@ public class ResuableMethodsGRESB extends BaseClass {
 		//Assert.assertTrue(WebUI.getAttribute(findTestObject('Portfolio/Total/textarea_Mob'),"value").contains(orgContact),"Not Valid")
 		//Assert.assertTrue(WebUI.getAttribute(findTestObject('Portfolio/Total/textarea_Description'),"value").contains(prjDesc),"Not Valid")
 	}
+	
+	@Keyword
+	public void gresbPortfolioDetailsIND(String sheetName, int rowNum) throws IOException, InterruptedException {
+
+		String projectName   = data.getCellData(sheetName, "ProjectName", 5)
+		String organization  = data.getCellData(sheetName, "GOwnerOrganization", 2)
+		String orgCountry 	 = data.getCellData(sheetName, "orgCountry",2)
+		String orgContact    = data.getCellData(sheetName, "orgContact",5)
+		String email         = data.getCellData(sheetName, "GOwnerEmail",2)
+		String prjDesc       = data.getCellData(sheetName, "portfolioDesc",5)
+
+		WebUI.click(findTestObject('Portfolio/Total/a_ Manage'))
+		WebUI.delay(1)
+		WebUI.click(findTestObject('Portfolio/Common/PortfolioPage'))
+		WebUI.delay(5)
+
+		Assert.assertTrue(WebUI.getAttribute(findTestObject('Portfolio/Total/portfolio_name'),"value").contains(projectName),"Not Valid")
+		Assert.assertTrue(WebUI.getAttribute(findTestObject('Portfolio/Total/textarea_Email'),"value").contains(email),"Not Valid")
+		Assert.assertTrue(WebUI.getAttribute(findTestObject('Portfolio/Total/textarea_organization'),"value").contains(organization),"Not Valid")
+		Assert.assertTrue(WebUI.getAttribute(findTestObject('Portfolio/Total/org_country'),"value").contains("IN"),"Not Valid")
+		//Assert.assertTrue(WebUI.getAttribute(findTestObject('Portfolio/Total/textarea_Mob'),"value").contains(orgContact),"Not Valid")
+		//Assert.assertTrue(WebUI.getAttribute(findTestObject('Portfolio/Total/textarea_Description'),"value").contains(prjDesc),"Not Valid")
+	}
+	
 	@Keyword
 	public void verifyErrorNotification(String sheetName, int rowNum) throws IOException, InterruptedException {
 		WebUI.delay(8)
