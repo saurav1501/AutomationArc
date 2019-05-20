@@ -4540,18 +4540,18 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				r.keyRelease(KeyEvent.VK_CONTROL)
 				r.keyRelease(KeyEvent.VK_T)
 				WebUI.delay(2)
-				
+
 				r.keyPress(KeyEvent.VK_CONTROL)
-				 r.keyPress(KeyEvent.VK_V)
-				 r.keyRelease(KeyEvent.VK_CONTROL)
-				 r.keyRelease(KeyEvent.VK_V)
-				 WebUI.delay(4)
-				 r.keyPress(KeyEvent.VK_ENTER)
-				 r.keyRelease(KeyEvent.VK_ENTER)
-				 WebUI.delay(5)
-				 WebUI.switchToWindowIndex(1)
-				 WebUI.delay(10)
-			
+				r.keyPress(KeyEvent.VK_V)
+				r.keyRelease(KeyEvent.VK_CONTROL)
+				r.keyRelease(KeyEvent.VK_V)
+				WebUI.delay(4)
+				r.keyPress(KeyEvent.VK_ENTER)
+				r.keyRelease(KeyEvent.VK_ENTER)
+				WebUI.delay(5)
+				WebUI.switchToWindowIndex(1)
+				WebUI.delay(10)
+
 				WebUI.scrollToElement(findTestObject('DataInput/Survey/WalkR1'), 10)
 				WebUI.setText(findTestObject('DataInput/Survey/WalkR1'), walk1)
 				WebUI.setText(findTestObject('DataInput/Survey/BusR1'), walk2)
@@ -4561,7 +4561,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				WebUI.setText(findTestObject('DataInput/Survey/carSoloR1'), walk6)
 				WebUI.setText(findTestObject('DataInput/Survey/car23R1'), walk7)
 				WebUI.setText(findTestObject('DataInput/Survey/cars4R1'), walk8)
-				
+
 				boolean surveyAccept = WebUI.verifyElementVisible(findTestObject('DataInput/Survey/ACCEPTANDCLOSE'),FailureHandling.OPTIONAL)
 				println surveyAccept
 				if((surveyAccept)){
@@ -4577,7 +4577,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				println "Survey Submited Successufully"
 				//WebUI.verifyElementVisible(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/YourWorldIsAliveText'), FailureHandling.CONTINUE_ON_FAILURE)
 				/*WebUI.closeWindowIndex(1)
-				WebUI.switchToWindowIndex(0)*/
+				 WebUI.switchToWindowIndex(0)*/
 			}
 			else
 			{
@@ -4595,7 +4595,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				WebUI.delay(2)
 				WebUI.navigateToUrl(url)
 				WebUI.delay(5)
-				
+
 				WebUI.scrollToElement(findTestObject('DataInput/Survey/WalkR1'), 10)
 				WebUI.setText(findTestObject('DataInput/Survey/WalkR1'), walk1)
 				WebUI.setText(findTestObject('DataInput/Survey/BusR1'), walk2)
@@ -4612,12 +4612,12 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				WebUI.click(findTestObject('Object Repository/DataInput/Survey/ReloadSurvey'))
 				WebUI.delay(3)
 				WebUI.waitForPageLoad(GlobalVariable.timeOut)
-			
-				 WebUI.delay(3)
+
+				WebUI.delay(3)
 				println "Survey Submited Successufully"
-				
+
 			}
-			
+
 		}
 		WebUI.closeWindowIndex(1)
 		WebUI.switchToWindowIndex(0)
