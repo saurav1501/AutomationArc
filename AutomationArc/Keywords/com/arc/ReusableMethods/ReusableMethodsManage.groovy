@@ -3472,6 +3472,58 @@ public class ReusableMethodsManage extends BaseClass {
 			WebUI.verifyMatch(regStatus,paymentStatus,false,FailureHandling.CONTINUE_ON_FAILURE)
 		}
 	}
+	
+	
+	
+	
+	
+	@Keyword
+	public void billingStatusPriceIND(String sheetName, int rowNum){
+
+
+		if(GlobalVariable.environment=='dev'){
+
+			WebUI.delay(2)
+			//String regdAmt = data.getCellData(sheetName,"BillingPrice", rowNum)
+			String paymentStatus = data.getCellData(sheetName, "PaymentStatus", rowNum)
+			WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
+			WebUI.delay(1)
+			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+			WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
+			WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
+
+			WebUI.delay(5)
+
+			String regDate= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/registrationPaymentDate'))
+			String regOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationOrderId'))
+			String regOrderType= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/span_REGISTRATION'))
+			//	String regAmount= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationAmount'))
+			String regStatus= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Status'))
+
+			//	WebUI.verifyMatch(regAmount,regdAmt,false,FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(regStatus,paymentStatus,false,FailureHandling.CONTINUE_ON_FAILURE)
+
+		}
+		else {
+			WebUI.delay(2)
+			String regdAmt = data.getCellData(sheetName,"BillingPrice", rowNum)
+			String paymentStatus = data.getCellData(sheetName, "PaymentStatus", rowNum)
+			WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
+			WebUI.delay(1)
+			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+			WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
+			WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
+			WebUI.delay(5)
+			String regDate= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/registrationPaymentDate'))
+			String regOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationOrderId'))
+			String regOrderType= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/span_REGISTRATION'))
+			String regAmount= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationAmount'))
+			String regStatus= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Status'))
+			WebUI.verifyMatch(regAmount,regdAmt,false,FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(regStatus,paymentStatus,false,FailureHandling.CONTINUE_ON_FAILURE)
+		}
+	}
+	
 	@Keyword
 	public void billingStatusPrice2(String sheetName, int rowNum){
 		if(GlobalVariable.environment=='dev'){

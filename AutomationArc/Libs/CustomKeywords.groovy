@@ -1476,6 +1476,34 @@ def static "com.arc.ReusableMethods.ReusableMethodsNavigation.projectDashboardNa
     (new com.arc.ReusableMethods.ReusableMethodsNavigation()).projectDashboardNavigationAfterPaymentCityCommEndToEnd()
 }
 
+def static "com.arc.ReusableMethods.CityScoreValidation.addNewProjectCityORCom"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.CityScoreValidation()).addNewProjectCityORCom(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.CityScoreValidation.selectTrial"() {
+    (new com.arc.ReusableMethods.CityScoreValidation()).selectTrial()
+}
+
+def static "com.arc.ReusableMethods.CityScoreValidation.createEnergyMeterReadingTrial"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.CityScoreValidation()).createEnergyMeterReadingTrial(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.CityScoreValidation.createWaterMeterReadingTrial"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.CityScoreValidation()).createWaterMeterReadingTrial(
+        	sheetName
+         , 	rowNum)
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsPayment.selectTrial"() {
     (new com.arc.ReusableMethods.ReusableMethodsPayment()).selectTrial()
 }
@@ -4272,6 +4300,14 @@ def static "com.arc.ReusableMethods.ReusableMethodsManage.billingStatusPrice"(
     	String sheetName	
      , 	int rowNum	) {
     (new com.arc.ReusableMethods.ReusableMethodsManage()).billingStatusPrice(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsManage.billingStatusPriceIND"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsManage()).billingStatusPriceIND(
         	sheetName
          , 	rowNum)
 }
