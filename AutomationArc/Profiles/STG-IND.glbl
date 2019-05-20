@@ -239,4 +239,9 @@
       <initValue>'stg-01@gmail.com'</initValue>
       <name>TeamMember</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'HumanExp'</initValue>
+      <name>TemplateHE</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

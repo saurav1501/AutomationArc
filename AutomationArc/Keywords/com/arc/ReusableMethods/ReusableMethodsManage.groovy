@@ -3006,22 +3006,6 @@ public class ReusableMethodsManage extends BaseClass {
 	}
 
 
-
-
-	/*public static void unzip(){
-	 String source = "D:\\Katalon\\AutomationArc\\Automation\\Download\\GBCI-India.zip"
-	 String destination = "D:\\Katalon\\AutomationArc\\Automation\\DriverFiles"
-	 String password = "password";
-	 try {
-	 ZipFile zipFile = new ZipFile(source)
-	 zipFile.extractAll(destination)
-	 } catch (ZipException e) {
-	 e.printStackTrace()
-	 }
-	 }
-	 */
-
-
 	public static void unzip(String zipFilePath, String destDirectory) throws IOException {
 
 		File destDir = new File(destDirectory)
@@ -3077,58 +3061,6 @@ public class ReusableMethodsManage extends BaseClass {
 		Assert.assertTrue(ReusDataInput.isFileExtracted('GBCI-Noida-GST Registration Certificate.pdf'), "GBCI-Noida-GST Registration Certificate File Didn't downloaded successfully")
 
 	}
-
-
-
-	/*//Pdf line by line reader
-	 static List<String> lines = new ArrayList<String>()
-	 public ReusableMethodsManage() throws IOException {
-	 }
-	 public String[] readAgreement(String agreement){
-	 PDDocument document = null
-	 def pdfResult = new String[10]
-	 try {
-	 document = PDDocument.load( new File(agreement) )
-	 PDFTextStripper stripper = new ReusableMethodsManage();
-	 stripper.setSortByPosition( true );
-	 stripper.setStartPage( 0 );
-	 stripper.setEndPage( document.getNumberOfPages() );
-	 Writer dummy = new OutputStreamWriter(new ByteArrayOutputStream());
-	 stripper.writeText(document, dummy);
-	 println(lines.get(475));
-	 println(lines.get(476));
-	 println(lines.get(477));
-	 println(lines.get(478));
-	 println(lines.get(479));
-	 println(lines.get(480));
-	 //lines.get(lines.indexOf())
-	 // print lines
-	 for(String line:lines){
-	 System.out.println(line);
-	 }
-	 int start=475;
-	 for (int i=0; i<=5;i++) {
-	 pdfResult[i]= lines.get(start);
-	 start++;
-	 //System.out.println(pdfResult[i]);
-	 }
-	 }
-	 finally {
-	 if( document != null ) {
-	 document.close();
-	 }
-	 }
-	 return pdfResult
-	 }
-	 *//**
-	 * Override the default functionality of PDFTextStripper.writeString()
-	 *//*
-	 @Override
-	 protected void writeString(String str, List<TextPosition> textPositions) throws IOException {
-	 lines.add(str);
-	 // you may process the line here itself, as and when it is obtained
-	 }
-	 */
 
 
 	@Keyword
@@ -3506,7 +3438,7 @@ public class ReusableMethodsManage extends BaseClass {
 		}
 		else {
 			WebUI.delay(2)
-			String regdAmt = data.getCellData(sheetName,"BillingPrice", rowNum)
+			String regdAmt = data.getCellData(sheetName,"BillingPriceIND", rowNum)
 			String paymentStatus = data.getCellData(sheetName, "PaymentStatus", rowNum)
 			WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
 			WebUI.delay(1)
@@ -3610,4 +3542,6 @@ public class ReusableMethodsManage extends BaseClass {
 		//WebUI.verifyMatch(regStatus,'Completed',false,FailureHandling.CONTINUE_ON_FAILURE)
 	   }
 	}
+	
+	
 }

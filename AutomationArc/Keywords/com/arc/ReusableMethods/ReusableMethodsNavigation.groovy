@@ -455,6 +455,12 @@ public class ReusableMethodsNavigation {
 
 	@Keyword
 	public static void payNow(){
+		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+			println "Manage"
+		WebUI.delay(2)
+		WebUI.scrollToElement(findTestObject('Manage/ProjectDetailVerification/a_ Manage'), 5)
+		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+		}
 		WebUI.scrollToElement(findTestObject('Manage/TeamModule/a_ Team'), 10)
 		WebUI.click(findTestObject('Manage/TeamModule/a_ Team'))
 		WebUI.delay(2)
