@@ -647,6 +647,13 @@ public class ReusableMethodsPayment extends BaseClass{
 		//WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
 		//WebUI.delay(1)
 		//WebUI.click(findTestObject('PayNowRegistrationPaymentIN/a_ Manage'))
+		WebUI.delay(3)
+		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+			println "Manage"
+			WebUI.delay(2)
+			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+		}
+		WebUI.scrollToElement(findTestObject('PayNowRegistrationPaymentIN/a_ Billing'), 2)
 		WebUI.click(findTestObject('PayNowRegistrationPaymentIN/a_ Billing'))
 		WebUI.verifyElementPresent(findTestObject('PayNowRegistrationPaymentIN/button_Pay now'), 10)
 		WebUI.click(findTestObject('PayNowRegistrationPaymentIN/button_Pay now'))

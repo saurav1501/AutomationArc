@@ -1887,6 +1887,7 @@ public class ReusableMethodsManage extends BaseClass {
 			String reviewOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/ReviewOrderId'))
 			data.setCellData(sheetName, "ReviewId", rowNum,reviewOrderId)
 			WebUI.verifyMatch(regDate,registrationDate , false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(regAmount,regdAmt , false, FailureHandling.CONTINUE_ON_FAILURE)
 		}
 
 		// Assert.assertEquals(regAmount, regdAmt)
