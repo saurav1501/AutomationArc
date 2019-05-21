@@ -529,6 +529,17 @@ public class ReusableMethodsPayment extends BaseClass{
 		WebUI.waitForElementVisible(findTestObject('Object Repository/paymentPageNewUI/ContinueButtonIndiaPaymentPopUp'), 10)
 		WebUI.click(findTestObject('Object Repository/paymentPageNewUI/ContinueButtonIndiaPaymentPopUp'))
 		WebUI.delay(20)
+		if((uniqueSpaceTypesFlag==true)){
+			println "Space type matched"
+			WebUI.waitForElementVisible(findTestObject('Object Repository/PayNowRegistrationPaymentUSTest/RegistrationPaymentConfirmationPopCloseButton'), 70)
+			WebUI.delay(2)
+			WebUI.click(findTestObject('Object Repository/PayNowRegistrationPaymentUSTest/RegistrationPaymentConfirmationPopCloseButton'))
+			uniqueSpaceTypesFlag=false
+		}
+		else{
+			println "Space type not matched"
+			uniqueSpaceTypesFlag=false
+		}
 		WebUI.waitForElementVisible(findTestObject('PaymenntLocator/NextButton'), 40)
 		WebUI.click(findTestObject('PaymenntLocator/NextButton'))
 		WebUI.delay(5)
