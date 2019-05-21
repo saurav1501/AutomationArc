@@ -60,5 +60,14 @@
          <runEnabled>true</runEnabled>
          <testSuiteEntity>Test Suites/BuildingSuites/Transit/Aboveground/INDTransitSuite/INDTransitAbovegroundSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
+      <TestSuiteRunConfiguration>
+         <configuration>
+            <groupName>Web Desktop</groupName>
+            <profileName>STG-IND</profileName>
+            <runConfigurationId>Firefox</runConfigurationId>
+         </configuration>
+         <runEnabled>false</runEnabled>
+         <testSuiteEntity>Test Suites/BuildingSuites/Transit/Underground/INDTransitSuite/USTransitUndergroundSuite</testSuiteEntity>
+      </TestSuiteRunConfiguration>
    </testSuiteRunConfigurations>
 </TestSuiteCollectionEntity>

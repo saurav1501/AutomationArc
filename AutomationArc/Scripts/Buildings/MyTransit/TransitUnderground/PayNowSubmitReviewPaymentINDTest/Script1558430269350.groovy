@@ -18,16 +18,21 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
+import org.testng.Assert
+
+//PayNow Submit Review payment IND
 
 try {
 	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.selectPayNow'()
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.paymentPageBuildingTrasit'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumThree)
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.regPaymentByCheckIND'(GlobalVariable.CCPayment , GlobalVariable.rowNumThree)
-		
+
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.payNowSubmitReviewPaymentIND'()
+
 } catch (Throwable t) {
 	System.out.println(t.getLocalizedMessage())
-	Error e1 = new Error(t.getMessage())
-	e1.setStackTrace(t.getStackTrace())
-	e1.printStackTrace()
+		Error e1 = new Error(t.getMessage())
+		e1.setStackTrace(t.getStackTrace())
+		e1.printStackTrace()
 }
+
+
