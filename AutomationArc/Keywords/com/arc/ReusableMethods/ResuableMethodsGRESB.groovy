@@ -90,10 +90,10 @@ public class ResuableMethodsGRESB extends BaseClass {
 		String ownerMail 	= data.getCellData(sheetName, "GOwnerEmail", rowNum);
 		String ownerCountry = data.getCellData(sheetName, "GOwnerCountry", rowNum);
 
-		WebUI.click(findTestObject('Portfolio/GRESB/button_Import from GRESB'))
-		WebUI.delay(5)
 		Date date = new Date(System.currentTimeMillis())
 		data.setCellData(sheetName,"ProjectName",5, "INDGRESB Portfolio" +" " +formatarDate.format(date))
+		WebUI.click(findTestObject('Portfolio/GRESB/button_Import from GRESB'))
+		WebUI.delay(5)
 		String prjName 	= data.getCellData(sheetName, "ProjectName",5)
 		WebUI.sendKeys(findTestObject('Portfolio/GRESB/New/PortfolioName'), prjName)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/Portfolio/GRESB/select_Select Owner TypeBusine'), ownerType, false)
@@ -126,7 +126,7 @@ public class ResuableMethodsGRESB extends BaseClass {
 		String ownerMail 	= data.getCellData(sheetName, "GOwnerEmail", rowNum);
 		String ownerCountry = data.getCellData(sheetName, "GOwnerCountry", rowNum);
 
-		WebUI.verifyOptionSelectedByLabel(findTestObject('Portfolio/GRESB/OwnerCountry'), ownerCountry, false,2, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyOptionSelectedByLabel(findTestObject('Portfolio/GRESB/OwnerCountry'), "United States", false,2, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.delay(2)
 
 		WebUI.sendKeys(findTestObject('Portfolio/GRESB/input_Owner Email_form-control'),'Not Valid')

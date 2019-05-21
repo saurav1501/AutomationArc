@@ -15,7 +15,7 @@ import internal.GlobalVariable as GlobalVariable
 
 try {
 	
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.billingStatusPriceIND'(GlobalVariable.pricingSheet, GlobalVariable.rowNumTwo)	
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.billingStatusPrices'(GlobalVariable.pricingSheet, GlobalVariable.rowNumTwo)	
 } catch (Throwable t) {
 	System.out.println(t.getLocalizedMessage())
 	Error e1 = new Error(t.getMessage())
