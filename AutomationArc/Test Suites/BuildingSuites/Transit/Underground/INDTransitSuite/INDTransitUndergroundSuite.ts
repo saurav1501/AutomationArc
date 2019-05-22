@@ -245,10 +245,10 @@
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/CreditStatusDuringSubmitReviewTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>0306031c-fd4e-41e2-b5d0-c78083e12f18</guid>
+      <guid>c942becd-7378-4bf4-bd5b-77b50fe45c92</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/PreCertificationReviewTransitUnderGroundTest</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/INDPreCertificationReviewTransitUnderGroundTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>c9a0b37d-9219-4e50-aa3f-ba3176bbc584</guid>
@@ -275,10 +275,10 @@
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/ScoreVersionVerificationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>435a69b3-fd10-4bef-b5be-9c3b35d39345</guid>
+      <guid>5c5834bb-41be-464c-a060-ebd90bbe5aff</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/5YearINDBillingAmountAndStatusTest</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/BillingDateAndStatusTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>61fb0ed3-bcd8-47c4-b50b-055aa0437228</guid>

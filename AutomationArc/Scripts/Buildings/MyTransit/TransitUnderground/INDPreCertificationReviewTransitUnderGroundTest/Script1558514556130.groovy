@@ -18,16 +18,25 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
 
-try {
-	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.selectPayNow'()
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.paymentPageBuildingTrasit'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSeven)
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.regPaymentByCheckIND'(GlobalVariable.CCPayment , GlobalVariable.rowNumThree)
-		
-} catch (Throwable t) {
-	System.out.println(t.getLocalizedMessage())
-	Error e1 = new Error(t.getMessage())
-	e1.setStackTrace(t.getStackTrace())
-	e1.printStackTrace()
-}
+//Transit Underground Pre-Certification review (Using 100% promocode)
+	
+	try{
+	
+			//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSeven)
+			
+			CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSubmitReview.preCertificationSelectionAndSummeryTransit'()
+			
+			//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.reviewPaymentUsingPromocode'(GlobalVariable.BuildingSheet,GlobalVariable.rowNumSeven)
+			
+			CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.reviewPaymentByCheckIND'()
+			
+			CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSubmitReview.submitPreCertAndVerifySuccessMessage'()
+	
+	} catch (Throwable t) {
+			  System.out.println(t.getLocalizedMessage())
+			  Error e1 = new Error(t.getMessage())
+			  e1.setStackTrace(t.getStackTrace())
+			  e1.printStackTrace()
+	}

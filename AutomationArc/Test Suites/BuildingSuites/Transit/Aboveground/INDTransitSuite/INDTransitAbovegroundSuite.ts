@@ -197,16 +197,16 @@
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/CertiVerifyCertificationDetailsForNotCertfiedProjectsTest.java</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>09f870ea-1078-42c9-a47f-4e930e7a7237</guid>
+      <guid>fbde140b-dad0-4e29-90af-df6861ae8726</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/CertificationReviewTransitAboveGroundTest</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/INDCertificationReviewTransitAboveGroundTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>c572351e-c963-43d5-9f41-d45076bba9ea</guid>
+      <guid>7df24f79-a3d6-4f76-a64d-b8a9fa732927</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/5YearINDBillingAmountAndStatusTest</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/BillingDateAndStatusTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>1e31d210-4d27-4425-aadb-944211ccc4c2</guid>

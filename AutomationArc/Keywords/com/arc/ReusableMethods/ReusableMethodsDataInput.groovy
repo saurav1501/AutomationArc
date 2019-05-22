@@ -121,7 +121,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		WebUI.delay(15)
 		//Trial flow is dependent on it, if we uncomment it the trial flow will fail
-		//WebUI.doubleClick(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'))
+		WebUI.doubleClick(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/span_Upload.XLS'), 20)
 		WebUI.delay(2)
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/span_Upload.XLS'))
