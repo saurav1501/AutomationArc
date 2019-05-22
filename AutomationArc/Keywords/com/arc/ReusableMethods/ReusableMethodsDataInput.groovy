@@ -4507,6 +4507,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(8)
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
 		WebUI.delay(12)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Survey/div_Transportation Survey'), 40)
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
 		WebUI.delay(5)
 		WebUI.waitForElementVisible(findTestObject('DataInput/Survey/CopySurveyLink'), 20)

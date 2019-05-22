@@ -1854,7 +1854,7 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public void billingStatusTransit(String sheetName, int rowNum){
 		WebUI.delay(2)
-		String regdAmt = data.getCellData(sheetName, "DiscRegAmount", rowNum)
+		String regdAmt = data.getCellData(sheetName, "RegAmount", rowNum)
 		String reviewAmt = data.getCellData(sheetName, "DiscReviewAmount", rowNum)
 		String registrationDate = data.getCellData(sheetName, "RegDate", rowNum)
 		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
@@ -1889,21 +1889,6 @@ public class ReusableMethodsManage extends BaseClass {
 			WebUI.verifyMatch(regDate,registrationDate , false, FailureHandling.CONTINUE_ON_FAILURE)
 			WebUI.verifyMatch(regAmount,regdAmt , false, FailureHandling.CONTINUE_ON_FAILURE)
 		}
-
-		// Assert.assertEquals(regAmount, regdAmt)
-
-
-
-		//Review Payment details verification
-		/*
-		 String revieDate= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/ReviewPaymentDate'))
-		 String reviewOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/ReviewOrderId'))
-		 String reviewAmount= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/ReviewAmount'))
-		 String reviewStatus= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/ReviewPaymentStatus'))
-		 String revieworderId = data.setCellData(sheetName, "ReviewId", rowNum,reviewOrderId)
-		 Assert.assertEquals(revieDate, verifyBillingDate() )
-		 //	Assert.assertEquals(reviewAmount, reviewAmt)
-		 Assert.assertEquals(reviewStatus, "Completed")*/
 	}
 
 	@Keyword
@@ -1911,15 +1896,11 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(5)
 		String regdAmt = data.getCellData(sheetName, "RegAmount", rowNum)
 		String registrationDate = data.getCellData(sheetName, "RegDate", rowNum)
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)
-		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))*/
+		
 		WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/BillingParksmart'),2)
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/BillingParksmart'))
-
 		//Registration Payment details verification
 		WebUI.delay(5)
-
 		String regDate= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/registrationPaymentDate'))
 		WebUI.verifyMatch(regDate, registrationDate ,false,FailureHandling.CONTINUE_ON_FAILURE)
 		String regOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationOrderId'))
@@ -1939,9 +1920,7 @@ public class ReusableMethodsManage extends BaseClass {
 	public void certificationDetailVerification(String sheetName ,int rowNum){
 		String certiType= data.getCellData(sheetName, "CertiType", rowNum)
 		String certiLevel= data.getCellData(sheetName, "CertiLevel", rowNum)
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)
-		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))*/
+		
 		WebUI.scrollToElement(findTestObject('Manage/CertificationAndScore/a_ Certifications'), 2)
 		WebUI.click(findTestObject('Manage/CertificationAndScore/a_ Certifications'))
 		WebUI.delay(2)

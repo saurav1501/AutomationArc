@@ -22,17 +22,7 @@ import internal.GlobalVariable as GlobalVariable
 
 
 try{
-	
-	
-	
-/*	
-	if(GlobalVariable.environment=='dev')
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.devsurveySubmit'(GlobalVariable.BDataInput)
-	else
-*/	
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.surveySubmitTr'(GlobalVariable.BDataInput)
-	
-	
 } catch (Throwable t) {
 	WebUI.closeWindowIndex(1)
 	WebUI.delay(2)
