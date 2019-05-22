@@ -169,6 +169,10 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	public void uploadArcDataTemplateTransitAboveAnalytics(){
 		WebUI.refresh()
 		WebUI.delay(15)
+		if((WebUI.getAttribute(findTestObject('Object Repository/Page_Arc dashboard/a_ CreditsActions1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ CreditsActions'))
+		}
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		WebUI.delay(15)
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'))

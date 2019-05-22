@@ -30,10 +30,11 @@ try {
     CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.payNowRegistrationPaymentIND'()
 
 } catch (Throwable t) {
+    WebUI.closeWindowTitle('', FailureHandling.OPTIONAL)
 	System.out.println(t.getLocalizedMessage())
-		Error e1 = new Error(t.getMessage())
-		e1.setStackTrace(t.getStackTrace())
-		e1.printStackTrace()
+	Error e1 = new Error(t.getMessage())
+	e1.setStackTrace(t.getStackTrace())
+	e1.printStackTrace()
 }
 
 

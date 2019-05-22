@@ -244,4 +244,9 @@
       <initValue>'HumanExp'</initValue>
       <name>TemplateHE</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Saurav K'</initValue>
+      <name>teamMemName</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

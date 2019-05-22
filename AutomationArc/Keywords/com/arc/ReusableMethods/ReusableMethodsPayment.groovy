@@ -641,6 +641,9 @@ public class ReusableMethodsPayment extends BaseClass{
 		WebUI.click(findTestObject('PayNowRegistrationPaymentIN/a_Make Payment'))
 		WebUI.click(findTestObject('PayNowRegistrationPaymentIN/returnToMerchantSite'))
 		WebUI.switchToWindowTitle('Arc dashboard')
+		WebUI.delay(8)
+		WebUI.waitForElementPresent(findTestObject('PayNowRegistrationPaymentIN/checkStatusCompleted'), 20)
+		WebUI.waitForElementVisible(findTestObject('PayNowRegistrationPaymentIN/checkStatusCompleted'), 20)
 		Assert.assertEquals(WebUI.getText(findTestObject('PayNowRegistrationPaymentIN/checkStatusCompleted')),'Completed')
 
 	}
