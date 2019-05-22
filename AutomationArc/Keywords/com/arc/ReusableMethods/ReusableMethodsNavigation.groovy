@@ -13,6 +13,9 @@ import com.kms.katalon.core.webui.driver.DriverFactory
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 import internal.GlobalVariable
+import io.qameta.allure.Epic
+import io.qameta.allure.Feature
+import io.qameta.allure.Step
 
 public class ReusableMethodsNavigation {
 	WebDriver driver=DriverFactory.getWebDriver()
@@ -95,7 +98,9 @@ public class ReusableMethodsNavigation {
 		WebUI.verifyMatch(postNavigationLoginText,'My Portfolios',false)
 	}
 
+	//@Step("Type {user.name} / {user.password}.")
 	@Keyword
+	@Step
 	public void navigateToBuildingTransit() {
 		WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
 		WebUI.delay(3)
