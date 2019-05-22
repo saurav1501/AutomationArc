@@ -29,7 +29,10 @@ try {
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.payNowSubmitReviewPaymentIND'()
 
 } catch (Throwable t) {
-	System.out.println(t.getLocalizedMessage())
+		WebUI.closeWindowTitle('', FailureHandling.OPTIONAL)
+		WebUI.closeWindowIndex(1, FailureHandling.OPTIONAL)
+		WebUI.switchToWindowIndex(0)
+		System.out.println(t.getLocalizedMessage())
 		Error e1 = new Error(t.getMessage())
 		e1.setStackTrace(t.getStackTrace())
 		e1.printStackTrace()
