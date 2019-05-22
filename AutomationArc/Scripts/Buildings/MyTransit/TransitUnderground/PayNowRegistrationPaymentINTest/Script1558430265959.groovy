@@ -24,17 +24,19 @@ import org.testng.Assert
 
 //Pay Now Registration Payment Ind
 
-try {
+  try {
 	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
 
-    CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.payNowRegistrationPaymentIND'()
+      CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.payNowRegistrationPaymentIND'()
 
-} catch (Throwable t) {
-	System.out.println(t.getLocalizedMessage())
+  } catch (Throwable t) {
+		WebUI.closeWindowTitle('', FailureHandling.OPTIONAL)
+		WebUI.switchToWindowIndex(0)
+	    System.out.println(t.getLocalizedMessage())
 		Error e1 = new Error(t.getMessage())
 		e1.setStackTrace(t.getStackTrace())
 		e1.printStackTrace()
-}
+  }
 
 
 

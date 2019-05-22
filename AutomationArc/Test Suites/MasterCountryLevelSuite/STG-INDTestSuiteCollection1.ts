@@ -67,7 +67,7 @@
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
          <runEnabled>false</runEnabled>
-         <testSuiteEntity>Test Suites/BuildingSuites/Transit/Underground/INDTransitSuite/USTransitUndergroundSuite</testSuiteEntity>
+         <testSuiteEntity>Test Suites/BuildingSuites/Transit/Underground/INDTransitSuite/INDTransitUndergroundSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
    </testSuiteRunConfigurations>
 </TestSuiteCollectionEntity>
