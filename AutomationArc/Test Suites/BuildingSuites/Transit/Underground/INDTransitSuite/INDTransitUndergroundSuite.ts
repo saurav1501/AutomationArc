@@ -301,13 +301,13 @@
    <testCaseLink>
       <guid>f547d5b9-e1cf-4353-ac9d-cc0a91c8acb5</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/PayNowSubmitReviewPaymentINDTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d1a44cdc-1ad6-4e88-a1ca-b8820e5d4a41</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/DownloadAndVerifyTheSnapshotFileNameTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
