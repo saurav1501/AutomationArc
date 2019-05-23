@@ -275,10 +275,10 @@
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/ScoreVersionVerificationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>5c5834bb-41be-464c-a060-ebd90bbe5aff</guid>
+      <guid>c8555221-6a03-4660-ba32-0b7c4d22c3b2</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/BillingDateAndStatusTest</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/BillingDateAndStatusTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>61fb0ed3-bcd8-47c4-b50b-055aa0437228</guid>

@@ -28,8 +28,8 @@ import internal.GlobalVariable as GlobalVariable
 
 
 try{
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSeven)
-	WebUI.delay(10)
+	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSeven)
+	
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.billingStatusTransit'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumThree)
 
 
