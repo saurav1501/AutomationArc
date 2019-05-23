@@ -434,8 +434,8 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.delay(15)
 		WebUI.waitForPageLoad(30)
 		WebUI.switchToWindowIndex(1)
-		String allAction = WebUI.getText(findTestObject('Manage/CityCom/LEED/All Actions'))
-		WebUI.verifyMatch(allAction,'All Actions', false)
+		//String allAction = WebUI.getText(findTestObject('Manage/CityCom/LEED/All Actions'))
+		//WebUI.verifyMatch(allAction,'All Actions', false)
 
 		WebUI.closeWindowIndex(0)
 		WebUI.delay(2)
