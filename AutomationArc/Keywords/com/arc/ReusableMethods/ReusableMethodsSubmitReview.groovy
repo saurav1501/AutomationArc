@@ -1126,6 +1126,8 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/SubmitButtonAdminToolReturnReview'))
 		WebUI.delay(10)
+		WebUI.closeWindowIndex(1)
+		WebUI.delay(2)
 		WebUI.switchToWindowIndex(0)
 		WebUI.delay(3)
 		WebUI.refresh()
