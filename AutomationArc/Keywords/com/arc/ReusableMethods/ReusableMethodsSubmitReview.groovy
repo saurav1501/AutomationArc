@@ -1108,7 +1108,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 	public void VerifyChangeTextInSubmitReviewWhenPaymentIsPending(){
 		WebUI.delay(4)
 		WebUI.click(findTestObject('SubmitReview/a_ Review'))
-		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),15)
+		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),40)
 		WebUI.delay(7)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/SubmitReviewText')), "Submit for Review", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/ProjectIsStillUnderReviewText')), "Project is still under review", false)
@@ -1138,7 +1138,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/CreditFileupload/AllActions'))
 		WebUI.delay(4)
 		WebUI.click(findTestObject('SubmitReview/a_ Review'))
-		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),15)
+		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),40)
 		WebUI.delay(4)
 		WebUI.scrollToElement(findTestObject('Object Repository/SubmitReview/NewReviewStatusForPendingPayment'), 4)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/NewReviewStatusForPendingPayment')), "Please complete your review payment in order to proceed", false)
