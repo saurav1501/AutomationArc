@@ -1790,6 +1790,7 @@ public class ReusableMethodsManage extends BaseClass {
 		//WebUI.click(findTestObject('Object Repository/Manage/BillingSection/RegistrationPaymentStatus'))
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/DownloadBilling'))
 		WebUI.delay(6)
+		KeywordUtil.markWarning("Billing order ID : " + orderId)
 		print orderId +".pdf"
 		Assert.assertTrue(ReusDataInput.isFileDownloaded(orderId +".pdf"), "Order File Didn't downloaded successfully")
 		println "Order File downloaded and verified successfully"
