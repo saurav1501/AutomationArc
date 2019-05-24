@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify ability to add human experience reading on the year basis .</description>
+   <name>CreateHumanExpMeterReading(MedianAQI)2018_1_16Test</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>4379bada-cfa1-48ac-83fb-be7bebda5349</testCaseGuid>
+</TestCaseEntity>

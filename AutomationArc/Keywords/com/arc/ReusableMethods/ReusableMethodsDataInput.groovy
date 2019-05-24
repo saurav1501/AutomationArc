@@ -3,6 +3,7 @@ import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
 import java.awt.Robot
 import java.awt.Toolkit
+import java.awt.TexturePaintContext.Int
 import java.awt.datatransfer.Clipboard
 import java.awt.datatransfer.DataFlavor
 import java.awt.datatransfer.StringSelection
@@ -3304,6 +3305,104 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	//City DataInput
 	@Keyword
+	public void createEnergyMeterReadingPrevious(String sheetName,int rowNum1) throws IOException, InterruptedException{
+		String srowNum = data.getCellData(sheetName, "rowNum", 2)
+		int rowNum = Integer.parseInt(srowNum)
+
+		String carbonfootprint  = data.getCellData(sheetName, "ECarbonfootprint", rowNum)
+		String zero="0";
+		if(carbonfootprint.equals(zero))
+		{
+			KeywordUtil.markPassed("Energy Meter is not  project required")
+		}
+		else
+		{
+			WebUI.click(findTestObject('DataInput/CityCom/a_ Data Input'))
+			WebUI.delay(5)
+			WebUI.click(findTestObject('DataInput/CityCom/span_Energy'))
+			WebUI.delay(10)
+			WebUI.click(findTestObject('DataInput/CityCom/button_Add Year'))
+			WebUI.delay(8)
+			WebUI.click(findTestObject('DataInput/CityCom/button_Previous Year'))
+			WebUI.delay(2)
+			WebUI.setText(findTestObject('DataInput/CityCom/TextboxValue2'), carbonfootprint)
+			WebUI.delay(2)
+			WebUI.click(findTestObject('DataInput/CityCom/SaveButton2'))
+			WebUI.delay(7)
+
+			WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CityCom/DeleteButton',[index: 2]), 60)
+		
+			WebUI.delay(4)
+		//	Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/TextboxValue2'),"value"), carbonfootprint,"Not Valid")
+		}
+	}
+	
+	
+	@Keyword
+	public void verifyEnergyScore(String sheetName,int rowNum1) throws IOException, InterruptedException{
+		String srowNum = data.getCellData(sheetName, "rowNum", 2)
+		int rowNum = Integer.parseInt(srowNum)
+	
+		String energyScoreIn100 = data.getCellData(sheetName, "EnergyScore", rowNum)
+			
+		ReusableMethodsNavigation.clickScoreLabel()
+		WebUI.click(findTestObject('PerformanceScore/Score/a_ Energy'))
+		WebUI.delay(13)
+		WebUI.waitForElementVisible(findTestObject('DataInput/CityCom/Score100/Energy'), 40)
+		String UIenergyScoreIn100 = WebUI.getText(findTestObject('DataInput/CityCom/Score100/Energy'))
+        WebUI.verifyMatch(UIenergyScoreIn100, energyScoreIn100, false)
+		
+		}
+	
+	@Keyword
+	public void verifyWaterScore(String sheetName,int rowNum1) throws IOException, InterruptedException{
+		String srowNum = data.getCellData(sheetName, "rowNum", 2)
+		int rowNum = Integer.parseInt(srowNum)
+	
+		String waterScoreIn100 = data.getCellData(sheetName, "WaterScore", rowNum)
+				
+		ReusableMethodsNavigation.clickScoreLabel()
+		WebUI.click(findTestObject('PerformanceScore/Score/a_ Water'))
+		WebUI.delay(13)
+		WebUI.waitForElementVisible(findTestObject('DataInput/CityCom/Score100/Water'), 40)
+		String UIwaterScoreIn100 = WebUI.getText(findTestObject('DataInput/CityCom/Score100/Water'))
+		WebUI.verifyMatch(UIwaterScoreIn100, waterScoreIn100, false)
+		
+		}
+	@Keyword
+	public void verifyWasteScore(String sheetName,int rowNum1) throws IOException, InterruptedException{
+		String srowNum = data.getCellData(sheetName, "rowNum", 2)
+		int rowNum = Integer.parseInt(srowNum)
+	
+		String wasteIn100 = data.getCellData(sheetName, "WasteScore", rowNum)
+		
+		ReusableMethodsNavigation.clickScoreLabel()
+		WebUI.click(findTestObject('PerformanceScore/Score/a_ Waste'))
+		WebUI.delay(13)
+
+		WebUI.waitForElementVisible(findTestObject('DataInput/CityCom/Score100/Waste'), 40)
+		String UIwasteScoreIn100 = WebUI.getText(findTestObject('DataInput/CityCom/Score100/Waste'))
+		WebUI.verifyMatch(UIwasteScoreIn100, wasteIn100, false)
+		
+		}
+	@Keyword
+	public void verifyTransportScore(String sheetName,int rowNum1) throws IOException, InterruptedException{
+		String srowNum = data.getCellData(sheetName, "rowNum", 2)
+		int rowNum = Integer.parseInt(srowNum)
+
+		String transScoreIn100 = data.getCellData(sheetName, "TRScore", rowNum)
+				
+	    ReusableMethodsNavigation.clickScoreLabel()
+		WebUI.click(findTestObject('PerformanceScore/Score/a_ Transportation'))
+		WebUI.delay(13)
+		WebUI.waitForElementVisible(findTestObject('DataInput/CityCom/Score100/Transport'),40)
+		String UITransportScoreIn100 = WebUI.getText(findTestObject('DataInput/CityCom/Score100/Transport'))
+		WebUI.verifyMatch(UITransportScoreIn100, transScoreIn100, false)
+		
+		}
+	
+	
+	@Keyword
 	public void createEnergyMeterReading(String sheetName, int rowNum) throws IOException, InterruptedException{
 
 		String reading1  = data.getCellData(sheetName, "EReading1", rowNum)
@@ -3418,6 +3517,98 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/TextboxValue5'),"value"),reading5,"Not Valid")
 	}
 
+
+	@Keyword
+	public void createWaterMeterReadingPrevious(String sheetName, int rowNum1) throws IOException, InterruptedException {
+		/*************************Reading data from excel sheet ************************************/
+		String srowNum = data.getCellData(sheetName,"rowNum", 2)
+		int rowNum = Integer.parseInt(srowNum)
+
+		String WaterUseGal  = data.getCellData(sheetName, "WaterUse", rowNum)
+		String zero="0";
+		if(WaterUseGal.equals(zero))
+		{
+			KeywordUtil.markPassed("Water Meter is not required")
+		}
+		else
+		{
+
+			WebUI.delay(5)
+			WebUI.click(findTestObject('DataInput/CityCom/a_ Data Input'))
+			WebUI.delay(2)
+			WebUI.doubleClick(findTestObject('DataInput/CityCom/span_Water'))
+			WebUI.delay(10)
+			WebUI.scrollToElement(findTestObject('DataInput/CityCom/button_Add Year'), 3)
+			WebUI.click(findTestObject('DataInput/CityCom/button_Add Year'))
+			WebUI.delay(8)
+
+			WebUI.scrollToElement(findTestObject('DataInput/CityCom/button_Previous Year'), 2)
+			WebUI.click(findTestObject('DataInput/CityCom/button_Previous Year'))
+			WebUI.delay(2)
+
+
+			WebUI.setText(findTestObject('DataInput/CityCom/TextboxValue2'), WaterUseGal)
+			WebUI.delay(2)
+			WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/Score100/span_Per Year'), 10)
+			WebUI.click(findTestObject('DataInput/CityCom/Score100/span_Per Year'))
+			WebUI.delay(2)
+			WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/Score100/a_Per Day'), 10)
+			WebUI.click(findTestObject('DataInput/CityCom/Score100/a_Per Day'))
+			
+			WebUI.delay(3)
+			WebUI.click(findTestObject('DataInput/CityCom/SaveButton2'))
+			WebUI.delay(6)
+
+			WebUI.waitForElementNotClickable(findTestObject('DataInput/CityCom/TextboxValue2'), 60)
+
+			WebUI.delay(10)
+			Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/TextboxValue2'),"value"),WaterUseGal,"Not Valid")
+		}
+
+
+	}
+	
+	
+	@Keyword
+	public void verifyHumExpScore(String sheetName,int rowNum1) throws IOException, InterruptedException{
+		
+		String srowNum = data.getCellData(sheetName, "rowNum", 2)
+		int rowNum = Integer.parseInt(srowNum)
+
+		String AQIHumScore = data.getCellData(sheetName, "AQIHumScore", rowNum)
+		int aQIHumScore = Integer.parseInt(AQIHumScore)	
+		
+		String HCrimeScore = data.getCellData(sheetName, "HCrimeScore", rowNum)
+		int hCrimeScore = Integer.parseInt(HCrimeScore)
+		
+		
+		String HumEudScore = data.getCellData(sheetName, "HumEudScore", rowNum)
+		int humEudScore = Integer.parseInt(HumEudScore)
+		
+		String HEQScore = data.getCellData(sheetName, "HEQScore", rowNum)
+		int hEQScore = Integer.parseInt(HEQScore)
+		
+		String HProsScore = data.getCellData(sheetName, "HProsScore", rowNum)
+		int hProsScore = Integer.parseInt(HProsScore)
+				
+		double avgAQICrime = (aQIHumScore + hCrimeScore)/2
+		
+		double totalavg = (avgAQICrime + humEudScore + hEQScore + hProsScore)/4
+		
+		BigDecimal totalAvg = new BigDecimal(totalavg)
+		totalAvg = totalAvg.setScale(0, RoundingMode.HALF_EVEN)
+		String TotalScore = totalAvg.toString()
+		
+		ReusableMethodsNavigation.clickScoreLabel()
+		WebUI.click(findTestObject('PerformanceScore/Score/a_ Human Experience'))
+		WebUI.delay(13)
+		WebUI.waitForElementVisible(findTestObject('DataInput/CityCom/Score100/HumanExp'),40)
+		String UIHumanExp = WebUI.getText(findTestObject('DataInput/CityCom/Score100/HumanExp'))
+		WebUI.verifyMatch(UIHumanExp,TotalScore, false)
+		
+}
+	
+	
 	@Keyword
 	public void createWasteGenerationMeterReading(String sheetName,int rowNum) throws IOException, InterruptedException {
 
@@ -3514,6 +3705,61 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/dWTextboxValue4'),"value"),"50","Not Valid")
 	}
 
+	@Keyword
+	public void createWaste(String sheetName,int rowNum1) throws IOException, InterruptedException {
+
+		/*************************Reading data from excel sheet ************************************/
+
+		String srowNum = data.getCellData(sheetName, "rowNum", 2)
+		int rowNum = Integer.parseInt(srowNum)
+
+		String wasteGenerationintensity  = data.getCellData(sheetName, "WasteGenerationintensity", rowNum)
+		String zero="0";
+		if(wasteGenerationintensity.equals(zero))
+		{
+			KeywordUtil.markPassed("Waste Generation Meter is not required")
+		}
+		else
+		{
+			WebUI.click(findTestObject('DataInput/CityCom/a_ Data Input'))
+			WebUI.delay(2)
+			WebUI.click(findTestObject('DataInput/CityCom/span_Waste'))
+			WebUI.delay(5)
+			WebUI.click(findTestObject('DataInput/CityCom/GwAddYear'))
+			WebUI.delay(8)
+			WebUI.click(findTestObject('DataInput/CityCom/button_Previous Year'))
+			WebUI.delay(2)
+			WebUI.scrollToElement(findTestObject('DataInput/CityCom/CWTextboxValue1'),2)
+			WebUI.sendKeys(findTestObject('DataInput/CityCom/CWTextboxValue2'), wasteGenerationintensity)
+			WebUI.delay(1)
+			WebUI.click(findTestObject('DataInput/CityCom/SaveButton2'))
+			WebUI.delay(6)
+
+			WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CityCom/DeleteButton',[index: 2]), 60)
+
+			String wastediversion  = data.getCellData(sheetName, "Landfilldiversion", rowNum)
+
+			WebUI.scrollToElement(findTestObject('DataInput/CityCom/DwAddYear'),2)
+			WebUI.delay(3)
+			WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/DwAddYear'),30)
+			WebUI.click(findTestObject('DataInput/CityCom/DwAddYear'))
+			WebUI.delay(6)
+			WebUI.scrollToElement(findTestObject('DataInput/CityCom/DPreviousYear'),2)
+			WebUI.click(findTestObject('DataInput/CityCom/DPreviousYear'))
+			WebUI.delay(2)
+
+			WebUI.sendKeys(findTestObject('DataInput/CityCom/dWTextboxValue2'), wastediversion)
+			WebUI.delay(4)
+			WebUI.click(findTestObject('DataInput/CityCom/SaveButton4'))
+			WebUI.delay(6)
+
+			WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CityCom/DeleteButton',[index: 4]), 60)
+		/*	WebUI.delay(10)
+			Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/dWTextboxValue2'),"value"),wastediversion,"Not Valid")
+*/		
+			}
+
+	}
 
 	@Keyword
 	public void createWasteGenerationMeterReadingTrial(String sheetName,int rowNum) throws IOException, InterruptedException {
@@ -3702,6 +3948,38 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 
 	@Keyword
+	public void createTransportPrev(String sheetName, int rowNum1) throws IOException, InterruptedException{
+		/*************************Reading data from excel sheet ************************************/
+
+		String srowNum = data.getCellData(sheetName, "rowNum", 2)
+		int rowNum = Integer.parseInt(srowNum)
+		String VMTPercapita  = data.getCellData(sheetName, "VMTPercapita", rowNum)
+		String zero="0";
+		if(VMTPercapita.equals(zero))
+		{
+			KeywordUtil.markPassed("Transportation Meter is not required")
+		}
+		else
+		{
+			WebUI.click(findTestObject('DataInput/CityCom/a_ Data Input'))
+			WebUI.delay(2)
+			WebUI.click(findTestObject('DataInput/CityCom/span_Transportation'))
+			WebUI.delay(10)
+			WebUI.scrollToElement(findTestObject('DataInput/CityCom/button_Add Year'), 4)
+			WebUI.click(findTestObject('DataInput/CityCom/button_Add Year'))
+			WebUI.delay(8)
+			WebUI.scrollToElement(findTestObject('DataInput/CityCom/button_Previous Year'),2)
+			WebUI.click(findTestObject('DataInput/CityCom/button_Previous Year'))
+			WebUI.delay(2)
+			WebUI.sendKeys(findTestObject('DataInput/CityCom/TextboxValue2'), VMTPercapita)
+			WebUI.click(findTestObject('DataInput/CityCom/SaveButton2'))
+			WebUI.delay(6)
+			//Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/TextboxValue2'),"value"),VMTPercapita,"Not Valid")
+
+		}
+
+	}
+	@Keyword
 	public void createTransportReadingTrial(String sheetName, int rowNum) throws IOException, InterruptedException{
 		/*************************Reading data from excel sheet ************************************/
 		String reading1  = data.getCellData(sheetName, "TReading1", rowNum)
@@ -3828,6 +4106,271 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/HTextboxValue8'),"value"),reading4,"Not Valid")
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/HTextboxValue9'),"value"),reading5,"Not Valid")
 	}
+
+
+
+	@Keyword
+	public void createHumanExpMeterAQI(String sheetName, int rowNum1)throws IOException, InterruptedException {
+		/*************************Reading data from excel sheet ************************************/
+
+		String srowNum = data.getCellData(sheetName, "rowNum", 2)
+		int rowNum = Integer.parseInt(srowNum)
+		String MedianAQI  = data.getCellData(sheetName, "MedianAQI", rowNum)
+		String AQIDaysUnhealthy  = data.getCellData(sheetName, "AQIDaysUnhealthy", rowNum)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Exp/Health_Add Year'), 60)
+		WebUI.click(findTestObject('DataInput/Exp/Health_Add Year'))
+		WebUI.delay(8)
+		WebUI.scrollToElement(findTestObject('DataInput/Exp/Health_Previous Year'),2)
+		WebUI.waitForElementClickable(findTestObject('DataInput/Exp/Health_Previous Year'), 60)
+		WebUI.click(findTestObject('DataInput/Exp/Health_Previous Year'))
+		WebUI.delay(7)
+
+		WebUI.scrollToElement(findTestObject('DataInput/Exp/AQIDays_Add Year'),10)
+		WebUI.waitForElementPresent(findTestObject('DataInput/Exp/AQIDays_Add Year'), 30)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Exp/AQIDays_Add Year'), 30)
+		WebUI.waitForElementClickable(findTestObject('DataInput/Exp/AQIDays_Add Year'), 60)
+		WebUI.click(findTestObject('DataInput/Exp/AQIDays_Add Year'))
+		WebUI.delay(7)
+
+		WebUI.scrollToElement(findTestObject('DataInput/Exp/AQIDays_Previous Year'),5)
+		WebUI.waitForElementPresent(findTestObject('DataInput/Exp/AQIDays_Previous Year'), 30)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Exp/AQIDays_Previous Year'), 30)
+		WebUI.waitForElementClickable(findTestObject('DataInput/Exp/AQIDays_Previous Year'), 60)
+		WebUI.click(findTestObject('DataInput/Exp/AQIDays_Previous Year'))
+		WebUI.delay(7)
+
+		String zero="0";
+		if(MedianAQI.equals(zero))
+		{
+			KeywordUtil.markPassed("Human Experience Median AQI Meter is not required")
+		}
+		else
+		{
+			WebUI.sendKeys(findTestObject('DataInput/CityCom/HTextboxValue14'), MedianAQI)
+			WebUI.sendKeys(findTestObject('DataInput/CityCom/HTextboxValue16'), AQIDaysUnhealthy)
+
+			WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton14'),60)
+			WebUI.click(findTestObject('DataInput/CityCom/SaveButton14'))
+			WebUI.delay(6)
+			WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton16'),60)
+			WebUI.click(findTestObject('DataInput/CityCom/SaveButton16'))
+			WebUI.delay(6)
+
+		}
+	}
+
+	@Keyword
+	public void createHumanExpMeterHighSchool(String sheetName, int rowNum1)throws IOException, InterruptedException {
+		/*************************Reading data from excel sheet ************************************/
+
+		/***************HighSchool and Bachelors ******************************************/
+		WebUI.click(findTestObject('DataInput/CityCom/a_ Data Input'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('DataInput/CityCom/span_Human Experience'))
+		WebUI.delay(5)
+		WebUI.waitForPageLoad(10)
+		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/EducationAddYear'), 60)
+
+		WebUI.click(findTestObject('DataInput/CityCom/EducationAddYear'))
+		WebUI.delay(8)
+		WebUI.scrollToElement(findTestObject('DataInput/CityCom/EducationAddPrevYear'),2)
+		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/EducationAddPrevYear'), 60)
+		WebUI.click(findTestObject('DataInput/CityCom/EducationAddPrevYear'))
+		WebUI.delay(5)
+
+		WebUI.scrollToElement(findTestObject('DataInput/CityCom/BachelorAddYear'), 2)
+		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/BachelorAddYear'),60)
+		WebUI.click(findTestObject('DataInput/CityCom/BachelorAddYear'))
+		WebUI.delay(5)
+		WebUI.waitForElementPresent(findTestObject('DataInput/CityCom/BachelorAddPrevYear'), 20)
+		WebUI.waitForElementVisible(findTestObject('DataInput/CityCom/BachelorAddPrevYear'), 20)
+		WebUI.scrollToElement(findTestObject('DataInput/CityCom/BachelorAddPrevYear'),5)
+		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/BachelorAddPrevYear'),60)
+		WebUI.click(findTestObject('DataInput/CityCom/BachelorAddPrevYear'))
+		WebUI.delay(8)
+		String srowNum = data.getCellData(sheetName,"rowNum",2)
+		int rowNum = Integer.parseInt(srowNum)
+		String HighSchool  = data.getCellData(sheetName, "HighSchool", rowNum)
+		String Bachelors  = data.getCellData(sheetName, "Bachelors", rowNum)
+
+
+		String zero="0";
+		if(HighSchool.equals(zero))
+		{
+			KeywordUtil.markPassed("Human Experience HighSchool Bachelors Meter is not required")
+		}
+		else
+		{
+			WebUI.setText(findTestObject('DataInput/CityCom/HTextboxValue2'), HighSchool)
+			WebUI.sendKeys(findTestObject('DataInput/CityCom/HTextboxValue4'), Bachelors)
+
+			WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton2'),60)
+			WebUI.click(findTestObject('DataInput/CityCom/SaveButton2'))
+			WebUI.delay(6)
+			WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton4'),60)
+			WebUI.click(findTestObject('DataInput/CityCom/SaveButton4'))
+			WebUI.delay(6)
+
+		}
+	}
+
+	@Keyword
+	public void createHumanExpMeterGini(String sheetName, int rowNum1)throws IOException, InterruptedException {
+		/*************************Reading data from excel sheet ************************************/
+
+		String srowNum = data.getCellData(sheetName, "rowNum", 2)
+		int rowNum = Integer.parseInt(srowNum)
+		String Gini  = data.getCellData(sheetName, "Gini", rowNum)
+		String Housingaffordability  = data.getCellData(sheetName, "Housingaffordability", rowNum)
+
+		WebUI.scrollToElement(findTestObject('DataInput/CityCom/EquAddYear'), 2)
+		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/EquAddYear'), 60)
+		WebUI.click(findTestObject('DataInput/CityCom/EquAddYear'))
+		WebUI.delay(5)
+		WebUI.waitForElementPresent(findTestObject('DataInput/CityCom/EquAddPrevYear'), 20)
+		WebUI.waitForElementVisible(findTestObject('DataInput/CityCom/EquAddPrevYear'), 20)
+		WebUI.scrollToElement(findTestObject('DataInput/CityCom/EquAddPrevYear'), 2)
+		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/EquAddPrevYear'), 60)
+		WebUI.click(findTestObject('DataInput/CityCom/EquAddPrevYear'))
+		WebUI.delay(5)
+
+		WebUI.scrollToElement(findTestObject('DataInput/CityCom/GiniAddYear'), 2)
+		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/GiniAddYear'), 60)
+		WebUI.click(findTestObject('DataInput/CityCom/GiniAddYear'))
+		WebUI.delay(5)
+		WebUI.waitForElementPresent(findTestObject('DataInput/CityCom/GiniAddPrevYear'), 20)
+		WebUI.waitForElementVisible(findTestObject('DataInput/CityCom/GiniAddPrevYear'), 20)
+		WebUI.scrollToElement(findTestObject('DataInput/CityCom/GiniAddPrevYear'), 2)
+		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/GiniAddPrevYear'), 60)
+		WebUI.click(findTestObject('DataInput/CityCom/GiniAddPrevYear'))
+		WebUI.delay(7)
+
+		String zero="0";
+		if(Gini.equals(zero))
+		{
+			KeywordUtil.markPassed("Human Experience Ginis Meter is not required")
+		}
+		else
+		{
+			WebUI.sendKeys(findTestObject('DataInput/CityCom/HTextboxValue6'), Housingaffordability)
+			WebUI.sendKeys(findTestObject('DataInput/CityCom/HTextboxValue8'), Gini)
+
+			WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton6'),60)
+			WebUI.click(findTestObject('DataInput/CityCom/SaveButton6'))
+			WebUI.delay(6)
+			WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton8'),60)
+			WebUI.click(findTestObject('DataInput/CityCom/SaveButton8'))
+			WebUI.delay(6)
+
+		}
+	}
+
+	@Keyword
+	public void createHumanExpMeterHProsUnemployment(String sheetName, int rowNum1)throws IOException, InterruptedException {
+		/*************************Reading data from excel sheet ************************************/
+
+		String srowNum = data.getCellData(sheetName, "rowNum", 2)
+		int rowNum = Integer.parseInt(srowNum)
+		String hprosUnemployment  = data.getCellData(sheetName, "HProsUnemployment", rowNum)
+		String MedianHouseholdIncome  = data.getCellData(sheetName, "MedianHouseholdIncome", rowNum)
+
+
+
+		WebUI.scrollToElement(findTestObject('DataInput/CityCom/ProsperityAddYear'), 2)
+		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/ProsperityAddYear'), 60)
+		WebUI.click(findTestObject('DataInput/CityCom/ProsperityAddYear'))
+		WebUI.delay(5)
+
+		WebUI.scrollToElement(findTestObject('DataInput/CityCom/ProsperityAddPrevYear'), 2)
+		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/ProsperityAddPrevYear'), 60)
+		WebUI.click(findTestObject('DataInput/CityCom/ProsperityAddPrevYear'))
+		WebUI.delay(7)
+
+
+
+		WebUI.scrollToElement(findTestObject('DataInput/Exp/Unemployment_Add Year'), 2)
+		WebUI.waitForElementClickable(findTestObject('DataInput/Exp/Unemployment_Add Year'), 60)
+		WebUI.click(findTestObject('DataInput/Exp/Unemployment_Add Year'))
+		WebUI.delay(5)
+
+		WebUI.scrollToElement(findTestObject('DataInput/Exp/Unemployment_Previous Year'), 2)
+		WebUI.waitForElementClickable(findTestObject('DataInput/Exp/Unemployment_Previous Year'), 60)
+		WebUI.click(findTestObject('DataInput/Exp/Unemployment_Previous Year'))
+		WebUI.delay(7)
+
+		String zero="0";
+		if(MedianHouseholdIncome.equals(zero))
+		{
+			KeywordUtil.markPassed("Human Experience pros Unemployment and MedianHouse Income Meter is not required")
+		}
+		else
+		{
+
+
+			WebUI.sendKeys(findTestObject('DataInput/CityCom/HTextboxValue10'), MedianHouseholdIncome)
+			WebUI.sendKeys(findTestObject('DataInput/CityCom/HTextboxValue12'), hprosUnemployment)
+
+
+			WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton10'),60)
+			WebUI.click(findTestObject('DataInput/CityCom/SaveButton10'))
+			WebUI.delay(5)
+			WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton12'),60)
+			WebUI.click(findTestObject('DataInput/CityCom/SaveButton12'))
+			WebUI.delay(5)
+
+
+
+		}
+	}
+
+	@Keyword
+	public void createHumanExpMeterCrime(String sheetName, int rowNum1)throws IOException, InterruptedException {
+		/*************************Reading data from excel sheet ************************************/
+
+		String srowNum = data.getCellData(sheetName, "rowNum", 2)
+		int rowNum = Integer.parseInt(srowNum)
+		String violentCrime  = data.getCellData(sheetName, "ViolentCrime", rowNum)
+		WebUI.delay(6)
+		WebUI.scrollToElement(findTestObject('DataInput/Exp/Crime_Add Year'), 2)
+		WebUI.waitForElementClickable(findTestObject('DataInput/Exp/Crime_Add Year'), 60)
+		WebUI.click(findTestObject('DataInput/Exp/Crime_Add Year'))
+		WebUI.delay(5)
+
+		WebUI.scrollToElement(findTestObject('DataInput/Exp/Crime_Previous Year'), 2)
+		WebUI.waitForElementClickable(findTestObject('DataInput/Exp/Crime_Previous Year'), 60)
+		WebUI.click(findTestObject('DataInput/Exp/Crime_Previous Year'))
+		WebUI.delay(7)
+
+		String zero="0";
+		if(violentCrime.equals(zero))
+		{
+			KeywordUtil.markPassed("Human Experience pros Unemployment and MedianHouse Income Meter is not required")
+		}
+		else
+		{
+
+
+			WebUI.sendKeys(findTestObject('DataInput/CityCom/HTextboxValue18'), violentCrime)
+			WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton18'),60)
+			WebUI.click(findTestObject('DataInput/CityCom/SaveButton18'))
+			WebUI.delay(10)
+
+			/*	Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/TextboxValue1'),"value"), reading1,"Not Valid")
+			 Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/TextboxValue2'),"value"),reading2,"Not Valid")
+			 Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/HTextboxValue3'),"value"),reading1,"Not Valid")
+			 Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/HTextboxValue4'),"value"),reading2,"Not Valid")
+			 Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/HTextboxValue5'),"value"),reading1,"Not Valid")
+			 Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/HTextboxValue6'),"value"),reading2,"Not Valid")
+			 Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/HTextboxValue7'),"value"),reading3,"Not Valid")
+			 Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/HTextboxValue8'),"value"),reading4,"Not Valid")
+			 Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/HTextboxValue9'),"value"),reading5,"Not Valid")
+			 */	
+		}
+	}
+
+
+
 
 
 	@Keyword
@@ -4540,18 +5083,18 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				r.keyRelease(KeyEvent.VK_CONTROL)
 				r.keyRelease(KeyEvent.VK_T)
 				WebUI.delay(2)
-				
+
 				r.keyPress(KeyEvent.VK_CONTROL)
-				 r.keyPress(KeyEvent.VK_V)
-				 r.keyRelease(KeyEvent.VK_CONTROL)
-				 r.keyRelease(KeyEvent.VK_V)
-				 WebUI.delay(4)
-				 r.keyPress(KeyEvent.VK_ENTER)
-				 r.keyRelease(KeyEvent.VK_ENTER)
-				 WebUI.delay(5)
-				 WebUI.switchToWindowIndex(1)
-				 WebUI.delay(10)
-			
+				r.keyPress(KeyEvent.VK_V)
+				r.keyRelease(KeyEvent.VK_CONTROL)
+				r.keyRelease(KeyEvent.VK_V)
+				WebUI.delay(4)
+				r.keyPress(KeyEvent.VK_ENTER)
+				r.keyRelease(KeyEvent.VK_ENTER)
+				WebUI.delay(5)
+				WebUI.switchToWindowIndex(1)
+				WebUI.delay(10)
+
 				WebUI.scrollToElement(findTestObject('DataInput/Survey/WalkR1'), 10)
 				WebUI.setText(findTestObject('DataInput/Survey/WalkR1'), walk1)
 				WebUI.setText(findTestObject('DataInput/Survey/BusR1'), walk2)
@@ -4561,7 +5104,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				WebUI.setText(findTestObject('DataInput/Survey/carSoloR1'), walk6)
 				WebUI.setText(findTestObject('DataInput/Survey/car23R1'), walk7)
 				WebUI.setText(findTestObject('DataInput/Survey/cars4R1'), walk8)
-				
+
 				boolean surveyAccept = WebUI.verifyElementVisible(findTestObject('DataInput/Survey/ACCEPTANDCLOSE'),FailureHandling.OPTIONAL)
 				println surveyAccept
 				if((surveyAccept)){
@@ -4577,7 +5120,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				println "Survey Submited Successufully"
 				//WebUI.verifyElementVisible(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/YourWorldIsAliveText'), FailureHandling.CONTINUE_ON_FAILURE)
 				/*WebUI.closeWindowIndex(1)
-				WebUI.switchToWindowIndex(0)*/
+				 WebUI.switchToWindowIndex(0)*/
 			}
 			else
 			{
@@ -4595,7 +5138,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				WebUI.delay(2)
 				WebUI.navigateToUrl(url)
 				WebUI.delay(5)
-				
+
 				WebUI.scrollToElement(findTestObject('DataInput/Survey/WalkR1'), 10)
 				WebUI.setText(findTestObject('DataInput/Survey/WalkR1'), walk1)
 				WebUI.setText(findTestObject('DataInput/Survey/BusR1'), walk2)
@@ -4612,12 +5155,12 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				WebUI.click(findTestObject('Object Repository/DataInput/Survey/ReloadSurvey'))
 				WebUI.delay(3)
 				WebUI.waitForPageLoad(GlobalVariable.timeOut)
-			
-				 WebUI.delay(3)
+
+				WebUI.delay(3)
 				println "Survey Submited Successufully"
-				
+
 			}
-			
+
 		}
 		WebUI.closeWindowIndex(1)
 		WebUI.switchToWindowIndex(0)
@@ -5448,7 +5991,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 
 	}
-	
+
 	@Keyword
 	public void updateEmissionFactor(String sheetName, int rowNum){
 
@@ -5484,7 +6027,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.scrollToElement(findTestObject('Analytics/17/Manually Enter Emission'), 3)
 		WebUI.click(findTestObject('Analytics/17/Manually Enter Emission'))
 		WebUI.delay(5)
-		
+
 		WebUI.delay(4)
 		WebUI.clearText(findTestObject('Analytics/17/Reading1'))
 		WebUI.setText(findTestObject('Analytics/17/Reading1'),emissionFactor)
@@ -5504,75 +6047,75 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	@Keyword
 	public void scoreShouldMoreVerify(String sheetName, int rowNum){
 
-	String totalScore  = data.getCellData(sheetName, "TotalScore", rowNum)
-	int utotalScore = Integer.parseInt(totalScore)
-	
-	String actotalScore  = data.getCellData(sheetName, "ATotalScore", rowNum)
-	
-	
-	/********* Verifying the Generated score for total score & Energy & Water & Waste & Transport & Human Experience under data Input section ********/
-	WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
-	WebUI.delay(8)
-	WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'),10)
-	//Verifying the Performance score
-	String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
-	print totalPerformaceScore
-	int utotalPerformaceScore = Integer.parseInt(totalPerformaceScore)
-	
-	if(utotalPerformaceScore>utotalScore)
-	KeywordUtil.logInfo("!!! Total Score is increased for this Project after changing the emission factor !!!")
-	else
-	KeywordUtil.markFailedAndStop("!!! Total Score is Not increased for this  Project after changing the emission factor !!!")
-	
-	
-	WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
-	WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TotalPerformanceScore'),10)
-	WebUI.delay(15)
-	String totalperformaceScore = WebUI.getText(findTestObject('PerformanceScore/Score/TotalPerformanceScore'))
-	int uTotalPagetotalScore = Integer.parseInt(totalperformaceScore)
-	
-	if(uTotalPagetotalScore>utotalScore)
-	KeywordUtil.logInfo("!!! Total Score is increased for this Project after changing the emission factor !!!")
-	else
-	KeywordUtil.markFailedAndStop("!!! Total Score is Not increased for this  Project after changing the emission factor !!!")
-		
+		String totalScore  = data.getCellData(sheetName, "TotalScore", rowNum)
+		int utotalScore = Integer.parseInt(totalScore)
+
+		String actotalScore  = data.getCellData(sheetName, "ATotalScore", rowNum)
+
+
+		/********* Verifying the Generated score for total score & Energy & Water & Waste & Transport & Human Experience under data Input section ********/
+		WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
+		WebUI.delay(8)
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'),10)
+		//Verifying the Performance score
+		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
+		print totalPerformaceScore
+		int utotalPerformaceScore = Integer.parseInt(totalPerformaceScore)
+
+		if(utotalPerformaceScore>utotalScore)
+			KeywordUtil.logInfo("!!! Total Score is increased for this Project after changing the emission factor !!!")
+		else
+			KeywordUtil.markFailedAndStop("!!! Total Score is Not increased for this  Project after changing the emission factor !!!")
+
+
+		WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TotalPerformanceScore'),10)
+		WebUI.delay(15)
+		String totalperformaceScore = WebUI.getText(findTestObject('PerformanceScore/Score/TotalPerformanceScore'))
+		int uTotalPagetotalScore = Integer.parseInt(totalperformaceScore)
+
+		if(uTotalPagetotalScore>utotalScore)
+			KeywordUtil.logInfo("!!! Total Score is increased for this Project after changing the emission factor !!!")
+		else
+			KeywordUtil.markFailedAndStop("!!! Total Score is Not increased for this  Project after changing the emission factor !!!")
+
 	}
 	@Keyword
 	public void scoreShouldLessVerify(String sheetName, int rowNum){
 
-	String totalScore  = data.getCellData(sheetName, "TotalScore", rowNum)
-	int utotalScore = Integer.parseInt(totalScore)
-	
-	/********* Verifying the Generated score for total score under data Input section ********/
-	WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
-	WebUI.delay(8)
-	WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'),10)
-	//Verifying the Performance score
-	String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
-	print totalPerformaceScore
-	int utotalPerformaceScore = Integer.parseInt(totalPerformaceScore)
-	
-	if(utotalPerformaceScore<utotalScore)
-	KeywordUtil.logInfo("!!! Total Score is decrease for this Project after changing the emission factor !!!")
-	else
-	KeywordUtil.markFailedAndStop("!!! Total Score is Not Decrease for this Project after changing the emission factor !!!")
-	
-	
-	WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
-	WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TotalPerformanceScore'),10)
-	WebUI.delay(15)
-	String totalperformaceScore = WebUI.getText(findTestObject('PerformanceScore/Score/TotalPerformanceScore'))
-	int uTotalPagetotalScore = Integer.parseInt(totalperformaceScore)
-	
-	if(uTotalPagetotalScore>utotalScore)
-	KeywordUtil.logInfo("!!! Total Score is increased for this Project after changing the emission factor !!!")
-	else
-	KeywordUtil.markFailedAndStop("!!! Total Score is Not increased for this  Project after changing the emission factor !!!")
-	
-	
+		String totalScore  = data.getCellData(sheetName, "TotalScore", rowNum)
+		int utotalScore = Integer.parseInt(totalScore)
+
+		/********* Verifying the Generated score for total score under data Input section ********/
+		WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
+		WebUI.delay(8)
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'),10)
+		//Verifying the Performance score
+		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
+		print totalPerformaceScore
+		int utotalPerformaceScore = Integer.parseInt(totalPerformaceScore)
+
+		if(utotalPerformaceScore<utotalScore)
+			KeywordUtil.logInfo("!!! Total Score is decrease for this Project after changing the emission factor !!!")
+		else
+			KeywordUtil.markFailedAndStop("!!! Total Score is Not Decrease for this Project after changing the emission factor !!!")
+
+
+		WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TotalPerformanceScore'),10)
+		WebUI.delay(15)
+		String totalperformaceScore = WebUI.getText(findTestObject('PerformanceScore/Score/TotalPerformanceScore'))
+		int uTotalPagetotalScore = Integer.parseInt(totalperformaceScore)
+
+		if(uTotalPagetotalScore>utotalScore)
+			KeywordUtil.logInfo("!!! Total Score is increased for this Project after changing the emission factor !!!")
+		else
+			KeywordUtil.markFailedAndStop("!!! Total Score is Not increased for this  Project after changing the emission factor !!!")
+
+
 	}
 
-	
+
 	@Keyword
 	public void scoreShouldNotChangeVerify(String sheetName, int rowNum){
 
@@ -5611,7 +6154,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	}
 
-	
+
 	@Keyword
 	public void verifyTheCommentCityCommunityDoesnotIncludeMeterName(){
 

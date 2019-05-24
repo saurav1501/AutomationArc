@@ -1112,6 +1112,14 @@ def static "com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram"(
          , 	rowNum)
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsSearch.searchProgramCity"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsSearch()).searchProgramCity(
+        	sheetName
+         , 	rowNum)
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsSearch.searchProgramForNoProjectPresent"(
     	String sheetName	
      , 	int rowNum	) {
@@ -2200,6 +2208,46 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createWaterMeterRea
          , 	rowNum)
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createEnergyMeterReadingPrevious"(
+    	String sheetName	
+     , 	int rowNum1	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createEnergyMeterReadingPrevious(
+        	sheetName
+         , 	rowNum1)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyEnergyScore"(
+    	String sheetName	
+     , 	int rowNum1	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyEnergyScore(
+        	sheetName
+         , 	rowNum1)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyWaterScore"(
+    	String sheetName	
+     , 	int rowNum1	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyWaterScore(
+        	sheetName
+         , 	rowNum1)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyWasteScore"(
+    	String sheetName	
+     , 	int rowNum1	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyWasteScore(
+        	sheetName
+         , 	rowNum1)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyTransportScore"(
+    	String sheetName	
+     , 	int rowNum1	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyTransportScore(
+        	sheetName
+         , 	rowNum1)
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createEnergyMeterReading"(
     	String sheetName	
      , 	int rowNum	) {
@@ -2216,12 +2264,36 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createWaterMeterRea
          , 	rowNum)
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createWaterMeterReadingPrevious"(
+    	String sheetName	
+     , 	int rowNum1	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createWaterMeterReadingPrevious(
+        	sheetName
+         , 	rowNum1)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyHumExpScore"(
+    	String sheetName	
+     , 	int rowNum1	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyHumExpScore(
+        	sheetName
+         , 	rowNum1)
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createWasteGenerationMeterReading"(
     	String sheetName	
      , 	int rowNum	) {
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createWasteGenerationMeterReading(
         	sheetName
          , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createWaste"(
+    	String sheetName	
+     , 	int rowNum1	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createWaste(
+        	sheetName
+         , 	rowNum1)
 }
 
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createWasteGenerationMeterReadingTrial"(
@@ -2240,6 +2312,14 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createTransportRead
          , 	rowNum)
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createTransportPrev"(
+    	String sheetName	
+     , 	int rowNum1	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createTransportPrev(
+        	sheetName
+         , 	rowNum1)
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createTransportReadingTrial"(
     	String sheetName	
      , 	int rowNum	) {
@@ -2254,6 +2334,46 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createHumanExpMeter
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createHumanExpMeterReading(
         	sheetName
          , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createHumanExpMeterAQI"(
+    	String sheetName	
+     , 	int rowNum1	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createHumanExpMeterAQI(
+        	sheetName
+         , 	rowNum1)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createHumanExpMeterHighSchool"(
+    	String sheetName	
+     , 	int rowNum1	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createHumanExpMeterHighSchool(
+        	sheetName
+         , 	rowNum1)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createHumanExpMeterGini"(
+    	String sheetName	
+     , 	int rowNum1	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createHumanExpMeterGini(
+        	sheetName
+         , 	rowNum1)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createHumanExpMeterHProsUnemployment"(
+    	String sheetName	
+     , 	int rowNum1	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createHumanExpMeterHProsUnemployment(
+        	sheetName
+         , 	rowNum1)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createHumanExpMeterCrime"(
+    	String sheetName	
+     , 	int rowNum1	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createHumanExpMeterCrime(
+        	sheetName
+         , 	rowNum1)
 }
 
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createHumanExpMeterReadingTrial"(
@@ -2912,6 +3032,14 @@ def static "com.arc.ReusableMethods.ReusableMethodsAddNewProject.addNewProjectCi
          , 	rowNum)
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsAddNewProject.addNewProjectCityScore"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsAddNewProject()).addNewProjectCityScore(
+        	sheetName
+         , 	rowNum)
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsAddNewProject.addNewProjectCityORCompop"(
     	String sheetName	
      , 	int rowNum	) {
@@ -3454,6 +3582,14 @@ def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.analyticsgen
     	String sheetName	
      , 	int rowNum	) {
     (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).analyticsgenratePerformanceScoreAdminToolOtherNone(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.PerformanceScoreAdminToolOtherNone"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).PerformanceScoreAdminToolOtherNone(
         	sheetName
          , 	rowNum)
 }

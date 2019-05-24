@@ -232,6 +232,104 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		data.setCellData(sheetName,"RegDate", rowNum, ReusableMethodsManage.verifyBillingDate())
 		WebUI.delay(5)
 	}
+	
+	@Keyword
+	public void addNewProjectCityScore(String sheetName , int rowNum) {
+		/**************Reading data form excel sheet*************************/
+		
+		String srowNum = rowNum.toString()
+		data.setCellData(sheetName,"rowNum", 2, srowNum)
+		//data.setCellIntData(sheetName,"rowNum" , 2, rowNum)
+		
+				
+		String prjName      = data.getCellData(sheetName,"ProjectName", rowNum)
+		String prjType 		= data.getCellData(sheetName, "ProjectType", rowNum)
+		String prjRating 	= data.getCellData(sheetName, "RatingSystem", rowNum)
+		String ownerOrg 	= data.getCellData(sheetName, "OwnerOrganization", rowNum)
+		String ownerType 	= data.getCellData(sheetName, "OwnerType", rowNum)
+		String ownerCountry = data.getCellData(sheetName, "OwnerCountry", rowNum)
+		String ownerMail 	= data.getCellData(sheetName, "OwnerEmail", rowNum)
+		String prjArea 		= data.getCellData(sheetName, "Area", rowNum)
+		String prjPopulation= data.getCellData(sheetName, "Population", rowNum)
+		String prjAddress 	= data.getCellData(sheetName, "Address", rowNum)
+		String prjCity 		= data.getCellData(sheetName, "USCity", rowNum)
+		String prjCountry 	= data.getCellData(sheetName, "Country", rowNum)
+		String prjState 	= data.getCellData(sheetName, "CState", rowNum)
+		String prjZip 		= data.getCellData(sheetName, "CZipCode", rowNum)
+		Date date = new Date(System.currentTimeMillis())
+
+		String proName
+		if(sheetName.equalsIgnoreCase("USCityProject")){
+			proName="USCity"
+		}
+		else if(sheetName.equalsIgnoreCase("ChinaCityProject")){
+			proName="CHCity"
+		}
+		else if (sheetName.equalsIgnoreCase("CanadaCityProject")) {
+			proName="CNCity"
+		}
+		else if(sheetName.equalsIgnoreCase("CityIndiaProject")){
+			proName="INDCity"
+		}
+		else if(sheetName.equalsIgnoreCase("USCommunityProject")){
+			proName="USComm"
+		}
+		else if(sheetName.equalsIgnoreCase("ChinaCommunityProject")){
+			proName="CHComm"
+		}
+		else if(sheetName.equalsIgnoreCase("CommunityIndiaProject")){
+			proName="INDComm"
+		}
+		else{
+			proName="CNComm"
+		}
+
+		String ProjectName = proName + prjRating + formatarDate.format(date)
+		data.setCellData(sheetName,"ProjectName", rowNum, ProjectName)
+		navigation.clickAddProject()
+		WebUI.delay(3)
+		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/projectName'), ProjectName)
+		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/selectProjectType'), prjType, true)
+		if(GlobalVariable.environment=='dev'){
+			WebUI.selectOptionByLabel(findTestObject('Object Repository/Add_Project_Details/UnitType'), 'Square kilo meters', false)
+			WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/grossArea'),'48')
+		}
+		else{
+			WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/grossArea'),prjArea )
+		}
+		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/population'),prjPopulation )
+		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/streetName'),prjAddress)
+		WebUI.delay(2)
+		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/cityName'),prjCity)
+		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/countryName'),prjCountry, false)
+		
+		
+		//WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/stateName'),prjState, false)
+		
+		WebUI.selectOptionByValue(findTestObject('Object Repository/AddProjectNewUI/stateName'),prjState, false, FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.selectoptionByV
+		
+		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/zipCode'), prjZip)
+		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/clickOnSignAgreement'))
+		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/addProjectNextButton'))
+		WebUI.delay(5)
+		String PaymentPageText = WebUI.getText(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'))
+		WebUI.verifyMatch(PaymentPageText,'Project Setup',true)
+		String title= DriverFactory.getWebDriver().getCurrentUrl()
+		println title
+		String Project_ID= title.substring(title.indexOf('9'),title.indexOf('9')+10 )
+		println Project_ID
+		data.setCellData(sheetName,"ProjectID", rowNum, Project_ID)
+		data.setCellData(sheetName,"RegDate", rowNum, ReusableMethodsManage.verifyBillingDate())
+		WebUI.delay(5)
+	}
+
+	
+	
+	
+	
+	
+	
 
 	@Keyword
 	public void addNewProjectCityORCompop(String sheetName , int rowNum) {
