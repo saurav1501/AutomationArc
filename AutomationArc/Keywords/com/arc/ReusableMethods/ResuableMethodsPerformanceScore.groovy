@@ -57,7 +57,7 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 			WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
 			WebUI.delay(2)
 		}
-		
+
 		//WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TotalPerformanceScore'),10)
@@ -183,7 +183,7 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 			WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
 			WebUI.delay(2)
 		}
-		
+
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TotalPerformanceScore'),10)
 		WebUI.delay(15)
@@ -269,17 +269,17 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		int wastescore =  Integer.parseInt(wasteScore)
 		int transportscore = Integer.parseInt(transportScore)
 		int humexpscore =    Integer.parseInt(humanExpScore)
-		
+
 		int totalPerformanceScore = energyscore + waterscore + wastescore + transportscore + humexpscore
-		 println totalPerformanceScore
-		 
+		println totalPerformanceScore
+
 		String ptotalPerformanceScore = totalPerformanceScore.toString()
 		data.setCellData(GlobalVariable.BDataInput,"ATotalScore", GlobalVariable.rowNumTwo, ptotalPerformanceScore)
 		WebUI.closeWindowIndex(1)
 		WebUI.delay(2)
 		WebUI.switchToWindowIndex(0)
 		WebUI.delay(2)
-		
+
 	}
 	
 	@Keyword
@@ -585,13 +585,13 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 	@Keyword
 	public void setdefaultpagePerformanceScoreOtherNone(String sheetName, int rowNum) throws IOException, InterruptedException {
 		WebUI.delay(3)
-		
+
 		WebUI.scrollToElement(findTestObject('PerformanceScore/a_ Settings'), 5)
 		WebUI.delay(1)
 		WebUI.click(findTestObject('PerformanceScore/a_ Settings'))
 		WebUI.delay(7)
-		
-		
+
+
 		WebUI.focus(findTestObject('Page_Arc dashboard/DashboardPage/AllProject/span_Data Input'))
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Page_Arc dashboard/DashboardPage/AllProject/span_Data Input'))
@@ -1030,7 +1030,7 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		 WebUI.delay(1)
 		 WebUI.click(findTestObject('PerformanceScore/Score/a_ Score'))
 		 WebUI.delay(3)*/
-		
+
 		WebUI.scrollToElement(findTestObject('PerformanceScore/Score/a_ Energy'),2)
 		WebUI.delay(1)
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Energy'))
@@ -1051,7 +1051,7 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		Boolean analyticsWater = WebUI.verifyTextPresent('WATER CONSUMPTION', false)
 		Assert.assertTrue(analyticsWater)
 
-	
+
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Score'))
 		WebUI.delay(1)
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Waste'))
@@ -1169,7 +1169,7 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.verifyMatch(totalperformaceScore , totalperformanceScore, false)
 
 	}
-	
+
 	@Keyword
 	public void totalPerformanceScoreToolTipLEED() throws IOException, InterruptedException {
 		WebUI.setViewPortSize(1024,768)
@@ -1178,25 +1178,25 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.delay(10)
 		WebUI.waitForElementClickable(findTestObject('Manage/CityCom/New/PerformanceToolTip'),30)
 		WebUI.click(findTestObject('Manage/CityCom/New/PerformanceToolTip'))
-		WebUI.delay(5)	
+		WebUI.delay(5)
 		//WebUI.verifyElementPresent(findTestObject('Manage/CityCom/New/LEEDPerformance scoreThe total'), 22)
-		WebUI.verifyElementVisible(findTestObject('Manage/CityCom/New/CategoryScore'), FailureHandling.CONTINUE_ON_FAILURE)	
+		WebUI.verifyElementVisible(findTestObject('Manage/CityCom/New/CategoryScore'), FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyElementVisible(findTestObject('Manage/CityCom/New/Performance scoreThe total'), FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyElementVisible(findTestObject('Manage/CityCom/New/Base pointsAchieve'), FailureHandling.CONTINUE_ON_FAILURE)
-		
+
 		WebUI.waitForElementClickable(findTestObject('Manage/CityCom/New/PerformanceToolTip'),30)
 		WebUI.click(findTestObject('Manage/CityCom/New/PerformanceToolTip'))
 		WebUI.delay(5)
-		
+
 		WebUI.verifyElementNotPresent(findTestObject('Manage/CityCom/New/CategoryScore'),3)
 		WebUI.verifyElementNotPresent(findTestObject('Manage/CityCom/New/Performance scoreThe total'),3)
 		WebUI.verifyElementNotPresent(findTestObject('Manage/CityCom/New/Base pointsAchieve'),3)
-	
+
 		WebUI.setViewPortSize(1366,1280)
 		WebUI.delay(5)
-		
-}
-	
+
+	}
+
 	@Keyword
 	public void totalPerformanceScoreToolTipOtherNone() throws IOException, InterruptedException {
 		WebUI.setViewPortSize(1024,768)
@@ -1205,21 +1205,21 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.delay(10)
 		WebUI.waitForElementClickable(findTestObject('Manage/CityCom/New/PerformanceToolTip'),30)
 		WebUI.click(findTestObject('Manage/CityCom/New/PerformanceToolTip'))
-		WebUI.delay(5)	
+		WebUI.delay(5)
 		//WebUI.verifyElementPresent(findTestObject('Manage/CityCom/New/LEEDPerformance scoreThe total'), 22)
-		WebUI.verifyElementVisible(findTestObject('Manage/CityCom/New/CategoryScore'), FailureHandling.CONTINUE_ON_FAILURE)	
+		WebUI.verifyElementVisible(findTestObject('Manage/CityCom/New/CategoryScore'), FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyElementVisible(findTestObject('Manage/CityCom/New/Performance scoreThe total'), FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyElementNotPresent(findTestObject('Manage/CityCom/New/Base pointsAchieve'),3)
-		
+
 		WebUI.waitForElementClickable(findTestObject('Manage/CityCom/New/PerformanceToolTip'),30)
 		WebUI.click(findTestObject('Manage/CityCom/New/PerformanceToolTip'))
 		WebUI.delay(5)
-		
+
 		WebUI.verifyElementNotPresent(findTestObject('Manage/CityCom/New/CategoryScore'),3)
 		WebUI.verifyElementNotPresent(findTestObject('Manage/CityCom/New/Performance scoreThe total'),3)
-		
+
 		WebUI.setViewPortSize(1366,1280)
 		WebUI.delay(5)
-		
+
 	}
 }

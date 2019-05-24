@@ -1790,6 +1790,7 @@ public class ReusableMethodsManage extends BaseClass {
 		//WebUI.click(findTestObject('Object Repository/Manage/BillingSection/RegistrationPaymentStatus'))
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/DownloadBilling'))
 		WebUI.delay(6)
+		KeywordUtil.markWarning("Billing order ID : " + orderId)
 		print orderId +".pdf"
 		Assert.assertTrue(ReusDataInput.isFileDownloaded(orderId +".pdf"), "Order File Didn't downloaded successfully")
 		println "Order File downloaded and verified successfully"
@@ -1854,12 +1855,17 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public void billingStatusTransit(String sheetName, int rowNum){
 		WebUI.delay(2)
-		String regdAmt = data.getCellData(sheetName, "DiscRegAmount", rowNum)
+		String regdAmt = data.getCellData(sheetName, "RegAmount", rowNum)
 		String reviewAmt = data.getCellData(sheetName, "DiscReviewAmount", rowNum)
 		String registrationDate = data.getCellData(sheetName, "RegDate", rowNum)
 		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
 		 WebUI.delay(1)
 		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))*/
+		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+			println "Manage"
+			WebUI.delay(2)
+			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+		}
 		WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
 		//Registration Payment details verification
@@ -1887,22 +1893,8 @@ public class ReusableMethodsManage extends BaseClass {
 			String reviewOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/ReviewOrderId'))
 			data.setCellData(sheetName, "ReviewId", rowNum,reviewOrderId)
 			WebUI.verifyMatch(regDate,registrationDate , false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(regAmount,regdAmt , false, FailureHandling.CONTINUE_ON_FAILURE)
 		}
-
-		// Assert.assertEquals(regAmount, regdAmt)
-
-
-
-		//Review Payment details verification
-		/*
-		 String revieDate= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/ReviewPaymentDate'))
-		 String reviewOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/ReviewOrderId'))
-		 String reviewAmount= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/ReviewAmount'))
-		 String reviewStatus= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/ReviewPaymentStatus'))
-		 String revieworderId = data.setCellData(sheetName, "ReviewId", rowNum,reviewOrderId)
-		 Assert.assertEquals(revieDate, verifyBillingDate() )
-		 //	Assert.assertEquals(reviewAmount, reviewAmt)
-		 Assert.assertEquals(reviewStatus, "Completed")*/
 	}
 
 	@Keyword
@@ -1910,15 +1902,11 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(5)
 		String regdAmt = data.getCellData(sheetName, "RegAmount", rowNum)
 		String registrationDate = data.getCellData(sheetName, "RegDate", rowNum)
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)
-		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))*/
+		
 		WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/BillingParksmart'),2)
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/BillingParksmart'))
-
 		//Registration Payment details verification
 		WebUI.delay(5)
-
 		String regDate= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/registrationPaymentDate'))
 		WebUI.verifyMatch(regDate, registrationDate ,false,FailureHandling.CONTINUE_ON_FAILURE)
 		String regOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationOrderId'))
@@ -1938,9 +1926,7 @@ public class ReusableMethodsManage extends BaseClass {
 	public void certificationDetailVerification(String sheetName ,int rowNum){
 		String certiType= data.getCellData(sheetName, "CertiType", rowNum)
 		String certiLevel= data.getCellData(sheetName, "CertiLevel", rowNum)
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)
-		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))*/
+		
 		WebUI.scrollToElement(findTestObject('Manage/CertificationAndScore/a_ Certifications'), 2)
 		WebUI.click(findTestObject('Manage/CertificationAndScore/a_ Certifications'))
 		WebUI.delay(2)
@@ -3006,22 +2992,6 @@ public class ReusableMethodsManage extends BaseClass {
 	}
 
 
-
-
-	/*public static void unzip(){
-	 String source = "D:\\Katalon\\AutomationArc\\Automation\\Download\\GBCI-India.zip"
-	 String destination = "D:\\Katalon\\AutomationArc\\Automation\\DriverFiles"
-	 String password = "password";
-	 try {
-	 ZipFile zipFile = new ZipFile(source)
-	 zipFile.extractAll(destination)
-	 } catch (ZipException e) {
-	 e.printStackTrace()
-	 }
-	 }
-	 */
-
-
 	public static void unzip(String zipFilePath, String destDirectory) throws IOException {
 
 		File destDir = new File(destDirectory)
@@ -3077,58 +3047,6 @@ public class ReusableMethodsManage extends BaseClass {
 		Assert.assertTrue(ReusDataInput.isFileExtracted('GBCI-Noida-GST Registration Certificate.pdf'), "GBCI-Noida-GST Registration Certificate File Didn't downloaded successfully")
 
 	}
-
-
-
-	/*//Pdf line by line reader
-	 static List<String> lines = new ArrayList<String>()
-	 public ReusableMethodsManage() throws IOException {
-	 }
-	 public String[] readAgreement(String agreement){
-	 PDDocument document = null
-	 def pdfResult = new String[10]
-	 try {
-	 document = PDDocument.load( new File(agreement) )
-	 PDFTextStripper stripper = new ReusableMethodsManage();
-	 stripper.setSortByPosition( true );
-	 stripper.setStartPage( 0 );
-	 stripper.setEndPage( document.getNumberOfPages() );
-	 Writer dummy = new OutputStreamWriter(new ByteArrayOutputStream());
-	 stripper.writeText(document, dummy);
-	 println(lines.get(475));
-	 println(lines.get(476));
-	 println(lines.get(477));
-	 println(lines.get(478));
-	 println(lines.get(479));
-	 println(lines.get(480));
-	 //lines.get(lines.indexOf())
-	 // print lines
-	 for(String line:lines){
-	 System.out.println(line);
-	 }
-	 int start=475;
-	 for (int i=0; i<=5;i++) {
-	 pdfResult[i]= lines.get(start);
-	 start++;
-	 //System.out.println(pdfResult[i]);
-	 }
-	 }
-	 finally {
-	 if( document != null ) {
-	 document.close();
-	 }
-	 }
-	 return pdfResult
-	 }
-	 *//**
-	 * Override the default functionality of PDFTextStripper.writeString()
-	 *//*
-	 @Override
-	 protected void writeString(String str, List<TextPosition> textPositions) throws IOException {
-	 lines.add(str);
-	 // you may process the line here itself, as and when it is obtained
-	 }
-	 */
 
 
 	@Keyword
@@ -3506,7 +3424,7 @@ public class ReusableMethodsManage extends BaseClass {
 		}
 		else {
 			WebUI.delay(2)
-			String regdAmt = data.getCellData(sheetName,"BillingPrice", rowNum)
+			String regdAmt = data.getCellData(sheetName,"BillingPriceIND", rowNum)
 			String paymentStatus = data.getCellData(sheetName, "PaymentStatus", rowNum)
 			WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
 			WebUI.delay(1)
@@ -3610,4 +3528,6 @@ public class ReusableMethodsManage extends BaseClass {
 		//WebUI.verifyMatch(regStatus,'Completed',false,FailureHandling.CONTINUE_ON_FAILURE)
 	   }
 	}
+	
+	
 }

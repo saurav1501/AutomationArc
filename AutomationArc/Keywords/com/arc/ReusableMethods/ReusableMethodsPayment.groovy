@@ -311,6 +311,7 @@ public class ReusableMethodsPayment extends BaseClass{
 		String Project_ID= title.substring(title.indexOf('1'),title.indexOf('1')+10 )
 		println Project_ID
 		data.setCellData(sheetName,"ProjectID", rowNum, Project_ID)
+		KeywordUtil.markWarning("Project ID : " +Project_ID )
 
 	}
 
@@ -529,6 +530,17 @@ public class ReusableMethodsPayment extends BaseClass{
 		WebUI.waitForElementVisible(findTestObject('Object Repository/paymentPageNewUI/ContinueButtonIndiaPaymentPopUp'), 10)
 		WebUI.click(findTestObject('Object Repository/paymentPageNewUI/ContinueButtonIndiaPaymentPopUp'))
 		WebUI.delay(20)
+		if((uniqueSpaceTypesFlag==true)){
+			println "Space type matched"
+			WebUI.waitForElementVisible(findTestObject('Object Repository/PayNowRegistrationPaymentUSTest/RegistrationPaymentConfirmationPopCloseButton'), 70)
+			WebUI.delay(2)
+			WebUI.click(findTestObject('Object Repository/PayNowRegistrationPaymentUSTest/RegistrationPaymentConfirmationPopCloseButton'))
+			uniqueSpaceTypesFlag=false
+		}
+		else{
+			println "Space type not matched"
+			uniqueSpaceTypesFlag=false
+		}
 		WebUI.waitForElementVisible(findTestObject('PaymenntLocator/NextButton'), 40)
 		WebUI.click(findTestObject('PaymenntLocator/NextButton'))
 		WebUI.delay(5)
@@ -630,6 +642,9 @@ public class ReusableMethodsPayment extends BaseClass{
 		WebUI.click(findTestObject('PayNowRegistrationPaymentIN/a_Make Payment'))
 		WebUI.click(findTestObject('PayNowRegistrationPaymentIN/returnToMerchantSite'))
 		WebUI.switchToWindowTitle('Arc dashboard')
+		WebUI.delay(8)
+		WebUI.waitForElementPresent(findTestObject('PayNowRegistrationPaymentIN/checkStatusCompleted'), 20)
+		WebUI.waitForElementVisible(findTestObject('PayNowRegistrationPaymentIN/checkStatusCompleted'), 20)
 		Assert.assertEquals(WebUI.getText(findTestObject('PayNowRegistrationPaymentIN/checkStatusCompleted')),'Completed')
 
 	}
@@ -647,6 +662,13 @@ public class ReusableMethodsPayment extends BaseClass{
 		//WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
 		//WebUI.delay(1)
 		//WebUI.click(findTestObject('PayNowRegistrationPaymentIN/a_ Manage'))
+		WebUI.delay(3)
+		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+			println "Manage"
+			WebUI.delay(2)
+			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+		}
+		WebUI.scrollToElement(findTestObject('PayNowRegistrationPaymentIN/a_ Billing'), 2)
 		WebUI.click(findTestObject('PayNowRegistrationPaymentIN/a_ Billing'))
 		WebUI.verifyElementPresent(findTestObject('PayNowRegistrationPaymentIN/button_Pay now'), 10)
 		WebUI.click(findTestObject('PayNowRegistrationPaymentIN/button_Pay now'))

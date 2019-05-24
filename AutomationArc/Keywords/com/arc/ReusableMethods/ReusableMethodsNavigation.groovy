@@ -13,6 +13,9 @@ import com.kms.katalon.core.webui.driver.DriverFactory
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 import internal.GlobalVariable
+import io.qameta.allure.Epic
+import io.qameta.allure.Feature
+import io.qameta.allure.Step
 
 public class ReusableMethodsNavigation {
 	WebDriver driver=DriverFactory.getWebDriver()
@@ -30,7 +33,7 @@ public class ReusableMethodsNavigation {
 		String postNavigationLoginText = WebUI.getText(findTestObject('Object Repository/Page_Arc dashboard/span_My Buildings'))
 		WebUI.verifyMatch(postNavigationLoginText,'My Buildings',true)
 	}
-	
+
 	@Keyword
 	public void clickAddProject() {
 		WebUI.delay(2)
@@ -40,7 +43,7 @@ public class ReusableMethodsNavigation {
 		String postNavigationLoginText = WebUI.getText(findTestObject('Object Repository/Add_Project_Details/h1_Project Registration'))
 		WebUI.verifyMatch(postNavigationLoginText,'Project Registration',true)
 	}
-	
+
 	@Keyword
 	public void navigateToCities(){
 		WebUI.delay(3)
@@ -95,7 +98,9 @@ public class ReusableMethodsNavigation {
 		WebUI.verifyMatch(postNavigationLoginText,'My Portfolios',false)
 	}
 
+	//@Step("Type {user.name} / {user.password}.")
 	@Keyword
+	@Step
 	public void navigateToBuildingTransit() {
 		WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
 		WebUI.delay(3)
@@ -228,10 +233,10 @@ public class ReusableMethodsNavigation {
 		/*******Verify clicking on the ARC LOGO takes you back to the ARC log-in page *************************/
 		WebUI.click(findTestObject('Page_Arc dashboard/DashboardPage/a_appLogo'))
 		WebUI.delay(5)
-	/*	String LogOut = WebUI.getText(findTestObject('DashboardNavigationNewUI/Dash/Logout'))
-		WebUI.verifyMatch(LogOut,'Logout', false)
-		WebUI.click(findTestObject('DashboardNavigationNewUI/Dash/Logout'))
-*/		
+		/*	String LogOut = WebUI.getText(findTestObject('DashboardNavigationNewUI/Dash/Logout'))
+		 WebUI.verifyMatch(LogOut,'Logout', false)
+		 WebUI.click(findTestObject('DashboardNavigationNewUI/Dash/Logout'))
+		 */		
 	}
 
 	@Keyword
@@ -455,6 +460,12 @@ public class ReusableMethodsNavigation {
 
 	@Keyword
 	public static void payNow(){
+		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+			println "Manage"
+			WebUI.delay(2)
+			WebUI.scrollToElement(findTestObject('Manage/ProjectDetailVerification/a_ Manage'), 5)
+			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+		}
 		WebUI.scrollToElement(findTestObject('Manage/TeamModule/a_ Team'), 10)
 		WebUI.click(findTestObject('Manage/TeamModule/a_ Team'))
 		WebUI.delay(2)

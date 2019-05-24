@@ -663,6 +663,24 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/AddNewProjectTest</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>fe798e30-4759-4ba1-8cef-2576f00d0a5b</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>76660808-c0ac-428f-a377-89dcb68ad2f8</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>924fc4c1-fdf8-4ff8-8365-2b104235dbcf</variableId>
+      </variableLink>
    </testCaseLink>
    <testCaseLink>
       <guid>113db7d6-c040-4d0d-9cb8-0fd18304f1ac</guid>

@@ -96,7 +96,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'PortfolioSTG'</initValue>
+      <initValue>'INDPortfolioSTG'</initValue>
       <name>PortfoliosSheet</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -238,5 +238,15 @@
       <description></description>
       <initValue>'stg-01@gmail.com'</initValue>
       <name>TeamMember</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'HumanExp'</initValue>
+      <name>TemplateHE</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Saurav K'</initValue>
+      <name>teamMemName</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

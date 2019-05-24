@@ -122,7 +122,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		WebUI.delay(15)
 		//Trial flow is dependent on it, if we uncomment it the trial flow will fail
-		//WebUI.doubleClick(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'))
+		WebUI.doubleClick(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/span_Upload.XLS'), 20)
 		WebUI.delay(2)
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/span_Upload.XLS'))
@@ -170,6 +170,10 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	public void uploadArcDataTemplateTransitAboveAnalytics(){
 		WebUI.refresh()
 		WebUI.delay(15)
+		if((WebUI.getAttribute(findTestObject('Object Repository/Page_Arc dashboard/a_ CreditsActions1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ CreditsActions'))
+		}
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		WebUI.delay(15)
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'))
@@ -1212,12 +1216,16 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(5)
 		WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'),'Carbon Dioxide', FailureHandling.STOP_ON_FAILURE)
 		////pdf file
+		WebUI.delay(5)
 		WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
 		uploadFile(UploadDocumentDataInput)
 		WebUI.delay(8)
 		//text file
-		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
+		if((WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),4)))
+		{
+			WebUI.delay(20)
+		}
 		//WebUI.scrollToElement(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'),3)
 		WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
 		WebUI.delay(2)
@@ -1225,8 +1233,12 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(2)
 		uploadFile(UploadTextFile)
 		WebUI.delay(8)
+		if((WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),4)))
+		{
+			WebUI.delay(20)
+		}
 		//jpg file
-		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
+		//WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
 		//WebUI.scrollToElement(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'),3)
 		WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
 		WebUI.delay(2)
@@ -1234,8 +1246,12 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(2)
 		uploadFile(UploadJpeg)
 		WebUI.delay(8)
+		if((WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),4)))
+		{
+			WebUI.delay(20)
+		}
 		//Png file
-		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
+		//WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
 		//WebUI.scrollToElement(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'),3)
 		WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
 		WebUI.delay(2)
@@ -1243,8 +1259,12 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(2)
 		uploadFile(UploadPng)
 		WebUI.delay(8)
+		if((WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),4)))
+		{
+			WebUI.delay(20)
+		}
 		//gif file
-		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
+		//WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
 		//WebUI.scrollToElement(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'),3)
 		WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
 		WebUI.delay(2)
@@ -1252,8 +1272,12 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(2)
 		uploadFile(UploadGif)
 		WebUI.delay(8)
+		if((WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),4)))
+		{
+			WebUI.delay(20)
+		}
 		//xls file
-		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
+		//WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
 		//WebUI.scrollToElement(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'),3)
 		WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
 		WebUI.delay(2)
@@ -1261,8 +1285,12 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(2)
 		uploadFile(UploadXls)
 		WebUI.delay(8)
+		if((WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),4)))
+		{
+			WebUI.delay(20)
+		}
 		//doc file
-		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
+		//WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
 		//WebUI.scrollToElement(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'),3)
 		WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
 		WebUI.delay(2)
@@ -1270,8 +1298,12 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(2)
 		uploadFile(UploadDocs)
 		WebUI.delay(8)
+		if((WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),4)))
+		{
+			WebUI.delay(20)
+		}
 		//duplicate doc file
-		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
+		//WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
 		//WebUI.scrollToElement(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'),3)
 		WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
 		WebUI.delay(2)
@@ -1279,7 +1311,10 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(2)
 		uploadFile(UploadDocs)
 		WebUI.delay(8)
-
+		if((WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),4)))
+		{
+			WebUI.delay(20)
+		}
 		//WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/NoOfFiles'))
 		//WebUI.delay(3)
 		/*String fileName1= WebUI.getText(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentOne'))
@@ -5050,6 +5085,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(8)
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
 		WebUI.delay(12)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Survey/div_Transportation Survey'), 40)
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
 		WebUI.delay(5)
 		WebUI.waitForElementVisible(findTestObject('DataInput/Survey/CopySurveyLink'), 20)

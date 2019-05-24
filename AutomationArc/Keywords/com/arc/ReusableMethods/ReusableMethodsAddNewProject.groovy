@@ -15,6 +15,7 @@ import com.kms.katalon.core.webui.driver.DriverFactory
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 import internal.GlobalVariable
+import io.qameta.allure.Step
 
 public class ReusableMethodsAddNewProject extends BaseClass{
 	ReusableMethodsNavigation navigation = new ReusableMethodsNavigation()
@@ -86,6 +87,7 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 
 
 	@Keyword
+	@Step
 	public void buildingTransitAddNewProject(String sheetName , int rowNum) {
 		/**************Reading data form excel sheet*************************/
 		String prjName          = data.getCellData(sheetName,"ProjectName", rowNum)

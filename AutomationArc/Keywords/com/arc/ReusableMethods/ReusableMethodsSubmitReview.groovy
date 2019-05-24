@@ -1108,7 +1108,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 	public void VerifyChangeTextInSubmitReviewWhenPaymentIsPending(){
 		WebUI.delay(4)
 		WebUI.click(findTestObject('SubmitReview/a_ Review'))
-		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),15)
+		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),40)
 		WebUI.delay(7)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/SubmitReviewText')), "Submit for Review", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/ProjectIsStillUnderReviewText')), "Project is still under review", false)
@@ -1126,10 +1126,19 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/SubmitButtonAdminToolReturnReview'))
 		WebUI.delay(10)
+		WebUI.closeWindowIndex(1)
+		WebUI.delay(2)
 		WebUI.switchToWindowIndex(0)
 		WebUI.delay(3)
-		WebUI.refresh()
-		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),15)
+		if((WebUI.getAttribute(findTestObject('Object Repository/Page_Arc dashboard/a_ CreditsActions1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+			println "credit action "
+			WebUI.delay(2)
+			WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ CreditsActions'))
+		}
+		WebUI.click(findTestObject('Object Repository/DataInput/CreditFileupload/AllActions'))
+		WebUI.delay(4)
+		WebUI.click(findTestObject('SubmitReview/a_ Review'))
+		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),40)
 		WebUI.delay(4)
 		WebUI.scrollToElement(findTestObject('Object Repository/SubmitReview/NewReviewStatusForPendingPayment'), 4)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/NewReviewStatusForPendingPayment')), "Please complete your review payment in order to proceed", false)

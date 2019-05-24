@@ -197,6 +197,7 @@ public class ReusableMethodsBasePoint extends BaseClass{
 		myTestObject.addProperty("xpath", ConditionType.EQUALS,"(//input[@type='checkbox'])[12]")
 		WebUI.check(myTestObject)
 		WebUI.delay(1)
+		WebUI.scrollToElement(findTestObject('BasePoint/CityCom/ClickOptionB'), 5)
 		WebUI.doubleClick(findTestObject('BasePoint/CityCom/ClickOptionB'))
 		WebUI.delay(6)
 
