@@ -4,7 +4,7 @@ import internal.GlobalVariable
 
 try{
 
-	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
 	
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.editOccupanyAreaAndOpreatingHours'()
 } 
