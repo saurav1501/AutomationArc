@@ -171,8 +171,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.refresh()
 		WebUI.delay(15)
 		if((WebUI.getAttribute(findTestObject('Object Repository/Page_Arc dashboard/a_ CreditsActions1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
-		WebUI.delay(2)
-		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ CreditsActions'))
+			WebUI.delay(2)
+			WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ CreditsActions'))
 		}
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		WebUI.delay(15)
@@ -3368,51 +3368,51 @@ public class ReusableMethodsDataInput  extends BaseClass{
 			WebUI.delay(7)
 
 			WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CityCom/DeleteButton',[index: 2]), 60)
-		
+
 			WebUI.delay(4)
-		//	Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/TextboxValue2'),"value"), carbonfootprint,"Not Valid")
+			//	Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/TextboxValue2'),"value"), carbonfootprint,"Not Valid")
 		}
 	}
-	
-	
+
+
 	@Keyword
 	public void verifyEnergyScore(String sheetName,int rowNum1) throws IOException, InterruptedException{
 		String srowNum = data.getCellData(sheetName, "rowNum", 2)
 		int rowNum = Integer.parseInt(srowNum)
-	
+
 		String energyScoreIn100 = data.getCellData(sheetName, "EnergyScore", rowNum)
-			
+
 		ReusableMethodsNavigation.clickScoreLabel()
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Energy'))
 		WebUI.delay(13)
 		WebUI.waitForElementVisible(findTestObject('DataInput/CityCom/Score100/Energy'), 40)
 		String UIenergyScoreIn100 = WebUI.getText(findTestObject('DataInput/CityCom/Score100/Energy'))
-        WebUI.verifyMatch(UIenergyScoreIn100, energyScoreIn100, false)
-		
-		}
-	
+		WebUI.verifyMatch(UIenergyScoreIn100, energyScoreIn100, false)
+
+	}
+
 	@Keyword
 	public void verifyWaterScore(String sheetName,int rowNum1) throws IOException, InterruptedException{
 		String srowNum = data.getCellData(sheetName, "rowNum", 2)
 		int rowNum = Integer.parseInt(srowNum)
-	
+
 		String waterScoreIn100 = data.getCellData(sheetName, "WaterScore", rowNum)
-				
+
 		ReusableMethodsNavigation.clickScoreLabel()
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Water'))
 		WebUI.delay(13)
 		WebUI.waitForElementVisible(findTestObject('DataInput/CityCom/Score100/Water'), 40)
 		String UIwaterScoreIn100 = WebUI.getText(findTestObject('DataInput/CityCom/Score100/Water'))
 		WebUI.verifyMatch(UIwaterScoreIn100, waterScoreIn100, false)
-		
-		}
+
+	}
 	@Keyword
 	public void verifyWasteScore(String sheetName,int rowNum1) throws IOException, InterruptedException{
 		String srowNum = data.getCellData(sheetName, "rowNum", 2)
 		int rowNum = Integer.parseInt(srowNum)
-	
+
 		String wasteIn100 = data.getCellData(sheetName, "WasteScore", rowNum)
-		
+
 		ReusableMethodsNavigation.clickScoreLabel()
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Waste'))
 		WebUI.delay(13)
@@ -3420,25 +3420,25 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForElementVisible(findTestObject('DataInput/CityCom/Score100/Waste'), 40)
 		String UIwasteScoreIn100 = WebUI.getText(findTestObject('DataInput/CityCom/Score100/Waste'))
 		WebUI.verifyMatch(UIwasteScoreIn100, wasteIn100, false)
-		
-		}
+
+	}
 	@Keyword
 	public void verifyTransportScore(String sheetName,int rowNum1) throws IOException, InterruptedException{
 		String srowNum = data.getCellData(sheetName, "rowNum", 2)
 		int rowNum = Integer.parseInt(srowNum)
 
 		String transScoreIn100 = data.getCellData(sheetName, "TRScore", rowNum)
-				
-	    ReusableMethodsNavigation.clickScoreLabel()
+
+		ReusableMethodsNavigation.clickScoreLabel()
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Transportation'))
 		WebUI.delay(13)
 		WebUI.waitForElementVisible(findTestObject('DataInput/CityCom/Score100/Transport'),40)
 		String UITransportScoreIn100 = WebUI.getText(findTestObject('DataInput/CityCom/Score100/Transport'))
 		WebUI.verifyMatch(UITransportScoreIn100, transScoreIn100, false)
-		
-		}
-	
-	
+
+	}
+
+
 	@Keyword
 	public void createEnergyMeterReading(String sheetName, int rowNum) throws IOException, InterruptedException{
 
@@ -3591,7 +3591,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 			WebUI.delay(2)
 			WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/Score100/a_Per Day'), 10)
 			WebUI.click(findTestObject('DataInput/CityCom/Score100/a_Per Day'))
-			
+
 			WebUI.delay(3)
 			WebUI.click(findTestObject('DataInput/CityCom/SaveButton2'))
 			WebUI.delay(6)
@@ -3604,48 +3604,48 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 
 	}
-	
-	
+
+
 	@Keyword
 	public void verifyHumExpScore(String sheetName,int rowNum1) throws IOException, InterruptedException{
-		
+
 		String srowNum = data.getCellData(sheetName, "rowNum", 2)
 		int rowNum = Integer.parseInt(srowNum)
 
 		String AQIHumScore = data.getCellData(sheetName, "AQIHumScore", rowNum)
-		int aQIHumScore = Integer.parseInt(AQIHumScore)	
-		
+		int aQIHumScore = Integer.parseInt(AQIHumScore)
+
 		String HCrimeScore = data.getCellData(sheetName, "HCrimeScore", rowNum)
 		int hCrimeScore = Integer.parseInt(HCrimeScore)
-		
-		
+
+
 		String HumEudScore = data.getCellData(sheetName, "HumEudScore", rowNum)
 		int humEudScore = Integer.parseInt(HumEudScore)
-		
+
 		String HEQScore = data.getCellData(sheetName, "HEQScore", rowNum)
 		int hEQScore = Integer.parseInt(HEQScore)
-		
+
 		String HProsScore = data.getCellData(sheetName, "HProsScore", rowNum)
 		int hProsScore = Integer.parseInt(HProsScore)
-				
+
 		double avgAQICrime = (aQIHumScore + hCrimeScore)/2
-		
+
 		double totalavg = (avgAQICrime + humEudScore + hEQScore + hProsScore)/4
-		
+
 		BigDecimal totalAvg = new BigDecimal(totalavg)
 		totalAvg = totalAvg.setScale(0, RoundingMode.HALF_EVEN)
 		String TotalScore = totalAvg.toString()
-		
+
 		ReusableMethodsNavigation.clickScoreLabel()
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Human Experience'))
 		WebUI.delay(13)
 		WebUI.waitForElementVisible(findTestObject('DataInput/CityCom/Score100/HumanExp'),40)
 		String UIHumanExp = WebUI.getText(findTestObject('DataInput/CityCom/Score100/HumanExp'))
 		WebUI.verifyMatch(UIHumanExp,TotalScore, false)
-		
-}
-	
-	
+
+	}
+
+
 	@Keyword
 	public void createWasteGenerationMeterReading(String sheetName,int rowNum) throws IOException, InterruptedException {
 
@@ -3791,10 +3791,10 @@ public class ReusableMethodsDataInput  extends BaseClass{
 			WebUI.delay(6)
 
 			WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CityCom/DeleteButton',[index: 4]), 60)
-		/*	WebUI.delay(10)
-			Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/dWTextboxValue2'),"value"),wastediversion,"Not Valid")
-*/		
-			}
+			/*	WebUI.delay(10)
+			 Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/dWTextboxValue2'),"value"),wastediversion,"Not Valid")
+			 */		
+		}
 
 	}
 
