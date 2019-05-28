@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//tr[1]/td[2]/div/input)[5]</value>
+         <value>(//input[@type='input'])[9]</value>
       </entry>
       <entry>
          <key>BASIC</key>

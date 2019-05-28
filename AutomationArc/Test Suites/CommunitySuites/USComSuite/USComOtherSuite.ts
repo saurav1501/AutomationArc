@@ -82,4 +82,28 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/Common/1_15_4/SettingScoreVersionPageUpdate_1_15_4Test</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>0da188cf-771b-46ce-bd30-47fe484ceff5</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Common/CityComValidation/UIValidationPopulationWith(at least)BachelorDegreeHumanExperienceTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>67702216-aa15-49d6-9064-59842cffe5f9</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Common/CityComValidation/UIValidationGiniCoefficient(for income distribution)HumanExperienceTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>6b70d87b-5f7a-4a0b-bb6a-fedeebd9d629</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Common/CityComValidation/UIValidationPercentageEDUCATIONPopulationWithHighSchoolHumanExperienceTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>f4e8fee1-e4de-4c9b-8a86-adadd1e5aac6</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Common/CityComValidation/UIValidationPercentageEQUITABILITYHumanExperienceTest</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>

@@ -281,6 +281,23 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.delay(2)
 
 	}
+	
+	@Keyword
+	public void PerformanceScoreAdminToolOtherNone(String sheetName,int rowNum) throws IOException, InterruptedException {
+		String projectId = data.getCellData(sheetName,"ProjectID",rowNum)
+		WebUI.click(findTestObject('PerformanceScore/RecomputeScoreButton'))
+		WebUI.delay(3)
+		WebUI.setText(findTestObject('PerformanceScore/PorjectId'),projectId)
+		WebUI.delay(2)
+		WebUI.click(findTestObject('PerformanceScore/RecomputeScore'))
+		WebUI.delay(30)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/Score/EnergyScore'), 40)
+		WebUI.closeWindowIndex(1)
+		WebUI.delay(2)
+		WebUI.switchToWindowIndex(0)
+		WebUI.delay(2)
+		
+	}
 
 	@Keyword
 	public void genratePerformanceScoreAdminToolAnalytics(String sheetName,int rowNum) throws IOException, InterruptedException {

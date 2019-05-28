@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify ability to add human experience reading on the year basis .</description>
+   <name>CreateHumanExpMeterReading(HumEud)2018_1_16Test</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>9ba665e2-74ba-4e24-9bc6-6bd898ab3ae7</testCaseGuid>
+</TestCaseEntity>
