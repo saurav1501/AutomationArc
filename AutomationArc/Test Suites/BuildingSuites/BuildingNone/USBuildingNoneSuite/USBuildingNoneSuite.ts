@@ -55,7 +55,7 @@
    <testCaseLink>
       <guid>72b56f79-5edf-4984-99b2-4160495bdfeb</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/Next/DataInputNavigationARC_1063Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
