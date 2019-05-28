@@ -522,12 +522,13 @@ public class ReusableMethodsManage extends BaseClass {
 		findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours')
 		findTestObject('Object Repository/DataInput/CreateMeterBuilding/OperationalDays')
 		*/
-		//Edit 
+		//operating hours
+		
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'), 5)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'))
-		Thread.sleep(8000)
-		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
+		Thread.sleep(3000)
+		/*WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
 		WebUI.delay(4)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter start_'), 10)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter start_'))
@@ -539,30 +540,39 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Jan'))
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Jan'))
 		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
-		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
-		WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'), '168')
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))*/
+		WebUI.click(findTestObject('Object Repository/DataInput/OperatingHourDropdown'))
+		Thread.sleep(2000)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/OperatingHourValue168'),5)
+		//WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'), '168')
+		Thread.sleep(2000)
+		WebUI.click(findTestObject('Object Repository/DataInput/OperatingHourValue168'))
+		Thread.sleep(2000)
+		//WebUI.click(findTestObject('Object Repository/DataInput/SaveButtonBuildingSetting'))
 		
 		//Edit Occupancy
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'), 5)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOccupancy'), 5)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOccupancy'))
+		Thread.sleep(3000)
+		WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'), '2,000')
+		Thread.sleep(2000)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle'))
+		Thread.sleep(2000)
+		//WebUI.click(findTestObject('Object Repository/DataInput/SaveButtonBuildingSetting'))
+		
+		//Edit area
 		
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'), 5)
-		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'))
-		Thread.sleep(8000)
-		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
-		WebUI.delay(4)
-		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter start_'), 10)
-		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter start_'))
-		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker'))
-		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
-		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
-		WebUI.mouseOver(findTestObject('DataInput/CreateMeterBuilding/year_2019'))
-		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/year_2019'))
-		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Jan'))
-		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Jan'))
-		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
-		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
-		WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'), '168')
-		
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'), 5)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'))
+		Thread.sleep(3000)
+		WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'), '5500')
+		Thread.sleep(2000)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle'))
+		Thread.sleep(2000)
+		//WebUI.click(findTestObject('Object Repository/DataInput/SaveButtonBuildingSetting'))
 		
 		/*WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/opreating_Hours'))
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/selectOpreatinghours'), 1)
@@ -571,7 +581,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.clearText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/buildingArea'))
 		WebUI.sendKeys(findTestObject('Object Repository/DataInput/CreateMeterBuilding/buildingArea'), '5500')
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/updateBuildingSettingButton'))*/
-		WebUI.delay(4)
+		//WebUI.delay(4)
 	}
 
 	@Keyword
@@ -579,24 +589,32 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(4)
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		WebUI.delay(13)
-		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'))
+		
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
 		WebUI.delay(3)
-		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/opreating_Hours'))
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/selectOpreatinghours'), 2)
-		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/selectOpreatinghours'))
-
-		//	WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/buildingOccupancy'), '10')
-
-		WebUI.clearText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/buildingArea'))
-		WebUI.sendKeys(findTestObject('Object Repository/DataInput/CreateMeterBuilding/buildingArea'), '10000')
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle')),"Building Settings", false)
+		Thread.sleep(2000)
+		WebUI.click(findTestObject('Object Repository/DataInput/OperatingHourDropdown'))
+		Thread.sleep(2000)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/OperatingHours160'),5)
+		Thread.sleep(2000)
+		WebUI.click(findTestObject('Object Repository/DataInput/OperatingHours160'))
+		Thread.sleep(2000)
 		
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'), 5)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'))
+		Thread.sleep(3000)
+		WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'), '10000')
+		Thread.sleep(2000)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle'))
+		Thread.sleep(2000)
 		
-		WebUI.click(findTestObject('Object Repository/DataInput/Data/svg_Imperial system (IP)_svg-i'))
-		WebUI.scrollToElement(findTestObject('DataInput/Data/a_Metric system (SI)'), 2)
-		WebUI.click(findTestObject('DataInput/Data/a_Metric system (SI)'))
-		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/updateBuildingSettingButton'))
-		WebUI.delay(40)
+		WebUI.click(findTestObject('Object Repository/DataInput/UnitTypeDorpdown'))
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/SI'), 2)
+		WebUI.click(findTestObject('Object Repository/DataInput/SI'))
+	   
+		WebUI.delay(10)
 
 		/************************Verifying under Manage Section *****************************************/
 

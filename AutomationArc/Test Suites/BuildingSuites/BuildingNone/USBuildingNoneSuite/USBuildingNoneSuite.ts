@@ -668,7 +668,7 @@
       <guid>957ab976-7cfd-4ef8-b0d0-99e3de36ac22</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ChangeBuildingSettingTest</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ChangeBuildingSetting_1_17_Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>599a2926-3166-4118-8aa1-a31bf96bd1c1</guid>

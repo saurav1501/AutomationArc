@@ -362,7 +362,7 @@
       <guid>354451ee-5bfa-4dad-a6f0-a2d76c30567c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ChangeBuildingSettingTest</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ChangeBuildingSetting_1_17_Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>84e5b2fb-db33-41e1-a7dd-931f5d354752</guid>

@@ -290,7 +290,7 @@
       <guid>914aad10-ab11-4d4c-87f7-bc50985ee13a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/ChangeBuildingSettingTest</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/ChangeBuildingSetting_1_17_Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>1a856f81-e0d3-4067-8c32-b8a749199928</guid>

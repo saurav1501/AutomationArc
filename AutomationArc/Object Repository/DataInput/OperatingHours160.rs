@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description>Input box for the setting page for first row.</description>
-   <name>BuildingSettingDataFieldOne</name>
+   <description>Select the operating hour 160</description>
+   <name>OperatingHours160</name>
    <tag></tag>
-   <elementGuidId>782b00a0-2bc8-40f9-ae24-1a452e5497c7</elementGuidId>
+   <elementGuidId>ecad3bee-1731-4796-969f-bb1de0ea9569</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//*[@ng-blur=&quot;saveReading(data)&quot;])[1]</value>
+         <value>(//*[@ng-repeat=&quot;hour in op_hours&quot;])[160]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

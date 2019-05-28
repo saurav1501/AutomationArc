@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description>Input box for the setting page for first row.</description>
-   <name>BuildingSettingDataFieldOne</name>
+   <description>Save button building setting.</description>
+   <name>SaveButtonBuildingSetting</name>
    <tag></tag>
-   <elementGuidId>782b00a0-2bc8-40f9-ae24-1a452e5497c7</elementGuidId>
+   <elementGuidId>c5c63d36-19f9-4249-8a6a-8ebad2f8c970</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//*[@ng-blur=&quot;saveReading(data)&quot;])[1]</value>
+         <value>//*[@ng-click=&quot;validateReadings(data, true)&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

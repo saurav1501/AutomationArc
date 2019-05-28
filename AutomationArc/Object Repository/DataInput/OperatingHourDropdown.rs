@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description>Input box for the setting page for first row.</description>
-   <name>BuildingSettingDataFieldOne</name>
+   <description></description>
+   <name>OperatingHourDropdown</name>
    <tag></tag>
-   <elementGuidId>782b00a0-2bc8-40f9-ae24-1a452e5497c7</elementGuidId>
+   <elementGuidId>6d1f9384-40d4-4a4a-83c7-c716a82cac9e</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//*[@ng-blur=&quot;saveReading(data)&quot;])[1]</value>
+         <value>(//*[@ng-show=&quot;selected_meter_type == 'operating_hours'&quot;])[1]/button</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
