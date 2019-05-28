@@ -2791,20 +2791,31 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/Setting/animationLink'))
 	}
 
+	
+	
+	
 	@Keyword
 	public void verifyDataResourceAndDataReviewChecklistPdfDownload() throws IOException, InterruptedException {
 		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
 		 WebUI.delay(1)
 		 WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Manage'))
-		 WebUI.delay(1)*/
+		 */
+		WebUI.delay(3)
 		WebUI.scrollToElement(findTestObject('Manage/Setting/a_setting'), 5)
 		WebUI.click(findTestObject('Manage/Setting/a_setting'))
 		WebUI.delay(3)
 		WebUI.click(findTestObject('Object Repository/Manage/Setting/downloadResourceBtn'))
 		WebUI.delay(5)
-		Assert.assertTrue(ReusDataInput.isFileDownloaded('DataResources.pdf'), "DataResources File Didn't downloaded successfully")
+		WebUI.switchToWindowIndex(1)
+		WebUI.delay(8)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/Setting/DataGuideBuilding'), 10)
+		WebUI.click(findTestObject('Object Repository/Manage/Setting/DataGuideBuilding'))
+		WebUI.delay(5)
+		Assert.assertTrue(ReusDataInput.isFileDownloaded('Data Guide for Buildings.pdf'), "DataResources File Didn't downloaded successfully")
 		WebUI.delay(3)
 		deleteFile(BaseClass.DataResourcesPdf)
+		WebUI.closeWindowIndex(1)
+		WebUI.switchToWindowIndex(0)
 		WebUI.delay(3)
 		WebUI.click(findTestObject('Object Repository/Manage/Setting/dataReviewChecklistDownloadBtn'))
 		WebUI.delay(5)
