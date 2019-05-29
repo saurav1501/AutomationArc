@@ -296,7 +296,7 @@
       <guid>1a856f81-e0d3-4067-8c32-b8a749199928</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/ChangeTextSubmitReviewForPaymentPendingProject_1_15_4Test</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/CertificationReviewFlowForPaymentPendingProject_1_15_4Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>f547d5b9-e1cf-4353-ac9d-cc0a91c8acb5</guid>
