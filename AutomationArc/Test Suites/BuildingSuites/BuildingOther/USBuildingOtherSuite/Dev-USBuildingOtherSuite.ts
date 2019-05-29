@@ -83,6 +83,12 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/NavigationIndividualRaceTrackToAnalyticsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>be0e6661-2c13-4bed-8caf-461be701af76</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/BuildingSettingValidations_1_17_Test</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>bc135ed4-c58a-47fc-8f38-82e03c8f22cf</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
