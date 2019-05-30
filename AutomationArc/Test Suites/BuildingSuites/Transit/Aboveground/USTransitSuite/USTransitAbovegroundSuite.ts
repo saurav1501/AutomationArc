@@ -563,12 +563,6 @@
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/Analytics/TotalAnalyticTranHumDataInputSurveyResRateTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>c095ee77-1f98-4a9d-9973-b2c3961683fd</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Common/DataInput/DataInputChangeBuildingSettingVerifyManageAndAnalyticSectionTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>33f79952-f64b-4c06-8957-44532aaef866</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

@@ -6,7 +6,7 @@
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
-   <pageLoadTimeout>30</pageLoadTimeout>
+   <pageLoadTimeout>240</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <testSuiteGuid>e3aff0cd-c4b9-4611-abc8-c2f1fd12859d</testSuiteGuid>
@@ -55,7 +55,7 @@
    <testCaseLink>
       <guid>72b56f79-5edf-4984-99b2-4160495bdfeb</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/Next/DataInputNavigationARC_1063Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -663,12 +663,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ProjectEditFieldsTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>957ab976-7cfd-4ef8-b0d0-99e3de36ac22</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ChangeBuildingSettingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>599a2926-3166-4118-8aa1-a31bf96bd1c1</guid>
