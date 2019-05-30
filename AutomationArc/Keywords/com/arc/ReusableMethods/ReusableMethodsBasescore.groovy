@@ -269,6 +269,7 @@ public class ReusableMethodsBasescore {
 		WebUI.scrollToElement(findTestObject('BasePoint/BasePointCreditCom/a_ My Actions'),5)
 		WebUI.click(findTestObject('BasePoint/BasePointCreditCom/a_ My Actions'))
 		WebUI.delay(6)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/BasePoint/MyActionTableFirstRow'), 60)
 		String teamMemUI = WebUI.getText(findTestObject('BasePoint/BasePointCreditCom/MyActionAssignedCredit'))
 		WebUI.verifyMatch(GlobalVariable.teamMemName,teamMemUI,false)
 	}

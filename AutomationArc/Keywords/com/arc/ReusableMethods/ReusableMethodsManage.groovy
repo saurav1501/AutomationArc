@@ -1841,6 +1841,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Manage/TeamModule/a_ Team'))
 		WebUI.delay(6)
 		WebUI.click(findTestObject('Manage/TeamModule/button_Edit'))
+		WebUI.delay(2)
 		WebUI.selectOptionByLabel(findTestObject('Manage/TeamModule/newMemberAddedAuthorizationLevel'),'None', false)
 		WebUI.delay(3)
 		WebUI.click(findTestObject('Manage/TeamModule/button_Save'))

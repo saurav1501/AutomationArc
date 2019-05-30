@@ -269,4 +269,9 @@
       <initValue>'/var/lib/jenkins/Downloads/'</initValue>
       <name>downloadDir</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Dev User'</initValue>
+      <name>teamMemberName</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

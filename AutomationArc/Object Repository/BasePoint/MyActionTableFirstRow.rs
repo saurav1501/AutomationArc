@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description>Select the country for paying the amount for review certification</description>
-   <name>ReviewPaymentSelectCountry</name>
+   <description>To check the visibility of the first row in the my action table.</description>
+   <name>MyActionTableFirstRow</name>
    <tag></tag>
-   <elementGuidId>f99e4ad9-6207-40e5-abd6-a40c1f75dc67</elementGuidId>
+   <elementGuidId>cdc04514-ef7b-4ffd-a98d-dfcbd523d9ad</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@ng-change=&quot;updateCountry(CC_details.country)&quot;]</value>
+         <value>(//*[@data-ng-repeat=&quot;action in appData.all_actions | filter: assigned_to_me&quot;])[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -6201,7 +6201,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 			KeywordUtil.markPassed("Meter name is not included in the activity comment")
 		}
 		else{
-			KeywordUtil.markFailed("Meter name is not included in the acivity comment ")
+			KeywordUtil.markFailed("Meter name is included in the acivity comment ")
 		}
 
 
