@@ -113,42 +113,6 @@
       <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/UIFieldTotalScoreTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>39bc7ac6-2129-4a6f-9e48-5ede002248eb</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/BasePointADMeterOptionAPointTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>9a1b7b8e-52dc-4be7-a5cf-b8c6cfbe9909</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/BasePointADMeterOptionBPointTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>5f836983-df96-4617-9f52-0541049cbbd2</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/BasePointCreditTeamAssignTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>b620c058-50d1-4f7d-8176-e3ccd66926a7</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/BasePointAttemptToReviewTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>cfbc3f2b-2e26-4afc-9573-295b848f63c6</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/VerifyTotalCreditTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>c237beaf-674b-4bc8-9bce-cb722b24d231</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/MyActionAssignCreditTeamMemTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>35152482-5fba-458f-8d6d-284f2ac325e5</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -185,28 +149,16 @@
       <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/CreateHumanExpMeterReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>1708f124-3942-4bf7-9471-caea8b6290dc</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/PreRequisiteAttemptTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>ccd9e0dc-6631-496a-86d1-427a97320eb9</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/AdminToolScoreRecomputeTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>f9bb78ac-b77e-4ef8-aff0-211c84c67871</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/SetPerformanceScoreDefaultTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>8b44ae8e-cc76-494a-a42f-505a8c04b113</guid>
+      <guid>ccd9e0dc-6631-496a-86d1-427a97320eb9</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/PrerequisiteNarrativeTextSaveTest</testCaseId>
+      <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/AdminToolScoreRecomputeTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>420c1868-2fdf-44ac-8e3a-9eb9acd3ad1d</guid>

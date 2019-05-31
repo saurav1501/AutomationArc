@@ -610,7 +610,7 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 		/*WebUI.click(findTestObject('Manage/Parking/Manage'))
 		 WebUI.delay(1)*/
 		WebUI.click(findTestObject('Manage/Parking/ManageProject'))
-		WebUI.delay(2)
+		WebUI.delay(6)
 		println "Verify if  registered project  project id , address , city  , country , owner details , data commissioned , project country & satate fields displays the correct data."
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/Parking/project_ID'),"value"),prjId,"Not Valid")
 		WebUI.scrollToElement(findTestObject('Manage/Parking/Owner_organization'), 2)
