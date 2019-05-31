@@ -3574,14 +3574,6 @@ def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.analyticsgen
          , 	rowNum)
 }
 
-def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.PerformanceScoreAdminToolOtherNone"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).PerformanceScoreAdminToolOtherNone(
-        	sheetName
-         , 	rowNum)
-}
-
 def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.genratePerformanceScoreAdminToolAnalytics"(
     	String sheetName	
      , 	int rowNum	) {
