@@ -193,7 +193,7 @@ public class ReusableMethodsManage extends BaseClass {
 		if((WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectName'),'value').equalsIgnoreCase(''))){
 			WebUI.delay(10)
 		}
-		
+
 		String projectName= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectName'),'value')
 		String projectId= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectId'),'value')
 		String projectUnit= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/unitType'),'value')
@@ -378,7 +378,7 @@ public class ReusableMethodsManage extends BaseClass {
 		if((WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectName'),'value').equalsIgnoreCase(''))){
 			WebUI.delay(10)
 		}
-		
+
 		String projectName= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectName'),'value')
 		String projectId= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectId'),'value')
 		String projectUnit= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/unitType'),'value')
@@ -401,10 +401,10 @@ public class ReusableMethodsManage extends BaseClass {
 
 		WebUI.verifyMatch(projectName, prjName, false)
 		WebUI.verifyMatch(projectId, prjId, false)
-		
+
 		if(GlobalVariable.environment=='dev'){
 			WebUI.verifyMatch(projectUnit,"string:SI", false)
-            WebUI.verifyMatch(projectArea, "48", false)		}
+			WebUI.verifyMatch(projectArea, "48", false)		}
 		else{
 			WebUI.verifyMatch(projectUnit,"string:IP", false)
 			WebUI.verifyMatch(projectArea, prjArea, false)
@@ -449,7 +449,7 @@ public class ReusableMethodsManage extends BaseClass {
 		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectName'),'value').equalsIgnoreCase(''))){
 			WebUI.delay(10)
 		}
-		
+
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectName'),'value'),prjName, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectId'),'value'),prjId, false, FailureHandling.CONTINUE_ON_FAILURE)
 		if(GlobalVariable.environment=='dev'){
@@ -542,8 +542,8 @@ public class ReusableMethodsManage extends BaseClass {
 
 		WebUI.clearText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/buildingArea'))
 		WebUI.sendKeys(findTestObject('Object Repository/DataInput/CreateMeterBuilding/buildingArea'), '10000')
-		
-		
+
+
 		WebUI.click(findTestObject('Object Repository/DataInput/Data/svg_Imperial system (IP)_svg-i'))
 		WebUI.scrollToElement(findTestObject('DataInput/Data/a_Metric system (SI)'), 2)
 		WebUI.click(findTestObject('DataInput/Data/a_Metric system (SI)'))
@@ -1593,7 +1593,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Manage/TeamModule/a_ Team'))
 		WebUI.delay(5)
 		WebUI.waitForElementVisible(findTestObject('Manage/TeamModule/newMemberAddedAuthorizationLevel'),20)
-		
+
 		WebUI.waitForElementClickable(findTestObject('Manage/TeamModule/button_Edit'),20)
 		WebUI.click(findTestObject('Manage/TeamModule/button_Edit'))
 		WebUI.delay(4)
@@ -1903,7 +1903,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(5)
 		String regdAmt = data.getCellData(sheetName, "RegAmount", rowNum)
 		String registrationDate = data.getCellData(sheetName, "RegDate", rowNum)
-		
+
 		WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/BillingParksmart'),2)
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/BillingParksmart'))
 		//Registration Payment details verification
@@ -1927,7 +1927,7 @@ public class ReusableMethodsManage extends BaseClass {
 	public void certificationDetailVerification(String sheetName ,int rowNum){
 		String certiType= data.getCellData(sheetName, "CertiType", rowNum)
 		String certiLevel= data.getCellData(sheetName, "CertiLevel", rowNum)
-		
+
 		WebUI.scrollToElement(findTestObject('Manage/CertificationAndScore/a_ Certifications'), 2)
 		WebUI.click(findTestObject('Manage/CertificationAndScore/a_ Certifications'))
 		WebUI.delay(2)
@@ -2518,7 +2518,7 @@ public class ReusableMethodsManage extends BaseClass {
 		print scoreStatus
 	}
 
-	
+
 	@Keyword
 	public void scoreVersionVerificationCommunity(){
 		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
@@ -2538,8 +2538,8 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyMatch(scoreStatus, "You are all up to date!",false,FailureHandling.CONTINUE_ON_FAILURE )
 		print scoreStatus
 	}
-	
-	
+
+
 	@Keyword
 	public void scoreVersionVerComTest(){
 		WebUI.delay(3)
@@ -2832,9 +2832,9 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/Setting/animationLink'))
 	}
 
-	
-	
-	
+
+
+
 	@Keyword
 	public void verifyDataResourceAndDataReviewChecklistPdfDownload() throws IOException, InterruptedException {
 		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
@@ -3453,11 +3453,11 @@ public class ReusableMethodsManage extends BaseClass {
 			WebUI.verifyMatch(regStatus,paymentStatus,false,FailureHandling.CONTINUE_ON_FAILURE)
 		}
 	}
-	
-	
-	
-	
-	
+
+
+
+
+
 	@Keyword
 	public void billingStatusPriceIND(String sheetName, int rowNum){
 
@@ -3504,7 +3504,7 @@ public class ReusableMethodsManage extends BaseClass {
 			WebUI.verifyMatch(regStatus,paymentStatus,false,FailureHandling.CONTINUE_ON_FAILURE)
 		}
 	}
-	
+
 	@Keyword
 	public void billingStatusPrice2(String sheetName, int rowNum){
 		if(GlobalVariable.environment=='dev'){
@@ -3569,28 +3569,28 @@ public class ReusableMethodsManage extends BaseClass {
 			String regStatus= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Status'))
 			//WebUI.verifyMatch(regAmount,regdAmt,false,FailureHandling.CONTINUE_ON_FAILURE)
 		}
-        else{
-		WebUI.delay(2)
-		String regdAmt = data.getCellData(sheetName,"BillingPrice", rowNum)
-		String paymentStatus = data.getCellData(sheetName, "PaymentStatus", rowNum)
-		WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		WebUI.delay(1)
-		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
-		WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
-		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
+		else{
+			WebUI.delay(2)
+			String regdAmt = data.getCellData(sheetName,"BillingPrice", rowNum)
+			String paymentStatus = data.getCellData(sheetName, "PaymentStatus", rowNum)
+			WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
+			WebUI.delay(1)
+			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+			WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
+			WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
 
-		WebUI.delay(5)
+			WebUI.delay(5)
 
-		String regDate= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/registrationPaymentDate'))
-		String regOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationOrderId'))
-		String regOrderType= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/span_REGISTRATION'))
-		String regAmount= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationAmount'))
-		String regStatus= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Status'))
+			String regDate= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/registrationPaymentDate'))
+			String regOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationOrderId'))
+			String regOrderType= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/span_REGISTRATION'))
+			String regAmount= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationAmount'))
+			String regStatus= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Status'))
 
-		WebUI.verifyMatch(regAmount,regdAmt,false,FailureHandling.CONTINUE_ON_FAILURE)
-		//WebUI.verifyMatch(regStatus,'Completed',false,FailureHandling.CONTINUE_ON_FAILURE)
-	   }
+			WebUI.verifyMatch(regAmount,regdAmt,false,FailureHandling.CONTINUE_ON_FAILURE)
+			//WebUI.verifyMatch(regStatus,'Completed',false,FailureHandling.CONTINUE_ON_FAILURE)
+		}
 	}
-	
-	
+
+
 }
