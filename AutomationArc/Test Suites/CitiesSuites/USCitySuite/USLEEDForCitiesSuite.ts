@@ -379,7 +379,7 @@
    <testCaseLink>
       <guid>d44cc223-edf7-4f6f-8213-6ffe4549a1a1</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/LEEDOnlineCity/CreditTabNavigateToArc(AllAction)Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
