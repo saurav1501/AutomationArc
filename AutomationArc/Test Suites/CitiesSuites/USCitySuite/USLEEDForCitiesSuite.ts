@@ -83,12 +83,6 @@
       <testCaseId>Test Cases/LEEDOnlineCity/SignAgreementInArcTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>506e9447-4d42-479f-ad2b-501fbb6f6390</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Common/CreditNavigation/CityComNavigationPrevousNextCreditNameTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>2285019c-76cf-4ef8-a845-c34ba77a7389</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

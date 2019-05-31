@@ -575,7 +575,7 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 		WebUI.delay(10)
 		WebUI.refresh()
 		WebUI.delay(10)
-
+       
 		println "Verifying edited functionlity for no of parking space , level , website , about parking fields after refresh"
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/Parking/input_noOfParkingSpace'),"value"),"50","Not Valid")
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/Parking/input_noOfParkingLevels'),"value"),"50","Not Valid")

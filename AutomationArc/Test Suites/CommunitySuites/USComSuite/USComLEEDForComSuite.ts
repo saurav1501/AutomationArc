@@ -95,12 +95,6 @@
       <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/UIScoreFieldIndividualTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>8340c258-3342-4aeb-8e20-56b334019c76</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/CreditFileUploadCityCommTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>41961d3d-7448-4258-8ef3-4540a5f660eb</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -121,7 +115,7 @@
    <testCaseLink>
       <guid>21b18a2a-195e-42eb-81d3-ad5f8d2be2e2</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/BasePointTotalScoreTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -149,16 +143,16 @@
       <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/CreateHumanExpMeterReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>f9bb78ac-b77e-4ef8-aff0-211c84c67871</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/SetPerformanceScoreDefaultTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>ccd9e0dc-6631-496a-86d1-427a97320eb9</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/AdminToolScoreRecomputeTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>f9bb78ac-b77e-4ef8-aff0-211c84c67871</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/SetPerformanceScoreDefaultTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>420c1868-2fdf-44ac-8e3a-9eb9acd3ad1d</guid>
