@@ -404,7 +404,7 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		double transportscore = Double.parseDouble(transportScore)
 		double humexpscore =    Double.parseDouble(humanExpScore)
 		//double basepointscore = Double.parseDouble(basePointScore)
-		double totalPerformanceScore = energyscore + waterscore + wastescore + transportscore + humexpscore + basepointscore
+		double totalPerformanceScore = energyscore + waterscore + wastescore + transportscore + humexpscore //+ basepointscore
 		String totalperformanceScore = Math.round(totalPerformanceScore)
 		//String totalperformanceScore = Double.toString(totalPerformanceScore)
 		println totalperformanceScore

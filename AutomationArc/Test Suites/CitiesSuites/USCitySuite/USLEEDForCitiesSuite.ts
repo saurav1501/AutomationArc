@@ -163,7 +163,7 @@
    <testCaseLink>
       <guid>0b278bd1-36cd-4281-99d9-bb820994c47d</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/MyCities/LEEDForCities/BasePointTotalScoreTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -323,6 +323,30 @@
       <testCaseId>Test Cases/MyCities/LEEDForCities/AppVerifyAllUninstalledAppRemovedFromAddSupportingSectionTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>25ac3b5f-305f-4dae-8844-c883231e081d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCities/LEEDForCities/NavigateToAdminToolAddStarCertification_1_15_4Test</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>87165744-18eb-4607-9e3b-82b91bda1871</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCities/LEEDForCities/VerifyAddedStarCertificationInsideProject_1_15_4Test</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>675995e5-9497-4b3c-84aa-3ce4da8c0af4</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Common/1_15_4/SettingScoreVersionPageUpdate_1_15_4Test</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>db1a72f0-bd7f-48d5-9f60-ccb740ac4345</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Common/1_15_4/LEEDRatingsTooltipText_1_15_4Test</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>03b0b076-4891-46f1-b779-aae045729a0b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -363,29 +387,5 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/LEEDOnlineCity/VerifyAddedTeamMemberFromLEEDInArcTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>25ac3b5f-305f-4dae-8844-c883231e081d</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCities/LEEDForCities/NavigateToAdminToolAddStarCertification_1_15_4Test</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>87165744-18eb-4607-9e3b-82b91bda1871</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCities/LEEDForCities/VerifyAddedStarCertificationInsideProject_1_15_4Test</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>675995e5-9497-4b3c-84aa-3ce4da8c0af4</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Common/1_15_4/SettingScoreVersionPageUpdate_1_15_4Test</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>db1a72f0-bd7f-48d5-9f60-ccb740ac4345</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Common/1_15_4/LEEDRatingsTooltipText_1_15_4Test</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
