@@ -1054,6 +1054,10 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 
 		deleteFile(sourceZipFile)
 		deleteFile(sourceExtractedFile)
+		WebUI.delay(3)
+		WebUI.closeWindowIndex(1)
+		WebUI.delay(2)
+		WebUI.switchToWindowIndex(0)
 	}
 
 
@@ -1120,6 +1124,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.delay(5)
 		WebUI.scrollToElement(findTestObject('Object Repository/PerformanceScore/AdminToolReturnReviewButton'), 4)
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/AdminToolReturnReviewButton'))
+		WebUI.delay(3)
 		WebUI.scrollToElement(findTestObject('Object Repository/PerformanceScore/LeedIdSearchBox'), 4)
 		WebUI.setText(findTestObject('Object Repository/PerformanceScore/LeedIdSearchBox'), id)
 		WebUI.delay(2)
@@ -1168,10 +1173,10 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.click(findTestObject('ReviewPaymentByCheckUS/button_Continue'))
 		WebUI.delay(5)
 		WebUI.scrollToElement(findTestObject('Object Repository/SubmitReview/SubmitCertification'),3)
-		WebUI.waitForElementNotClickable(findTestObject('Object Repository/SubmitReview/SubmitCertification'),9)
-		WebUI.click(findTestObject('Object Repository/SubmitReview/SubmitCertification'))
-		WebUI.delay(8)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/MessageSuccessfullySubmitted')), "Successfully Submitted", false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/SubmitReview/SubmitCertification'),9)
+		//WebUI.click(findTestObject('Object Repository/SubmitReview/SubmitCertification'))
+		//WebUI.delay(8)
+		//WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/MessageSuccessfullySubmitted')), "Successfully Submitted", false, FailureHandling.CONTINUE_ON_FAILURE)
 		/*WebUI.scrollToElement(findTestObject('Object Repository/SubmitReview/NewReviewStatusForPendingPayment'), 4)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/NewReviewStatusForPendingPayment')), "Please complete your review payment in order to proceed", false)
 		WebUI.click(findTestObject('Object Repository/SubmitReview/LinkForReviewPaymentReviewPage'))
