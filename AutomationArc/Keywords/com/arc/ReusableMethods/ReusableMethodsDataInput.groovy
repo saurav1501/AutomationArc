@@ -5345,6 +5345,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		double projectOccupancy= Double.parseDouble(projectoccupancy)
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
 		WebUI.delay(10)
+
+
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
 		WebUI.delay(10)
 		/******Verify that survey response rate% is calculated on the basis of the following formula [ Response %ge = (No. of responses/Occupancy)*100 ] . Always count the no of responses by counting the no of rows of transport survey results.*****/
