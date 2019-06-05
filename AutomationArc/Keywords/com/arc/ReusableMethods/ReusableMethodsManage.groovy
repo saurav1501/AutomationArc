@@ -563,15 +563,14 @@ public class ReusableMethodsManage extends BaseClass {
 		//WebUI.click(findTestObject('Object Repository/DataInput/SaveButtonBuildingSetting'))
 
 		/*//Edit area
-
-		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'), 5)
-		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'))
-		Thread.sleep(3000)
-		WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'), '5500')
-		Thread.sleep(2000)
-		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle'))
-		Thread.sleep(2000)*/
+		 WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
+		 WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'), 5)
+		 WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'))
+		 Thread.sleep(3000)
+		 WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'), '5500')
+		 Thread.sleep(2000)
+		 WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle'))
+		 Thread.sleep(2000)*/
 		//WebUI.click(findTestObject('Object Repository/DataInput/SaveButtonBuildingSetting'))
 
 		/*WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/opreating_Hours'))
@@ -1107,7 +1106,7 @@ public class ReusableMethodsManage extends BaseClass {
 		Thread.sleep(2000)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle'))
 		Thread.sleep(2000)
-		
+
 		println "Verified successfully the value of occupancy and operating hours are not zero"
 	}
 
@@ -1163,24 +1162,33 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void VerifyGFAUnitOnChangeOfUnitsIPAndSI(String sheetName, int rowNum){
-
-		//ReusNavigate.navigateToManageSection()
-		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
+		WebUI.delay(4)
+		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		WebUI.delay(10)
+		//WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
 		WebUI.delay(3)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle')),"Building Settings", false)
 		println "Verify if the unit changes on the changing of unit type."
-		WebUI.selectOptionByLabel(findTestObject('Manage/Project/selectUnitType'), 'IP', false)
-		WebUI.delay(3)
-		WebUI.scrollToElement(findTestObject('Manage/Project/unit'), 2)
-		WebUI.delay(1)
-		String unit = WebUI.getText(findTestObject('Manage/Project/unit'))
-		WebUI.verifyMatch(unit,"square feet",false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'), 5)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'))
+		Thread.sleep(5000)
+		/*
+		findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeSelectButtonArea')
+		findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectIPUnitType')
+		findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectSIUnitType')
+		findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeHeader')*/
+		WebUI.waitForElementVisible(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeSelectButtonArea')), 20)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeSelectButtonArea')),"Imperial System (IP)",false,FailureHandling.CONTINUE_ON_FAILURE)
+        WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeHeader')), "VALUE (square feet)", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.delay(2)
-		WebUI.scrollToElement(findTestObject('Manage/Project/selectUnitType'), 2)
-		WebUI.delay(1)
-		WebUI.selectOptionByLabel(findTestObject('Manage/Project/selectUnitType'), 'SI', false)
-		WebUI.delay(3)
-		String unitSI = WebUI.getText(findTestObject('Manage/Project/unitSI'))
-		WebUI.verifyMatch(unitSI,"square meters",false)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeSelectButtonArea'))
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectSIUnitType'), 2)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectSIUnitType'))
+		WebUI.delay(5)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeSelectButtonArea')),"Metric System (SI)",false,FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeHeader')),"VALUE (square meters)", false, FailureHandling.CONTINUE_ON_FAILURE)
 		println "Verified successfully unit changes on the selection of SI and IP unit types."
 	}
 

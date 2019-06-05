@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description>Select the gross floor area from the dropdown.</description>
-   <name>SelectGrossFloorArea</name>
+   <description></description>
+   <name>SelectIPUnitType</name>
    <tag></tag>
-   <elementGuidId>be0ce56b-b90b-41e6-94fd-6202c71b332a</elementGuidId>
+   <elementGuidId>45658d69-421d-4431-8298-eb7de32b6697</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@class=&quot;dropdown-menu dropdown-menu-building&quot;]//a[text()='Gross Floor Area']</value>
+         <value>//*[text()=&quot;Imperial System (IP)&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description>Select the gross floor area from the dropdown.</description>
-   <name>SelectGrossFloorArea</name>
+   <description>Unit type reflected on the top of the area reading when changing the units from IP to SI or vice versa</description>
+   <name>UnitTypeHeader</name>
    <tag></tag>
-   <elementGuidId>be0ce56b-b90b-41e6-94fd-6202c71b332a</elementGuidId>
+   <elementGuidId>b049caf0-3606-430c-bcc8-e8d1a92edc5a</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@class=&quot;dropdown-menu dropdown-menu-building&quot;]//a[text()='Gross Floor Area']</value>
+         <value>//*[@id=&quot;readingsTable&quot;]/thead//th[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

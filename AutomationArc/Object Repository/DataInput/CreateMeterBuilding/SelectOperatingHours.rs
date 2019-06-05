@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@class=&quot;dropdown-menu dropdown-menu-building&quot;]/li[3]</value>
+         <value>//*[@class=&quot;dropdown-menu dropdown-menu-building&quot;]//a[text()='Operating Hours']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
