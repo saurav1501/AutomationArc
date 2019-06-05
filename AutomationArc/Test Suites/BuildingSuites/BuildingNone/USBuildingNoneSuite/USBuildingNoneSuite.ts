@@ -685,7 +685,7 @@
    <testCaseLink>
       <guid>7e2c1fcd-31b4-43ff-b3be-adbddd5653a9</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ProjectDownloadCalculatorTemplateAndUploadTest</testCaseId>
    </testCaseLink>
    <testCaseLink>

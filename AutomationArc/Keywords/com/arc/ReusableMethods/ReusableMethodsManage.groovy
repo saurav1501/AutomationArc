@@ -1306,10 +1306,10 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(3)
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/yearBuilt'),'value'),"string:1992","Not Valid")
 
-		WebUI.clearText(findTestObject('Manage/ProjectDetailVerification/input_grossArea'))
-		WebUI.sendKeys(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),"3000" )
-		WebUI.delay(1)
-		Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),'value'), "3000","Not Valid")
+		//WebUI.clearText(findTestObject('Manage/ProjectDetailVerification/input_grossArea'))
+		//WebUI.sendKeys(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),"3000" )
+		//WebUI.delay(1)
+		//Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),'value'), "3000","Not Valid")
 
 		WebUI.selectOptionByLabel(findTestObject('Manage/ProjectDetailVerification/precertify'), 'Yes', false)
 		WebUI.delay(3)
@@ -1329,15 +1329,15 @@ public class ReusableMethodsManage extends BaseClass {
 		//Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/targetDate'),'value'), "Oct 11, 2020","Not Valid")
 		//WebUI.click(findTestObject('Manage/ProjectDetailVerification/floorsAboveGround'))
 
-		WebUI.clearText(findTestObject('Manage/ProjectDetailVerification/input_operatingHours'))
-		WebUI.sendKeys(findTestObject('Manage/ProjectDetailVerification/input_operatingHours'),"10")
-		WebUI.delay(1)
-		Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_operatingHours'),'value'),"10","Not Valid")
+		//WebUI.clearText(findTestObject('Manage/ProjectDetailVerification/input_operatingHours'))
+		//WebUI.sendKeys(findTestObject('Manage/ProjectDetailVerification/input_operatingHours'),"10")
+		///WebUI.delay(1)
+		//Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_operatingHours'),'value'),"10","Not Valid")
 
-		WebUI.clearText(findTestObject('Manage/ProjectDetailVerification/projectoccupancy'))
-		WebUI.sendKeys(findTestObject('Manage/ProjectDetailVerification/projectoccupancy'),"300")
-		WebUI.delay(1)
-		Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectoccupancy'),'value'),"300","Not Valid")
+		//WebUI.clearText(findTestObject('Manage/ProjectDetailVerification/projectoccupancy'))
+		//WebUI.sendKeys(findTestObject('Manage/ProjectDetailVerification/projectoccupancy'),"300")
+		////WebUI.delay(1)
+		///Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectoccupancy'),'value'),"300","Not Valid")
 
 		println "Verified successfully fields are editable on Manage project section."
 	}
