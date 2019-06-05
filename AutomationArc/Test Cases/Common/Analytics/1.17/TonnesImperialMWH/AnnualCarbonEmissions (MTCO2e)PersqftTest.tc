@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Carbon emission generated against gross area of project.
+Annual carbon emissions (MTCO2e) (per sqft) = Annual co2e (in MtCo2e)/gross_area (sqft)</description>
+   <name>AnnualCarbonEmissions (MTCO2e)PersqftTest</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>48e11bc0-8794-4724-a08f-6149e8c18e07</testCaseGuid>
+</TestCaseEntity>
