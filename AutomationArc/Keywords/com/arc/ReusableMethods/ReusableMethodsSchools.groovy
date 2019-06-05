@@ -231,7 +231,7 @@ public class ReusableMethodsSchools extends BaseClass{
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectYearBuilt')), "Year Built", false,FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectFloorsAboveground')), "Floors above ground", false,FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectIntendToPrecertify')), "Intend to precertify?", false,FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectGrossFloorArea')), "Gross floor area", false,FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectGrossFloorArea')), "Gross floor area", false,FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectTargetCertificationDate')), "Target certification date", false,FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectWeeklyOprHours')), "Weekly Operating Hours", false,FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectOperationaldays')), "Operational days", false,FailureHandling.CONTINUE_ON_FAILURE)

@@ -70,7 +70,7 @@ public class ReusableMethodsManage extends BaseClass {
 		String projectCity= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectCity'),'value')
 		String projectState= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectState'),'value')
 		String projectCountry= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectCountry'),'value')
-		String projectArea= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectArea'),'value')
+		//String projectArea= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectArea'),'value')
 		WebUI.verifyMatch(projectName, prjName, false)
 		WebUI.verifyMatch(projectId, prjId, false)
 		WebUI.verifyMatch(projectUnit,"string:IP", false)
@@ -78,7 +78,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyMatch(projectCity, prjCity, false)
 		WebUI.verifyMatch(projectState, prjState, false)
 		WebUI.verifyMatch(projectCountry, prjCountry, false)
-		WebUI.verifyMatch(projectArea, prjArea, false)
+		//WebUI.verifyMatch(projectArea, prjArea, false)
 
 	}
 
@@ -129,10 +129,10 @@ public class ReusableMethodsManage extends BaseClass {
 		String projectFloorAboveground= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectFloorAboveground'), 'value')
 		String projectIntendPrecertify= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectIntendToPrecertify'), 'value')
 		String projectTargetCertDate= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectTragetCertiDetails'), 'value')
-		String projectWeeklyOprHrs= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectWeeklyOpreatingHours'), 'value')
-		String projectOperationalDay= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectOpreationalDay'), 'value')
-		String projectOccupancy= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectOccupancy'), 'value')
-		String projectArea= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectArea'),'value')
+		//String projectWeeklyOprHrs= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectWeeklyOpreatingHours'), 'value')
+		//String projectOperationalDay= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectOpreationalDay'), 'value')
+		//String projectOccupancy= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectOccupancy'), 'value')
+		//String projectArea= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectArea'),'value')
 
 		WebUI.verifyMatch(projectName, prjName, false)
 		WebUI.verifyMatch(projectId, prjId, false)
@@ -155,11 +155,11 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyMatch(projectYearBuilt, "string:2017", false)
 		WebUI.verifyMatch(projectFloorAboveground, "", false)
 		WebUI.verifyMatch(projectIntendPrecertify, "boolean:false", false)
-		WebUI.verifyMatch(projectArea, prjArea, false)
+		//WebUI.verifyMatch(projectArea, prjArea, false)
 		WebUI.verifyMatch(projectTargetCertDate, "", false)
-		WebUI.verifyMatch(projectWeeklyOprHrs, "30", false)
-		WebUI.verifyMatch(projectOperationalDay, "313", false)
-		WebUI.verifyMatch(projectOccupancy, "9", false)
+		//WebUI.verifyMatch(projectWeeklyOprHrs, "30", false)
+		//WebUI.verifyMatch(projectOperationalDay, "313", false)
+		//WebUI.verifyMatch(projectOccupancy, "9", false)
 
 	}
 
@@ -314,10 +314,10 @@ public class ReusableMethodsManage extends BaseClass {
 		String projectAnnualRidership= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectAnnulaRidership'), 'value')
 		String projectFullTimeStaff= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectFullTimeStaff'), 'value')
 		String projectAverageTimeSpent= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectAvgTimeSpentByRider'), 'value')
-		String projectWeeklyOprHrs= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectWeeklyOpreatingHours'), 'value')
+		//String projectWeeklyOprHrs= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectWeeklyOpreatingHours'), 'value')
 		String projectOperationalDay= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectOpreationalDay'), 'value')
 		String projectOccupancy= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectOccupancy'), 'value')
-		String projectArea= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectArea'),'value')
+		//String projectArea= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectArea'),'value')
 
 		WebUI.verifyMatch(projectName, prjName, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(projectId, prjId, false, FailureHandling.CONTINUE_ON_FAILURE)
@@ -341,12 +341,12 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyMatch(projectYearBuilt, "string:2017", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(projectFloorAboveground, "", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(projectIntendPrecertify, "boolean:false", false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(projectArea, "2000", false, FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.verifyMatch(projectArea, "2000", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(projectTargetCertDate, "", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(projectAnnualRidership, "20000", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(projectFullTimeStaff, "8", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(projectAverageTimeSpent, "16", false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(projectWeeklyOprHrs, "100", false, FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.verifyMatch(projectWeeklyOprHrs, "100", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(projectOperationalDay, "313", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(projectOccupancy, "9", false, FailureHandling.CONTINUE_ON_FAILURE)
 	}
@@ -618,9 +618,9 @@ public class ReusableMethodsManage extends BaseClass {
 		/************************Verifying under Manage Section *****************************************/
 
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
-		WebUI.delay(3)
+		WebUI.delay(6)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/unitType'),'value'),"string:SI", false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),'value'),'10000', false, FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),'value'),'10000', false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/week_opr_hrs'),'value'),'160', false, FailureHandling.CONTINUE_ON_FAILURE)
 
 		/************************Verifying under Analytics Section *****************************************/
@@ -799,16 +799,53 @@ public class ReusableMethodsManage extends BaseClass {
 	//Verify operating hours, occupancy and area after uploading the excel template. For Building None, Other, City, Community Leed, None and Other
 	@Keyword
 	public void verifyOperatingHrsAreaAndOccupancyAfterExcelUpload(){
-		/*WebUI.delay(5)
-		 WebUI.click(findTestObject('Object Repository/SubmitReview/clickOnSideBar'))
-		 WebUI.delay(3)
-		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
-		 WebUI.delay(2)*/
-		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
-		WebUI.delay(5)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),'value'),'5000', false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_operatingHours'),'value'),'30', false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectoccupancy'),'value'),'9', false, FailureHandling.CONTINUE_ON_FAILURE)
+		
+		WebUI.delay(4)
+		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		WebUI.delay(10)
+		//WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
+		WebUI.delay(3)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle')),"Building Settings", false)
+		/*
+		 findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown')
+		 findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOccupancy')
+		 findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea')
+		 findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours')
+		 findTestObject('Object Repository/DataInput/CreateMeterBuilding/OperationalDays')
+		 */
+		//operating hours
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'), 5)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'))
+		Thread.sleep(3000)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/OperatingHourDropdown')),"30", false,FailureHandling.CONTINUE_ON_FAILURE)
+		Thread.sleep(2000)
+		
+		//Verify Occupancy
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'), 5)
+		Thread.sleep(1000)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOccupancy'), 5)
+		Thread.sleep(1000)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOccupancy'))
+		Thread.sleep(3000)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'),20)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne')), '9',false,FailureHandling.CONTINUE_ON_FAILURE)
+		Thread.sleep(2000)
+		
+		//verify Area
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'), 5)
+		Thread.sleep(1000)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'), 5)
+		Thread.sleep(1000)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'))
+		Thread.sleep(3000)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'),20)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne')), '5000',false,FailureHandling.CONTINUE_ON_FAILURE)
+		Thread.sleep(2000)
+		
 	}
 
 	//Verify operating hours, occupancy and area after uploading the excel template. For Building None, Other, City, Community Leed, None and Other
@@ -819,11 +856,35 @@ public class ReusableMethodsManage extends BaseClass {
 		 WebUI.delay(3)
 		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 		 WebUI.delay(2)*/
-		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
+	 	WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
 		WebUI.delay(5)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),'value'),'2000', false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_operatingHours'),'value'),'100', false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectoccupancy'),'value'),'9', false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.delay(4)
+		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		WebUI.delay(10)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
+		WebUI.delay(3)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle')),"Building Settings", false)
+		
+		//operating hours
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'), 5)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'))
+		Thread.sleep(3000)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/OperatingHourDropdown')),"100", false,FailureHandling.CONTINUE_ON_FAILURE)
+		Thread.sleep(2000)
+		
+		//verify Area
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'), 5)
+		Thread.sleep(1000)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'), 5)
+		Thread.sleep(1000)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'))
+		Thread.sleep(3000)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'),20)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne')), '2000',false,FailureHandling.CONTINUE_ON_FAILURE)
+		Thread.sleep(2000)
 	}
 
 
@@ -1032,7 +1093,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/prjAffiliatedHigherEducation'),'value'),"boolean:false", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/prjAffiliatedLEEDLab'),'value'),"boolean:false", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/precertify'),'value'),"boolean:false", false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),'value'),prjArea, false, FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),'value'),prjArea, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/stationType'),'value'),"aboveground", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/annualRidership'),'value'),annualRidership, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/fullTimeStaffAtStn'),'value'),fullTimeStaffAtStn, false, FailureHandling.CONTINUE_ON_FAILURE)

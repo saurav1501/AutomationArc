@@ -41,10 +41,10 @@
       </variableLink>
    </testCaseLink>
    <testCaseLink>
-      <guid>0b77792e-d044-4623-b218-d6f1384594ed</guid>
+      <guid>488b8470-e416-410c-b441-296f6e210cf8</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/PaymentByCreditCardTest</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/UIScoreFieldIndividualTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>fb843d1a-b6a2-4c69-a8e8-ef520f222b4a</guid>
@@ -59,10 +59,10 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/UIFieldTotalScoreTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>488b8470-e416-410c-b441-296f6e210cf8</guid>
+      <guid>0b77792e-d044-4623-b218-d6f1384594ed</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/UIScoreFieldIndividualTest</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/PaymentByCreditCardTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>8e99872f-70b4-48a6-95bd-68df8813468d</guid>

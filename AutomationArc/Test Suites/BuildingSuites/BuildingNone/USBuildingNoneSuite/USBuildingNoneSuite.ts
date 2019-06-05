@@ -641,12 +641,6 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ProjectVerifyFieldPresentOnContainsResUnitsOptionYesTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>c8ecb2da-6bbd-4f18-bf96-1c97bd7bce86</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ProjectVerifyCalculatorHyperlinkPresentTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>11efd279-4a2e-4361-9ffa-86d08e6625f2</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -681,12 +675,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/CertiVerifyCertificationLogoVisibleTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>7e2c1fcd-31b4-43ff-b3be-adbddd5653a9</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ProjectDownloadCalculatorTemplateAndUploadTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>74be4d57-cf91-4422-aa45-1e87cfd43f91</guid>
