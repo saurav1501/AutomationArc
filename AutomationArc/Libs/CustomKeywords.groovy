@@ -3966,6 +3966,10 @@ def static "com.arc.ReusableMethods.ReusableMethodsManage.editOccupanyAreaAndOpr
     (new com.arc.ReusableMethods.ReusableMethodsManage()).editOccupanyAreaAndOpreatingHoursAnalyticManage()
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsManage.validateSettingOperatingHours"() {
+    (new com.arc.ReusableMethods.ReusableMethodsManage()).validateSettingOperatingHours()
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsManage.editOccupanyAreaAndOpreatingHoursTransit"() {
     (new com.arc.ReusableMethods.ReusableMethodsManage()).editOccupanyAreaAndOpreatingHoursTransit()
 }

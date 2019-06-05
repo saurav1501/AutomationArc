@@ -6,18 +6,18 @@
    <elementGuidId>15a18c4a-202f-4534-98f3-9e976c0e55cf</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>BASIC</key>
+         <value>//*[@ng-keyup = 'validateEmailCheck()']</value>
+      </entry>
+      <entry>
          <key>XPATH</key>
          <value>//*[@id=&quot;email&quot; and @ng-blur=&quot;validateEmailCheck()&quot; or  @name = 'email2']</value>
       </entry>
-      <entry>
-         <key>BASIC</key>
-         <value>//input[@type = 'text' and @id = 'email2' and @name = 'email2']</value>
-      </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
@@ -38,21 +38,21 @@
       <value>40</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>type</name>
       <type>Main</type>
       <value>text</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>id</name>
       <type>Main</type>
       <value>email2</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>name</name>
       <type>Main</type>
@@ -66,7 +66,7 @@
       <value>form-control ng-pristine ng-untouched ng-valid ng-valid-maxlength ng-not-empty ng-dirty-add ng-valid-parse-add ng-animate ng-pristine-remove</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>ng-keyup</name>
       <type>Main</type>

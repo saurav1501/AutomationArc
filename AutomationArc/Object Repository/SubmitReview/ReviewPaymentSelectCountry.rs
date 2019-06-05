@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//select[@id = 'country']</value>
+         <value>//*[@ng-change=&quot;updateCountry(CC_details.country)&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

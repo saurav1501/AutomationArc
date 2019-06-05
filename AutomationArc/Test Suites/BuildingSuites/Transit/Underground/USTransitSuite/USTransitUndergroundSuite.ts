@@ -287,18 +287,6 @@
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/VerifyAndDownloadBillingReceiptTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>914aad10-ab11-4d4c-87f7-bc50985ee13a</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/ChangeBuildingSettingTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>1a856f81-e0d3-4067-8c32-b8a749199928</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/ChangeTextSubmitReviewForPaymentPendingProject_1_15_4Test</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>51703b3e-1ea9-4d02-a3f0-48d629ba6192</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

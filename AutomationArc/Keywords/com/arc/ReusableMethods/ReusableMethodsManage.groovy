@@ -70,7 +70,7 @@ public class ReusableMethodsManage extends BaseClass {
 		String projectCity= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectCity'),'value')
 		String projectState= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectState'),'value')
 		String projectCountry= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectCountry'),'value')
-		String projectArea= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectArea'),'value')
+		//String projectArea= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectArea'),'value')
 		WebUI.verifyMatch(projectName, prjName, false)
 		WebUI.verifyMatch(projectId, prjId, false)
 		WebUI.verifyMatch(projectUnit,"string:IP", false)
@@ -78,7 +78,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyMatch(projectCity, prjCity, false)
 		WebUI.verifyMatch(projectState, prjState, false)
 		WebUI.verifyMatch(projectCountry, prjCountry, false)
-		WebUI.verifyMatch(projectArea, prjArea, false)
+		//WebUI.verifyMatch(projectArea, prjArea, false)
 
 	}
 
@@ -129,10 +129,10 @@ public class ReusableMethodsManage extends BaseClass {
 		String projectFloorAboveground= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectFloorAboveground'), 'value')
 		String projectIntendPrecertify= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectIntendToPrecertify'), 'value')
 		String projectTargetCertDate= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectTragetCertiDetails'), 'value')
-		String projectWeeklyOprHrs= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectWeeklyOpreatingHours'), 'value')
-		String projectOperationalDay= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectOpreationalDay'), 'value')
-		String projectOccupancy= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectOccupancy'), 'value')
-		String projectArea= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectArea'),'value')
+		//String projectWeeklyOprHrs= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectWeeklyOpreatingHours'), 'value')
+		//String projectOperationalDay= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectOpreationalDay'), 'value')
+		//String projectOccupancy= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectOccupancy'), 'value')
+		//String projectArea= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectArea'),'value')
 
 		WebUI.verifyMatch(projectName, prjName, false)
 		WebUI.verifyMatch(projectId, prjId, false)
@@ -155,11 +155,11 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyMatch(projectYearBuilt, "string:2017", false)
 		WebUI.verifyMatch(projectFloorAboveground, "", false)
 		WebUI.verifyMatch(projectIntendPrecertify, "boolean:false", false)
-		WebUI.verifyMatch(projectArea, prjArea, false)
+		//WebUI.verifyMatch(projectArea, prjArea, false)
 		WebUI.verifyMatch(projectTargetCertDate, "", false)
-		WebUI.verifyMatch(projectWeeklyOprHrs, "30", false)
-		WebUI.verifyMatch(projectOperationalDay, "313", false)
-		WebUI.verifyMatch(projectOccupancy, "9", false)
+		//WebUI.verifyMatch(projectWeeklyOprHrs, "30", false)
+		//WebUI.verifyMatch(projectOperationalDay, "313", false)
+		//WebUI.verifyMatch(projectOccupancy, "9", false)
 
 	}
 
@@ -193,7 +193,7 @@ public class ReusableMethodsManage extends BaseClass {
 		if((WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectName'),'value').equalsIgnoreCase(''))){
 			WebUI.delay(10)
 		}
-		
+
 		String projectName= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectName'),'value')
 		String projectId= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectId'),'value')
 		String projectUnit= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/unitType'),'value')
@@ -314,10 +314,10 @@ public class ReusableMethodsManage extends BaseClass {
 		String projectAnnualRidership= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectAnnulaRidership'), 'value')
 		String projectFullTimeStaff= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectFullTimeStaff'), 'value')
 		String projectAverageTimeSpent= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectAvgTimeSpentByRider'), 'value')
-		String projectWeeklyOprHrs= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectWeeklyOpreatingHours'), 'value')
+		//String projectWeeklyOprHrs= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectWeeklyOpreatingHours'), 'value')
 		String projectOperationalDay= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectOpreationalDay'), 'value')
 		String projectOccupancy= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectOccupancy'), 'value')
-		String projectArea= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectArea'),'value')
+		//String projectArea= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectArea'),'value')
 
 		WebUI.verifyMatch(projectName, prjName, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(projectId, prjId, false, FailureHandling.CONTINUE_ON_FAILURE)
@@ -341,12 +341,12 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyMatch(projectYearBuilt, "string:2017", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(projectFloorAboveground, "", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(projectIntendPrecertify, "boolean:false", false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(projectArea, "2000", false, FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.verifyMatch(projectArea, "2000", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(projectTargetCertDate, "", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(projectAnnualRidership, "20000", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(projectFullTimeStaff, "8", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(projectAverageTimeSpent, "16", false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(projectWeeklyOprHrs, "100", false, FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.verifyMatch(projectWeeklyOprHrs, "100", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(projectOperationalDay, "313", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(projectOccupancy, "9", false, FailureHandling.CONTINUE_ON_FAILURE)
 	}
@@ -378,7 +378,7 @@ public class ReusableMethodsManage extends BaseClass {
 		if((WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectName'),'value').equalsIgnoreCase(''))){
 			WebUI.delay(10)
 		}
-		
+
 		String projectName= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectName'),'value')
 		String projectId= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectId'),'value')
 		String projectUnit= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/unitType'),'value')
@@ -401,10 +401,10 @@ public class ReusableMethodsManage extends BaseClass {
 
 		WebUI.verifyMatch(projectName, prjName, false)
 		WebUI.verifyMatch(projectId, prjId, false)
-		
+
 		if(GlobalVariable.environment=='dev'){
 			WebUI.verifyMatch(projectUnit,"string:SI", false)
-            WebUI.verifyMatch(projectArea, "48", false)		}
+			WebUI.verifyMatch(projectArea, "48", false)		}
 		else{
 			WebUI.verifyMatch(projectUnit,"string:IP", false)
 			WebUI.verifyMatch(projectArea, prjArea, false)
@@ -449,7 +449,7 @@ public class ReusableMethodsManage extends BaseClass {
 		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectName'),'value').equalsIgnoreCase(''))){
 			WebUI.delay(10)
 		}
-		
+
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectName'),'value'),prjName, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectId'),'value'),prjId, false, FailureHandling.CONTINUE_ON_FAILURE)
 		if(GlobalVariable.environment=='dev'){
@@ -506,24 +506,81 @@ public class ReusableMethodsManage extends BaseClass {
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/CityCom/input_population'),"value"), editPopulation ,"Not Equal")
 	}
 
-
-
 	@Keyword
 	public editOccupanyAreaAndOpreatingHours(){
 		WebUI.delay(4)
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		WebUI.delay(10)
-		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'))
+		//WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'))
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
 		WebUI.delay(3)
-		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/opreating_Hours'))
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/selectOpreatinghours'), 1)
-		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/selectOpreatinghours'))
-		WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/buildingOccupancy'), '2,000')
-		WebUI.clearText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/buildingArea'))
-		WebUI.sendKeys(findTestObject('Object Repository/DataInput/CreateMeterBuilding/buildingArea'), '5500')
-		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/updateBuildingSettingButton'))
-		WebUI.delay(4)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle')),"Building Settings", false)
+		/*
+		 findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown')
+		 findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOccupancy')
+		 findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea')
+		 findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours')
+		 findTestObject('Object Repository/DataInput/CreateMeterBuilding/OperationalDays')
+		 */
+		//operating hours
+
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'), 5)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'))
+		Thread.sleep(3000)
+		/*WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
+		 WebUI.delay(4)
+		 WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter start_'), 10)
+		 WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter start_'))
+		 WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker'))
+		 WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		 WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		 WebUI.mouseOver(findTestObject('DataInput/CreateMeterBuilding/year_2019'))
+		 WebUI.click(findTestObject('DataInput/CreateMeterBuilding/year_2019'))
+		 WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Jan'))
+		 WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Jan'))
+		 WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
+		 WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))*/
+		WebUI.click(findTestObject('Object Repository/DataInput/OperatingHourDropdown'))
+		Thread.sleep(2000)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/OperatingHourValue168'),5)
+		//WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'), '168')
+		Thread.sleep(2000)
+		WebUI.click(findTestObject('Object Repository/DataInput/OperatingHourValue168'))
+		Thread.sleep(2000)
+		//WebUI.click(findTestObject('Object Repository/DataInput/SaveButtonBuildingSetting'))
+
+		//Edit Occupancy
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'), 5)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOccupancy'), 5)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOccupancy'))
+		Thread.sleep(3000)
+		WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'), '2,000')
+		Thread.sleep(2000)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle'))
+		Thread.sleep(2000)
+		//WebUI.click(findTestObject('Object Repository/DataInput/SaveButtonBuildingSetting'))
+
+		/*//Edit area
+		 WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
+		 WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'), 5)
+		 WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'))
+		 Thread.sleep(3000)
+		 WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'), '5500')
+		 Thread.sleep(2000)
+		 WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle'))
+		 Thread.sleep(2000)*/
+		//WebUI.click(findTestObject('Object Repository/DataInput/SaveButtonBuildingSetting'))
+
+		/*WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/opreating_Hours'))
+		 WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/selectOpreatinghours'), 1)
+		 WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/selectOpreatinghours'))
+		 WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/buildingOccupancy'), '2,000')
+		 WebUI.clearText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/buildingArea'))
+		 WebUI.sendKeys(findTestObject('Object Repository/DataInput/CreateMeterBuilding/buildingArea'), '5500')
+		 WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/updateBuildingSettingButton'))*/
+		//WebUI.delay(4)
 	}
 
 	@Keyword
@@ -531,31 +588,39 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(4)
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		WebUI.delay(13)
-		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'))
+
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
 		WebUI.delay(3)
-		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/opreating_Hours'))
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/selectOpreatinghours'), 2)
-		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/selectOpreatinghours'))
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle')),"Building Settings", false)
+		Thread.sleep(2000)
+		WebUI.click(findTestObject('Object Repository/DataInput/OperatingHourDropdown'))
+		Thread.sleep(2000)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/OperatingHours160'),5)
+		Thread.sleep(2000)
+		WebUI.click(findTestObject('Object Repository/DataInput/OperatingHours160'))
+		Thread.sleep(2000)
 
-		//	WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/buildingOccupancy'), '10')
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'), 5)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'))
+		Thread.sleep(3000)
+		WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'), '10000')
+		Thread.sleep(2000)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle'))
+		Thread.sleep(2000)
 
-		WebUI.clearText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/buildingArea'))
-		WebUI.sendKeys(findTestObject('Object Repository/DataInput/CreateMeterBuilding/buildingArea'), '10000')
-		
-		
-		WebUI.click(findTestObject('Object Repository/DataInput/Data/svg_Imperial system (IP)_svg-i'))
-		WebUI.scrollToElement(findTestObject('DataInput/Data/a_Metric system (SI)'), 2)
-		WebUI.click(findTestObject('DataInput/Data/a_Metric system (SI)'))
-		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/updateBuildingSettingButton'))
-		WebUI.delay(40)
+		WebUI.click(findTestObject('Object Repository/DataInput/UnitTypeDorpdown'))
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/SI'), 2)
+		WebUI.click(findTestObject('Object Repository/DataInput/SI'))
+
+		WebUI.delay(10)
 
 		/************************Verifying under Manage Section *****************************************/
 
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
-		WebUI.delay(3)
+		WebUI.delay(6)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/unitType'),'value'),"string:SI", false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),'value'),'10000', false, FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),'value'),'10000', false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/week_opr_hrs'),'value'),'160', false, FailureHandling.CONTINUE_ON_FAILURE)
 
 		/************************Verifying under Analytics Section *****************************************/
@@ -574,6 +639,53 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyElementPresent(findTestObject('DataInput/Data/span_(sq. meters)'),2, FailureHandling.CONTINUE_ON_FAILURE)
 
 	}
+
+
+	// Building setting validation
+	@Keyword
+	public void validateSettingOperatingHours(){
+
+		WebUI.delay(4)
+		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		WebUI.delay(13)
+
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
+		WebUI.delay(3)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle')),"Building Settings", false)
+		Thread.sleep(2000)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'), 5)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'))
+		Thread.sleep(3000)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
+		WebUI.delay(4)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter start_'), 10)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter start_'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.mouseOver(findTestObject('DataInput/CreateMeterBuilding/year_2019'))
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/year_2019'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Jan'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Jan'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
+		WebUI.delay(2)
+		WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'), '169')
+		WebUI.click(findTestObject('Object Repository/DataInput/SaveButtonBuildingSetting'))
+		WebUI.verifyElementPresent(findTestObject('Object Repository/DataInput/OperatingHourErrorMessage'), 8)
+		WebUI.verifyElementVisible(findTestObject('Object Repository/DataInput/OperatingHourErrorMessage'))
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/OperatingHourErrorMessage')), "Ensure this value is less than or equal to 168.", false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.delay(4)
+		WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'), '0')
+		WebUI.click(findTestObject('Object Repository/DataInput/SaveButtonBuildingSetting'))
+		WebUI.delay(6)
+		if((WebUI.getText(findTestObject('Object Repository/DataInput/OperatingHourDropdown')).equals("0 Hour"))){
+			KeywordUtil.markFailed("Operating Hour Should be Greater than 0 and less than 168")
+		}
+
+	}
+
 
 
 	@Keyword
@@ -687,16 +799,53 @@ public class ReusableMethodsManage extends BaseClass {
 	//Verify operating hours, occupancy and area after uploading the excel template. For Building None, Other, City, Community Leed, None and Other
 	@Keyword
 	public void verifyOperatingHrsAreaAndOccupancyAfterExcelUpload(){
-		/*WebUI.delay(5)
-		 WebUI.click(findTestObject('Object Repository/SubmitReview/clickOnSideBar'))
-		 WebUI.delay(3)
-		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
-		 WebUI.delay(2)*/
-		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
-		WebUI.delay(5)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),'value'),'5000', false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_operatingHours'),'value'),'30', false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectoccupancy'),'value'),'9', false, FailureHandling.CONTINUE_ON_FAILURE)
+		
+		WebUI.delay(4)
+		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		WebUI.delay(10)
+		//WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
+		WebUI.delay(3)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle')),"Building Settings", false)
+		/*
+		 findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown')
+		 findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOccupancy')
+		 findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea')
+		 findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours')
+		 findTestObject('Object Repository/DataInput/CreateMeterBuilding/OperationalDays')
+		 */
+		//operating hours
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'), 5)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'))
+		Thread.sleep(3000)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/OperatingHourDropdown')),"30", false,FailureHandling.CONTINUE_ON_FAILURE)
+		Thread.sleep(2000)
+		
+		//Verify Occupancy
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'), 5)
+		Thread.sleep(1000)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOccupancy'), 5)
+		Thread.sleep(1000)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOccupancy'))
+		Thread.sleep(3000)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'),20)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne')), '9',false,FailureHandling.CONTINUE_ON_FAILURE)
+		Thread.sleep(2000)
+		
+		//verify Area
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'), 5)
+		Thread.sleep(1000)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'), 5)
+		Thread.sleep(1000)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'))
+		Thread.sleep(3000)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'),20)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne')), '5000',false,FailureHandling.CONTINUE_ON_FAILURE)
+		Thread.sleep(2000)
+		
 	}
 
 	//Verify operating hours, occupancy and area after uploading the excel template. For Building None, Other, City, Community Leed, None and Other
@@ -707,11 +856,35 @@ public class ReusableMethodsManage extends BaseClass {
 		 WebUI.delay(3)
 		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 		 WebUI.delay(2)*/
-		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
+	 	WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
 		WebUI.delay(5)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),'value'),'2000', false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_operatingHours'),'value'),'100', false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectoccupancy'),'value'),'9', false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.delay(4)
+		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		WebUI.delay(10)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
+		WebUI.delay(3)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle')),"Building Settings", false)
+		
+		//operating hours
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'), 5)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'))
+		Thread.sleep(3000)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/OperatingHourDropdown')),"100", false,FailureHandling.CONTINUE_ON_FAILURE)
+		Thread.sleep(2000)
+		
+		//verify Area
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'), 5)
+		Thread.sleep(1000)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'), 5)
+		Thread.sleep(1000)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'))
+		Thread.sleep(3000)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'),20)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne')), '2000',false,FailureHandling.CONTINUE_ON_FAILURE)
+		Thread.sleep(2000)
 	}
 
 
@@ -825,7 +998,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/prjAffiliatedHigherEducation'),'value'),"boolean:false", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/prjAffiliatedLEEDLab'),'value'),"boolean:false", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/precertify'),'value'),"boolean:false", false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),'value'),prjArea, false, FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),'value'),prjArea, false, FailureHandling.CONTINUE_ON_FAILURE)
 
 	}
 	@Keyword
@@ -920,7 +1093,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/prjAffiliatedHigherEducation'),'value'),"boolean:false", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/prjAffiliatedLEEDLab'),'value'),"boolean:false", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/precertify'),'value'),"boolean:false", false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),'value'),prjArea, false, FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),'value'),prjArea, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/stationType'),'value'),"aboveground", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/annualRidership'),'value'),annualRidership, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/fullTimeStaffAtStn'),'value'),fullTimeStaffAtStn, false, FailureHandling.CONTINUE_ON_FAILURE)
@@ -973,19 +1146,27 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public void verifyManageProjectOccAndOprHrsNotZero(String sheetName, int rowNum){
 
-		//ReusNavigate.navigateToManageSection()
-		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
-		WebUI.delay(5)
-		WebUI.scrollToElement(findTestObject('Object Repository/Manage/ProjectDetailVerification/input_operatingHours'), 2)
-		println "Verify if the value of occupancy and operating hours are zero or not"
-		WebUI.clearText(findTestObject('Object Repository/Manage/ProjectDetailVerification/input_operatingHours'))
-		WebUI.sendKeys(findTestObject('Object Repository/Manage/ProjectDetailVerification/input_operatingHours'),'0')
-		WebUI.delay(2)
-		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/ProjectDetailVerification/oprHrsErrorMessage'))
-		WebUI.clearText(findTestObject('Object Repository/Manage/ProjectDetailVerification/occupancy'))
-		WebUI.sendKeys(findTestObject('Object Repository/Manage/ProjectDetailVerification/occupancy'), '0')
-		WebUI.delay(2)
-		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/ProjectDetailVerification/occErrorMessage'))
+		WebUI.delay(4)
+		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		WebUI.delay(10)
+		//WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
+		WebUI.delay(3)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle')),"Building Settings", false)
+		//operating hours
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOccupancy'), 5)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOccupancy'))
+		Thread.sleep(3000)
+		WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'), '0')
+		Thread.sleep(2000)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle'))
+		Thread.sleep(2000)
+		WebUI.verifyElementVisible(findTestObject('Object Repository/DataInput/OccupancyErrorMessage'))
+		WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'), '9')
+		Thread.sleep(2000)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle'))
+		Thread.sleep(2000)
 
 		println "Verified successfully the value of occupancy and operating hours are not zero"
 	}
@@ -1042,24 +1223,33 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void VerifyGFAUnitOnChangeOfUnitsIPAndSI(String sheetName, int rowNum){
-
-		//ReusNavigate.navigateToManageSection()
-		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
+		WebUI.delay(4)
+		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		WebUI.delay(10)
+		//WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
 		WebUI.delay(3)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle')),"Building Settings", false)
 		println "Verify if the unit changes on the changing of unit type."
-		WebUI.selectOptionByLabel(findTestObject('Manage/Project/selectUnitType'), 'IP', false)
-		WebUI.delay(3)
-		WebUI.scrollToElement(findTestObject('Manage/Project/unit'), 2)
-		WebUI.delay(1)
-		String unit = WebUI.getText(findTestObject('Manage/Project/unit'))
-		WebUI.verifyMatch(unit,"square feet",false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'), 5)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'))
+		Thread.sleep(5000)
+		/*
+		findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeSelectButtonArea')
+		findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectIPUnitType')
+		findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectSIUnitType')
+		findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeHeader')*/
+		WebUI.waitForElementVisible(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeSelectButtonArea')), 20)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeSelectButtonArea')),"Imperial System (IP)",false,FailureHandling.CONTINUE_ON_FAILURE)
+        WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeHeader')), "VALUE (square feet)", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.delay(2)
-		WebUI.scrollToElement(findTestObject('Manage/Project/selectUnitType'), 2)
-		WebUI.delay(1)
-		WebUI.selectOptionByLabel(findTestObject('Manage/Project/selectUnitType'), 'SI', false)
-		WebUI.delay(3)
-		String unitSI = WebUI.getText(findTestObject('Manage/Project/unitSI'))
-		WebUI.verifyMatch(unitSI,"square meters",false)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeSelectButtonArea'))
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectSIUnitType'), 2)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectSIUnitType'))
+		WebUI.delay(5)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeSelectButtonArea')),"Metric System (SI)",false,FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeHeader')),"VALUE (square meters)", false, FailureHandling.CONTINUE_ON_FAILURE)
 		println "Verified successfully unit changes on the selection of SI and IP unit types."
 	}
 
@@ -1185,10 +1375,10 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(3)
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/yearBuilt'),'value'),"string:1992","Not Valid")
 
-		WebUI.clearText(findTestObject('Manage/ProjectDetailVerification/input_grossArea'))
-		WebUI.sendKeys(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),"3000" )
-		WebUI.delay(1)
-		Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),'value'), "3000","Not Valid")
+		//WebUI.clearText(findTestObject('Manage/ProjectDetailVerification/input_grossArea'))
+		//WebUI.sendKeys(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),"3000" )
+		//WebUI.delay(1)
+		//Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),'value'), "3000","Not Valid")
 
 		WebUI.selectOptionByLabel(findTestObject('Manage/ProjectDetailVerification/precertify'), 'Yes', false)
 		WebUI.delay(3)
@@ -1208,15 +1398,15 @@ public class ReusableMethodsManage extends BaseClass {
 		//Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/targetDate'),'value'), "Oct 11, 2020","Not Valid")
 		//WebUI.click(findTestObject('Manage/ProjectDetailVerification/floorsAboveGround'))
 
-		WebUI.clearText(findTestObject('Manage/ProjectDetailVerification/input_operatingHours'))
-		WebUI.sendKeys(findTestObject('Manage/ProjectDetailVerification/input_operatingHours'),"10")
-		WebUI.delay(1)
-		Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_operatingHours'),'value'),"10","Not Valid")
+		//WebUI.clearText(findTestObject('Manage/ProjectDetailVerification/input_operatingHours'))
+		//WebUI.sendKeys(findTestObject('Manage/ProjectDetailVerification/input_operatingHours'),"10")
+		///WebUI.delay(1)
+		//Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_operatingHours'),'value'),"10","Not Valid")
 
-		WebUI.clearText(findTestObject('Manage/ProjectDetailVerification/projectoccupancy'))
-		WebUI.sendKeys(findTestObject('Manage/ProjectDetailVerification/projectoccupancy'),"300")
-		WebUI.delay(1)
-		Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectoccupancy'),'value'),"300","Not Valid")
+		//WebUI.clearText(findTestObject('Manage/ProjectDetailVerification/projectoccupancy'))
+		//WebUI.sendKeys(findTestObject('Manage/ProjectDetailVerification/projectoccupancy'),"300")
+		////WebUI.delay(1)
+		///Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectoccupancy'),'value'),"300","Not Valid")
 
 		println "Verified successfully fields are editable on Manage project section."
 	}
@@ -1593,7 +1783,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Manage/TeamModule/a_ Team'))
 		WebUI.delay(5)
 		WebUI.waitForElementVisible(findTestObject('Manage/TeamModule/newMemberAddedAuthorizationLevel'),20)
-		
+
 		WebUI.waitForElementClickable(findTestObject('Manage/TeamModule/button_Edit'),20)
 		WebUI.click(findTestObject('Manage/TeamModule/button_Edit'))
 		WebUI.delay(4)
@@ -1728,6 +1918,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Manage/TeamModule/a_ Team'))
 		WebUI.delay(6)
 		WebUI.click(findTestObject('Manage/TeamModule/button_Edit'))
+		WebUI.delay(2)
 		WebUI.selectOptionByLabel(findTestObject('Manage/TeamModule/newMemberAddedAuthorizationLevel'),'None', false)
 		WebUI.delay(3)
 		WebUI.click(findTestObject('Manage/TeamModule/button_Save'))
@@ -1902,7 +2093,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(5)
 		String regdAmt = data.getCellData(sheetName, "RegAmount", rowNum)
 		String registrationDate = data.getCellData(sheetName, "RegDate", rowNum)
-		
+
 		WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/BillingParksmart'),2)
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/BillingParksmart'))
 		//Registration Payment details verification
@@ -1926,7 +2117,7 @@ public class ReusableMethodsManage extends BaseClass {
 	public void certificationDetailVerification(String sheetName ,int rowNum){
 		String certiType= data.getCellData(sheetName, "CertiType", rowNum)
 		String certiLevel= data.getCellData(sheetName, "CertiLevel", rowNum)
-		
+
 		WebUI.scrollToElement(findTestObject('Manage/CertificationAndScore/a_ Certifications'), 2)
 		WebUI.click(findTestObject('Manage/CertificationAndScore/a_ Certifications'))
 		WebUI.delay(2)
@@ -3355,7 +3546,12 @@ public class ReusableMethodsManage extends BaseClass {
 			String paymentStatus = data.getCellData(sheetName, "PaymentStatus", rowNum)
 			WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
 			WebUI.delay(1)
-			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+			if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+				println "Manage"
+				WebUI.delay(2)
+				WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+			}
+			//WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 			WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
 			WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
 
@@ -3377,7 +3573,12 @@ public class ReusableMethodsManage extends BaseClass {
 			String paymentStatus = data.getCellData(sheetName, "PaymentStatus", rowNum)
 			WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
 			WebUI.delay(1)
-			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+			if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+				println "Manage"
+				WebUI.delay(2)
+				WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+			}
+			//WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 			WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
 			WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
 			WebUI.delay(5)
@@ -3390,11 +3591,11 @@ public class ReusableMethodsManage extends BaseClass {
 			WebUI.verifyMatch(regStatus,paymentStatus,false,FailureHandling.CONTINUE_ON_FAILURE)
 		}
 	}
-	
-	
-	
-	
-	
+
+
+
+
+
 	@Keyword
 	public void billingStatusPriceIND(String sheetName, int rowNum){
 
@@ -3441,7 +3642,7 @@ public class ReusableMethodsManage extends BaseClass {
 			WebUI.verifyMatch(regStatus,paymentStatus,false,FailureHandling.CONTINUE_ON_FAILURE)
 		}
 	}
-	
+
 	@Keyword
 	public void billingStatusPrice2(String sheetName, int rowNum){
 		if(GlobalVariable.environment=='dev'){
@@ -3506,28 +3707,28 @@ public class ReusableMethodsManage extends BaseClass {
 			String regStatus= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Status'))
 			//WebUI.verifyMatch(regAmount,regdAmt,false,FailureHandling.CONTINUE_ON_FAILURE)
 		}
-        else{
-		WebUI.delay(2)
-		String regdAmt = data.getCellData(sheetName,"BillingPrice", rowNum)
-		String paymentStatus = data.getCellData(sheetName, "PaymentStatus", rowNum)
-		WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		WebUI.delay(1)
-		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
-		WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
-		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
+		else{
+			WebUI.delay(2)
+			String regdAmt = data.getCellData(sheetName,"BillingPrice", rowNum)
+			String paymentStatus = data.getCellData(sheetName, "PaymentStatus", rowNum)
+			WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
+			WebUI.delay(1)
+			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+			WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
+			WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
 
-		WebUI.delay(5)
+			WebUI.delay(5)
 
-		String regDate= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/registrationPaymentDate'))
-		String regOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationOrderId'))
-		String regOrderType= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/span_REGISTRATION'))
-		String regAmount= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationAmount'))
-		String regStatus= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Status'))
+			String regDate= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/registrationPaymentDate'))
+			String regOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationOrderId'))
+			String regOrderType= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/span_REGISTRATION'))
+			String regAmount= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationAmount'))
+			String regStatus= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Status'))
 
-		WebUI.verifyMatch(regAmount,regdAmt,false,FailureHandling.CONTINUE_ON_FAILURE)
-		//WebUI.verifyMatch(regStatus,'Completed',false,FailureHandling.CONTINUE_ON_FAILURE)
-	   }
+			WebUI.verifyMatch(regAmount,regdAmt,false,FailureHandling.CONTINUE_ON_FAILURE)
+			//WebUI.verifyMatch(regStatus,'Completed',false,FailureHandling.CONTINUE_ON_FAILURE)
+		}
 	}
-	
-	
+
+
 }

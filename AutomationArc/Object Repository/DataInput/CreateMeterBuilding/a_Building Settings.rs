@@ -7,10 +7,15 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//a[(text() = 'Building Settings' or . = 'Building Settings')]</value>
+         <value>//a[(text() = 'Building Settings' or . = 'Building Settings') and @ref_element = 'Object Repository/DataInput/CreateMeterBuilding/iframe_datainput-widget']</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(//*[@class=&quot;meterListByType-meterName&quot;])[1]
+</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

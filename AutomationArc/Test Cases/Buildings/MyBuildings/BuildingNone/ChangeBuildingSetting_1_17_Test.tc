@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description>Changing the Building Occupany, Opreating hours, Gross area and Unit type</description>
-   <name>ChangeBuildingSettingTest</name>
+   <name>ChangeBuildingSetting_1_17_Test</name>
    <tag>Change Building Setting</tag>
    <comment></comment>
-   <testCaseGuid>f33ced66-648c-46b5-90a6-1af7b089a06d</testCaseGuid>
+   <testCaseGuid>5520e93d-eac7-4e2f-a979-e1ec0cb0f1f8</testCaseGuid>
 </TestCaseEntity>

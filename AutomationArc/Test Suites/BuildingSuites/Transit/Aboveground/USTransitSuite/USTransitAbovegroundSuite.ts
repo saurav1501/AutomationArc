@@ -566,7 +566,7 @@
       <guid>c095ee77-1f98-4a9d-9973-b2c3961683fd</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Common/DataInput/DataInputChangeBuildingSettingVerifyManageAndAnalyticSectionTest</testCaseId>
+      <testCaseId>Test Cases/Common/DataInput/DataInputChangeBuildingSettingVerifyManageAndAnalyticSection_1_17_Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>33f79952-f64b-4c06-8957-44532aaef866</guid>
@@ -863,12 +863,6 @@
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/ProjectVerifyFieldPresentOnContainsResUnitsOptionYesTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>2ab014cb-26b0-419a-b0fe-74eac7b31d8c</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/ProjectVerifyOccAndOprHrsNotZeroTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>eb9fc709-0c56-4202-b294-c33329399f7c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -915,12 +909,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/Manage/VerifyCalcuateWeightedOccupancyTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>14e41795-3042-4e1e-8409-f711436bca48</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/Manage/VerifyOpeartingHourShouldNotBeMoreThan168Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>a64fe421-c019-4dcf-baba-b2be523d5afb</guid>

@@ -6,7 +6,7 @@
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
-   <pageLoadTimeout>30</pageLoadTimeout>
+   <pageLoadTimeout>240</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <testSuiteGuid>e3aff0cd-c4b9-4611-abc8-c2f1fd12859d</testSuiteGuid>
@@ -1331,6 +1331,12 @@
       <testCaseId>Test Cases/Common/Notification/BuildingTVOCDeleteReadingNotificationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>d3137fe0-100d-49c4-8237-0a1ab2b49f9b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ProjectVerifyGrossFloorAreaUnitOnSelectionOfIPSITest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>533570e4-2e92-451d-aec7-542268fc6461</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -1535,18 +1541,6 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ProjectVerifyFieldPresentOnContainsResUnitsOptionYesTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>d3137fe0-100d-49c4-8237-0a1ab2b49f9b</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ProjectVerifyGrossFloorAreaUnitOnSelectionOfIPSITest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>c8ecb2da-6bbd-4f18-bf96-1c97bd7bce86</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ProjectVerifyCalculatorHyperlinkPresentTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>11efd279-4a2e-4361-9ffa-86d08e6625f2</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -1568,7 +1562,7 @@
       <guid>957ab976-7cfd-4ef8-b0d0-99e3de36ac22</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ChangeBuildingSettingTest</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ChangeBuildingSetting_1_17_Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>599a2926-3166-4118-8aa1-a31bf96bd1c1</guid>
@@ -1581,12 +1575,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/CertiVerifyCertificationLogoVisibleTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>7e2c1fcd-31b4-43ff-b3be-adbddd5653a9</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ProjectDownloadCalculatorTemplateAndUploadTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>74be4d57-cf91-4422-aa45-1e87cfd43f91</guid>

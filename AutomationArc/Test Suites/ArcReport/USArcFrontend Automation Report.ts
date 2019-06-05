@@ -956,7 +956,7 @@
       <guid>914aad10-ab11-4d4c-87f7-bc50985ee13a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/ChangeBuildingSettingTest</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/ChangeBuildingSetting_1_17_Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>ddaf6661-bc9b-4394-90eb-4807e8ee882c</guid>
@@ -1268,7 +1268,7 @@
       <guid>354451ee-5bfa-4dad-a6f0-a2d76c30567c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ChangeBuildingSettingTest</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ChangeBuildingSetting_1_17_Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>84e5b2fb-db33-41e1-a7dd-931f5d354752</guid>
@@ -1652,7 +1652,7 @@
       <guid>957ab976-7cfd-4ef8-b0d0-99e3de36ac22</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ChangeBuildingSettingTest</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ChangeBuildingSetting_1_17_Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>7e2c1fcd-31b4-43ff-b3be-adbddd5653a9</guid>

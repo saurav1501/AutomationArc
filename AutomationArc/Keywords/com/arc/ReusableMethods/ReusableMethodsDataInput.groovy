@@ -945,6 +945,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/uploadFileProgress'), 10)
 		WebUI.waitForElementNotPresent(findTestObject('Object Repository/DataInput/uploadFileProgress'), 240)
 		WebUI.delay(4)
+		robot.keyPress(KeyEvent.VK_CANCEL)
+		robot.keyRelease(KeyEvent.VK_CANCEL)
 	}
 
 
@@ -6666,7 +6668,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 			KeywordUtil.markPassed("Meter name is not included in the activity comment")
 		}
 		else{
-			KeywordUtil.markFailed("Meter name is not included in the acivity comment ")
+			KeywordUtil.markFailed("Meter name is included in the acivity comment ")
 		}
 
 
