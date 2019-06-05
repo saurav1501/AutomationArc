@@ -834,24 +834,24 @@ public class ReusableMethodsAnalytics extends BaseClass{
 			String cpmSqarefoot =pmSqarefoot.toString()
 
 			String uOccupant = WebUI.getText(findTestObject('Analytics/yearsCal/Occupant'))
-			
+
 			Double UOccupant= Double.parseDouble(uOccupant)
 			BigDecimal Uoccupant = new BigDecimal(UOccupant)
 			Uoccupant = Uoccupant .setScale(2, RoundingMode.HALF_UP)
 			System.out.println(Uoccupant)
 			String UIoccupant = Uoccupant.toString()
-	
-			
+
+
 			String uSqarefoot = WebUI.getText(findTestObject('Analytics/yearsCal/Sqarefoot'))
 			Double USqarefoot= Double.parseDouble(uSqarefoot)
 			BigDecimal Usqarefoot = new BigDecimal(USqarefoot)
 			Usqarefoot = Usqarefoot .setScale(2, RoundingMode.HALF_UP)
 			System.out.println(Usqarefoot)
 			String UIsqarefoot = Usqarefoot.toString()
-			
+
 
 			WebUI.verifyMatch(UIoccupant ,cpmOccupant, false)
-			
+
 			WebUI.verifyMatch(UIsqarefoot ,cpmSqarefoot, false)
 
 			WebUI.selectOptionByLabel(findTestObject('Analytics/yearsCal/Peryear'), 'Per day', false, FailureHandling.STOP_ON_FAILURE)
@@ -874,14 +874,14 @@ public class ReusableMethodsAnalytics extends BaseClass{
 			uDoccupant = uDoccupant .setScale(2, RoundingMode.HALF_UP)
 			System.out.println(uDoccupant)
 			String UIDoccupant = uDoccupant.toString()
-			
+
 			String udSqarefoot = WebUI.getText(findTestObject('Analytics/yearsCal/Sqarefoot'))
 			Double uDSqarefoot= Double.parseDouble(udSqarefoot)
 			BigDecimal uDsqarefoot = new BigDecimal(uDSqarefoot)
 			uDsqarefoot = uDsqarefoot .setScale(2, RoundingMode.HALF_UP)
 			System.out.println(uDsqarefoot)
 			String UIDsqarefoot = uDsqarefoot.toString()
-			
+
 			WebUI.verifyMatch(UIDoccupant ,cdOccupant, false)
 			WebUI.verifyMatch(UIDsqarefoot, cdSqarefoot, false)
 		}
@@ -938,18 +938,18 @@ public class ReusableMethodsAnalytics extends BaseClass{
 			String energysquareFootmTCO2escope2 =energysquareFootMTCO2escope2.toString()
 
 			String mEnergyOccupantMTCO2eScope1 = WebUI.getText(findTestObject('Analytics/yearsCal/EnergyOccupantMTCO2eScope1'))
-			
-			
-			
+
+
+
 			String mEnergyOccupantMTCO2eScope2 = WebUI.getText(findTestObject('Analytics/yearsCal/EnergyOccupantMTCO2eScope2'))
 			BigDecimal UIergyoccupantMTCO2escope2 = new BigDecimal(mEnergyOccupantMTCO2eScope2)
 			UIergyoccupantMTCO2escope2 = UIergyoccupantMTCO2escope2.setScale(2, RoundingMode.HALF_UP)
 			String uIergyoccupantMTCO2escope2 = UIergyoccupantMTCO2escope2.toString()
-		
-			
-			
-			String mEnergySqFootMTCO2eScope1 = WebUI.getText(findTestObject('Analytics/yearsCal/EnergySqFootMTCO2eScope1'))	
-			
+
+
+
+			String mEnergySqFootMTCO2eScope1 = WebUI.getText(findTestObject('Analytics/yearsCal/EnergySqFootMTCO2eScope1'))
+
 			String mEnergySquareFootMTCO2eScope2 =WebUI.getText(findTestObject('Analytics/yearsCal/EnergySquareFootMTCO2eScope2'))
 			BigDecimal UIergyoccupantMTCOescope2 = new BigDecimal(mEnergySquareFootMTCO2eScope2)
 			UIergyoccupantMTCOescope2 = UIergyoccupantMTCOescope2.setScale(2, RoundingMode.HALF_UP)
@@ -1209,11 +1209,11 @@ public class ReusableMethodsAnalytics extends BaseClass{
 			}
 		}
 		double energyAvgcal = (engScoreInt1 + engScoreInt2 +engScoreInt3 +engScoreInt4 +engScoreInt5 + engScoreInt6 + engScoreInt7 + engScoreInt8 + engScoreInt9 + engScoreInt10 + engScoreInt11 + engScoreInt12 ) / 12
-	//	double ctransavgscore = Double.parseDouble(energyAvgcal)
+		//	double ctransavgscore = Double.parseDouble(energyAvgcal)
 		BigDecimal ctransAvgscore = new BigDecimal(energyAvgcal)
 		ctransAvgscore = ctransAvgscore.setScale(2, RoundingMode.HALF_UP)
 		String AvgscoreCal = ctransAvgscore.toString()
-		
+
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
 		WebUI.delay(5)
 
@@ -1222,7 +1222,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		BigDecimal UtransAvgscore = new BigDecimal(UItransAvgscore)
 		UtransAvgscore = UtransAvgscore.setScale(2, RoundingMode.HALF_UP)
 		String Avgscore = UtransAvgscore.toString()
-		
+
 		String cehighScore = data.getCellData(sheetName,"energyScore",2)
 		String celowScore = data.getCellData(sheetName,"energyScore",3)
 
@@ -1232,9 +1232,9 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Analytics/TotalPage/TotalEngLow')), celowScore, true,FailureHandling.CONTINUE_ON_FAILURE)
 		/****************************Verifying Average Energy Score **************************************************/
 		WebUI.verifyMatch(Avgscore,AvgscoreCal,true,FailureHandling.CONTINUE_ON_FAILURE)
-		
-		
-	
+
+
+
 	}
 	@Keyword
 	public void waterlocalAvgGlobalAvg() {
@@ -1404,7 +1404,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		BigDecimal UtransAvgscore = new BigDecimal(UItransAvgscore)
 		UtransAvgscore = UtransAvgscore.setScale(2, RoundingMode.HALF_UP)
 		String Avgscore = UtransAvgscore.toString()
-				
+
 		String cehighScore = data.getCellData(sheetName,"waterScore",2)
 		String celowScore = data.getCellData(sheetName,"waterScore",3)
 
@@ -1414,8 +1414,8 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Analytics/TotalPage/TotalwaterLow')), celowScore, true,FailureHandling.CONTINUE_ON_FAILURE)
 		/****************************Verifying Average water Score **************************************************/
 		WebUI.verifyMatch(Avgscore,AvgscoreCal,true,FailureHandling.CONTINUE_ON_FAILURE)
-		
-		
+
+
 
 	}
 
@@ -1585,7 +1585,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		WebUI.delay(5)
 
 		String UIwasteAvgScore = WebUI.getText(findTestObject('Analytics/TotalPage/TotalwasteAvg'))
-	    double UItransAvgscore = Double.parseDouble(UIwasteAvgScore)
+		double UItransAvgscore = Double.parseDouble(UIwasteAvgScore)
 		BigDecimal UtransAvgscore = new BigDecimal(UItransAvgscore)
 		UtransAvgscore = UtransAvgscore.setScale(2, RoundingMode.HALF_UP)
 		String Avgscore = UtransAvgscore.toString()
@@ -1836,7 +1836,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		BigDecimal ctransAvgscore = new BigDecimal(transAvgcal)
 		ctransAvgscore = ctransAvgscore.setScale(2, RoundingMode.HALF_UP)
 		String AvgscoreCal = ctransAvgscore.toString()
-		
+
 
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
 		WebUI.delay(5)
@@ -1846,7 +1846,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		BigDecimal UtransAvgscore = new BigDecimal(UItransAvgscore)
 		UtransAvgscore = UtransAvgscore.setScale(2, RoundingMode.HALF_UP)
 		String Avgscore = UtransAvgscore.toString()
-		
+
 		String cehighScore = data.getCellData(sheetName,"transportation",2)
 		String celowScore = data.getCellData(sheetName,"transportation",3)
 
@@ -1856,11 +1856,11 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Analytics/TotalPage/TotaltransLow')), celowScore, true,FailureHandling.CONTINUE_ON_FAILURE)
 		/****************************Verifying Average trans Score **************************************************/
 		WebUI.verifyMatch(Avgscore,AvgscoreCal,true,FailureHandling.CONTINUE_ON_FAILURE)
-		
-		
-	
 
-		
+
+
+
+
 	}
 
 	@Keyword
@@ -2016,10 +2016,10 @@ public class ReusableMethodsAnalytics extends BaseClass{
 				data.setCellData(sheetName,"humanExperience", 3, loweset)
 			}
 		}
-		double humAvgcal = (humScoreInt1 + humScoreInt2 +humScoreInt3 +humScoreInt4 +humScoreInt5 + humScoreInt6 + humScoreInt7 + humScoreInt8 + humScoreInt9 + humScoreInt10 + humScoreInt11 + humScoreInt12 ) 	
+		double humAvgcal = (humScoreInt1 + humScoreInt2 +humScoreInt3 +humScoreInt4 +humScoreInt5 + humScoreInt6 + humScoreInt7 + humScoreInt8 + humScoreInt9 + humScoreInt10 + humScoreInt11 + humScoreInt12 )
 		println humAvgcal
 		double humAvgcal1= humAvgcal/12
-		
+
 		BigDecimal chumAvgcal = new BigDecimal(humAvgcal1)
 		chumAvgcal = chumAvgcal.setScale(2, RoundingMode.HALF_UP)
 		String AvgscoreCal = chumAvgcal.toString()
@@ -2032,7 +2032,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		BigDecimal humAvgscore = new BigDecimal(humavgscore)
 		humAvgscore = humAvgscore.setScale(2, RoundingMode.HALF_UP)
 		String UAvgscore = humAvgscore.toString()
-		
+
 
 
 		String cehighScore = data.getCellData(sheetName,"humanExperience",2)
@@ -2044,9 +2044,31 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Analytics/TotalPage/TotalhumLow')), celowScore, true,FailureHandling.CONTINUE_ON_FAILURE)
 		/****************************Verifying Average hum Score **************************************************/
 		WebUI.verifyMatch(UAvgscore,AvgscoreCal,true,FailureHandling.CONTINUE_ON_FAILURE)
-		
-		
+
+
 	}
+
+	/*	@Keyword
+	 public void annualcarbonemissions(String sheetName ,int rowNum) {
+	 String KWHReading = data.getCellData(sheetName,"EnergykWh",2)
+	 String noOfDays = data.getCellData(sheetName,"ENoOfDays",2)
+	 String emessionFactor = data.getCellData(sheetName,"EmissionFactor", rowNum)
+	 Double demessionFactor =  Double.parseDouble(emessionFactor)
+	 Double dnoOfDays =  Double.parseDouble(noOfDays)
+	 Double dKWHReading =  Double.parseDouble(KWHReading)
+	 double meterdatakBtu = dKWHReading * 3.4121416331 // (1 kWh = 3.4121416331 kBtu)
+	 Double raw_ghg = (meterdatakBtu * demessionFactor)/dnoOfDays
+	 Double raw_ghginMtCo2e = raw_ghg/1000000
+	 Double annualcarbonemissionsMTCO2e = raw_ghginMtCo2e * 365
+	 BigDecimal annualCarbonemissionsMTCO2e = new BigDecimal(annualcarbonemissionsMTCO2e)
+	 annualCarbonemissionsMTCO2e = annualCarbonemissionsMTCO2e.setScale(4, RoundingMode.HALF_UP)
+	 String cannualCarbonemissionsMTCO2e = annualCarbonemissionsMTCO2e.toString()
+	 *//****************UI Verses Calculated Value of Annual carbon Emissions (MTCO2e)*****************************//*
+	 String UIannualCarbonemissionsMTCO2e = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualcarbonemissionsProject'))
+	 WebUI.verifyMatch(UIannualCarbonemissionsMTCO2e, cannualCarbonemissionsMTCO2e, false)
+	 }
+	 */
+
 
 	@Keyword
 	public void annualcarbonemissions(String sheetName ,int rowNum) {
@@ -2057,34 +2079,6 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		Double dnoOfDays =  Double.parseDouble(noOfDays)
 		Double dKWHReading =  Double.parseDouble(KWHReading)
 
-		double meterdatakBtu = dKWHReading * 3.4121416331 // (1 kWh = 3.4121416331 kBtu)
-
-		Double raw_ghg = (meterdatakBtu * 210.904194234467)/dnoOfDays
-
-		Double raw_ghginMtCo2e = raw_ghg/1000000
-
-		Double annualcarbonemissionsMTCO2e = raw_ghginMtCo2e * 365
-
-		BigDecimal annualCarbonemissionsMTCO2e = new BigDecimal(annualcarbonemissionsMTCO2e)
-		annualCarbonemissionsMTCO2e = annualCarbonemissionsMTCO2e.setScale(4, RoundingMode.HALF_UP)
-		String cannualCarbonemissionsMTCO2e = annualCarbonemissionsMTCO2e.toString()
-
-		/****************UI Verses Calculated Value of Annual carbon Emissions (MTCO2e)*****************************/
-		String UIannualCarbonemissionsMTCO2e = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualcarbonemissionsProject'))
-		WebUI.verifyMatch(UIannualCarbonemissionsMTCO2e, cannualCarbonemissionsMTCO2e, false)
-
-	}
-	
-	
-	@Keyword
-	public void annualcarbonemissionsp(String sheetName ,int rowNum) {
-
-		String KWHReading = data.getCellData(sheetName,"EnergykWh",2)
-		String noOfDays = data.getCellData(sheetName,"ENoOfDays",2)
-
-		Double dnoOfDays =  Double.parseDouble(noOfDays)
-		Double dKWHReading =  Double.parseDouble(KWHReading)
-		
 		String emessionFactor = data.getCellData(sheetName,"EmissionFactor", rowNum)
 		Double demessionFactor =  Double.parseDouble(emessionFactor)
 
@@ -2097,21 +2091,383 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		Double annualcarbonemissionsMTCO2e = raw_ghginMtCo2e * 365
 
 		BigDecimal annualCarbonemissionsMTCO2e = new BigDecimal(annualcarbonemissionsMTCO2e)
-		annualCarbonemissionsMTCO2e = annualCarbonemissionsMTCO2e.setScale(4, RoundingMode.HALF_UP)
+		annualCarbonemissionsMTCO2e = annualCarbonemissionsMTCO2e.setScale(2, RoundingMode.HALF_UP)
 		String cannualCarbonemissionsMTCO2e = annualCarbonemissionsMTCO2e.toString()
 
 		/****************UI Verses Calculated Value of Annual carbon Emissions (MTCO2e)*****************************/
 		String UIannualCarbonemissionsMTCO2e = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualcarbonemissionsProject'))
-		WebUI.verifyMatch(UIannualCarbonemissionsMTCO2e, cannualCarbonemissionsMTCO2e, false)
+		BigDecimal UIannualCarbonemissionsMTCO2 = new BigDecimal(UIannualCarbonemissionsMTCO2e)
+		UIannualCarbonemissionsMTCO2 = UIannualCarbonemissionsMTCO2.setScale(2, RoundingMode.HALF_UP)
+		String cannualCarbonemissions = UIannualCarbonemissionsMTCO2.toString()
+
+		WebUI.verifyMatch(cannualCarbonemissions, cannualCarbonemissionsMTCO2e, false)
 
 	}
-	
-	
+
+
+
+	@Keyword
+	public void annualcarbonemissionsUnit(String sheetName ,int rowNum) {
+
+		String KWHReading = data.getCellData(sheetName,"EnergykWh",2)
+		String noOfDays = data.getCellData(sheetName,"ENoOfDays",2)
+
+		String native_unit = data.getCellData(sheetName,"native_unit",rowNum)
+
+		String native_unit_Value1 = data.getCellData(sheetName,"native_unit_Value1",rowNum)
+		Double native_unit_value1 =  Double.parseDouble(native_unit_Value1)
+
+		String native_unit_Value2 = data.getCellData(sheetName,"native_unit_Value2",rowNum)
+		Double native_unit_value2 =  Double.parseDouble(native_unit_Value2)
+
+
+		Double dnoOfDays =  Double.parseDouble(noOfDays)
+		Double dKWHReading =  Double.parseDouble(KWHReading)
+
+		String emessionFactor = data.getCellData(sheetName,"EmissionFactor", 2)
+		Double demessionFactor =  Double.parseDouble(emessionFactor)
+
+		double meterdatakBtu = dKWHReading * 3.4121416331 // (1 kWh = 3.4121416331 kBtu)
+
+		double reading;
+		double raw_ghg
+		double raw_ghginMtCo2e
+		double annualcarbonemissionsMTCO2e
+
+		String UIannualCarbonemissionsMTCO2e
+		String cannualCarbonemissions
+		String cannualCarbonemissionsMTCO2e
+
+		if(native_unit =='grams/kWh'||'grams/MWh' )
+		{
+
+			reading = meterdatakBtu / native_unit_value1
+
+			raw_ghg = (reading * demessionFactor)/dnoOfDays
+
+			raw_ghginMtCo2e = raw_ghg/1000000
+			annualcarbonemissionsMTCO2e = raw_ghginMtCo2e * 365
+
+			BigDecimal annualCarbonemissionsMTCO2e = new BigDecimal(annualcarbonemissionsMTCO2e)
+			annualCarbonemissionsMTCO2e = annualCarbonemissionsMTCO2e.setScale(2, RoundingMode.HALF_UP)
+
+			cannualCarbonemissionsMTCO2e = annualCarbonemissionsMTCO2e.toString()
+
+			/****************UI Verses Calculated Value of Annual carbon Emissions (MTCO2e)*****************************/
+			UIannualCarbonemissionsMTCO2e = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualcarbonemissionsProject'))
+			BigDecimal UIannualCarbonemissionsMTCO2 = new BigDecimal(UIannualCarbonemissionsMTCO2e)
+			UIannualCarbonemissionsMTCO2 = UIannualCarbonemissionsMTCO2.setScale(2, RoundingMode.HALF_UP)
+
+			cannualCarbonemissions = UIannualCarbonemissionsMTCO2.toString()
+			WebUI.verifyMatch(cannualCarbonemissions, cannualCarbonemissionsMTCO2e, false)
+
+		}
+
+		else if(native_unit == 'lbs/kBtu' || 'kg/kBtu' || 'Tonnes (imperial)/kBtu' || 'Tonnes (metric)/kBtu')
+		{
+			//reading = reading * 453.592
+
+			reading = meterdatakBtu * native_unit_value1
+
+			raw_ghg = (reading * demessionFactor)/dnoOfDays
+
+			raw_ghginMtCo2e = raw_ghg/1000000
+			annualcarbonemissionsMTCO2e = raw_ghginMtCo2e * 365
+
+			BigDecimal annualCarbonemissionsMTCO2e = new BigDecimal(annualcarbonemissionsMTCO2e)
+			annualCarbonemissionsMTCO2e = annualCarbonemissionsMTCO2e.setScale(2, RoundingMode.HALF_UP)
+
+			cannualCarbonemissionsMTCO2e = annualCarbonemissionsMTCO2e.toString()
+
+			/****************UI Verses Calculated Value of Annual carbon Emissions (MTCO2e)*****************************/
+			UIannualCarbonemissionsMTCO2e = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualcarbonemissionsProject'))
+			BigDecimal UIannualCarbonemissionsMTCO2 = new BigDecimal(UIannualCarbonemissionsMTCO2e)
+			UIannualCarbonemissionsMTCO2 = UIannualCarbonemissionsMTCO2.setScale(2, RoundingMode.HALF_UP)
+
+			cannualCarbonemissions = UIannualCarbonemissionsMTCO2.toString()
+			WebUI.verifyMatch(cannualCarbonemissions, cannualCarbonemissionsMTCO2e, false)
+
+		}
+
+		else if(native_unit =='lbs/kWh' || 'kg/kWh' || 'Tonnes (imperial)/kWh' || 'Tonnes (metric)/kwh' ||'kg/MWh' || 'lbs/MWh' || 'kg/MWh' || 'Tonnes (imperial)/MWh' || 'Tonnes (metric)/MWh')
+		{
+
+			//reading = (reading * 453.592) / 3.412141
+
+			reading = (meterdatakBtu * native_unit_value1)/native_unit_value2
+
+			raw_ghg = (reading * demessionFactor)/dnoOfDays
+
+			raw_ghginMtCo2e = raw_ghg/1000000
+			annualcarbonemissionsMTCO2e = raw_ghginMtCo2e * 365
+
+			BigDecimal annualCarbonemissionsMTCO2e = new BigDecimal(annualcarbonemissionsMTCO2e)
+			annualCarbonemissionsMTCO2e = annualCarbonemissionsMTCO2e.setScale(2, RoundingMode.HALF_UP)
+
+			cannualCarbonemissionsMTCO2e = annualCarbonemissionsMTCO2e.toString()
+
+			/****************UI Verses Calculated Value of Annual carbon Emissions (MTCO2e)*****************************/
+			UIannualCarbonemissionsMTCO2e = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualcarbonemissionsProject'))
+			BigDecimal UIannualCarbonemissionsMTCO2 = new BigDecimal(UIannualCarbonemissionsMTCO2e)
+			UIannualCarbonemissionsMTCO2 = UIannualCarbonemissionsMTCO2.setScale(2, RoundingMode.HALF_UP)
+
+			cannualCarbonemissions = UIannualCarbonemissionsMTCO2.toString()
+			WebUI.verifyMatch(cannualCarbonemissions, cannualCarbonemissionsMTCO2e, false)
+
+		}
+
+	}
+
+
+	@Keyword
+	public void annualcarbonemissionspersqftUnit(String sheetName ,int rowNum) {
+
+		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
+		WebUI.delay(10)
+
+		String KWHReading = data.getCellData(sheetName,"EnergykWh",2)
+		String noOfDays = data.getCellData(sheetName,"ENoOfDays",2)
+		String emessionFactor = data.getCellData(sheetName,"EmissionFactor", 2)
+		Double demessionFactor =  Double.parseDouble(emessionFactor)
+
+		String native_unit = data.getCellData(sheetName,"native_unit",rowNum)
+
+		String native_unit_Value1 = data.getCellData(sheetName,"native_unit_Value1",rowNum)
+		Double native_unit_value1 =  Double.parseDouble(native_unit_Value1)
+
+		String native_unit_Value2 = data.getCellData(sheetName,"native_unit_Value2",rowNum)
+		Double native_unit_value2 =  Double.parseDouble(native_unit_Value2)
+
+		Double dnoOfDays =  Double.parseDouble(noOfDays)
+		Double dKWHReading =  Double.parseDouble(KWHReading)
+
+		double meterdatakBtu = dKWHReading * 3.4121416331 // (1 kWh = 3.4121416331 kBtu)
+
+		double reading;
+		double raw_ghginMtCo2e
+		double raw_ghg
+		double dUIannualCarbonemissionsMTCO2e
+		double dgrossAreasqft
+
+		String grossAreasqft
+		String UIcarbonemissionsMTCO2epersqft
+		String cannulCarbonemissionsMTCO2epersqft
+		String uicarbonemissionsMTCO2esqft
+
+
+
+		if(native_unit =='grams/kWh'||'grams/MWh' )
+		{
+
+			reading = meterdatakBtu / native_unit_value1
+
+			raw_ghg = (reading * demessionFactor)/dnoOfDays
+
+			raw_ghginMtCo2e = raw_ghg/1000000
+
+			dUIannualCarbonemissionsMTCO2e = raw_ghginMtCo2e * 365
+
+			grossAreasqft = data.getCellData(sheetName,"GrossAreasqft",2)
+			dgrossAreasqft =  Double.parseDouble(grossAreasqft)
+
+			Double annualcarbonemissionsMTCO2epersqft = dUIannualCarbonemissionsMTCO2e/dgrossAreasqft
+
+			BigDecimal cannualcarbonemissionsMTCO2epersqft = new BigDecimal(annualcarbonemissionsMTCO2epersqft)
+			cannualcarbonemissionsMTCO2epersqft = cannualcarbonemissionsMTCO2epersqft.setScale(1,RoundingMode.HALF_UP)
+
+			cannulCarbonemissionsMTCO2epersqft = cannualcarbonemissionsMTCO2epersqft.toString()
+
+			UIcarbonemissionsMTCO2epersqft = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualCarbonPerSQFt'))
+			/****************UI Verses Calculated Value of Annual carbon per square feet*****************************/
+			BigDecimal UIcarbonemissionsMTCO2esqft = new BigDecimal(UIcarbonemissionsMTCO2epersqft)
+			UIcarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.setScale(1,RoundingMode.HALF_UP)
+
+			uicarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.toString()
+
+			WebUI.verifyMatch(uicarbonemissionsMTCO2esqft, cannulCarbonemissionsMTCO2epersqft, false)
+		}
+
+
+		else if(native_unit == 'lbs/kBtu' || 'kg/kBtu' || 'Tonnes (imperial)/kBtu' || 'Tonnes (metric)/kBtu')
+		{
+			//reading = reading * 453.592
+
+			reading = meterdatakBtu * native_unit_value1
+
+			raw_ghg = (reading * demessionFactor)/dnoOfDays
+
+			raw_ghginMtCo2e = raw_ghg/1000000
+
+			dUIannualCarbonemissionsMTCO2e = raw_ghginMtCo2e * 365
+
+			grossAreasqft = data.getCellData(sheetName,"GrossAreasqft",2)
+			dgrossAreasqft =  Double.parseDouble(grossAreasqft)
+
+			Double annualcarbonemissionsMTCO2epersqft = dUIannualCarbonemissionsMTCO2e/dgrossAreasqft
+
+			BigDecimal cannualcarbonemissionsMTCO2epersqft = new BigDecimal(annualcarbonemissionsMTCO2epersqft)
+			cannualcarbonemissionsMTCO2epersqft = cannualcarbonemissionsMTCO2epersqft.setScale(1,RoundingMode.HALF_UP)
+
+			cannulCarbonemissionsMTCO2epersqft = cannualcarbonemissionsMTCO2epersqft.toString()
+
+			UIcarbonemissionsMTCO2epersqft = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualCarbonPerSQFt'))
+			/****************UI Verses Calculated Value of Annual carbon per square feet*****************************/
+			BigDecimal UIcarbonemissionsMTCO2esqft = new BigDecimal(UIcarbonemissionsMTCO2epersqft)
+			UIcarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.setScale(1,RoundingMode.HALF_UP)
+
+			uicarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.toString()
+
+			WebUI.verifyMatch(uicarbonemissionsMTCO2esqft, cannulCarbonemissionsMTCO2epersqft, false)
+		}
+		else if(native_unit =='lbs/kWh' || 'kg/kWh' || 'Tonnes (imperial)/kWh' || 'Tonnes (metric)/kwh' ||'kg/MWh' || 'lbs/MWh' || 'kg/MWh' || 'Tonnes (imperial)/MWh' || 'Tonnes (metric)/MWh')
+		{
+
+			//reading = (reading * 453.592) / 3.412141
+
+			reading = (meterdatakBtu * native_unit_value1)/native_unit_value2
+
+			raw_ghg = (reading * demessionFactor)/dnoOfDays
+
+			raw_ghginMtCo2e = raw_ghg/1000000
+
+			dUIannualCarbonemissionsMTCO2e = raw_ghginMtCo2e * 365
+
+			grossAreasqft = data.getCellData(sheetName,"GrossAreasqft",2)
+			dgrossAreasqft =  Double.parseDouble(grossAreasqft)
+
+			Double annualcarbonemissionsMTCO2epersqft = dUIannualCarbonemissionsMTCO2e/dgrossAreasqft
+
+			BigDecimal cannualcarbonemissionsMTCO2epersqft = new BigDecimal(annualcarbonemissionsMTCO2epersqft)
+			cannualcarbonemissionsMTCO2epersqft = cannualcarbonemissionsMTCO2epersqft.setScale(1,RoundingMode.HALF_UP)
+
+			cannulCarbonemissionsMTCO2epersqft = cannualcarbonemissionsMTCO2epersqft.toString()
+
+			UIcarbonemissionsMTCO2epersqft = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualCarbonPerSQFt'))
+			/****************UI Verses Calculated Value of Annual carbon per square feet*****************************/
+			BigDecimal UIcarbonemissionsMTCO2esqft = new BigDecimal(UIcarbonemissionsMTCO2epersqft)
+			UIcarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.setScale(1,RoundingMode.HALF_UP)
+
+			uicarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.toString()
+
+		}
+	}
+	@Keyword
+	public void annualcarbonemissionsperOccupancyUnit(String sheetName ,int rowNum) {
+
+		String BOccupancy = data.getCellData(sheetName,"BOccupancy",2)
+		Double dBOccupancy =  Double.parseDouble(BOccupancy)
+
+		String emessionFactor = data.getCellData(sheetName,"EmissionFactor",rowNum)
+		Double demessionFactor =  Double.parseDouble(emessionFactor)
+
+		String KWHReading = data.getCellData(sheetName,"EnergykWh",2)
+		String noOfDays = data.getCellData(sheetName,"ENoOfDays",2)
+
+		Double dnoOfDays =  Double.parseDouble(noOfDays)
+		Double dKWHReading =  Double.parseDouble(KWHReading)
+
+		String native_unit = data.getCellData(sheetName,"native_unit",rowNum)
+
+		String native_unit_Value1 = data.getCellData(sheetName,"native_unit_Value1",rowNum)
+		Double native_unit_value1 =  Double.parseDouble(native_unit_Value1)
+
+		String native_unit_Value2 = data.getCellData(sheetName,"native_unit_Value2",rowNum)
+		Double native_unit_value2 =  Double.parseDouble(native_unit_Value2)
+
+		double reading;
+		double raw_ghg
+		double raw_ghginMtCo2e
+		double dUIannualCarbonemissionsMTCO2e
+		String UIannualcarbonemissionsMTCO2eperOcc
+		String UIannualcarbonemissionsMTCO2perOcc
+
+		double meterdatakBtu = dKWHReading * 3.4121416331 // (1 kWh = 3.4121416331 kBtu)
+
+		if(native_unit =='grams/kWh'||'grams/MWh' )
+		{
+
+			reading = meterdatakBtu / native_unit_value1
+
+
+			raw_ghg = (reading * demessionFactor)/dnoOfDays
+
+			raw_ghginMtCo2e = raw_ghg/1000000
+
+			dUIannualCarbonemissionsMTCO2e = raw_ghginMtCo2e * 365
+
+			String annualcarbonemissionsMTCO2eperOcc = dUIannualCarbonemissionsMTCO2e/dBOccupancy
+			BigDecimal annualcarbonemissionsMTCO2ePerOcc = new BigDecimal(annualcarbonemissionsMTCO2eperOcc)
+			annualcarbonemissionsMTCO2ePerOcc = annualcarbonemissionsMTCO2ePerOcc.setScale(1,RoundingMode.HALF_UP)
+			String cannualcarbonemissionsMTCO2ePerOcc = annualcarbonemissionsMTCO2ePerOcc.toString()
+
+			UIannualcarbonemissionsMTCO2eperOcc = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualCarbonPerOccupancy'))
+			BigDecimal UIannualcarbonemissionsMTCO2eperOc = new BigDecimal(UIannualcarbonemissionsMTCO2eperOcc)
+			UIannualcarbonemissionsMTCO2eperOc = UIannualcarbonemissionsMTCO2eperOc.setScale(1,RoundingMode.HALF_UP)
+
+			UIannualcarbonemissionsMTCO2perOcc = UIannualcarbonemissionsMTCO2eperOc.toString()
+
+			/****************UI Verses Calculated Value of Annual carbon per Occupancy*****************************/
+			WebUI.verifyMatch(UIannualcarbonemissionsMTCO2perOcc, cannualcarbonemissionsMTCO2ePerOcc, false)
+		}
+
+		else if(native_unit == 'lbs/kBtu' || 'kg/kBtu' || 'Tonnes (imperial)/kBtu' || 'Tonnes (metric)/kBtu')
+		{
+			//reading = reading * 453.592
+
+			reading = meterdatakBtu * native_unit_value1
+			raw_ghg = (reading * demessionFactor)/dnoOfDays
+
+			raw_ghginMtCo2e = raw_ghg/1000000
+
+			dUIannualCarbonemissionsMTCO2e = raw_ghginMtCo2e * 365
+
+			String annualcarbonemissionsMTCO2eperOcc = dUIannualCarbonemissionsMTCO2e/dBOccupancy
+			BigDecimal annualcarbonemissionsMTCO2ePerOcc = new BigDecimal(annualcarbonemissionsMTCO2eperOcc)
+			annualcarbonemissionsMTCO2ePerOcc = annualcarbonemissionsMTCO2ePerOcc.setScale(1,RoundingMode.HALF_UP)
+			String cannualcarbonemissionsMTCO2ePerOcc = annualcarbonemissionsMTCO2ePerOcc.toString()
+
+			UIannualcarbonemissionsMTCO2eperOcc = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualCarbonPerOccupancy'))
+			BigDecimal UIannualcarbonemissionsMTCO2eperOc = new BigDecimal(UIannualcarbonemissionsMTCO2eperOcc)
+			UIannualcarbonemissionsMTCO2eperOc = UIannualcarbonemissionsMTCO2eperOc.setScale(1,RoundingMode.HALF_UP)
+
+			UIannualcarbonemissionsMTCO2perOcc = UIannualcarbonemissionsMTCO2eperOc.toString()
+
+			/****************UI Verses Calculated Value of Annual carbon per Occupancy*****************************/
+			WebUI.verifyMatch(UIannualcarbonemissionsMTCO2perOcc, cannualcarbonemissionsMTCO2ePerOcc, false)
+		}
+		else if(native_unit =='lbs/kWh' || 'kg/kWh' || 'Tonnes (imperial)/kWh' || 'Tonnes (metric)/kwh' ||'kg/MWh' || 'lbs/MWh' || 'kg/MWh' || 'Tonnes (imperial)/MWh' || 'Tonnes (metric)/MWh')
+		{
+
+			//reading = (reading * 453.592) / 3.412141
+
+			reading = (meterdatakBtu * native_unit_value1)/native_unit_value2
+			raw_ghg = (reading * demessionFactor)/dnoOfDays
+
+			raw_ghginMtCo2e = raw_ghg/1000000
+
+			dUIannualCarbonemissionsMTCO2e = raw_ghginMtCo2e * 365
+
+			String annualcarbonemissionsMTCO2eperOcc = dUIannualCarbonemissionsMTCO2e/dBOccupancy
+			BigDecimal annualcarbonemissionsMTCO2ePerOcc = new BigDecimal(annualcarbonemissionsMTCO2eperOcc)
+			annualcarbonemissionsMTCO2ePerOcc = annualcarbonemissionsMTCO2ePerOcc.setScale(1,RoundingMode.HALF_UP)
+			String cannualcarbonemissionsMTCO2ePerOcc = annualcarbonemissionsMTCO2ePerOcc.toString()
+
+			UIannualcarbonemissionsMTCO2eperOcc = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualCarbonPerOccupancy'))
+			BigDecimal UIannualcarbonemissionsMTCO2eperOc = new BigDecimal(UIannualcarbonemissionsMTCO2eperOcc)
+			UIannualcarbonemissionsMTCO2eperOc = UIannualcarbonemissionsMTCO2eperOc.setScale(1,RoundingMode.HALF_UP)
+
+			UIannualcarbonemissionsMTCO2perOcc = UIannualcarbonemissionsMTCO2eperOc.toString()
+
+			/****************UI Verses Calculated Value of Annual carbon per Occupancy*****************************/
+			WebUI.verifyMatch(UIannualcarbonemissionsMTCO2perOcc, cannualcarbonemissionsMTCO2ePerOcc, false)
+
+		}
+	}
 	@Keyword
 	public void annualcarbonemissionspersqft(String sheetName ,int rowNum) {
 
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
-		WebUI.delay(2)
+		WebUI.delay(4)
 
 		String KWHReading = data.getCellData(sheetName,"EnergykWh",2)
 		String noOfDays = data.getCellData(sheetName,"ENoOfDays",2)
@@ -2141,7 +2497,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		/****************UI Verses Calculated Value of Annual carbon per square feet*****************************/
 		WebUI.verifyMatch(UIcarbonemissionsMTCO2epersqft, cannulCarbonemissionsMTCO2epersqft, false)
 	}
-	
+
 	@Keyword
 	public void annualcarbonemissionspersqftp(String sheetName ,int rowNum) {
 
@@ -2164,7 +2520,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 		Double dUIannualCarbonemissionsMTCO2e = raw_ghginMtCo2e * 365
 
-		String grossAreasqft = data.getCellData(sheetName,"GrossAreasqft",rowNum)
+		String grossAreasqft = data.getCellData(sheetName,"GrossAreasqft",2)
 		Double dgrossAreasqft =  Double.parseDouble(grossAreasqft)
 
 		Double annualcarbonemissionsMTCO2epersqft = dUIannualCarbonemissionsMTCO2e/dgrossAreasqft
@@ -2212,14 +2568,14 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		/****************UI Verses Calculated Value of Annual carbon per Occupancy*****************************/
 		WebUI.verifyMatch(UIannualcarbonemissionsMTCO2eperOcc, cannualcarbonemissionsMTCO2ePerOcc, false)
 	}
-	
+
 	@Keyword
 	public void annualcarbonemissionsperOccupancyp(String sheetName ,int rowNum) {
 
-		String BOccupancy = data.getCellData(sheetName,"BOccupancy",rowNum)
+		String BOccupancy = data.getCellData(sheetName,"BOccupancy",2)
 		Double dBOccupancy =  Double.parseDouble(BOccupancy)
-		
-		String emessionFactor = data.getCellData(sheetName,"EmissionFactor", rowNum)
+
+		String emessionFactor = data.getCellData(sheetName,"EmissionFactor",rowNum)
 		Double demessionFactor =  Double.parseDouble(emessionFactor)
 
 		String KWHReading = data.getCellData(sheetName,"EnergykWh",2)
@@ -2249,7 +2605,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		/****************UI Verses Calculated Value of Annual carbon per Occupancy*****************************/
 		WebUI.verifyMatch(UIannualcarbonemissionsMTCO2eperOcc, cannualcarbonemissionsMTCO2ePerOcc, false)
 	}
-	
+
 
 	@Keyword
 	public void annualWaterConsumtionProj(String sheetName ,int rowNum) {

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Annual carbon emissions (MTCO2e)/313 + Transportation daily carbon
+emissions (MTCO2e)</description>
+   <name>CarbonTotalDailyCarbonEmissionsMTCO2eCalTest</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>a36e70fe-cdd6-4361-915c-1ad8d37622ae</testCaseGuid>
+</TestCaseEntity>

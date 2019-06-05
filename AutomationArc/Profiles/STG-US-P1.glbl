@@ -279,4 +279,24 @@
       <initValue>'/var/lib/jenkins/Downloads/'</initValue>
       <name>downloadDir</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>12</initValue>
+      <name>rowNumTwelve</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>13</initValue>
+      <name>rowNumThirteen</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>14</initValue>
+      <name>rowNumFourteen</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>15</initValue>
+      <name>rowNumFifteen</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
