@@ -562,7 +562,7 @@ public class ReusableMethodsManage extends BaseClass {
 		Thread.sleep(2000)
 		//WebUI.click(findTestObject('Object Repository/DataInput/SaveButtonBuildingSetting'))
 
-		//Edit area
+		/*//Edit area
 
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'), 5)
@@ -571,7 +571,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'), '5500')
 		Thread.sleep(2000)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle'))
-		Thread.sleep(2000)
+		Thread.sleep(2000)*/
 		//WebUI.click(findTestObject('Object Repository/DataInput/SaveButtonBuildingSetting'))
 
 		/*WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/opreating_Hours'))
@@ -684,10 +684,10 @@ public class ReusableMethodsManage extends BaseClass {
 		if((WebUI.getText(findTestObject('Object Repository/DataInput/OperatingHourDropdown')).equals("0 Hour"))){
 			KeywordUtil.markFailed("Operating Hour Should be Greater than 0 and less than 168")
 		}
-		
+
 	}
 
-	
+
 
 	@Keyword
 	public editOccupanyAreaAndOpreatingHoursTransit(){
@@ -938,7 +938,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/prjAffiliatedHigherEducation'),'value'),"boolean:false", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/prjAffiliatedLEEDLab'),'value'),"boolean:false", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/precertify'),'value'),"boolean:false", false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),'value'),prjArea, false, FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),'value'),prjArea, false, FailureHandling.CONTINUE_ON_FAILURE)
 
 	}
 	@Keyword
@@ -1086,20 +1086,28 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public void verifyManageProjectOccAndOprHrsNotZero(String sheetName, int rowNum){
 
-		//ReusNavigate.navigateToManageSection()
-		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
-		WebUI.delay(5)
-		WebUI.scrollToElement(findTestObject('Object Repository/Manage/ProjectDetailVerification/input_operatingHours'), 2)
-		println "Verify if the value of occupancy and operating hours are zero or not"
-		WebUI.clearText(findTestObject('Object Repository/Manage/ProjectDetailVerification/input_operatingHours'))
-		WebUI.sendKeys(findTestObject('Object Repository/Manage/ProjectDetailVerification/input_operatingHours'),'0')
-		WebUI.delay(2)
-		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/ProjectDetailVerification/oprHrsErrorMessage'))
-		WebUI.clearText(findTestObject('Object Repository/Manage/ProjectDetailVerification/occupancy'))
-		WebUI.sendKeys(findTestObject('Object Repository/Manage/ProjectDetailVerification/occupancy'), '0')
-		WebUI.delay(2)
-		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/ProjectDetailVerification/occErrorMessage'))
-
+		WebUI.delay(4)
+		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		WebUI.delay(10)
+		//WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
+		WebUI.delay(3)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle')),"Building Settings", false)
+		//operating hours
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOccupancy'), 5)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOccupancy'))
+		Thread.sleep(3000)
+		WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'), '0')
+		Thread.sleep(2000)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle'))
+		Thread.sleep(2000)
+		WebUI.verifyElementVisible(findTestObject('Object Repository/DataInput/OccupancyErrorMessage'))
+		WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'), '9')
+		Thread.sleep(2000)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle'))
+		Thread.sleep(2000)
+		
 		println "Verified successfully the value of occupancy and operating hours are not zero"
 	}
 

@@ -643,7 +643,7 @@
    <testCaseLink>
       <guid>c8ecb2da-6bbd-4f18-bf96-1c97bd7bce86</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ProjectVerifyCalculatorHyperlinkPresentTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
