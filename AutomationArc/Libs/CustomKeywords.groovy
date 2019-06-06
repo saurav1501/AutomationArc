@@ -4378,6 +4378,14 @@ def static "com.arc.ReusableMethods.ReusableMethodsManage.scoreVersionVerificati
     (new com.arc.ReusableMethods.ReusableMethodsManage()).scoreVersionVerification()
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsManage.scoreVersionVerificationCity"() {
+    (new com.arc.ReusableMethods.ReusableMethodsManage()).scoreVersionVerificationCity()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsManage.scoreVersionVerificationCommunity"() {
+    (new com.arc.ReusableMethods.ReusableMethodsManage()).scoreVersionVerificationCommunity()
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsManage.scoreVersionVerComTest"() {
     (new com.arc.ReusableMethods.ReusableMethodsManage()).scoreVersionVerComTest()
 }
