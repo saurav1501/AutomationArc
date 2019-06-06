@@ -622,7 +622,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(6)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/unitType'),'value'),"string:SI", false, FailureHandling.CONTINUE_ON_FAILURE)
 		//WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),'value'),'10000', false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/week_opr_hrs'),'value'),'160', false, FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/week_opr_hrs'),'value'),'160', false, FailureHandling.CONTINUE_ON_FAILURE)
 
 		/************************Verifying under Analytics Section *****************************************/
 
@@ -872,7 +872,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'), 5)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'))
 		Thread.sleep(3000)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/OperatingHourDropdown')),"100", false,FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/OperatingHourDropdown')),"100 Hour", false,FailureHandling.CONTINUE_ON_FAILURE)
 		Thread.sleep(2000)
 		
 		//verify Area
@@ -884,7 +884,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'))
 		Thread.sleep(3000)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'),20)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne')), '2000',false,FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'),'value'), '2000',false,FailureHandling.CONTINUE_ON_FAILURE)
 		Thread.sleep(2000)
 	}
 
@@ -1099,7 +1099,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/annualRidership'),'value'),annualRidership, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/fullTimeStaffAtStn'),'value'),fullTimeStaffAtStn, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/avgTimeSpent'),'value'),avgTimeSpent, false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/week_opr_hrs'),'value'),weeklyOprHrs, false, FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/week_opr_hrs'),'value'),weeklyOprHrs, false, FailureHandling.CONTINUE_ON_FAILURE)
 
 	}
 
@@ -1236,12 +1236,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'), 5)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'))
 		Thread.sleep(5000)
-		/*
-		findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeSelectButtonArea')
-		findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectIPUnitType')
-		findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectSIUnitType')
-		findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeHeader')*/
-		WebUI.waitForElementVisible(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeSelectButtonArea')), 20)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeSelectButtonArea'), 20)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeSelectButtonArea')),"Imperial System (IP)",false,FailureHandling.CONTINUE_ON_FAILURE)
         WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeHeader')), "VALUE (square feet)", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.delay(2)

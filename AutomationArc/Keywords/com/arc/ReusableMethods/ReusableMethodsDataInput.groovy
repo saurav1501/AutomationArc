@@ -5191,11 +5191,10 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				//WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
 				WebUI.click(findTestObject('DataInput/Survey/Submit'))
 				WebUI.delay(3)
-				//WebUI.waitForElementVisible(findTestObject('DataInput/Survey/Thank'), 20)
+				WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Survey/ReloadSurvey'), 20)
 				WebUI.click(findTestObject('Object Repository/DataInput/Survey/ReloadSurvey'))
 				WebUI.delay(3)
 				WebUI.waitForPageLoad(GlobalVariable.timeOut)
-
 				WebUI.delay(3)
 				println "Survey Submited Successufully"
 

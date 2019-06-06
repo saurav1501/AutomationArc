@@ -563,15 +563,12 @@
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/Analytics/TotalAnalyticTranHumDataInputSurveyResRateTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-<<<<<<< HEAD
       <guid>c095ee77-1f98-4a9d-9973-b2c3961683fd</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Common/DataInput/DataInputChangeBuildingSettingVerifyManageAndAnalyticSection_1_17_Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
-=======
->>>>>>> arc
       <guid>33f79952-f64b-4c06-8957-44532aaef866</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -852,12 +849,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/CertiVerifyCertificationLogoVisibleTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>18133fff-5acf-4d2d-b118-638dd4ebf7bd</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/ProjectVerifyCalculatorHyperlinkPresentTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>ee3d7229-6ccf-4ff7-a182-763e17bdde4c</guid>
