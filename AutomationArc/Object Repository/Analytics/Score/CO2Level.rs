@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>downloadResourceBtn</name>
+   <name>CO2Level</name>
    <tag></tag>
-   <elementGuidId>6c66f637-11a7-451b-8d42-5fec5118a1fc</elementGuidId>
+   <elementGuidId>86aee535-e2e7-4741-bc83-35a17289b158</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@ng-click=&quot;redirectToDataResource()&quot;]</value>
+         <value>//*[@class=&quot;progress-label-co2&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

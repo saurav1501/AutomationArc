@@ -3691,6 +3691,7 @@ def static "com.arc.ReusableMethods.ResuableMethodsGRESB.gresbAddanddeleteprojec
 }
 
 def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.genratePerformanceScoreAdminTool"(
+<<<<<<< HEAD
     	String sheetName	
      , 	int rowNum	) {
     (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).genratePerformanceScoreAdminTool(
@@ -3711,6 +3712,8 @@ def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.genratePerfo
 }
 
 def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.analyticsgenratePerformanceScoreAdminToolOtherNone"(
+=======
+>>>>>>> arc
     	String sheetName	
      , 	int rowNum	) {
     (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).analyticsgenratePerformanceScoreAdminToolOtherNone(

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>downloadResourceBtn</name>
+   <name>EnergyIntensity</name>
    <tag></tag>
-   <elementGuidId>6c66f637-11a7-451b-8d42-5fec5118a1fc</elementGuidId>
+   <elementGuidId>89a769b9-18d9-48b3-b4b0-958f911e26d7</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@ng-click=&quot;redirectToDataResource()&quot;]</value>
+         <value>//*[@class=&quot;progress-label-source_energy&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

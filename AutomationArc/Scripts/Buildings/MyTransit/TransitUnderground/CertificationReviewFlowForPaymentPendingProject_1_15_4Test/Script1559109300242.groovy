@@ -14,7 +14,8 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
 try {
-	
+	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSeven)
+	//WebUI.delay(10)
     CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSubmitReview.VerifyChangeTextInSubmitReviewWhenPaymentIsPending'()
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginArcAdminToolWithGlobalVariable'()
 	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifySnapshotFileNameUploadedBuildingTransit'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSeven,"LEED V4 O+M. TR")

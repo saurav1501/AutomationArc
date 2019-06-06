@@ -609,11 +609,23 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle'))
 		Thread.sleep(2000)
 
+<<<<<<< HEAD
 		WebUI.click(findTestObject('Object Repository/DataInput/UnitTypeDorpdown'))
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/SI'), 2)
 		WebUI.click(findTestObject('Object Repository/DataInput/SI'))
 
 		WebUI.delay(10)
+=======
+		WebUI.clearText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/buildingArea'))
+		WebUI.sendKeys(findTestObject('Object Repository/DataInput/CreateMeterBuilding/buildingArea'), '10000')
+
+
+		WebUI.click(findTestObject('Object Repository/DataInput/Data/svg_Imperial system (IP)_svg-i'))
+		WebUI.scrollToElement(findTestObject('DataInput/Data/a_Metric system (SI)'), 2)
+		WebUI.click(findTestObject('DataInput/Data/a_Metric system (SI)'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/updateBuildingSettingButton'))
+		WebUI.delay(40)
+>>>>>>> arc
 
 		/************************Verifying under Manage Section *****************************************/
 
@@ -1457,6 +1469,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.scrollToElement(findTestObject('Manage/TeamModule/a_ Team'),2)
 		WebUI.click(findTestObject('Manage/TeamModule/a_ Team'))
 		WebUI.delay(10)
+		WebUI.verifyElementPresent(findTestObject('Object Repository/Manage/TeamModule/TeamMembersFirstRow'), 20)
 		WebUI.scrollToElement(findTestObject('Manage/TeamModule/input_input'), 2)
 		WebUI.setText(findTestObject('Manage/TeamModule/input_input'),GlobalVariable.TeamMember)
 		WebUI.delay(2)
@@ -1825,8 +1838,8 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Manage/TeamModule/button_Save'))
 		/*	WebUI.delay(2)
 		 WebUI.verifyElementVisible(findTestObject('Manage/TeamModule/TeamMemberUpdateSuccessMsg'))*/
-		WebUI.delay(8)
-		WebUI.waitForElementNotClickable(findTestObject('Object Repository/Manage/TeamModule/TeamRole'), 40)
+		WebUI.delay(10)
+		//WebUI.waitForElementNotClickable(findTestObject('Object Repository/Manage/TeamModule/TeamRole'), 40)
 		WebUI.verifyOptionSelectedByLabel(findTestObject('Object Repository/Manage/TeamModule/TeamRole'),"Team Member", false,10)
 	}
 
@@ -1843,6 +1856,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Manage/TeamModule/a_ Team'))
 		WebUI.delay(6)
 		WebUI.click(findTestObject('Manage/TeamModule/button_Edit'))
+		WebUI.delay(2)
 		WebUI.selectOptionByLabel(findTestObject('Manage/TeamModule/newMemberAddedAuthorizationLevel'), 'None', false)
 		WebUI.delay(3)
 		WebUI.click(findTestObject('Manage/TeamModule/button_Save'))
@@ -2688,7 +2702,10 @@ public class ReusableMethodsManage extends BaseClass {
 		print scoreStatus
 	}
 
+<<<<<<< HEAD
 	
+=======
+>>>>>>> arc
 	@Keyword
 	public void scoreVersionVerificationCity(){
 		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
@@ -3023,20 +3040,31 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/Setting/animationLink'))
 	}
 
+
+
+
 	@Keyword
 	public void verifyDataResourceAndDataReviewChecklistPdfDownload() throws IOException, InterruptedException {
 		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
 		 WebUI.delay(1)
 		 WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Manage'))
-		 WebUI.delay(1)*/
+		 */
+		WebUI.delay(3)
 		WebUI.scrollToElement(findTestObject('Manage/Setting/a_setting'), 5)
 		WebUI.click(findTestObject('Manage/Setting/a_setting'))
 		WebUI.delay(3)
 		WebUI.click(findTestObject('Object Repository/Manage/Setting/downloadResourceBtn'))
 		WebUI.delay(5)
-		Assert.assertTrue(ReusDataInput.isFileDownloaded('DataResources.pdf'), "DataResources File Didn't downloaded successfully")
+		WebUI.switchToWindowIndex(1)
+		WebUI.delay(8)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/Setting/DataGuideBuilding'), 10)
+		WebUI.click(findTestObject('Object Repository/Manage/Setting/DataGuideBuilding'))
+		WebUI.delay(5)
+		Assert.assertTrue(ReusDataInput.isFileDownloaded('Data Guide for Buildings.pdf'), "DataResources File Didn't downloaded successfully")
 		WebUI.delay(3)
 		deleteFile(BaseClass.DataResourcesPdf)
+		WebUI.closeWindowIndex(1)
+		WebUI.switchToWindowIndex(0)
 		WebUI.delay(3)
 		WebUI.click(findTestObject('Object Repository/Manage/Setting/dataReviewChecklistDownloadBtn'))
 		WebUI.delay(5)

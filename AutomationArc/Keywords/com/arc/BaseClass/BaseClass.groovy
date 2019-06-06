@@ -78,7 +78,7 @@ public class BaseClass {
 	public static String UploadDocs=RunConfiguration.getProjectDir()+"/ARCDataTemplete/uploadDoc.docx"
 	public static String UploadManageCalculatorExcel = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Arc_Data_Template_building.xlsm"
 	public static String DownloadManageCalculatorExcel = GlobalVariable.downloadDir+"Arc_Data_Template_building.xlsm"
-	public static String DataResourcesPdf = GlobalVariable.downloadDir+"DataResources.pdf"
+	public static String DataResourcesPdf = GlobalVariable.downloadDir+"Data Guide for Buildings.pdf"
 	public static String DataReviewChecklistPdf = GlobalVariable.downloadDir+"Data Review Checklist.pdf"
 	public static String UploadArcDataTempleteSchools = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Arc_Data_Template_building_School_v4.1.xlsm"
 	//International Languages for  snapshot validation

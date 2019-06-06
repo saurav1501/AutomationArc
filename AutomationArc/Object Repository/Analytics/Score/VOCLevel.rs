@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>downloadResourceBtn</name>
+   <name>VOCLevel</name>
    <tag></tag>
-   <elementGuidId>6c66f637-11a7-451b-8d42-5fec5118a1fc</elementGuidId>
+   <elementGuidId>2bc8bf61-08f6-4cd0-aff1-14f719f9ad81</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@ng-click=&quot;redirectToDataResource()&quot;]</value>
+         <value>//*[@class=&quot;progress-label-voc&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

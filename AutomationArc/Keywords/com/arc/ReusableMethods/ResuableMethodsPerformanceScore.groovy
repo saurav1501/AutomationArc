@@ -197,6 +197,13 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/EnergyPerScore'),10)
 		String energyperScore = WebUI.getText(findTestObject('PerformanceScore/Score/EnergyPerScore'))
 		WebUI.verifyMatch(energyperScore , energyScore, false)
+		String carbonIntensity= WebUI.getText(findTestObject('Object Repository/Analytics/Score/CarbonIntensity'))
+		String energyIntensity= WebUI.getText(findTestObject('Object Repository/Analytics/Score/EnergyIntensity'))
+
+		if((Integer.parseInt(carbonIntensity)==0))
+			KeywordUtil.markFailed("Carbon Intensity is zero(0)")
+		if((Integer.parseInt(energyIntensity)==0))
+			KeywordUtil.markFailed("Energy Intensity is zero(0)")
 
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Water'))
 		WebUI.delay(12)
@@ -221,6 +228,18 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/HumanExpScore'),10)
 		String humanExperience = WebUI.getText(findTestObject('PerformanceScore/Score/HumanExpScore'))
 		WebUI.verifyMatch(humanExperience ,humanExpScore, false)
+
+		String occupantSatisfaction= WebUI.getText(findTestObject('Object Repository/Analytics/Score/OccupantSatisfaction'))
+		String co2Level= WebUI.getText(findTestObject('Object Repository/Analytics/Score/CO2Level'))
+		String voc= WebUI.getText(findTestObject('Object Repository/Analytics/Score/VOCLevel'))
+
+		if((Integer.parseInt(occupantSatisfaction)==0))
+			KeywordUtil.markFailed("Occupant Satisfaction is zero(0)")
+		if((Integer.parseInt(co2Level)==0))
+			KeywordUtil.markFailed("Co2 Level is zero(0)")
+		if((Integer.parseInt(voc)==0))
+			KeywordUtil.markFailed("VOC Level is zero(0)")
+
 
 		/********* Verifying the Generated score for total score & Energy & Water & Waste & Transport & Human Experience under data Input section ********/
 		WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
@@ -445,15 +464,15 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		String wasteScore = WebUI.getText(findTestObject('PerformanceScore/Score/WasteScore'))
 		String transportScore = WebUI.getText(findTestObject('PerformanceScore/Score/TransportScore'))
 		String humanExpScore = WebUI.getText(findTestObject('PerformanceScore/Score/HumanExperianceScore'))
-		String basePointScore = WebUI.getText(findTestObject('PerformanceScore/Score/BasePointPScore'))
+		////String basePointScore = WebUI.getText(findTestObject('PerformanceScore/Score/BasePointPScore'))
 
 		double energyscore = Double.parseDouble(energyScore)
 		double waterscore =  Double.parseDouble(waterScore)
 		double wastescore =  Double.parseDouble(wasteScore)
 		double transportscore = Double.parseDouble(transportScore)
 		double humexpscore =    Double.parseDouble(humanExpScore)
-		double basepointscore = Double.parseDouble(basePointScore)
-		double totalPerformanceScore = energyscore + waterscore + wastescore + transportscore + humexpscore + basepointscore
+		//double basepointscore = Double.parseDouble(basePointScore)
+		double totalPerformanceScore = energyscore + waterscore + wastescore + transportscore + humexpscore //+ basepointscore
 		String totalperformanceScore = Math.round(totalPerformanceScore)
 		//String totalperformanceScore = Double.toString(totalPerformanceScore)
 		println totalperformanceScore
@@ -468,7 +487,13 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 
 		WebUI.delay(5)
 
-		WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
+		if((WebUI.getAttribute(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'), "class", FailureHandling.OPTIONAL).equals("pl20 collapsed"))){
+			println "Scores"
+			WebUI.delay(2)
+			WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
+			WebUI.delay(2)
+		}
+		//WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TotalPerformanceScore'),10)
 		WebUI.delay(15)
@@ -477,11 +502,11 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		print totalperformaceScore
 		WebUI.verifyMatch(totalperformaceScore , totalperformanceScore, false)
 
-		WebUI.click(findTestObject('PerformanceScore/Score/a_ Base Points'))
-		WebUI.delay(12)
-		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/BasePointScore'),10)
-		String basepointScore = WebUI.getText(findTestObject('PerformanceScore/Score/BasePointScore'))
-		WebUI.verifyMatch(basepointScore , basePointScore, false)
+		/*WebUI.click(findTestObject('PerformanceScore/Score/a_ Base Points'))
+		 WebUI.delay(12)
+		 WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/BasePointScore'),10)
+		 String basepointScore = WebUI.getText(findTestObject('PerformanceScore/Score/BasePointScore'))
+		 WebUI.verifyMatch(basepointScore , basePointScore, false)*/
 
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Energy'))
 		WebUI.delay(12)
@@ -691,8 +716,8 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		String humanExp = WebUI.getText(findTestObject('PerformanceScore/Score/span_Human Experience'))
 		WebUI.verifyMatch(humanExp ,"HUMAN EXPERIENCE", false)
 
-		String basePoint = WebUI.getText(findTestObject('PerformanceScore/Score/span_Base Points'))
-		WebUI.verifyMatch(basePoint ,"BASE POINTS", false)
+		//String basePoint = WebUI.getText(findTestObject('PerformanceScore/Score/span_Base Points'))
+		//WebUI.verifyMatch(basePoint ,"BASE POINTS", false)
 	}
 	@Keyword
 	public void individualScoreUIAllFieldVerification() throws IOException, InterruptedException {
@@ -838,7 +863,7 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 
 		WebUI.verifyElementPresent(findTestObject('PerformanceScore/TotalRacetrack/HumExpBlankRaceTrack') ,5, FailureHandling.STOP_ON_FAILURE)
 
-		WebUI.verifyElementPresent(findTestObject('PerformanceScore/TotalRacetrack/BasePointBlankRaceTrack') ,5, FailureHandling.STOP_ON_FAILURE)
+		//WebUI.verifyElementPresent(findTestObject('PerformanceScore/TotalRacetrack/BasePointBlankRaceTrack') ,5, FailureHandling.STOP_ON_FAILURE)
 	}
 	@Keyword
 	public void totalPerformanceScoreUIWithoutScoreAg() throws IOException, InterruptedException {
@@ -899,9 +924,9 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 	public void individualPerformanceScoreUIWithoutScore() throws IOException, InterruptedException {
 		/********* Verifying blank category score race-track without entering data for individual Energy , Water , Waste , Transport , Human Exp , Base Point ************* */	
 
-		WebUI.click(findTestObject('PerformanceScore/Score/a_ Base Points'))
-		WebUI.delay(5)
-		WebUI.verifyElementPresent(findTestObject('PerformanceScore/RaceTrack/BasePointBlankRaceTrack'),5, FailureHandling.STOP_ON_FAILURE)
+		//WebUI.click(findTestObject('PerformanceScore/Score/a_ Base Points'))
+		//WebUI.delay(5)
+		//WebUI.verifyElementPresent(findTestObject('PerformanceScore/RaceTrack/BasePointBlankRaceTrack'),5, FailureHandling.STOP_ON_FAILURE)
 
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Energy'))
 		WebUI.delay(5)

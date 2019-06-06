@@ -1025,7 +1025,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
 		WebUI.delay(2)
 		uploadFile(UploadArcDataTempleteChineseSimple)
-		WebUI.delay(4)
+		WebUI.delay(6)
 		//WebUI.sendKeys(findTestObject('DataInput/DataInputFileUpload/sendFileToUpload'),UploadDocs)
 		//duplicate doc file
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
