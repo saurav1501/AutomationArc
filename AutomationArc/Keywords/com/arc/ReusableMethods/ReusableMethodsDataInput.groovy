@@ -343,8 +343,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/DetailsTab'))
 		WebUI.delay(5)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Graphs/WasteMeterUnitDisplayedOnGraph')), "lbs", false)
-		int j=9
-		(1..8).each{
+		int j=8
+		(1..7).each{
 			String reading1 = dataExcelTemplate.getCellData(sheetName, "Reading2", j)
 			WebUI.focus(findTestObject('Object Repository/DataInput/CreateMeterBuilding/WasteDivertedGraph',[index: it]))
 			String[] reading=WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ToolTipGraph')).split(" ")
@@ -371,8 +371,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	}
 
 	public void getGraphReading(String sheetName, String colName){
-		int j=9
-		(1..8).each{
+		int j=8
+		(1..7).each{
 
 			String reading1 = dataExcelTemplate.getCellData(sheetName, colName, j)
 			WebUI.focus(findTestObject('Object Repository/DataInput/CreateMeterBuilding/WasteGeneratedGraph',[index: it]))
@@ -5338,17 +5338,22 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		 WebUI.delay(1)
 		 WebUI.click(findTestObject('Manage/Parking/ManageProject'))
 		 WebUI.delay(2)*/
-		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
+		/*WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
 		WebUI.delay(10)
 
 		WebUI.scrollToElement(findTestObject('Manage/ProjectDetailVerification/projectoccupancy'), 10)
 		String projectoccupancy = WebUI.getAttribute((findTestObject('Manage/ProjectDetailVerification/projectoccupancy')),'value')
 
-		double projectOccupancy= Double.parseDouble(projectoccupancy)
+		double projectOccupancy= Double.parseDouble(projectoccupancy)*/
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
 		WebUI.delay(10)
-
-
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
+		WebUI.delay(3)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle')),"Building Settings", false)
+		WebUI.delay(3)
+		String projectoccupancy = WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'))
+	    double projectOccupancy= Double.parseDouble(projectoccupancy)
+	
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
 		WebUI.delay(10)
 		/******Verify that survey response rate% is calculated on the basis of the following formula [ Response %ge = (No. of responses/Occupancy)*100 ] . Always count the no of responses by counting the no of rows of transport survey results.*****/
