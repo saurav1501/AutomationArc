@@ -609,23 +609,12 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle'))
 		Thread.sleep(2000)
 
-<<<<<<< HEAD
 		WebUI.click(findTestObject('Object Repository/DataInput/UnitTypeDorpdown'))
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/SI'), 2)
 		WebUI.click(findTestObject('Object Repository/DataInput/SI'))
 
 		WebUI.delay(10)
-=======
-		WebUI.clearText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/buildingArea'))
-		WebUI.sendKeys(findTestObject('Object Repository/DataInput/CreateMeterBuilding/buildingArea'), '10000')
 
-
-		WebUI.click(findTestObject('Object Repository/DataInput/Data/svg_Imperial system (IP)_svg-i'))
-		WebUI.scrollToElement(findTestObject('DataInput/Data/a_Metric system (SI)'), 2)
-		WebUI.click(findTestObject('DataInput/Data/a_Metric system (SI)'))
-		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/updateBuildingSettingButton'))
-		WebUI.delay(40)
->>>>>>> arc
 
 		/************************Verifying under Manage Section *****************************************/
 
@@ -2702,10 +2691,6 @@ public class ReusableMethodsManage extends BaseClass {
 		print scoreStatus
 	}
 
-<<<<<<< HEAD
-	
-=======
->>>>>>> arc
 	@Keyword
 	public void scoreVersionVerificationCity(){
 		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))

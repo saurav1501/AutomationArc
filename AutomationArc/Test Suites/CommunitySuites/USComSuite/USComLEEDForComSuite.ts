@@ -113,12 +113,6 @@
       <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/CreateEnergyMeterReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>21b18a2a-195e-42eb-81d3-ad5f8d2be2e2</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/BasePointTotalScoreTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>36ae1d55-83ed-497e-aa7a-e63bc7c0df9f</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
