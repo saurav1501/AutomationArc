@@ -3635,7 +3635,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		double totalavg = (avgAQICrime + humEudScore + hEQScore + hProsScore)/4
 
 		BigDecimal totalAvg = new BigDecimal(totalavg)
-		totalAvg = totalAvg.setScale(0, RoundingMode.HALF_EVEN)
+		totalAvg = totalAvg.setScale(0,RoundingMode.HALF_UP)
 		String TotalScore = totalAvg.toString()
 
 		ReusableMethodsNavigation.clickScoreLabel()
