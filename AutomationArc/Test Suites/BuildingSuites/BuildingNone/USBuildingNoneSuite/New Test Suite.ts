@@ -242,7 +242,7 @@
       <guid>c4cce74c-c1b5-4a61-be0c-1f2286849b40</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Common/Analytics/1.17/GramskWh/ChangeEmissionFactorUnitKgkWh_15_7Test</testCaseId>
+      <testCaseId>Test Cases/Common/Analytics/1.17/GramskWh/ChangeEmissionFactorUnitGramskWh_15_7Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>b3ef3b1c-684c-4bf7-866b-37d0cb81efea</guid>

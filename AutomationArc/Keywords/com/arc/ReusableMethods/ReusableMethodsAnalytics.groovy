@@ -313,7 +313,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 		Double CTotal= Double.parseDouble(occupancy)
 		BigDecimal AtotalMtco2e = new BigDecimal(CTotal)
-		AtotalMtco2e = AtotalMtco2e .setScale(4, RoundingMode.HALF_UP)
+		AtotalMtco2e = AtotalMtco2e .setScale(1, RoundingMode.HALF_UP)
 		String atotalMtco2e = AtotalMtco2e.toString()
 		System.out.println(AtotalMtco2e)
 
@@ -335,7 +335,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 		Double TotalCarbon= CTEScope1 + CTEScope2 + CTTransportion
 		BigDecimal totalMtco2e = new BigDecimal(TotalCarbon)
-		totalMtco2e = totalMtco2e .setScale(4, RoundingMode.HALF_UP)
+		totalMtco2e = totalMtco2e .setScale(1, RoundingMode.HALF_UP)
 		System.out.println(totalMtco2e)
 		//Assert.assertEquals(AtotalMtco2e,totalMtco2e)
 
@@ -387,29 +387,33 @@ public class ReusableMethodsAnalytics extends BaseClass{
 	public void verifyCTotalPerSQFTAnalytics(String param) throws IOException, InterruptedException{
 		println "TOTAL ANNUAL CARBON EMISSIONS (MTCO2e): PER SQ FT"
 		String  str1=WebUI.getText(findTestObject('Analytics/Cal/SCTotal'))
-		Double CTotal= Double.parseDouble(str1)
+		String SCTotal =  str1.replace(',', '')
+		Double CTotal= Double.parseDouble(SCTotal)
 		BigDecimal AtotalMtco2e = new BigDecimal(CTotal)
-		AtotalMtco2e = AtotalMtco2e .setScale(4, RoundingMode.HALF_UP)
+		AtotalMtco2e = AtotalMtco2e .setScale(1, RoundingMode.HALF_UP)
 		System.out.println(AtotalMtco2e)
 		String atotalMtco2e = AtotalMtco2e.toString()
 
 		String  str2=WebUI.getText(findTestObject('Analytics/Cal/SCTEScope1'))
-		Double CTEScope1 = Double.parseDouble(str2)
+		String Scope1 =  str2.replace(',', '')
+		Double CTEScope1 = Double.parseDouble(Scope1)
 		System.out.println(CTEScope1)
 
 		String  str3=WebUI.getText(findTestObject('Analytics/Cal/SCTEScope2'))
-		Double CTEScope2 = Double.parseDouble(str3)
+		String Scope2 =  str3.replace(',', '')
+		Double CTEScope2 = Double.parseDouble(Scope2)
 		System.out.println(CTEScope2)
 
 		String  str4=WebUI.getText(findTestObject('Analytics/Cal/SCTTransportion'))
 		String replaced = str4.replace('-', '0')
+		String Transportion =  replaced.replace(',', '')
 
-		Double CTTransportion = Double.parseDouble(replaced)
+		Double CTTransportion = Double.parseDouble(Transportion)
 		System.out.println(CTTransportion)
 
 		Double TotalCarbon= CTEScope1 + CTEScope2 + CTTransportion
 		BigDecimal totalMtco2e = new BigDecimal(TotalCarbon)
-		totalMtco2e = totalMtco2e .setScale(4, RoundingMode.HALF_UP)
+		totalMtco2e = totalMtco2e .setScale(1, RoundingMode.HALF_UP)
 		System.out.println(totalMtco2e)
 		//Assert.assertEquals(AtotalMtco2e,totalMtco2e)
 
@@ -2138,7 +2142,9 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		String cannualCarbonemissions
 		String cannualCarbonemissionsMTCO2e
 
-		if(native_unit =='grams/kWh'||'grams/MWh' )
+		println native_unit
+
+		if(native_unit=='grams/kWh'||native_unit=='grams/MWh')
 		{
 
 			reading = meterdatakBtu / native_unit_value1
@@ -2155,33 +2161,39 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 			/****************UI Verses Calculated Value of Annual carbon Emissions (MTCO2e)*****************************/
 			UIannualCarbonemissionsMTCO2e = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualcarbonemissionsProject'))
-			BigDecimal UIannualCarbonemissionsMTCO2 = new BigDecimal(UIannualCarbonemissionsMTCO2e)
+			String UIannualCarbonemissions =  UIannualCarbonemissionsMTCO2e.replace(',', '')
+
+			BigDecimal UIannualCarbonemissionsMTCO2 = new BigDecimal(UIannualCarbonemissions)
 			UIannualCarbonemissionsMTCO2 = UIannualCarbonemissionsMTCO2.setScale(2, RoundingMode.HALF_UP)
 
 			cannualCarbonemissions = UIannualCarbonemissionsMTCO2.toString()
+			println "gram"
 			WebUI.verifyMatch(cannualCarbonemissions, cannualCarbonemissionsMTCO2e, false)
 
 		}
 
-		else if(native_unit == 'lbs/kBtu' || 'kg/kBtu' || 'Tonnes (imperial)/kBtu' || 'Tonnes (metric)/kBtu')
+		else if(native_unit =='lbs/kBtu'||native_unit=='kg/kBtu'||native_unit=='Tonnes (imperial)/kBtu'||native_unit=='Tonnes (metric)/kBtu')
 		{
 			//reading = reading * 453.592
 
-			reading = meterdatakBtu * native_unit_value1
-
-			raw_ghg = (reading * demessionFactor)/dnoOfDays
+			raw_ghg = (meterdatakBtu * demessionFactor)/dnoOfDays
 
 			raw_ghginMtCo2e = raw_ghg/1000000
 			annualcarbonemissionsMTCO2e = raw_ghginMtCo2e * 365
 
-			BigDecimal annualCarbonemissionsMTCO2e = new BigDecimal(annualcarbonemissionsMTCO2e)
+			reading = annualcarbonemissionsMTCO2e * native_unit_value1
+
+			BigDecimal annualCarbonemissionsMTCO2e = new BigDecimal(reading)
+
 			annualCarbonemissionsMTCO2e = annualCarbonemissionsMTCO2e.setScale(2, RoundingMode.HALF_UP)
 
 			cannualCarbonemissionsMTCO2e = annualCarbonemissionsMTCO2e.toString()
 
 			/****************UI Verses Calculated Value of Annual carbon Emissions (MTCO2e)*****************************/
 			UIannualCarbonemissionsMTCO2e = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualcarbonemissionsProject'))
-			BigDecimal UIannualCarbonemissionsMTCO2 = new BigDecimal(UIannualCarbonemissionsMTCO2e)
+			String UIannualCarbonemissions =  UIannualCarbonemissionsMTCO2e.replace(',', '')
+
+			BigDecimal UIannualCarbonemissionsMTCO2 = new BigDecimal(UIannualCarbonemissions)
 			UIannualCarbonemissionsMTCO2 = UIannualCarbonemissionsMTCO2.setScale(2, RoundingMode.HALF_UP)
 
 			cannualCarbonemissions = UIannualCarbonemissionsMTCO2.toString()
@@ -2189,26 +2201,57 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 		}
 
-		else if(native_unit =='lbs/kWh' || 'kg/kWh' || 'Tonnes (imperial)/kWh' || 'Tonnes (metric)/kwh' ||'kg/MWh' || 'lbs/MWh' || 'kg/MWh' || 'Tonnes (imperial)/MWh' || 'Tonnes (metric)/MWh')
+		else if(native_unit =='lbs/kWh'||native_unit=='Tonnes (imperial)/kWh'||native_unit=='lbs/MWh'||native_unit=='Tonnes (imperial)/MWh')
 		{
-
 			//reading = (reading * 453.592) / 3.412141
 
-			reading = (meterdatakBtu * native_unit_value1)/native_unit_value2
-
-			raw_ghg = (reading * demessionFactor)/dnoOfDays
+			raw_ghg = (meterdatakBtu * demessionFactor)/dnoOfDays
 
 			raw_ghginMtCo2e = raw_ghg/1000000
 			annualcarbonemissionsMTCO2e = raw_ghginMtCo2e * 365
 
-			BigDecimal annualCarbonemissionsMTCO2e = new BigDecimal(annualcarbonemissionsMTCO2e)
+			reading = (annualcarbonemissionsMTCO2e * native_unit_value1)/native_unit_value2
+
+			BigDecimal annualCarbonemissionsMTCO2e = new BigDecimal(reading)
 			annualCarbonemissionsMTCO2e = annualCarbonemissionsMTCO2e.setScale(2, RoundingMode.HALF_UP)
 
 			cannualCarbonemissionsMTCO2e = annualCarbonemissionsMTCO2e.toString()
 
 			/****************UI Verses Calculated Value of Annual carbon Emissions (MTCO2e)*****************************/
 			UIannualCarbonemissionsMTCO2e = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualcarbonemissionsProject'))
-			BigDecimal UIannualCarbonemissionsMTCO2 = new BigDecimal(UIannualCarbonemissionsMTCO2e)
+			String UIannualCarbonemissions =  UIannualCarbonemissionsMTCO2e.replace(',', '')
+
+
+			BigDecimal UIannualCarbonemissionsMTCO2 = new BigDecimal(UIannualCarbonemissions)
+			UIannualCarbonemissionsMTCO2 = UIannualCarbonemissionsMTCO2.setScale(2, RoundingMode.HALF_UP)
+
+			cannualCarbonemissions = UIannualCarbonemissionsMTCO2.toString()
+			WebUI.verifyMatch(cannualCarbonemissions, cannualCarbonemissionsMTCO2e, false)
+
+		}
+
+		else if(native_unit =='kg/kWh'||native_unit=='kg/MWh'||native_unit=='Tonnes (metric)/MWh'||native_unit=='Tonnes (metric)/kwh')
+		{
+			//reading = (reading * 453.592) / 3.412141
+
+			raw_ghg = (meterdatakBtu * demessionFactor)/dnoOfDays
+
+			raw_ghginMtCo2e = raw_ghg/1000000
+
+			annualcarbonemissionsMTCO2e = raw_ghginMtCo2e * 365
+
+			reading = (annualcarbonemissionsMTCO2e * native_unit_value1)/native_unit_value2
+
+			BigDecimal annualCarbonemissionsMTCO2e = new BigDecimal(reading)
+			annualCarbonemissionsMTCO2e = annualCarbonemissionsMTCO2e.setScale(2, RoundingMode.HALF_UP)
+
+			cannualCarbonemissionsMTCO2e = annualCarbonemissionsMTCO2e.toString()
+
+			/****************UI Verses Calculated Value of Annual carbon Emissions (MTCO2e)*****************************/
+			UIannualCarbonemissionsMTCO2e = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualcarbonemissionsProject'))
+			String UIannualCarbonemissions =  UIannualCarbonemissionsMTCO2e.replace(',', '')
+
+			BigDecimal UIannualCarbonemissionsMTCO2 = new BigDecimal(UIannualCarbonemissions)
 			UIannualCarbonemissionsMTCO2 = UIannualCarbonemissionsMTCO2.setScale(2, RoundingMode.HALF_UP)
 
 			cannualCarbonemissions = UIannualCarbonemissionsMTCO2.toString()
@@ -2222,6 +2265,8 @@ public class ReusableMethodsAnalytics extends BaseClass{
 	@Keyword
 	public void annualcarbonemissionspersqftUnit(String sheetName ,int rowNum) {
 
+		
+		WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'), 10)
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
 		WebUI.delay(10)
 
@@ -2254,9 +2299,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		String cannulCarbonemissionsMTCO2epersqft
 		String uicarbonemissionsMTCO2esqft
 
-
-
-		if(native_unit =='grams/kWh'||'grams/MWh' )
+		if(native_unit=='grams/kWh'||native_unit=='grams/MWh')
 		{
 
 			reading = meterdatakBtu / native_unit_value1
@@ -2268,6 +2311,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 			dUIannualCarbonemissionsMTCO2e = raw_ghginMtCo2e * 365
 
 			grossAreasqft = data.getCellData(sheetName,"GrossAreasqft",2)
+
 			dgrossAreasqft =  Double.parseDouble(grossAreasqft)
 
 			Double annualcarbonemissionsMTCO2epersqft = dUIannualCarbonemissionsMTCO2e/dgrossAreasqft
@@ -2279,7 +2323,10 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 			UIcarbonemissionsMTCO2epersqft = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualCarbonPerSQFt'))
 			/****************UI Verses Calculated Value of Annual carbon per square feet*****************************/
-			BigDecimal UIcarbonemissionsMTCO2esqft = new BigDecimal(UIcarbonemissionsMTCO2epersqft)
+
+			String UIearbonEmissionsMTCO2epersqft =  UIcarbonemissionsMTCO2epersqft.replace(',', '')
+
+			BigDecimal UIcarbonemissionsMTCO2esqft = new BigDecimal(UIearbonEmissionsMTCO2epersqft)
 			UIcarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.setScale(1,RoundingMode.HALF_UP)
 
 			uicarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.toString()
@@ -2288,66 +2335,117 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		}
 
 
-		else if(native_unit == 'lbs/kBtu' || 'kg/kBtu' || 'Tonnes (imperial)/kBtu' || 'Tonnes (metric)/kBtu')
+		else if(native_unit=='lbs/kBtu'||native_unit=='kg/kBtu'||native_unit=='Tonnes (imperial)/kBtu'||native_unit=='Tonnes (metric)/kBtu')
 		{
 			//reading = reading * 453.592
 
-			reading = meterdatakBtu * native_unit_value1
-
-			raw_ghg = (reading * demessionFactor)/dnoOfDays
+			raw_ghg = (meterdatakBtu * demessionFactor)/dnoOfDays
 
 			raw_ghginMtCo2e = raw_ghg/1000000
 
 			dUIannualCarbonemissionsMTCO2e = raw_ghginMtCo2e * 365
 
 			grossAreasqft = data.getCellData(sheetName,"GrossAreasqft",2)
+
 			dgrossAreasqft =  Double.parseDouble(grossAreasqft)
 
 			Double annualcarbonemissionsMTCO2epersqft = dUIannualCarbonemissionsMTCO2e/dgrossAreasqft
 
-			BigDecimal cannualcarbonemissionsMTCO2epersqft = new BigDecimal(annualcarbonemissionsMTCO2epersqft)
+			reading = annualcarbonemissionsMTCO2epersqft * native_unit_value1
+
+			BigDecimal cannualcarbonemissionsMTCO2epersqft = new BigDecimal(reading)
 			cannualcarbonemissionsMTCO2epersqft = cannualcarbonemissionsMTCO2epersqft.setScale(1,RoundingMode.HALF_UP)
 
 			cannulCarbonemissionsMTCO2epersqft = cannualcarbonemissionsMTCO2epersqft.toString()
 
 			UIcarbonemissionsMTCO2epersqft = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualCarbonPerSQFt'))
 			/****************UI Verses Calculated Value of Annual carbon per square feet*****************************/
-			BigDecimal UIcarbonemissionsMTCO2esqft = new BigDecimal(UIcarbonemissionsMTCO2epersqft)
+
+			String UIearbonEmissionsMTCO2epersqft =  UIcarbonemissionsMTCO2epersqft.replace(',', '')
+
+			BigDecimal UIcarbonemissionsMTCO2esqft = new BigDecimal(UIearbonEmissionsMTCO2epersqft)
 			UIcarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.setScale(1,RoundingMode.HALF_UP)
 
 			uicarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.toString()
 
 			WebUI.verifyMatch(uicarbonemissionsMTCO2esqft, cannulCarbonemissionsMTCO2epersqft, false)
+
 		}
-		else if(native_unit =='lbs/kWh' || 'kg/kWh' || 'Tonnes (imperial)/kWh' || 'Tonnes (metric)/kwh' ||'kg/MWh' || 'lbs/MWh' || 'kg/MWh' || 'Tonnes (imperial)/MWh' || 'Tonnes (metric)/MWh')
+		else if(native_unit=='lbs/kWh'||native_unit=='Tonnes (imperial)/kWh'||native_unit=='lbs/MWh'||native_unit=='Tonnes (imperial)/MWh')
 		{
 
 			//reading = (reading * 453.592) / 3.412141
 
-			reading = (meterdatakBtu * native_unit_value1)/native_unit_value2
-
-			raw_ghg = (reading * demessionFactor)/dnoOfDays
+			raw_ghg = (meterdatakBtu * demessionFactor)/dnoOfDays
 
 			raw_ghginMtCo2e = raw_ghg/1000000
 
 			dUIannualCarbonemissionsMTCO2e = raw_ghginMtCo2e * 365
 
 			grossAreasqft = data.getCellData(sheetName,"GrossAreasqft",2)
+
 			dgrossAreasqft =  Double.parseDouble(grossAreasqft)
 
 			Double annualcarbonemissionsMTCO2epersqft = dUIannualCarbonemissionsMTCO2e/dgrossAreasqft
 
-			BigDecimal cannualcarbonemissionsMTCO2epersqft = new BigDecimal(annualcarbonemissionsMTCO2epersqft)
+			reading = (annualcarbonemissionsMTCO2epersqft * native_unit_value1)/native_unit_value2
+
+			BigDecimal cannualcarbonemissionsMTCO2epersqft = new BigDecimal(reading)
+
 			cannualcarbonemissionsMTCO2epersqft = cannualcarbonemissionsMTCO2epersqft.setScale(1,RoundingMode.HALF_UP)
 
 			cannulCarbonemissionsMTCO2epersqft = cannualcarbonemissionsMTCO2epersqft.toString()
 
 			UIcarbonemissionsMTCO2epersqft = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualCarbonPerSQFt'))
 			/****************UI Verses Calculated Value of Annual carbon per square feet*****************************/
-			BigDecimal UIcarbonemissionsMTCO2esqft = new BigDecimal(UIcarbonemissionsMTCO2epersqft)
+
+			String UIearbonEmissionsMTCO2epersqft =  UIcarbonemissionsMTCO2epersqft.replace(',', '')
+
+			BigDecimal UIcarbonemissionsMTCO2esqft = new BigDecimal(UIearbonEmissionsMTCO2epersqft)
 			UIcarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.setScale(1,RoundingMode.HALF_UP)
 
 			uicarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.toString()
+
+			WebUI.verifyMatch(uicarbonemissionsMTCO2esqft, cannulCarbonemissionsMTCO2epersqft, false)
+
+		}
+
+		else if(native_unit=='kg/kWh'||native_unit=='kg/MWh'||native_unit=='Tonnes (metric)/MWh'||native_unit=='Tonnes (metric)/kwh')
+		{
+
+			//reading = (reading * 453.592) / 3.412141
+
+
+			raw_ghg = (meterdatakBtu * demessionFactor)/dnoOfDays
+
+			raw_ghginMtCo2e = raw_ghg/1000000
+
+			dUIannualCarbonemissionsMTCO2e = raw_ghginMtCo2e * 365
+
+			grossAreasqft = data.getCellData(sheetName,"GrossAreasqft",2)
+
+			dgrossAreasqft =  Double.parseDouble(grossAreasqft)
+
+			Double annualcarbonemissionsMTCO2epersqft = dUIannualCarbonemissionsMTCO2e/dgrossAreasqft
+
+			reading = (annualcarbonemissionsMTCO2epersqft * native_unit_value1)/native_unit_value2
+
+			BigDecimal cannualcarbonemissionsMTCO2epersqft = new BigDecimal(reading)
+			cannualcarbonemissionsMTCO2epersqft = cannualcarbonemissionsMTCO2epersqft.setScale(1,RoundingMode.HALF_UP)
+
+			cannulCarbonemissionsMTCO2epersqft = cannualcarbonemissionsMTCO2epersqft.toString()
+
+			UIcarbonemissionsMTCO2epersqft = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualCarbonPerSQFt'))
+			/****************UI Verses Calculated Value of Annual carbon per square feet*****************************/
+
+			String UIearbonEmissionsMTCO2epersqft =  UIcarbonemissionsMTCO2epersqft.replace(',', '')
+
+			BigDecimal UIcarbonemissionsMTCO2esqft = new BigDecimal(UIearbonEmissionsMTCO2epersqft)
+			UIcarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.setScale(1,RoundingMode.HALF_UP)
+
+			uicarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.toString()
+
+			WebUI.verifyMatch(uicarbonemissionsMTCO2esqft, cannulCarbonemissionsMTCO2epersqft, false)
 
 		}
 	}
@@ -2357,7 +2455,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		String BOccupancy = data.getCellData(sheetName,"BOccupancy",2)
 		Double dBOccupancy =  Double.parseDouble(BOccupancy)
 
-		String emessionFactor = data.getCellData(sheetName,"EmissionFactor",rowNum)
+		String emessionFactor = data.getCellData(sheetName,"EmissionFactor",2)
 		Double demessionFactor =  Double.parseDouble(emessionFactor)
 
 		String KWHReading = data.getCellData(sheetName,"EnergykWh",2)
@@ -2383,7 +2481,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 		double meterdatakBtu = dKWHReading * 3.4121416331 // (1 kWh = 3.4121416331 kBtu)
 
-		if(native_unit =='grams/kWh'||'grams/MWh' )
+		if(native_unit=='grams/kWh'||native_unit=='grams/MWh' )
 		{
 
 			reading = meterdatakBtu / native_unit_value1
@@ -2401,7 +2499,10 @@ public class ReusableMethodsAnalytics extends BaseClass{
 			String cannualcarbonemissionsMTCO2ePerOcc = annualcarbonemissionsMTCO2ePerOcc.toString()
 
 			UIannualcarbonemissionsMTCO2eperOcc = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualCarbonPerOccupancy'))
-			BigDecimal UIannualcarbonemissionsMTCO2eperOc = new BigDecimal(UIannualcarbonemissionsMTCO2eperOcc)
+			String UIannualcarbonemissionMTCO2eperOcc =  UIannualcarbonemissionsMTCO2eperOcc.replace(',', '')
+
+
+			BigDecimal UIannualcarbonemissionsMTCO2eperOc = new BigDecimal(UIannualcarbonemissionMTCO2eperOcc)
 			UIannualcarbonemissionsMTCO2eperOc = UIannualcarbonemissionsMTCO2eperOc.setScale(1,RoundingMode.HALF_UP)
 
 			UIannualcarbonemissionsMTCO2perOcc = UIannualcarbonemissionsMTCO2eperOc.toString()
@@ -2410,24 +2511,31 @@ public class ReusableMethodsAnalytics extends BaseClass{
 			WebUI.verifyMatch(UIannualcarbonemissionsMTCO2perOcc, cannualcarbonemissionsMTCO2ePerOcc, false)
 		}
 
-		else if(native_unit == 'lbs/kBtu' || 'kg/kBtu' || 'Tonnes (imperial)/kBtu' || 'Tonnes (metric)/kBtu')
+		else if(native_unit=='lbs/kBtu' ||native_unit=='kg/kBtu'||native_unit=='Tonnes (imperial)/kBtu'||native_unit=='Tonnes (metric)/kBtu')
 		{
 			//reading = reading * 453.592
 
-			reading = meterdatakBtu * native_unit_value1
-			raw_ghg = (reading * demessionFactor)/dnoOfDays
+			//reading = meterdatakBtu * native_unit_value1
+			raw_ghg = (meterdatakBtu * demessionFactor)/dnoOfDays
 
 			raw_ghginMtCo2e = raw_ghg/1000000
 
 			dUIannualCarbonemissionsMTCO2e = raw_ghginMtCo2e * 365
 
-			String annualcarbonemissionsMTCO2eperOcc = dUIannualCarbonemissionsMTCO2e/dBOccupancy
-			BigDecimal annualcarbonemissionsMTCO2ePerOcc = new BigDecimal(annualcarbonemissionsMTCO2eperOcc)
+
+			double annualcarbonemissionsMTCO2eperOcc = dUIannualCarbonemissionsMTCO2e/dBOccupancy
+
+			reading = annualcarbonemissionsMTCO2eperOcc * native_unit_value1
+
+			BigDecimal annualcarbonemissionsMTCO2ePerOcc = new BigDecimal(reading)
 			annualcarbonemissionsMTCO2ePerOcc = annualcarbonemissionsMTCO2ePerOcc.setScale(1,RoundingMode.HALF_UP)
 			String cannualcarbonemissionsMTCO2ePerOcc = annualcarbonemissionsMTCO2ePerOcc.toString()
 
 			UIannualcarbonemissionsMTCO2eperOcc = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualCarbonPerOccupancy'))
-			BigDecimal UIannualcarbonemissionsMTCO2eperOc = new BigDecimal(UIannualcarbonemissionsMTCO2eperOcc)
+			String UIannualcarbonemissionMTCO2eperOcc =  UIannualcarbonemissionsMTCO2eperOcc.replace(',', '')
+
+
+			BigDecimal UIannualcarbonemissionsMTCO2eperOc = new BigDecimal(UIannualcarbonemissionMTCO2eperOcc)
 			UIannualcarbonemissionsMTCO2eperOc = UIannualcarbonemissionsMTCO2eperOc.setScale(1,RoundingMode.HALF_UP)
 
 			UIannualcarbonemissionsMTCO2perOcc = UIannualcarbonemissionsMTCO2eperOc.toString()
@@ -2435,25 +2543,32 @@ public class ReusableMethodsAnalytics extends BaseClass{
 			/****************UI Verses Calculated Value of Annual carbon per Occupancy*****************************/
 			WebUI.verifyMatch(UIannualcarbonemissionsMTCO2perOcc, cannualcarbonemissionsMTCO2ePerOcc, false)
 		}
-		else if(native_unit =='lbs/kWh' || 'kg/kWh' || 'Tonnes (imperial)/kWh' || 'Tonnes (metric)/kwh' ||'kg/MWh' || 'lbs/MWh' || 'kg/MWh' || 'Tonnes (imperial)/MWh' || 'Tonnes (metric)/MWh')
+		else if(native_unit =='lbs/kWh'||native_unit=='Tonnes (imperial)/kWh'||native_unit=='lbs/MWh' ||native_unit=='Tonnes (imperial)/MWh')
 		{
 
 			//reading = (reading * 453.592) / 3.412141
 
-			reading = (meterdatakBtu * native_unit_value1)/native_unit_value2
-			raw_ghg = (reading * demessionFactor)/dnoOfDays
+
+			raw_ghg = (meterdatakBtu * demessionFactor)/dnoOfDays
 
 			raw_ghginMtCo2e = raw_ghg/1000000
 
 			dUIannualCarbonemissionsMTCO2e = raw_ghginMtCo2e * 365
 
-			String annualcarbonemissionsMTCO2eperOcc = dUIannualCarbonemissionsMTCO2e/dBOccupancy
-			BigDecimal annualcarbonemissionsMTCO2ePerOcc = new BigDecimal(annualcarbonemissionsMTCO2eperOcc)
+			double annualcarbonemissionsMTCO2eperOcc = dUIannualCarbonemissionsMTCO2e/dBOccupancy
+
+			reading = (annualcarbonemissionsMTCO2eperOcc * native_unit_value1)/native_unit_value2
+
+			BigDecimal annualcarbonemissionsMTCO2ePerOcc = new BigDecimal(reading)
+
 			annualcarbonemissionsMTCO2ePerOcc = annualcarbonemissionsMTCO2ePerOcc.setScale(1,RoundingMode.HALF_UP)
 			String cannualcarbonemissionsMTCO2ePerOcc = annualcarbonemissionsMTCO2ePerOcc.toString()
 
 			UIannualcarbonemissionsMTCO2eperOcc = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualCarbonPerOccupancy'))
-			BigDecimal UIannualcarbonemissionsMTCO2eperOc = new BigDecimal(UIannualcarbonemissionsMTCO2eperOcc)
+			String UIannualcarbonemissionMTCO2eperOcc =  UIannualcarbonemissionsMTCO2eperOcc.replace(',', '')
+
+
+			BigDecimal UIannualcarbonemissionsMTCO2eperOc = new BigDecimal(UIannualcarbonemissionMTCO2eperOcc)
 			UIannualcarbonemissionsMTCO2eperOc = UIannualcarbonemissionsMTCO2eperOc.setScale(1,RoundingMode.HALF_UP)
 
 			UIannualcarbonemissionsMTCO2perOcc = UIannualcarbonemissionsMTCO2eperOc.toString()
@@ -2462,6 +2577,43 @@ public class ReusableMethodsAnalytics extends BaseClass{
 			WebUI.verifyMatch(UIannualcarbonemissionsMTCO2perOcc, cannualcarbonemissionsMTCO2ePerOcc, false)
 
 		}
+		else if(native_unit =='kg/kWh'||native_unit=='kg/MWh' ||native_unit=='Tonnes (metric)/MWh'||native_unit=='Tonnes (metric)/kwh')
+		{
+
+			//reading = (reading * 453.592) / 3.412141
+
+
+			raw_ghg = (meterdatakBtu * demessionFactor)/dnoOfDays
+
+			raw_ghginMtCo2e = raw_ghg/1000000
+
+			dUIannualCarbonemissionsMTCO2e = raw_ghginMtCo2e * 365
+
+			double annualcarbonemissionsMTCO2eperOcc = dUIannualCarbonemissionsMTCO2e/dBOccupancy
+			
+			reading = (annualcarbonemissionsMTCO2eperOcc * native_unit_value1)/native_unit_value2
+
+
+			BigDecimal annualcarbonemissionsMTCO2ePerOcc = new BigDecimal(reading)
+
+			annualcarbonemissionsMTCO2ePerOcc = annualcarbonemissionsMTCO2ePerOcc.setScale(1,RoundingMode.HALF_UP)
+			String cannualcarbonemissionsMTCO2ePerOcc = annualcarbonemissionsMTCO2ePerOcc.toString()
+
+			UIannualcarbonemissionsMTCO2eperOcc = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualCarbonPerOccupancy'))
+			String UIannualcarbonemissionMTCO2eperOcc =  UIannualcarbonemissionsMTCO2eperOcc.replace(',', '')
+
+
+			BigDecimal UIannualcarbonemissionsMTCO2eperOc = new BigDecimal(UIannualcarbonemissionMTCO2eperOcc)
+			UIannualcarbonemissionsMTCO2eperOc = UIannualcarbonemissionsMTCO2eperOc.setScale(1,RoundingMode.HALF_UP)
+
+			UIannualcarbonemissionsMTCO2perOcc = UIannualcarbonemissionsMTCO2eperOc.toString()
+
+			/****************UI Verses Calculated Value of Annual carbon per Occupancy*****************************/
+			WebUI.verifyMatch(UIannualcarbonemissionsMTCO2perOcc, cannualcarbonemissionsMTCO2ePerOcc, false)
+
+		}
+
+
 	}
 	@Keyword
 	public void annualcarbonemissionspersqft(String sheetName ,int rowNum) {
@@ -3285,45 +3437,59 @@ public class ReusableMethodsAnalytics extends BaseClass{
 	public void total_daily_carbon_emissions() {
 
 		String totaldalilytransprot = WebUI.getText(findTestObject('Object Repository/Analytics/Transport/totalDailyAnnualCarbonProj'))
+		String totalDalilytransprot =  totaldalilytransprot.replace(',', '')
+
+		BigDecimal totalDtransprot = new BigDecimal(totalDalilytransprot)
+		totalDtransprot = totalDtransprot .setScale(1, RoundingMode.HALF_UP)
+		String totalDTransprot = totalDtransprot.toString()
+
 
 		String dtransprot = WebUI.getText(findTestObject('Object Repository/Analytics/Transport/ProjDailyTrasnport'))
-		Double dtransprotDaily= Double.parseDouble(dtransprot)
+		String Dtransprot =  dtransprot.replace(',', '')
+		Double dtransprotDaily= Double.parseDouble(Dtransprot)
 
 		String scope2Dailay = WebUI.getText(findTestObject('Object Repository/Analytics/Transport/EnergyDailyScope2'))
-		Double scope2dailay= Double.parseDouble(scope2Dailay)
+		String scope2ailay =  scope2Dailay.replace(',', '')
+		Double scope2dailay= Double.parseDouble(scope2ailay)
 
 		String scope1Dailay = WebUI.getText(findTestObject('Object Repository/Analytics/Transport/EnergyDailyScope1'))
-		Double scoped1ailay= Double.parseDouble(scope1Dailay)
+		String scope1ailay =  scope1Dailay.replace(',', '')
+		Double scoped1ailay= Double.parseDouble(scope1ailay)
 
 		double totaltransprotAnnaual = scoped1ailay + scope2dailay + dtransprotDaily
 
 		BigDecimal totaltransprotannaual = new BigDecimal(totaltransprotAnnaual)
-		totaltransprotannaual = totaltransprotannaual .setScale(4, RoundingMode.HALF_UP)
+		totaltransprotannaual = totaltransprotannaual .setScale(1, RoundingMode.HALF_UP)
 		String ctotaltransprotAnn = totaltransprotannaual.toString()
 
 		/****************UI Verses Calculated Sum of daily scope 1 carbon emissions (MTCO2e), scope 2 carbon emissions (MTCO2e), Transportation carbon emissions (MTCO2e)..************/
-		WebUI.verifyMatch(totaldalilytransprot, ctotaltransprotAnn, false)
+		WebUI.verifyMatch(totalDTransprot, ctotaltransprotAnn, false)
 	}
 
 	@Keyword
 	public void annualtransportation_annual_carbon_emissions() {
 
 		String totaldalilytransprot = WebUI.getText(findTestObject('Object Repository/Portfolio/CarbonVal/TotalPortfolio'))
-		BigDecimal dtotaldalilytransprot = new BigDecimal(totaldalilytransprot)
+		String totaldalilyTransprot =  totaldalilytransprot.replace(',', '')
+
+		BigDecimal dtotaldalilytransprot = new BigDecimal(totaldalilyTransprot)
 		dtotaldalilytransprot = dtotaldalilytransprot .setScale(1, RoundingMode.HALF_UP)
 		String utotaldalilytransprot = dtotaldalilytransprot.toString()
 
 
 		String dtransprot = WebUI.getText(findTestObject('Object Repository/Analytics/Transport/ProjDailyTrasnport'))
-		Double dtransprotDaily= Double.parseDouble(dtransprot)
+		String dTransprot =  dtransprot.replace(',', '')
+		Double dtransprotDaily= Double.parseDouble(dTransprot)
 
 		String scope2Dailay = WebUI.getText(findTestObject('Object Repository/Analytics/Transport/EnergyDailyScope2'))
-		Double scope2dailay= Double.parseDouble(scope2Dailay)
+		String scope2daiLay =  scope2Dailay.replace(',', '')
+		Double scope2dailay= Double.parseDouble(scope2daiLay)
 
 		String scope1Dailay = WebUI.getText(findTestObject('Object Repository/Analytics/Transport/EnergyDailyScope1'))
-		Double scoped1ailay= Double.parseDouble(scope1Dailay)
+		String scope1DaiLay =  scope1Dailay.replace(',', '')
+		Double scoped1dailay= Double.parseDouble(scope1DaiLay)
 
-		double totaltransprotAnnaual = (scope2dailay + scoped1ailay ) * 365 + (dtransprotDaily * 313)
+		double totaltransprotAnnaual = (scope2dailay + scoped1dailay ) * 365 + (dtransprotDaily * 313)
 
 		BigDecimal totaltransprotannaual = new BigDecimal(totaltransprotAnnaual)
 		totaltransprotannaual = totaltransprotannaual .setScale(1, RoundingMode.HALF_UP)

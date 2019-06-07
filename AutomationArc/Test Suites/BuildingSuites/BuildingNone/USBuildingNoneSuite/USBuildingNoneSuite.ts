@@ -352,7 +352,7 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/Common/Analytics/TransportationDailyCarbonEmissions(lbs)ProjectTest</testCaseId>
    </testCaseLink>
-    <testCaseLink>
+   <testCaseLink>
       <guid>84222016-5263-4f26-8ff3-1f7e59eed95a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -584,7 +584,7 @@
       <guid>c4cce74c-c1b5-4a61-be0c-1f2286849b40</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Common/Analytics/1.17/GramskWh/ChangeEmissionFactorUnitKgkWh_15_7Test</testCaseId>
+      <testCaseId>Test Cases/Common/Analytics/1.17/GramskWh/ChangeEmissionFactorUnitGramskWh_15_7Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>b3ef3b1c-684c-4bf7-866b-37d0cb81efea</guid>
@@ -1561,37 +1561,37 @@
    <testCaseLink>
       <guid>957ab976-7cfd-4ef8-b0d0-99e3de36ac22</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ChangeBuildingSetting_1_17_Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>599a2926-3166-4118-8aa1-a31bf96bd1c1</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/AgreementVerifyServiceAgreementPdfDetailsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>19299410-af74-4512-956e-f5b6b5c783f9</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/CertiVerifyCertificationLogoVisibleTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>74be4d57-cf91-4422-aa45-1e87cfd43f91</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/1_15_4/SettingScoreVersionPageUpdate_1_15_4Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>e12543c6-e8fc-4b79-a168-e45701ecdb5a</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/Next/SearchAndNavigateTransitABProjectARC_1063Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>1b0c67cd-75c6-4966-adb9-beec9216b9d9</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/Next/SearchAndNavigateNoneDataInputARC_1063Test</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
