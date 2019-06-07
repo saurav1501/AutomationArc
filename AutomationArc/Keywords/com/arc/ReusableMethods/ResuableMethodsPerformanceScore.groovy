@@ -200,9 +200,9 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		String carbonIntensity= WebUI.getText(findTestObject('Object Repository/Analytics/Score/CarbonIntensity'))
 		String energyIntensity= WebUI.getText(findTestObject('Object Repository/Analytics/Score/EnergyIntensity'))
 
-		if((Integer.parseInt(carbonIntensity)==0))
+		if((Double.parseDouble(carbonIntensity)==0))
 			KeywordUtil.markFailed("Carbon Intensity is zero(0)")
-		if((Integer.parseInt(energyIntensity)==0))
+		if((Double.parseDouble(energyIntensity)==0))
 			KeywordUtil.markFailed("Energy Intensity is zero(0)")
 
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Water'))

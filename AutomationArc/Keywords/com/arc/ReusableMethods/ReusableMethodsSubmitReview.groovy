@@ -1115,7 +1115,8 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),40)
 		WebUI.delay(7)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/SubmitReviewText')), "Submit for Review", false, FailureHandling.CONTINUE_ON_FAILURE)
-	    WebUI.verifyElementNotVisible(findTestObject('Object Repository/SubmitReview/ProjectIsStillUnderReviewText'))
+	    WebUI.verifyElementVisible(findTestObject('Object Repository/SubmitReview/ProjectIsStillUnderReviewText'))
+		WebUI.delay(2)
 	}
 
 	@Keyword

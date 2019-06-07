@@ -20,7 +20,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
 try {
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToCommunities'() 
+	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToCommunities'() 
 	
 	
 	//*************Serach By Project ID ****************************************************/
