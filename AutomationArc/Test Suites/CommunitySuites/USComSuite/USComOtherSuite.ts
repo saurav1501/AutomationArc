@@ -95,15 +95,15 @@
       <testCaseId>Test Cases/Common/CityComValidation/UIValidationPopulationWith(at least)BachelorDegreeHumanExperienceTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>67702216-aa15-49d6-9064-59842cffe5f9</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Common/CityComValidation/UIValidationGiniCoefficient(for income distribution)HumanExperienceTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>f4e8fee1-e4de-4c9b-8a86-adadd1e5aac6</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Common/CityComValidation/UIValidationPercentageEQUITABILITYHumanExperienceTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>67702216-aa15-49d6-9064-59842cffe5f9</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Common/CityComValidation/UIValidationGiniCoefficient(for income distribution)HumanExperienceTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
