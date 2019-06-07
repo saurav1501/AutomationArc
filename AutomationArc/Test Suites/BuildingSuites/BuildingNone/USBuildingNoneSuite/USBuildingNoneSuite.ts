@@ -73,7 +73,7 @@
    <testCaseLink>
       <guid>92042244-785b-4075-b662-c787f51291b5</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/UploadArcDataTemplateTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -85,7 +85,7 @@
    <testCaseLink>
       <guid>779327bb-bb7e-479e-84d5-9ec0dfc18891</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/PercentageSurveyResponseRateCalculationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
