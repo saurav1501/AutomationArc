@@ -23,11 +23,8 @@ import internal.GlobalVariable as GlobalVariable
 try{
 	
 	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.CommunitySheet, GlobalVariable.rowNumThree)
-<<<<<<< HEAD
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.scoreVersionVerificationCommunity'()
-=======
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.scoreVersionVerificationCity'()
->>>>>>> arc
+
 	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.scoreVersionVerification1_1'()
 
 } catch (Throwable t) {
