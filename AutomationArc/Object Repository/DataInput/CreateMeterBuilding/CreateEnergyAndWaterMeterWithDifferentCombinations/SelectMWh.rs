@@ -6,12 +6,11 @@
    <elementGuidId>e4d984c6-8dd5-4ac2-a4be-ce5b7a25364d</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//*[@class=&quot;dropdown-menu dropdown-menu-fixed&quot;])[3]/li[2]</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>(//*[@class=&quot;dropdown-menu dropdown-menu-fixed&quot;])[1]/li[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

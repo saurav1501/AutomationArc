@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description></description>
-   <name>downloadResourceBtn</name>
+   <description>Verify if the first row of the team module is visible.</description>
+   <name>TeamMembersFirstRow</name>
    <tag></tag>
-   <elementGuidId>6c66f637-11a7-451b-8d42-5fec5118a1fc</elementGuidId>
+   <elementGuidId>e87e7e74-ce01-4683-b1bf-6fb0246e3e9a</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@ng-click=&quot;redirectToDataResource()&quot;]</value>
+         <value>(//*[@data-ng-repeat=&quot;team_member in team_members |orderBy:orderByField:reverseSort&quot;])[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

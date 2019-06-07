@@ -343,8 +343,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/DetailsTab'))
 		WebUI.delay(5)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Graphs/WasteMeterUnitDisplayedOnGraph')), "lbs", false)
-		int j=9
-		(1..8).each{
+		int j=8
+		(1..7).each{
 			String reading1 = dataExcelTemplate.getCellData(sheetName, "Reading2", j)
 			WebUI.focus(findTestObject('Object Repository/DataInput/CreateMeterBuilding/WasteDivertedGraph',[index: it]))
 			String[] reading=WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ToolTipGraph')).split(" ")
@@ -371,8 +371,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	}
 
 	public void getGraphReading(String sheetName, String colName){
-		int j=9
-		(1..8).each{
+		int j=8
+		(1..7).each{
 
 			String reading1 = dataExcelTemplate.getCellData(sheetName, colName, j)
 			WebUI.focus(findTestObject('Object Repository/DataInput/CreateMeterBuilding/WasteGeneratedGraph',[index: it]))
@@ -1025,7 +1025,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
 		WebUI.delay(2)
 		uploadFile(UploadArcDataTempleteChineseSimple)
-		WebUI.delay(4)
+		WebUI.delay(6)
 		//WebUI.sendKeys(findTestObject('DataInput/DataInputFileUpload/sendFileToUpload'),UploadDocs)
 		//duplicate doc file
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
@@ -2926,6 +2926,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		ReusableMethodsLogin.waitForPageLoad(60)
 		ReusableMethodsLogin.waitForIframeLoad(60)
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/click_CO2 Meter'), 2)
+		WebUI.delay(3)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/click_CO2 Meter'))
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ReadingOne'),'value'),reading3)
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ReadingTwo'),'value'),reading2)
@@ -3053,8 +3054,9 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		ReusableMethodsLogin.waitForloaderToDisappear(60)
 		ReusableMethodsLogin.waitForPageLoad(60)
 		ReusableMethodsLogin.waitForIframeLoad(60)
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/click_VOC Meter'), 2)
-		WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/click_VOC Meter'))
+		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/click_VOC Meter'), 2)
+		WebUI.delay(10)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/click_VOC Meter'))
 		WebUI.delay(5)
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ReadingOne'),'value'),reading6)
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ReadingTwo'),'value'),reading5)
@@ -5189,11 +5191,10 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				//WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
 				WebUI.click(findTestObject('DataInput/Survey/Submit'))
 				WebUI.delay(3)
-				//WebUI.waitForElementVisible(findTestObject('DataInput/Survey/Thank'), 20)
+				WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Survey/ReloadSurvey'), 20)
 				WebUI.click(findTestObject('Object Repository/DataInput/Survey/ReloadSurvey'))
 				WebUI.delay(3)
 				WebUI.waitForPageLoad(GlobalVariable.timeOut)
-
 				WebUI.delay(3)
 				println "Survey Submited Successufully"
 
@@ -5336,15 +5337,22 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		 WebUI.delay(1)
 		 WebUI.click(findTestObject('Manage/Parking/ManageProject'))
 		 WebUI.delay(2)*/
-		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
+		/*WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
 		WebUI.delay(10)
 
 		WebUI.scrollToElement(findTestObject('Manage/ProjectDetailVerification/projectoccupancy'), 10)
 		String projectoccupancy = WebUI.getAttribute((findTestObject('Manage/ProjectDetailVerification/projectoccupancy')),'value')
 
-		double projectOccupancy= Double.parseDouble(projectoccupancy)
+		double projectOccupancy= Double.parseDouble(projectoccupancy)*/
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
 		WebUI.delay(10)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
+		WebUI.delay(3)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle')),"Building Settings", false)
+		WebUI.delay(3)
+		String projectoccupancy = WebUI.getAttribute((findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne')),'value')
+	    double projectOccupancy= Double.parseDouble(projectoccupancy)
+	
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
 		WebUI.delay(10)
 		/******Verify that survey response rate% is calculated on the basis of the following formula [ Response %ge = (No. of responses/Occupancy)*100 ] . Always count the no of responses by counting the no of rows of transport survey results.*****/

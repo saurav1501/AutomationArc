@@ -24,7 +24,8 @@ import internal.GlobalVariable as GlobalVariable
 try {
 	
 	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.CitySheet, GlobalVariable.rowNumTwo)
-	CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsPerformanceScore.setdefaultpagePerformanceScore'(GlobalVariable.CitySheet, GlobalVariable.rowNumTwo)
+	//CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsPerformanceScore.setdefaultpagePerformanceScore'(GlobalVariable.CitySheet, GlobalVariable.rowNumTwo)
+	CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsPerformanceScore.setdefaultpagePerformanceScoreOtherNone'(GlobalVariable.CitySheet, GlobalVariable.rowNumTwo)
 	
 	}  catch (Throwable t) {
 	System.out.println(t.getLocalizedMessage())

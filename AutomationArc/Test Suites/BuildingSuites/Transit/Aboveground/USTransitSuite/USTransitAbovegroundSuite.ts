@@ -851,12 +851,6 @@
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/CertiVerifyCertificationLogoVisibleTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>18133fff-5acf-4d2d-b118-638dd4ebf7bd</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/ProjectVerifyCalculatorHyperlinkPresentTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>ee3d7229-6ccf-4ff7-a182-763e17bdde4c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

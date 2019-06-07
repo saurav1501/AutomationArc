@@ -1054,6 +1054,10 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 
 		deleteFile(sourceZipFile)
 		deleteFile(sourceExtractedFile)
+		WebUI.delay(3)
+		WebUI.closeWindowIndex(1)
+		WebUI.delay(2)
+		WebUI.switchToWindowIndex(0)
 	}
 
 
@@ -1111,8 +1115,8 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),40)
 		WebUI.delay(7)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/SubmitReviewText')), "Submit for Review", false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/ProjectIsStillUnderReviewText')), "Project is still under review", false)
-
+	    WebUI.verifyElementVisible(findTestObject('Object Repository/SubmitReview/ProjectIsStillUnderReviewText'))
+		WebUI.delay(2)
 	}
 
 	@Keyword
@@ -1121,6 +1125,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.delay(5)
 		WebUI.scrollToElement(findTestObject('Object Repository/PerformanceScore/AdminToolReturnReviewButton'), 4)
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/AdminToolReturnReviewButton'))
+		WebUI.delay(3)
 		WebUI.scrollToElement(findTestObject('Object Repository/PerformanceScore/LeedIdSearchBox'), 4)
 		WebUI.setText(findTestObject('Object Repository/PerformanceScore/LeedIdSearchBox'), id)
 		WebUI.delay(2)
@@ -1140,11 +1145,44 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.click(findTestObject('SubmitReview/a_ Review'))
 		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),40)
 		WebUI.delay(4)
-		WebUI.scrollToElement(findTestObject('Object Repository/SubmitReview/NewReviewStatusForPendingPayment'), 4)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/CertificationTextCity')), "Certification", false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.click(findTestObject('SubmitReview/button_Continue'))
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/VerifySummaryTextOnSummaryPage')), "Summary", false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.click(findTestObject('SubmitReview/button_Continue'))
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/VerifyPaymentTextPaymentPage')), "Payment", false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.delay(6)
+		Assert.assertEquals(WebUI.verifyElementClickable(findTestObject('Object Repository/SubmitReview/PromocodeTextFieldReviewPayment')),true)
+		WebUI.click(findTestObject('Object Repository/PaymenntLocator/payment-typeCheck'))
+		WebUI.delay(2)
+		WebUI.delay(2)
+		WebUI.clearText(findTestObject('ReviewPaymentByCheckUS/input_firstname2'))
+		WebUI.setText(findTestObject('ReviewPaymentByCheckUS/input_firstname2'), 'Saurav')
+		WebUI.clearText(findTestObject('ReviewPaymentByCheckUS/input_lastname2'))
+		WebUI.setText(findTestObject('ReviewPaymentByCheckUS/input_lastname2'), 'K')
+		WebUI.clearText(findTestObject('ReviewPaymentByCheckUS/input_streetaddress2'))
+		WebUI.setText(findTestObject('ReviewPaymentByCheckUS/input_streetaddress2'), 'GBCI')
+		WebUI.clearText(findTestObject('ReviewPaymentByCheckUS/input_city2'))
+		WebUI.setText(findTestObject('ReviewPaymentByCheckUS/input_city2'), 'Gurgaon')
+		WebUI.selectOptionByLabel(findTestObject('ReviewPaymentByCheckUS/select_AfghanistanAland Island'), 'India', false)
+		WebUI.selectOptionByLabel(findTestObject('ReviewPaymentByCheckUS/select_Select StateAndaman and'), 'Haryana', false)
+		WebUI.clearText(findTestObject('ReviewPaymentByCheckUS/input_postalcode2'))
+		WebUI.setText(findTestObject('ReviewPaymentByCheckUS/input_postalcode2'), '122018')
+		WebUI.clearText(findTestObject('ReviewPaymentByCheckUS/input_email2'))
+		WebUI.setText(findTestObject('ReviewPaymentByCheckUS/input_email2'), 'saurav@groupten.com')
+		WebUI.setText(findTestObject('ReviewPaymentByCheckUS/input_phone2'), '9486861522')
+		WebUI.scrollToElement(findTestObject('ReviewPaymentByCheckUS/button_Continue'), 4)
+		WebUI.click(findTestObject('ReviewPaymentByCheckUS/button_Continue'))
+		WebUI.delay(5)
+		WebUI.scrollToElement(findTestObject('Object Repository/SubmitReview/SubmitCertification'),3)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/SubmitReview/SubmitCertification'),9)
+		//WebUI.click(findTestObject('Object Repository/SubmitReview/SubmitCertification'))
+		//WebUI.delay(8)
+		//WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/MessageSuccessfullySubmitted')), "Successfully Submitted", false, FailureHandling.CONTINUE_ON_FAILURE)
+		/*WebUI.scrollToElement(findTestObject('Object Repository/SubmitReview/NewReviewStatusForPendingPayment'), 4)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/NewReviewStatusForPendingPayment')), "Please complete your review payment in order to proceed", false)
 		WebUI.click(findTestObject('Object Repository/SubmitReview/LinkForReviewPaymentReviewPage'))
 		WebUI.delay(5)
-		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/BillingSection/BillingPageTitle'), 10)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/BillingSection/BillingPageTitle'), 10)*/
 	}
 
 

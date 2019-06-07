@@ -45,6 +45,7 @@ public class ReusableMethodsBasescore {
 		WebUI.click(findTestObject('PreRequisite/button_Attempted'))
 		WebUI.click(findTestObject('PreRequisite/a_Ready for Review'))
 		WebUI.delay(3)
+		WebUI.verifyTextPresent("Saurav has marked the credit as ready for review", false)
 		WebUI.scrollToElement(findTestObject('PreRequisite/button_Next'), 2)
 		WebUI.click(findTestObject('PreRequisite/button_Next'))
 
@@ -55,6 +56,7 @@ public class ReusableMethodsBasescore {
 		WebUI.click(findTestObject('PreRequisite/button_Attempted'))
 		WebUI.click(findTestObject('PreRequisite/a_Ready for Review'))
 		WebUI.delay(3)
+		WebUI.verifyTextPresent("Saurav has marked the credit as ready for review", false)
 		WebUI.scrollToElement(findTestObject('PreRequisite/button_Next'), 2)
 		WebUI.click(findTestObject('PreRequisite/button_Next'))
 
@@ -65,6 +67,7 @@ public class ReusableMethodsBasescore {
 		WebUI.click(findTestObject('PreRequisite/button_Attempted'))
 		WebUI.click(findTestObject('PreRequisite/a_Ready for Review'))
 		WebUI.delay(3)
+		WebUI.verifyTextPresent("Saurav has marked the credit as ready for review", false)
 		WebUI.scrollToElement(findTestObject('PreRequisite/button_Next'), 2)
 		WebUI.click(findTestObject('PreRequisite/button_Next'))
 
@@ -75,6 +78,7 @@ public class ReusableMethodsBasescore {
 		WebUI.click(findTestObject('PreRequisite/button_Attempted'))
 		WebUI.click(findTestObject('PreRequisite/a_Ready for Review'))
 		WebUI.delay(3)
+		WebUI.verifyTextPresent("Saurav has marked the credit as ready for review", false)
 		WebUI.scrollToElement(findTestObject('PreRequisite/button_Next'), 2)
 		WebUI.click(findTestObject('PreRequisite/button_Next'))
 
@@ -86,6 +90,7 @@ public class ReusableMethodsBasescore {
 		WebUI.click(findTestObject('PreRequisite/span_Attempted'))
 		WebUI.click(findTestObject('PreRequisite/a_Ready for Review'))
 		WebUI.delay(3)
+		WebUI.verifyTextPresent("Saurav has marked the credit as ready for review", false)
 		WebUI.scrollToElement(findTestObject('PreRequisite/button_Next'), 2)
 		WebUI.click(findTestObject('PreRequisite/button_Next'))
 
@@ -98,6 +103,7 @@ public class ReusableMethodsBasescore {
 		WebUI.click(findTestObject('PreRequisite/button_Attempted'))
 		WebUI.click(findTestObject('PreRequisite/a_Ready for Review'))
 		WebUI.delay(3)
+		WebUI.verifyTextPresent("Saurav has marked the credit as ready for review", false)
 		WebUI.scrollToElement(findTestObject('PreRequisite/button_Next'), 2)
 		WebUI.click(findTestObject('PreRequisite/button_Next'))
 
@@ -109,7 +115,8 @@ public class ReusableMethodsBasescore {
 		WebUI.delay(4)
 		WebUI.click(findTestObject('PreRequisite/button_Attempted'))
 		WebUI.click(findTestObject('PreRequisite/a_Ready for Review'))
-		WebUI.delay(3)
+		WebUI.delay(9)
+		WebUI.verifyTextPresent("Saurav has marked the credit as ready for review", false)
 		WebUI.scrollToElement(findTestObject('PreRequisite/button_Next'), 2)
 		WebUI.click(findTestObject('PreRequisite/button_Next'))
 
@@ -121,6 +128,7 @@ public class ReusableMethodsBasescore {
 		WebUI.click(findTestObject('PreRequisite/button_Attempted'))
 		WebUI.click(findTestObject('PreRequisite/a_Ready for Review'))
 		WebUI.delay(3)
+		WebUI.verifyTextPresent("Saurav has marked the credit as ready for review", false)
 		WebUI.scrollToElement(findTestObject('PreRequisite/button_Next'), 2)
 		WebUI.click(findTestObject('PreRequisite/button_Next'))
 
@@ -131,6 +139,7 @@ public class ReusableMethodsBasescore {
 		WebUI.click(findTestObject('PreRequisite/button_Attempted'))
 		WebUI.click(findTestObject('PreRequisite/a_Ready for Review'))
 		WebUI.delay(3)
+		WebUI.verifyTextPresent("Saurav has marked the credit as ready for review", false)
 		WebUI.scrollToElement(findTestObject('PreRequisite/button_Next'), 2)
 		WebUI.click(findTestObject('PreRequisite/button_Next'))
 
@@ -141,6 +150,7 @@ public class ReusableMethodsBasescore {
 		WebUI.click(findTestObject('PreRequisite/span_Attempted'))
 		WebUI.click(findTestObject('PreRequisite/a_Ready for Review'))
 		WebUI.delay(3)
+		WebUI.verifyTextPresent("Saurav has marked the credit as ready for review", false)
 		WebUI.scrollToElement(findTestObject('PreRequisite/button_Next'), 2)
 		WebUI.click(findTestObject('PreRequisite/button_Next'))
 

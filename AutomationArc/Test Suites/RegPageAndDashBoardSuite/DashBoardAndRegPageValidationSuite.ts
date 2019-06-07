@@ -61,7 +61,7 @@
    <testCaseLink>
       <guid>8b266c4b-7692-4c33-a321-81f6117abee4</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/DashboardPage/ForgetPasswodLinkNavigationValidationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -73,7 +73,7 @@
    <testCaseLink>
       <guid>69315193-c99d-4d75-93c6-9559f6717899</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/DashboardPage/MyAcountNavigationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>

@@ -562,7 +562,7 @@ public class ResuableMethodsLandingPage extends BaseClass {
 		String projectId = data.getCellData(sheetName,"ProjectID",rowNum)
 
 		WebUI.click(findTestObject('Page_Arc dashboard/Feedback/FeedBackButton'))
-
+        WebUI.delay(3)
 		WebUI.click(findTestObject('Page_Arc dashboard/Feedback/happy'))
 		WebUI.click(findTestObject('Page_Arc dashboard/Feedback/IinfoOkay'))
 		WebUI.click(findTestObject('Page_Arc dashboard/Feedback/InfoUnhappy'))
