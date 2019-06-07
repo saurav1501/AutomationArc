@@ -197,8 +197,8 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/EnergyPerScore'),10)
 		String energyperScore = WebUI.getText(findTestObject('PerformanceScore/Score/EnergyPerScore'))
 		WebUI.verifyMatch(energyperScore , energyScore, false)
-		String carbonIntensity= WebUI.getText(findTestObject('Object Repository/Analytics/Score/CarbonIntensity'))
-		String energyIntensity= WebUI.getText(findTestObject('Object Repository/Analytics/Score/EnergyIntensity'))
+		String carbonIntensity= WebUI.getText(findTestObject('Object Repository/Analytics/Score/CarbonIntensity'),FailureHandling.CONTINUE_ON_FAILURE)
+		String energyIntensity= WebUI.getText(findTestObject('Object Repository/Analytics/Score/EnergyIntensity'),FailureHandling.CONTINUE_ON_FAILURE)
 
 		if((Double.parseDouble(carbonIntensity)==0))
 			KeywordUtil.markFailed("Carbon Intensity is zero(0)")
