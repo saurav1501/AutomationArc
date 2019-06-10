@@ -229,19 +229,19 @@
    <testCaseLink>
       <guid>6bdc0630-6610-4738-ae5b-bc67bfe6fd5b</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyWasteMeterDataCreatedViaExcelTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>8be77a1e-d901-4660-bddc-7e9891361742</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyWaterMeterDataCreatedViaExcelTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>34e704d3-5207-4a0b-8505-24066cd4e484</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyEnergyMeterDataCreatedViaExcelTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -289,25 +289,25 @@
    <testCaseLink>
       <guid>d6a7a461-5d82-4faa-86fc-6786835d99bf</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ValidateHumanExpGraphTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>429c616f-22d7-43e3-ad0a-49fea2ee6eb5</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ValidateEnergyMeterGraphTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>7500c43c-50e5-4ffb-b2a2-b319e8f77024</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ValidateWaterMeterGraphTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>7fbe0fbd-cae0-4e51-8a4f-c3d3c195e9e1</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ValidateWasteDatagraphTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
