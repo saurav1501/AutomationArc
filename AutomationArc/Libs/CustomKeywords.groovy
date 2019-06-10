@@ -2602,14 +2602,6 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.updateUnitLBSmwh"(
          , 	rowNum)
 }
 
-def static "com.arc.ReusableMethods.ReusableMethodsDataInput.updateUnitgramkbtu"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).updateUnitgramkbtu(
-        	sheetName
-         , 	rowNum)
-}
-
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.updateUnitKGkbtu"(
     	String sheetName	
      , 	int rowNum	) {

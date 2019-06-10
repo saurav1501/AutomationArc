@@ -385,7 +385,7 @@
    <testCaseLink>
       <guid>adaa1d95-6f0e-4b40-8565-548561167d7a</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyTheOrderHistoryUSGBCAccountTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
