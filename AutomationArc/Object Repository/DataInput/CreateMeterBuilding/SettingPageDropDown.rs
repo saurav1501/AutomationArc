@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>CSS</key>
-         <value>#meter_item > div.dropdown.display-inline.cursor-pointer > button</value>
+         <value>#meter_item > div:nth-child(3) > button</value>
       </entry>
       <entry>
          <key>BASIC</key>
