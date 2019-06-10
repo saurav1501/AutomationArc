@@ -4,7 +4,17 @@
    <name>a_Emission Factor</name>
    <tag></tag>
    <elementGuidId>b774d7f5-77d2-46cd-81e7-816f89b5cd42</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//a[(text() = 'Emissions Factor' or . = 'Emissions Factor')]</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//a[(text() = 'Emission Factor' or . = 'Emission Factor') and @ref_element = 'Object Repository/DataInput/Setting/iframe_Data Input_datainput-wi']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

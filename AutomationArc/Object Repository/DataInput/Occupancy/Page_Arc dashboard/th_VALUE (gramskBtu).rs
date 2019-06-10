@@ -4,6 +4,16 @@
    <name>th_VALUE (gramskBtu)</name>
    <tag></tag>
    <elementGuidId>1aa05551-5dda-4423-91c5-1fd05c4c857f</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//table[@id='readingsTable']/thead/tr/th[2]</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//th[(text() = 'VALUE (grams/kBtu)' or . = 'VALUE (grams/kBtu)') and @ref_element = 'Object Repository/DataInput/Occupancy/Page_Arc dashboard/iframe_Data Input_datainput-wi']</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>

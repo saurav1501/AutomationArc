@@ -329,16 +329,16 @@
       <testCaseId>Test Cases/Common/Analytics/TotalAnalyticTranHumDataInputSurveyResRateTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>603f6668-e97e-4bae-9f7e-dc98ba338335</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Common/Analytics/TransportationAnnualCarbonEmissions(lbs)ProjectTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>0ac42215-3ff1-49fe-97e3-bfd1f07ae38c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Common/Analytics/TransportationAnnualCarbonEmissionsOccupancyTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>603f6668-e97e-4bae-9f7e-dc98ba338335</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Common/Analytics/TransportationAnnualCarbonEmissions(lbs)ProjectTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>47d748b3-50a2-4f93-a8c1-2480ed285023</guid>
@@ -1249,7 +1249,7 @@
    <testCaseLink>
       <guid>6e5a61e6-8042-49c6-9b9c-21c46a2e0301</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/1.17/TonnesMetricMWH/CarbonTotalDailyCarbonEmissionsMTCO2eCalTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
