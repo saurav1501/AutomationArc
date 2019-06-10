@@ -49,25 +49,25 @@
    <testCaseLink>
       <guid>1f2e9b06-c0a5-4b33-b420-a89e5280fd3f</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/SearchProgramTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>72b56f79-5edf-4984-99b2-4160495bdfeb</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/Next/DataInputNavigationARC_1063Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>5317b7d9-c886-4b0b-b3b1-3296865bb6e9</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ProjectDetailsVerificationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>ae97b5cb-4955-4800-a69e-ad1b08467126</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/VerifyMessageUpdateOccupancyAndOprHrsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -329,16 +329,16 @@
       <testCaseId>Test Cases/Common/Analytics/TotalAnalyticTranHumDataInputSurveyResRateTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>603f6668-e97e-4bae-9f7e-dc98ba338335</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Common/Analytics/TransportationAnnualCarbonEmissions(lbs)ProjectTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>0ac42215-3ff1-49fe-97e3-bfd1f07ae38c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Common/Analytics/TransportationAnnualCarbonEmissionsOccupancyTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>603f6668-e97e-4bae-9f7e-dc98ba338335</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Common/Analytics/TransportationAnnualCarbonEmissions(lbs)ProjectTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>47d748b3-50a2-4f93-a8c1-2480ed285023</guid>
@@ -1249,7 +1249,7 @@
    <testCaseLink>
       <guid>6e5a61e6-8042-49c6-9b9c-21c46a2e0301</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/1.17/TonnesMetricMWH/CarbonTotalDailyCarbonEmissionsMTCO2eCalTest</testCaseId>
    </testCaseLink>
    <testCaseLink>

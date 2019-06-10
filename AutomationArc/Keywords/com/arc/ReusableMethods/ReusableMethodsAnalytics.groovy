@@ -2131,7 +2131,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		String emessionFactor = data.getCellData(sheetName,"EmissionFactor", 2)
 		Double demessionFactor =  Double.parseDouble(emessionFactor)
 
-		double meterdatakBtu = dKWHReading * 3.4121416331 // (1 kWh = 3.4121416331 kBtu)
+		double meterdatakBtu = dKWHReading * 3.412141 // (1 kWh = 3.4121416331 kBtu)
 
 		double reading;
 		double raw_ghg
@@ -2286,7 +2286,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		Double dnoOfDays =  Double.parseDouble(noOfDays)
 		Double dKWHReading =  Double.parseDouble(KWHReading)
 
-		double meterdatakBtu = dKWHReading * 3.4121416331 // (1 kWh = 3.4121416331 kBtu)
+		double meterdatakBtu = dKWHReading * 3.412141 // (1 kWh = 3.4121416331 kBtu)
 
 		double reading;
 		double raw_ghginMtCo2e
@@ -2479,7 +2479,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		String UIannualcarbonemissionsMTCO2eperOcc
 		String UIannualcarbonemissionsMTCO2perOcc
 
-		double meterdatakBtu = dKWHReading * 3.4121416331 // (1 kWh = 3.4121416331 kBtu)
+		double meterdatakBtu = dKWHReading * 3.412141 // (1 kWh = 3.4121416331 kBtu)
 
 		if(native_unit=='grams/kWh'||native_unit=='grams/MWh' )
 		{

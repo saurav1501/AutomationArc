@@ -6068,6 +6068,31 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/Setting/a_Emission Factor'))
 		WebUI.delay(5)
 
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/button_grams'))
+		WebUI.delay(2)
+		
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_grams'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_grams'),3)
+		WebUI.click(findTestObject('DataInput/Occupancy/a_grams'))
+		WebUI.delay(2)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
+		WebUI.delay(5)
+		
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_kBtu'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_kBtu'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/a_kBtu'))
+		
+		WebUI.delay(10)
+		WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (gramskBtu)'),10, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (gramskBtu)'), 10, FailureHandling.CONTINUE_ON_FAILURE)
+
+		
+		
 		WebUI.waitForElementClickable(findTestObject('Analytics/17/Manually Enter Emission'), 10)
 		WebUI.scrollToElement(findTestObject('Analytics/17/Manually Enter Emission'), 3)
 		WebUI.click(findTestObject('Analytics/17/Manually Enter Emission'))
@@ -6321,6 +6346,34 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		
 	}
 
+	
+	@Keyword
+	public void updateUnitgramkbtu(String sheetName, int rowNum){
+		
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/button_grams'))
+		WebUI.delay(2)
+		
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_lbs'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_lbs'),3)
+		WebUI.click(findTestObject('DataInput/Occupancy/a_lbs'))
+		WebUI.delay(2)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
+		WebUI.delay(5)
+		
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_kBtu'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_kBtu'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/a_kBtu'))
+		WebUI.delay(10)
+		WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (gramskBtu)'),10, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (gramskBtu)'), 10, FailureHandling.CONTINUE_ON_FAILURE)
+		
+	}
+	
 	@Keyword
 	public void updateUnitKGkbtu(String sheetName, int rowNum){
 		
