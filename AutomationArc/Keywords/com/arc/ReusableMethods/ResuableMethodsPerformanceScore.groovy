@@ -269,6 +269,9 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 
 	@Keyword
 	public void analyticsgenratePerformanceScoreAdminToolOtherNone(String sheetName,int rowNum) throws IOException, InterruptedException {
+		WebUI.switchToWindowIndex(1)
+		WebUI.delay(2)
+		
 		String projectId = data.getCellData(sheetName,"ProjectID",rowNum)
 		WebUI.click(findTestObject('PerformanceScore/RecomputeScoreButton'))
 		WebUI.delay(3)
@@ -294,14 +297,36 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 
 		String ptotalPerformanceScore = totalPerformanceScore.toString()
 		data.setCellData(GlobalVariable.BDataInput,"ATotalScore", GlobalVariable.rowNumTwo, ptotalPerformanceScore)
-		WebUI.closeWindowIndex(1)
-		WebUI.delay(2)
+	/*	WebUI.closeWindowIndex(1)
+		WebUI.delay(2)*/
 		WebUI.switchToWindowIndex(0)
 		WebUI.delay(2)
 	}
 	
 	@Keyword
 	public void analyticsgenratePerformanceScoreAdminToolOtherNone1(String sheetName,int rowNum) throws IOException, InterruptedException {
+		
+		WebUI.switchToWindowIndex(1)
+		WebUI.delay(2)
+		
+		String projectId = data.getCellData(sheetName,"ProjectID",rowNum)
+		WebUI.click(findTestObject('PerformanceScore/RecomputeScoreButton'))
+		WebUI.delay(3)
+		WebUI.setText(findTestObject('PerformanceScore/PorjectId'),projectId)
+		WebUI.delay(2)
+		WebUI.click(findTestObject('PerformanceScore/RecomputeScore'))
+		WebUI.delay(22)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/Score/EnergyScore'), 90)
+		WebUI.switchToWindowIndex(0)
+		WebUI.delay(1)
+	}
+
+	@Keyword
+	public void analyticsgenratePerformanceScoreAdminToolOtherNone2(String sheetName,int rowNum) throws IOException, InterruptedException {
+		
+		WebUI.switchToWindowIndex(1)
+		WebUI.delay(1)
+		
 		String projectId = data.getCellData(sheetName,"ProjectID",rowNum)
 		WebUI.click(findTestObject('PerformanceScore/RecomputeScoreButton'))
 		WebUI.delay(3)
@@ -310,29 +335,11 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.click(findTestObject('PerformanceScore/RecomputeScore'))
 		WebUI.delay(22)
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/Score/EnergyScore'), 60)
-	/*	String energyScore = WebUI.getText(findTestObject('PerformanceScore/Score/EnergyScore'))
-		String waterScore = WebUI.getText(findTestObject('PerformanceScore/Score/WaterSocre'))
-		String wasteScore = WebUI.getText(findTestObject('PerformanceScore/Score/WasteScore'))
-		String transportScore = WebUI.getText(findTestObject('PerformanceScore/Score/TransportScore'))
-		String humanExpScore = WebUI.getText(findTestObject('PerformanceScore/Score/HumanExperianceScore'))
-
-		int energyscore = Integer.parseInt(energyScore)
-		int waterscore =  Integer.parseInt(waterScore)
-		int wastescore =  Integer.parseInt(wasteScore)
-		int transportscore = Integer.parseInt(transportScore)
-		int humexpscore =    Integer.parseInt(humanExpScore)
-
-		int totalPerformanceScore = energyscore + waterscore + wastescore + transportscore + humexpscore
-		println totalPerformanceScore
-
-		String ptotalPerformanceScore = totalPerformanceScore.toString()
-		data.setCellData(GlobalVariable.BDataInput,"ATotalScore", GlobalVariable.rowNumTwo, ptotalPerformanceScore)*/
 		WebUI.closeWindowIndex(1)
 		WebUI.delay(2)
 		WebUI.switchToWindowIndex(0)
 		WebUI.delay(2)
 	}
-
 	@Keyword
 	public void PerformanceScoreAdminToolOtherNone(String sheetName,int rowNum) throws IOException, InterruptedException {
 		String projectId = data.getCellData(sheetName,"ProjectID",rowNum)

@@ -2268,7 +2268,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		
 		WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'), 10)
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
-		WebUI.delay(10)
+		WebUI.delay(12)
 
 		String KWHReading = data.getCellData(sheetName,"EnergykWh",2)
 		String noOfDays = data.getCellData(sheetName,"ENoOfDays",2)

@@ -22,12 +22,10 @@ import internal.GlobalVariable as GlobalVariable
 try {
 		
 	
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginArcAdminToolWithGlobalVariable'()
+	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginArcAdminToolWithGlobalVariable'()
 	CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsPerformanceScore.analyticsgenratePerformanceScoreAdminToolOtherNone1'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
 	
 } catch (Throwable t) {
-	WebUI.closeWindowIndex(1)
-	WebUI.delay(2)
 	WebUI.switchToWindowIndex(0)
 	System.out.println(t.getLocalizedMessage())
 	Error e1 = new Error(t.getMessage())
