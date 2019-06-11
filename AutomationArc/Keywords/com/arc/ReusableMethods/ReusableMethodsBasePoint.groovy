@@ -248,7 +248,7 @@ public class ReusableMethodsBasePoint extends BaseClass{
 		WebUI.verifyMatch(point, "2", true)
 	}
 
-	
+
 	@Keyword
 	public void basePointOptionBTrial(String sheetName, int rowNum) throws IOException, InterruptedException{
 		/*************************Reading data from excel sheet ************************************/
@@ -306,8 +306,8 @@ public class ReusableMethodsBasePoint extends BaseClass{
 		WebUI.verifyMatch(point, "2", true)
 	}
 
-	
-	
+
+
 	@Keyword
 	public void countTotalNumberOfBasePointTransit() throws IOException, InterruptedException{
 		WebUI.scrollToElement(findTestObject('Object Repository/BasePoint/a_ Base Points (1)'), 10)
@@ -371,9 +371,9 @@ public class ReusableMethodsBasePoint extends BaseClass{
 		WebUI.scrollToElement(findTestObject('Object Repository/BasePoint/a_ Base Points (1)'), 10)
 		WebUI.delay(2)
 		WebUI.doubleClick(findTestObject('Object Repository/BasePoint/a_ Base Points (1)'))
-	//	WebUI.w
+		//	WebUI.w
 		WebUI.delay(5)
-		
+
 
 		WebUI.click(findTestObject('Object Repository/BasePoint/span_Site Development - Protec'))
 		WebUI.delay(5)

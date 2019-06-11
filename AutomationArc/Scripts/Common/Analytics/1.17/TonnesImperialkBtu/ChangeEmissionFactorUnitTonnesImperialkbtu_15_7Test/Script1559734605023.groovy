@@ -14,8 +14,8 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
 try {
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.navigateToEmession'(GlobalVariable.BDataInput, GlobalVariable.rowNumTwo)
 	
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.navigateToEmession'(GlobalVariable.BDataInput, GlobalVariable.rowNumTwo)
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.updateUnitTIkbtu'(GlobalVariable.BDataInput, GlobalVariable.rowNumTwo)
 	
 } catch (Throwable t) {
