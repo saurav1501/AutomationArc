@@ -899,6 +899,8 @@ public class ReusableMethodsManage extends BaseClass {
 
 		/*	WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 		 WebUI.delay(2)*/
+		
+		WebUI.delay(8)
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
 		WebUI.delay(5)
 
@@ -925,11 +927,34 @@ public class ReusableMethodsManage extends BaseClass {
 		Thread.sleep(3000)
 		print "Entering Average time spend by staff"
 
-		WebUI.clearText(findTestObject('DataInput/WeightedOcc/OperatingHour'));
-		WebUI.sendKeys(findTestObject('DataInput/WeightedOcc/OperatingHour'), Weekly_Operating_hours);
-		WebUI.click(findTestObject('DataInput/WeightedOcc/Annual ridership'));
-		Thread.sleep(3000);
-
+		//Navigate to data input section for operating hour
+		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		WebUI.delay(20)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
+		WebUI.delay(3)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle')),"Building Settings", false)
+		
+		//operating hours
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'), 5)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'))
+		Thread.sleep(3000)
+		WebUI.click(findTestObject('Object Repository/DataInput/OperatingHourDropdown'))
+		Thread.sleep(2000)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/OperatingHourDropdown14'),5)
+		//WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'), '168')
+		Thread.sleep(2000)
+		WebUI.click(findTestObject('Object Repository/DataInput/OperatingHourDropdown14'))
+		Thread.sleep(2000)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/OperatingHourDropdown')),"14 Hour", false,FailureHandling.CONTINUE_ON_FAILURE)
+		String opartinghours=WebUI.getText(findTestObject('Object Repository/DataInput/OperatingHourDropdown'))
+		String[] oprHrs=opartinghours.split("\\s")
+		System.out.println(opartinghours)
+		Thread.sleep(2000)
+		//navigate back to manage project
+		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
+		Thread.sleep(8000);
+        WebUI.scrollToElement(findTestObject('DataInput/WeightedOcc/Annual ridership'), 5)
 		System.out.println("Fetching value");
 
 		String ridership = WebUI.getAttribute(findTestObject('DataInput/WeightedOcc/Annual ridership'),'value')
@@ -941,14 +966,13 @@ public class ReusableMethodsManage extends BaseClass {
 		String avg_time= WebUI.getAttribute(findTestObject('DataInput/WeightedOcc/Average time spent by ri'),'value');
 		System.out.println(avg_time)
 
-		String opartinghours=WebUI.getAttribute(findTestObject('DataInput/WeightedOcc/OperatingHour'),'value');
-		System.out.println(opartinghours)
+		
 
 		//Verifying all fetched data form the formula .
 		Double dridership=Double.parseDouble(ridership);
 		Double dfull_time=Double.parseDouble(full_time);
 		Double davg_time =Double.parseDouble(avg_time);
-		Double dopartinghours =Double.parseDouble(opartinghours);
+		Double dopartinghours =Double.parseDouble(oprHrs[0]);
 		Thread.sleep(1000);
 		long CWeightedOccupancy = Math.round((dfull_time+ ( dridership/365 * davg_time/60 )/(dopartinghours/2)));
 
@@ -1048,11 +1072,11 @@ public class ReusableMethodsManage extends BaseClass {
 		Thread.sleep(3000)
 		WebUI.verifyElementVisible(findTestObject('Manage/ErrorMessage/ErrorMessage3'), FailureHandling.CONTINUE_ON_FAILURE)
 
-		WebUI.clearText(findTestObject('DataInput/WeightedOcc/OperatingHour'));
-		WebUI.sendKeys(findTestObject('DataInput/WeightedOcc/OperatingHour'),'SDF');
-		WebUI.click(findTestObject('DataInput/WeightedOcc/Annual ridership'));
-		Thread.sleep(3000);
-		WebUI.verifyElementVisible(findTestObject('Manage/ErrorMessage/ErrorMessage1'), FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.clearText(findTestObject('DataInput/WeightedOcc/OperatingHour'));
+		//WebUI.sendKeys(findTestObject('DataInput/WeightedOcc/OperatingHour'),'SDF');
+		//WebUI.click(findTestObject('DataInput/WeightedOcc/Annual ridership'));
+		//Thread.sleep(3000);
+		//WebUI.verifyElementVisible(findTestObject('Manage/ErrorMessage/ErrorMessage1'), FailureHandling.CONTINUE_ON_FAILURE)
 
 	}
 
@@ -1785,10 +1809,9 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Manage/TeamModule/a_ Team'))
 		WebUI.delay(5)
 		WebUI.waitForElementVisible(findTestObject('Manage/TeamModule/newMemberAddedAuthorizationLevel'),20)
-
 		WebUI.waitForElementClickable(findTestObject('Manage/TeamModule/button_Edit'),20)
 		WebUI.click(findTestObject('Manage/TeamModule/button_Edit'))
-		WebUI.delay(4)
+		WebUI.delay(8)
 		WebUI.selectOptionByLabel(findTestObject('Manage/TeamModule/newMemberAddedAuthorizationLevel'), 'Team Manager', false)
 		WebUI.delay(4)
 		WebUI.waitForElementClickable(findTestObject('Manage/TeamModule/button_Save'),20)
