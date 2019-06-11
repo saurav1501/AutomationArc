@@ -6,12 +6,11 @@
    <elementGuidId>583e73c8-b04a-4109-b37c-938acaeaa7ed</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//*[@ng-if=&quot;project_type=='building' || project_type=='school' || project_type=='transit' ? true : false&quot;]/tr[16]/td[1]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@ng-if=&quot;project_type=='building' || project_type=='school' || project_type=='transit' ? true : false&quot;]/tr[17]/td[1]</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

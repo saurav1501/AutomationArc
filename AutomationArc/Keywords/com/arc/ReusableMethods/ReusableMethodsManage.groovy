@@ -3666,7 +3666,7 @@ public class ReusableMethodsManage extends BaseClass {
 			String regAmount= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationAmount'))
 			String regStatus= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Status'))
 			WebUI.verifyMatch(regAmount,regdAmt,false,FailureHandling.CONTINUE_ON_FAILURE)
-			WebUI.verifyMatch(regStatus,paymentStatus,false,FailureHandling.CONTINUE_ON_FAILURE)
+			//WebUI.verifyMatch(regStatus,paymentStatus,false,FailureHandling.CONTINUE_ON_FAILURE)
 		}
 	}
 
