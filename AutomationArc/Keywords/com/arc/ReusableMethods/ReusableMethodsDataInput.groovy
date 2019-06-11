@@ -6422,6 +6422,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		ReusableMethodsLogin.waitForIframeLoad(60)
 		WebUI.delay(8)
 
+		WebUI.waitForElementClickable(findTestObject('Analytics/17/Building Settings'), 10)
 		WebUI.doubleClick(findTestObject('Analytics/17/Building Settings'))
 		WebUI.delay(4)
 
@@ -6445,15 +6446,9 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('DataInput/Occupancy/button_grams'))
 		WebUI.delay(2)
 
-
 		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_grams'), 10)
 		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_grams'),3)
 		WebUI.click(findTestObject('DataInput/Occupancy/a_grams'))
-
-		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_lbs'), 10)
-		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_lbs'),3)
-		WebUI.click(findTestObject('DataInput/Occupancy/a_lbs'))
-		WebUI.delay(2)
 
 		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 10)
 		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
