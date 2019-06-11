@@ -212,7 +212,7 @@ public class ReusableMethodsSchools extends BaseClass{
 		WebUI.verifyMatch("Project", projectTextVerification, false)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectName')), "Name", false,FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectId')), "Project ID", false,FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectUnitType')), "Unit type", false,FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectUnitType')), "Unit type", false,FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectSpaceType')), "Space type", false,FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectAddress')), "Address", false,FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectCity')), "City", false,FailureHandling.CONTINUE_ON_FAILURE)
@@ -233,10 +233,10 @@ public class ReusableMethodsSchools extends BaseClass{
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectIntendToPrecertify')), "Intend to precertify?", false,FailureHandling.CONTINUE_ON_FAILURE)
 		//WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectGrossFloorArea')), "Gross floor area", false,FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectTargetCertificationDate')), "Target certification date", false,FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectWeeklyOprHours')), "Weekly Operating Hours", false,FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectOperationaldays')), "Operational days", false,FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectWeeklyOprHours')), "Weekly Operating Hours", false,FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectOperationaldays')), "Operational days", false,FailureHandling.CONTINUE_ON_FAILURE)
 		//WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectOccupancy')), "Occupancy", false,FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyElementPresent(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectOccupancy'), 5)
+		//WebUI.verifyElementPresent(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectOccupancy'), 5)
 		
 	}
 	

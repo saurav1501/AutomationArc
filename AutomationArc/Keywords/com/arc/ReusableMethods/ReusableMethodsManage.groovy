@@ -65,7 +65,7 @@ public class ReusableMethodsManage extends BaseClass {
 		}
 		String projectName= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectName'),'value')
 		String projectId= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectId'),'value')
-		String projectUnit= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/unitType'),'value')
+		//String projectUnit= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/unitType'),'value')
 		String projectAddress= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectAddress'),'value')
 		String projectCity= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectCity'),'value')
 		String projectState= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectState'),'value')
@@ -73,7 +73,7 @@ public class ReusableMethodsManage extends BaseClass {
 		//String projectArea= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectArea'),'value')
 		WebUI.verifyMatch(projectName, prjName, false)
 		WebUI.verifyMatch(projectId, prjId, false)
-		WebUI.verifyMatch(projectUnit,"string:IP", false)
+		//WebUI.verifyMatch(projectUnit,"string:IP", false)
 		WebUI.verifyMatch(projectAddress, prjAddress, false)
 		WebUI.verifyMatch(projectCity, prjCity, false)
 		WebUI.verifyMatch(projectState, prjState, false)
@@ -109,7 +109,7 @@ public class ReusableMethodsManage extends BaseClass {
 		}
 		String projectName= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectName'),'value')
 		String projectId= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectId'),'value')
-		String projectUnit= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/unitType'),'value')
+		//String projectUnit= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/unitType'),'value')
 		String projectSpaceType=WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectSpaceType'), 'value')
 		String projectAddress= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectAddress'),'value')
 		String projectCity= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectCity'),'value')
@@ -136,7 +136,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 		WebUI.verifyMatch(projectName, prjName, false)
 		WebUI.verifyMatch(projectId, prjId, false)
-		WebUI.verifyMatch(projectUnit,"string:SI", false)
+		//WebUI.verifyMatch(projectUnit,"string:SI", false)
 		WebUI.verifyMatch(projectAddress, prjAddress, false)
 		WebUI.verifyMatch(projectSpaceType, "?", false)
 		WebUI.verifyMatch(projectCity, prjCity, false)
@@ -290,7 +290,7 @@ public class ReusableMethodsManage extends BaseClass {
 		}
 		String projectName= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectName'),'value')
 		String projectId= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectId'),'value')
-		String projectUnit= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/unitType'),'value')
+		//String projectUnit= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/unitType'),'value')
 		String projectSpaceType= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectSpaceType'), 'value')
 		String projectIsStation= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectIsStationType'), 'value')
 		String projectAddress= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectAddress'),'value')
@@ -315,13 +315,13 @@ public class ReusableMethodsManage extends BaseClass {
 		String projectFullTimeStaff= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectFullTimeStaff'), 'value')
 		String projectAverageTimeSpent= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectAvgTimeSpentByRider'), 'value')
 		//String projectWeeklyOprHrs= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectWeeklyOpreatingHours'), 'value')
-		String projectOperationalDay= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectOpreationalDay'), 'value')
+		//String projectOperationalDay= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectOpreationalDay'), 'value')
 		String projectOccupancy= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectOccupancy'), 'value')
 		//String projectArea= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectArea'),'value')
 
 		WebUI.verifyMatch(projectName, prjName, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(projectId, prjId, false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(projectUnit,"string:IP", false, FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.verifyMatch(projectUnit,"string:IP", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(projectAddress, prjAddress, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(projectSpaceType, "?", false, FailureHandling.CONTINUE_ON_FAILURE)
 		//WebUI.verifyMatch(projectIsStation, stationType, false, FailureHandling.CONTINUE_ON_FAILURE)
@@ -347,7 +347,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyMatch(projectFullTimeStaff, "8", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(projectAverageTimeSpent, "16", false, FailureHandling.CONTINUE_ON_FAILURE)
 		//WebUI.verifyMatch(projectWeeklyOprHrs, "100", false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(projectOperationalDay, "313", false, FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.verifyMatch(projectOperationalDay, "313", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(projectOccupancy, "9", false, FailureHandling.CONTINUE_ON_FAILURE)
 	}
 
@@ -593,6 +593,11 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(3)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle')),"Building Settings", false)
 		Thread.sleep(2000)
+		
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'), 5)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'))
+		
 		WebUI.click(findTestObject('Object Repository/DataInput/OperatingHourDropdown'))
 		Thread.sleep(2000)
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/OperatingHours160'),5)
@@ -618,9 +623,9 @@ public class ReusableMethodsManage extends BaseClass {
 
 		/************************Verifying under Manage Section *****************************************/
 
-		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
-		WebUI.delay(6)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/unitType'),'value'),"string:SI", false, FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
+		//WebUI.delay(6)
+		//WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/unitType'),'value'),"string:SI", false, FailureHandling.CONTINUE_ON_FAILURE)
 		//WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),'value'),'10000', false, FailureHandling.CONTINUE_ON_FAILURE)
 		//WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/week_opr_hrs'),'value'),'160', false, FailureHandling.CONTINUE_ON_FAILURE)
 
@@ -983,7 +988,7 @@ public class ReusableMethodsManage extends BaseClass {
 		}
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectName'),'value'),prjName, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectId'),'value'),prjId, false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/unitType'),'value'),"string:IP", false, FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/unitType'),'value'),"string:IP", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/spaceType'),'value'),"string:"+spaceType, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/prjAddress'),'value'),prjAddress, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectCity'),'value'), prjCity, false, FailureHandling.CONTINUE_ON_FAILURE)
@@ -1078,7 +1083,7 @@ public class ReusableMethodsManage extends BaseClass {
 			WebUI.delay(10)
 		}
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectName'),'value'),prjName, false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/unitType'),'value'),"string:IP", false, FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/unitType'),'value'),"string:IP", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/spaceType'),'value'),"string:"+spaceType, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/prjAddress'),'value'),prjAddress, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectCity'),'value'), prjCity, false, FailureHandling.CONTINUE_ON_FAILURE)
@@ -1240,12 +1245,12 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeSelectButtonArea')),"Imperial System (IP)",false,FailureHandling.CONTINUE_ON_FAILURE)
         WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeHeader')), "VALUE (square feet)", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.delay(2)
-		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeSelectButtonArea'))
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectSIUnitType'), 2)
-		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectSIUnitType'))
-		WebUI.delay(5)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeSelectButtonArea')),"Metric System (SI)",false,FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeHeader')),"VALUE (square meters)", false, FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeSelectButtonArea'))
+		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectSIUnitType'), 2)
+		//WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectSIUnitType'))
+		//WebUI.delay(5)
+		//WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeSelectButtonArea')),"Metric System (SI)",false,FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeHeader')),"VALUE (square meters)", false, FailureHandling.CONTINUE_ON_FAILURE)
 		println "Verified successfully unit changes on the selection of SI and IP unit types."
 	}
 
@@ -1331,9 +1336,9 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(2)
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectName'),'value'),"Test building None "+num,"Not Valid")
 
-		WebUI.selectOptionByLabel(findTestObject('Manage/ProjectDetailVerification/unitType'), 'SI', false)
-		WebUI.delay(2)
-		Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/unitType'),'value'),"string:SI","Not Valid")
+		//WebUI.selectOptionByLabel(findTestObject('Manage/ProjectDetailVerification/unitType'), 'SI', false)
+		//WebUI.delay(2)
+		//Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/unitType'),'value'),"string:SI","Not Valid")
 
 		WebUI.selectOptionByLabel(findTestObject('Manage/ProjectDetailVerification/spaceType'), 'Data Center', false)
 		WebUI.delay(3)

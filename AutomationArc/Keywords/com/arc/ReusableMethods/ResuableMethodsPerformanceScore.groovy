@@ -197,13 +197,13 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/EnergyPerScore'),10)
 		String energyperScore = WebUI.getText(findTestObject('PerformanceScore/Score/EnergyPerScore'))
 		WebUI.verifyMatch(energyperScore , energyScore, false)
-		String carbonIntensity= WebUI.getText(findTestObject('Object Repository/Analytics/Score/CarbonIntensity'),FailureHandling.CONTINUE_ON_FAILURE)
-		String energyIntensity= WebUI.getText(findTestObject('Object Repository/Analytics/Score/EnergyIntensity'),FailureHandling.CONTINUE_ON_FAILURE)
+		//String carbonIntensity= WebUI.getText(findTestObject('Object Repository/Analytics/Score/CarbonIntensity'),FailureHandling.CONTINUE_ON_FAILURE)
+		//String energyIntensity= WebUI.getText(findTestObject('Object Repository/Analytics/Score/EnergyIntensity'),FailureHandling.CONTINUE_ON_FAILURE)
 
-		if((Double.parseDouble(carbonIntensity)==0))
+		/*if((Double.parseDouble(carbonIntensity)==0))
 			KeywordUtil.markFailed("Carbon Intensity is zero(0)")
 		if((Double.parseDouble(energyIntensity)==0))
-			KeywordUtil.markFailed("Energy Intensity is zero(0)")
+			KeywordUtil.markFailed("Energy Intensity is zero(0)")*/
 
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Water'))
 		WebUI.delay(12)
@@ -230,16 +230,16 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.verifyMatch(humanExperience ,humanExpScore, false)
 
 		String occupantSatisfaction= WebUI.getText(findTestObject('Object Repository/Analytics/Score/OccupantSatisfaction'))
-		String co2Level= WebUI.getText(findTestObject('Object Repository/Analytics/Score/CO2Level'))
-		String voc= WebUI.getText(findTestObject('Object Repository/Analytics/Score/VOCLevel'))
+		//String co2Level= WebUI.getText(findTestObject('Object Repository/Analytics/Score/CO2Level'))
+		//String voc= WebUI.getText(findTestObject('Object Repository/Analytics/Score/VOCLevel'))
 
-		if((Integer.parseInt(occupantSatisfaction)==0))
+		/*if((Integer.parseInt(occupantSatisfaction)==0))
 			KeywordUtil.markFailed("Occupant Satisfaction is zero(0)")
 		if((Integer.parseInt(co2Level)==0))
 			KeywordUtil.markFailed("Co2 Level is zero(0)")
 		if((Integer.parseInt(voc)==0))
 			KeywordUtil.markFailed("VOC Level is zero(0)")
-
+*/
 
 		/********* Verifying the Generated score for total score & Energy & Water & Waste & Transport & Human Experience under data Input section ********/
 		WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
