@@ -1045,6 +1045,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.verifyMatch(wasteScore, WebUI.getText(findTestObject('Object Repository/LEEDOnline/ScoreDataInput/wasteScore')), false)
 		WebUI.verifyMatch(transportationScore, WebUI.getText(findTestObject('Object Repository/LEEDOnline/ScoreDataInput/transportationScore')), false,FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(humanExpScore, WebUI.getText(findTestObject('Object Repository/LEEDOnline/ScoreDataInput/humanExpScore')), false,FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.scrollToElement(findTestObject('Object Repository/LEEDOnline/ScoreDataInput/totalScore'), 3)
 		WebUI.verifyMatch(totalScore, WebUI.getText(findTestObject('Object Repository/LEEDOnline/ScoreDataInput/totalScore')), false, FailureHandling.CONTINUE_ON_FAILURE)
 
 	}
