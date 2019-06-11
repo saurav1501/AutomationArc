@@ -6117,9 +6117,6 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Setting/a_Emission Factor'), 3)
 		WebUI.click(findTestObject('Object Repository/DataInput/Setting/a_Emission Factor'))
 		WebUI.delay(5)
-<<<<<<< HEAD
-		
-=======
 
 		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
 		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)
