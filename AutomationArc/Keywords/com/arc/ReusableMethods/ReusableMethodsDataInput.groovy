@@ -6105,11 +6105,6 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		ReusableMethodsLogin.waitForIframeLoad(60)
 		WebUI.delay(8)
 
-		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'),10)
-		//Verifying the Performance score
-		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
-		data.setCellData(GlobalVariable.BDataInput,"TotalScore", GlobalVariable.rowNumTwo,totalPerformaceScore)
-
 		WebUI.doubleClick(findTestObject('Analytics/17/Building Settings'))
 		WebUI.delay(4)
 
@@ -6148,11 +6143,19 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 
 
+>>>>>>> 4b48e603aaea16b8852a596f50b4fd09f8cc64a1
 		WebUI.waitForElementClickable(findTestObject('Analytics/17/Manually Enter Emission'), 10)
 		WebUI.scrollToElement(findTestObject('Analytics/17/Manually Enter Emission'), 3)
 		WebUI.click(findTestObject('Analytics/17/Manually Enter Emission'))
 		WebUI.delay(5)
+	
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'),30)
+		//Verifying the Performance score
+		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
+		data.setCellData(GlobalVariable.BDataInput,"TotalScore", GlobalVariable.rowNumTwo,totalPerformaceScore)
 
+
+		
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), 10)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
 		WebUI.delay(4)
@@ -6229,11 +6232,13 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.setText(findTestObject('Analytics/17/Reading1'),emissionFactor)
 
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
-		WebUI.delay(4)
+		WebUI.delay(7)
 
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/deleteButtonOne'), 20)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), 20)
-
+        
+	
+		
 	}
 
 	@Keyword
@@ -6241,14 +6246,17 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		WebUI.scrollToElement(findTestObject('DataInput/Survey/a_ Data Input'),5)
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
-
+		WebUI.delay(8)
 		ReusableMethodsLogin.waitForPageLoad(60)
 		ReusableMethodsLogin.waitForIframeLoad(60)
-		WebUI.delay(8)
-
+		
+     //   WebUI.waitForElementPresent(findTestObject('Repository/Analytics/17/Building Settings'), 60)
+	    WebUI.waitForElementClickable(findTestObject('Analytics/17/Building Settings'), 60)
 		WebUI.doubleClick(findTestObject('Analytics/17/Building Settings'))
 		WebUI.delay(4)
 
+		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/Setting/Setting'), 60)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Setting/Setting'), 60)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Setting/Setting'), 10)
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Setting/Setting'), 3)
 		WebUI.click(findTestObject('Object Repository/DataInput/Setting/Setting'))
@@ -6288,8 +6296,15 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_kWh'), 3)
 		WebUI.click(findTestObject('DataInput/Occupancy/a_kWh'))
 		WebUI.delay(5)
+		
 		WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (gramskWh)'),10, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (gramskWh)'), 10, FailureHandling.CONTINUE_ON_FAILURE)
+<<<<<<< HEAD
+		
+
+}
+=======
+>>>>>>> 4b48e603aaea16b8852a596f50b4fd09f8cc64a1
 
 	}
 
@@ -6404,15 +6419,50 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	@Keyword
 	public void updateUnitgramkbtu(String sheetName, int rowNum){
+<<<<<<< HEAD
+		
+		WebUI.scrollToElement(findTestObject('DataInput/Survey/a_ Data Input'),5)
+		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+
+		ReusableMethodsLogin.waitForPageLoad(60)
+		ReusableMethodsLogin.waitForIframeLoad(60)
+		WebUI.delay(8)
+
+		WebUI.doubleClick(findTestObject('Analytics/17/Building Settings'))
+		WebUI.delay(4)
+
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Setting/Setting'), 10)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Setting/Setting'), 3)
+		WebUI.click(findTestObject('Object Repository/DataInput/Setting/Setting'))
+		WebUI.delay(5)
+
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Setting/a_Emission Factor'), 10)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Setting/a_Emission Factor'), 3)
+		WebUI.click(findTestObject('Object Repository/DataInput/Setting/a_Emission Factor'))
+		WebUI.delay(5)
+		
+		WebUI.waitForElementClickable(findTestObject('Analytics/17/Manually Enter Emission'), 10)
+		WebUI.scrollToElement(findTestObject('Analytics/17/Manually Enter Emission'), 3)
+		WebUI.click(findTestObject('Analytics/17/Manually Enter Emission'))
+		WebUI.delay(5)
+=======
+>>>>>>> 4b48e603aaea16b8852a596f50b4fd09f8cc64a1
 
 		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
 		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)
 		WebUI.click(findTestObject('DataInput/Occupancy/button_grams'))
 		WebUI.delay(2)
+<<<<<<< HEAD
+		
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_grams'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_grams'),3)
+		WebUI.click(findTestObject('DataInput/Occupancy/a_grams'))
+=======
 
 		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_lbs'), 10)
 		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_lbs'),3)
 		WebUI.click(findTestObject('DataInput/Occupancy/a_lbs'))
+>>>>>>> 4b48e603aaea16b8852a596f50b4fd09f8cc64a1
 		WebUI.delay(2)
 
 		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 10)
@@ -6423,7 +6473,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_kBtu'), 10)
 		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_kBtu'), 3)
 		WebUI.click(findTestObject('DataInput/Occupancy/a_kBtu'))
-		WebUI.delay(10)
+		
+		WebUI.delay(30)
 		WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (gramskBtu)'),10, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (gramskBtu)'), 10, FailureHandling.CONTINUE_ON_FAILURE)
 
@@ -6686,6 +6737,9 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		/********* Verifying the Generated score for total score & Energy & Water & Waste & Transport & Human Experience under data Input section ********/
 		WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
 		WebUI.delay(8)
+		
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Setting/Setting'), 60)
+		
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'),10)
 		//Verifying the Performance score
 		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
@@ -6719,6 +6773,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		/********* Verifying the Generated score for total score under data Input section ********/
 		WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
 		WebUI.delay(8)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Setting/Setting'), 60)
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'),10)
 		//Verifying the Performance score
 		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))

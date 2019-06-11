@@ -2538,178 +2538,6 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createEmissionFacto
          , 	rowNum)
 }
 
-def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createEmissionFactor"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createEmissionFactor(
-        	sheetName
-         , 	rowNum)
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsDataInput.updateEmissionFactor"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).updateEmissionFactor(
-        	sheetName
-         , 	rowNum)
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsDataInput.navigateToEmession"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).navigateToEmession(
-        	sheetName
-         , 	rowNum)
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsDataInput.updateUnitgramkwh"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).updateUnitgramkwh(
-        	sheetName
-         , 	rowNum)
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsDataInput.updateUnitgrammwh"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).updateUnitgrammwh(
-        	sheetName
-         , 	rowNum)
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsDataInput.updateUnitLBSkbtu"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).updateUnitLBSkbtu(
-        	sheetName
-         , 	rowNum)
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsDataInput.updateUnitLBSkwh"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).updateUnitLBSkwh(
-        	sheetName
-         , 	rowNum)
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsDataInput.updateUnitLBSmwh"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).updateUnitLBSmwh(
-        	sheetName
-         , 	rowNum)
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsDataInput.updateUnitgramkbtu"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).updateUnitgramkbtu(
-        	sheetName
-         , 	rowNum)
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsDataInput.updateUnitKGkbtu"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).updateUnitKGkbtu(
-        	sheetName
-         , 	rowNum)
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsDataInput.updateUnitKGkwh"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).updateUnitKGkwh(
-        	sheetName
-         , 	rowNum)
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsDataInput.updateUnitKGmwh"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).updateUnitKGmwh(
-        	sheetName
-         , 	rowNum)
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsDataInput.updateUnitTIkbtu"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).updateUnitTIkbtu(
-        	sheetName
-         , 	rowNum)
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsDataInput.updateUnitTIkwh"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).updateUnitTIkwh(
-        	sheetName
-         , 	rowNum)
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsDataInput.updateUnitTImwh"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).updateUnitTImwh(
-        	sheetName
-         , 	rowNum)
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsDataInput.updateUnitTMkbtu"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).updateUnitTMkbtu(
-        	sheetName
-         , 	rowNum)
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsDataInput.updateUnitTMkwh"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).updateUnitTMkwh(
-        	sheetName
-         , 	rowNum)
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsDataInput.updateUnitTMmwh"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).updateUnitTMmwh(
-        	sheetName
-         , 	rowNum)
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsDataInput.scoreShouldMoreVerify"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).scoreShouldMoreVerify(
-        	sheetName
-         , 	rowNum)
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsDataInput.scoreShouldLessVerify"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).scoreShouldLessVerify(
-        	sheetName
-         , 	rowNum)
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsDataInput.scoreShouldNotChangeVerify"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).scoreShouldNotChangeVerify(
-        	sheetName
-         , 	rowNum)
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyTheCommentCityCommunityDoesnotIncludeMeterName"() {
-    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyTheCommentCityCommunityDoesnotIncludeMeterName()
-}
-
 def static "com.arc.ReusableMethods.ReusableMethodsAnalytics.downloadAndVerifySurveyExportedData"() {
     (new com.arc.ReusableMethods.ReusableMethodsAnalytics()).downloadAndVerifySurveyExportedData()
 }
@@ -3730,6 +3558,14 @@ def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.analyticsgen
     	String sheetName	
      , 	int rowNum	) {
     (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).analyticsgenratePerformanceScoreAdminToolOtherNone1(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.analyticsgenratePerformanceScoreAdminToolOtherNone2"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).analyticsgenratePerformanceScoreAdminToolOtherNone2(
         	sheetName
          , 	rowNum)
 }
