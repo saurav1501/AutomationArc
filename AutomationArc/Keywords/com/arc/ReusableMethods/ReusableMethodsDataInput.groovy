@@ -265,6 +265,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		//WebUI.delay(18)
 		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/DataInputExcelUploadDataVerification/ClickOnWaterMeterCreatedViaExcel'))
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), 4)
 		WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), "Water meter via upload", FailureHandling.STOP_ON_FAILURE)
 		WebUI.delay(5)
 
@@ -307,6 +308,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		//WebUI.delay(18)
 		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'))
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), 4)
 		WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), "Waste Data", FailureHandling.STOP_ON_FAILURE)
 		WebUI.delay(6)
 		int j=2
@@ -734,6 +736,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(18)
 		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'))
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), 4)
 		WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), "Waste Data", FailureHandling.STOP_ON_FAILURE)
 		WebUI.delay(5)
 		WebUI.click(findTestObject('Object Repository/DataInput/CheckFilter/ClickFilter'))

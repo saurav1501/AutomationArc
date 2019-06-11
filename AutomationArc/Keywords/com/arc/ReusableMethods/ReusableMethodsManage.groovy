@@ -315,7 +315,7 @@ public class ReusableMethodsManage extends BaseClass {
 		String projectFullTimeStaff= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectFullTimeStaff'), 'value')
 		String projectAverageTimeSpent= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectAvgTimeSpentByRider'), 'value')
 		//String projectWeeklyOprHrs= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectWeeklyOpreatingHours'), 'value')
-		String projectOperationalDay= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectOpreationalDay'), 'value')
+		//String projectOperationalDay= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectOpreationalDay'), 'value')
 		String projectOccupancy= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectOccupancy'), 'value')
 		//String projectArea= WebUI.getAttribute(findTestObject('Object Repository/ManageNewUI/projectArea'),'value')
 
@@ -347,7 +347,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyMatch(projectFullTimeStaff, "8", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(projectAverageTimeSpent, "16", false, FailureHandling.CONTINUE_ON_FAILURE)
 		//WebUI.verifyMatch(projectWeeklyOprHrs, "100", false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(projectOperationalDay, "313", false, FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.verifyMatch(projectOperationalDay, "313", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(projectOccupancy, "9", false, FailureHandling.CONTINUE_ON_FAILURE)
 	}
 
