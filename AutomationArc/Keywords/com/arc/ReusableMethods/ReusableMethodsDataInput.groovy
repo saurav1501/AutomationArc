@@ -286,6 +286,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		}
 		//verify document tab is available under data input section
 		WebUI.delay(5)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/DocumentTab'), 4)
 		WebUI.click(findTestObject('Object Repository/DataInput/DocumentTab'))
 		WebUI.delay(3)
 		Assert.assertTrue(WebUI.verifyElementVisible(findTestObject('Object Repository/DataInput/UploadButtonInDocumentTab')))
@@ -331,6 +332,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		}
 		//verify document tab is available under data input section
 		WebUI.delay(5)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/DocumentTab'), 4)
 		WebUI.click(findTestObject('Object Repository/DataInput/DocumentTab'))
 		WebUI.delay(3)
 		Assert.assertTrue(WebUI.verifyElementVisible(findTestObject('Object Repository/DataInput/UploadButtonInDocumentTab')))
