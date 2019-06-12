@@ -15,7 +15,7 @@ import internal.GlobalVariable as GlobalVariable
 
 try{
 	
-		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.gverifyOccupanyAreaAndOpreatingHours'()
+		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.opeartingHour'()
 	  }
 		catch (Throwable t) {
 		System.out.println(t.getLocalizedMessage())
@@ -23,3 +23,5 @@ try{
 			e1.setStackTrace(t.getStackTrace())
 			e1.printStackTrace()
 		}
+		
+	

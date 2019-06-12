@@ -125,22 +125,28 @@
       <testCaseId>Test Cases/Buildings/GRESB/ORANGEScoreCompletenessAfterReEnteringData(EWWH)Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>dccbf852-9646-4744-b7d4-7f38335e3d93</guid>
+      <guid>f54919d6-f19b-47a0-b67f-d9273ad0acec</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/GRESB/VerifyRe-EnterErrorMessageUnderSettingTest</testCaseId>
+      <testCaseId>Test Cases/Buildings/GRESB/OccupancyErrorMessageUpdateOccupancy1_17Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>680843a6-7f48-431a-8952-8eaf6cecf798</guid>
+      <guid>5b61c004-ba10-45db-ae21-5d820b85dbe3</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/GRESB/ModifyAndSaveBuildingSettingDataTest</testCaseId>
+      <testCaseId>Test Cases/Buildings/GRESB/WeeklyOperatingHourErrorMessageUpdateOPHour1_17Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>01f5e16d-4c2e-4cf0-9854-8e0ef06a1fa1</guid>
+      <guid>48e7cb22-7285-4c98-b3b6-ee352455c0bb</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/GRESB/VerifyModifiedBuildingSettingDataTest</testCaseId>
+      <testCaseId>Test Cases/Buildings/GRESB/OperationalDaysErrorMessageUpdateODays1_17Test</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>a13e28f5-2d09-4482-8070-7b297a679d88</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/GRESB/ModifyGrossAreaAndUnitType1_17Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>36664f5f-969b-4740-b684-e476a6f10b0b</guid>

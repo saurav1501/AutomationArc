@@ -15,7 +15,7 @@ import internal.GlobalVariable as GlobalVariable
 
 try{
 	
-		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.gverifyOccupanyAreaAndOpreatingHours'()
+		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.mofifyArea'()
 	  }
 		catch (Throwable t) {
 		System.out.println(t.getLocalizedMessage())

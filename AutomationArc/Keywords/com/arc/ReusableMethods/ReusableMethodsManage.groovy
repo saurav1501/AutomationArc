@@ -773,7 +773,63 @@ public class ReusableMethodsManage extends BaseClass {
 
 	}
 	@Keyword
-	public gverifyOccupanyAreaAndOpreatingHours(){
+	public operatioanlDays(){
+		
+		WebUI.waitForElementClickable(findTestObject('Analytics/17/Building Settings'), 60)
+		WebUI.doubleClick(findTestObject('Analytics/17/Building Settings'))
+		WebUI.delay(4)
+
+		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/Setting/Setting'), 60)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Setting/Setting'), 60)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Setting/Setting'), 10)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Setting/Setting'), 3)
+		WebUI.click(findTestObject('Object Repository/DataInput/Setting/Setting'))
+		WebUI.delay(5)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/OTracker/Page_Arc dashboard/a_Operational Days'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/OTracker/Page_Arc dashboard/a_Operational Days'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/OTracker/Page_Arc dashboard/a_Operational Days'))
+		WebUI.delay(5)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'),'value'),'313', false, FailureHandling.CONTINUE_ON_FAILURE)
+		
+		WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'),'314')
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle'))
+		WebUI.delay(10)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'),'value'),'314', false, FailureHandling.CONTINUE_ON_FAILURE)
+		
+		}
+	@Keyword
+	public void mofifyArea(){
+		
+		WebUI.waitForElementClickable(findTestObject('Analytics/17/Building Settings'), 60)
+		WebUI.doubleClick(findTestObject('Analytics/17/Building Settings'))
+		WebUI.delay(4)
+
+		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/Setting/Setting'), 60)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Setting/Setting'), 60)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Setting/Setting'), 10)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Setting/Setting'), 3)
+		WebUI.click(findTestObject('Object Repository/DataInput/Setting/Setting'))
+		WebUI.delay(5)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/OTracker/Page_Arc dashboard/a_Gross Floor Area'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/OTracker/Page_Arc dashboard/a_Gross Floor Area'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/OTracker/Page_Arc dashboard/a_Gross Floor Area'))
+		WebUI.delay(5)
+			
+		WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'),'1000')
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle'))
+		WebUI.delay(10)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'),'value'),'1000', false, FailureHandling.CONTINUE_ON_FAILURE)
+		
+	}
+
+
+	@Keyword
+	public gverifyOperationalDay(){
+		
 		WebUI.delay(10)
 		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'))
 
@@ -789,6 +845,9 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(7)
 	}
 
+	
+	
+	
 	@Keyword
 	public gErrorReEnterDataNot(){
 		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'))
@@ -803,6 +862,68 @@ public class ReusableMethodsManage extends BaseClass {
 
 	}
 
+	@Keyword
+	public goccupancyErrorUpdate(){
+		
+		WebUI.scrollToElement(findTestObject('DataInput/Survey/a_ Data Input'),5)
+		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+		WebUI.delay(8)
+	
+		WebUI.waitForElementClickable(findTestObject('Analytics/17/Building Settings'), 60)
+		WebUI.doubleClick(findTestObject('Analytics/17/Building Settings'))
+		WebUI.delay(4)
+
+		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/Setting/Setting'), 60)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Setting/Setting'), 60)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Setting/Setting'), 10)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Setting/Setting'), 3)
+		WebUI.click(findTestObject('Object Repository/DataInput/Setting/Setting'))
+		WebUI.delay(5)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/OTracker/Page_Arc dashboard/a_Occupancy'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/OTracker/Page_Arc dashboard/a_Occupancy'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/OTracker/Page_Arc dashboard/a_Occupancy'))
+		WebUI.delay(5)
+		
+		WebUI.verifyElementVisible(findTestObject('DataInput/Occupancy/OTracker/Page_Arc dashboard/p_Re-enter or change data'), FailureHandling.CONTINUE_ON_FAILURE)
+		
+		WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'),'9')
+		WebUI.delay(5)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle'))
+		WebUI.delay(10)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'),'value'),'9', false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyElementNotVisible(findTestObject('DataInput/Occupancy/OTracker/Page_Arc dashboard/p_Re-enter or change data'), FailureHandling.CONTINUE_ON_FAILURE)
+		
+		
+	}
+	
+	@Keyword
+	public void opeartingHour() {
+		
+	
+	WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
+	WebUI.delay(3)
+	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle')),"Building Settings", false)
+
+	WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
+	WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'), 5)
+	WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'))
+	WebUI.delay(3)
+	WebUI.click(findTestObject('Object Repository/DataInput/OperatingHourDropdown'))
+	WebUI.delay(2)
+	
+	WebUI.verifyElementVisible(findTestObject('DataInput/Occupancy/OTracker/Page_Arc dashboard/p_Re-enter or change data'), FailureHandling.CONTINUE_ON_FAILURE)
+	
+	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/OTracker/Page_Arc dashboard/OPHour160'),5)
+	WebUI.delay(2)
+	WebUI.click(findTestObject('DataInput/Occupancy/OTracker/Page_Arc dashboard/OPHour160'))
+	WebUI.delay(5)
+	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/OperatingHourDropdown')),"160 Hour", false,FailureHandling.CONTINUE_ON_FAILURE)
+	WebUI.verifyElementNotVisible(findTestObject('DataInput/Occupancy/OTracker/Page_Arc dashboard/p_Re-enter or change data'), FailureHandling.CONTINUE_ON_FAILURE)
+	
+	}
+
+	
 	//Verify operating hours, occupancy and area after uploading the excel template. For Building None, Other, City, Community Leed, None and Other
 	@Keyword
 	public void verifyOperatingHrsAreaAndOccupancyAfterExcelUpload(){

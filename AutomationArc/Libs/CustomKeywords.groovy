@@ -1164,28 +1164,6 @@ def static "com.arc.ReusableMethods.ReusableMethodSendEmailReport.sendEmailRepor
     (new com.arc.ReusableMethods.ReusableMethodSendEmailReport()).sendEmailReport()
 }
 
-def static "com.helper.grid.GridHelper.GetValueFromGrid"(
-    	TestObject baseTestObject	
-     , 	int rowIndex	
-     , 	int colIndex	) {
-    (new com.helper.grid.GridHelper()).GetValueFromGrid(
-        	baseTestObject
-         , 	rowIndex
-         , 	colIndex)
-}
-
-def static "com.helper.grid.GridHelper.getValueOrClickOnColumn"(
-    	TestObject baseTestObject	
-     , 	int rowIndex	
-     , 	int colIndex	
-     , 	String type	) {
-    (new com.helper.grid.GridHelper()).getValueOrClickOnColumn(
-        	baseTestObject
-         , 	rowIndex
-         , 	colIndex
-         , 	type)
-}
-
 def static "com.arc.ReusableMethods.ReusableMethodsSchools.addNewSchoolProjectRegistration"(
     	String sheetName	
      , 	int rowNum	) {
@@ -1336,6 +1314,28 @@ def static "com.arc.ReusableMethods.ReusableMethodsSchools.verifyFormaldehydeTot
 
 def static "com.arc.ReusableMethods.ReusableMethodsSchools.navigateToBuildingSchools"() {
     (new com.arc.ReusableMethods.ReusableMethodsSchools()).navigateToBuildingSchools()
+}
+
+def static "com.helper.grid.GridHelper.GetValueFromGrid"(
+    	TestObject baseTestObject	
+     , 	int rowIndex	
+     , 	int colIndex	) {
+    (new com.helper.grid.GridHelper()).GetValueFromGrid(
+        	baseTestObject
+         , 	rowIndex
+         , 	colIndex)
+}
+
+def static "com.helper.grid.GridHelper.getValueOrClickOnColumn"(
+    	TestObject baseTestObject	
+     , 	int rowIndex	
+     , 	int colIndex	
+     , 	String type	) {
+    (new com.helper.grid.GridHelper()).getValueOrClickOnColumn(
+        	baseTestObject
+         , 	rowIndex
+         , 	colIndex
+         , 	type)
 }
 
 def static "com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToBuilding"() {
@@ -3998,12 +3998,28 @@ def static "com.arc.ReusableMethods.ReusableMethodsManage.geditOccupanyAreaAndOp
     (new com.arc.ReusableMethods.ReusableMethodsManage()).geditOccupanyAreaAndOpreatingHours()
 }
 
-def static "com.arc.ReusableMethods.ReusableMethodsManage.gverifyOccupanyAreaAndOpreatingHours"() {
-    (new com.arc.ReusableMethods.ReusableMethodsManage()).gverifyOccupanyAreaAndOpreatingHours()
+def static "com.arc.ReusableMethods.ReusableMethodsManage.operatioanlDays"() {
+    (new com.arc.ReusableMethods.ReusableMethodsManage()).operatioanlDays()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsManage.mofifyArea"() {
+    (new com.arc.ReusableMethods.ReusableMethodsManage()).mofifyArea()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsManage.gverifyOperationalDay"() {
+    (new com.arc.ReusableMethods.ReusableMethodsManage()).gverifyOperationalDay()
 }
 
 def static "com.arc.ReusableMethods.ReusableMethodsManage.gErrorReEnterDataNot"() {
     (new com.arc.ReusableMethods.ReusableMethodsManage()).gErrorReEnterDataNot()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsManage.goccupancyErrorUpdate"() {
+    (new com.arc.ReusableMethods.ReusableMethodsManage()).goccupancyErrorUpdate()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsManage.opeartingHour"() {
+    (new com.arc.ReusableMethods.ReusableMethodsManage()).opeartingHour()
 }
 
 def static "com.arc.ReusableMethods.ReusableMethodsManage.verifyOperatingHrsAreaAndOccupancyAfterExcelUpload"() {
