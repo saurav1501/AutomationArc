@@ -3,7 +3,7 @@ package com.arc.ReusableMethods
 import java.text.SimpleDateFormat
 
 import com.arc.BaseClass.BaseClass
-import com.arc.BaseClass.SendEmail
+
 import com.kms.katalon.core.annotation.Keyword
 
 import internal.GlobalVariable
@@ -24,6 +24,6 @@ public class ReusableMethodSendEmailReport extends BaseClass {
 		 //print "Days: ${duration.days}, Hours: ${duration.hours}"
 		 execution= "Hours: ${duration.hours }, Minutes: ${duration.minutes}, Seconds: ${duration.seconds}"
 		 }*/
-		SendEmail.sendStatusReport(totalTest, totalPass, totalFail)
+		//SendEmail.sendStatusReport(totalTest, totalPass, totalFail)
 	}
 }

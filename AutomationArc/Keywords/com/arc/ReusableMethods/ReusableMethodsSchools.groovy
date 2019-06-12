@@ -601,6 +601,8 @@ public class ReusableMethodsSchools extends BaseClass{
 		searchSchools()
 
 		WebUI.delay(5)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/SchoolsLocators/SearchSchoolsLocators/ClaimNowButton'), 30)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/SchoolsLocators/SearchSchoolsLocators/ClaimNowButton'), 20)
 		List<WebElement> schoolsName = driver.findElements(By.xpath("//*[@ng-click='addProject(school)']"))
 
 		println schoolsName.size()
