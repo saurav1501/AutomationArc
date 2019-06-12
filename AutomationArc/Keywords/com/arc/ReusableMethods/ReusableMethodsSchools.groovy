@@ -586,13 +586,43 @@ public class ReusableMethodsSchools extends BaseClass{
 		WebUI.setText(findTestObject('Object Repository/SchoolsLocators/SearchSchoolsLocators/SearchBarSchools'), searchSchool)
 		//Wait for the visibility of the element rows per page
 		WebUI.delay(3)
-		WebUI.waitForElementVisible(findTestObject('Object Repository/SchoolsLocators/SearchSchoolsLocators/RowsPerPage'), 10)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/SchoolsLocators/SearchSchoolsLocators/RowsPerPage'), 30)
 		//Click on rows per page
+		WebUI.delay(7)
 		WebUI.click(findTestObject('Object Repository/SchoolsLocators/SearchSchoolsLocators/RowsPerPage'))
 		WebUI.delay(3)
 		//click on 100 rows per page
 		WebUI.click(findTestObject('Object Repository/SchoolsLocators/SearchSchoolsLocators/ClickOnHundredRowsPerPage'),FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.delay(3)
+	}
+	
+	
+	public void selectSchool(){
+		List<WebElement> schoolsName = driver.findElements(By.xpath("//*[@ng-click='addProject(school)']"))
+		  println schoolsName.size()
+	      int size=schoolsName.size()
+		 
+		for(WebElement ele : schoolsName){
+		  println(ele.getText())
+		  if((ele.getText().equalsIgnoreCase("Claim now"))){
+		      ele.click()
+			  break
+		  }
+			else{
+			  size=size-1
+			  println size
+		  }
+		   if ((size<=0)){
+		      println "Hi"
+			  searchSchools()
+			  println "Hi1"
+			  WebUI.delay(5)
+			  schoolsName = driver.findElements(By.xpath("//*[@ng-click='addProject(school)']"))
+			  println schoolsName.size()
+			 //int size=schoolsName.size()
+			  size= schoolsName.size()
+			}
+		}
 	}
 
 	//Claim A School
@@ -601,36 +631,21 @@ public class ReusableMethodsSchools extends BaseClass{
 		searchSchools()
 
 		WebUI.delay(5)
-		WebUI.waitForElementPresent(findTestObject('Object Repository/SchoolsLocators/SearchSchoolsLocators/ClaimNowButton'), 30)
-		WebUI.waitForElementVisible(findTestObject('Object Repository/SchoolsLocators/SearchSchoolsLocators/ClaimNowButton'), 20)
-		List<WebElement> schoolsName = driver.findElements(By.xpath("//*[@ng-click='addProject(school)']"))
-
-		println schoolsName.size()
-		int size=schoolsName.size()
-
-		for(WebElement ele : schoolsName){
-
-			println(ele.getText())
-			if((ele.getText().equalsIgnoreCase("Claim now"))){
-				ele.click()
+		//WebUI.waitForElementPresent(findTestObject('Object Repository/SchoolsLocators/SearchSchoolsLocators/ClaimNowButton'), 30)
+		//WebUI.waitForElementVisible(findTestObject('Object Repository/SchoolsLocators/SearchSchoolsLocators/ClaimNowButton'), 20)
+		if((WebUI.waitForElementPresent(findTestObject('Object Repository/SchoolsLocators/SearchSchoolsLocators/ClaimNowButton'), 30,FailureHandling.OPTIONAL))){
+			selectSchool()
+		}else{
+		  
+		for(int next=1;next<900;next++){
+			WebUI.click(findTestObject('Object Repository/SchoolsLocators/SearchSchoolsLocators/NextSchoolRecord'))
+			if((WebUI.waitForElementPresent(findTestObject('Object Repository/SchoolsLocators/SearchSchoolsLocators/ClaimNowButton'), 30,FailureHandling.OPTIONAL))){
+				selectSchool()
 				break
 			}
-			else{
-				size=size-1
-				println size
-			}
-			if ((size<=0)){
-				println "Hi"
-				searchSchools()
-				println "Hi1"
-				WebUI.delay(5)
-				schoolsName = driver.findElements(By.xpath("//*[@ng-click='addProject(school)']"))
-				println schoolsName.size()
-				//int size=schoolsName.size()
-				size= schoolsName.size()
-			}
+		 }
 		}
-
+		
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Add_Project_Details/h1_Project Registration'), 20)
 		String projectRegistrationText = WebUI.getText(findTestObject('Object Repository/Add_Project_Details/h1_Project Registration'))
 		WebUI.verifyMatch(projectRegistrationText,'Project Registration',true)
