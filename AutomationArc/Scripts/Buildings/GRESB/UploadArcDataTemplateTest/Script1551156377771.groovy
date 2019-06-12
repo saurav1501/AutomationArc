@@ -27,8 +27,9 @@ import org.openqa.selenium.Keys as Keys
 //Upload ARCData Template
 
 	try {
-		
-		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.uploadArcDataTemplateBuildingAnalytics'()
+		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.PortfoliosSheet,GlobalVariable.rowNumTwo)
+		WebUI.delay(10)
+		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.uploadArcDataTemplateLEEDV4'()
 
 	} catch (Throwable t) {	
 		System.out.println(t.getLocalizedMessage())

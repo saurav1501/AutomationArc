@@ -480,7 +480,7 @@ public class ResuableMethodsGRESB extends BaseClass {
 
 	@Keyword
 	public void verifyNoErrorNotification() throws IOException, InterruptedException {
-		WebUI.delay(4)
+		WebUI.delay(18)
 		WebUI.verifyElementNotPresent(findTestObject('Portfolio/ErrorNotification/Districtheating'),4)
 		WebUI.verifyElementNotPresent(findTestObject('Portfolio/ErrorNotification/ElectricityMeter'),4)
 		WebUI.verifyElementNotPresent(findTestObject('Portfolio/ErrorNotification/FuelMeter'),4)
@@ -613,7 +613,7 @@ public class ResuableMethodsGRESB extends BaseClass {
 		WebUI.setText(findTestObject('DataInput/CreateMeterBuilding/input_fw600 reading ng-pristin'),'23')
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/SuccessGreenTick'),20)
-		WebUI.delay(15)
+		WebUI.delay(20)
 	}
 
 	@Keyword
