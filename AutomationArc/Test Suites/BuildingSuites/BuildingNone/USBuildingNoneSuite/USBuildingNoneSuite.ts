@@ -1007,12 +1007,6 @@
       <testCaseId>Test Cases/Common/Analytics/1.17/TonnesImperialkBtu/AnnualCarbonEmissions(MTCO2e)ProjectTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>a1ac1f91-bb0a-462a-a68d-3f05ce66c559</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Common/Analytics/1.17/TonnesImperialkBtu/CarbonTotalAnnualCarbonEmissionsMTCO2eCalTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>ddaa2a15-4012-4dcf-806d-04efb4f39136</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

@@ -315,7 +315,7 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.setText(findTestObject('PerformanceScore/PorjectId'),projectId)
 		WebUI.delay(2)
 		WebUI.click(findTestObject('PerformanceScore/RecomputeScore'))
-		WebUI.delay(22)
+		WebUI.delay(30)
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/Score/EnergyScore'), 90)
 		WebUI.switchToWindowIndex(0)
 		WebUI.delay(1)
