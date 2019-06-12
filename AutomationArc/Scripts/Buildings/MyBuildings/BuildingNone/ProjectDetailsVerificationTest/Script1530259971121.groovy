@@ -22,13 +22,10 @@ import org.openqa.selenium.Keys as Keys
 
 
 
-try{
-
-			
+try{		
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.verifyBuildingProjectDetails'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
 
-
-} catch (Throwable t) {
+   } catch (Throwable t) {
 	
 		System.out.println(t.getLocalizedMessage())
 		Error e1 = new Error(t.getMessage())
