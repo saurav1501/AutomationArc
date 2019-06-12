@@ -3998,8 +3998,16 @@ def static "com.arc.ReusableMethods.ReusableMethodsManage.geditOccupanyAreaAndOp
     (new com.arc.ReusableMethods.ReusableMethodsManage()).geditOccupanyAreaAndOpreatingHours()
 }
 
-def static "com.arc.ReusableMethods.ReusableMethodsManage.gverifyOccupanyAreaAndOpreatingHours"() {
-    (new com.arc.ReusableMethods.ReusableMethodsManage()).gverifyOccupanyAreaAndOpreatingHours()
+def static "com.arc.ReusableMethods.ReusableMethodsManage.operatioanlDays"() {
+    (new com.arc.ReusableMethods.ReusableMethodsManage()).operatioanlDays()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsManage.mofifyArea"() {
+    (new com.arc.ReusableMethods.ReusableMethodsManage()).mofifyArea()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsManage.gverifyOperationalDay"() {
+    (new com.arc.ReusableMethods.ReusableMethodsManage()).gverifyOperationalDay()
 }
 
 def static "com.arc.ReusableMethods.ReusableMethodsManage.gErrorReEnterDataNot"() {
@@ -4008,6 +4016,10 @@ def static "com.arc.ReusableMethods.ReusableMethodsManage.gErrorReEnterDataNot"(
 
 def static "com.arc.ReusableMethods.ReusableMethodsManage.goccupancyErrorUpdate"() {
     (new com.arc.ReusableMethods.ReusableMethodsManage()).goccupancyErrorUpdate()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsManage.opeartingHour"() {
+    (new com.arc.ReusableMethods.ReusableMethodsManage()).opeartingHour()
 }
 
 def static "com.arc.ReusableMethods.ReusableMethodsManage.verifyOperatingHrsAreaAndOccupancyAfterExcelUpload"() {
