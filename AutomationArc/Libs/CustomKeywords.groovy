@@ -4006,6 +4006,10 @@ def static "com.arc.ReusableMethods.ReusableMethodsManage.gErrorReEnterDataNot"(
     (new com.arc.ReusableMethods.ReusableMethodsManage()).gErrorReEnterDataNot()
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsManage.goccupancyErrorUpdate"() {
+    (new com.arc.ReusableMethods.ReusableMethodsManage()).goccupancyErrorUpdate()
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsManage.verifyOperatingHrsAreaAndOccupancyAfterExcelUpload"() {
     (new com.arc.ReusableMethods.ReusableMethodsManage()).verifyOperatingHrsAreaAndOccupancyAfterExcelUpload()
 }

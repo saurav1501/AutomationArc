@@ -789,6 +789,8 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(7)
 	}
 
+	
+	
 	@Keyword
 	public gErrorReEnterDataNot(){
 		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'))
@@ -803,6 +805,44 @@ public class ReusableMethodsManage extends BaseClass {
 
 	}
 
+	@Keyword
+	public goccupancyErrorUpdate(){
+		
+		WebUI.scrollToElement(findTestObject('DataInput/Survey/a_ Data Input'),5)
+		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+		WebUI.delay(8)
+		ReusableMethodsLogin.waitForPageLoad(60)
+		ReusableMethodsLogin.waitForIframeLoad(60)
+
+		WebUI.waitForElementClickable(findTestObject('Analytics/17/Building Settings'), 60)
+		WebUI.doubleClick(findTestObject('Analytics/17/Building Settings'))
+		WebUI.delay(4)
+
+		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/Setting/Setting'), 60)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Setting/Setting'), 60)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Setting/Setting'), 10)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Setting/Setting'), 3)
+		WebUI.click(findTestObject('Object Repository/DataInput/Setting/Setting'))
+		WebUI.delay(5)
+
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Setting/a_Emission Factor'), 10)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Setting/a_Emission Factor'), 3)
+		WebUI.click(findTestObject('Object Repository/DataInput/Setting/a_Emission Factor'))
+		WebUI.delay(5)
+
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
+		WebUI.delay(3)
+		WebUI.verifyElementPresent(findTestObject('Portfolio/GRESB/Setting/p_Re-enter Occupancy'),2,FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyElementPresent(findTestObject('Portfolio/GRESB/Setting/p_Re-enter OPPHour'),2,FailureHandling.CONTINUE_ON_FAILURE)
+		//	WebUI.verifyElementPresent(findTestObject('Portfolio/GRESB/Setting/p_Re-enterArea'),2,FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Portfolio/GRESB/Setting/button_CANCEL'))
+		WebUI.delay(10)
+
+	}
+
+	
 	//Verify operating hours, occupancy and area after uploading the excel template. For Building None, Other, City, Community Leed, None and Other
 	@Keyword
 	public void verifyOperatingHrsAreaAndOccupancyAfterExcelUpload(){

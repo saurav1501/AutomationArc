@@ -6104,60 +6104,15 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		String emissionFactor  = data.getCellData(sheetName, "EmissionFactor", rowNum)
 		WebUI.delay(5)
 
-		WebUI.scrollToElement(findTestObject('DataInput/Survey/a_ Data Input'),5)
-		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
-
-		ReusableMethodsLogin.waitForPageLoad(60)
-		ReusableMethodsLogin.waitForIframeLoad(60)
-		WebUI.delay(8)
-
-		WebUI.doubleClick(findTestObject('Analytics/17/Building Settings'))
-		WebUI.delay(4)
-
-		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Setting/Setting'), 10)
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Setting/Setting'), 3)
-		WebUI.click(findTestObject('Object Repository/DataInput/Setting/Setting'))
-		WebUI.delay(5)
-
-		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Setting/a_Emission Factor'), 10)
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Setting/a_Emission Factor'), 3)
-		WebUI.click(findTestObject('Object Repository/DataInput/Setting/a_Emission Factor'))
-		WebUI.delay(5)
-
-		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
-		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)
-		WebUI.click(findTestObject('DataInput/Occupancy/button_grams'))
-		WebUI.delay(2)
-
-		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_grams'), 10)
-		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_grams'),3)
-		WebUI.click(findTestObject('DataInput/Occupancy/a_grams'))
-		WebUI.delay(2)
-
-		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 10)
-		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
-		WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
-		WebUI.delay(5)
-
-		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_kBtu'), 10)
-		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_kBtu'), 3)
-		WebUI.click(findTestObject('DataInput/Occupancy/a_kBtu'))
-
-		WebUI.delay(10)
-		WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (gramskBtu)'),10, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (gramskBtu)'), 10, FailureHandling.CONTINUE_ON_FAILURE)
-
-		WebUI.waitForElementClickable(findTestObject('Analytics/17/Manually Enter Emission'), 10)
-		WebUI.scrollToElement(findTestObject('Analytics/17/Manually Enter Emission'), 3)
-		WebUI.click(findTestObject('Analytics/17/Manually Enter Emission'))
-		WebUI.delay(5)
-
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'),30)
 		//Verifying the Performance score
 		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
 		data.setCellData(GlobalVariable.BDataInput,"TotalScore", GlobalVariable.rowNumTwo,totalPerformaceScore)
 
-
+		WebUI.waitForElementClickable(findTestObject('Analytics/17/Manually Enter Emission'), 10)
+		WebUI.scrollToElement(findTestObject('Analytics/17/Manually Enter Emission'), 3)
+		WebUI.click(findTestObject('Analytics/17/Manually Enter Emission'))
+		WebUI.delay(5)
 
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), 10)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
@@ -6451,17 +6406,18 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_grams'), 10)
 		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_grams'),3)
 		WebUI.click(findTestObject('DataInput/Occupancy/a_grams'))
+		WebUI.delay(4)
 
 		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 10)
 		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
 		WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
-		WebUI.delay(5)
+		WebUI.delay(2)
 
 		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_kBtu'), 10)
 		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_kBtu'), 3)
 		WebUI.click(findTestObject('DataInput/Occupancy/a_kBtu'))
-
-		WebUI.delay(30)
+		WebUI.delay(5)
+		
 		WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (gramskBtu)'),10, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (gramskBtu)'), 10, FailureHandling.CONTINUE_ON_FAILURE)
 
@@ -6739,7 +6695,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 			KeywordUtil.markFailedAndStop("!!! Total Score is Not increased for this  Project after changing the emission factor !!!")
 
 
-		WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
+		/*WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TotalPerformanceScore'),10)
 		WebUI.delay(15)
 		String totalperformaceScore = WebUI.getText(findTestObject('PerformanceScore/Score/TotalPerformanceScore'))
@@ -6749,7 +6705,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 			KeywordUtil.markPassed("!!! Total Score is increased for this Project after changing the emission factor !!!")
 		else
 			KeywordUtil.markFailedAndStop("!!! Total Score is Not increased for this  Project after changing the emission factor !!!")
-
+*/
 	}
 	@Keyword
 	public void scoreShouldLessVerify(String sheetName, int rowNum){
@@ -6773,7 +6729,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 			KeywordUtil.markFailedAndStop("!!! Total Score is Not Decrease for this Project after changing the emission factor !!!")
 
 
-		WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
+	/*	WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TotalPerformanceScore'),10)
 		WebUI.delay(15)
 		String totalperformaceScore = WebUI.getText(findTestObject('PerformanceScore/Score/TotalPerformanceScore'))
@@ -6783,7 +6739,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 			KeywordUtil.markPassed("!!! Total Score is increased for this Project after changing the emission factor !!!")
 		else
 			KeywordUtil.markFailedAndStop("!!! Total Score is Not increased for this  Project after changing the emission factor !!!")
-
+*/
 
 	}
 
@@ -6797,7 +6753,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		/********* Verifying the Generated score for total score & Energy & Water & Waste & Transport & Human Experience under data Input section ********/
 		WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
-		WebUI.delay(8)
+		WebUI.delay(10)
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'),10)
 		//Verifying the Performance score
 		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
@@ -6813,7 +6769,6 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		print totalperformaceScore
 		WebUI.verifyMatch(totalperformaceScore , totalScore, false)
 		WebUI.verifyMatch(totalperformaceScore , actotalScore, false)
-
 
 	}
 
