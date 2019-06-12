@@ -3147,6 +3147,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.scrollToElement(findTestObject('Manage/Setting/a_setting'), 5)
 		WebUI.click(findTestObject('Manage/Setting/a_setting'))
 		WebUI.delay(8)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/Setting/lobbySurveyBtn'), 15)
 		WebUI.click(findTestObject('Object Repository/Manage/Setting/lobbySurveyBtn'))
 		WebUI.delay(5)
 		WebUI.click(findTestObject('Object Repository/Manage/App/a_ Apps'))
