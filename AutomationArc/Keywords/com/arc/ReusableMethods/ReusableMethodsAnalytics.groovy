@@ -1060,7 +1060,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		 */	
 		ReusableMethodsNavigation.clickScoreLabel()
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Energy'))
-		WebUI.delay(8)
+		WebUI.delay(15)
 		WebUI.waitForElementVisible(findTestObject('Analytics/TotalPage/EngGlobalAvg'), 20)
 		String engGlobal = WebUI.getText(findTestObject('Analytics/TotalPage/EngGlobalAvg'))
 		String eengGlobal = "Global average: ".concat(engGlobal)

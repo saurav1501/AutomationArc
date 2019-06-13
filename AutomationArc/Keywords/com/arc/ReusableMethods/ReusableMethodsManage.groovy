@@ -2268,7 +2268,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 		WebUI.scrollToElement(findTestObject('Manage/CertificationAndScore/a_ Certifications'), 2)
 		WebUI.click(findTestObject('Manage/CertificationAndScore/a_ Certifications'))
-		WebUI.delay(2)
+		WebUI.delay(10)
 		String certificationType= WebUI.getText(findTestObject('Manage/CertificationAndScore/CertificationType'))
 		WebUI.verifyMatch(certificationType, certiType, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.delay(1)
@@ -2291,8 +2291,8 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(5)
 		WebUI.doubleClick(findTestObject('Manage/CertificationAndScore/a_ Certifications'))
 		WebUI.delay(5)
-		WebUI.refresh()
-		WebUI.delay(5)
+		//WebUI.refresh()
+		//WebUI.delay(10)
 
 		String certificationType= WebUI.getText(findTestObject('Manage/CertificationAndScore/CertificationType'))
 		WebUI.verifyMatch(certificationType, certiType, false, FailureHandling.CONTINUE_ON_FAILURE)
@@ -3147,6 +3147,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.scrollToElement(findTestObject('Manage/Setting/a_setting'), 5)
 		WebUI.click(findTestObject('Manage/Setting/a_setting'))
 		WebUI.delay(8)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/Setting/lobbySurveyBtn'), 15)
 		WebUI.click(findTestObject('Object Repository/Manage/Setting/lobbySurveyBtn'))
 		WebUI.delay(5)
 		WebUI.click(findTestObject('Object Repository/Manage/App/a_ Apps'))
@@ -3807,7 +3808,12 @@ public class ReusableMethodsManage extends BaseClass {
 			String paymentStatus = data.getCellData(sheetName, "PaymentStatus", rowNum)
 			WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
 			WebUI.delay(1)
-			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+			if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+				println "Manage"
+				WebUI.delay(2)
+				WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+			}
+			//WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 			WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
 			WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
 
@@ -3829,7 +3835,12 @@ public class ReusableMethodsManage extends BaseClass {
 			String paymentStatus = data.getCellData(sheetName, "PaymentStatus", rowNum)
 			WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
 			WebUI.delay(1)
-			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+			if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+				println "Manage"
+				WebUI.delay(2)
+				WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+			}
+			//WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 			WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
 			WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
 			WebUI.delay(5)
@@ -3851,7 +3862,12 @@ public class ReusableMethodsManage extends BaseClass {
 			String paymentStatus = data.getCellData(sheetName, "PaymentStatus", rowNum)
 			WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
 			WebUI.delay(1)
-			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+			if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+				println "Manage"
+				WebUI.delay(2)
+				WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+			}
+			//WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 			WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
 			WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
 
@@ -3872,7 +3888,12 @@ public class ReusableMethodsManage extends BaseClass {
 			String paymentStatus = data.getCellData(sheetName, "PaymentStatus", rowNum)
 			WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
 			WebUI.delay(1)
-			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+			if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+				println "Manage"
+				WebUI.delay(2)
+				WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+			}
+			//WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 			WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
 			WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
 			WebUI.delay(5)
@@ -3894,7 +3915,12 @@ public class ReusableMethodsManage extends BaseClass {
 			String paymentStatus = data.getCellData(sheetName, "PaymentStatus", rowNum)
 			WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
 			WebUI.delay(1)
-			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+			if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+				println "Manage"
+				WebUI.delay(2)
+				WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+			}
+			//WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 			WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
 			WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
 
@@ -3913,7 +3939,12 @@ public class ReusableMethodsManage extends BaseClass {
 			String paymentStatus = data.getCellData(sheetName, "PaymentStatus", rowNum)
 			WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
 			WebUI.delay(1)
-			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+			if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+				println "Manage"
+				WebUI.delay(2)
+				WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+			}
+			//WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 			WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
 			WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
 

@@ -101,7 +101,8 @@ public class ReusableMethodsPayment extends BaseClass{
 		int size = list.size()
 		int randonNumber = ThreadLocalRandom.current().nextInt(0, size)
 		println list.get(randonNumber).getText()
-		data.setCellData(sheetName, "SpaceType", rowNum,list.get(randonNumber).getText())
+		data.setCellData(sheetName, "SpaceType", rowNum ,list.get(randonNumber).getText())
+		WebUI.delay(3)
 		list.get(randonNumber).click()
 		if((list.get(randonNumber).getText()=="Industrial Manufacturing") || (list.get(randonNumber).getText()=="Laboratory") || (list.get(randonNumber).getText()=="Data Center") ||
 		(list.get(randonNumber).getText()=="Warehouse: Nonrefrigerated Distribution/Shipping") || (list.get(randonNumber).getText()=="Warehouse: Refrigerated")|| (list.get(randonNumber).getText()=="Warehouse: Self Storage Units") ||
@@ -165,6 +166,7 @@ public class ReusableMethodsPayment extends BaseClass{
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/DashboardNavigationNewUI/Dash/select_LEED for CitiesOtherNon'), prjRating , false)
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/saveButtonProjectDetails'))
 		WebUI.delay(20)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/AddProjectNewUI/saveButtonProjectDetails'), 30)
 		String title= DriverFactory.getWebDriver().getCurrentUrl()
 		println title
 		String Project_ID= title.substring(title.indexOf('1'),title.indexOf('1')+10 )
