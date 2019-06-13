@@ -2268,7 +2268,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 		WebUI.scrollToElement(findTestObject('Manage/CertificationAndScore/a_ Certifications'), 2)
 		WebUI.click(findTestObject('Manage/CertificationAndScore/a_ Certifications'))
-		WebUI.delay(2)
+		WebUI.delay(10)
 		String certificationType= WebUI.getText(findTestObject('Manage/CertificationAndScore/CertificationType'))
 		WebUI.verifyMatch(certificationType, certiType, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.delay(1)
@@ -2291,8 +2291,8 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(5)
 		WebUI.doubleClick(findTestObject('Manage/CertificationAndScore/a_ Certifications'))
 		WebUI.delay(5)
-		WebUI.refresh()
-		WebUI.delay(5)
+		//WebUI.refresh()
+		//WebUI.delay(10)
 
 		String certificationType= WebUI.getText(findTestObject('Manage/CertificationAndScore/CertificationType'))
 		WebUI.verifyMatch(certificationType, certiType, false, FailureHandling.CONTINUE_ON_FAILURE)
