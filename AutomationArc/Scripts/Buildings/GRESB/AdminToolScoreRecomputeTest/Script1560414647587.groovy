@@ -25,6 +25,7 @@ try {
 	CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsPerformanceScore.analyticsgenratePerformanceScoreAdminToolOtherNone1'(GlobalVariable.PortfoliosSheet,GlobalVariable.rowNumTwo)
 	WebUI.closeWindowIndex(1)
 	WebUI.delay(2)
+	WebUI.switchToWindowIndex(0)
 			
 } catch (Throwable t) {
     WebUI.closeWindowIndex(1)
