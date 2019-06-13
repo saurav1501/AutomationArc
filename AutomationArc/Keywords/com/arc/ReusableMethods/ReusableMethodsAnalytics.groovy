@@ -78,7 +78,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 	public void indivisualScore(){
 
 		WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
-		//WebUI.delay(17)
+		WebUI.delay(15)
 		ReusableMethodsLogin.waitForIframeLoad(60)
 		String energyPerScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/EnergyScore'))
 		String energyperScoreout33 = energyPerScore.concat(" out of 33")
@@ -119,7 +119,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		navigation.navigateToAnalyticsTotal()
 
 		String area = WebUI.getText(findTestObject('Analytics/TotalAnalytics/Area'))
-		WebUI.verifyMatch(area,'2,000', false)
+		WebUI.verifyMatch(area,'10,000', false)
 
 		String operatinghour = WebUI.getText(findTestObject('Analytics/TotalAnalytics/OpeartingHour'))
 		WebUI.verifyMatch(operatinghour,'100', false)
@@ -130,13 +130,13 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 		/****Verifying in the graph occupancy and operating hour******************/	
 		String garea = WebUI.getText(findTestObject('Analytics/TotalAnalytics/GraphArea'))
-		WebUI.verifyMatch(garea,'Gross Area (sq. foot) : 2000',false)
+		WebUI.verifyMatch(garea,'Gross Area (sq. foot) : 107639',false)
 
 		String gopeartinghour = WebUI.getText(findTestObject('Analytics/TotalAnalytics/GraphOppHour'))
-		WebUI.verifyMatch(gopeartinghour,'Operating Hours : 100', false)
+		WebUI.verifyMatch(gopeartinghour,'Operating Hours : 14', false)
 
 		String goccupancy = WebUI.getText(findTestObject('Analytics/TotalAnalytics/GraphOccupany'))
-		WebUI.verifyMatch(goccupancy,'Occupancy : 9', false)
+		WebUI.verifyMatch(goccupancy,'Occupancy : 100', false)
 
 		/***** Verifying in the Unit by excel upload ******************/
 		WebUI.verifyElementPresent(findTestObject('Analytics/TotalAnalytics/span_(sq. feet)'),3)
