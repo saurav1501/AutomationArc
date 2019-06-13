@@ -5405,6 +5405,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		 WebUI.scrollToElement(findTestObject('Manage/ProjectDetailVerification/projectoccupancy'), 10)
 		 String projectoccupancy = WebUI.getAttribute((findTestObject('Manage/ProjectDetailVerification/projectoccupancy')),'value')
 		 double projectOccupancy= Double.parseDouble(projectoccupancy)*/
+		WebUI.click(findTestObject('Manage/Parking/ManageProject'))
+		WebUI.delay(6)
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
 		WebUI.delay(10)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
