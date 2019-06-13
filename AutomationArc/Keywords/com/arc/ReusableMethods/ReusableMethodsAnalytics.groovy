@@ -122,10 +122,10 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		WebUI.verifyMatch(area,'10,000', false)
 
 		String operatinghour = WebUI.getText(findTestObject('Analytics/TotalAnalytics/OpeartingHour'))
-		WebUI.verifyMatch(operatinghour,'100', false)
+		WebUI.verifyMatch(operatinghour,'160', false)
 
 		String occupancy = WebUI.getText(findTestObject('Analytics/TotalAnalytics/Occupant'))
-		WebUI.verifyMatch(occupancy,'9', false)
+		WebUI.verifyMatch(occupancy,'100', false)
 
 
 		/****Verifying in the graph occupancy and operating hour******************/	
