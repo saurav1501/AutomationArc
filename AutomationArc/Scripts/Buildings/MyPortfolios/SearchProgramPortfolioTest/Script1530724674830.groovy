@@ -21,6 +21,8 @@ import internal.GlobalVariable as GlobalVariable
 
 try {
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToPortfolio'()
+	
+	//WebUI.delay(5)
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgramPortfolio'(GlobalVariable.PortfoliosSheet,GlobalVariable.rowNumTwo)
 	
 } catch (Throwable t) {

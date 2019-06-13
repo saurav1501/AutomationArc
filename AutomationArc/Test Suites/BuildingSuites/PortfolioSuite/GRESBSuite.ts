@@ -125,18 +125,6 @@
       <testCaseId>Test Cases/Buildings/GRESB/ORANGEScoreCompletenessAfterReEnteringData(EWWH)Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>36664f5f-969b-4740-b684-e476a6f10b0b</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/GRESB/UploadArcDataTemplateTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>0e1fdd46-ae17-4c45-8b76-1d3a6fd4fbaa</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/GRESB/TransportSubmitSurveyTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>f54919d6-f19b-47a0-b67f-d9273ad0acec</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -159,6 +147,24 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/GRESB/ModifyGrossAreaAndUnitType1_17Test</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>36664f5f-969b-4740-b684-e476a6f10b0b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/GRESB/UploadArcDataTemplateTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>0e1fdd46-ae17-4c45-8b76-1d3a6fd4fbaa</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/GRESB/TransportSubmitSurveyTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>547970bb-d942-410b-8e41-e18f590f8b9c</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/GRESB/AdminToolScoreRecomputeTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>20783eda-cca4-41f8-920c-af1aa6c48414</guid>
