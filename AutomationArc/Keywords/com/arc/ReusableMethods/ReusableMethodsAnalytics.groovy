@@ -2086,7 +2086,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		String emessionFactor = data.getCellData(sheetName,"EmissionFactor", rowNum)
 		Double demessionFactor =  Double.parseDouble(emessionFactor)
 
-		double meterdatakBtu = dKWHReading * 3.4121416331 // (1 kWh = 3.4121416331 kBtu)
+		double meterdatakBtu = dKWHReading * 3.412141 // (1 kWh = 3.4121416331 kBtu)
 
 		Double raw_ghg = (meterdatakBtu * demessionFactor)/dnoOfDays
 
@@ -2664,7 +2664,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		Double dnoOfDays =  Double.parseDouble(noOfDays)
 		Double dKWHReading =  Double.parseDouble(KWHReading)
 
-		double meterdatakBtu = dKWHReading * 3.4121416331 // (1 kWh = 3.4121416331 kBtu)
+		double meterdatakBtu = dKWHReading * 3.412141 // (1 kWh = 3.4121416331 kBtu)
 
 		Double raw_ghg = (meterdatakBtu * demessionFactor)/dnoOfDays
 
@@ -2736,7 +2736,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		Double dnoOfDays =  Double.parseDouble(noOfDays)
 		Double dKWHReading =  Double.parseDouble(KWHReading)
 
-		double meterdatakBtu = dKWHReading * 3.4121416331 // (1 kWh = 3.4121416331 kBtu)
+		double meterdatakBtu = dKWHReading * 3.412141 // (1 kWh = 3.4121416331 kBtu)
 
 		Double raw_ghg = (meterdatakBtu * demessionFactor)/dnoOfDays
 
