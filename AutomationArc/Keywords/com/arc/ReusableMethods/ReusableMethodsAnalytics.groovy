@@ -493,7 +493,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		 */
 		//ReusableMethodsNavigation.clickAnalyticsLabel()
 		WebUI.click(findTestObject('Analytics/Nav/a_ Energy'))
-		WebUI.delay(2)
+		WebUI.delay(5)
 		//WebUI.refresh()
 		//WebUI.delay(10)
 		//ReusableMethodsNavigation.clickAnalyticsLabel()
@@ -502,43 +502,43 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/Analytics/ExportSurveyDataButtonInAnalytics'))
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnDowloadExportButton'))
-		WebUI.delay(4)
+		WebUI.delay(8)
 		Assert.assertTrue(ReusDataInput.isFileDownloaded("ExportData.xlsx"), "Didn't downloaded successfully")
 		println "Energy Exported File downloaded and verified successfully"
-
+        
 		WebUI.click(findTestObject('Object Repository/Analytics/Nav/a_ Water'))
-		WebUI.delay(2)
+		WebUI.delay(5)
 		//WebUI.refresh()
 		//WebUI.delay(10)
 		WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ExportSurveyDataButtonInAnalytics'), 4)
 		WebUI.click(findTestObject('Object Repository/Analytics/ExportSurveyDataButtonInAnalytics'))
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnDowloadExportButton'))
-		WebUI.delay(4)
+		WebUI.delay(8)
 		Assert.assertTrue(ReusDataInput.isFileDownloaded("ExportData.xlsx"), "Didn't downloaded successfully")
 		println "Water Exported File downloaded and verified successfully"
 
 		WebUI.click(findTestObject('Analytics/Nav/a_ Waste'))
-		WebUI.delay(2)
+		WebUI.delay(5)
 		//WebUI.refresh()
 		//WebUI.delay(10)
 		WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ExportSurveyDataButtonInAnalytics'), 4)
 		WebUI.click(findTestObject('Object Repository/Analytics/ExportSurveyDataButtonInAnalytics'))
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnDowloadExportButton'))
-		WebUI.delay(4)
+		WebUI.delay(8)
 		Assert.assertTrue(ReusDataInput.isFileDownloaded("ExportData.xlsx"), " Didn't downloaded successfully")
 		println "Waste Exported File downloaded and verified successfully"
 
 		WebUI.click(findTestObject('Analytics/Nav/a_ Transportation'))
-		WebUI.delay(2)
+		WebUI.delay(5)
 		///WebUI.refresh()
 		//WebUI.delay(10)
 		WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ExportSurveyDataButtonInAnalytics'), 4)
 		WebUI.click(findTestObject('Object Repository/Analytics/ExportSurveyDataButtonInAnalytics'))
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnDowloadExportButton'))
-		WebUI.delay(4)
+		WebUI.delay(8)
 		Assert.assertTrue(ReusDataInput.isFileDownloaded("ExportData.xlsx"), "Didn't downloaded successfully")
 		println "Trasport Exported File downloaded and verified successfully"
 	}

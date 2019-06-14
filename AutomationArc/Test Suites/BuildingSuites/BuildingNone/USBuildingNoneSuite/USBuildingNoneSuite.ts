@@ -1343,12 +1343,6 @@
       <testCaseId>Test Cases/Common/Notification/BuildingTVOCDeleteReadingNotificationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>d3137fe0-100d-49c4-8237-0a1ab2b49f9b</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ProjectVerifyGrossFloorAreaUnitOnSelectionOfIPSITest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>533570e4-2e92-451d-aec7-542268fc6461</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

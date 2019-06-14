@@ -3496,7 +3496,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		ReusableMethodsNavigation.clickScoreLabel()
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Transportation'))
-		WebUI.delay(13)
+		WebUI.delay(20)
 		WebUI.waitForElementVisible(findTestObject('DataInput/CityCom/Score100/Transport'),40)
 		String UITransportScoreIn100 = WebUI.getText(findTestObject('DataInput/CityCom/Score100/Transport'))
 		WebUI.verifyMatch(UITransportScoreIn100, transScoreIn100, false)
