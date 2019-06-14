@@ -1485,14 +1485,14 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		String baseYear = data.getCellData(sheetName, "BaseYear", rowNum)
 		String targetYear = data.getCellData(sheetName,"TargetYear", rowNum)
 
-		println "Test started verifying energy unit lbs"
+		println "Test started verifying transport unit mtco2e"
 		String mtco2e = WebUI.getText(findTestObject('Object Repository/Portfolio/Goal/TransportUnit'))
 		System.out.println(mtco2e)
 		WebUI.delay(1)
 		WebUI.verifyMatch(mtco2e, tUnit, false)
 		println "Test passed verified transport unit successfully"
 
-		println "Test Started energy differece of goal calcation"
+		println "Test Started transport differece of goal calcation"
 		WebUI.clearText(findTestObject('Object Repository/Portfolio/Goal/transport_percent_reduction'))
 		println tpReduction
 		WebUI.sendKeys(findTestObject('Object Repository/Portfolio/Goal/transport_percent_reduction'), tpReduction)
@@ -1542,13 +1542,13 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.click(findTestObject('Portfolio/Goal/transport_currentProgess'))
 		WebUI.delay(2)
 		WebUI.refresh()
-		WebUI.delay(5)
+		WebUI.delay(8)
 
-		println "Test started verifying carbon textarea, carbon reducion , base line value after refersh"
+		println "Test started verifying transport textarea, carbon reducion , base line value after refersh"
 		Assert.assertTrue(WebUI.getAttribute(findTestObject('Portfolio/Goal/transport_baseline_value'),"value").contains(tbValue),"Not Valid")
 		Assert.assertTrue(WebUI.getAttribute(findTestObject('Portfolio/Goal/transport_percent_reduction'),"value").contains(tpReduction),"Not Valid")
 		Assert.assertTrue(WebUI.getAttribute(findTestObject('Portfolio/Goal/transport_textarea'),"value").contains(textbox),"Not Valid")
-		println "Test passed verified waste textarea, energy reducion , base line value after refersh successfully"
+		println "Test passed verified transport textarea, transport reducion , base line value after refersh successfully"
 	}
 
 	@Keyword
@@ -3139,16 +3139,21 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		//	WebUI.scrollToElement(findTestObject('Portfolio/Project/Filter/Performance Weighted Scor'),2)
 		WebUI.delay(7)
 		WebUI.click(findTestObject('Portfolio/Project/Filter/Button_100 Point Score'))
-		WebUI.delay(2)
+		//WebUI.delay(2)
+		WebUI.waitForAngularLoad(60, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.click(findTestObject('Portfolio/Project/Filter/100 Point Score'))
-		WebUI.delay(5)
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(60, FailureHandling.CONTINUE_ON_FAILURE)
 
 		WebUI.click(findTestObject('Portfolio/Score/Sort/SortButton'))
-		WebUI.delay(3)
-
+		//WebUI.delay(3)
+		WebUI.waitForAngularLoad(60, FailureHandling.CONTINUE_ON_FAILURE)
+   
 		WebUI.click(findTestObject('Portfolio/Score/Sort/li_Energy'))
-		WebUI.delay(10)
-
+		//WebUI.delay(10)
+        
+		WebUI.waitForAngularLoad(60, FailureHandling.CONTINUE_ON_FAILURE)
+		
 		String Energy1Valule =  WebUI.getText(findTestObject('Portfolio/Score/Energy1'))
 		Integer energy1Valule = Integer.parseInt(Energy1Valule)
 
@@ -3219,7 +3224,8 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		}
 
 		WebUI.click(findTestObject('Portfolio/Score/Sort/li_Water'))
-		WebUI.delay(9)
+		//WebUI.delay(9)
+		WebUI.waitForAngularLoad(60, FailureHandling.CONTINUE_ON_FAILURE)
 
 		String Water1Valule = WebUI.getText(findTestObject('Portfolio/Score/Water1'))
 		Integer water1Valule = Integer.parseInt(Water1Valule)
@@ -3291,7 +3297,8 @@ public class ResuableMethodsPortfolio extends BaseClass {
 
 
 		WebUI.click(findTestObject('Portfolio/Score/Sort/li_Waste'))
-		WebUI.delay(9)
+		//WebUI.delay(9)
+		WebUI.waitForAngularLoad(60, FailureHandling.CONTINUE_ON_FAILURE)
 
 		String Waste1Valule = WebUI.getText(findTestObject('Portfolio/Score/Waste1'))
 		Integer waste1Valule = Integer.parseInt(Waste1Valule)
@@ -3364,7 +3371,8 @@ public class ResuableMethodsPortfolio extends BaseClass {
 
 
 		WebUI.click(findTestObject('Portfolio/Score/Sort/li_Transportation'))
-		WebUI.delay(7)
+		//WebUI.delay(7)
+		WebUI.waitForAngularLoad(60, FailureHandling.CONTINUE_ON_FAILURE)
 
 		String Transportation1Valule = WebUI.getText(findTestObject('Portfolio/Score/Trans1'))
 		Integer transportation1Valule = Integer.parseInt(Transportation1Valule)
@@ -3437,8 +3445,10 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		}
 
 		WebUI.click(findTestObject('Portfolio/Score/Sort/li_Human Experience'))
-		WebUI.delay(9)
-
+		//WebUI.delay(9)
+		WebUI.waitForAngularLoad(60, FailureHandling.CONTINUE_ON_FAILURE)
+		
+		
 		String HumanExperience1Valule = WebUI.getText(findTestObject('Portfolio/Score/Hum1'))
 		Integer humanExperience1Valule = Integer.parseInt(HumanExperience1Valule)
 

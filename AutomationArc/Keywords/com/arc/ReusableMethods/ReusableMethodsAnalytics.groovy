@@ -2265,7 +2265,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 	@Keyword
 	public void annualcarbonemissionspersqftUnit(String sheetName ,int rowNum) {
 
-		
+
 		WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'), 10)
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
 		WebUI.delay(12)
@@ -2590,7 +2590,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 			dUIannualCarbonemissionsMTCO2e = raw_ghginMtCo2e * 365
 
 			double annualcarbonemissionsMTCO2eperOcc = dUIannualCarbonemissionsMTCO2e/dBOccupancy
-			
+
 			reading = (annualcarbonemissionsMTCO2eperOcc * native_unit_value1)/native_unit_value2
 
 
@@ -2747,15 +2747,23 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		/*String UIannualCarbonemissionsMTCO2e = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualcarbonemissionsProject'))
 		 Double dUIannualCarbonemissionsMTCO2e =  Double.parseDouble(UIannualCarbonemissionsMTCO2e)
 		 */
-		String annualcarbonemissionsMTCO2eperOcc = dUIannualCarbonemissionsMTCO2e/dBOccupancy
+		double annualcarbonemissionsMTCO2eperOcc = dUIannualCarbonemissionsMTCO2e/dBOccupancy
 		BigDecimal annualcarbonemissionsMTCO2ePerOcc = new BigDecimal(annualcarbonemissionsMTCO2eperOcc)
-		annualcarbonemissionsMTCO2ePerOcc = annualcarbonemissionsMTCO2ePerOcc.setScale(4,RoundingMode.HALF_UP)
+		annualcarbonemissionsMTCO2ePerOcc = annualcarbonemissionsMTCO2ePerOcc.setScale(2,RoundingMode.HALF_UP)
 
 		String cannualcarbonemissionsMTCO2ePerOcc = annualcarbonemissionsMTCO2ePerOcc.toString()
+
 		String UIannualcarbonemissionsMTCO2eperOcc = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualCarbonPerOccupancy'))
 
+		Double UIannualcarbonemissiosMTCO2eperOcc =  Double.parseDouble(UIannualcarbonemissionsMTCO2eperOcc)
+		BigDecimal annualcarbonemissionsMTCOeperOcc = new BigDecimal(UIannualcarbonemissiosMTCO2eperOcc)
+		annualcarbonemissionsMTCOeperOcc = annualcarbonemissionsMTCOeperOcc.setScale(2,RoundingMode.HALF_UP)
+
+		String annualcarbonemissionsMTCeperOcc = annualcarbonemissionsMTCOeperOcc.toString()
+
+
 		/****************UI Verses Calculated Value of Annual carbon per Occupancy*****************************/
-		WebUI.verifyMatch(UIannualcarbonemissionsMTCO2eperOcc, cannualcarbonemissionsMTCO2ePerOcc, false)
+		WebUI.verifyMatch(annualcarbonemissionsMTCeperOcc, cannualcarbonemissionsMTCO2ePerOcc, false)
 	}
 
 
@@ -3473,7 +3481,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		String totaldalilyTransprot =  totaldalilytransprot.replace(',', '')
 
 		BigDecimal dtotaldalilytransprot = new BigDecimal(totaldalilyTransprot)
-		dtotaldalilytransprot = dtotaldalilytransprot .setScale(1, RoundingMode.HALF_UP)
+		dtotaldalilytransprot = dtotaldalilytransprot .setScale(0, RoundingMode.HALF_UP)
 		String utotaldalilytransprot = dtotaldalilytransprot.toString()
 
 
@@ -3492,7 +3500,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		double totaltransprotAnnaual = (scope2dailay + scoped1dailay ) * 365 + (dtransprotDaily * 313)
 
 		BigDecimal totaltransprotannaual = new BigDecimal(totaltransprotAnnaual)
-		totaltransprotannaual = totaltransprotannaual .setScale(1, RoundingMode.HALF_UP)
+		totaltransprotannaual = totaltransprotannaual .setScale(0, RoundingMode.HALF_UP)
 		String ctotaltransprotAnn = totaltransprotannaual.toString()
 
 		/****************UI Verses Calculated Total daily carbon emissions (MTCO2e): Sum of daily scope 1 carbon emissions (MTCO2e), scope 2 carbon emissions (MTCO2e), Transportation carbon emissions (MTCO2e).************/
