@@ -103,7 +103,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/SubmitReview/ClickToSaveAddtionalTextArea'))
 		WebUI.delay(5)
 		//Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/SubmitReview/SubmitReviewTextAreaAdditionalMessage'),'value'),'Submit Performance Score Verification Test Message')
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/VerifyTotalCredits')),'5', false, FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/VerifyTotalCredits')),'5', false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.click(findTestObject('SubmitReview/button_Continue'))
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/VerifyPerformanceScoreVerificationTextOnSummeryPage')), "Performance Score Verification", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.setText(findTestObject('SubmitReview/input_form-control ng-untouche'), 'abhishekkumar@groupten.com')
