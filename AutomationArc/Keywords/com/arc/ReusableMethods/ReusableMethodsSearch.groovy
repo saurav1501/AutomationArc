@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement
 
 import com.arc.BaseClass.BaseClass
 import com.kms.katalon.core.annotation.Keyword
+import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.webui.driver.DriverFactory
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
@@ -38,7 +39,7 @@ public class ReusableMethodsSearch extends BaseClass{
 		WebUI.verifyMatch(nuberOfProjects,'Project (1 project)', false)
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/search_Result'))
-		WebUI.delay(4)
+		WebUI.delay(6)
 
 	}
 
@@ -121,6 +122,7 @@ public class ReusableMethodsSearch extends BaseClass{
 		WebUI.waitForElementClickable(findTestObject('Object Repository/Page_Arc dashboard/search_Result'), 10)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/search_Result'))
 		WebUI.delay(8)
+		WebUI.waitForAngularLoad(120, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
 		WebUI.delay(1)
 	}
@@ -141,6 +143,7 @@ public class ReusableMethodsSearch extends BaseClass{
 		WebUI.delay(7)
 		WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
 		WebUI.delay(1)
+		WebUI.waitForAngularLoad(120, FailureHandling.CONTINUE_ON_FAILURE)
 	}
 	@Keyword
 	public void searchLEEDProgram(String sheetName , int rowNum) {
