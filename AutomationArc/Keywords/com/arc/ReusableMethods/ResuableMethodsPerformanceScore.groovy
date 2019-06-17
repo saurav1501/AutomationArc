@@ -736,9 +736,10 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		 WebUI.click(findTestObject('PerformanceScore/Score/a_ Score'))
 		 WebUI.delay(1)*/
 		/********* Verifying all fields UI  Score for individual Energy , Water , Waste , Transport , Human Exp , Base Point ************* */	
+		WebUI.waitForAngularLoad(60, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Base Points'))
-		WebUI.delay(5)
-
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(60, FailureHandling.CONTINUE_ON_FAILURE)
 
 		String lowestSocreTotal = WebUI.getText(findTestObject('PerformanceScore/FieldScore/minPoint_0'))
 		WebUI.verifyMatch(lowestSocreTotal ,"0", false)
@@ -748,7 +749,8 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.verifyMatch(basePoint ,"BASE SCORE", false)
 
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Energy'))
-		WebUI.delay(5)
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(60, FailureHandling.CONTINUE_ON_FAILURE)
 		String energylowestSocreTotal = WebUI.getText(findTestObject('PerformanceScore/FieldScore/minPoint_0'))
 		WebUI.verifyMatch(energylowestSocreTotal ,"0", false)
 		String energyhigestScoretotal = WebUI.getText(findTestObject('PerformanceScore/FieldScore/MaxEnergy_33'))
@@ -757,7 +759,8 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.verifyMatch(energy ,"ENERGY", false)
 
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Water'))
-		WebUI.delay(5)
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(60, FailureHandling.CONTINUE_ON_FAILURE)
 		String waterlowestSocreTotal = WebUI.getText(findTestObject('PerformanceScore/FieldScore/minPoint_0'))
 		WebUI.verifyMatch(waterlowestSocreTotal ,"0", false)
 		String waterhigestScoretotal = WebUI.getText(findTestObject('PerformanceScore/FieldScore/WaterMax_15'))
@@ -766,7 +769,8 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.verifyMatch(water ,"WATER", false)
 
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Waste'))
-		WebUI.delay(5)
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(60, FailureHandling.CONTINUE_ON_FAILURE)
 		String wastelowestSocreTotal = WebUI.getText(findTestObject('PerformanceScore/FieldScore/minPoint_0'))
 		WebUI.verifyMatch(wastelowestSocreTotal ,"0", false)
 		String wastehigestScoretotal = WebUI.getText(findTestObject('PerformanceScore/FieldScore/WasteMax_8'))
@@ -775,7 +779,8 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.verifyMatch(waste ,"WASTE", false)
 
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Transportation'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(60, FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.delay(5)
 		String translowestSocreTotal = WebUI.getText(findTestObject('PerformanceScore/FieldScore/minPoint_0'))
 		WebUI.verifyMatch(translowestSocreTotal ,"0", false)
 		String transhigestScoretotal = WebUI.getText(findTestObject('PerformanceScore/FieldScore/Transportation_14'))
@@ -784,7 +789,8 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.verifyMatch(transportation ,"TRANSPORTATION", false)
 
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Human Experience'))
-		WebUI.delay(5)
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(60, FailureHandling.CONTINUE_ON_FAILURE)
 		String humlowestSocreTotal = WebUI.getText(findTestObject('PerformanceScore/FieldScore/minPoint_0'))
 		WebUI.verifyMatch(humlowestSocreTotal ,"0", false)
 		String humhigestScoretotal = WebUI.getText(findTestObject('PerformanceScore/FieldScore/HumanExperienceMax_20'))
@@ -913,7 +919,7 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Total'))
 		WebUI.delay(10)
-
+        //WebUI.waitForAngularLoad(60, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyElementPresent(findTestObject('PerformanceScore/TotalRacetrack/TotalPointBlankRaceTrack'),5, FailureHandling.STOP_ON_FAILURE)
 
 		WebUI.verifyElementPresent(findTestObject('PerformanceScore/TotalRacetrack/EnergyBlankRaceTrack') ,5, FailureHandling.STOP_ON_FAILURE)
