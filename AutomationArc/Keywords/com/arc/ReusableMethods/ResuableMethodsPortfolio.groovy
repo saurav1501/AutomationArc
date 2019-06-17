@@ -779,6 +779,8 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.sendKeys(findTestObject('Portfolio/Goal/carbon_description_textarea'),ctextbox )
 		WebUI.click(findTestObject('Portfolio/Goal/CarbonCurrentProgess'))
 		WebUI.delay(2)
+		WebUI.waitForAngularLoad(120, FailureHandling.CONTINUE_ON_FAILURE)
+		
 		/*	WebUI.refresh()
 		 WebUI.delay(5)
 		 println cbValue*/
@@ -859,6 +861,9 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.delay(2)
 		WebUI.refresh()
 		WebUI.delay(7)
+		
+		WebUI.waitForAngularLoad(120, FailureHandling.CONTINUE_ON_FAILURE)
+	
 
 		println "Test started verifying carbon textarea, carbon reducion , base line value after refersh"
 		Assert.assertTrue(WebUI.getAttribute(findTestObject('Portfolio/Goal/energy_baseline_value'),"value").contains(ebValue),"Not Valid")
@@ -934,6 +939,9 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.delay(4)
 		WebUI.refresh()
 		WebUI.delay(5)
+		
+		WebUI.waitForAngularLoad(120, FailureHandling.CONTINUE_ON_FAILURE)
+		
 
 		println "Test started verifying carbon textarea, carbon reducion , base line value after refersh"
 		Assert.assertTrue(WebUI.getAttribute(findTestObject('Portfolio/Goal/water_baseline_value'),"value").contains(wbValue),"Not Valid")
@@ -1384,6 +1392,9 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.delay(2)
 		WebUI.refresh()
 		WebUI.delay(5)
+		
+		WebUI.waitForAngularLoad(120, FailureHandling.CONTINUE_ON_FAILURE)
+		
 
 		println "Test started verifying carbon textarea, carbon reducion , base line value after refersh"
 		Assert.assertTrue(WebUI.getAttribute(findTestObject('Portfolio/Goal/generated_waste_baseline_value'),"value").contains(wbValue),"Not Valid")
@@ -1465,6 +1476,8 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.delay(2)
 		WebUI.refresh()
 		WebUI.delay(5)
+		WebUI.waitForAngularLoad(120, FailureHandling.CONTINUE_ON_FAILURE)
+		
 
 		println "Test started verifying carbon textarea, carbon reducion , base line value after refersh"
 		Assert.assertTrue(WebUI.getAttribute(findTestObject('Portfolio/Goal/diverted_waste_baseline_value'),"value").contains(wbValue),"Not Valid")
@@ -1543,6 +1556,8 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.delay(2)
 		WebUI.refresh()
 		WebUI.delay(8)
+		WebUI.waitForAngularLoad(120, FailureHandling.CONTINUE_ON_FAILURE)
+		
 
 		println "Test started verifying transport textarea, carbon reducion , base line value after refersh"
 		Assert.assertTrue(WebUI.getAttribute(findTestObject('Portfolio/Goal/transport_baseline_value'),"value").contains(tbValue),"Not Valid")
@@ -1608,8 +1623,9 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.sendKeys(findTestObject('Object Repository/Portfolio/Goal/humanexp_textarea'),htextbox )
 		WebUI.click(findTestObject('Portfolio/Goal/transport_currentProgess'))
 		WebUI.delay(2)
-		/*	WebUI.refresh()
-		 WebUI.delay(5)*/
+	
+		WebUI.waitForAngularLoad(120, FailureHandling.CONTINUE_ON_FAILURE)
+		
 
 		println "Test started verifying carbon textarea, carbon reducion , base line value after refersh"
 		Assert.assertTrue(WebUI.getAttribute(findTestObject('Portfolio/Goal/humanExp_baseline_value'),"value").contains(hbValue),"Not Valid")
@@ -1930,7 +1946,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		System.out.println(areductionTarget2)
 		System.out.println(cGoalPercentage)
 		println  "verifyed 2018 Reduction Targets"
-
+		
 		println "Test started verifying average occpant per project"
 		String totalNoOccupaint =WebUI.getText(findTestObject('Portfolio/Total/AverageOccupant'))
 		double expavgmtco2_peroccupant = Double.parseDouble(totalNoOccupaint)

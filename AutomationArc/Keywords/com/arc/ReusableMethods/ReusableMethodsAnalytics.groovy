@@ -3476,14 +3476,21 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 	@Keyword
 	public void annualtransportation_annual_carbon_emissions() {
-
+		
+		WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'), 10)
+		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
+		//WebUI.delay(12)
+		WebUI.waitForAngularLoad(120, FailureHandling.CONTINUE_ON_FAILURE)
+		
 		String totaldalilytransprot = WebUI.getText(findTestObject('Object Repository/Portfolio/CarbonVal/TotalPortfolio'))
 		String totaldalilyTransprot =  totaldalilytransprot.replace(',', '')
 
 		BigDecimal dtotaldalilytransprot = new BigDecimal(totaldalilyTransprot)
 		dtotaldalilytransprot = dtotaldalilytransprot .setScale(0, RoundingMode.HALF_UP)
-		String utotaldalilytransprot = dtotaldalilytransprot.toString()
-
+		String utotaldalilytransprot1 = dtotaldalilytransprot.toString()
+		
+		int utotaldalilytransprot = Integer.parseInt(utotaldalilytransprot1)
+        println utotaldalilytransprot
 
 		String dtransprot = WebUI.getText(findTestObject('Object Repository/Analytics/Transport/ProjDailyTrasnport'))
 		String dTransprot =  dtransprot.replace(',', '')
@@ -3500,11 +3507,27 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		double totaltransprotAnnaual = (scope2dailay + scoped1dailay ) * 365 + (dtransprotDaily * 313)
 
 		BigDecimal totaltransprotannaual = new BigDecimal(totaltransprotAnnaual)
-		totaltransprotannaual = totaltransprotannaual .setScale(0, RoundingMode.HALF_UP)
+		totaltransprotannaual = totaltransprotannaual.setScale(0, RoundingMode.HALF_UP)
+		String totaltransprotannaual1 = totaltransprotannaual.toString()
+		println totaltransprotannaual1
+		
+		int ctotaltransprotannaual = Integer.parseInt(totaltransprotannaual1)
+		
+		
+		int pos1Range = ctotaltransprotannaual + 1
+		int neg1Range = ctotaltransprotannaual - 1
+		
+		if(utotaldalilytransprot==pos1Range||utotaldalilytransprot== neg1Range||utotaldalilytransprot==ctotaltransprotannaual)
+		
+		KeywordUtil.markPassed('SUCCESS: verified Successfully')
+		else
+		KeywordUtil.markFailed('Fail : Mismatch')
+			
+/*		
 		String ctotaltransprotAnn = totaltransprotannaual.toString()
 
-		/****************UI Verses Calculated Total daily carbon emissions (MTCO2e): Sum of daily scope 1 carbon emissions (MTCO2e), scope 2 carbon emissions (MTCO2e), Transportation carbon emissions (MTCO2e).************/
-		WebUI.verifyMatch(utotaldalilytransprot, ctotaltransprotAnn, false)
+		*//****************UI Verses Calculated Total daily carbon emissions (MTCO2e): Sum of daily scope 1 carbon emissions (MTCO2e), scope 2 carbon emissions (MTCO2e), Transportation carbon emissions (MTCO2e).************//*
+		WebUI.verifyMatch(utotaldalilytransprot, ctotaltransprotAnn, false)*/
 	}
 
 	@Keyword
