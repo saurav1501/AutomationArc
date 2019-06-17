@@ -15,7 +15,6 @@ import internal.GlobalVariable as GlobalVariable
 
 try {
 	
-	//WebUI.delay(10)
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgramPortfolioId'(GlobalVariable.PortfoliosSheet,GlobalVariable.rowNumTwo)
 	CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsGRESB.verifyProjectStatus'()
 }

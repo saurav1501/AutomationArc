@@ -864,7 +864,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public goccupancyErrorUpdate(){
-		
+		WebUI.waitForAngularLoad(120, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.scrollToElement(findTestObject('DataInput/Survey/a_ Data Input'),5)
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
 		WebUI.delay(8)
@@ -900,7 +900,7 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public void opeartingHour() {
 		
-	
+	WebUI.waitForAngularLoad(120, FailureHandling.CONTINUE_ON_FAILURE)
 	WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
 	WebUI.delay(3)
 	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle')),"Building Settings", false)
@@ -918,6 +918,7 @@ public class ReusableMethodsManage extends BaseClass {
 	WebUI.delay(2)
 	WebUI.click(findTestObject('DataInput/Occupancy/OTracker/Page_Arc dashboard/OPHour160'))
 	WebUI.delay(5)
+	WebUI.waitForAngularLoad(120, FailureHandling.CONTINUE_ON_FAILURE)
 	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/OperatingHourDropdown')),"160 Hour", false,FailureHandling.CONTINUE_ON_FAILURE)
 	WebUI.verifyElementNotVisible(findTestObject('DataInput/Occupancy/OTracker/Page_Arc dashboard/p_Re-enter or change data'), FailureHandling.CONTINUE_ON_FAILURE)
 	
