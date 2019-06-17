@@ -1930,7 +1930,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		System.out.println(areductionTarget2)
 		System.out.println(cGoalPercentage)
 		println  "verifyed 2018 Reduction Targets"
-
+		
 		println "Test started verifying average occpant per project"
 		String totalNoOccupaint =WebUI.getText(findTestObject('Portfolio/Total/AverageOccupant'))
 		double expavgmtco2_peroccupant = Double.parseDouble(totalNoOccupaint)

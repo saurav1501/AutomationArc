@@ -1,4 +1,6 @@
 package com.arc.ReusableMethods
+
+import static com.googlecode.javacv.Parallel.Looper.*
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
 import org.testng.Assert
@@ -8,7 +10,6 @@ import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
-import com.sun.jna.platform.KeyboardUtils
 
 import internal.GlobalVariable
 
@@ -139,14 +140,36 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 	@Keyword
 	public void genratePerformanceScoreAdminToolOtherNone(String sheetName,int rowNum) throws IOException, InterruptedException {
 		String projectId = data.getCellData(sheetName,"ProjectID",rowNum)
+
 		WebUI.click(findTestObject('PerformanceScore/RecomputeScoreButton'))
 		WebUI.delay(3)
 		WebUI.setText(findTestObject('PerformanceScore/PorjectId'),projectId)
 		WebUI.delay(2)
 		WebUI.click(findTestObject('PerformanceScore/RecomputeScore'))
-		WebUI.delay(22)
+		
+		boolean keepGoing = WebUI.waitForAngularLoad(240, FailureHandling.CONTINUE_ON_FAILURE)
+		
+		if(keepGoing== false)
+		
+			for(int i=0;i<=1;i++){
+			WebUI.click(findTestObject('PerformanceScore/RecomputeScoreButton'))
+			WebUI.delay(3)
+			WebUI.setText(findTestObject('PerformanceScore/PorjectId'),projectId)
+			WebUI.delay(2)
+			WebUI.click(findTestObject('PerformanceScore/RecomputeScore'))
+			WebUI.waitForAngularLoad(240, FailureHandling.CONTINUE_ON_FAILURE)
+			}
+		
+/*		WebUI.click(findTestObject('PerformanceScore/RecomputeScoreButton'))
+		WebUI.delay(3)
+		WebUI.setText(findTestObject('PerformanceScore/PorjectId'),projectId)
+		WebUI.delay(2)
+		WebUI.click(findTestObject('PerformanceScore/RecomputeScore'))
+		WebUI.waitForAngularLoad(240, FailureHandling.CONTINUE_ON_FAILURE)*/
+		
+		/*WebUI.delay(22)
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/Score/EnergyScore'), 20)
-		String energyScore = WebUI.getText(findTestObject('PerformanceScore/Score/EnergyScore'))
+	*/	String energyScore = WebUI.getText(findTestObject('PerformanceScore/Score/EnergyScore'))
 		String waterScore = WebUI.getText(findTestObject('PerformanceScore/Score/WaterSocre'))
 		String wasteScore = WebUI.getText(findTestObject('PerformanceScore/Score/WasteScore'))
 		String transportScore = WebUI.getText(findTestObject('PerformanceScore/Score/TransportScore'))
