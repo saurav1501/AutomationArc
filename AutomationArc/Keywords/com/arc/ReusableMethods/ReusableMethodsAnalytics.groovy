@@ -3482,7 +3482,9 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 		BigDecimal dtotaldalilytransprot = new BigDecimal(totaldalilyTransprot)
 		dtotaldalilytransprot = dtotaldalilytransprot .setScale(0, RoundingMode.HALF_UP)
-		String utotaldalilytransprot = dtotaldalilytransprot.toString()
+		//String utotaldalilytransprot = dtotaldalilytransprot.toString()
+		
+		int utotaldalilytransprot = Integer.parseInt(dtotaldalilytransprot)
 
 
 		String dtransprot = WebUI.getText(findTestObject('Object Repository/Analytics/Transport/ProjDailyTrasnport'))
@@ -3501,10 +3503,28 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 		BigDecimal totaltransprotannaual = new BigDecimal(totaltransprotAnnaual)
 		totaltransprotannaual = totaltransprotannaual .setScale(0, RoundingMode.HALF_UP)
+		
+		
+		int ctotaltransprotannaual = Integer.parseInt(totaltransprotannaual)
+		
+				int pos1Range = ctotaltransprotannaual + 1
+				int neg1Range = ctotaltransprotannaual - 1
+		
+			if (utotaldalilytransprot==pos1Range || utotaldalilytransprot==neg1Range)
+		
+					KeywordUtil.markPassed('SUCCESS: Score Version Comperesion verified Successfully')
+		
+				else
+					KeywordUtil.markFailed('Fail : Mismatch in Score Version Comperesion')
+		
+		
+		
+	
+/*		
 		String ctotaltransprotAnn = totaltransprotannaual.toString()
 
-		/****************UI Verses Calculated Total daily carbon emissions (MTCO2e): Sum of daily scope 1 carbon emissions (MTCO2e), scope 2 carbon emissions (MTCO2e), Transportation carbon emissions (MTCO2e).************/
-		WebUI.verifyMatch(utotaldalilytransprot, ctotaltransprotAnn, false)
+		*//****************UI Verses Calculated Total daily carbon emissions (MTCO2e): Sum of daily scope 1 carbon emissions (MTCO2e), scope 2 carbon emissions (MTCO2e), Transportation carbon emissions (MTCO2e).************//*
+		WebUI.verifyMatch(utotaldalilytransprot, ctotaltransprotAnn, false)*/
 	}
 
 	@Keyword
