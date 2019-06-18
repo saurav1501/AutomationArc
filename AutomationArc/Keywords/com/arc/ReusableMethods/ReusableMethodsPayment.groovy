@@ -964,6 +964,7 @@ public class ReusableMethodsPayment extends BaseClass{
 		String state      = data.getCellData(sheetName, "State", rowNum)
 		String zip        = data.getCellData(sheetName, "Zip", rowNum)
 		String partyEmail = data.getCellData(sheetName, "PartyEmail", rowNum)
+		WebUI.waitForAngularLoad(60)
 		Assert.assertEquals(WebUI.verifyElementClickable(findTestObject('Object Repository/SubmitReview/PromocodeTextFieldReviewPayment')),true)
 		Assert.assertTrue(WebUI.verifyElementPresent(findTestObject('Object Repository/SubmitReview/CreditCardOptionButton'), 2))
 		Assert.assertTrue(WebUI.verifyElementPresent(findTestObject('Object Repository/SubmitReview/CheckOptionButton'), 2))
