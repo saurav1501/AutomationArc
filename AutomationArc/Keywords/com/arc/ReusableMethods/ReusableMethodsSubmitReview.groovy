@@ -485,7 +485,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		//WebUI.click(findTestObject('Object Repository/SubmitReview/clickOnSideBar'))
 		//WebUI.delay(5)
 		WebUI.click(findTestObject('SubmitReview/a_ Review'))
-		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),25)
+		///WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),25)
 		//WebUI.delay(10)
 		//WebUI.waitForElementVisible(findTestObject('Object Repository/SubmitReview/SummaryModalReviewPage'),6)
 		//performanceScoreDataInputCheckboxSelection()
