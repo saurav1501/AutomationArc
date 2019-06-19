@@ -133,6 +133,7 @@ public class ReusableMethodsNavigation {
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	}
@@ -166,12 +167,14 @@ public class ReusableMethodsNavigation {
 	@Keyword
 	public void navigateToDataOS(){
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementClickable(findTestObject('Analytics/Gra/td_Occupant Satisfaction Surve'),10)
 		WebUI.click(findTestObject('Analytics/Gra/td_Occupant Satisfaction Surve'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	}
 	@Keyword
 	public void navigateToDataOzone(){
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementClickable(findTestObject('Analytics/Gra/td_Ozone'),10)
 		WebUI.click(findTestObject('Analytics/Gra/td_Ozone'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Analytics/Gra/span_Details'))

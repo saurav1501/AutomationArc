@@ -718,7 +718,8 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 	@Keyword
 	public void  verifyMonthsDetails() {
-
+		
+		WebUI.waitForElementClickable(findTestObject('Analytics/Gra/currentMonth'), GlobalVariable.minAngularWait)
 		DateTimeFormatter monthYearFormatter = DateTimeFormatter.ofPattern("MMM")
 
 		YearMonth thisMonth    = YearMonth.now()
@@ -784,7 +785,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		String elevenMonthsago = WebUI.getText(findTestObject('Analytics/Gra/elevenMonthsAgo'))
 		WebUI.verifyMatch(elevenMonthsAgo,elevenMonthsago, false)
 
-		WebUI.delay(2)
+		
 
 	}
 
