@@ -2132,9 +2132,11 @@ public class ReusableMethodsManage extends BaseClass {
 		 WebUI.delay(1)
 		 WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Manage'))*/
 		//WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
-		WebUI.delay(5)
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
-		WebUI.delay(6)
+		//WebUI.delay(6)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		//WebUI.click(findTestObject('Object Repository/Manage/BillingSection/RegistrationPaymentStatus'))
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/DownloadBilling'))
 		WebUI.delay(6)
@@ -2146,7 +2148,8 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void billingStatus(String sheetName, int rowNum){
-		WebUI.delay(2)
+		//WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		String regdAmt = data.getCellData(sheetName, "RegAmount", rowNum)
 		String reviewAmt = data.getCellData(sheetName, "ReviewAmount", rowNum)
 		String registrationDate = data.getCellData(sheetName, "RegDate", rowNum)
@@ -2158,7 +2161,8 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Loaders/ProjectDashboardLoader'), 30)
 		//Registration Payment details verification
-		WebUI.delay(5)
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		if(GlobalVariable.environment=='dev'){
 
 			String regDate= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/registrationPaymentDate'))
@@ -2377,7 +2381,8 @@ public class ReusableMethodsManage extends BaseClass {
 		 WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Manage'))*/
 		WebUI.scrollToElement(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'),2)
 		WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'))
-		WebUI.delay(3)
+		//WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('Manage/VerifyAgreementFile/button_Download'))
 		WebUI.delay(5)
 		Assert.assertTrue(ReusDataInput.isFileDownloaded('Agreement.pdf'), "Agreement File Didn't downloaded successfully")
@@ -2852,10 +2857,11 @@ public class ReusableMethodsManage extends BaseClass {
 		 WebUI.delay(1)
 		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 		 */
-		WebUI.delay(5)
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.scrollToElement(findTestObject('Manage/CertificationAndScore/a_ Score Version'),2)
 		WebUI.click(findTestObject('Manage/CertificationAndScore/a_ Score Version'))
-
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Loaders/ProjectDashboardLoader'), 30, FailureHandling.CONTINUE_ON_FAILURE)
 
 		String scoreVersion = WebUI.getText(findTestObject('Manage/CertificationAndScore/h3_Arc score v2.0'))
