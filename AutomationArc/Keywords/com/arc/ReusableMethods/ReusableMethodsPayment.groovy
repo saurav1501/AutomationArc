@@ -51,6 +51,7 @@ public class ReusableMethodsPayment extends BaseClass{
 		String projectSetUpText= WebUI.getText(findTestObject('Object Repository/paymentPageNewUI/paymentPageTextProjetSetup'),FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch("Project Setup", projectSetUpText, false,FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.click(findTestObject('Object Repository/paymentPageNewUI/payNowButton'),FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	}
 
 	public static void noOfYearSubscribed(int yearOfSubscription){
@@ -283,7 +284,7 @@ public class ReusableMethodsPayment extends BaseClass{
 		println list.get(randonNumber).getText()
 		data.setCellData(sheetName, "SpaceType", rowNum,list.get(randonNumber).getText())
 		list.get(randonNumber).click()
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		String stype=list.get(randonNumber).getText()
 
 		if((stype.equals("Industrial Manufacturing")) || (stype.equals("Laboratory")) || (stype.equals("Data Center")) ||
@@ -301,14 +302,15 @@ public class ReusableMethodsPayment extends BaseClass{
 		data.setCellData(sheetName, "OwnerType", rowNum,list1.get(randonNumber1).getText())
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/organization'),ownerOrg)
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/organization'))
-		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Add_Project_Details/span_Habitat for Humanity'), 60)
 		WebUI.click(findTestObject('Add_Project_Details/span_Habitat for Humanity'))
 		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/ownerEmail'), ownerMail)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/ownerCountry'), ownerCountry, false)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/ratingSystem'), prjRating , false)
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/saveButtonProjectDetails'))
-		WebUI.delay(25)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		
 		String title= DriverFactory.getWebDriver().getCurrentUrl()
 		println title
 		String Project_ID= title.substring(title.indexOf('1'),title.indexOf('1')+10 )
@@ -821,15 +823,15 @@ public class ReusableMethodsPayment extends BaseClass{
 		//WebUI.click(findTestObject('Object Repository/SubmitReview/clickOnSideBar'))
 		//WebUI.delay(5)
 		WebUI.click(findTestObject('SubmitReview/a_ Review'))
-		WebUI.delay(6)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		Assert.assertEquals(WebUI.getText(findTestObject('Object Repository/SubmitReview/SubmitReviewText')), "Submit for Review")
-		WebUI.delay(20)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'), 20)
 		WebUI.click(findTestObject('SubmitReview/button_Continue'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'), 20)
 		WebUI.click(findTestObject('SubmitReview/button_Continue'))
-		WebUI.delay(4)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/PaymenntLocator/payment-typeCheck'))
 		WebUI.delay(2)
 		switch(country) {
@@ -1010,15 +1012,15 @@ public class ReusableMethodsPayment extends BaseClass{
 		//WebUI.click(findTestObject('Object Repository/SubmitReview/clickOnSideBar'))
 		//WebUI.delay(5)
 		WebUI.click(findTestObject('SubmitReview/a_ Review'))
-		WebUI.delay(6)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		Assert.assertEquals(WebUI.getText(findTestObject('Object Repository/SubmitReview/SubmitReviewText')), "Submit for Review")
-		WebUI.delay(20)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'), 20)
 		WebUI.click(findTestObject('SubmitReview/button_Continue'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'), 20)
 		WebUI.click(findTestObject('SubmitReview/button_Continue'))
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		switch(country)
 		{
 			case 'India':

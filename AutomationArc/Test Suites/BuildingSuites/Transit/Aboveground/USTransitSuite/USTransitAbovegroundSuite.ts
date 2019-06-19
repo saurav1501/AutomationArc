@@ -71,24 +71,6 @@
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/BasePointCreditTeamAssignTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>fcc91a4d-fef5-4136-9f6b-c9f58b734cd2</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/VerifyReviewPaymentByCCHasPreFilledDataExceptPhoneNoTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>60f0dfe7-4d02-4d03-a14b-49f3d146a823</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/VerifyReviewPaymentByCheckHasPreFilledFieldsTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>797f4d3d-2129-4799-a891-47dd7ba37e64</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/VerifyCertificationIsAllowedWithoutRequirementTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>bf4ca2db-ab15-4938-8f03-13aa8e58373b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -873,6 +855,24 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/AdminToolScoreRecomputeTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>fcc91a4d-fef5-4136-9f6b-c9f58b734cd2</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/VerifyReviewPaymentByCCHasPreFilledDataExceptPhoneNoTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>60f0dfe7-4d02-4d03-a14b-49f3d146a823</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/VerifyReviewPaymentByCheckHasPreFilledFieldsTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>797f4d3d-2129-4799-a891-47dd7ba37e64</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/VerifyCertificationIsAllowedWithoutRequirementTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>207e2a39-a7e0-4cf1-a439-c21dc542ebc3</guid>

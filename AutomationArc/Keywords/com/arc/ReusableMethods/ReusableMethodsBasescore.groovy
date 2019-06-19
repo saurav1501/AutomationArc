@@ -265,14 +265,14 @@ public class ReusableMethodsBasescore {
 		 WebUI.delay(1)*/
 		WebUI.click(findTestObject('PreRequisite/a_ Prerequisites'))
 		//WebUI.setViewPortSize(1500,800)
-		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('PreRequisite/span_Site Management Policy'))
-		WebUI.delay(8)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		WebUI.click(findTestObject('BasePoint/BasePointCreditCom/TeamIconClick'))
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('BasePoint/BasePointCreditCom/TeamMemberSelection'))
-		WebUI.delay(10)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		String teamMemUI = WebUI.getText(findTestObject("BasePoint/BasePointCreditCom/VerifyAddedTeamSuccessully"))
 		WebUI.verifyMatch(GlobalVariable.teamMemName,teamMemUI, false)
@@ -313,7 +313,7 @@ public class ReusableMethodsBasescore {
 	public void nameOfCreditCreditTransit(){
 		/*******Verify that the Name of the credit is correct  for Buildings.***********/
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/DashboardPage/NavigationCreditAction/a_ All Actions'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyElementPresent(findTestObject('Page_Arc dashboard/Credit/span_Site Management Policy'),2)
 		WebUI.verifyElementPresent(findTestObject('Page_Arc dashboard/Credit/span_Site Development - Protec'),2)
 		WebUI.verifyElementPresent(findTestObject('Page_Arc dashboard/Credit/span_Rainwater Management'),2)

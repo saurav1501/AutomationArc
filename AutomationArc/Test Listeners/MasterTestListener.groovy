@@ -47,11 +47,7 @@ public class MasterTestListener extends BaseClass {
 	@BeforeTestSuite
 	public void beforeTestSuiteListener(TestSuiteContext testSuite)
 	{
-		println TestCount= data.getCellIntData(GlobalVariable.Result, "Total", GlobalVariable.rowNumTwo)
-		println TestCasePass= data.getCellIntData(GlobalVariable.Result, "Passed", GlobalVariable.rowNumTwo)
-		println TestCaseFail= data.getCellIntData(GlobalVariable.Result, "Failed", GlobalVariable.rowNumTwo)
-
-		
+				
 		println "This is before Test Suit"
 		println("Before Test Suite Listener : " + testSuite.getTestSuiteId())
 		KeywordUtil.markWarning("Before Test Suite Listener : " + testSuite.getTestSuiteId())
@@ -62,19 +58,12 @@ public class MasterTestListener extends BaseClass {
 		println testSuiteId[count-1] 
 		Country= testSuiteId[count-1].substring(0,2)
 		println Country
-		//WebUI.openBrowser('')
-		
+		WebUI.openBrowser('')
 		//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariable'()
 		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariableAppUrl'()
 
 	}
 	
-	@SetUp(skipped=true)
-	def setUp()
-	{
-		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariableAppUrl'()
-		
-	}
 	
 	@BeforeTestCase
 	public void beforeTestListener(TestSuiteContext testSuite, TestCaseContext testCase)

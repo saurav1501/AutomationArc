@@ -9,6 +9,8 @@ import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
+import internal.GlobalVariable
+
 public class ReusableMethodsPrerequisites extends BaseClass {
 
 	@Keyword
@@ -114,25 +116,25 @@ public class ReusableMethodsPrerequisites extends BaseClass {
 	public void prevousNextButtonTransitPrereq() {
 
 		WebUI.click(findTestObject('PreRequisite/a_ Prerequisites'))
-		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('PreRequisite/span_Site Management Policy'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		for(int count=0;count<=9;count++) {
 			WebUI.scrollToElement(findTestObject('PreRequisite/button_Next'), 2)
 			WebUI.click(findTestObject('PreRequisite/button_Next'))
-			WebUI.delay(1)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		}
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		String firstCredit = WebUI.getText(findTestObject('Page_Arc dashboard/Navigation/span_Site Management Policy'))
 		WebUI.verifyMatch(firstCredit,'Site Management Policy', false)
 
 		for(int count1=0;count1<=9;count1++) {
 			WebUI.scrollToElement(findTestObject('/Page_Arc dashboard/Navigation/button_Previous'), 2)
 			WebUI.click(findTestObject('/Page_Arc dashboard/Navigation/button_Previous'))
-			WebUI.delay(1)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		}
-		WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyMatch(firstCredit,'Site Management Policy', false)
 	}
 
@@ -168,9 +170,9 @@ public class ReusableMethodsPrerequisites extends BaseClass {
 	public void prevousNextCreditcreditNameTest() {
 		WebUI.delay(5)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/DashboardPage/NavigationCreditAction/a_ All Actions'))
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('PreRequisite/span_Site Management Policy'))
-		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		for(int count=0;count<=32;) {
 
 			if(count==0)
@@ -291,7 +293,7 @@ public class ReusableMethodsPrerequisites extends BaseClass {
 
 			WebUI.scrollToElement(findTestObject('PreRequisite/button_Next'),2)
 			WebUI.click(findTestObject('PreRequisite/button_Next'))
-			WebUI.delay(2)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		}
 	}
 

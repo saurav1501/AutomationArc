@@ -10,7 +10,8 @@ import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.testobject.ConditionType
 import com.kms.katalon.core.webui.driver.DriverFactory
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
-import com.sun.beans.decoder.FalseElementHandler
+
+import internal.GlobalVariable
 public class ReusableMethodsBasePoint extends BaseClass{
 
 	@Keyword
@@ -367,22 +368,20 @@ public class ReusableMethodsBasePoint extends BaseClass{
 	}
 	@Keyword
 	public void basePromptMessageAttemptedToReadyForReview(){
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.scrollToElement(findTestObject('Object Repository/BasePoint/a_ Base Points (1)'), 10)
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.doubleClick(findTestObject('Object Repository/BasePoint/a_ Base Points (1)'))
-		//	WebUI.w
-		WebUI.delay(5)
-
+	    WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		WebUI.click(findTestObject('Object Repository/BasePoint/span_Site Development - Protec'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		WebUI.click(findTestObject('PreRequisite/CheckBox1'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('PreRequisite/button_Attempted'))
 		WebUI.click(findTestObject('PreRequisite/a_Ready for Review'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		String promptText = WebUI.getText(findTestObject('PaymenntLocator/projectDetails/BaseScorePromptText'))
 		String promptText1 = promptText.replaceAll("\\s+","")
@@ -391,7 +390,7 @@ public class ReusableMethodsBasePoint extends BaseClass{
 		WebUI.verifyMatch(promptText1, promptText1, false)
 
 		WebUI.click(findTestObject('BasePoint/button_Ok'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 	}
 	@Keyword
@@ -399,15 +398,15 @@ public class ReusableMethodsBasePoint extends BaseClass{
 
 		WebUI.scrollToElement(findTestObject('Object Repository/BasePoint/a_ Base Points (1)'), 10)
 		WebUI.doubleClick(findTestObject('Object Repository/BasePoint/a_ Base Points (1)'))
-		WebUI.delay(8)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		WebUI.click(findTestObject('Object Repository/BasePoint/span_Site Development - Protec'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		WebUI.click(findTestObject('PaymenntLocator/projectDetails/span_Ready for Review'))
-		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('PaymenntLocator/projectDetails/a_Attempted'))
-		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		String promptText = WebUI.getText(findTestObject('PaymenntLocator/projectDetails/BaseScorePromptText'))
 		String promptText1 = promptText.replaceAll("\\s+","")
@@ -416,9 +415,9 @@ public class ReusableMethodsBasePoint extends BaseClass{
 		WebUI.verifyMatch(promptText1, promptText1, false)
 
 		WebUI.click(findTestObject('BasePoint/button_Ok'))
-		WebUI.delay(10)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('PreRequisite/CheckBox1'))
-		WebUI.delay(10)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 	}
 	@Keyword
@@ -469,18 +468,18 @@ public class ReusableMethodsBasePoint extends BaseClass{
 		 */
 		WebUI.scrollToElement(findTestObject('Object Repository/BasePoint/a_ Base Points (1)'), 2)
 		WebUI.click(findTestObject('Object Repository/BasePoint/a_ Base Points (1)'))
-		WebUI.delay(8)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		WebUI.click(findTestObject('Page_Arc dashboard/DashboardPage/NavigationCreditAction/span_Purchasing - ongoing'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		WebUI.click(findTestObject('Page_Arc dashboard/DashboardPage/NavigationCreditAction/a_Credit Library'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		WebUI.switchToWindowIndex(1)
-		WebUI.delay(10)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		String projectRegistration = WebUI.getText(findTestObject('BasePoint/BasePointCreditCom/CreditSitemanagementpolicy'))
-		WebUI.delay(1)
+
 		WebUI.verifyMatch(projectRegistration,'Purchasing - ongoing',false)
 		WebUI.closeWindowIndex(1)
 		WebUI.switchToWindowIndex(0)

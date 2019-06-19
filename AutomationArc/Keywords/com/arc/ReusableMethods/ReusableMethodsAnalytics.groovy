@@ -13,6 +13,8 @@ import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+
+import internal.GlobalVariable
 public class ReusableMethodsAnalytics extends BaseClass{
 
 	public ReusableMethodsDataInput ReusDataInput = new ReusableMethodsDataInput()
@@ -710,7 +712,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		String elevenMonthsago = WebUI.getText(findTestObject('Analytics/Gr/elevenMonthsAgo'))
 		WebUI.verifyMatch(elevenMonthsAgo,elevenMonthsago, false)
 
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 	}
 

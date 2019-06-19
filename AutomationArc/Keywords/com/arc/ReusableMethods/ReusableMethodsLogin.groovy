@@ -30,6 +30,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable
 
 public class ReusableMethodsLogin extends BaseClass{
+	//ReusableMethodsLogin login = new ReusableMethodsLogin()
 	Robot robot = new Robot()
 	String download
 	@Keyword
@@ -174,7 +175,7 @@ public class ReusableMethodsLogin extends BaseClass{
 		WebUI.waitForPageLoad(GlobalVariable.timeOut)
 		WebUI.navigateToUrl(url)
 		waitForPageLoad(60)
-		WebUI.delay(5)
+		
 	}
 	@Keyword
 	public void loginArcGlobalVariable() {
@@ -200,87 +201,83 @@ public class ReusableMethodsLogin extends BaseClass{
 
 	@Keyword
 	public void loginIntoArcWithGlobalVariableAppUrl() {
-		String url = GlobalVariable.url
+	
+		loginIntoArcAppUrl()
+		
+	    boolean myProject = WebUI.waitForElementPresent(findTestObject('Page_Arc dashboard/span_My Projects'),10)
+	   
+		if(myProject==false)
+		for(int i=0;i<5;i++)
+	    loginIntoArcAppUrl()
+	    
+		
+	}
+	public void loginIntoArcAppUrl(){
 		String userName= GlobalVariable.userName
 		String password= GlobalVariable.password
 		String appUrl = GlobalVariable.appUrl
-		//DriverFactory.getGeckoDriverPath()
 		java.awt.Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize()
 		print screenSize.getHeight()
 		print screenSize.getWidth()
 		Dimension size = new Dimension(1500, 1068)
-		WebUI.openBrowser(appUrl)
+		
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.navigateToUrl(appUrl)
 		WebUI.getViewportHeight()
 		WebUI.getViewportWidth()
 		WebUI.getViewportLeftPosition()
 		WebUI.getViewportTopPosition()
-		//WebUI.maximizeWindow()
 		WebUI.waitForPageLoad(GlobalVariable.timeOut)
-		//DriverFactory.getWebDriver().manage().window().setSize(size)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
+		
 		WebUI.setViewPortSize(1366,1280)
-		//DriverFactory.getWebDriver().manage().window().maximize()
 		WebUI.getViewportHeight()
 		WebUI.getViewportWidth()
 		WebUI.getViewportLeftPosition()
 		WebUI.getViewportTopPosition()
-		WebUI.click(findTestObject('Object Repository/LoginViaAppUrl/CookieACCEPTANDCLOSE'))
+		
+		WebUI.click(findTestObject('Object Repository/LoginViaAppUrl/CookieACCEPTANDCLOSE'),FailureHandling.OPTIONAL)
 		WebUI.setText(findTestObject('Object Repository/LoginViaAppUrl/UserName'), userName)
 		WebUI.setText(findTestObject('Object Repository/LoginViaAppUrl/UserPassword'), password)
 		WebUI.click(findTestObject('Object Repository/LoginViaAppUrl/AcceptAgreement'))
 		WebUI.click(findTestObject('Object Repository/LoginViaAppUrl/ClickLOGIN'))
-		
-		//WebUI.waitForAngularLoad(, FailureHandling.STOP_ON_FAILURE)
-		WebUI.delay(15)
-		waitForPageLoad(60)
-		//WebUI.click(findTestObject('Object Repository/SubmitReview/clickOnSideBar'))
-		WebUI.waitForElementPresent(findTestObject('Page_Arc dashboard/span_My Projects'), 30)
-		String postLoginText = WebUI.getText(findTestObject('Page_Arc dashboard/span_My Projects'))
-		WebUI.verifyMatch(postLoginText, 'My Projects',true)
-		WebUI.delay(12)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
 	}
-
+	
 
 
 	@Keyword
 	public void loginArcAdminToolWithGlobalVariable() {
-		WebUI.delay(2)
 		String url = GlobalVariable.adminUrl
 		String userName= GlobalVariable.adminUserName
 		String password= GlobalVariable.adminPassword
-		//WebDriver driver  = DriverFactory.getWebDriver()
-
+	
 		Robot r = new Robot()
-		//((JavascriptExecutor)driver).executeScript('window.open("");')
-		//WebUI.delay(2)
-		//WebUI.switchToWindowIndex(1)
+
 		r.keyPress(KeyEvent.VK_CONTROL)
 		r.keyPress(KeyEvent.VK_T)
 		r.keyRelease(KeyEvent.VK_CONTROL)
 		r.keyRelease(KeyEvent.VK_T)
-		WebUI.delay(4)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 
 		//To switch to the new tab
 		WebUI.switchToWindowIndex(1)
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.navigateToUrl(url)
-		//WebUI.waitForPageLoad(GlobalVariable.timeOut)
-		//WebUI.delay(10)
-		//waitForPageLoad(60)
-		WebUI.delay(12)
+	
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.setText(findTestObject('PerformanceScore/Username'), userName)
 		WebUI.setText(findTestObject('PerformanceScore/Password'), password)
 		WebUI.check(findTestObject('PerformanceScore/AcceptCheckbox'))
 		WebUI.delay(4)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.check(findTestObject('PerformanceScore/AcceptCheckbox'))
 		WebUI.click(findTestObject('PerformanceScore/LOG IN'), FailureHandling.CONTINUE_ON_FAILURE)
-		//waitForPageLoad(60)
-		//WebUI.click(findTestObject('Object Repository/SubmitReview/clickOnSideBar'))
-		//WebUI.waitForElementPresent(findTestObject('PerformanceScore/VerifyTextTeam'), 30)
-		//waitForloaderToDisappear(60)
-		WebUI.delay(15)
+
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		String postLoginText = WebUI.getText(findTestObject('PerformanceScore/VerifyTextTeam'))
 		WebUI.verifyMatch(postLoginText,'Team',false)
-		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 
 	}
 	@Keyword
