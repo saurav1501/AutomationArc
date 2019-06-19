@@ -133,10 +133,10 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		WebUI.verifyMatch(garea,'Gross Area (sq. foot) : 10000',false)
 
 		String gopeartinghour = WebUI.getText(findTestObject('Analytics/TotalAnalytics/GraphOppHour'))
-		WebUI.verifyMatch(gopeartinghour,'Operating Hours : 14', false)
+		WebUI.verifyMatch(gopeartinghour,'Operating Hours : 160', false)
 
 		String goccupancy = WebUI.getText(findTestObject('Analytics/TotalAnalytics/GraphOccupany'))
-		WebUI.verifyMatch(goccupancy,'Occupancy : 100', false)
+		WebUI.verifyMatch(goccupancy,'Occupancy : 9', false)
 
 		/***** Verifying in the Unit by excel upload ******************/
 		WebUI.verifyElementPresent(findTestObject('Analytics/TotalAnalytics/span_(sq. feet)'),3)
