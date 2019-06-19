@@ -1097,6 +1097,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		//ReusableMethodsNavigation.clickAnalyticsLabel()
 		WebUI.click(findTestObject('Analytics/Nav/a_ Energy'))
 		WebUI.delay(5)
+		WebUI.waitForAngularLoad(60, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.focus(findTestObject('Analytics/TotalPage/engScore1'))
 		WebUI.delay(1)
 		String engScore1 = WebUI.getText(findTestObject('Analytics/TotalPage/ScoreText'))

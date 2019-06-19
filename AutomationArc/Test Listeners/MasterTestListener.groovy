@@ -43,17 +43,13 @@ public class MasterTestListener extends BaseClass {
 	public static int TestCount
 	public static  int TestCasePass
 	public static  int TestCaseFail
-	@SetUp
-	void Setup() {		
-		
-	}
 	
 	@BeforeTestSuite
 	public void beforeTestSuiteListener(TestSuiteContext testSuite)
 	{
-		/*println TestCount= data.getCellIntData(GlobalVariable.Result, "Total", GlobalVariable.rowNumTwo)
+		println TestCount= data.getCellIntData(GlobalVariable.Result, "Total", GlobalVariable.rowNumTwo)
 		println TestCasePass= data.getCellIntData(GlobalVariable.Result, "Passed", GlobalVariable.rowNumTwo)
-		println TestCaseFail= data.getCellIntData(GlobalVariable.Result, "Failed", GlobalVariable.rowNumTwo)*/
+		println TestCaseFail= data.getCellIntData(GlobalVariable.Result, "Failed", GlobalVariable.rowNumTwo)
 
 		
 		println "This is before Test Suit"
@@ -73,6 +69,12 @@ public class MasterTestListener extends BaseClass {
 
 	}
 	
+	@SetUp(skipped=true)
+	def setUp()
+	{
+		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariableAppUrl'()
+		
+	}
 	
 	@BeforeTestCase
 	public void beforeTestListener(TestSuiteContext testSuite, TestCaseContext testCase)
