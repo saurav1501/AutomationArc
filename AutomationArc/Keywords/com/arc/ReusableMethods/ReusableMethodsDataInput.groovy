@@ -3528,9 +3528,11 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
 		 */
-		WebUI.delay(5)
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('DataInput/CityCom/a_ Data Input'))
-		WebUI.delay(5)
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('DataInput/CityCom/span_Energy'))
 		WebUI.delay(10)
 		WebUI.click(findTestObject('DataInput/CityCom/button_Add Year'))

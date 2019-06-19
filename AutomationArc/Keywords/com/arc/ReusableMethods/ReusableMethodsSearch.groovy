@@ -25,22 +25,25 @@ public class ReusableMethodsSearch extends BaseClass{
 	public void searchProgram(String sheetName , int rowNum) {
 		String projectId = data.getCellData(sheetName,"ProjectID",rowNum)
 		//	WebUI.click(findTestObject('Page_Arc dashboard/sideBar'))
-		WebUI.delay(2)
+	    //WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))
 		//	if(WebUI.getText(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))!= null)
 		//	WebUI.clearText(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))
 		WebUI.setText(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'), projectId)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))
-		WebUI.delay(3)
+		//WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Page_Arc dashboard/no_Project (1 project)'),4)
 	//	WebUI.waitForElementPresent(findTestObject('Page_Arc dashboard/no_Project (1 project)'),3)
 		String nuberOfProjects = WebUI.getText(findTestObject('Page_Arc dashboard/no_Project (1 project)'))
 		println nuberOfProjects
 		WebUI.verifyMatch(nuberOfProjects,'Project (1 project)', false)
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		//WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/search_Result'))
-		WebUI.delay(6)
-
+		//WebUI.delay(6)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 	}
 
 	@Keyword
@@ -49,22 +52,25 @@ public class ReusableMethodsSearch extends BaseClass{
 		String projectId = data.getCellData(sheetName,"ProjectID",rowNum1)
 	
 		//	WebUI.click(findTestObject('Page_Arc dashboard/sideBar'))
-		WebUI.delay(2)
+		//WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))
 		//	if(WebUI.getText(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))!= null)
 		//	WebUI.clearText(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))
 		WebUI.setText(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'), projectId)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))
-		WebUI.delay(3)
+		//WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Page_Arc dashboard/no_Project (1 project)'),4)
 	//	WebUI.waitForElementPresent(findTestObject('Page_Arc dashboard/no_Project (1 project)'),3)
 		String nuberOfProjects = WebUI.getText(findTestObject('Page_Arc dashboard/no_Project (1 project)'))
 		println nuberOfProjects
 		WebUI.verifyMatch(nuberOfProjects,'Project (1 project)', false)
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		//WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/search_Result'))
-		WebUI.delay(4)
-
+		//WebUI.delay(4)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	}
 	
 	@Keyword

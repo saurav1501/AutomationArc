@@ -165,7 +165,8 @@ public class ReusableMethodsPayment extends BaseClass{
 		 */
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/DashboardNavigationNewUI/Dash/select_LEED for CitiesOtherNon'), prjRating , false)
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/saveButtonProjectDetails'))
-		WebUI.delay(20)
+		//WebUI.delay(20)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/AddProjectNewUI/saveButtonProjectDetails'), 30)
 		String title= DriverFactory.getWebDriver().getCurrentUrl()
 		println title
@@ -387,18 +388,21 @@ public class ReusableMethodsPayment extends BaseClass{
 			WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/cvvCreditCard'),cardCvv)
 			//promocode field in case if used
 			//WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/promoCode'),promocode)
-			WebUI.delay(3)
+			//WebUI.delay(3)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			WebUI.click(findTestObject('Object Repository/paymentPageNewUI/submitPayment'))
 		}
 		else{
 			WebUI.click(findTestObject('Object Repository/paymentPageNewUI/paymentPagePayByCheckOption'))
 			WebUI.click(findTestObject('Object Repository/paymentPageNewUI/submitPayment'))
 		}
-		WebUI.delay(30)
+		//WebUI.delay(30)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		if((uniqueSpaceTypesFlag==true)){
 			println "Space type matched"
 			WebUI.waitForElementVisible(findTestObject('Object Repository/PayNowRegistrationPaymentUSTest/RegistrationPaymentConfirmationPopCloseButton'), 70)
-			WebUI.delay(2)
+			//WebUI.delay(2)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 			WebUI.click(findTestObject('Object Repository/PayNowRegistrationPaymentUSTest/RegistrationPaymentConfirmationPopCloseButton'))
 			uniqueSpaceTypesFlag=false
 		}
@@ -408,7 +412,8 @@ public class ReusableMethodsPayment extends BaseClass{
 		}
 		WebUI.waitForElementVisible(findTestObject('PaymenntLocator/NextButton'), 70)
 		WebUI.click(findTestObject('PaymenntLocator/NextButton'))
-		WebUI.delay(10)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		//WebUI.delay(10)
 	}
 
 	@Keyword

@@ -401,6 +401,7 @@ public class ReusableMethodsBasescore {
 	public void nameOfCreditCreditCityComOtherNone(){
 		/*******Verify that the Name of the credit is correct  for City/Community Other/None***********/
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.verifyElementPresent(findTestObject('Page_Arc dashboard/Credit/span_Energy'),2)
 		WebUI.verifyElementPresent(findTestObject('Page_Arc dashboard/Credit/span_Water'),2)
 		WebUI.verifyElementPresent(findTestObject('Page_Arc dashboard/Credit/span_Waste'),2)
