@@ -339,8 +339,22 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.setText(findTestObject('PerformanceScore/PorjectId'),projectId)
 		WebUI.delay(2)
 		WebUI.click(findTestObject('PerformanceScore/RecomputeScore'))
-		WebUI.delay(30)
-		WebUI.waitForElementVisible(findTestObject('PerformanceScore/Score/EnergyScore'), 120)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		
+		
+		boolean keepGoing = WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		
+		if(keepGoing== false)
+		
+			for(int i=0;i<=1;i++){
+			WebUI.click(findTestObject('PerformanceScore/RecomputeScoreButton'))
+			WebUI.delay(3)
+			WebUI.setText(findTestObject('PerformanceScore/PorjectId'),projectId)
+			WebUI.delay(2)
+			WebUI.click(findTestObject('PerformanceScore/RecomputeScore'))
+			WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+			}
+		
 		WebUI.switchToWindowIndex(0)
 		WebUI.delay(1)
 	}
