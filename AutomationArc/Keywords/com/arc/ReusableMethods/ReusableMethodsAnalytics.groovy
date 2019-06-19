@@ -130,13 +130,13 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 		/****Verifying in the graph occupancy and operating hour******************/	
 		String garea = WebUI.getText(findTestObject('Analytics/TotalAnalytics/GraphArea'))
-		WebUI.verifyMatch(garea,'Gross Area (sq. foot) : 107639',false)
+		WebUI.verifyMatch(garea,'Gross Area (sq. foot) : 10000',false)
 
 		String gopeartinghour = WebUI.getText(findTestObject('Analytics/TotalAnalytics/GraphOppHour'))
-		WebUI.verifyMatch(gopeartinghour,'Operating Hours : 14', false)
+		WebUI.verifyMatch(gopeartinghour,'Operating Hours : 160', false)
 
 		String goccupancy = WebUI.getText(findTestObject('Analytics/TotalAnalytics/GraphOccupany'))
-		WebUI.verifyMatch(goccupancy,'Occupancy : 100', false)
+		WebUI.verifyMatch(goccupancy,'Occupancy : 9', false)
 
 		/***** Verifying in the Unit by excel upload ******************/
 		WebUI.verifyElementPresent(findTestObject('Analytics/TotalAnalytics/span_(sq. feet)'),3)
@@ -501,6 +501,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ExportSurveyDataButtonInAnalytics'), 4)
 		WebUI.click(findTestObject('Object Repository/Analytics/ExportSurveyDataButtonInAnalytics'))
 		WebUI.delay(2)
+		WebUI.waitForAngularLoad(60)
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnDowloadExportButton'))
 		WebUI.delay(8)
 		Assert.assertTrue(ReusDataInput.isFileDownloaded("ExportData.xlsx"), "Didn't downloaded successfully")
@@ -513,6 +514,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ExportSurveyDataButtonInAnalytics'), 4)
 		WebUI.click(findTestObject('Object Repository/Analytics/ExportSurveyDataButtonInAnalytics'))
 		WebUI.delay(2)
+		WebUI.waitForAngularLoad(60)
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnDowloadExportButton'))
 		WebUI.delay(8)
 		Assert.assertTrue(ReusDataInput.isFileDownloaded("ExportData.xlsx"), "Didn't downloaded successfully")
@@ -525,6 +527,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ExportSurveyDataButtonInAnalytics'), 4)
 		WebUI.click(findTestObject('Object Repository/Analytics/ExportSurveyDataButtonInAnalytics'))
 		WebUI.delay(2)
+		WebUI.waitForAngularLoad(60)
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnDowloadExportButton'))
 		WebUI.delay(8)
 		Assert.assertTrue(ReusDataInput.isFileDownloaded("ExportData.xlsx"), " Didn't downloaded successfully")
@@ -537,6 +540,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ExportSurveyDataButtonInAnalytics'), 4)
 		WebUI.click(findTestObject('Object Repository/Analytics/ExportSurveyDataButtonInAnalytics'))
 		WebUI.delay(2)
+		WebUI.waitForAngularLoad(60)
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnDowloadExportButton'))
 		WebUI.delay(8)
 		Assert.assertTrue(ReusDataInput.isFileDownloaded("ExportData.xlsx"), "Didn't downloaded successfully")

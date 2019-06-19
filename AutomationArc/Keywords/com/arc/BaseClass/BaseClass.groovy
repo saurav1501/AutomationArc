@@ -64,7 +64,7 @@ public class BaseClass {
 	public static String Addendum = GlobalVariable.downloadDir+"Agreement.pdf"
 	public static String ServiceAgreement = GlobalVariable.downloadDir+"Agreement.pdf"
 	public static String UploadArcDataTempleteTransit = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Arc_Data_Template_transit_above_v3.1.xlsm"
-	public static String UploadArcDataTempleteLEEDV4 = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Arc_Data_Template_v4.3.xlsm"
+	public static String UploadArcDataTempleteLEEDV4 = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Arc_Data_Template_LEED_v4.3.xlsm"
 	public static String UploadArcDataTempleteTransitanalytics = RunConfiguration.getProjectDir()+"/ARCDataTemplete/AnalyticArc_Data_Template_transit_above.xlsm"
 	public static String UploadArcDataTempleteTransitBelow = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Arc_Data_Template_transit_below_v4.1.xlsm"
 	public static String UploadArcDataTemplete = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Arc_Data_Template_v4.3.xlsm"
