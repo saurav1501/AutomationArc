@@ -834,8 +834,8 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		 WebUI.click(findTestObject('PerformanceScore/Score/a_ Score'))
 		 WebUI.delay(1)*/
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Total'))
-		WebUI.delay(5)
-
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		String performaceScore = WebUI.getText(findTestObject('PerformanceScore/span_Performance Score'))
 		WebUI.verifyMatch(performaceScore , 'Performance Score', false)
 
@@ -942,8 +942,9 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		 WebUI.delay(1)*/
 
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Total'))
-		WebUI.delay(10)
-        //WebUI.waitForAngularLoad(60, FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.delay(10)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		//WebUI.waitForAngularLoad(60, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyElementPresent(findTestObject('PerformanceScore/TotalRacetrack/TotalPointBlankRaceTrack'),5, FailureHandling.STOP_ON_FAILURE)
 
 		WebUI.verifyElementPresent(findTestObject('PerformanceScore/TotalRacetrack/EnergyBlankRaceTrack') ,5, FailureHandling.STOP_ON_FAILURE)
@@ -966,23 +967,28 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		//WebUI.verifyElementPresent(findTestObject('PerformanceScore/RaceTrack/BasePointBlankRaceTrack'),5, FailureHandling.STOP_ON_FAILURE)
 
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Energy'))
-		WebUI.delay(5)
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyElementPresent(findTestObject('PerformanceScore/RaceTrack/EnergyBlankRaceTrack'),5, FailureHandling.STOP_ON_FAILURE)
 
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Water'))
-		WebUI.delay(5)
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyElementPresent(findTestObject('PerformanceScore/RaceTrack/WaterBlankRaceTrack'),5, FailureHandling.STOP_ON_FAILURE)
 
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Waste'))
-		WebUI.delay(5)
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyElementPresent(findTestObject('PerformanceScore/RaceTrack/WasteBlankRaceTrack'),5, FailureHandling.STOP_ON_FAILURE)
 
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Transportation'))
-		WebUI.delay(5)
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyElementPresent(findTestObject('PerformanceScore/RaceTrack/TransportBalnkRaceTrack'),5, FailureHandling.STOP_ON_FAILURE)
 
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Human Experience'))
-		WebUI.delay(5)
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyElementPresent(findTestObject('PerformanceScore/RaceTrack/HumExpBlankRaceTrack'),5, FailureHandling.STOP_ON_FAILURE)
 	}
 	@Keyword

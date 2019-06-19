@@ -204,7 +204,8 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		String ProjectName = proName + prjRating + formatarDate.format(date)
 		data.setCellData(sheetName,"ProjectName", rowNum, ProjectName)
 		navigation.clickAddProject()
-		WebUI.delay(3)
+		//WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/projectName'), ProjectName)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/selectProjectType'), prjType, true)
 		if(GlobalVariable.environment=='dev'){
@@ -216,14 +217,16 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		}
 		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/population'),prjPopulation )
 		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/streetName'),prjAddress)
-		WebUI.delay(2)
+		//WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/cityName'),prjCity)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/countryName'),prjCountry, false)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/stateName'),prjState, false)
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/zipCode'), prjZip)
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/clickOnSignAgreement'))
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/addProjectNextButton'))
-		WebUI.delay(5)
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		String PaymentPageText = WebUI.getText(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'))
 		WebUI.verifyMatch(PaymentPageText,'Project Setup',true)
 		String title= DriverFactory.getWebDriver().getCurrentUrl()
@@ -232,7 +235,8 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		println Project_ID
 		data.setCellData(sheetName,"ProjectID", rowNum, Project_ID)
 		data.setCellData(sheetName,"RegDate", rowNum, ReusableMethodsManage.verifyBillingDate())
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		//WebUI.delay(5)
 	}
 	
 	@Keyword

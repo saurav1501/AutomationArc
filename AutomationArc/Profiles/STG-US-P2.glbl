@@ -269,4 +269,19 @@
       <initValue>'/var/lib/jenkins/Downloads/'</initValue>
       <name>downloadDir</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>60</initValue>
+      <name>minAngularWait</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>120</initValue>
+      <name>avgAngularWait</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>240</initValue>
+      <name>maxAngularWait</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

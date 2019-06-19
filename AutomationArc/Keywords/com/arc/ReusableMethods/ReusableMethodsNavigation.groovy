@@ -36,10 +36,12 @@ public class ReusableMethodsNavigation {
 
 	@Keyword
 	public void clickAddProject() {
-		WebUI.delay(2)
+		//WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.scrollToElement(findTestObject('Object Repository/Add_Project_Details/button_ Add'), 3)
 		WebUI.click(findTestObject('Object Repository/Add_Project_Details/button_ Add'))
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		//WebUI.delay(2)
 		String postNavigationLoginText = WebUI.getText(findTestObject('Object Repository/Add_Project_Details/h1_Project Registration'))
 		WebUI.verifyMatch(postNavigationLoginText,'Project Registration',true)
 	}
