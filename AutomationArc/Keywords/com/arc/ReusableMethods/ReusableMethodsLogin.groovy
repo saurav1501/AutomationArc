@@ -228,6 +228,8 @@ public class ReusableMethodsLogin extends BaseClass{
 		WebUI.setText(findTestObject('Object Repository/LoginViaAppUrl/UserPassword'), password)
 		WebUI.click(findTestObject('Object Repository/LoginViaAppUrl/AcceptAgreement'))
 		WebUI.click(findTestObject('Object Repository/LoginViaAppUrl/ClickLOGIN'))
+		
+		//WebUI.waitForAngularLoad(, FailureHandling.STOP_ON_FAILURE)
 		WebUI.delay(15)
 		waitForPageLoad(60)
 		//WebUI.click(findTestObject('Object Repository/SubmitReview/clickOnSideBar'))

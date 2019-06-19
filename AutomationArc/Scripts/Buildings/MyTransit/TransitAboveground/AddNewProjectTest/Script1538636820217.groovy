@@ -30,7 +30,6 @@ try {
 	
 	
     CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToBuildingTransit'()
-	
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsAddNewProject.buildingTransitAddNewProject'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumThree)
 
 	}
