@@ -451,6 +451,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		//WebUI.delay(15)
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/CreateMeterBuilding/EnergyMeterViaFileUpload'), 60)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/EnergyMeterViaFileUpload'), 60)
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/EnergyMeterViaFileUpload'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), "Energy Meter via upload", FailureHandling.STOP_ON_FAILURE)
@@ -459,7 +461,6 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Graphs/EnergyMeterUnitDisplayedOnGraph')),"kBtu" , false)
 		getGraphReading(sheetName, "Reading1")
-
 	}
 
 
@@ -1479,8 +1480,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		//WebUI.delay(4)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		//WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/CreditFileupload/DeleteButtonCityComm',[index: 7]), 6)
-		//WebUI.delay(3)
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.delay(5)
+		
 	}
 
 	public static void setClipboardData(String string) {
@@ -5790,30 +5791,33 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	}
 	@Keyword
 	public void HumanExpMeterReadingValidationUI()throws IOException, InterruptedException {
-		WebUI.delay(3)
+		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('DataInput/CityCom/a_ Data Input'))
-		WebUI.delay(2)
+		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('DataInput/CityCom/span_Human Experience'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(10)
 		WebUI.click(findTestObject('DataInput/CityCom/EducationAddYear'))
-		WebUI.delay(8)
+		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
 
 		WebUI.setText(findTestObject('DataInput/CityCom/TextboxValue1'), '5000')
-		WebUI.delay(5)
+		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+1))
-		WebUI.delay(2)
+		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.verifyElementPresent(findTestObject('DataInput/CityCom/Hum/TextValidationPercentPercentvalueshouldnotexceed100'),5)
 
 		/****************************Verifying the Notification of Error message******************************/
 		WebUI.clearText(findTestObject('DataInput/CityCom/TextboxValue1'))
-		WebUI.delay(5)
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.setText(findTestObject('DataInput/CityCom/TextboxValue1'),'20')
-		WebUI.delay(1)
+		//WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton'+1),2)
 		WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+1))
-		WebUI.delay(5)
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/TextboxValue1'),"value"),'20',"Not Valid")
 
 
@@ -5825,22 +5829,22 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		WebUI.scrollToElement(findTestObject('DataInput/CityCom/BachelorAddYear'), 2)
 		WebUI.click(findTestObject('DataInput/CityCom/BachelorAddYear'))
-		WebUI.delay(5)
+		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
 		WebUI.setText(findTestObject('DataInput/CityCom/HTextBox2'), '5000')
-		WebUI.delay(5)
+		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+2))
-		WebUI.delay(2)
+		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.verifyElementPresent(findTestObject('DataInput/CityCom/Hum/TextValidationPercentPercentvalueshouldnotexceed100'),5)
 
 		/****************************Verifying the Notification of Error message******************************/
 		WebUI.clearText(findTestObject('DataInput/CityCom/HTextBox2'))
-		WebUI.delay(5)
+		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.setText(findTestObject('DataInput/CityCom/HTextBox2'), '20')
-		WebUI.delay(1)
+		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton'+2),2)
 		WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+2))
-		WebUI.delay(7)
+		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/HTextBox2'),"value"),'20',"Not Valid")
 
 
@@ -5851,22 +5855,22 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForPageLoad(10)
 		WebUI.scrollToElement(findTestObject('DataInput/CityCom/EquAddYear'),2)
 		WebUI.click(findTestObject('DataInput/CityCom/EquAddYear'))
-		WebUI.delay(5)
+		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
 		WebUI.setText(findTestObject('DataInput/CityC/TextBox3'), '5000')
-		WebUI.delay(5)
+		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+3))
-		WebUI.delay(2)
+		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.verifyElementPresent(findTestObject('DataInput/CityCom/Hum/TextValidationPercentPercentvalueshouldnotexceed100'),5)
 
 		/****************************Verifying the Notification of Error message******************************/
 		WebUI.clearText(findTestObject('DataInput/CityC/TextBox3'))
-		WebUI.delay(5)
+		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.setText(findTestObject('DataInput/CityC/TextBox3'), '20')
-		WebUI.delay(1)
+		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton'+3),2)
 		WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+3))
-		WebUI.delay(7)
+		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityC/TextBox3'),"value"),'20',"Not Valid")
 
 
@@ -5875,22 +5879,22 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	public void GinicoefficientHumanExpMeterReadingValidationUI()throws IOException, InterruptedException {
 
 		WebUI.click(findTestObject('DataInput/CityCom/GiniAddYear'))
-		WebUI.delay(5)
+		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
 		WebUI.setText(findTestObject('DataInput/CityC/TextBox4'), '5000')
-		WebUI.delay(5)
+		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+4))
-		WebUI.delay(2)
+		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.verifyElementPresent(findTestObject('DataInput/CityCom/Hum/Gini'),5)
 
 		/****************************Verifying the Notification of Error message******************************/
 		WebUI.clearText(findTestObject('DataInput/CityC/TextBox4'))
-		WebUI.delay(5)
+		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.setText(findTestObject('DataInput/CityC/TextBox4'),'1')
-		WebUI.delay(1)
+		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton'+4),2)
 		WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+4))
-		WebUI.delay(7)
+		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityC/TextBox4'),"value"),'1',"Not Valid")
 	}
 
