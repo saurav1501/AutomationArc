@@ -385,7 +385,7 @@
    <testCaseLink>
       <guid>91f8a9fc-2b5b-470d-85af-6c6924d6428d</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/LEEDOnlineCity/VerifyAddedTeamMemberFromLEEDInArcTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

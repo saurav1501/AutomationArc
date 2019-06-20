@@ -206,12 +206,12 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 
 
 		WebUI.setText(findTestObject('LEEDOnline/ProjReg/Population'), population)
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(2)
 		WebUI.scrollToElement(findTestObject('LEEDOnline/ProjReg/Owner'), 2)
 		WebUI.setText(findTestObject('LEEDOnline/ProjReg/Owner'),ownerOrg)
 		//WebUI.delay(2)
 		//WebUI.click(findTestObject('LEEDOnline/ProjReg/Owner'))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(2)
 		WebUI.click(findTestObject('LEEDOnline/ProjReg/OrgOrgHabitat'))
 		WebUI.setText(findTestObject('LEEDOnline/ProjReg/OwnerRepresentative'),'Arc')
 		WebUI.selectOptionByLabel(findTestObject('LEEDOnline/ProjReg/OwnerType'), ownerType,false)
@@ -232,13 +232,13 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.selectOptionByLabel(findTestObject('LEEDOnline/ProjReg/select_State'),prjState, false)
 		WebUI.setText(findTestObject('LEEDOnline/ProjReg/input_Postal code_postalcode'), prjZip)
 		//h3[(text() = 'Project' or . = 'Project') or (text()="Cities") or (text()='Communities') or (text()='Campus')]WebUI.click(findTestObject('LEEDOnline/ProjReg/OutsideSave'))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(2)
 		WebUI.click(findTestObject('LEEDOnline/ProjReg/GeoIcon'))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(2)
 		WebUI.click(findTestObject('LEEDOnline/ProjReg/a_Save  Close'))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(2)
 		WebUI.click(findTestObject('LEEDOnline/ProjReg/Continue'))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(5)
 	}
 
 
@@ -246,7 +246,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 	public void acceptAgreement(String sheetName ,int rowNum) {
 		WebUI.delay(2)
 		WebUI.scrollToElement(findTestObject('LEEDOnline/Payment/Latspan_29. EXECUTION'),10)
-		WebUI.delay(4)
+		WebUI.delay(9)
 		WebUI.scrollToElement(findTestObject('LEEDOnline/ProjReg/button_I AGREE'),2)
 		WebUI.doubleClick(findTestObject('LEEDOnline/ProjReg/button_I AGREE'))
 		WebUI.delay(4)
