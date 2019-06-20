@@ -95,12 +95,6 @@
       <testCaseId>Test Cases/MyCities/CitiesOther/CreateTrasportMeterReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>0f280ba1-0d16-4621-b70e-0e8c0b5641b6</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCities/CitiesOther/INTPerformanceScoreRevPayByCCTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>740cc4fe-0a4d-4444-9035-12685bd07d26</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -125,6 +119,12 @@
       <testCaseId>Test Cases/MyCities/CitiesOther/SetPerformanceScoreDefaultTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>0f280ba1-0d16-4621-b70e-0e8c0b5641b6</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCities/CitiesOther/INTPerformanceScoreRevPayByCCTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>d91127b6-818e-4ff9-acd6-f956cf53e025</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -137,12 +137,6 @@
       <testCaseId>Test Cases/MyCities/CitiesOther/CreateADMeterReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>68db65ba-5a30-4538-9c46-d2e549be89c9</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCities/CitiesOther/BillingDateAndStatusTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>a0661f07-e694-46eb-8177-71e7eabc0ccb</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -153,5 +147,11 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/MyCities/CitiesOther/ScoreVersionVerificationTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>68db65ba-5a30-4538-9c46-d2e549be89c9</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCities/CitiesOther/BillingDateAndStatusTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
