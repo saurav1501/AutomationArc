@@ -302,8 +302,8 @@ public class ReusableMethodsNavigation {
 		WebUI.waitForElementClickable(findTestObject('Object Repository/Analytics/Nav/a_ Water'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Analytics/Nav/a_ Energy'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-	
-		
+
+
 	}
 	@Keyword
 	public void navigateToAnalyticsWater() {
@@ -317,22 +317,22 @@ public class ReusableMethodsNavigation {
 		WebUI.waitForElementClickable(findTestObject('Analytics/Nav/a_ Waste'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Analytics/Nav/a_ Waste'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		
-		}
+
+	}
 
 	@Keyword
 	public void navigateToAnalyticstransport() {
 		WebUI.waitForElementClickable(findTestObject('Analytics/Nav/a_ Transportation'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Analytics/Nav/a_ Transportation'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-	
+
 	}
 	@Keyword
 	public void navigateToAnalyticsHumExp() {
 		WebUI.waitForElementClickable(findTestObject('Analytics/Nav/a_ Human Experience'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Analytics/Nav/a_ Human Experience'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-			
+
 	}
 
 

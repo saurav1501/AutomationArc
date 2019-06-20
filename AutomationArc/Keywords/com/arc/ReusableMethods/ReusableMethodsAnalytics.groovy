@@ -105,7 +105,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
 		WebUI.delay(5)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		
+
 
 		String energyScore = WebUI.getText(findTestObject('Analytics/Score/EnergyScore'))
 		String waterScore = WebUI.getText(findTestObject('Analytics/Score/WaterScore'))
@@ -434,9 +434,9 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		WebUI.delay(4)
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		
+
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), GlobalVariable.minAngularWait)
-		
+
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
 		WebUI.delay(3)
 		//WebUI.delay(5)
@@ -466,7 +466,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		
+
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), GlobalVariable.minAngularWait)
 
 		String transportsurveyResponsePercentage = WebUI.getText(findTestObject('Analytics/TotalAnalytics/TransportRep'))
@@ -504,10 +504,10 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		WebUI.delay(8)
 		Assert.assertTrue(ReusDataInput.isFileDownloaded("ExportData.xlsx"), "Didn't downloaded successfully")
 		println "Energy Exported File downloaded and verified successfully"
-        
+
 		WebUI.click(findTestObject('Object Repository/Analytics/Nav/a_ Water'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		
+
 		WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ExportSurveyDataButtonInAnalytics'), 4)
 		WebUI.click(findTestObject('Object Repository/Analytics/ExportSurveyDataButtonInAnalytics'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
@@ -518,7 +518,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 		WebUI.click(findTestObject('Analytics/Nav/a_ Waste'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-	
+
 		WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ExportSurveyDataButtonInAnalytics'), 4)
 		WebUI.click(findTestObject('Object Repository/Analytics/ExportSurveyDataButtonInAnalytics'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
@@ -563,8 +563,8 @@ public class ReusableMethodsAnalytics extends BaseClass{
 	@Keyword
 	public void  verifygraphMonthsDetails() {
 		/*WebUI.refresh()
-		WebUI.delay(15)*/
-		
+		 WebUI.delay(15)*/
+
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Analytics/Graph/currentMonth'), GlobalVariable.minAngularWait)
 		DateTimeFormatter monthYearFormatter = DateTimeFormatter.ofPattern("MMM")
@@ -710,7 +710,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 	@Keyword
 	public void  verifyMonthsDetails() {
-		
+
 		WebUI.waitForElementClickable(findTestObject('Analytics/Gra/currentMonth'), GlobalVariable.minAngularWait)
 		DateTimeFormatter monthYearFormatter = DateTimeFormatter.ofPattern("MMM")
 
@@ -777,7 +777,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		String elevenMonthsago = WebUI.getText(findTestObject('Analytics/Gra/elevenMonthsAgo'))
 		WebUI.verifyMatch(elevenMonthsAgo,elevenMonthsago, false)
 
-		
+
 
 	}
 
@@ -3480,21 +3480,21 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 	@Keyword
 	public void annualtransportation_annual_carbon_emissions() {
-		
+
 		WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'), 10)
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
 		//WebUI.delay(12)
 		WebUI.waitForAngularLoad(120, FailureHandling.CONTINUE_ON_FAILURE)
-		
+
 		String totaldalilytransprot = WebUI.getText(findTestObject('Object Repository/Portfolio/CarbonVal/TotalPortfolio'))
 		String totaldalilyTransprot =  totaldalilytransprot.replace(',', '')
 
 		BigDecimal dtotaldalilytransprot = new BigDecimal(totaldalilyTransprot)
 		dtotaldalilytransprot = dtotaldalilytransprot .setScale(0, RoundingMode.HALF_UP)
 		String utotaldalilytransprot1 = dtotaldalilytransprot.toString()
-		
+
 		int utotaldalilytransprot = Integer.parseInt(utotaldalilytransprot1)
-        println utotaldalilytransprot
+		println utotaldalilytransprot
 
 		String dtransprot = WebUI.getText(findTestObject('Object Repository/Analytics/Transport/ProjDailyTrasnport'))
 		String dTransprot =  dtransprot.replace(',', '')
@@ -3514,24 +3514,23 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		totaltransprotannaual = totaltransprotannaual.setScale(0, RoundingMode.HALF_UP)
 		String totaltransprotannaual1 = totaltransprotannaual.toString()
 		println totaltransprotannaual1
-		
+
 		int ctotaltransprotannaual = Integer.parseInt(totaltransprotannaual1)
-		
-		
+
+
 		int pos1Range = ctotaltransprotannaual + 1
 		int neg1Range = ctotaltransprotannaual - 1
-		
-		if(utotaldalilytransprot==pos1Range||utotaldalilytransprot== neg1Range||utotaldalilytransprot==ctotaltransprotannaual)
-		
-		KeywordUtil.markPassed('SUCCESS: verified Successfully')
-		else
-		KeywordUtil.markFailed('Fail : Mismatch')
-			
-/*		
-		String ctotaltransprotAnn = totaltransprotannaual.toString()
 
-		*//****************UI Verses Calculated Total daily carbon emissions (MTCO2e): Sum of daily scope 1 carbon emissions (MTCO2e), scope 2 carbon emissions (MTCO2e), Transportation carbon emissions (MTCO2e).************//*
-		WebUI.verifyMatch(utotaldalilytransprot, ctotaltransprotAnn, false)*/
+		if(utotaldalilytransprot==pos1Range||utotaldalilytransprot== neg1Range||utotaldalilytransprot==ctotaltransprotannaual)
+
+			KeywordUtil.markPassed('SUCCESS: verified Successfully')
+		else
+			KeywordUtil.markFailed('Fail : Mismatch')
+
+		/*		
+		 String ctotaltransprotAnn = totaltransprotannaual.toString()
+		 *//****************UI Verses Calculated Total daily carbon emissions (MTCO2e): Sum of daily scope 1 carbon emissions (MTCO2e), scope 2 carbon emissions (MTCO2e), Transportation carbon emissions (MTCO2e).************//*
+		 WebUI.verifyMatch(utotaldalilytransprot, ctotaltransprotAnn, false)*/
 	}
 
 	@Keyword
