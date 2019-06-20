@@ -2879,16 +2879,11 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void scoreVersionVerificationCommunity(){
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)
-		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
-		 */
-		WebUI.delay(5)
+	
 		WebUI.scrollToElement(findTestObject('Manage/CertificationAndScore/a_ Score Version'),2)
 		WebUI.click(findTestObject('Manage/CertificationAndScore/a_ Score Version'))
-
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Loaders/ProjectDashboardLoader'), 30, FailureHandling.CONTINUE_ON_FAILURE)
-
 		String scoreVersion = WebUI.getText(findTestObject('Manage/CertificationAndScore/h3_Arc score v2.0'))
 		WebUI.verifyMatch(scoreVersion, "Arc score for communities version 2.0",false, FailureHandling.CONTINUE_ON_FAILURE)
 		print scoreVersion
