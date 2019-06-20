@@ -244,18 +244,18 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 
 	@Keyword
 	public void acceptAgreement(String sheetName ,int rowNum) {
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(2)
 		WebUI.scrollToElement(findTestObject('LEEDOnline/Payment/Latspan_29. EXECUTION'),10)
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(4)
 		WebUI.scrollToElement(findTestObject('LEEDOnline/ProjReg/button_I AGREE'),2)
 		WebUI.doubleClick(findTestObject('LEEDOnline/ProjReg/button_I AGREE'))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(4)
 		WebUI.click(findTestObject('LEEDOnline/ProjReg/h4_Card type'))
 		String Project_ID = WebUI.getText(findTestObject('LEEDOnline/Payment/ProjID'))
 		System.out.println(Project_ID)
 		data.setCellData(sheetName,"ProjectID", rowNum,Project_ID)
 		data.setCellData(sheetName,"RegDate", rowNum, ReusableMethodsManage.verifyBillingDate())
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(4)
 	}
 	@Keyword
 	public void paymentByCC(String sheetName , int rowNum){
