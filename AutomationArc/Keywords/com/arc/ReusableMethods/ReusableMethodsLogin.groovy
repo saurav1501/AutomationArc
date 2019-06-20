@@ -61,38 +61,22 @@ public class ReusableMethodsLogin extends BaseClass{
 
 	@Keyword
 	public void loginIntoArcApplication(String Username,String Password) {
-		/*
-		 Robot r = new Robot();
-		 r.keyPress(KeyEvent.VK_CONTROL);
-		 r.keyPress(KeyEvent.VK_T);
-		 r.keyRelease(KeyEvent.VK_CONTROL)
-		 r.keyRelease(KeyEvent.VK_T)
-		 WebUI.delay(4)
-		 //To switch to the new tab
-		 WebUI.switchToWindowIndex(1)
-		 WebUI.delay(2)
-		 WebUI.navigateToUrl(applicationUrl)
-		 WebUI.delay(10)
-		 WebUI.waitForPageLoad(GlobalVariable.timeOut) 
-		 //WebUI.click(findTestObject('Object Repository/Page_Home  Arc/ClickNavLogOut'))
-		 //WebUI.click(findTestObject('Object Repository/Page_Home  Arc/LoginArrowDropDown'))
-		 */	
-		//WebUI.click(findTestObject('Page_Home  Arc/button_ACCEPT AND CLOSE'), FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.delay(10)
+		
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/clickOnLogin'))
 		WebUI.setText(findTestObject('Page_Home  Arc/input_name'), Username)
 		WebUI.setText(findTestObject('Page_Home  Arc/input_pass'), Password)
-		WebUI.delay(2)
+	
 		WebUI.click(findTestObject('Page_Home  Arc/input_field_policy_accept'))
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.click(findTestObject('Page_Home  Arc/button_Log in'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/Page_Home  Arc/ClickNavProjectText'), 10)
 		WebUI.click(findTestObject('Object Repository/Page_Home  Arc/ClickNavProjectText'))
 		WebUI.waitForElementPresent(findTestObject('Page_Arc dashboard/span_My Projects'), 30)
 		String postLoginText = WebUI.getText(findTestObject('Page_Arc dashboard/span_My Projects'))
 		WebUI.verifyMatch(postLoginText, 'My Projects',true)
-		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 	}
 
 	@Keyword
@@ -306,11 +290,12 @@ public class ReusableMethodsLogin extends BaseClass{
 	public void logoutFromArcApplication() {
 		WebUI.scrollToElement(findTestObject('Page_Arc dashboard/b_caret'), 4)
 		WebUI.click(findTestObject('Page_Arc dashboard/b_caret'))
-		WebUI.delay(3)
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.scrollToElement(findTestObject('Page_Arc dashboard/logout'), 2)
 		WebUI.click(findTestObject('Page_Arc dashboard/logout'))
-		WebUI.delay(10)
-		WebUI.waitForPageLoad(GlobalVariable.timeOut)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		
 	}
 
 	@Keyword

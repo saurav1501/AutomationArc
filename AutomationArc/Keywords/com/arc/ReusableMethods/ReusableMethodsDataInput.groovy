@@ -95,7 +95,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	@Keyword
 	public void uploadArcDataTemplateBuildingAnalytics(){
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
-		WebUI.delay(15)
+	    WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'), GlobalVariable.minAngularWait)
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'))
 		WebUI.delay(2)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/span_Upload.XLS'), 20)
@@ -104,10 +105,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/ClickOnUploadToSelectFile'),8)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/DataInputTemplateFileUploadPopupTitle')),"Upload Spreadsheet",false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.sendKeys(findTestObject('Object Repository/DataInput/UploadArcDataTemplete'),BaseClass.analyticsUploadArcDataTemplete )
-		//WebUI.click(findTestObject('Object Repository/DataInput/ClickOnUploadToSelectFile'))
-		//WebUI.delay(4)
-		//uploadFile(analyticsUploadArcDataTemplete)
-		WebUI.delay(4)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('DataInput/ClickToUploadFileButton'))
 		WebUI.delay(5)
 		String successmessage= WebUI.getText(findTestObject('Object Repository/DataInput/ExcelUploadSuccessMessage'))
@@ -115,37 +113,38 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.verifyMatch(successmessage,'Excel submitted successfully. We will send you an email when your data is processed.' , true)
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/DataInput/button_CLOSE'))
-		WebUI.delay(17)
-		/*WebUI.refresh()
-		 WebUI.delay(10)*/
+		WebUI.delay(15)
+		WebUI.refresh()
+		WebUI.delay(10)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	}
 
 	@Keyword
 	public void uploadArcDataTemplateTransit(){
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
-		WebUI.delay(15)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'), GlobalVariable.minAngularWait)
 		//Trial flow is dependent on it, if we uncomment it the trial flow will fail
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/span_Upload.XLS'), 20)
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/span_Upload.XLS'))
-		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/ClickOnUploadToSelectFile'),3)
 		WebUI.sendKeys(findTestObject('Object Repository/DataInput/UploadArcDataTemplete'),BaseClass.UploadArcDataTempleteTransit)
-		//WebUI.click(findTestObject('Object Repository/DataInput/ClickOnUploadToSelectFile'))
-		//WebUI.delay(4)
-		//uploadFile(UploadArcDataTempleteTransit)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.delay(4)
 		WebUI.click(findTestObject('DataInput/ClickToUploadFileButton'))
-		WebUI.delay(5)
-		//clickCancel()
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+	
 		String successmessage= WebUI.getText(findTestObject('Object Repository/DataInput/ExcelUploadSuccessMessage'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyMatch(successmessage,'Excel submitted successfully. We will send you an email when your data is processed.' , true)
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/DataInput/button_CLOSE'))
 		WebUI.refresh()
 		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	}
 
 	@Keyword

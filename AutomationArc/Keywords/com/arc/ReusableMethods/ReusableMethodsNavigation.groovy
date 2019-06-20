@@ -255,8 +255,7 @@ public class ReusableMethodsNavigation {
 
 	@Keyword
 	public void navigateToAnalyticsTotal() {
-		/*WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ClickOnAnalytics'), 3)
-		 WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalytics'))*/
+		WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'), 5)
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	}
@@ -300,59 +299,40 @@ public class ReusableMethodsNavigation {
 
 	@Keyword
 	public void navigateToAnalyticsEnergy() {
-		//WebUI.click(findTestObject('PerformanceScore/a_ CreditsActions'))
-		//WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ClickOnAnalytics'), 3)
-		//WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalytics'))
-		WebUI.delay(1)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/Analytics/Nav/a_ Water'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Analytics/Nav/a_ Energy'))
-		WebUI.delay(4)
-		//WebUI.refresh()
-		//WebUI.delay(15)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+	
+		
 	}
 	@Keyword
 	public void navigateToAnalyticsWater() {
-		//WebUI.click(findTestObject('PerformanceScore/a_ CreditsActions'))
-		//WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ClickOnAnalytics'), 3)
-		//WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalytics'))
-		WebUI.delay(1)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/Analytics/Nav/a_ Water'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/Analytics/Nav/a_ Water'))
-		WebUI.delay(4)
-		//WebUI.refresh()
-		//WebUI.delay(15)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	}
 
 	@Keyword
 	public void navigateToAnalyticsWaste() {
-		//WebUI.click(findTestObject('PerformanceScore/a_ CreditsActions'))
-		//WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ClickOnAnalytics'), 3)
-		//WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalytics'))
-		WebUI.delay(1)
+		WebUI.waitForElementClickable(findTestObject('Analytics/Nav/a_ Waste'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Analytics/Nav/a_ Waste'))
-		WebUI.delay(4)
-		//WebUI.refresh()
-		//WebUI.delay(15)
-	}
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		
+		}
 
 	@Keyword
 	public void navigateToAnalyticstransport() {
-		WebUI.delay(1)
-		//WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ClickOnAnalytics'), 3)
-		//WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalytics'))
-		WebUI.delay(1)
+		WebUI.waitForElementClickable(findTestObject('Analytics/Nav/a_ Transportation'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Analytics/Nav/a_ Transportation'))
-		WebUI.delay(5)
-		//WebUI.refresh()
-		//WebUI.delay(15)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+	
 	}
 	@Keyword
 	public void navigateToAnalyticsHumExp() {
-		//WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ClickOnAnalytics'), 3)
-		//WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalytics'))
-		WebUI.delay(1)
+		WebUI.waitForElementClickable(findTestObject('Analytics/Nav/a_ Human Experience'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Analytics/Nav/a_ Human Experience'))
-		WebUI.delay(5)
-		//WebUI.refresh()
-		//WebUI.delay(15)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+			
 	}
 
 

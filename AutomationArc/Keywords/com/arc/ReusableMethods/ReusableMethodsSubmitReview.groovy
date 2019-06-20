@@ -243,6 +243,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		//WebUI.click(findTestObject('Object Repository/SubmitReview/clickOnSideBar'))
 		//WebUI.delay(5)
 		WebUI.click(findTestObject('SubmitReview/a_ Review'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/SubmitReviewText')), "Submit for Review", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/CertificationTextCity')), "Certification", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/VerifyProjectStillUnderReviewTextPresent')),'Project is still under review', false, FailureHandling.CONTINUE_ON_FAILURE)
@@ -254,11 +255,9 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 	@Keyword
 	public void verifyCertificationIsAllowedWithoutRequirementTUG(){
 
-		//WebUI.click(findTestObject('Object Repository/SubmitReview/clickOnSideBar'))
-		//WebUI.delay(5)
 		WebUI.click(findTestObject('SubmitReview/a_ Review'))
-		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),15)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),15)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/SubmitReviewText')), "Submit for Review", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/CertificationTextCity')), "Certification", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.click(findTestObject('SubmitReview/button_Continue'))
@@ -301,9 +300,9 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		//WebUI.click(findTestObject('Object Repository/SubmitReview/clickOnSideBar'))
 		//WebUI.delay(5)
 		WebUI.click(findTestObject('SubmitReview/a_ Review'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/SubmitReviewText')), "Submit for Review",false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/CertificationTextCity')), "Certification", false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.delay(5)
 		/*(1..28).each {
 		 WebUI.check(findTestObject('SubmitReview/CheckBoxReview',[('index') : it]))
 		 }
@@ -324,6 +323,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 			WebUI.setText(findTestObject('SubmitReview/input_form-control ng-untouche'), 'abhishekkumar@groupten.com')
 			WebUI.click(findTestObject('SubmitReview/span_Send'))
 			WebUI.click(findTestObject('SubmitReview/button_Continue'))
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		}else{
 			WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
@@ -334,6 +334,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 			WebUI.setText(findTestObject('SubmitReview/input_form-control ng-untouche'), 'abhishekkumar@groupten.com')
 			WebUI.click(findTestObject('SubmitReview/span_Send'))
 			WebUI.click(findTestObject('SubmitReview/button_Continue'))
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		}
 
@@ -661,11 +662,11 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 	public void addCertificationFromAdminToolForTransit(String sheetName, int rowNum){
 		String prjId   =   data.getCellData(sheetName, "ProjectID", rowNum)
 		WebUI.click(findTestObject('Manage/adminToolNew/a_ Certification'))
-		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.setText(findTestObject('Manage/adminToolNew/leedId'),prjId )
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/Manage/adminToolNew/ratingSystemDownArrow'))
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.scrollToElement(findTestObject('Object Repository/Manage/adminToolNew/ratingSystemTransit'), 2)
 		WebUI.click(findTestObject('Object Repository/Manage/adminToolNew/ratingSystemTransit'))
 		WebUI.delay(2)
@@ -674,7 +675,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.setText(findTestObject('Object Repository/Manage/adminToolNew/certificationPoints'),"80" )
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/Manage/adminToolNew/button_Save'))
-		WebUI.delay(10)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		println WebUI.getWindowIndex()
 		//WebUI.closeWindowIndex(2)
 		//WebUI.delay(2)

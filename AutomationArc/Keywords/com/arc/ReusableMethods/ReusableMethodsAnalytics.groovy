@@ -54,7 +54,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 	@Keyword
 	public void overallScore(){
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
-		WebUI.delay(15)
+		WebUI.delay(10)
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TotalPerformanceScore'),10)
 		//Verifying the Performance score
 		String totalperformaceScore = WebUI.getText(findTestObject('PerformanceScore/Score/TotalPerformanceScore'))
@@ -62,6 +62,8 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		//WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalytics'))
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
 		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('Analytics/TotalAnalytics/OverallScore'), GlobalVariable.minAngularWait)
 
 		String overallscore = WebUI.getText(findTestObject('Analytics/TotalAnalytics/OverallScore'))
 		WebUI.verifyMatch(overallscore,totalperformaceScore, false)
@@ -80,8 +82,8 @@ public class ReusableMethodsAnalytics extends BaseClass{
 	public void indivisualScore(){
 
 		WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
-		WebUI.delay(15)
-		ReusableMethodsLogin.waitForIframeLoad(60)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/EnergyScore'), GlobalVariable.minAngularWait)
 		String energyPerScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/EnergyScore'))
 		String energyperScoreout33 = energyPerScore.concat(" out of 33")
 
@@ -102,6 +104,8 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		//WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalytics'))
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
 		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		
 
 		String energyScore = WebUI.getText(findTestObject('Analytics/Score/EnergyScore'))
 		String waterScore = WebUI.getText(findTestObject('Analytics/Score/WaterScore'))
@@ -429,8 +433,10 @@ public class ReusableMethodsAnalytics extends BaseClass{
 	public void surveyRepRate(){
 		WebUI.delay(4)
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
-		WebUI.delay(15)
-		//ReusableMethodsLogin.waitForPageLoad(60)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), GlobalVariable.minAngularWait)
+		
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
 		WebUI.delay(3)
 		//WebUI.delay(5)
@@ -459,9 +465,10 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		//WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalytics'))
 
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
-		//WebUI.delay(7)
-		ReusableMethodsLogin.waitForloaderToDisappear(60)
-		ReusableMethodsLogin.waitForPageLoad(60)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), GlobalVariable.minAngularWait)
+
 		String transportsurveyResponsePercentage = WebUI.getText(findTestObject('Analytics/TotalAnalytics/TransportRep'))
 		String asurveyResponsepercentage1 = transportsurveyResponsePercentage.replace("%","")
 		String asurveyResponsepercentage = asurveyResponsepercentage1.replaceAll("\\s","")
@@ -487,62 +494,44 @@ public class ReusableMethodsAnalytics extends BaseClass{
 	public void downloadExportData(){
 		/*************Verify if able to download the export data for the energy , water , waste , transport , Human Experiance ******************/
 
-		/*WebUI.delay(5)
-		 WebUI.click(findTestObject('PerformanceScore/a_ CreditsActions'))
-		 WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ClickOnAnalytics'), 3)
-		 WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalytics'))
-		 WebUI.delay(2)
-		 */
-		//ReusableMethodsNavigation.clickAnalyticsLabel()
 		WebUI.click(findTestObject('Analytics/Nav/a_ Energy'))
-		WebUI.delay(5)
-		//WebUI.refresh()
-		//WebUI.delay(10)
-		//ReusableMethodsNavigation.clickAnalyticsLabel()
-		//WebUI.click(findTestObject('Analytics/Nav/a_ Energy'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
 		WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ExportSurveyDataButtonInAnalytics'), 4)
 		WebUI.click(findTestObject('Object Repository/Analytics/ExportSurveyDataButtonInAnalytics'))
-		WebUI.delay(2)
-		WebUI.waitForAngularLoad(60)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnDowloadExportButton'))
 		WebUI.delay(8)
 		Assert.assertTrue(ReusDataInput.isFileDownloaded("ExportData.xlsx"), "Didn't downloaded successfully")
 		println "Energy Exported File downloaded and verified successfully"
         
 		WebUI.click(findTestObject('Object Repository/Analytics/Nav/a_ Water'))
-		WebUI.delay(5)
-		//WebUI.refresh()
-		//WebUI.delay(10)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		
 		WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ExportSurveyDataButtonInAnalytics'), 4)
 		WebUI.click(findTestObject('Object Repository/Analytics/ExportSurveyDataButtonInAnalytics'))
-		WebUI.delay(2)
-		WebUI.waitForAngularLoad(60)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnDowloadExportButton'))
 		WebUI.delay(8)
 		Assert.assertTrue(ReusDataInput.isFileDownloaded("ExportData.xlsx"), "Didn't downloaded successfully")
 		println "Water Exported File downloaded and verified successfully"
 
 		WebUI.click(findTestObject('Analytics/Nav/a_ Waste'))
-		WebUI.delay(5)
-		//WebUI.refresh()
-		//WebUI.delay(10)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+	
 		WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ExportSurveyDataButtonInAnalytics'), 4)
 		WebUI.click(findTestObject('Object Repository/Analytics/ExportSurveyDataButtonInAnalytics'))
-		WebUI.delay(2)
-		WebUI.waitForAngularLoad(60)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnDowloadExportButton'))
 		WebUI.delay(8)
 		Assert.assertTrue(ReusDataInput.isFileDownloaded("ExportData.xlsx"), " Didn't downloaded successfully")
 		println "Waste Exported File downloaded and verified successfully"
 
 		WebUI.click(findTestObject('Analytics/Nav/a_ Transportation'))
-		WebUI.delay(5)
-		///WebUI.refresh()
-		//WebUI.delay(10)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ExportSurveyDataButtonInAnalytics'), 4)
 		WebUI.click(findTestObject('Object Repository/Analytics/ExportSurveyDataButtonInAnalytics'))
-		WebUI.delay(2)
-		WebUI.waitForAngularLoad(60)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnDowloadExportButton'))
 		WebUI.delay(8)
 		Assert.assertTrue(ReusDataInput.isFileDownloaded("ExportData.xlsx"), "Didn't downloaded successfully")
@@ -573,8 +562,11 @@ public class ReusableMethodsAnalytics extends BaseClass{
 	}
 	@Keyword
 	public void  verifygraphMonthsDetails() {
-		WebUI.refresh()
-		WebUI.delay(15)
+		/*WebUI.refresh()
+		WebUI.delay(15)*/
+		
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('Analytics/Graph/currentMonth'), GlobalVariable.minAngularWait)
 		DateTimeFormatter monthYearFormatter = DateTimeFormatter.ofPattern("MMM")
 
 		YearMonth thisMonth    = YearMonth.now()
@@ -867,6 +859,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 			WebUI.selectOptionByLabel(findTestObject('Analytics/yearsCal/Peryear'), 'Per day', false, FailureHandling.STOP_ON_FAILURE)
 			WebUI.delay(3)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			double dOccupant = OccupantTotal/365
 			double dSqarefoot = SqarefootTotal/365
 
@@ -899,7 +892,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 	}
 	@Keyword
 	public void  Scope1scope2Calcuation(){
-		WebUI.delay(7)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		WebUI.verifyElementPresent(findTestObject('Analytics/ElementPre/h4_CARBON CONSUMPTION'),3)
 		WebUI.verifyElementPresent(findTestObject('Analytics/ElementPre/th_Limited Scope 1'),3)
@@ -926,6 +919,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 			WebUI.selectOptionByLabel(findTestObject('Analytics/yearsCal/Peryear'),'Per month', false, FailureHandling.STOP_ON_FAILURE)
 			WebUI.delay(3)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			double energyoccupantMTCO2eScope1 = EnergyoccupantMTCO2eScope1/12
 			double energyoccupantMTCO2eScope2 = EnergyoccupantMTCO2eScope2/12
 			double energysqFootMTCO2eScope1 = EnergysqFootMTCO2eScope1/12
@@ -973,6 +967,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 			WebUI.selectOptionByLabel(findTestObject('Analytics/yearsCal/Peryear'), 'Per day', false, FailureHandling.STOP_ON_FAILURE)
 			WebUI.delay(3)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 			String dEnergyOccupantMTCO2eScope1 = WebUI.getText(findTestObject('Analytics/yearsCal/EnergyOccupantMTCO2eScope1'))
 			String dEnergyOccupantMTCO2eScope2 = WebUI.getText(findTestObject('Analytics/yearsCal/EnergyOccupantMTCO2eScope2'))
@@ -1019,7 +1014,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 			WebUI.selectOptionByLabel(findTestObject('Analytics/yearsCal/Peryear'),'Per month', false, FailureHandling.STOP_ON_FAILURE)
 			WebUI.delay(3)
-
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			double mOccupant = OccupantTotal/12
 			double mSqarefoot = SqarefootTotal/12
 
@@ -1040,6 +1035,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 			WebUI.selectOptionByLabel(findTestObject('Analytics/yearsCal/Peryear'), 'Per day', false, FailureHandling.STOP_ON_FAILURE)
 			WebUI.delay(3)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			double dOccupant = OccupantTotal/365
 			double dSqarefoot = SqarefootTotal/365
 
