@@ -294,7 +294,8 @@ public class ReusableMethodsLogin extends BaseClass{
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.scrollToElement(findTestObject('Page_Arc dashboard/logout'), 2)
 		WebUI.click(findTestObject('Page_Arc dashboard/logout'))
-		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		
 	}
 

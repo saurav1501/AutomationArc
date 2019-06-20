@@ -15,7 +15,6 @@ import internal.GlobalVariable as GlobalVariable
 
 try {
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.navigateToEmession'(GlobalVariable.BDataInput, GlobalVariable.rowNumTwo)
-	
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.updateUnitKGkbtu'(GlobalVariable.BDataInput, GlobalVariable.rowNumTwo)
 	
 } catch (Throwable t) {

@@ -4809,7 +4809,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('DataInput/Survey/CopySurveyLink'))
 		WebUI.delay(2)
 		WebUI.click(findTestObject('DataInput/Survey/English'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		for( int rowNum=2;rowNum<=5;rowNum++)
 		{
 			if(rowNum==2)
@@ -4829,10 +4829,10 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				r.keyPress(KeyEvent.VK_T);
 				r.keyRelease(KeyEvent.VK_CONTROL)
 				r.keyRelease(KeyEvent.VK_T)
-				WebUI.delay(7)
+				WebUI.delay(4)
 				//To switch to the new tab
 				WebUI.switchToWindowIndex(1)
-				WebUI.delay(2)
+				WebUI.delay(4)
 				r.keyPress(KeyEvent.VK_CONTROL)
 				r.keyPress(KeyEvent.VK_V)
 				r.keyRelease(KeyEvent.VK_CONTROL)
@@ -4840,7 +4840,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				WebUI.delay(2)
 				r.keyPress(KeyEvent.VK_ENTER)
 				r.keyRelease(KeyEvent.VK_ENTER)
-				WebUI.delay(17)
+				WebUI.delay(10)
 
 				WebUI.click(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'))
 				int it=1;
@@ -6341,23 +6341,27 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		WebUI.scrollToElement(findTestObject('DataInput/Survey/a_ Data Input'),5)
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
-
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
+		
+		WebUI.waitForElementPresent(findTestObject('Analytics/17/Building Settings'), 60)
+		WebUI.waitForElementVisible(findTestObject('Analytics/17/Building Settings'), 60)
 		WebUI.waitForElementClickable(findTestObject('Analytics/17/Building Settings'), 60)
-		WebUI.doubleClick(findTestObject('Analytics/17/Building Settings'))
+		WebUI.click(findTestObject('Analytics/17/Building Settings'))
+		WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
+		
 		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/Setting/Setting'), 60)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Setting/Setting'), 60)
-		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Setting/Setting'), 10)
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Setting/Setting'), 3)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Setting/Setting'), 60)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Setting/Setting'), 2)
 		WebUI.click(findTestObject('Object Repository/DataInput/Setting/Setting'))
+		WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Setting/a_Emission Factor'), 10)
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Setting/a_Emission Factor'), 3)
 		WebUI.click(findTestObject('Object Repository/DataInput/Setting/a_Emission Factor'))
+		WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		WebUI.waitForElementClickable(findTestObject('Analytics/17/Manually Enter Emission'), 10)

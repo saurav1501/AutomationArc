@@ -299,6 +299,8 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		//WebUI.delay(5)
 		WebUI.click(findTestObject('SubmitReview/a_ Review'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/SubmitReview/button_Continue'), GlobalVariable.minAngularWait)
+		
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/SubmitReviewText')), "Submit for Review",false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/CertificationTextCity')), "Certification", false, FailureHandling.CONTINUE_ON_FAILURE)
 		/*(1..28).each {
@@ -314,7 +316,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		 //WebUI.refresh()
 		 Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/SubmitReview/SubmitReviewTextAreaAdditionalMessage'),'value'),'Submit Certification Test Message')
 		 Assert.assertEquals(WebUI.getText(findTestObject('Object Repository/SubmitReview/VerifyTotalCredits')),'38')*/
-		boolean reviewflag=WebUI.waitForElementClickable(findTestObject('Object Repository/SubmitReview/button_Continue'), 40)
+		boolean reviewflag=WebUI.waitForElementClickable(findTestObject('Object Repository/SubmitReview/button_Continue'), GlobalVariable.minAngularWait)
 		if((reviewflag)){
 			WebUI.click(findTestObject('Object Repository/SubmitReview/button_Continue'))
 			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/CertificationTextSummaryCityProject')), "Certification", false, FailureHandling.CONTINUE_ON_FAILURE)
@@ -326,7 +328,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		}else{
 			WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 			WebUI.click(findTestObject('SubmitReview/a_ Review'))
-			WebUI.waitForElementClickable(findTestObject('Object Repository/SubmitReview/button_Continue'), 40)
+			WebUI.waitForElementClickable(findTestObject('Object Repository/SubmitReview/button_Continue'), GlobalVariable.minAngularWait)
 			WebUI.click(findTestObject('Object Repository/SubmitReview/button_Continue'))
 			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/CertificationTextSummaryCityProject')), "Certification", false, FailureHandling.CONTINUE_ON_FAILURE)
 			WebUI.setText(findTestObject('SubmitReview/input_form-control ng-untouche'), 'abhishekkumar@groupten.com')

@@ -1033,6 +1033,8 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('DataInput/WeightedOcc/Annual ridership'), GlobalVariable.minAngularWait)
+		
 
 		WebUI.waitForElementClickable(findTestObject('DataInput/WeightedOcc/Annual ridership'), GlobalVariable.minAngularWait)
 
@@ -1155,6 +1157,7 @@ public class ReusableMethodsManage extends BaseClass {
 		//ReusNavigate.navigateToManageSection()
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		
 		WebUI.waitForElementClickable(findTestObject('Manage/ProjectDetailVerification/projectName'), GlobalVariable.minAngularWait)
 
 
@@ -1199,10 +1202,12 @@ public class ReusableMethodsManage extends BaseClass {
 
 
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
-		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('DataInput/WeightedOcc/Annual ridership'), GlobalVariable.minAngularWait)
 
-		WebUI.waitForElementClickable(findTestObject('DataInput/WeightedOcc/Annual ridership'), GlobalVariable.maxAngularWait)
-
+		WebUI.waitForElementClickable(findTestObject('DataInput/WeightedOcc/Annual ridership'), GlobalVariable.minAngularWait)
+        WebUI.scrollToElement(findTestObject('DataInput/WeightedOcc/Annual ridership'), GlobalVariable.maxAngularWait)
+		
 		WebUI.clearText(findTestObject('DataInput/WeightedOcc/Annual ridership'))
 		WebUI.sendKeys(findTestObject('DataInput/WeightedOcc/Annual ridership'),'SDF');
 		WebUI.click(findTestObject('DataInput/WeightedOcc/Full time staff at stati'));
@@ -1415,7 +1420,9 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'),GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'),GlobalVariable.minAngularWait)
+		
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
@@ -3235,7 +3242,7 @@ public class ReusableMethodsManage extends BaseClass {
 		r.keyPress(KeyEvent.VK_T)
 		r.keyRelease(KeyEvent.VK_CONTROL)
 		r.keyRelease(KeyEvent.VK_T)
-		WebUI.delay(4)
+		WebUI.delay(2)
 		//To switch to the new tab
 		WebUI.switchToWindowIndex(1)
 		r.keyPress(KeyEvent.VK_CONTROL)
@@ -3245,7 +3252,6 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(2)
 		r.keyPress(KeyEvent.VK_ENTER)
 		r.keyRelease(KeyEvent.VK_ENTER)
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
         WebUI.delay(10)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Manage/Setting/projectTitleOnAnimationPage')), name, false, FailureHandling.CONTINUE_ON_FAILURE)
 		//Assert.assertEquals(WebUI.getText(findTestObject('Manage/Setting/projectTitleOnAnimationPage')),name)
