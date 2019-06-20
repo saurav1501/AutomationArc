@@ -2857,7 +2857,6 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Manage/CertificationAndScore/a_ Score Version'))
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Loaders/ProjectDashboardLoader'), 30, FailureHandling.CONTINUE_ON_FAILURE)
-
 		String scoreVersion = WebUI.getText(findTestObject('Manage/CertificationAndScore/h3_Arc score v2.0'))
 		WebUI.verifyMatch(scoreVersion, "Arc score for cities version 2.0",false, FailureHandling.CONTINUE_ON_FAILURE)
 		print scoreVersion
@@ -2865,7 +2864,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyMatch(scoreStatus, "You are all up to date!",false,FailureHandling.CONTINUE_ON_FAILURE )
 		print scoreStatus
 	}
-
+      
 
 	@Keyword
 	public void scoreVersionVerificationCommunity(){
