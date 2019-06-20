@@ -500,14 +500,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 	//Addenum to validate the city comm projects
 	@Keyword
 	public void verifyAgreementLOProjectsAgreementTypeCityComm(){
-		//WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		//WebUI.delay(4)
-		//WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Manage'))
-		//WebUI.delay(2)
-		//WebUI.scrollToElement(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'),5)
-		WebUI.delay(2)
-		//WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'))
-		//WebUI.delay(6)
+		
 		String type = WebUI.getText(findTestObject('Manage/VerifyAgreementFile/agreementTypeLO'))
 		WebUI.verifyMatch(type,"Addendum" ,false)
 		WebUI.verifyElementPresent(findTestObject('LEEDOnline/Manage/Arc'), 12)
