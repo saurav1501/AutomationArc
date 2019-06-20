@@ -7,15 +7,15 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//*[@class=&quot;dropdown floatr&quot;]</value>
-      </entry>
-      <entry>
-         <key>CSS</key>
-         <value>#sideNavContainer > md-sidenav > div > div.meterList-title--wrapper > div > button</value>
+         <value>//*[@class=&quot;tippy_init dropdown-toggle btn-default btn-settings&quot;]</value>
       </entry>
       <entry>
          <key>BASIC</key>
          <value>//button[@class = 'tippy_init dropdown-toggle btn-default btn-settings' and @ref_element = 'Object Repository/DataInput/CreateMeterBuilding/iframe_datainput-widget']</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>#sideNavContainer > md-sidenav > div > div.meterList-title--wrapper > div > button</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

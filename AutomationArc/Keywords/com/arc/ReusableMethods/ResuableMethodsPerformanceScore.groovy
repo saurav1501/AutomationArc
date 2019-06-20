@@ -382,16 +382,16 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 	public void PerformanceScoreAdminToolOtherNone(String sheetName,int rowNum) throws IOException, InterruptedException {
 		String projectId = data.getCellData(sheetName,"ProjectID",rowNum)
 		WebUI.click(findTestObject('PerformanceScore/RecomputeScoreButton'))
-		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.setText(findTestObject('PerformanceScore/PorjectId'),projectId)
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('PerformanceScore/RecomputeScore'))
-		WebUI.delay(30)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/Score/EnergyScore'), 40)
 		WebUI.closeWindowIndex(1)
 		WebUI.delay(2)
 		WebUI.switchToWindowIndex(0)
-		WebUI.delay(2)
+		
 
 	}
 
@@ -498,11 +498,11 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 	public void genratePerformanceScoreAdminToolCityComLEED(String sheetName,int rowNum) throws IOException, InterruptedException {
 		String projectId = data.getCellData(sheetName,"ProjectID",rowNum)
 		WebUI.click(findTestObject('PerformanceScore/RecomputeScoreButton'))
-		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.setText(findTestObject('PerformanceScore/PorjectId'),projectId)
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('PerformanceScore/RecomputeScore'))
-		WebUI.delay(15)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/Score/EnergyScore'), 60)
 		String energyScore = WebUI.getText(findTestObject('PerformanceScore/Score/EnergyScore'))
 		String waterScore = WebUI.getText(findTestObject('PerformanceScore/Score/WaterSocre'))
@@ -530,13 +530,13 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		//Search the project
 		reusableMethodsSearch.searchProgram(sheetName,rowNum)
 
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
 		if((WebUI.getAttribute(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'), "class", FailureHandling.OPTIONAL).equals("pl20 collapsed"))){
 			println "Scores"
-			WebUI.delay(2)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 			WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
-			WebUI.delay(2)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		}
 		//WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
@@ -627,7 +627,9 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		//WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TotalPerformanceScore'),10)
-		//WebUI.delay(15)
+		WebUI.delay(15)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForJQueryLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		//Verifying the Performance score
 		String totalperformaceScore = WebUI.getText(findTestObject('PerformanceScore/Score/TotalPerformanceScore'))
@@ -636,35 +638,35 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Energy'))
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-		//WebUI.delay(12)
+		WebUI.delay(12)
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/EnergyPerScore'),10)
 		String energyperScore = WebUI.getText(findTestObject('PerformanceScore/Score/EnergyPerScore'))
 		WebUI.verifyMatch(energyperScore , energyScore, false)
 
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Water'))
-		//WebUI.delay(12)
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.delay(12)
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/WaterPerScore'),10)
 		String waterpfScore = WebUI.getText(findTestObject('PerformanceScore/Score/WaterPerScore'))
 		WebUI.verifyMatch(waterpfScore ,waterScore, false)
 
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Waste'))
-		//WebUI.delay(12)
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.delay(12)
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/WastePerSocre'),10)
 		String wastepfScore = WebUI.getText(findTestObject('PerformanceScore/Score/WastePerSocre'))
 		WebUI.verifyMatch(wastepfScore ,wasteScore , false)
 
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Transportation'))
-		//WebUI.delay(12)
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.delay(12)
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TransportperScore'),10)
 		String transportperScore = WebUI.getText(findTestObject('PerformanceScore/Score/TransportperScore'))
 		WebUI.verifyMatch(transportperScore ,transportScore, false)
 
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Human Experience'))
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-		//WebUI.delay(12)
+		WebUI.delay(12)
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/HumanExpScore'),10)
 		String humanExperience = WebUI.getText(findTestObject('PerformanceScore/Score/HumanExpScore'))
 		WebUI.verifyMatch(humanExperience ,humanExpScore, false)
@@ -1328,12 +1330,15 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 	@Keyword
 	public void totalPerformanceScoreToolTipOtherNone() throws IOException, InterruptedException {
 		WebUI.setViewPortSize(1024,768)
-		WebUI.delay(5)
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Total'))
-		WebUI.delay(10)
+		//WebUI.delay(10)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForElementClickable(findTestObject('Manage/CityCom/New/PerformanceToolTip'),30)
 		WebUI.click(findTestObject('Manage/CityCom/New/PerformanceToolTip'))
-		WebUI.delay(5)
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		//WebUI.verifyElementPresent(findTestObject('Manage/CityCom/New/LEEDPerformance scoreThe total'), 22)
 		WebUI.verifyElementVisible(findTestObject('Manage/CityCom/New/CategoryScore'), FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyElementVisible(findTestObject('Manage/CityCom/New/Performance scoreThe total'), FailureHandling.CONTINUE_ON_FAILURE)
@@ -1341,13 +1346,12 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 
 		WebUI.waitForElementClickable(findTestObject('Manage/CityCom/New/PerformanceToolTip'),30)
 		WebUI.click(findTestObject('Manage/CityCom/New/PerformanceToolTip'))
-		WebUI.delay(5)
-
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.verifyElementNotPresent(findTestObject('Manage/CityCom/New/CategoryScore'),3)
 		WebUI.verifyElementNotPresent(findTestObject('Manage/CityCom/New/Performance scoreThe total'),3)
-
 		WebUI.setViewPortSize(1366,1280)
-		WebUI.delay(5)
-
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 	}
 }

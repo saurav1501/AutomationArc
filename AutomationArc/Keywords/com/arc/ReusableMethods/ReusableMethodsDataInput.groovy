@@ -455,7 +455,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), "Energy Meter via upload", FailureHandling.STOP_ON_FAILURE)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/DetailsTab'))
-		WebUI.delay(5)
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Graphs/EnergyMeterUnitDisplayedOnGraph')),"kBtu" , false)
 		getGraphReading(sheetName, "Reading1")
 
@@ -466,12 +467,12 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	public void verifyWaterGraphpopulatedAfterExcelUpload(String sheetName){
 		//WebUI.delay(15)
 		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
-		WebUI.delay(4)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/WaterMeterViaFileUpload'))
-		WebUI.delay(6)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), "Water meter via upload", FailureHandling.STOP_ON_FAILURE)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/DetailsTab'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Graphs/WaterMeterUnitDisplayedOnGraph')), "gal", false)
 		getGraphReading(sheetName, "Reading1")
 
@@ -3414,21 +3415,26 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		else
 		{
 			WebUI.click(findTestObject('DataInput/CityCom/a_ Data Input'))
-			WebUI.delay(5)
+			//WebUI.delay(5)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 			WebUI.click(findTestObject('DataInput/CityCom/span_Energy'))
-			WebUI.delay(10)
+			//WebUI.delay(10)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 			WebUI.click(findTestObject('DataInput/CityCom/button_Add Year'))
-			WebUI.delay(8)
+			//WebUI.delay(8)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 			WebUI.click(findTestObject('DataInput/CityCom/button_Previous Year'))
-			WebUI.delay(2)
+			//WebUI.delay(2)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			WebUI.setText(findTestObject('DataInput/CityCom/TextboxValue2'), carbonfootprint)
-			WebUI.delay(2)
+			//WebUI.delay(2)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			WebUI.click(findTestObject('DataInput/CityCom/SaveButton2'))
-			WebUI.delay(7)
-
+			//WebUI.delay(7)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 			WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CityCom/DeleteButton',[index: 2]), 60)
 
-			WebUI.delay(4)
+			//WebUI.delay(4)
 			//	Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/TextboxValue2'),"value"), carbonfootprint,"Not Valid")
 		}
 	}
@@ -3655,35 +3661,41 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		else
 		{
 
-			WebUI.delay(5)
+			//WebUI.delay(5)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 			WebUI.click(findTestObject('DataInput/CityCom/a_ Data Input'))
-			WebUI.delay(2)
+			//WebUI.delay(2)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			WebUI.doubleClick(findTestObject('DataInput/CityCom/span_Water'))
-			WebUI.delay(10)
+			//WebUI.delay(10)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 			WebUI.scrollToElement(findTestObject('DataInput/CityCom/button_Add Year'), 3)
 			WebUI.click(findTestObject('DataInput/CityCom/button_Add Year'))
-			WebUI.delay(8)
-
+			//WebUI.delay(8)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 			WebUI.scrollToElement(findTestObject('DataInput/CityCom/button_Previous Year'), 2)
 			WebUI.click(findTestObject('DataInput/CityCom/button_Previous Year'))
-			WebUI.delay(2)
-
+			//WebUI.delay(2)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 			WebUI.setText(findTestObject('DataInput/CityCom/TextboxValue2'), WaterUseGal)
-			WebUI.delay(2)
+			//WebUI.delay(2)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/Score100/span_Per Year'), 10)
 			WebUI.click(findTestObject('DataInput/CityCom/Score100/span_Per Year'))
-			WebUI.delay(2)
+			//WebUI.delay(2)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/Score100/a_Per Day'), 10)
 			WebUI.click(findTestObject('DataInput/CityCom/Score100/a_Per Day'))
 
-			WebUI.delay(3)
+			//WebUI.delay(3)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			WebUI.click(findTestObject('DataInput/CityCom/SaveButton2'))
-			WebUI.delay(6)
-
+			//WebUI.delay(6)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 			WebUI.waitForElementNotClickable(findTestObject('DataInput/CityCom/TextboxValue2'), 60)
-
-			WebUI.delay(10)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+			//WebUI.delay(10)
 			Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/TextboxValue2'),"value"),WaterUseGal,"Not Valid")
 		}
 
@@ -3869,37 +3881,44 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		else
 		{
 			WebUI.click(findTestObject('DataInput/CityCom/a_ Data Input'))
-			WebUI.delay(2)
+			//WebUI.delay(2)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			WebUI.click(findTestObject('DataInput/CityCom/span_Waste'))
-			WebUI.delay(5)
+			//WebUI.delay(5)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 			WebUI.click(findTestObject('DataInput/CityCom/GwAddYear'))
-			WebUI.delay(8)
+			//WebUI.delay(8)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 			WebUI.click(findTestObject('DataInput/CityCom/button_Previous Year'))
-			WebUI.delay(2)
+			//WebUI.delay(2)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			WebUI.scrollToElement(findTestObject('DataInput/CityCom/CWTextboxValue1'),2)
 			WebUI.sendKeys(findTestObject('DataInput/CityCom/CWTextboxValue2'), wasteGenerationintensity)
-			WebUI.delay(1)
+			//WebUI.delay(1)
 			WebUI.click(findTestObject('DataInput/CityCom/SaveButton2'))
-			WebUI.delay(6)
-
+			//WebUI.delay(6)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 			WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CityCom/DeleteButton',[index: 2]), 60)
 
 			String wastediversion  = data.getCellData(sheetName, "Landfilldiversion", rowNum)
 
 			WebUI.scrollToElement(findTestObject('DataInput/CityCom/DwAddYear'),2)
-			WebUI.delay(3)
+			//WebUI.delay(3)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 			WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/DwAddYear'),30)
 			WebUI.click(findTestObject('DataInput/CityCom/DwAddYear'))
-			WebUI.delay(6)
+			//WebUI.delay(6)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 			WebUI.scrollToElement(findTestObject('DataInput/CityCom/DPreviousYear'),2)
 			WebUI.click(findTestObject('DataInput/CityCom/DPreviousYear'))
-			WebUI.delay(2)
-
+			//WebUI.delay(2)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			WebUI.sendKeys(findTestObject('DataInput/CityCom/dWTextboxValue2'), wastediversion)
-			WebUI.delay(4)
+			//WebUI.delay(4)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			WebUI.click(findTestObject('DataInput/CityCom/SaveButton4'))
-			WebUI.delay(6)
-
+			//WebUI.delay(6)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 			WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CityCom/DeleteButton',[index: 4]), 60)
 			/*	WebUI.delay(10)
 			 Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/dWTextboxValue2'),"value"),wastediversion,"Not Valid")
@@ -4121,20 +4140,19 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		else
 		{
 			WebUI.click(findTestObject('DataInput/CityCom/a_ Data Input'))
-			WebUI.delay(2)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			WebUI.click(findTestObject('DataInput/CityCom/span_Transportation'))
-			WebUI.delay(10)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 			WebUI.scrollToElement(findTestObject('DataInput/CityCom/button_Add Year'), 4)
 			WebUI.click(findTestObject('DataInput/CityCom/button_Add Year'))
-			WebUI.delay(8)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 			WebUI.scrollToElement(findTestObject('DataInput/CityCom/button_Previous Year'),2)
 			WebUI.click(findTestObject('DataInput/CityCom/button_Previous Year'))
-			WebUI.delay(2)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			WebUI.sendKeys(findTestObject('DataInput/CityCom/TextboxValue2'), VMTPercapita)
 			WebUI.click(findTestObject('DataInput/CityCom/SaveButton2'))
-			WebUI.delay(6)
-			//Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/TextboxValue2'),"value"),VMTPercapita,"Not Valid")
-
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+			
 		}
 
 	}
@@ -4295,25 +4313,25 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		WebUI.waitForElementClickable(findTestObject('DataInput/Exp/Health_Add Year'), 60)
 		WebUI.click(findTestObject('DataInput/Exp/Health_Add Year'))
-		WebUI.delay(8)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.scrollToElement(findTestObject('DataInput/Exp/Health_Previous Year'),2)
 		WebUI.waitForElementClickable(findTestObject('DataInput/Exp/Health_Previous Year'), 60)
 		WebUI.click(findTestObject('DataInput/Exp/Health_Previous Year'))
-		WebUI.delay(7)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
 		WebUI.scrollToElement(findTestObject('DataInput/Exp/AQIDays_Add Year'),10)
 		WebUI.waitForElementPresent(findTestObject('DataInput/Exp/AQIDays_Add Year'), 30)
 		WebUI.waitForElementVisible(findTestObject('DataInput/Exp/AQIDays_Add Year'), 30)
 		WebUI.waitForElementClickable(findTestObject('DataInput/Exp/AQIDays_Add Year'), 60)
 		WebUI.click(findTestObject('DataInput/Exp/AQIDays_Add Year'))
-		WebUI.delay(7)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
 		WebUI.scrollToElement(findTestObject('DataInput/Exp/AQIDays_Previous Year'),5)
 		WebUI.waitForElementPresent(findTestObject('DataInput/Exp/AQIDays_Previous Year'), 30)
 		WebUI.waitForElementVisible(findTestObject('DataInput/Exp/AQIDays_Previous Year'), 30)
 		WebUI.waitForElementClickable(findTestObject('DataInput/Exp/AQIDays_Previous Year'), 60)
 		WebUI.click(findTestObject('DataInput/Exp/AQIDays_Previous Year'))
-		WebUI.delay(7)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
 		String zero="0";
 		if(MedianAQI.equals(zero))
@@ -4327,10 +4345,10 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 			WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton14'),60)
 			WebUI.click(findTestObject('DataInput/CityCom/SaveButton14'))
-			WebUI.delay(6)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 			WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton16'),60)
 			WebUI.click(findTestObject('DataInput/CityCom/SaveButton16'))
-			WebUI.delay(6)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
 		}
 	}
@@ -4341,29 +4359,30 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		/***************HighSchool and Bachelors ******************************************/
 		WebUI.click(findTestObject('DataInput/CityCom/a_ Data Input'))
-		WebUI.delay(2)
+		//WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('DataInput/CityCom/span_Human Experience'))
-		WebUI.delay(5)
+		//WebUI.delay(5)
 		WebUI.waitForPageLoad(10)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/EducationAddYear'), 60)
 
 		WebUI.click(findTestObject('DataInput/CityCom/EducationAddYear'))
-		WebUI.delay(8)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.scrollToElement(findTestObject('DataInput/CityCom/EducationAddPrevYear'),2)
 		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/EducationAddPrevYear'), 60)
 		WebUI.click(findTestObject('DataInput/CityCom/EducationAddPrevYear'))
-		WebUI.delay(5)
-
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.scrollToElement(findTestObject('DataInput/CityCom/BachelorAddYear'), 2)
 		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/BachelorAddYear'),60)
 		WebUI.click(findTestObject('DataInput/CityCom/BachelorAddYear'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForElementPresent(findTestObject('DataInput/CityCom/BachelorAddPrevYear'), 20)
 		WebUI.waitForElementVisible(findTestObject('DataInput/CityCom/BachelorAddPrevYear'), 20)
 		WebUI.scrollToElement(findTestObject('DataInput/CityCom/BachelorAddPrevYear'),5)
 		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/BachelorAddPrevYear'),60)
 		WebUI.click(findTestObject('DataInput/CityCom/BachelorAddPrevYear'))
-		WebUI.delay(8)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		String srowNum = data.getCellData(sheetName,"rowNum",2)
 		int rowNum = Integer.parseInt(srowNum)
 		String HighSchool  = data.getCellData(sheetName, "HighSchool", rowNum)
@@ -4382,10 +4401,10 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 			WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton2'),60)
 			WebUI.click(findTestObject('DataInput/CityCom/SaveButton2'))
-			WebUI.delay(6)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 			WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton4'),60)
 			WebUI.click(findTestObject('DataInput/CityCom/SaveButton4'))
-			WebUI.delay(6)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
 		}
 	}
@@ -4402,24 +4421,24 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.scrollToElement(findTestObject('DataInput/CityCom/EquAddYear'), 2)
 		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/EquAddYear'), 60)
 		WebUI.click(findTestObject('DataInput/CityCom/EquAddYear'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForElementPresent(findTestObject('DataInput/CityCom/EquAddPrevYear'), 20)
 		WebUI.waitForElementVisible(findTestObject('DataInput/CityCom/EquAddPrevYear'), 20)
 		WebUI.scrollToElement(findTestObject('DataInput/CityCom/EquAddPrevYear'), 2)
 		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/EquAddPrevYear'), 60)
 		WebUI.click(findTestObject('DataInput/CityCom/EquAddPrevYear'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
 		WebUI.scrollToElement(findTestObject('DataInput/CityCom/GiniAddYear'), 2)
 		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/GiniAddYear'), 60)
 		WebUI.click(findTestObject('DataInput/CityCom/GiniAddYear'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForElementPresent(findTestObject('DataInput/CityCom/GiniAddPrevYear'), 20)
 		WebUI.waitForElementVisible(findTestObject('DataInput/CityCom/GiniAddPrevYear'), 20)
 		WebUI.scrollToElement(findTestObject('DataInput/CityCom/GiniAddPrevYear'), 2)
 		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/GiniAddPrevYear'), 60)
 		WebUI.click(findTestObject('DataInput/CityCom/GiniAddPrevYear'))
-		WebUI.delay(7)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
 		String zero="0";
 		if(Gini.equals(zero))
@@ -4433,10 +4452,10 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 			WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton6'),60)
 			WebUI.click(findTestObject('DataInput/CityCom/SaveButton6'))
-			WebUI.delay(6)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 			WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton8'),60)
 			WebUI.click(findTestObject('DataInput/CityCom/SaveButton8'))
-			WebUI.delay(6)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
 		}
 	}
@@ -4455,24 +4474,22 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.scrollToElement(findTestObject('DataInput/CityCom/ProsperityAddYear'), 2)
 		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/ProsperityAddYear'), 60)
 		WebUI.click(findTestObject('DataInput/CityCom/ProsperityAddYear'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
 		WebUI.scrollToElement(findTestObject('DataInput/CityCom/ProsperityAddPrevYear'), 2)
 		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/ProsperityAddPrevYear'), 60)
 		WebUI.click(findTestObject('DataInput/CityCom/ProsperityAddPrevYear'))
-		WebUI.delay(7)
-
-
-
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		
 		WebUI.scrollToElement(findTestObject('DataInput/Exp/Unemployment_Add Year'), 2)
 		WebUI.waitForElementClickable(findTestObject('DataInput/Exp/Unemployment_Add Year'), 60)
 		WebUI.click(findTestObject('DataInput/Exp/Unemployment_Add Year'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
 		WebUI.scrollToElement(findTestObject('DataInput/Exp/Unemployment_Previous Year'), 2)
 		WebUI.waitForElementClickable(findTestObject('DataInput/Exp/Unemployment_Previous Year'), 60)
 		WebUI.click(findTestObject('DataInput/Exp/Unemployment_Previous Year'))
-		WebUI.delay(7)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
 		String zero="0";
 		if(MedianHouseholdIncome.equals(zero))
@@ -4482,20 +4499,14 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		else
 		{
 
-
 			WebUI.sendKeys(findTestObject('DataInput/CityCom/HTextboxValue10'), MedianHouseholdIncome)
 			WebUI.sendKeys(findTestObject('DataInput/CityCom/HTextboxValue12'), hprosUnemployment)
-
-
 			WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton10'),60)
 			WebUI.click(findTestObject('DataInput/CityCom/SaveButton10'))
-			WebUI.delay(5)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 			WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton12'),60)
 			WebUI.click(findTestObject('DataInput/CityCom/SaveButton12'))
-			WebUI.delay(5)
-
-
-
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		}
 	}
 
@@ -4506,16 +4517,16 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		String srowNum = data.getCellData(sheetName, "rowNum", 2)
 		int rowNum = Integer.parseInt(srowNum)
 		String violentCrime  = data.getCellData(sheetName, "ViolentCrime", rowNum)
-		WebUI.delay(6)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.scrollToElement(findTestObject('DataInput/Exp/Crime_Add Year'), 2)
 		WebUI.waitForElementClickable(findTestObject('DataInput/Exp/Crime_Add Year'), 60)
 		WebUI.click(findTestObject('DataInput/Exp/Crime_Add Year'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
 		WebUI.scrollToElement(findTestObject('DataInput/Exp/Crime_Previous Year'), 2)
 		WebUI.waitForElementClickable(findTestObject('DataInput/Exp/Crime_Previous Year'), 60)
 		WebUI.click(findTestObject('DataInput/Exp/Crime_Previous Year'))
-		WebUI.delay(7)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
 		String zero="0";
 		if(violentCrime.equals(zero))
@@ -4529,7 +4540,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 			WebUI.sendKeys(findTestObject('DataInput/CityCom/HTextboxValue18'), violentCrime)
 			WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton18'),60)
 			WebUI.click(findTestObject('DataInput/CityCom/SaveButton18'))
-			WebUI.delay(10)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
 			/*	Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/TextboxValue1'),"value"), reading1,"Not Valid")
 			 Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/TextboxValue2'),"value"),reading2,"Not Valid")

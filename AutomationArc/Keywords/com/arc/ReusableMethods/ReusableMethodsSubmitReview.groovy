@@ -604,7 +604,8 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		String prjId   =   data.getCellData(sheetName, "ProjectID", rowNum)
 
 		WebUI.click(findTestObject('Manage/adminToolNew/a_ Certification'))
-		WebUI.delay(3)
+		//WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.setText(findTestObject('Manage/adminToolNew/leedId'),prjId )
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/Manage/adminToolNew/ratingSystemDownArrow'))
@@ -612,7 +613,6 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.scrollToElement(findTestObject('Add_Project_Details/Star/a_STAR (STAR)'), 2)
 		WebUI.click(findTestObject('Add_Project_Details/Star/a_STAR (STAR)'))
 		WebUI.delay(2)
-
 		WebUI.click(findTestObject('Add_Project_Details/Star/span_platinum_caret'))
 		WebUI.delay(2)
 		def star = [3, 4, 5]
@@ -651,7 +651,8 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.setText(findTestObject('Object Repository/Manage/adminToolNew/certificationPoints'),"80" )
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/Manage/adminToolNew/button_Save'))
-		WebUI.delay(10)
+		//WebUI.delay(10)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.closeWindowIndex(1)
 		WebUI.delay(2)
 		WebUI.switchToWindowIndex(0)
@@ -724,7 +725,8 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		robot.keyPress(KeyEvent.VK_ENTER)
 		robot.keyRelease(KeyEvent.VK_ENTER)
 		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),20)
-		WebUI.delay(10)
+		//WebUI.delay(10)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		String reportingDate= WebUI.getAttribute(findTestObject('Object Repository/SubmitReview/ReviewDate'),'value')
 		//Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/SubmitReview/ReviewDate'),'value'), '02/02/2017')
 

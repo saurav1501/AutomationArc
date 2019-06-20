@@ -11,7 +11,7 @@ try {
 	   int rowSize = ThreadLocalRandom.current().nextInt(0, rowNumSi)
 	   int rowNum = rowSize + 5 
 	   println rowNum
-	   KeywordUtil.logInfo("Random Value"+rowNum)
+	   KeywordUtil.("Random Value"+rowNum)
 	   
 	 //  CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToCities'()
 	   CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsAddNewProject.addNewProjectCityScore'(GlobalVariable.CitySheet,GlobalVariable.rowNumFour=rowNum)

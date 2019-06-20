@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify the details added via the admin tool in manage certification section.</description>
+   <name>CertificationDetailsVerificationAddViaAdminToolTest</name>
+   <tag>Verify Certification Details</tag>
+   <comment></comment>
+   <testCaseGuid>60773697-3a9b-44bf-88ab-873bf1c83ea1</testCaseGuid>
+</TestCaseEntity>

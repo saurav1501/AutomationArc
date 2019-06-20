@@ -163,7 +163,7 @@
    <testCaseLink>
       <guid>0b278bd1-36cd-4281-99d9-bb820994c47d</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/MyCities/LEEDForCities/BasePointTotalScoreTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
