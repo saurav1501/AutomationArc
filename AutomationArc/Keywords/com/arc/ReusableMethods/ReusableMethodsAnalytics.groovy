@@ -2272,7 +2272,9 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 		WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'), 10)
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
-		WebUI.delay(12)
+	
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.delay(6)
 
 		String KWHReading = data.getCellData(sheetName,"EnergykWh",2)
 		String noOfDays = data.getCellData(sheetName,"ENoOfDays",2)
@@ -2623,6 +2625,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 	public void annualcarbonemissionspersqft(String sheetName ,int rowNum) {
 
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.delay(4)
 
 		String KWHReading = data.getCellData(sheetName,"EnergykWh",2)
@@ -2659,6 +2662,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
 		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		String KWHReading = data.getCellData(sheetName,"EnergykWh",2)
 		String noOfDays = data.getCellData(sheetName,"ENoOfDays",2)
@@ -3484,8 +3488,9 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'), 10)
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
 		//WebUI.delay(12)
-		WebUI.waitForAngularLoad(120, FailureHandling.CONTINUE_ON_FAILURE)
-
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.delay(2)
+		
 		String totaldalilytransprot = WebUI.getText(findTestObject('Object Repository/Portfolio/CarbonVal/TotalPortfolio'))
 		String totaldalilyTransprot =  totaldalilytransprot.replace(',', '')
 

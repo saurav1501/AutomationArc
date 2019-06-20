@@ -125,7 +125,8 @@ public class ReusableMethodsPayment extends BaseClass{
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/ownerCountry'), ownerCountry, false)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/ratingSystem'), prjRating , false)
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/saveButtonProjectDetails'))
-		WebUI.delay(30)
+		
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 
 		//************* Select the yearly subscription *****************//
 		if(yearOfSubscription==1)

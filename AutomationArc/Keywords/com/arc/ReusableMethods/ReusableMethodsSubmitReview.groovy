@@ -144,10 +144,8 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 	//verify text 'Update operating hours and occupancy to generate score for all categories'
 	@Keyword
 	public void verifyOprHrsAndOccupancyUpdateMessageAtSubmitReviewPage(){
-		//WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		//WebUI.delay(1)
 		WebUI.click(findTestObject('SubmitReview/a_ Review'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/SubmitReviewText')), "Submit for Review", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/VerifyUpdateOprHrsAndOccupancyToGenerateScore')), "(Update operating hours and occupancy to generate score for all categories)", false, FailureHandling.CONTINUE_ON_FAILURE)
 

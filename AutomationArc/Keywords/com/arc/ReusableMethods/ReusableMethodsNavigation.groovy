@@ -22,12 +22,13 @@ public class ReusableMethodsNavigation {
 
 	@Keyword
 	public void navigateToBuilding() {
-		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/Page_Arc dashboard/a_ Buildings'), 10)
-		WebUI.delay(4)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ Buildings'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ My Buildings'))
 		String postNavigationLoginText = WebUI.getText(findTestObject('Object Repository/Page_Arc dashboard/span_My Buildings'))

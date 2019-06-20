@@ -79,7 +79,7 @@
    <testCaseLink>
       <guid>dd02c210-aca9-43b9-a3e1-8f2038b5aa9d</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/SubmitSurveyTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -595,7 +595,7 @@
    <testCaseLink>
       <guid>c4cce74c-c1b5-4a61-be0c-1f2286849b40</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Analytics/1.17/GramskWh/ChangeEmissionFactorUnitGramskWh_15_7Test</testCaseId>
    </testCaseLink>
    <testCaseLink>

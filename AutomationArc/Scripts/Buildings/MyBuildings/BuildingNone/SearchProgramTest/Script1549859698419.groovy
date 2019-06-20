@@ -24,7 +24,7 @@ try {
 	
 	//*************Serach By Project ID ****************************************************/
 	 CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
-	 WebUI.delay(10)
+	 WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	 
 } catch (Throwable t) {
 	System.out.println(t.getLocalizedMessage())

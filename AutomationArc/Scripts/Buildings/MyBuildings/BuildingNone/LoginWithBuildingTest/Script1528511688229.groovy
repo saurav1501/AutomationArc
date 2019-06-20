@@ -22,8 +22,7 @@ import internal.GlobalVariable as GlobalVariable
 //Login With Building
 
     try {
-	   // WebUI.verifyTextPresent('hello', false, FailureHandling.STOP_ON_FAILURE)
-		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToBuilding'()
+	   	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToBuilding'()
 	
     } catch (Throwable t) {
 		System.out.println(t.getLocalizedMessage())

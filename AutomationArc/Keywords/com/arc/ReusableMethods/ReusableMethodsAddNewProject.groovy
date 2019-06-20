@@ -69,7 +69,9 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/zipCode'), prjZip)
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/clickOnSignAgreement'))
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/addProjectNextButton'))
-		WebUI.delay(5)
+		
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		
 		//String PaymentPageText = WebUI.getText(findTestObject('Add_Project_Details/VerifyPaymentPage_ text'))
 		String PaymentPageText = WebUI.getText(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'))
 		WebUI.verifyMatch(PaymentPageText,'Project Setup',true)
@@ -81,7 +83,7 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		//System.out.println()
 		data.setCellData(sheetName,"ProjectID", rowNum, Project_ID)
 		data.setCellData(sheetName,"RegDate", rowNum, ReusableMethodsManage.verifyBillingDate())
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	}
 
 
