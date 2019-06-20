@@ -2301,12 +2301,12 @@ public class ReusableMethodsManage extends BaseClass {
 		String certiType= data.getCellData(sheetName, "CertiTypeForCertifiedProjects", rowNum)
 		String certiDate = commMethod.dateNew()
 		print certiDate
-		WebUI.delay(5)
+	    WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.doubleClick(findTestObject('Manage/CertificationAndScore/a_ Certifications'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.refresh()
-		//WebUI.delay(10)
-        WebUI.waitForAngularLoad(60)
+	
+        WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForElementClickable(findTestObject('Manage/CertificationAndScore/CertificationType'), 50)
 		String certificationType= WebUI.getText(findTestObject('Manage/CertificationAndScore/CertificationType'))
 		WebUI.verifyMatch(certificationType, certiType, false, FailureHandling.CONTINUE_ON_FAILURE)
