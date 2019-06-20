@@ -1023,9 +1023,9 @@ public class ReusableMethodsManage extends BaseClass {
 		/*	WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 		 WebUI.delay(2)*/
 
-		WebUI.delay(8)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		String annual_ridership  = data.getCellData(sheetName, "TMAnnualRidership", rowNum);
 		String full_time_staff  = data.getCellData(sheetName, "TFulltimestaff", rowNum);
@@ -1035,48 +1035,53 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.clearText(findTestObject('DataInput/WeightedOcc/Annual ridership'))
 		WebUI.sendKeys(findTestObject('DataInput/WeightedOcc/Annual ridership'), annual_ridership);
 		WebUI.click(findTestObject('DataInput/WeightedOcc/Full time staff at stati'));
-		Thread.sleep(3000);
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		print "Entering Annual Ridership Value"
 
 		WebUI.clearText(findTestObject('DataInput/WeightedOcc/Full time staff at stati'));
 		WebUI.sendKeys(findTestObject('DataInput/WeightedOcc/Full time staff at stati'), full_time_staff);
 		WebUI.click(findTestObject('DataInput/WeightedOcc/Annual ridership'));
-		Thread.sleep(3000);
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		print "Entering Full time Staff deatils"
 
 		WebUI.clearText(findTestObject('DataInput/WeightedOcc/Average time spent by ri'));
 		WebUI.sendKeys(findTestObject('DataInput/WeightedOcc/Average time spent by ri'), average_time);
 		WebUI.click(findTestObject('DataInput/WeightedOcc/Annual ridership'));
-		Thread.sleep(3000)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		print "Entering Average time spend by staff"
 
 		//Navigate to data input section for operating hour
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
-		WebUI.delay(20)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
-		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle')),"Building Settings", false)
 
 		//operating hours
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'), 5)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'))
-		Thread.sleep(3000)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		
 		WebUI.click(findTestObject('Object Repository/DataInput/OperatingHourDropdown'))
-		Thread.sleep(2000)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/OperatingHourDropdown14'),5)
 		//WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'), '168')
 		Thread.sleep(2000)
 		WebUI.click(findTestObject('Object Repository/DataInput/OperatingHourDropdown14'))
-		Thread.sleep(2000)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/OperatingHourDropdown')),"14 Hour", false,FailureHandling.CONTINUE_ON_FAILURE)
 		String opartinghours=WebUI.getText(findTestObject('Object Repository/DataInput/OperatingHourDropdown'))
 		String[] oprHrs=opartinghours.split("\\s")
 		System.out.println(opartinghours)
-		Thread.sleep(2000)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		
 		//navigate back to manage project
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
-		Thread.sleep(8000);
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		
 		WebUI.scrollToElement(findTestObject('DataInput/WeightedOcc/Annual ridership'), 5)
 		System.out.println("Fetching value");
 
@@ -1096,7 +1101,7 @@ public class ReusableMethodsManage extends BaseClass {
 		Double dfull_time=Double.parseDouble(full_time);
 		Double davg_time =Double.parseDouble(avg_time);
 		Double dopartinghours =Double.parseDouble(oprHrs[0]);
-		Thread.sleep(1000);
+		
 		long CWeightedOccupancy = Math.round((dfull_time+ ( dridership/365 * davg_time/60 )/(dopartinghours/2)));
 
 		//Converting long to string
@@ -1105,7 +1110,8 @@ public class ReusableMethodsManage extends BaseClass {
 		System.out.println(AWeightedOccupancy);
 		Assert.assertEquals(AWeightedOccupancy,CalOccpancy);
 		println "verified Weighted Daily Occupancy with all calcation"
-		Thread.sleep(2000)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		
 	}
 
 
@@ -1225,9 +1231,9 @@ public class ReusableMethodsManage extends BaseClass {
 
 		//ReusNavigate.navigateToManageSection()
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
-		WebUI.delay(6)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectName'),'value').equalsIgnoreCase(''))){
-			WebUI.delay(10)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		}
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectName'),'value'),prjName, false, FailureHandling.CONTINUE_ON_FAILURE)
 		//WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/unitType'),'value'),"string:IP", false, FailureHandling.CONTINUE_ON_FAILURE)
@@ -3656,7 +3662,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyElementNotPresent(findTestObject('DataInput/TRNotification/svg_Ridership_error_symbol err'),5,FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.refresh()
 		println "After Refresh."
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyElementNotPresent(findTestObject('DataInput/TRNotification/svg_Ridership_error_symbol err'),5)
 
 
@@ -3691,14 +3697,17 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void riderShipCreateMeterTest() throws IOException, InterruptedException {
-		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
-		WebUI.delay(14)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/TRNotification/div_Ridership'), GlobalVariable.minAngularWait)
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/TRNotification/div_Ridership'),10)
 		WebUI.click(findTestObject('Object Repository/DataInput/TRNotification/div_Ridership'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), GlobalVariable.minAngularWait)
+		
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
-		WebUI.delay(4)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter start_'))
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker'))
 		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
@@ -3723,7 +3732,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.setText(findTestObject('DataInput/CreateMeterBuilding/input_fw600 reading ng-pristin'),'2323')
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/SuccessGreenTick'),20)
-		WebUI.delay(15)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	}
 
 	@Keyword

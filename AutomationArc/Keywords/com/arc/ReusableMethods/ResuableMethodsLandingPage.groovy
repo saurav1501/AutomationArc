@@ -544,16 +544,16 @@ public class ResuableMethodsLandingPage extends BaseClass {
 		String projectId = data.getCellData(sheetName,"ProjectID",rowNum)
 		WebUI.delay(5)
 		WebUI.click(findTestObject('Page_Arc dashboard/Feedback/FeedBackButton'))
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 
 		WebUI.setText(findTestObject('Page_Arc dashboard/Feedback/ProjectId'),projectId)
 		WebUI.click(findTestObject('Page_Arc dashboard/Feedback/Submit'))
 
-		WebUI.delay(10)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		/************Verifying the blank value in the feedback *********************************************/
 		WebUI.verifyElementPresent(findTestObject('Page_Arc dashboard/Feedback/span_Error Sending Feedback'),10)
 		WebUI.click(findTestObject('Page_Arc dashboard/Feedback/FeedBackButton'))
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 	}
 
 	@Keyword
@@ -562,7 +562,7 @@ public class ResuableMethodsLandingPage extends BaseClass {
 		String projectId = data.getCellData(sheetName,"ProjectID",rowNum)
 
 		WebUI.click(findTestObject('Page_Arc dashboard/Feedback/FeedBackButton'))
-        WebUI.delay(3)
+        WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.click(findTestObject('Page_Arc dashboard/Feedback/happy'))
 		WebUI.click(findTestObject('Page_Arc dashboard/Feedback/IinfoOkay'))
 		WebUI.click(findTestObject('Page_Arc dashboard/Feedback/InfoUnhappy'))
@@ -579,10 +579,10 @@ public class ResuableMethodsLandingPage extends BaseClass {
 		WebUI.setText(findTestObject('Page_Arc dashboard/Feedback/textarea_feedback'),"submiting the survery feedback")
 		WebUI.click(findTestObject('Page_Arc dashboard/Feedback/Submit'))
 
-		WebUI.delay(10)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyElementPresent(findTestObject('Page_Arc dashboard/Feedback/span_Feedback Sent'),10)
 		WebUI.click(findTestObject('Page_Arc dashboard/Feedback/FeedBackButton'))
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	}
 
 	@Keyword
@@ -593,7 +593,7 @@ public class ResuableMethodsLandingPage extends BaseClass {
 		WebUI.verifyMatch(popup, "Your Building's Score", false)
 
 		WebUI.click(findTestObject('PaymenntLocator/NextButton'))
-		WebUI.delay(10)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	}
 
 	@Keyword

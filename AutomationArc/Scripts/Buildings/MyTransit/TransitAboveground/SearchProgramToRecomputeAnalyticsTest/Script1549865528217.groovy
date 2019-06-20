@@ -29,7 +29,8 @@ try {
 	// CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgramByName'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumThree)
 	 
 	 WebUI.refresh()
-	 WebUI.delay(17)
+	 WebUI.delay(10)
+	 WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	 
 } catch (Throwable t) {
 	System.out.println(t.getLocalizedMessage())

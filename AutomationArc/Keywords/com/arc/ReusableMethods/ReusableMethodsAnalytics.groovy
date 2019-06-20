@@ -13,6 +13,8 @@ import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+
+import internal.GlobalVariable
 public class ReusableMethodsAnalytics extends BaseClass{
 
 	public ReusableMethodsDataInput ReusDataInput = new ReusableMethodsDataInput()
@@ -710,13 +712,14 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		String elevenMonthsago = WebUI.getText(findTestObject('Analytics/Gr/elevenMonthsAgo'))
 		WebUI.verifyMatch(elevenMonthsAgo,elevenMonthsago, false)
 
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 	}
 
 	@Keyword
 	public void  verifyMonthsDetails() {
-
+		
+		WebUI.waitForElementClickable(findTestObject('Analytics/Gra/currentMonth'), GlobalVariable.minAngularWait)
 		DateTimeFormatter monthYearFormatter = DateTimeFormatter.ofPattern("MMM")
 
 		YearMonth thisMonth    = YearMonth.now()
@@ -782,7 +785,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		String elevenMonthsago = WebUI.getText(findTestObject('Analytics/Gra/elevenMonthsAgo'))
 		WebUI.verifyMatch(elevenMonthsAgo,elevenMonthsago, false)
 
-		WebUI.delay(2)
+		
 
 	}
 
@@ -1101,6 +1104,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		//ReusableMethodsNavigation.clickAnalyticsLabel()
 		WebUI.click(findTestObject('Analytics/Nav/a_ Energy'))
 		WebUI.delay(5)
+		WebUI.waitForAngularLoad(60, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.focus(findTestObject('Analytics/TotalPage/engScore1'))
 		WebUI.delay(1)
 		String engScore1 = WebUI.getText(findTestObject('Analytics/TotalPage/ScoreText'))

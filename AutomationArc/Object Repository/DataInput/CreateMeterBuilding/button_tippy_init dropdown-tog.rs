@@ -6,16 +6,16 @@
    <elementGuidId>26d9bb9b-2ccf-4c64-96f6-f9b5adaf175c</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//button[@class = 'tippy_init dropdown-toggle btn-default btn-settings' and @ref_element = 'Object Repository/DataInput/CreateMeterBuilding/iframe_datainput-widget']</value>
+         <key>XPATH</key>
+         <value>//*[@class=&quot;dropdown floatr&quot;]</value>
       </entry>
       <entry>
          <key>CSS</key>
          <value>#sideNavContainer > md-sidenav > div > div.meterList-title--wrapper > div > button</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@class=&quot;dropdown floatr&quot;]</value>
+         <key>BASIC</key>
+         <value>//button[@class = 'tippy_init dropdown-toggle btn-default btn-settings' and @ref_element = 'Object Repository/DataInput/CreateMeterBuilding/iframe_datainput-widget']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

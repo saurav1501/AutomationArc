@@ -130,11 +130,12 @@ public class ReusableMethodsNavigation {
 
 	@Keyword
 	public void navigateToDataTransport(){
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
-		WebUI.delay(4)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
-		WebUI.delay(6)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	}
 	@Keyword
 	public void navigateToDataAQI(){
@@ -165,59 +166,61 @@ public class ReusableMethodsNavigation {
 	}
 	@Keyword
 	public void navigateToDataOS(){
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementClickable(findTestObject('Analytics/Gra/td_Occupant Satisfaction Surve'),10)
 		WebUI.click(findTestObject('Analytics/Gra/td_Occupant Satisfaction Surve'))
-		WebUI.delay(8)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	}
 	@Keyword
 	public void navigateToDataOzone(){
-		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementClickable(findTestObject('Analytics/Gra/td_Ozone'),10)
 		WebUI.click(findTestObject('Analytics/Gra/td_Ozone'))
-		WebUI.delay(4)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Analytics/Gra/span_Details'))
-		WebUI.delay(8)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	}
 	@Keyword
 	public void navigateToDataPM10(){
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Analytics/Gra/td_PM10'))
-		WebUI.delay(4)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Analytics/Gra/span_Details'))
-		WebUI.delay(6)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	}
 	@Keyword
 	public void navigateToDataPM25(){
-		WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Analytics/Gra/td_PM2.5'))
-		WebUI.delay(4)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Analytics/Gra/span_Details'))
-		WebUI.delay(6)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	}
 	@Keyword
 	public void navigateToDataRid(){
-		WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Analytics/Gra/td_Ridership'))
-		WebUI.delay(4)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Analytics/Gra/span_Details'))
-		WebUI.delay(6)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	}
 
 	@Keyword
 	public void navigateToDataSD(){
-		WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Analytics/Gra/td_Sulfur Dioxide'))
-		WebUI.delay(4)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Analytics/Gra/span_Details'))
-		WebUI.delay(6)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	}
 
 	@Keyword
 	public void navigateToDataInput(){
 		WebUI.delay(1)
 		WebUI.click(findTestObject('Analytics/Gra/td_Sulfur Dioxide'))
-		WebUI.delay(4)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Analytics/Gra/span_Details'))
-		WebUI.delay(6)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	}
 
 
@@ -225,7 +228,7 @@ public class ReusableMethodsNavigation {
 	public void ArcLogoNavigation() throws IOException, InterruptedException {
 		/*******Verify clicking on the ARC LOGO takes you back to the ARC log-in page *************************/
 		WebUI.click(findTestObject('Page_Arc dashboard/DashboardPage/a_appLogo'))
-		WebUI.delay(15)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.timeOut)
 		String Logintext = WebUI.getText(findTestObject('Page_Arc dashboard/DashboardPage/NavigationCreditAction/a_About'))
 		WebUI.verifyMatch(Logintext,'ABOUT', false)
@@ -244,9 +247,9 @@ public class ReusableMethodsNavigation {
 	@Keyword
 	public void navigateToManageSection(){
 		WebUI.click(findTestObject('Object Repository/SubmitReview/clickOnSideBar'))
-		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	}
 
 
@@ -255,7 +258,7 @@ public class ReusableMethodsNavigation {
 		/*WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ClickOnAnalytics'), 3)
 		 WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalytics'))*/
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	}
 
 	@Keyword
@@ -267,19 +270,19 @@ public class ReusableMethodsNavigation {
 		WebUI.verifyMatch(allAction,'All Actions',, false)
 
 		WebUI.click(findTestObject('Page_Arc dashboard/DashboardPage/NavigationCreditAction/a_ Prerequisites'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		String Logintext = WebUI.getText(findTestObject('Page_Arc dashboard/DashboardPage/NavigationCreditAction/h1_Prerequisites'))
 		WebUI.verifyMatch(Logintext,'Prerequisites', false)
 
 		WebUI.scrollToElement(findTestObject('Object Repository/BasePoint/a_ Base Points (1)'), 10)
 		WebUI.doubleClick(findTestObject('Object Repository/BasePoint/a_ Base Points (1)'))
-		WebUI.delay(8)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		String basePoint = WebUI.getText(findTestObject('Page_Arc dashboard/DashboardPage/NavigationCreditAction/h1_Base Points'))
 		WebUI.verifyMatch(basePoint,'Base Points', false)
 
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
 
-		WebUI.delay(14)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		String dataInput1 = WebUI.getText(findTestObject('DataInput/Data/span_Data Input'))
 		WebUI.verifyMatch(dataInput1,'Data Input', false)
 
@@ -290,7 +293,7 @@ public class ReusableMethodsNavigation {
 
 
 		WebUI.click(findTestObject('Page_Arc dashboard/DashboardPage/NavigationCreditAction/a_ My Actions'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		String myAction = WebUI.getText(findTestObject('Page_Arc dashboard/DashboardPage/NavigationCreditAction/h1_My Actions'))
 		WebUI.verifyMatch(myAction,'My Actions', false)
 	}
@@ -365,52 +368,60 @@ public class ReusableMethodsNavigation {
 			if((WebUI.getAttribute(findTestObject('Object Repository/Page_Arc dashboard/a_ CreditsActions1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
 
 				println "credit action "
-				WebUI.delay(2)
+				//WebUI.delay(2)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ CreditsActions'))
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			}
 			if((WebUI.getAttribute(findTestObject('Object Repository/PerformanceScore/Score/a_ Score1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
 				println "Scores"
-				WebUI.delay(2)
+				//WebUI.delay(2)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
-				WebUI.delay(2)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+				//WebUI.delay(2)
 			}
 			if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
 				println "Manage"
-				WebUI.delay(2)
+				//WebUI.delay(2)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			}
 		}
 
 
 		else if((suitId.contains("Building")) || (suitId.contains("BuildingOther")) || (suitId.contains("Transit")) || (suitId.contains("MySchools")) ) {
 			//WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ CreditsActions'), FailureHandling.OPTIONAL)
-			WebUI.delay(2)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			if((WebUI.getAttribute(findTestObject('Object Repository/Page_Arc dashboard/a_ CreditsActions1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
 				println "credit action "
-				WebUI.delay(2)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ CreditsActions'))
 			}
 			if((WebUI.getAttribute(findTestObject('Object Repository/PerformanceScore/Score/a_ Score1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
 
 				println WebUI.getAttribute(findTestObject('Object Repository/PerformanceScore/Score/a_ Score1'),"class")
 				println "Scores"
-				WebUI.delay(2)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
-				WebUI.delay(2)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			}
 
 			if((WebUI.getAttribute(findTestObject('Object Repository/Analytics/ClickOnAnalytics1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
 				println "Analytics"
-				WebUI.delay(2)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalytics'))
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			}
 
 
 			if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
 
 				println "Manage"
-				WebUI.delay(2)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			}
 		}
 	}
