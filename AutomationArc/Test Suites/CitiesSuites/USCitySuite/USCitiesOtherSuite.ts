@@ -137,6 +137,12 @@
       <testCaseId>Test Cases/MyCities/CitiesOther/CreateADMeterReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>68db65ba-5a30-4538-9c46-d2e549be89c9</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCities/CitiesOther/BillingDateAndStatusTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>a0661f07-e694-46eb-8177-71e7eabc0ccb</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -147,11 +153,5 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/MyCities/CitiesOther/ScoreVersionVerificationTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>68db65ba-5a30-4538-9c46-d2e549be89c9</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCities/CitiesOther/BillingDateAndStatusTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

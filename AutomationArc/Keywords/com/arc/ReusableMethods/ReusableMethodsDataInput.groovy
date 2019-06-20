@@ -456,7 +456,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), "Energy Meter via upload", FailureHandling.STOP_ON_FAILURE)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/DetailsTab'))
-		WebUI.delay(5)
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Graphs/EnergyMeterUnitDisplayedOnGraph')),"kBtu" , false)
 		getGraphReading(sheetName, "Reading1")
 
@@ -467,12 +468,12 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	public void verifyWaterGraphpopulatedAfterExcelUpload(String sheetName){
 		//WebUI.delay(15)
 		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
-		WebUI.delay(4)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/WaterMeterViaFileUpload'))
-		WebUI.delay(6)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), "Water meter via upload", FailureHandling.STOP_ON_FAILURE)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/DetailsTab'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Graphs/WaterMeterUnitDisplayedOnGraph')), "gal", false)
 		getGraphReading(sheetName, "Reading1")
 
