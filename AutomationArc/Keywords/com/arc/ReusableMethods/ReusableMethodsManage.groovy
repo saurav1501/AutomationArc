@@ -445,7 +445,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 		//ReusNavigate.navigateToManageSection()
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
-		WebUI.delay(6)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectName'),'value').equalsIgnoreCase(''))){
 			WebUI.delay(10)
 		}
@@ -1664,7 +1664,7 @@ public class ReusableMethodsManage extends BaseClass {
 		String ownerState    = data.getCellData(sheetName, "OwnerState", rowNum)
 
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
-		WebUI.delay(7)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
 		boolean notEditableName = WebUI.setText(findTestObject('Manage/ManageEntity/Managing entity Name'),'testName', FailureHandling.OPTIONAL)
 		println ("DEBUG boolean value "+notEditableName)
@@ -1725,28 +1725,29 @@ public class ReusableMethodsManage extends BaseClass {
 		String population 	= data.getCellData(sheetName, "Population", rowNum)
 
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
-		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.setText(findTestObject('Manage/ProjectDetailVerification/projectName'),'Changed Data LEEDV4 CityCom project')
-		WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('Manage/CityCom/New/Save'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
 		WebUI.selectOptionByLabel(findTestObject('Manage/CityCom/New/unitType'), 'SI', false)
 		WebUI.delay(1)
 		WebUI.click(findTestObject('Manage/CityCom/New/Save'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.setText(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),'1000')
-		WebUI.delay(1)
+		//WebUI.delay(1)
 		WebUI.click(findTestObject('Manage/CityCom/New/Save'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.setText(findTestObject('Manage/ProjectDetailVerification/population'),'1000')
-		WebUI.delay(1)
+		//WebUI.delay(1)
 		WebUI.click(findTestObject('Manage/CityCom/New/Save'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		//WebUI.delay(5)
 		WebUI.selectOptionByLabel(findTestObject('Manage/CityCom/New/private'), 'Yes', false)
 		WebUI.delay(1)
 		WebUI.click(findTestObject('Manage/CityCom/New/Save'))
-		WebUI.delay(10)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectName'),'value'),'Changed Data LEEDV4 CityCom project', false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/unitType'),'value'),"string:SI", false, FailureHandling.CONTINUE_ON_FAILURE)
@@ -3117,13 +3118,10 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void verifySettingPageDetailsCityAndCommunity() throws IOException, InterruptedException {
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)
-		 WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Manage'))
-		 WebUI.delay(1)*/
+		
 		WebUI.scrollToElement(findTestObject('Manage/Setting/a_setting'), 5)
 		WebUI.click(findTestObject('Manage/Setting/a_setting'))
-		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/Setting/makeScorePublicText'))
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/Setting/receiveEmailsText'))
@@ -3178,13 +3176,10 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void verifyPlaqueAnimationUrlVisible() throws IOException, InterruptedException {
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)
-		 WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Manage'))
-		 WebUI.delay(1)*/
+		
 		WebUI.scrollToElement(findTestObject('Manage/Setting/a_setting'), 5)
 		WebUI.click(findTestObject('Manage/Setting/a_setting'))
-		WebUI.delay(4)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/Setting/animationLink'))
 	}
 
@@ -3193,10 +3188,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void verifyDataResourceAndDataReviewChecklistPdfDownload() throws IOException, InterruptedException {
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)
-		 WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Manage'))
-		 */
+		
 		WebUI.delay(3)
 		WebUI.scrollToElement(findTestObject('Manage/Setting/a_setting'), 5)
 		WebUI.click(findTestObject('Manage/Setting/a_setting'))
@@ -3232,9 +3224,9 @@ public class ReusableMethodsManage extends BaseClass {
 		 WebUI.delay(1)*/
 		WebUI.scrollToElement(findTestObject('Manage/Setting/a_setting'), 5)
 		WebUI.click(findTestObject('Manage/Setting/a_setting'))
-		//WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('Manage/Setting/animationLinkCopyBtn'))
-		WebUI.delay(4)
+	    WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		Robot r = new Robot()
 		r.keyPress(KeyEvent.VK_CONTROL)
 		r.keyPress(KeyEvent.VK_T)

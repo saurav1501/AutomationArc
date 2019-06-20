@@ -498,11 +498,11 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 	public void genratePerformanceScoreAdminToolCityComLEED(String sheetName,int rowNum) throws IOException, InterruptedException {
 		String projectId = data.getCellData(sheetName,"ProjectID",rowNum)
 		WebUI.click(findTestObject('PerformanceScore/RecomputeScoreButton'))
-		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.setText(findTestObject('PerformanceScore/PorjectId'),projectId)
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('PerformanceScore/RecomputeScore'))
-		WebUI.delay(15)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/Score/EnergyScore'), 60)
 		String energyScore = WebUI.getText(findTestObject('PerformanceScore/Score/EnergyScore'))
 		String waterScore = WebUI.getText(findTestObject('PerformanceScore/Score/WaterSocre'))
@@ -530,13 +530,13 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		//Search the project
 		reusableMethodsSearch.searchProgram(sheetName,rowNum)
 
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
 		if((WebUI.getAttribute(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'), "class", FailureHandling.OPTIONAL).equals("pl20 collapsed"))){
 			println "Scores"
-			WebUI.delay(2)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 			WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
-			WebUI.delay(2)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		}
 		//WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))

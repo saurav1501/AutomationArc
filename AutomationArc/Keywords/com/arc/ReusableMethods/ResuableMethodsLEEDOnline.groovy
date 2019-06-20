@@ -347,17 +347,17 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 	@Keyword
 	public void searchProgramL(String sheetName , int rowNum) {
 		String projectId = data.getCellData(sheetName,"ProjectID",rowNum)
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))
 		WebUI.setText(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'), projectId)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))
-		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		String nuberOfProjects = WebUI.getText(findTestObject('Page_Arc dashboard/no_Project (1 project)'))
 		println nuberOfProjects
 		WebUI.verifyMatch(nuberOfProjects,'Project (1 project)', false)
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/search_Result'))
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 	}
 
 	@Keyword
@@ -475,11 +475,11 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 
 		WebUI.scrollToElement(findTestObject('Portfolio/GRESB/SignAcceptButton'),5)
 		WebUI.click(findTestObject('Portfolio/GRESB/SignAcceptButton'))
-		WebUI.delay(15)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		String status = WebUI.getText(findTestObject('LEEDOnline/ProjectMenu/ProjectStatus'))
 		WebUI.verifyMatch(status,'Registered', false,FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/search_Result'))
-		WebUI.delay(6)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 	}
 	@Keyword
 	public void verifyAgreementLOProjectsAgreementType(){
