@@ -3188,11 +3188,8 @@ public class ReusableMethodsManage extends BaseClass {
 		
 		WebUI.scrollToElement(findTestObject('Manage/Setting/a_setting'), 5)
 		WebUI.click(findTestObject('Manage/Setting/a_setting'))
-<<<<<<< HEAD
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-=======
+
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
->>>>>>> eab8b77e8e1cb8100e5f85eb3bcd1d8414ffa8a5
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/Setting/animationLink'))
 	}
 
@@ -3201,16 +3198,9 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void verifyDataResourceAndDataReviewChecklistPdfDownload() throws IOException, InterruptedException {
-<<<<<<< HEAD
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)
-		 WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Manage'))
-		 */
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-=======
+
 		
-		WebUI.delay(3)
->>>>>>> eab8b77e8e1cb8100e5f85eb3bcd1d8414ffa8a5
+
 		WebUI.scrollToElement(findTestObject('Manage/Setting/a_setting'), 5)
 		WebUI.click(findTestObject('Manage/Setting/a_setting'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
@@ -3245,16 +3235,10 @@ public class ReusableMethodsManage extends BaseClass {
 		 WebUI.delay(1)*/
 		WebUI.scrollToElement(findTestObject('Manage/Setting/a_setting'), 5)
 		WebUI.click(findTestObject('Manage/Setting/a_setting'))
-<<<<<<< HEAD
-		//WebUI.delay(3)
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		WebUI.click(findTestObject('Manage/Setting/animationLinkCopyBtn'))
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-=======
+
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('Manage/Setting/animationLinkCopyBtn'))
 	    WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
->>>>>>> eab8b77e8e1cb8100e5f85eb3bcd1d8414ffa8a5
 		Robot r = new Robot()
 		r.keyPress(KeyEvent.VK_CONTROL)
 		r.keyPress(KeyEvent.VK_T)
