@@ -502,32 +502,33 @@ public class ResuableMethodsLandingPage extends BaseClass {
 	public void submitFeedback(String sheetName , int rowNum) {
 		/**********Project Details : Verify Add project is available on project dashboard*******************/
 		String projectId = data.getCellData(sheetName,"ProjectID",rowNum)
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Page_Arc dashboard/Feedback/FeedBackButton'))
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		WebUI.click(findTestObject('Page_Arc dashboard/Feedback/happy'))
 		WebUI.click(findTestObject('Page_Arc dashboard/Feedback/okay'))
 		WebUI.click(findTestObject('Page_Arc dashboard/Feedback/unhappy'))
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		WebUI.setText(findTestObject('Page_Arc dashboard/Feedback/ProjectId'),projectId)
 		WebUI.setText(findTestObject('Page_Arc dashboard/Feedback/textarea_feedback'),"submiting the survery feedback")
 		WebUI.click(findTestObject('Page_Arc dashboard/Feedback/Submit'))
 
-		WebUI.delay(10)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.delay(1)
 		WebUI.verifyElementPresent(findTestObject('Page_Arc dashboard/Feedback/span_Feedback Sent'),10)
 		WebUI.click(findTestObject('Page_Arc dashboard/Feedback/FeedBackButton'))
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	}
 
 	@Keyword
 	public void feedbackValidation(String sheetName , int rowNum) {
 		/**********Verify project id should be filled by default and display based on selection of project*******************/
 		String projectId = data.getCellData(sheetName,"ProjectID",rowNum)
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Page_Arc dashboard/Feedback/FeedBackButton'))
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		String userId =  WebUI.getAttribute(findTestObject('Page_Arc dashboard/Feedback/UserName'),'value')
 		WebUI.verifyMatch(GlobalVariable.teamMemName,userId, false)
@@ -535,21 +536,21 @@ public class ResuableMethodsLandingPage extends BaseClass {
 		String projectid = WebUI.getAttribute(findTestObject('Page_Arc dashboard/Feedback/ProjectId'),'value')
 		WebUI.verifyMatch(projectId, projectid, false)
 		WebUI.click(findTestObject('Page_Arc dashboard/Feedback/FeedBackButton'))
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	}
 
 	@Keyword
 	public void feedbackBlankFieldTest(String sheetName , int rowNum) {
 		/**********Verify project id should be filled by default and display based on selection of project*******************/
 		String projectId = data.getCellData(sheetName,"ProjectID",rowNum)
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Page_Arc dashboard/Feedback/FeedBackButton'))
-		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		WebUI.setText(findTestObject('Page_Arc dashboard/Feedback/ProjectId'),projectId)
 		WebUI.click(findTestObject('Page_Arc dashboard/Feedback/Submit'))
 
-		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		/************Verifying the blank value in the feedback *********************************************/
 		WebUI.verifyElementPresent(findTestObject('Page_Arc dashboard/Feedback/span_Error Sending Feedback'),10)
 		WebUI.click(findTestObject('Page_Arc dashboard/Feedback/FeedBackButton'))

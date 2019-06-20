@@ -444,16 +444,17 @@ public class ReusableMethodsBasePoint extends BaseClass{
 		 */
 		WebUI.scrollToElement(findTestObject('Object Repository/BasePoint/a_ Base Points (1)'), 10)
 		WebUI.doubleClick(findTestObject('Object Repository/BasePoint/a_ Base Points (1)'))
-		WebUI.delay(8)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		WebUI.click(findTestObject('Page_Arc dashboard/DashboardPage/NavigationCreditAction/span_Purchasing - ongoing'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		WebUI.click(findTestObject('PaymenntLocator/projectDetails/a_Resources'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		WebUI.switchToWindowIndex(1)
-		WebUI.delay(10)
+		WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		String projectRegistration = WebUI.getText(findTestObject('PaymenntLocator/projectDetails/h2_LEED v4 OM performance path'))
 		WebUI.delay(1)
 		WebUI.verifyMatch(projectRegistration,'LEED v4 O+M performance path resources',false)

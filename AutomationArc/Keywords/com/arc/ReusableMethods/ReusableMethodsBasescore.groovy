@@ -302,7 +302,7 @@ public class ReusableMethodsBasescore {
 		WebUI.scrollToElement(findTestObject('BasePoint/BasePointCreditCom/a_ My Actions'),5)
 
 		WebUI.click(findTestObject('BasePoint/BasePointCreditCom/a_ My Actions'))
-		WebUI.delay(10)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		String teamMemUI = WebUI.getText(findTestObject("BasePoint/BasePointCreditCom/MyActionTransit"))
 		WebUI.verifyMatch(GlobalVariable.teamMemName,teamMemUI,false)

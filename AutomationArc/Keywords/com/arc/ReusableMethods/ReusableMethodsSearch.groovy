@@ -77,7 +77,7 @@ public class ReusableMethodsSearch extends BaseClass{
 	public void searchProgramForNoProjectPresent(String sheetName , int rowNum) {
 		String projectId = data.getCellData(sheetName,"ProjectID",rowNum)
 		//	WebUI.click(findTestObject('Page_Arc dashboard/sideBar'))
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))
 
 		//	if(WebUI.getText(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))!= null)
@@ -86,10 +86,11 @@ public class ReusableMethodsSearch extends BaseClass{
 		WebUI.setText(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'), projectId)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))
 		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		String nuberOfProjects = WebUI.getText(findTestObject('Page_Arc dashboard/no_Project (0 project)'))
 		println nuberOfProjects
 		WebUI.verifyMatch(nuberOfProjects,'Project (0 projects)', false)
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		/*WebUI.closeWindowIndex(1)
 		 WebUI.delay(3)
 		 WebUI.switchToWindowIndex(0)*/

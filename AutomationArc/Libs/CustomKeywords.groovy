@@ -3698,66 +3698,6 @@ def static "com.arc.ReusableMethods.ResuableMethodsGRESB.gresbAddanddeleteprojec
          , 	rowNum)
 }
 
-def static "com.arc.ReusableMethods.ReusableMethodsBasePoint.preRequisiteAttemptTransit"() {
-    (new com.arc.ReusableMethods.ReusableMethodsBasePoint()).preRequisiteAttemptTransit()
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsBasePoint.basePointAttemptTransit"() {
-    (new com.arc.ReusableMethods.ReusableMethodsBasePoint()).basePointAttemptTransit()
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsBasePoint.basePointOptionA"() {
-    (new com.arc.ReusableMethods.ReusableMethodsBasePoint()).basePointOptionA()
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsBasePoint.basePointOptionB"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ReusableMethodsBasePoint()).basePointOptionB(
-        	sheetName
-         , 	rowNum)
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsBasePoint.basePointOptionBTrial"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ReusableMethodsBasePoint()).basePointOptionBTrial(
-        	sheetName
-         , 	rowNum)
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsBasePoint.countTotalNumberOfBasePointTransit"() {
-    (new com.arc.ReusableMethods.ReusableMethodsBasePoint()).countTotalNumberOfBasePointTransit()
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsBasePoint.countTotalNumberAllActionTransit"() {
-    (new com.arc.ReusableMethods.ReusableMethodsBasePoint()).countTotalNumberAllActionTransit()
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsBasePoint.moduleCreditOtherNone"() {
-    (new com.arc.ReusableMethods.ReusableMethodsBasePoint()).moduleCreditOtherNone()
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsBasePoint.basePromptMessageAttemptedToReadyForReview"() {
-    (new com.arc.ReusableMethods.ReusableMethodsBasePoint()).basePromptMessageAttemptedToReadyForReview()
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsBasePoint.basePromptMessageReadyForReviewtoAttempted"() {
-    (new com.arc.ReusableMethods.ReusableMethodsBasePoint()).basePromptMessageReadyForReviewtoAttempted()
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsBasePoint.basePointTotalScoreTest"() {
-    (new com.arc.ReusableMethods.ReusableMethodsBasePoint()).basePointTotalScoreTest()
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsBasePoint.basePointResourceNaviagionTest"() {
-    (new com.arc.ReusableMethods.ReusableMethodsBasePoint()).basePointResourceNaviagionTest()
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsBasePoint.basePointCreditLibraryNaviagionTest"() {
-    (new com.arc.ReusableMethods.ReusableMethodsBasePoint()).basePointCreditLibraryNaviagionTest()
-}
-
 def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.genratePerformanceScoreAdminTool"(
     	String sheetName	
      , 	int rowNum	) {
@@ -3916,6 +3856,66 @@ def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.totalPerform
 
 def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.totalPerformanceScoreToolTipOtherNone"() {
     (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).totalPerformanceScoreToolTipOtherNone()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsBasePoint.preRequisiteAttemptTransit"() {
+    (new com.arc.ReusableMethods.ReusableMethodsBasePoint()).preRequisiteAttemptTransit()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsBasePoint.basePointAttemptTransit"() {
+    (new com.arc.ReusableMethods.ReusableMethodsBasePoint()).basePointAttemptTransit()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsBasePoint.basePointOptionA"() {
+    (new com.arc.ReusableMethods.ReusableMethodsBasePoint()).basePointOptionA()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsBasePoint.basePointOptionB"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsBasePoint()).basePointOptionB(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsBasePoint.basePointOptionBTrial"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsBasePoint()).basePointOptionBTrial(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsBasePoint.countTotalNumberOfBasePointTransit"() {
+    (new com.arc.ReusableMethods.ReusableMethodsBasePoint()).countTotalNumberOfBasePointTransit()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsBasePoint.countTotalNumberAllActionTransit"() {
+    (new com.arc.ReusableMethods.ReusableMethodsBasePoint()).countTotalNumberAllActionTransit()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsBasePoint.moduleCreditOtherNone"() {
+    (new com.arc.ReusableMethods.ReusableMethodsBasePoint()).moduleCreditOtherNone()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsBasePoint.basePromptMessageAttemptedToReadyForReview"() {
+    (new com.arc.ReusableMethods.ReusableMethodsBasePoint()).basePromptMessageAttemptedToReadyForReview()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsBasePoint.basePromptMessageReadyForReviewtoAttempted"() {
+    (new com.arc.ReusableMethods.ReusableMethodsBasePoint()).basePromptMessageReadyForReviewtoAttempted()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsBasePoint.basePointTotalScoreTest"() {
+    (new com.arc.ReusableMethods.ReusableMethodsBasePoint()).basePointTotalScoreTest()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsBasePoint.basePointResourceNaviagionTest"() {
+    (new com.arc.ReusableMethods.ReusableMethodsBasePoint()).basePointResourceNaviagionTest()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsBasePoint.basePointCreditLibraryNaviagionTest"() {
+    (new com.arc.ReusableMethods.ReusableMethodsBasePoint()).basePointCreditLibraryNaviagionTest()
 }
 
 def static "com.arc.ReusableMethods.ReusableMethodsManage.trialProjectDetailsVerificationBuilding"(
