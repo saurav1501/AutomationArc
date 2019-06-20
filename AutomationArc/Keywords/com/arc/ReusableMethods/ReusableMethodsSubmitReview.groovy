@@ -324,19 +324,19 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 			WebUI.setText(findTestObject('SubmitReview/input_form-control ng-untouche'), 'abhishekkumar@groupten.com')
 			WebUI.click(findTestObject('SubmitReview/span_Send'))
 			WebUI.click(findTestObject('SubmitReview/button_Continue'))
-			
+
 		}else{
-		    WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
-		    WebUI.click(findTestObject('SubmitReview/a_ Review'))
+			WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+			WebUI.click(findTestObject('SubmitReview/a_ Review'))
 			WebUI.waitForElementClickable(findTestObject('Object Repository/SubmitReview/button_Continue'), 40)
 			WebUI.click(findTestObject('Object Repository/SubmitReview/button_Continue'))
 			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/CertificationTextSummaryCityProject')), "Certification", false, FailureHandling.CONTINUE_ON_FAILURE)
 			WebUI.setText(findTestObject('SubmitReview/input_form-control ng-untouche'), 'abhishekkumar@groupten.com')
 			WebUI.click(findTestObject('SubmitReview/span_Send'))
 			WebUI.click(findTestObject('SubmitReview/button_Continue'))
-		
+
 		}
-		
+
 	}
 
 	@Keyword
@@ -1088,15 +1088,16 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		println destinationUnZippedFolder
 		//deleteFile(sourceZipFile)
 		//deleteFile(sourceExtractedFile)
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.scrollToElement(findTestObject('Object Repository/PerformanceScore/AdminToolReviewButton'), 4)
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/AdminToolReviewButton'))
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/AdminToolsReviewSearchBar'))
 		WebUI.setText(findTestObject('Object Repository/PerformanceScore/AdminToolsReviewSearchBar'), projectId)
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/AdminToolReviewSearchButton'))
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/PerformanceScore/SnapshotLinkToDownload'), 20, FailureHandling.STOP_ON_FAILURE)
 		WebUI.closeWindowIndex(1)
-		WebUI.delay(2)
+		WebUI.delay(1)
 		WebUI.switchToWindowIndex(0)
 		/*WebUI.click(findTestObject('Object Repository/PerformanceScore/SnapshotLinkToDownload'))
 		 WebUI.delay(300)
@@ -1128,7 +1129,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),40)
 		WebUI.delay(7)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/SubmitReviewText')), "Submit for Review", false, FailureHandling.CONTINUE_ON_FAILURE)
-	    WebUI.verifyElementVisible(findTestObject('Object Repository/SubmitReview/ProjectIsStillUnderReviewText'))
+		WebUI.verifyElementVisible(findTestObject('Object Repository/SubmitReview/ProjectIsStillUnderReviewText'))
 		WebUI.delay(2)
 	}
 
@@ -1195,10 +1196,10 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		//WebUI.delay(8)
 		//WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/MessageSuccessfullySubmitted')), "Successfully Submitted", false, FailureHandling.CONTINUE_ON_FAILURE)
 		/*WebUI.scrollToElement(findTestObject('Object Repository/SubmitReview/NewReviewStatusForPendingPayment'), 4)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/NewReviewStatusForPendingPayment')), "Please complete your review payment in order to proceed", false)
-		WebUI.click(findTestObject('Object Repository/SubmitReview/LinkForReviewPaymentReviewPage'))
-		WebUI.delay(5)
-		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/BillingSection/BillingPageTitle'), 10)*/
+		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/NewReviewStatusForPendingPayment')), "Please complete your review payment in order to proceed", false)
+		 WebUI.click(findTestObject('Object Repository/SubmitReview/LinkForReviewPaymentReviewPage'))
+		 WebUI.delay(5)
+		 WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/BillingSection/BillingPageTitle'), 10)*/
 	}
 
 
