@@ -2287,11 +2287,8 @@ public class ReusableMethodsManage extends BaseClass {
 
 		WebUI.scrollToElement(findTestObject('Manage/CertificationAndScore/a_ Certifications'), 2)
 		WebUI.click(findTestObject('Manage/CertificationAndScore/a_ Certifications'))
-<<<<<<< HEAD
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-=======
+
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
->>>>>>> a46335868dca0afbb405ae583fa064086f3a74ec
 		String certificationType= WebUI.getText(findTestObject('Manage/CertificationAndScore/CertificationType'))
 		WebUI.verifyMatch(certificationType, certiType, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
@@ -3046,14 +3043,9 @@ public class ReusableMethodsManage extends BaseClass {
 		 WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Manage'))*/
 		println "Clicking on Apps"
 		WebUI.scrollToElement(findTestObject('Object Repository/Manage/App/a_ Apps'),2)
-<<<<<<< HEAD
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.click(findTestObject('Object Repository/Manage/App/a_ Apps'))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-=======
+
 		WebUI.click(findTestObject('Object Repository/Manage/App/a_ Apps'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
->>>>>>> a46335868dca0afbb405ae583fa064086f3a74ec
 
 		println "Installing Dropbox"
 		WebUI.click(findTestObject('Object Repository/Manage/App/BDropbox'))
