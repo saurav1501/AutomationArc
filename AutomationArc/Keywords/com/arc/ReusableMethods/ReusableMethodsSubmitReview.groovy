@@ -841,7 +841,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		println destinationUnZippedFolder
 		//deleteFile(sourceZipFile)
 		//deleteFile(sourceExtractedFile)
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.scrollToElement(findTestObject('Object Repository/PerformanceScore/AdminToolReviewButton'), 4)
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/AdminToolReviewButton'))
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/AdminToolsReviewSearchBar'))

@@ -61,11 +61,11 @@ public class ReusableMethodsNavigation {
 
 	@Keyword
 	public void navigateToCommunities(){
-		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
-		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ My Communities'))
-		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		String postNavigationLoginText = WebUI.getText(findTestObject('Page_Arc dashboard/span_My Communities'))
 		WebUI.verifyMatch(postNavigationLoginText,'My Communities',false)
 	}

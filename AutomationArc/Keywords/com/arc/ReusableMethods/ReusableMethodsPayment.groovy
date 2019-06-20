@@ -247,9 +247,9 @@ public class ReusableMethodsPayment extends BaseClass{
 		WebUI.verifyMatch("Purchase", purchase, false)
 
 		WebUI.selectOptionByLabel(findTestObject('DashboardNavigationNewUI/Dash/select_LEED for CommunitiesOth'), prjRating , false)
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/saveButtonProjectDetails'))
-		WebUI.delay(17)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		String title= DriverFactory.getWebDriver().getCurrentUrl()
 		println title
@@ -972,7 +972,7 @@ public class ReusableMethodsPayment extends BaseClass{
 		String state      = data.getCellData(sheetName, "State", rowNum)
 		String zip        = data.getCellData(sheetName, "Zip", rowNum)
 		String partyEmail = data.getCellData(sheetName, "PartyEmail", rowNum)
-		WebUI.waitForAngularLoad(60)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		Assert.assertEquals(WebUI.verifyElementClickable(findTestObject('Object Repository/SubmitReview/PromocodeTextFieldReviewPayment')),true)
 		Assert.assertTrue(WebUI.verifyElementPresent(findTestObject('Object Repository/SubmitReview/CreditCardOptionButton'), 2))
 		Assert.assertTrue(WebUI.verifyElementPresent(findTestObject('Object Repository/SubmitReview/CheckOptionButton'), 2))

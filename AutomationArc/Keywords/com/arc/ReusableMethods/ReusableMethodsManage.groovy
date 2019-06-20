@@ -1651,16 +1651,16 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void projectManageState(){
-		WebUI.delay(4)
+		
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
-		WebUI.delay(3)
+		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.selectOptionByLabel(findTestObject('Manage/CityCom/New/ManageCountry'),"Sri Lanka", false)
 		/*************Navigating to team section **************************************************************/
 		WebUI.click(findTestObject('Manage/TeamModule/a_ Team'))
-		WebUI.delay(4)
+		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		/****************Navigating to Manage project section *********************************/
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
-		WebUI.delay(3)
+		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.verifyOptionSelectedByLabel(findTestObject('Object Repository/Manage/CityCom/New/ManageState'), 'Not Available', false, 4, FailureHandling.STOP_ON_FAILURE)
 
 
@@ -1671,12 +1671,13 @@ public class ReusableMethodsManage extends BaseClass {
 		/*WebUI.delay(3)
 		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 		 */
-		WebUI.delay(3)
+		
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
-
+        WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.setText(findTestObject('Manage/CityCom/New/Population'),'SDF')
-		WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('Object Repository/Manage/ManageEntity/Managing entity Name'))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.verifyElementPresent(findTestObject('Object Repository/Manage/ErrorMessage/populationErrorMessage'),2)
 	}
 
@@ -1822,20 +1823,20 @@ public class ReusableMethodsManage extends BaseClass {
 		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 		 */		WebUI.scrollToElement(findTestObject('Manage/TeamModule/a_ Team'),2)
 		WebUI.click(findTestObject('Manage/TeamModule/a_ Team'))
-		WebUI.delay(10)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.scrollToElement(findTestObject('Manage/TeamModule/input_input'), 2)
 		WebUI.setText(findTestObject('Manage/TeamModule/input_input'),'xyzinvalidemailformat')
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('Manage/TeamModule/button_Add Member'))
-		WebUI.delay(4)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		String invalidemailformat = WebUI.getText(findTestObject('Manage/ErrorMessage/InvalidFormtError'))
 		WebUI.verifyMatch(invalidemailformat,'Not a valid email', false, FailureHandling.CONTINUE_ON_FAILURE)
 
 		WebUI.clearText(findTestObject('Manage/TeamModule/input_input'))
 		WebUI.setText(findTestObject('Manage/TeamModule/input_input'),'invalidemail@gmail.com')
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('Manage/TeamModule/button_Add Member'))
-		WebUI.delay(4)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		String invalidErrorMessage = WebUI.getText(findTestObject('Manage/ErrorMessage/TeamErrorClass'))
 		WebUI.verifyMatch(invalidErrorMessage,"invalidemail@gmail.com is not a registered USGBC.org user, please have the user register at https://new.usgbc.org/registration/create-user and try again.", false, FailureHandling.CONTINUE_ON_FAILURE)
 
@@ -1845,17 +1846,17 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void projectStateNotAvaliable(){
-		WebUI.delay(10)
+		
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
-		WebUI.delay(3)
+		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
 		WebUI.selectOptionByLabel(findTestObject('Manage/CityCom/New/ManageCountry'),"United States", false)
 		/*************Navigating to team section **************************************************************/
 		WebUI.click(findTestObject('Manage/TeamModule/a_ Team'))
-		WebUI.delay(4)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		/****************Navigating to Manage project section *********************************/
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
-		WebUI.delay(6)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.verifyOptionSelectedByLabel(findTestObject('Object Repository/Manage/CityCom/New/ManageState'), 'Alabama', false, 4, FailureHandling.STOP_ON_FAILURE)
 
 
@@ -2287,16 +2288,17 @@ public class ReusableMethodsManage extends BaseClass {
 
 		WebUI.scrollToElement(findTestObject('Manage/CertificationAndScore/a_ Certifications'), 2)
 		WebUI.click(findTestObject('Manage/CertificationAndScore/a_ Certifications'))
+
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		String certificationType= WebUI.getText(findTestObject('Manage/CertificationAndScore/CertificationType'))
 		WebUI.verifyMatch(certificationType, certiType, false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		String certificationLevel = WebUI.getText(findTestObject('Manage/CertificationAndScore/CertificationLevel'))
 		WebUI.verifyMatch(certificationLevel,certiLevel,false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		String certificationDate = WebUI.getText(findTestObject('Manage/CertificationAndScore/CertificationDateNotCertifiedProjects'))
 		WebUI.verifyMatch(certificationDate, "Pending", false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		print certificationDate
 		Assert.assertTrue(WebUI.verifyElementNotVisible(findTestObject('Object Repository/Manage/CertificationAndScore/leedLogo')))
 	}
@@ -2383,13 +2385,8 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public void verifyAgreementFileDownload(){
 		deleteFile(BaseClass.ServiceAgreement)
-		//WebUI.delay(10)
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(4)
-		 WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Manage'))*/
 		WebUI.scrollToElement(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'),2)
 		WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'))
-		//WebUI.delay(3)
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('Manage/VerifyAgreementFile/button_Download'))
 		WebUI.delay(5)
@@ -2883,16 +2880,11 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void scoreVersionVerificationCommunity(){
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)
-		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
-		 */
-		WebUI.delay(5)
+	
 		WebUI.scrollToElement(findTestObject('Manage/CertificationAndScore/a_ Score Version'),2)
 		WebUI.click(findTestObject('Manage/CertificationAndScore/a_ Score Version'))
-
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Loaders/ProjectDashboardLoader'), 30, FailureHandling.CONTINUE_ON_FAILURE)
-
 		String scoreVersion = WebUI.getText(findTestObject('Manage/CertificationAndScore/h3_Arc score v2.0'))
 		WebUI.verifyMatch(scoreVersion, "Arc score for communities version 2.0",false, FailureHandling.CONTINUE_ON_FAILURE)
 		print scoreVersion
@@ -3007,14 +2999,12 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public void verifyAppInstalledOnAddSupportingDocuments(){
 
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 //WebUI.delay(1)
-		 //WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Manage'))
-		 WebUI.delay(3)*/
+	
 		WebUI.doubleClick(findTestObject('DataInput/CityCom/a_ Data Input'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/span_Energy'), 10)
 		WebUI.click(findTestObject('DataInput/CityCom/span_Energy'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/App/cityCommDropbox'), 20)
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/cityCommComputerFile'))
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/cityCommDropbox'))
@@ -3032,9 +3022,9 @@ public class ReusableMethodsManage extends BaseClass {
 		 //WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Manage'))
 		 WebUI.delay(3)*/
 		WebUI.doubleClick(findTestObject('DataInput/CityCom/a_ Data Input'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('DataInput/CityCom/span_Energy'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/cityCommComputerFile'))
 		WebUI.verifyElementNotVisible(findTestObject('Object Repository/Manage/App/cityCommDropbox'))
 		WebUI.verifyElementNotVisible(findTestObject('Object Repository/Manage/App/cityCommGoogleDrive'))
@@ -3049,6 +3039,7 @@ public class ReusableMethodsManage extends BaseClass {
 		 WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Manage'))*/
 		println "Clicking on Apps"
 		WebUI.scrollToElement(findTestObject('Object Repository/Manage/App/a_ Apps'),2)
+
 		WebUI.click(findTestObject('Object Repository/Manage/App/a_ Apps'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
@@ -3247,8 +3238,6 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(4)
 		//To switch to the new tab
 		WebUI.switchToWindowIndex(1)
-
-
 		r.keyPress(KeyEvent.VK_CONTROL)
 		r.keyPress(KeyEvent.VK_V)
 		r.keyRelease(KeyEvent.VK_CONTROL)
@@ -3257,7 +3246,7 @@ public class ReusableMethodsManage extends BaseClass {
 		r.keyPress(KeyEvent.VK_ENTER)
 		r.keyRelease(KeyEvent.VK_ENTER)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
+        WebUI.delay(10)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Manage/Setting/projectTitleOnAnimationPage')), name, false, FailureHandling.CONTINUE_ON_FAILURE)
 		//Assert.assertEquals(WebUI.getText(findTestObject('Manage/Setting/projectTitleOnAnimationPage')),name)
 		//Assert.assertEquals(WebUI.getText(findTestObject('Manage/Setting/projectAddressOnAnimationPage')),address+", "+country)

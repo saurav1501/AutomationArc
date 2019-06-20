@@ -206,12 +206,12 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 
 
 		WebUI.setText(findTestObject('LEEDOnline/ProjReg/Population'), population)
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(2)
 		WebUI.scrollToElement(findTestObject('LEEDOnline/ProjReg/Owner'), 2)
 		WebUI.setText(findTestObject('LEEDOnline/ProjReg/Owner'),ownerOrg)
 		//WebUI.delay(2)
 		//WebUI.click(findTestObject('LEEDOnline/ProjReg/Owner'))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(2)
 		WebUI.click(findTestObject('LEEDOnline/ProjReg/OrgOrgHabitat'))
 		WebUI.setText(findTestObject('LEEDOnline/ProjReg/OwnerRepresentative'),'Arc')
 		WebUI.selectOptionByLabel(findTestObject('LEEDOnline/ProjReg/OwnerType'), ownerType,false)
@@ -232,30 +232,30 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.selectOptionByLabel(findTestObject('LEEDOnline/ProjReg/select_State'),prjState, false)
 		WebUI.setText(findTestObject('LEEDOnline/ProjReg/input_Postal code_postalcode'), prjZip)
 		//h3[(text() = 'Project' or . = 'Project') or (text()="Cities") or (text()='Communities') or (text()='Campus')]WebUI.click(findTestObject('LEEDOnline/ProjReg/OutsideSave'))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(2)
 		WebUI.click(findTestObject('LEEDOnline/ProjReg/GeoIcon'))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(2)
 		WebUI.click(findTestObject('LEEDOnline/ProjReg/a_Save  Close'))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(2)
 		WebUI.click(findTestObject('LEEDOnline/ProjReg/Continue'))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(5)
 	}
 
 
 	@Keyword
 	public void acceptAgreement(String sheetName ,int rowNum) {
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(2)
 		WebUI.scrollToElement(findTestObject('LEEDOnline/Payment/Latspan_29. EXECUTION'),10)
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(9)
 		WebUI.scrollToElement(findTestObject('LEEDOnline/ProjReg/button_I AGREE'),2)
 		WebUI.doubleClick(findTestObject('LEEDOnline/ProjReg/button_I AGREE'))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(4)
 		WebUI.click(findTestObject('LEEDOnline/ProjReg/h4_Card type'))
 		String Project_ID = WebUI.getText(findTestObject('LEEDOnline/Payment/ProjID'))
 		System.out.println(Project_ID)
 		data.setCellData(sheetName,"ProjectID", rowNum,Project_ID)
 		data.setCellData(sheetName,"RegDate", rowNum, ReusableMethodsManage.verifyBillingDate())
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(4)
 	}
 	@Keyword
 	public void paymentByCC(String sheetName , int rowNum){
@@ -500,14 +500,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 	//Addenum to validate the city comm projects
 	@Keyword
 	public void verifyAgreementLOProjectsAgreementTypeCityComm(){
-		//WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		//WebUI.delay(4)
-		//WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Manage'))
-		//WebUI.delay(2)
-		//WebUI.scrollToElement(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'),5)
-		WebUI.delay(2)
-		//WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'))
-		//WebUI.delay(6)
+		
 		String type = WebUI.getText(findTestObject('Manage/VerifyAgreementFile/agreementTypeLO'))
 		WebUI.verifyMatch(type,"Addendum" ,false)
 		WebUI.verifyElementPresent(findTestObject('LEEDOnline/Manage/Arc'), 12)
