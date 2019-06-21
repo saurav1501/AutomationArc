@@ -5651,7 +5651,12 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	public void waterScoreShouldNotrecomputemun(String sheetName){
 		WebUI.scrollToElement(findTestObject('DataInput/Survey/a_ Data Input'),5)
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
-		WebUI.delay(10)
+		
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/MeterWater/AnalyticsWater meter'), GlobalVariable.minAngularWait)
+	
 		String uIwaterScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/WaterScore'))
 		data.setCellData(sheetName,"waterScore",5,uIwaterScore)
 
@@ -5666,6 +5671,10 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/a_Municipality supplied reclai'))
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/WaterScore'),40)
 		WebUI.delay(50)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		
+
 
 		String waterScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/WaterScore'))
 		WebUI.verifyMatch(waterScore,'0', false)

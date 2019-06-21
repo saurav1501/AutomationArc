@@ -206,6 +206,8 @@ public class ReusableMethodsLogin extends BaseClass{
 		Dimension size = new Dimension(1500, 1068)
 		
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
+		
 		WebUI.navigateToUrl(appUrl)
 		WebUI.getViewportHeight()
 		WebUI.getViewportWidth()
@@ -213,6 +215,7 @@ public class ReusableMethodsLogin extends BaseClass{
 		WebUI.getViewportTopPosition()
 		WebUI.waitForPageLoad(GlobalVariable.timeOut)
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
 		
 		WebUI.setViewPortSize(1366,1280)
 		WebUI.getViewportHeight()
@@ -226,6 +229,8 @@ public class ReusableMethodsLogin extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/LoginViaAppUrl/AcceptAgreement'))
 		WebUI.click(findTestObject('Object Repository/LoginViaAppUrl/ClickLOGIN'))
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
+		
 	}
 	
 

@@ -1034,7 +1034,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('DataInput/WeightedOcc/Annual ridership'), GlobalVariable.minAngularWait)
-		
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 
 		WebUI.waitForElementClickable(findTestObject('DataInput/WeightedOcc/Annual ridership'), GlobalVariable.minAngularWait)
 
@@ -1046,60 +1046,70 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.clearText(findTestObject('DataInput/WeightedOcc/Annual ridership'))
 		WebUI.sendKeys(findTestObject('DataInput/WeightedOcc/Annual ridership'), annual_ridership);
 		WebUI.click(findTestObject('DataInput/WeightedOcc/Full time staff at stati'));
-		WebUI.delay(1)
+		
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 		print "Entering Annual Ridership Value"
 
 		WebUI.clearText(findTestObject('DataInput/WeightedOcc/Full time staff at stati'));
 		WebUI.sendKeys(findTestObject('DataInput/WeightedOcc/Full time staff at stati'), full_time_staff);
 		WebUI.click(findTestObject('DataInput/WeightedOcc/Annual ridership'));
-		WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 		print "Entering Full time Staff deatils"
 
 		WebUI.clearText(findTestObject('DataInput/WeightedOcc/Average time spent by ri'));
 		WebUI.sendKeys(findTestObject('DataInput/WeightedOcc/Average time spent by ri'), average_time);
-		WebUI.click(findTestObject('DataInput/WeightedOcc/Annual ridership'));
-		WebUI.delay(1)
+		WebUI.click(findTestObject('DataInput/WeightedOcc/Annual ridership'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 		print "Entering Average time spend by staff"
 
 		//Navigate to data input section for operating hour
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
-		WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle')),"Building Settings", false)
 
 		//operating hours
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'), 5)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'))
-		WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 
 		WebUI.click(findTestObject('Object Repository/DataInput/OperatingHourDropdown'))
 		WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/OperatingHourDropdown14'),5)
 		//WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'), '168')
 
 		WebUI.click(findTestObject('Object Repository/DataInput/OperatingHourDropdown14'))
-		WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/OperatingHourDropdown')),"14 Hour", false,FailureHandling.CONTINUE_ON_FAILURE)
 		String opartinghours=WebUI.getText(findTestObject('Object Repository/DataInput/OperatingHourDropdown'))
 		String[] oprHrs=opartinghours.split("\\s")
 		System.out.println(opartinghours)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 
 		//navigate back to manage project
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
-		WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 
 		WebUI.waitForElementClickable(findTestObject('DataInput/WeightedOcc/Annual ridership'), GlobalVariable.minAngularWait)
 
@@ -1203,6 +1213,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('DataInput/WeightedOcc/Annual ridership'), GlobalVariable.minAngularWait)
 
 		WebUI.waitForElementClickable(findTestObject('DataInput/WeightedOcc/Annual ridership'), GlobalVariable.minAngularWait)
@@ -1211,24 +1222,27 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.clearText(findTestObject('DataInput/WeightedOcc/Annual ridership'))
 		WebUI.sendKeys(findTestObject('DataInput/WeightedOcc/Annual ridership'),'SDF');
 		WebUI.click(findTestObject('DataInput/WeightedOcc/Full time staff at stati'));
-		Thread.sleep(1000);
+		
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/ErrorMessage/AnnualRidershipErrorMessage'), FailureHandling.CONTINUE_ON_FAILURE)
 
 		WebUI.clearText(findTestObject('DataInput/WeightedOcc/Full time staff at stati'));
 		WebUI.sendKeys(findTestObject('DataInput/WeightedOcc/Full time staff at stati'),'XYZ');
 		WebUI.click(findTestObject('DataInput/WeightedOcc/Annual ridership'));
-		Thread.sleep(1000);
+		
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 
 		WebUI.verifyElementVisible(findTestObject('Manage/ErrorMessage/ErrorMessage2'), FailureHandling.CONTINUE_ON_FAILURE)
 
 		WebUI.clearText(findTestObject('DataInput/WeightedOcc/Average time spent by ri'));
 		WebUI.sendKeys(findTestObject('DataInput/WeightedOcc/Average time spent by ri'),'XYZ');
 		WebUI.click(findTestObject('DataInput/WeightedOcc/Annual ridership'));
-		Thread.sleep(1000)
+		
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 
 		WebUI.verifyElementVisible(findTestObject('Manage/ErrorMessage/ErrorMessage3'), FailureHandling.CONTINUE_ON_FAILURE)
 

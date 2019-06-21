@@ -209,7 +209,10 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TotalPerformanceScore'),10)
-		WebUI.delay(15)
+		//WebUI.delay(15)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		
 		//Verifying the Performance score
 		String totalperformaceScore = WebUI.getText(findTestObject('PerformanceScore/Score/TotalPerformanceScore'))
 		print totalperformaceScore
@@ -217,6 +220,9 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Energy'))
 		WebUI.delay(12)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/EnergyPerScore'),10)
 		String energyperScore = WebUI.getText(findTestObject('PerformanceScore/Score/EnergyPerScore'))
 		WebUI.verifyMatch(energyperScore , energyScore, false)
@@ -230,24 +236,36 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Water'))
 		WebUI.delay(12)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/WaterPerScore'),10)
 		String waterpfScore = WebUI.getText(findTestObject('PerformanceScore/Score/WaterPerScore'))
 		WebUI.verifyMatch(waterpfScore ,waterScore, false)
 
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Waste'))
 		WebUI.delay(12)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/WastePerSocre'),10)
 		String wastepfScore = WebUI.getText(findTestObject('PerformanceScore/Score/WastePerSocre'))
 		WebUI.verifyMatch(wastepfScore ,wasteScore , false)
 
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Transportation'))
 		WebUI.delay(12)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TransportperScore'),10)
 		String transportperScore = WebUI.getText(findTestObject('PerformanceScore/Score/TransportperScore'))
 		WebUI.verifyMatch(transportperScore ,transportScore, false)
 
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Human Experience'))
 		WebUI.delay(12)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/HumanExpScore'),10)
 		String humanExperience = WebUI.getText(findTestObject('PerformanceScore/Score/HumanExpScore'))
 		WebUI.verifyMatch(humanExperience ,humanExpScore, false)
@@ -267,6 +285,9 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		/********* Verifying the Generated score for total score & Energy & Water & Waste & Transport & Human Experience under data Input section ********/
 		WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
 		WebUI.delay(14)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'),10)
 		//Verifying the Performance score
 		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))

@@ -1127,6 +1127,18 @@
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/CertiVerifyCertificationDetailsForReviewSubmittedProjectTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>78c9d581-b9c7-4c39-9c50-9bb194c0ce82</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/AddCertificationFromAdminToolTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>8fac955f-c561-4613-bf01-1881b07ddd3b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/ResourcesButtonNavigationTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>98fb38c9-9b23-4f2a-b196-46ae27a437f9</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -1137,12 +1149,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/CertiVerifyCertificationDetailsForProjectsPointsAddedFromAdminToolTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>8fac955f-c561-4613-bf01-1881b07ddd3b</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/ResourcesButtonNavigationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d3c43e39-09ae-458a-abea-41001f63150a</guid>
