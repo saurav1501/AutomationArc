@@ -307,7 +307,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.delay(2)
 
 		WebUI.click(findTestObject('LEEDOnline/Payment/a_Submit Payment'))
-		WebUI.delay(30)
+		WebUI.delay(40)
 
 		WebUI.click(findTestObject('LEEDOnline/Receipt/strong_Thank you'))
 		WebUI.delay(2)
