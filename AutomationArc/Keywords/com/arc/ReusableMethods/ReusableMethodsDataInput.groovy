@@ -5483,9 +5483,13 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		double projectOccupancy= Double.parseDouble(projectoccupancy)
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
+		
 		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.maxAngularWait)
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
+		
 		/******Verify that survey response rate% is calculated on the basis of the following formula [ Response %ge = (No. of responses/Occupancy)*100 ] . Always count the no of responses by counting the no of rows of transport survey results.*****/
 		String surveyResponsePercentage = WebUI.getText(findTestObject('DataInput/Survey/SurveyResponsePercentage'))
 		String surveyResponsepercentage1 = surveyResponsePercentage.replace("%","")
@@ -5504,7 +5508,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		/******Verify that survey response rate% is calculated on the basis of the following formula [ Response %ge = (No. of responses/Occupancy)*100 ] . Always count the no of responses by counting the no of rows of HUMAN EXPERIENCE survey results.*****/
 		WebUI.click(findTestObject('DataInput/Survey/OccupantSatisfactionSurv'))
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-
+		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
+		
 		String humsurveyResponsePercentage = WebUI.getText(findTestObject('DataInput/Survey/SurveyResponsePercentage'))
 		String humsurveyResponsepercentage1 = surveyResponsePercentage.replace("%" ,"")
 		String humsurveyResponsepercentage = humsurveyResponsepercentage1.replaceAll("\\s","")
@@ -6181,7 +6186,9 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		ReusableMethodsLogin.waitForIframeLoad(60)
 		WebUI.delay(8)
 
-		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'),10)
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+	
 		//Verifying the Performance score
 		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
 		data.setCellData(GlobalVariable.BDataInput,"TotalScore", GlobalVariable.rowNumTwo,totalPerformaceScore)
@@ -6246,7 +6253,9 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 
-		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'),30)
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+	
 		//Verifying the Performance score
 		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
 		data.setCellData(GlobalVariable.BDataInput,"TotalScore", GlobalVariable.rowNumTwo,totalPerformaceScore)
@@ -6309,8 +6318,11 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 
-		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'),10)
+		
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
 		//Verifying the Performance score
+		
 		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
 		data.setCellData(GlobalVariable.BDataInput,"TotalScore", GlobalVariable.rowNumTwo,totalPerformaceScore)
 

@@ -19,7 +19,7 @@ try{
 		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariableAppUrl'()
 	}
 	else{
-		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariableT'()
+		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariableAppUrl'()
 	}
 	WebUI.delay(4)
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToCommunities'()

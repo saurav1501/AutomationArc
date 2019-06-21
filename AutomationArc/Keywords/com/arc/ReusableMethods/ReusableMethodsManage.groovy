@@ -1031,7 +1031,9 @@ public class ReusableMethodsManage extends BaseClass {
 		 WebUI.delay(2)*/
 
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
+		WebUI.delay(4)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('DataInput/WeightedOcc/Annual ridership'), GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
@@ -1046,6 +1048,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.clearText(findTestObject('DataInput/WeightedOcc/Annual ridership'))
 		WebUI.sendKeys(findTestObject('DataInput/WeightedOcc/Annual ridership'), annual_ridership);
 		WebUI.click(findTestObject('DataInput/WeightedOcc/Full time staff at stati'));
+		WebUI.delay(1)
 		
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
@@ -1054,6 +1057,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.clearText(findTestObject('DataInput/WeightedOcc/Full time staff at stati'));
 		WebUI.sendKeys(findTestObject('DataInput/WeightedOcc/Full time staff at stati'), full_time_staff);
 		WebUI.click(findTestObject('DataInput/WeightedOcc/Annual ridership'));
+		WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 		print "Entering Full time Staff deatils"
@@ -1061,29 +1065,34 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.clearText(findTestObject('DataInput/WeightedOcc/Average time spent by ri'));
 		WebUI.sendKeys(findTestObject('DataInput/WeightedOcc/Average time spent by ri'), average_time);
 		WebUI.click(findTestObject('DataInput/WeightedOcc/Annual ridership'))
+		WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 		print "Entering Average time spend by staff"
 
 		//Navigate to data input section for operating hour
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 		
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
+		WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle')),"Building Settings", false)
 
 		//operating hours
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
+		WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 		
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'), 5)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'))
+		WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 
@@ -1096,6 +1105,7 @@ public class ReusableMethodsManage extends BaseClass {
 		//WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'), '168')
 
 		WebUI.click(findTestObject('Object Repository/DataInput/OperatingHourDropdown14'))
+		WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 		
@@ -1212,6 +1222,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
+		WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('DataInput/WeightedOcc/Annual ridership'), GlobalVariable.minAngularWait)
@@ -1973,7 +1984,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(5)
 		WebUI.click(findTestObject('Manage/TeamModule/a_ Team'))
 		WebUI.delay(5)
-		WebUI.waitForElementVisible(findTestObject('Manage/TeamModule/newMemberAddedAuthorizationLevel'),20)
+		WebUI.waitForElementVisible(findTestObject('Manage/TeamModule/newMemberAddedAuthorizationLevel'),60)
 		WebUI.waitForElementClickable(findTestObject('Manage/TeamModule/button_Edit'),20)
 		WebUI.click(findTestObject('Manage/TeamModule/button_Edit'))
 		WebUI.delay(8)

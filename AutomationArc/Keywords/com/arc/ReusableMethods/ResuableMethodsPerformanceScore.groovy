@@ -157,7 +157,8 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 			WebUI.setText(findTestObject('PerformanceScore/PorjectId'),projectId)
 			WebUI.delay(2)
 			WebUI.click(findTestObject('PerformanceScore/RecomputeScore'))
-			WebUI.waitForAngularLoad(240, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		    WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 			}
 		
 /*		WebUI.click(findTestObject('PerformanceScore/RecomputeScoreButton'))
@@ -209,11 +210,10 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TotalPerformanceScore'),10)
-		//WebUI.delay(15)
+		WebUI.delay(15)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 		
-		//Verifying the Performance score
 		String totalperformaceScore = WebUI.getText(findTestObject('PerformanceScore/Score/TotalPerformanceScore'))
 		print totalperformaceScore
 		WebUI.verifyMatch(totalperformaceScore , totalperformanceScore, false)
@@ -284,11 +284,13 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 
 		/********* Verifying the Generated score for total score & Energy & Water & Waste & Transport & Human Experience under data Input section ********/
 		WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
-		WebUI.delay(14)
+		//WebUI.delay(14)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 		
-		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'),10)
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+	    WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+	
 		//Verifying the Performance score
 		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
 		print totalPerformaceScore

@@ -1145,12 +1145,6 @@
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/CertificationDetailsVerificationAddViaAdminToolTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>a8736b60-85fd-4ab6-ba2d-b93affeb1e0a</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/CertiVerifyCertificationDetailsForProjectsPointsAddedFromAdminToolTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>d3c43e39-09ae-458a-abea-41001f63150a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

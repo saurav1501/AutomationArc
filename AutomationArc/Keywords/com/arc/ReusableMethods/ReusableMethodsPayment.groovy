@@ -285,7 +285,12 @@ public class ReusableMethodsPayment extends BaseClass{
 		println list.get(randonNumber).getText()
 		data.setCellData(sheetName, "SpaceType", rowNum,list.get(randonNumber).getText())
 		list.get(randonNumber).click()
+		
+		
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
+	
+		
 		String stype=list.get(randonNumber).getText()
 
 		if((stype.equals("Industrial Manufacturing")) || (stype.equals("Laboratory")) || (stype.equals("Data Center")) ||
@@ -303,14 +308,21 @@ public class ReusableMethodsPayment extends BaseClass{
 		data.setCellData(sheetName, "OwnerType", rowNum,list1.get(randonNumber1).getText())
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/organization'),ownerOrg)
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/organization'))
+		
+		
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
+		
+		
 		WebUI.waitForElementVisible(findTestObject('Add_Project_Details/span_Habitat for Humanity'), 60)
 		WebUI.click(findTestObject('Add_Project_Details/span_Habitat for Humanity'))
 		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/ownerEmail'), ownerMail)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/ownerCountry'), ownerCountry, false)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/ratingSystem'), prjRating , false)
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/saveButtonProjectDetails'))
+		
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
 		
 		String title= DriverFactory.getWebDriver().getCurrentUrl()
 		println title
@@ -385,19 +397,33 @@ public class ReusableMethodsPayment extends BaseClass{
 		WebUI.setText(findTestObject('Object Repository/paymentPageNewUI/billingZip'),zip )
 		//*********************** Select the payment mode *******************//
 		if((paymentMode.equalsIgnoreCase("creditCard"))){
+			
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		    WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+			
 			WebUI.click(findTestObject('Object Repository/paymentPageNewUI/paymentPagePayNowOption'))
+			
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+			
 			WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/CardNumber'),cardNum)
 			WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/ccExpiary'),cardDate)
 			WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/cvvCreditCard'),cardCvv)
 			//promocode field in case if used
 			//WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/promoCode'),promocode)
 			//WebUI.delay(3)
-			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+			
 			WebUI.click(findTestObject('Object Repository/paymentPageNewUI/submitPayment'))
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 		}
 		else{
 			WebUI.click(findTestObject('Object Repository/paymentPageNewUI/paymentPagePayByCheckOption'))
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 			WebUI.click(findTestObject('Object Repository/paymentPageNewUI/submitPayment'))
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 		}
 		//WebUI.delay(30)
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
@@ -407,6 +433,8 @@ public class ReusableMethodsPayment extends BaseClass{
 			//WebUI.delay(2)
 			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 			WebUI.click(findTestObject('Object Repository/PayNowRegistrationPaymentUSTest/RegistrationPaymentConfirmationPopCloseButton'))
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 			uniqueSpaceTypesFlag=false
 		}
 		else{
@@ -416,6 +444,7 @@ public class ReusableMethodsPayment extends BaseClass{
 		WebUI.waitForElementVisible(findTestObject('PaymenntLocator/NextButton'), 70)
 		WebUI.click(findTestObject('PaymenntLocator/NextButton'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 		//WebUI.delay(10)
 	}
 
