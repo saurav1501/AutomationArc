@@ -1076,14 +1076,17 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 		
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.maxAngularWait)
+		
+		
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
 		WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle')),"Building Settings", false)
-
+		
 		//operating hours
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
 		WebUI.delay(1)
@@ -1118,9 +1121,11 @@ public class ReusableMethodsManage extends BaseClass {
 
 		//navigate back to manage project
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
+		WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-
+		
+		WebUI.waitForElementVisible(findTestObject('DataInput/WeightedOcc/Annual ridership'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('DataInput/WeightedOcc/Annual ridership'), GlobalVariable.minAngularWait)
 
 		WebUI.scrollToElement(findTestObject('DataInput/WeightedOcc/Annual ridership'), 5)
@@ -1134,8 +1139,6 @@ public class ReusableMethodsManage extends BaseClass {
 
 		String avg_time= WebUI.getAttribute(findTestObject('DataInput/WeightedOcc/Average time spent by ri'),'value');
 		System.out.println(avg_time)
-
-
 
 		//Verifying all fetched data form the formula .
 		Double dridership=Double.parseDouble(ridership);
