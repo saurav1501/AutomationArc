@@ -509,15 +509,26 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public editOccupanyAreaAndOpreatingHours(){
-		WebUI.delay(4)
+	
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
-		WebUI.delay(10)
+		
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+	
+		
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+	    WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+	
 		//WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'))
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), 5)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
-		WebUI.delay(6)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle')),"Building Settings", false)
-		/*
+		
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+	
+		
+		
+			/*
 		 findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown')
 		 findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOccupancy')
 		 findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea')
@@ -529,7 +540,10 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'), 5)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'))
-		Thread.sleep(3000)
+		Thread.sleep(1000)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+	
 		/*WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
 		 WebUI.delay(4)
 		 WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter start_'), 10)
@@ -545,11 +559,21 @@ public class ReusableMethodsManage extends BaseClass {
 		 WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))*/
 		WebUI.click(findTestObject('Object Repository/DataInput/OperatingHourDropdown'))
 		Thread.sleep(2000)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+	
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/OperatingHourValue168'),5)
 		//WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'), '168')
 		Thread.sleep(2000)
+		
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+	
 		WebUI.click(findTestObject('Object Repository/DataInput/OperatingHourValue168'))
 		Thread.sleep(2000)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+	
 		//WebUI.click(findTestObject('Object Repository/DataInput/SaveButtonBuildingSetting'))
 
 		//Edit Occupancy
@@ -557,11 +581,17 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOccupancy'), 5)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOccupancy'))
-		Thread.sleep(3000)
+		Thread.sleep(1000)
+		
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+	
 		WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'), '2,000')
-		Thread.sleep(2000)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle'))
 		Thread.sleep(2000)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+	
 		//WebUI.click(findTestObject('Object Repository/DataInput/SaveButtonBuildingSetting'))
 
 		/*//Edit area
@@ -991,21 +1021,31 @@ public class ReusableMethodsManage extends BaseClass {
 		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 		 WebUI.delay(2)*/
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
-
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+        
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		
 		WebUI.waitForElementVisible(findTestObject('Manage/ProjectDetailVerification/projectoccupancy'), GlobalVariable.minAngularWait)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectoccupancy'),'value'),'9', false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.delay(4)
+		
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+<<<<<<< HEAD
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), GlobalVariable.minAngularWait)
+=======
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+		
+		
+>>>>>>> 9f14438ae698024de19d504add175d011d35bdf4
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
+		WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle')),"Building Settings", false)
-
+		
 		//operating hours
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'), 5)
@@ -1366,8 +1406,14 @@ public class ReusableMethodsManage extends BaseClass {
 
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+		
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), 10)
 		//WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'))
+		
+		
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.delay(1)
@@ -1548,7 +1594,11 @@ public class ReusableMethodsManage extends BaseClass {
 		//ReusNavigate.navigateToManageSection()
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
 		WebUI.delay(3)
-
+		
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+	
+		
 		println "Verify if the fields on Manage project section are editable."
 		String num = CommonMethod.randomNumber()
 		WebUI.setText(findTestObject('Manage/ProjectDetailVerification/projectName'),"Test building None "+num)
@@ -1647,14 +1697,12 @@ public class ReusableMethodsManage extends BaseClass {
 		String prjTeamAdminEmail= GlobalVariable.projectTeamAdminAndArcAdminEmail
 		String prjTeamArcAdministratorName= GlobalVariable.projectTeamAdminAndArcAdminName
 		String prjTeamArcAdministratorEmail= GlobalVariable.projectTeamAdminAndArcAdminEmail
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(6)
-		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
-		 WebUI.scrollToElement(findTestObject('Manage/TeamModule/a_ Team'),2)
-		 */
 		WebUI.click(findTestObject('Manage/TeamModule/a_ Team'))
-		//WebUI.delay(3)
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
+		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/TeamModule/prjAdminName'), GlobalVariable.avgAngularWait)
 		String prjAdminName= WebUI.getText(findTestObject('Object Repository/Manage/TeamModule/prjAdminName'))
 		WebUI.verifyMatch(prjAdminName, prjTeamAdminName, false, FailureHandling.CONTINUE_ON_FAILURE)
 		String prjAdminAuthorizationLevel = WebUI.getText(findTestObject('Manage/TeamModule/prjAdminAuthorizationLevel'))
@@ -1671,16 +1719,13 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void addTeamMember(){
-		/*WebUI.delay(6)
-		 WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(6)
-		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))*/
+
 		WebUI.scrollToElement(findTestObject('Manage/TeamModule/a_ Team'),2)
 		WebUI.click(findTestObject('Manage/TeamModule/a_ Team'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 		
-		WebUI.verifyElementPresent(findTestObject('Object Repository/Manage/TeamModule/TeamMembersFirstRow'), 20)
+		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/TeamModule/TeamMembersFirstRow'), GlobalVariable.avgAngularWait)
 		WebUI.scrollToElement(findTestObject('Manage/TeamModule/input_input'), 2)
 		WebUI.setText(findTestObject('Manage/TeamModule/input_input'),GlobalVariable.TeamMember)
 		WebUI.delay(1)
@@ -1910,19 +1955,19 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void addSameTeamMemberRoleAgain(){
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(6)
-		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))*/
-		/*	WebUI.scrollToElement(findTestObject('Manage/TeamModule/a_ Team'),2)
-		 */
+
 		WebUI.click(findTestObject('Manage/TeamModule/a_ Team'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('Manage/TeamModule/input_input'), 10)
 		WebUI.scrollToElement(findTestObject('Manage/TeamModule/input_input'), 2)
 		WebUI.setText(findTestObject('Manage/TeamModule/input_input'),GlobalVariable.TeamMember)
-		WebUI.delay(2)
 		WebUI.click(findTestObject('Manage/TeamModule/button_Add Member'))
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		
+		WebUI.waitForElementClickable(findTestObject('Manage/TeamModule/button_Add Member'), GlobalVariable.TeamMember)
+		
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/TeamModule/sameRoleAddAgainErrMsg'), 20)
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/TeamModule/sameRoleAddAgainErrMsg'))
 		WebUI.clearText(findTestObject('Manage/TeamModule/input_input'))
@@ -1949,6 +1994,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.selectOptionByLabel(findTestObject('Manage/TeamModule/ArcAuthLevelSelect'), 'Team Member', false)
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Manage/TeamModule/ArcAdmistratorSaveBtn'))
+		WebUI.waitForElementClickable(findTestObject('Manage/TeamModule/ArcAdmistratorSaveBtn'),GlobalVariable.minAngularWait)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyElementVisible(findTestObject('Manage/TeamModule/atleastOneArcAdministratorPresentMsg'))
 	}
@@ -1965,6 +2011,8 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Manage/TeamModule/button_Save'))
+		WebUI.waitForElementClickable(findTestObject('Manage/TeamModule/button_Save'), GlobalVariable.minAngularWait)
+		
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyOptionSelectedByLabel(findTestObject('Object Repository/Manage/TeamModule/TeamRole'),"Arc Administrator", false,10)
 
@@ -1976,6 +2024,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.scrollToElement(findTestObject('Manage/Setting/a_setting'), 5)
 		WebUI.click(findTestObject('Manage/Setting/a_setting'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 		WebUI.verifyElementVisible(findTestObject('Add_Project_Details/Star/Receive emails only when y'))
 		WebUI.verifyElementVisible(findTestObject('Add_Project_Details/Star/Selecting Yes will show the'))
 		WebUI.verifyElementVisible(findTestObject('Add_Project_Details/Star/Make Performance score pub'))
@@ -1987,27 +2036,24 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void editTeamMemberRole(){
-		/*WebUI.delay(6)
-		 WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(6)
-		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))*/
-		//WebUI.scrollToElement(findTestObject('Manage/TeamModule/a_ Team'),2)
-		//WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
-		//WebUI.delay(6)
-		//WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
-		WebUI.delay(5)
 		WebUI.click(findTestObject('Manage/TeamModule/a_ Team'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
 		WebUI.waitForElementVisible(findTestObject('Manage/TeamModule/newMemberAddedAuthorizationLevel'),60)
 		WebUI.waitForElementClickable(findTestObject('Manage/TeamModule/button_Edit'),20)
 		WebUI.click(findTestObject('Manage/TeamModule/button_Edit'))
-		WebUI.delay(8)
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
 		WebUI.selectOptionByLabel(findTestObject('Manage/TeamModule/newMemberAddedAuthorizationLevel'), 'Team Manager', false)
-		WebUI.delay(4)
+		WebUI.delay(2)
 		WebUI.waitForElementClickable(findTestObject('Manage/TeamModule/button_Save'),20)
 		WebUI.click(findTestObject('Manage/TeamModule/button_Save'))
-		WebUI.delay(12)
-		//WebUI.waitForElementNotClickable(findTestObject('Object Repository/Manage/TeamModule/TeamRole'), 40)
+	    WebUI.waitForElementClickable(findTestObject('Manage/TeamModule/button_Save'), GlobalVariable.avgAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 		WebUI.verifyOptionSelectedByLabel(findTestObject('Object Repository/Manage/TeamModule/TeamRole'),"Team Manager", false,10)
 	}
 	@Keyword
@@ -2310,7 +2356,8 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.scrollToElement(findTestObject('Manage/CertificationAndScore/a_ Certifications'), 2)
 		WebUI.click(findTestObject('Manage/CertificationAndScore/a_ Certifications'))
 
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 		String certificationType= WebUI.getText(findTestObject('Manage/CertificationAndScore/CertificationType'))
 		WebUI.verifyMatch(certificationType, certiType, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
@@ -2335,17 +2382,20 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.refresh()
 
-		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		
 		WebUI.waitForElementClickable(findTestObject('Manage/CertificationAndScore/CertificationType'), 50)
+		
 		String certificationType= WebUI.getText(findTestObject('Manage/CertificationAndScore/CertificationType'))
 		WebUI.verifyMatch(certificationType, certiType, false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.delay(1)
+	
 		String certificationLevel = WebUI.getText(findTestObject('Manage/CertificationAndScore/CertificationLevelPlatinum'))
 		WebUI.verifyMatch(certificationLevel,'Platinum', false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.delay(1)
+	
 		String certificationPoints= WebUI.getText(findTestObject('Manage/CertificationAndScore/subCertificationPoints'))
 		WebUI.verifyMatch(certificationPoints, '80', false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.delay(1)
+
 		/*String certificationDate = WebUI.getText(findTestObject('Manage/CertificationAndScore/CertificationDate'))
 		 Assert.assertEquals(certificationDate, certiDate,"Certification date status Didn't matched")
 		 print certificationDate*/
@@ -2353,7 +2403,7 @@ public class ReusableMethodsManage extends BaseClass {
 		String certificationDate = WebUI.getText(findTestObject('Manage/CertificationAndScore/CertificationDate'))
 		WebUI.verifyMatch(certificationDate, certiDate, false, FailureHandling.CONTINUE_ON_FAILURE)
 		print certificationDate
-		WebUI.delay(1)
+
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/CertificationAndScore/leedLogo'))
 	}
 
@@ -2393,7 +2443,8 @@ public class ReusableMethodsManage extends BaseClass {
 		println "Verify LOGO displayed in Certification section for Certified project."
 		//WebUI.scrollToElement(findTestObject('Manage/CertificationAndScore/a_ Certifications'), 2)
 		WebUI.click(findTestObject('Manage/CertificationAndScore/a_ Certifications'))
-		WebUI.delay(4)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 		//WebUI.refresh()
 		//WebUI.delay(10)
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/CertificationAndScore/leedLogo'))
@@ -3001,9 +3052,19 @@ public class ReusableMethodsManage extends BaseClass {
 		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
 		 WebUI.delay(1)*/
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+<<<<<<< HEAD
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementPresent(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'), GlobalVariable.minAngularWait)
+=======
+		
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+	
+        WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+	    WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+	
+>>>>>>> 9f14438ae698024de19d504add175d011d35bdf4
 		WebUI.waitForElementClickable(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
 		WebUI.delay(2)
@@ -3119,7 +3180,11 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.scrollToElement(findTestObject('Manage/Setting/a_setting'), 5)
 		WebUI.click(findTestObject('Manage/Setting/a_setting'))
 		//WebUI.delay(3)
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		
+		
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/Setting/lobbySurveyText'))
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/Setting/makeScorePublicText'))
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/Setting/receiveEmailsText'))
@@ -3174,21 +3239,25 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void verifyLobbyBtnRemailOnAfterNavigationFromOtherPage() throws IOException, InterruptedException {
-		/*WebUI.delay(5)
-		 WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)
-		 WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Manage'))
-		 WebUI.delay(3)*/
+	
 		WebUI.scrollToElement(findTestObject('Manage/Setting/a_setting'), 5)
 		WebUI.click(findTestObject('Manage/Setting/a_setting'))
-		WebUI.delay(8)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/Setting/lobbySurveyBtn'), 15)
 		WebUI.click(findTestObject('Object Repository/Manage/Setting/lobbySurveyBtn'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
 		WebUI.click(findTestObject('Object Repository/Manage/App/a_ Apps'))
-		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
 		WebUI.click(findTestObject('Object Repository/Manage/Setting/a_setting'))
-		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
 		WebUI.verifyElementChecked(findTestObject('Object Repository/Manage/Setting/lobbySurveyBtnOn'), 5)
 		//WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/Setting/lobbySurveyBtnOn'))
 
@@ -3263,13 +3332,13 @@ public class ReusableMethodsManage extends BaseClass {
 		r.keyRelease(KeyEvent.VK_CONTROL)
 		r.keyRelease(KeyEvent.VK_V)
 		WebUI.delay(2)
-		r.keyPress(KeyEvent.VK_ENTER)
+		r.keyPress(KeyEvent.VK_ENTER)     
 		r.keyRelease(KeyEvent.VK_ENTER)
-        WebUI.delay(10)
+        WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForElementVisible(findTestObject('Manage/Setting/projectTitleOnAnimationPage'), GlobalVariable.avgAngularWait)
+		
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Manage/Setting/projectTitleOnAnimationPage')), name, false, FailureHandling.CONTINUE_ON_FAILURE)
-		//Assert.assertEquals(WebUI.getText(findTestObject('Manage/Setting/projectTitleOnAnimationPage')),name)
-		//Assert.assertEquals(WebUI.getText(findTestObject('Manage/Setting/projectAddressOnAnimationPage')),address+", "+country)
-		//WebUI.closeWindowIndex(2)
 		WebUI.closeWindowIndex(1)
 		WebUI.switchToWindowIndex(0)
 
@@ -3278,15 +3347,32 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void verifySubmitSurveyMultipleTimes(String sheetName) throws IOException, InterruptedException {
+
+	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
-		WebUI.delay(10)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+		
+		
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
-		WebUI.delay(5)
+		
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		
 		String MainWindowHandle = driver.getWindowHandle()
+		
 		WebUI.click(findTestObject('DataInput/Survey/CopySurveyLink'))
-		WebUI.delay(2)
+		WebUI.delay(1)
 		WebUI.click(findTestObject('DataInput/Survey/English'))
-		WebUI.delay(5)
+		
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		
 		for( int rowNum=2;rowNum<=2;rowNum++)
 		{
 
@@ -3307,40 +3393,23 @@ public class ReusableMethodsManage extends BaseClass {
 				r.keyPress(KeyEvent.VK_T);
 				r.keyRelease(KeyEvent.VK_CONTROL)
 				r.keyRelease(KeyEvent.VK_T)
-				WebUI.delay(7)
+				WebUI.delay(1)
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 				//To switch to the new tab
-				WebUI.switchToWindowIndex(1)
-				WebUI.delay(2)
+
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 				r.keyPress(KeyEvent.VK_CONTROL)
 				r.keyPress(KeyEvent.VK_V)
 				r.keyRelease(KeyEvent.VK_CONTROL)
 				r.keyRelease(KeyEvent.VK_V)
-				WebUI.delay(2)
+		
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 				r.keyPress(KeyEvent.VK_ENTER)
 				r.keyRelease(KeyEvent.VK_ENTER)
-				WebUI.delay(17)
-
-				/*WebUI.scrollToElement(findTestObject('DataInput/Survey/WalkR1'), 10)
-				 WebUI.setText(findTestObject('DataInput/Survey/WalkR1'), walk1)
-				 WebUI.setText(findTestObject('DataInput/Survey/BusR1'), walk2)
-				 WebUI.setText(findTestObject('DataInput/Survey/TramR1'), walk3)
-				 WebUI.setText(findTestObject('DataInput/Survey/HeavyRailR1'), walk4)
-				 WebUI.setText(findTestObject('DataInput/Survey/MotorcycleR1'), walk5)
-				 WebUI.setText(findTestObject('DataInput/Survey/carSoloR1'), walk6)
-				 WebUI.setText(findTestObject('DataInput/Survey/car23R1'), walk7)
-				 WebUI.setText(findTestObject('DataInput/Survey/cars4R1'), walk8)
-				 //WebUI.click(findTestObject('DataInput/Survey/ACCEPTANDCLOSE'),FailureHandling.CONTINUE_ON_FAILURE)
-				 //WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
-				 WebUI.delay(2)
-				 WebUI.click(findTestObject('DataInput/Survey/Submit'))
-				 WebUI.delay(3)
-				 WebUI.waitForElementVisible(findTestObject('DataInput/Survey/Thank'), 20)
-				 WebUI.click(findTestObject('Object Repository/DataInput/Survey/ReloadSurvey'))
-				 WebUI.delay(3)
-				 WebUI.waitForPageLoad(GlobalVariable.timeOut)
-				 println "Survey Submited Successufully"*/
-				//WebUI.verifyElementVisible(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/YourWorldIsAliveText'), FailureHandling.CONTINUE_ON_FAILURE)
-
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+				WebUI.delay(5)
+				WebUI.switchToWindowIndex(1)
+				
 				WebUI.click(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'))
 				int it=1;
 				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk1)
@@ -3560,12 +3629,20 @@ public class ReusableMethodsManage extends BaseClass {
 	}
 	@Keyword
 	public void WasteNotificationTest() throws IOException, InterruptedException {
-		WebUI.delay(1)
+		
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		
+		WebUI.scrollToElement(findTestObject('DataInput/CreateMeterBuilding/div_Waste Data'),GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/div_Waste Data'))
-		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/DataInput/Delete'))
 		// WebUI.click(findTestObject('Object Repository/DataInput/CityC/DeleteButton2'))
-		WebUI.delay(7)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(5)
 		WebUI.verifyElementPresent(findTestObject('Object Repository/DataInput/NotSym/svg_Waste Data_error_symbol er'),5)
 
 	}

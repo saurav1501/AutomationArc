@@ -520,18 +520,29 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 
 	@Keyword
 	public void onClickChangeCreditNavigateSelectionPage(){
-		//WebUI.click(findTestObject('Object Repository/SubmitReview/clickOnSideBar'))
-		//WebUI.delay(5)
+
 		WebUI.click(findTestObject('SubmitReview/a_ Review'))
+<<<<<<< HEAD
 		///WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),25)
 		//WebUI.delay(10)
 		//WebUI.waitForElementVisible(findTestObject('Object Repository/SubmitReview/SummaryModalReviewPage'),6)
 		//performanceScoreDataInputCheckboxSelection()
 		//WebUI.delay(4)
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+=======
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		
+		WebUI.waitForElementClickable(findTestObject('Object Repository/SubmitReview/button_Continue'), GlobalVariable.avgAngularWait)
+		
+		
+>>>>>>> 9f14438ae698024de19d504add175d011d35bdf4
 		WebUI.click(findTestObject('Object Repository/SubmitReview/button_Continue'))
 		WebUI.click(findTestObject('Object Repository/SubmitReview/ChangeCreditLink'))
-		WebUI.delay(4)
+		
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		
 		String url=WebUI.getUrl()
 		Assert.assertTrue(url.contains('submitforreview/selection'))
 		println 'Change credit successfully redirected to the Selection page'
