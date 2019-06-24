@@ -2667,7 +2667,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-		WebUI.delay(2)
+		WebUI.delay(6)
 
 		String KWHReading = data.getCellData(sheetName,"EnergykWh",2)
 		String noOfDays = data.getCellData(sheetName,"ENoOfDays",2)
