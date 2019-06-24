@@ -624,9 +624,8 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 	
-	
-	   WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-	   WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+	    WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+	    WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
 	
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), GlobalVariable.minAngularWait)
 
