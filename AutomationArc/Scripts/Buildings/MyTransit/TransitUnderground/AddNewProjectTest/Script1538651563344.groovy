@@ -32,18 +32,16 @@ import java.text.SimpleDateFormat as SimpleDateFormat
 
 
 	try {	
-			CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToBuildingTransit'()
+		
+		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToBuildingTransit'()
 			
-			CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsAddNewProject.buildingTransitAddNewProject'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSeven)
+		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsAddNewProject.buildingTransitAddNewProject'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSeven)
 		
-			}
-		catch (Throwable t) {
-			System.out.println(t.getLocalizedMessage())
-		
-			Error e1 = new Error(t.getMessage())
-		
-			e1.setStackTrace(t.getStackTrace())
-		
-			e1.printStackTrace()
-		}
+	}
+	catch (Throwable t) {
+		System.out.println(t.getLocalizedMessage())
+		Error e1 = new Error(t.getMessage())
+		e1.setStackTrace(t.getStackTrace())
+		e1.printStackTrace()	
+	}
 		

@@ -192,7 +192,8 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		String ProjectName = proName +'LEED v4.1' +formatarDate.format(date)
 		data.setCellData(sheetName,"ProjectName", rowNum, ProjectName)
 		WebUI.click(findTestObject('LEEDOnline/Login/a_Create new Project'))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		//WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(3)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/LEEDOnline/ProjReg/SelectProjectRegisterAs'), registerAs, false)
 		WebUI.sendKeys(findTestObject('LEEDOnline/ProjReg/input_Name_name'), ProjectName)
 		WebUI.selectOptionByLabel(findTestObject('LEEDOnline/ProjReg/RatingSystem'), prjRating,false)
@@ -518,8 +519,8 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
 
 		//Registration Payment details verification
-
-		WebUI.delay(5)
+             
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		if(GlobalVariable.environment=='dev'){
 			String regOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationOrderId'))
 			data.setCellData(sheetName, "OrderId", rowNum,regOrderId)

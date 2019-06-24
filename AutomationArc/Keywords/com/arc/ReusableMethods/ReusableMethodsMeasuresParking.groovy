@@ -9,19 +9,25 @@ import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
+import internal.GlobalVariable
+
 public class ReusableMethodsMeasuresParking extends BaseClass {
 
 	@Keyword
 	public void measureMangementPoint()throws IOException, InterruptedException {
-		WebUI.delay(5)
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Page_Arc dashboard/a_ Management'))
-		WebUI.delay(3)
+		//WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Page_Arc dashboard/span_A1 - Parking Pricing'))
 		//WebUI.doubleClick(findTestObject('Page_Arc dashboard/sideBar'))
-		WebUI.delay(10)
+		//WebUI.delay(10)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		for (int i = 0; i <= 15; i++) {
 			WebUI.click(findTestObject('BasePoint/CityCom/Checkbox1'))
-			WebUI.delay(2)
+			//WebUI.delay(2)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			if(i==0) {
 				println "Measure A1 - Parking Pricing total point Test Started"
 				String totalPoint = WebUI.getText(findTestObject('Page_Arc dashboard/TotalPoint'))
@@ -31,9 +37,11 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 
 			if(i==1) {
 				println "Measure A2 - Shared Parking total points Test Started"
-				WebUI.delay(2)
+				//WebUI.delay(2)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				WebUI.click(findTestObject('BasePoint/CityCom/Checkbox6'))
-				WebUI.delay(4)
+				//WebUI.delay(4)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				String totalPoint = WebUI.getText(findTestObject('Page_Arc dashboard/TotalPoint'))
 				WebUI.verifyMatch(totalPoint, "6 of 6 Points Pursued", true)
 				println "Measure A2 - Shared Parking total points Verified Successully"
@@ -41,7 +49,8 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 
 			if(i==2) {
 				println "Measure A3 - Transportation Management total points Test Started"
-				WebUI.delay(4)
+				//WebUI.delay(4)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				String totalPoint = WebUI.getText(findTestObject('Page_Arc dashboard/TotalPoint'))
 				WebUI.verifyMatch(totalPoint, "4 of 4 Points Pursued", true)
 				println "Measure A3 - Transportation Management total points Verified Successully"
@@ -49,9 +58,11 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 
 			if(i==3) {
 				println "Measure A4 - Recycling Program total points Test Started"
-				WebUI.delay(2)
+				//WebUI.delay(2)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				WebUI.click(findTestObject('BasePoint/CityCom/Checkbox6'))
-				WebUI.delay(5)
+				//WebUI.delay(5)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				String totalPoint = WebUI.getText(findTestObject('Page_Arc dashboard/TotalPoint'))
 				WebUI.verifyMatch(totalPoint, "4 of 4 Points Pursued", true)
 				println "Measure A4 - Recycling Program total points Verified Successully"
@@ -81,11 +92,14 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 
 			if(i==7) {
 				println "Measure A8 - Cleaning Procedures - Parking Decks total points Verified Successully"
-				WebUI.delay(2)
+				//WebUI.delay(2)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				WebUI.click(findTestObject('BasePoint/CityCom/Checkbox5'))
-				WebUI.delay(2)
+				//WebUI.delay(2)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				WebUI.click(findTestObject('BasePoint/CityCom/Checkbox9'))
-				WebUI.delay(4)
+				//WebUI.delay(4)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				String totalPoint = WebUI.getText(findTestObject('Page_Arc dashboard/TotalPoint'))
 				WebUI.verifyMatch(totalPoint, "6 of 6 Points Pursued", true)
 				println  "Measure A8 - Cleaning Procedures - Parking Decks total points Verified Successully"
@@ -93,9 +107,11 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 
 			if(i==8) {
 				println "Measure A9 - Building Systems Commissioning total points Test Started"
-				WebUI.delay(2)
+				//WebUI.delay(2)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				WebUI.click(findTestObject('BasePoint/CityCom/Checkbox5'))
-				WebUI.delay(4)
+				//WebUI.delay(4)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				String totalPoint = WebUI.getText(findTestObject('Page_Arc dashboard/TotalPoint'))
 				WebUI.verifyMatch(totalPoint, "8 of 8 Points Pursued", true)
 				println "Measure A9 - Building Systems Commissioning total points Verified Successully"
@@ -108,7 +124,8 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 			}
 			if(i==10) {
 				println "Measure A11 - Regional Materials for New Construction, Rehabilitation, or Retrofit total points Test Started"
-				WebUI.delay(3)
+				//WebUI.delay(3)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				String totalPoint = WebUI.getText(findTestObject('Page_Arc dashboard/TotalPoint'))
 				WebUI.verifyMatch(totalPoint, "6 of 6 Points Pursued", true)
 				println "Measure A11 - Regional Materials for New Construction, Rehabilitation, or Retrofit total points Verified Successully"
@@ -116,9 +133,11 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 
 			if(i==11) {
 				println "Measure A12 - Regional Labor for New Construction, Rehabilitation, or Retrofit total points Test Started"
-				WebUI.delay(2)
+				//WebUI.delay(2)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				WebUI.click(findTestObject('BasePoint/CityCom/Checkbox3'))
-				WebUI.delay(3)
+				//WebUI.delay(3)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				String totalPoint = WebUI.getText(findTestObject('Page_Arc dashboard/TotalPoint'))
 				WebUI.verifyMatch(totalPoint, "4 of 4 Points Pursued", true)
 				println "Measure A12 - Regional Labor for New Construction, Rehabilitation, or Retrofit total points Verified Successully"
@@ -149,7 +168,8 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 			}
 			WebUI.scrollToElement(findTestObject('Page_Arc dashboard/button_Next'), 3)
 			WebUI.click(findTestObject('Page_Arc dashboard/button_Next'))
-			WebUI.delay(3)
+			//WebUI.delay(3)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		}
 
 	}

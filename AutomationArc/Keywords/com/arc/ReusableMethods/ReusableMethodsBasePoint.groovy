@@ -333,7 +333,8 @@ public class ReusableMethodsBasePoint extends BaseClass{
 	@Keyword
 	public void countTotalNumberAllActionTransit() throws IOException, InterruptedException{
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/DashboardPage/NavigationCreditAction/a_ All Actions'))
-		WebUI.delay(8)
+		//WebUI.delay(8)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebDriver driver  = DriverFactory.getWebDriver()
 		ArrayList numberOfCount = driver.findElements(By.xpath("//span[@class = 'fw-semi-bold ng-binding']"))
 		int numberOfCountSize = numberOfCount.size()

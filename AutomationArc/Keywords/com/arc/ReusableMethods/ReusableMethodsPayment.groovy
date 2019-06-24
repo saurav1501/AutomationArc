@@ -125,8 +125,8 @@ public class ReusableMethodsPayment extends BaseClass{
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/ownerCountry'), ownerCountry, false)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/ratingSystem'), prjRating , false)
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/saveButtonProjectDetails'))
-		
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/AddProjectNewUI/saveButtonProjectDetails'), GlobalVariable.maxAngularWait)
 
 		//************* Select the yearly subscription *****************//
 		if(yearOfSubscription==1)
@@ -155,16 +155,6 @@ public class ReusableMethodsPayment extends BaseClass{
 		WebUI.waitForElementVisible(findTestObject('Object Repository/paymentPageNewUI/paymentPageTextPurchase'),20)
 		String purchase= WebUI.getText(findTestObject('Object Repository/paymentPageNewUI/paymentPageTextPurchase'))
 		WebUI.verifyMatch("Purchase", purchase, false)
-
-		/*String url= DriverFactory.getWebDriver().getCurrentUrl()
-		 println url
-		 String NotSyncProject_ID= url.substring(url.indexOf('9'),url.indexOf('9')+10 )
-		 println NotSyncProject_ID
-		 if(NotSyncProject_ID.startsWith('9'))
-		 KeywordUtil.logInfo("Trial Project is Created")
-		 else
-		 KeywordUtil.markFailedAndStop("Trial project is not created")
-		 */
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/DashboardNavigationNewUI/Dash/select_LEED for CitiesOtherNon'), prjRating , false)
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/saveButtonProjectDetails'))
 		//WebUI.delay(20)
@@ -285,12 +275,8 @@ public class ReusableMethodsPayment extends BaseClass{
 		println list.get(randonNumber).getText()
 		data.setCellData(sheetName, "SpaceType", rowNum,list.get(randonNumber).getText())
 		list.get(randonNumber).click()
-		
-		
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
-	
-		
 		String stype=list.get(randonNumber).getText()
 
 		if((stype.equals("Industrial Manufacturing")) || (stype.equals("Laboratory")) || (stype.equals("Data Center")) ||
@@ -308,22 +294,16 @@ public class ReusableMethodsPayment extends BaseClass{
 		data.setCellData(sheetName, "OwnerType", rowNum,list1.get(randonNumber1).getText())
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/organization'),ownerOrg)
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/organization'))
-		
-		
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
-		
-		
 		WebUI.waitForElementVisible(findTestObject('Add_Project_Details/span_Habitat for Humanity'), 60)
 		WebUI.click(findTestObject('Add_Project_Details/span_Habitat for Humanity'))
 		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/ownerEmail'), ownerMail)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/ownerCountry'), ownerCountry, false)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/ratingSystem'), prjRating , false)
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/saveButtonProjectDetails'))
-		
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
-		
 		String title= DriverFactory.getWebDriver().getCurrentUrl()
 		println title
 		String Project_ID= title.substring(title.indexOf('1'),title.indexOf('1')+10 )
@@ -730,13 +710,12 @@ public class ReusableMethodsPayment extends BaseClass{
 
 	@Keyword
 	public void payNowRegistrationPaymentINT(){
-		//WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		//WebUI.delay(10)
-		//WebUI.click(findTestObject('PayNowRegistrationPaymentIN/a_ Manage'))
+		
 		WebUI.scrollToElement(findTestObject('PayNowRegistrationPaymentIN/a_ Billing'), 2)
 		WebUI.click(findTestObject('PayNowRegistrationPaymentIN/a_ Billing'))
 		WebUI.click(findTestObject('PayNowRegistrationPaymentIN/button_Pay now'))
-		WebUI.delay(4)
+		//WebUI.delay(4)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		//WebUI.clearText(findTestObject('PayNowRegistrationPaymentUSTest/input_firstname'))
 		WebUI.setText(findTestObject('PayNowRegistrationPaymentUSTest/input_firstname'), 'Saurav')
 		WebUI.clearText(findTestObject('PayNowRegistrationPaymentUSTest/input_lastname'))
@@ -746,20 +725,20 @@ public class ReusableMethodsPayment extends BaseClass{
 		WebUI.setText(findTestObject('PayNowRegistrationPaymentUSTest/input_CC_number'), '999')
 		//WebUI.click(findTestObject('PayNowRegistrationPaymentUSTest/div_Street Address  This field'))
 		//WebUI.clearText(findTestObject('PayNowRegistrationPaymentUSTest/input_streetaddress'))
-
 		WebUI.selectOptionByLabel(findTestObject('PayNowRegistrationPaymentUSTest/select_AfghanistanAland Island'), 'United States', false)
 		WebUI.delay(3)
 		WebUI.selectOptionByLabel(findTestObject('RegistrationPaymentCheck/select_Select StateAlabamaAlas'), 'Alabama', false)
-
 		WebUI.setText(findTestObject('PayNowRegistrationPaymentUSTest/input_streetaddress'), 'GBCI BUILDING')
 		//WebUI.clearText(findTestObject('PayNowRegistrationPaymentUSTest/input_city'))
 		WebUI.setText(findTestObject('PayNowRegistrationPaymentUSTest/input_city'), 'Gurgaon')
 		//WebUI.clearText(findTestObject('PayNowRegistrationPaymentUSTest/input_postalcode'))
 		WebUI.setText(findTestObject('PayNowRegistrationPaymentUSTest/input_postalcode'), '35006')
 		WebUI.setText(findTestObject('PayNowRegistrationPaymentUSTest/input_phone'), '9486861522')
-		WebUI.delay(4)
+		//WebUI.delay(4)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.click(findTestObject('PayNowRegistrationPaymentUSTest/button_Pay now_1'))
-		WebUI.delay(5)
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		String regStatus= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationPaymentStatus'))
 		Assert.assertEquals(regStatus, "Completed")
 	}
@@ -767,8 +746,7 @@ public class ReusableMethodsPayment extends BaseClass{
 
 	@Keyword
 	public void payNowReviewPaymentUS(){
-		//WebUI.click(findTestObject('Object Repository/SubmitReview/clickOnSideBar'))
-		//WebUI.click(findTestObject('PayNowRegistrationPaymentIN/a_ Manage'))
+		s
 		WebUI.scrollToElement(findTestObject('PayNowRegistrationPaymentIN/a_ Billing'), 2)
 		WebUI.click(findTestObject('PayNowRegistrationPaymentIN/a_ Billing'))
 		WebUI.click(findTestObject('PayNowRegistrationPaymentIN/button_Pay now'))
@@ -813,10 +791,12 @@ public class ReusableMethodsPayment extends BaseClass{
 	@Keyword
 	public void reviewPaymentByCheckINT(){
 		//WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		WebUI.delay(6)
+		//WebUI.delay(6)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		Assert.assertEquals(WebUI.verifyElementClickable(findTestObject('Object Repository/SubmitReview/PromocodeTextFieldReviewPayment')),true)
 		WebUI.click(findTestObject('Object Repository/PaymenntLocator/payment-typeCheck'))
-		WebUI.delay(2)
+		//WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.clearText(findTestObject('ReviewPaymentByCheckUS/input_firstname2'))
 		WebUI.setText(findTestObject('ReviewPaymentByCheckUS/input_firstname2'), 'Saurav')
 		WebUI.clearText(findTestObject('ReviewPaymentByCheckUS/input_lastname2'))
