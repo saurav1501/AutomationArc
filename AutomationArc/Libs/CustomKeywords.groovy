@@ -3364,6 +3364,110 @@ def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.submitPreCertAnd
     (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).submitPreCertAndVerifySuccessMessage()
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.onClickChangeCreditNavigateSelectionPage"() {
+    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).onClickChangeCreditNavigateSelectionPage()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.addCertificationFromAdminToolForCities"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).addCertificationFromAdminToolForCities(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.addCertificationFromAdminToolForCommunity"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).addCertificationFromAdminToolForCommunity(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.addCertificationFromAdminToolForBuildings"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).addCertificationFromAdminToolForBuildings(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.add3StarCertificationFromAdminToolForCity"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).add3StarCertificationFromAdminToolForCity(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.addCertificationFromAdminToolForTransit"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).addCertificationFromAdminToolForTransit(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifyReportingPeriodPreviousAndCurrent"() {
+    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).verifyReportingPeriodPreviousAndCurrent()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifySnapshotFileNameUploaded"(
+    	String sheetName	
+     , 	int rowNum	
+     , 	String ratingSystem	) {
+    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).verifySnapshotFileNameUploaded(
+        	sheetName
+         , 	rowNum
+         , 	ratingSystem)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifySnapshotFileNameUploadedBuilding"(
+    	String sheetName	
+     , 	int rowNum	
+     , 	String ratingSystem	) {
+    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).verifySnapshotFileNameUploadedBuilding(
+        	sheetName
+         , 	rowNum
+         , 	ratingSystem)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifySnapshotFileNameUploadedBuildingTransit"(
+    	String sheetName	
+     , 	int rowNum	
+     , 	String ratingSystem	) {
+    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).verifySnapshotFileNameUploadedBuildingTransit(
+        	sheetName
+         , 	rowNum
+         , 	ratingSystem)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifySnapshotFileNameUploadedBuildingTransitAboveGround"(
+    	String sheetName	
+     , 	int rowNum	
+     , 	String ratingSystem	) {
+    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).verifySnapshotFileNameUploadedBuildingTransitAboveGround(
+        	sheetName
+         , 	rowNum
+         , 	ratingSystem)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.VerifyChangeTextInSubmitReviewWhenPaymentIsPending"() {
+    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).VerifyChangeTextInSubmitReviewWhenPaymentIsPending()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.adminToolReturnReview"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).adminToolReturnReview(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifyTheHereLinkRedirectToGivenRespectiveLink"() {
+    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).verifyTheHereLinkRedirectToGivenRespectiveLink()
+}
+
 def static "com.arc.ReusableMethods.ResuableMethodsGRESB.downloadGresbtemplete"() {
     (new com.arc.ReusableMethods.ResuableMethodsGRESB()).downloadGresbtemplete()
 }
