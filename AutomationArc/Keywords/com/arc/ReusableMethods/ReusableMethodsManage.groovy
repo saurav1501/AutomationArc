@@ -1362,10 +1362,6 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public void verifyEnergyPortfolioManagerAppInstallByDefault(){
 
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)
-		 WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Manage'))*/
-
 		WebUI.scrollToElement(findTestObject('Object Repository/Manage/App/a_ Apps'),2)
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.click(findTestObject('Object Repository/Manage/App/a_ Apps'))
@@ -1379,7 +1375,9 @@ public class ReusableMethodsManage extends BaseClass {
 		println "Uninstalling App and check uninstalled message."
 		WebUI.click(findTestObject('Object Repository/Manage/App/BPortfolioManager'))
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/Manage/App/BPortfolioManager'), GlobalVariable.maxAngularWait)
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/AppUninstalledMessage'))
+	
 	}
 
 
@@ -3237,6 +3235,8 @@ public class ReusableMethodsManage extends BaseClass {
 
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/Setting/lobbySurveyBtn'), 15)
 		WebUI.click(findTestObject('Object Repository/Manage/Setting/lobbySurveyBtn'))
+		WebUI.delay(2)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/Manage/Setting/lobbySurveyBtn'), GlobalVariable.avgAngularWait)
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 

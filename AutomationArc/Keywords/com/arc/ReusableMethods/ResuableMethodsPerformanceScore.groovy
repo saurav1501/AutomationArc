@@ -326,7 +326,7 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.delay(2)
 		WebUI.click(findTestObject('PerformanceScore/RecomputeScore'))
 		
-		boolean keepGoing = WebUI.waitForAngularLoad(240, FailureHandling.CONTINUE_ON_FAILURE)
+		boolean keepGoing = WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
 		
 		if(keepGoing== false)
 		
@@ -336,9 +336,8 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 			WebUI.setText(findTestObject('PerformanceScore/PorjectId'),projectId)
 			WebUI.delay(2)
 			WebUI.click(findTestObject('PerformanceScore/RecomputeScore'))
-			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-			}
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait,GlobalVariable.avgAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
+		}
 		
 		String energyScore = WebUI.getText(findTestObject('PerformanceScore/Score/EnergyScore'))
 		String waterScore = WebUI.getText(findTestObject('PerformanceScore/Score/WaterSocre'))
@@ -375,10 +374,9 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.setText(findTestObject('PerformanceScore/PorjectId'),projectId)
 		WebUI.delay(2)
 		WebUI.click(findTestObject('PerformanceScore/RecomputeScore'))
-		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-		
-		
-		boolean keepGoing = WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait,FailureHandling.CONTINUE_ON_FAILURE)
+			
+		boolean keepGoing = WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait,FailureHandling.CONTINUE_ON_FAILURE)
 		
 		if(keepGoing== false)
 		
@@ -388,7 +386,7 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 			WebUI.setText(findTestObject('PerformanceScore/PorjectId'),projectId)
 			WebUI.delay(2)
 			WebUI.click(findTestObject('PerformanceScore/RecomputeScore'))
-			WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+			WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait,FailureHandling.CONTINUE_ON_FAILURE)
 			}
 		
 		WebUI.switchToWindowIndex(0)

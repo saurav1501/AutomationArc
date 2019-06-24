@@ -15,8 +15,10 @@ import internal.GlobalVariable as GlobalVariable
 
 try {
 	
+	WebUI.delay(3)
+	
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumThree)
-
+    
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPrerequisites.prevousNextCreditcreditNameTest'()
 	
 		 
