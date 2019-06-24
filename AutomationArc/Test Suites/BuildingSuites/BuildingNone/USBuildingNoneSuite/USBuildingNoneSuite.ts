@@ -1265,6 +1265,12 @@
       <testCaseId>Test Cases/Common/Analytics/1.17/TonnesMetricMWH/CarbonTotalDailyCarbonEmissionsMTCO2eCalTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>9cb8d039-1961-439e-851a-73f8712353b1</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/DownloadAndVerifyExportedDataTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>ca4f5b3d-3a1f-4a51-a86f-b2431c992ed9</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -1335,12 +1341,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Common/Notification/BuildingTVOCDeleteReadingNotificationTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>9cb8d039-1961-439e-851a-73f8712353b1</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/DownloadAndVerifyExportedDataTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>533570e4-2e92-451d-aec7-542268fc6461</guid>

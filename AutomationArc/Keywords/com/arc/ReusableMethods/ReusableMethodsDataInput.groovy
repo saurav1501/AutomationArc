@@ -5609,17 +5609,10 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	public void percentageSurveyResponseRateCalculationTransit() throws IOException, InterruptedException, Exception{
 		
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
-<<<<<<< HEAD
-		//WebUI.delay(10)
-		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)  
-=======
-		
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-	
+        WebUI.waitForElementPresent(findTestObject('Manage/Project/WeightedOccupancy'), GlobalVariable.minAngularWait)
 	    WebUI.waitForElementVisible(findTestObject('Manage/Project/WeightedOccupancy'), GlobalVariable.minAngularWait)
-		
->>>>>>> 9f14438ae698024de19d504add175d011d35bdf4
 		WebUI.scrollToElement(findTestObject('Manage/Project/WeightedOccupancy'), 10)
 		String projectoccupancy = WebUI.getAttribute(findTestObject('Manage/Project/WeightedOccupancy'),'value')
 		double projectOccupancy= Double.parseDouble(projectoccupancy)

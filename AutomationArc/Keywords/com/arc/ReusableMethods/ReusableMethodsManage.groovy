@@ -1031,16 +1031,9 @@ public class ReusableMethodsManage extends BaseClass {
 		
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-<<<<<<< HEAD
-		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), GlobalVariable.minAngularWait)
-		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), GlobalVariable.minAngularWait)
-=======
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-		
-		
->>>>>>> 9f14438ae698024de19d504add175d011d35bdf4
+
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
 		WebUI.delay(2)
@@ -3052,19 +3045,12 @@ public class ReusableMethodsManage extends BaseClass {
 		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
 		 WebUI.delay(1)*/
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
-<<<<<<< HEAD
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		WebUI.waitForElementPresent(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'), GlobalVariable.minAngularWait)
-		WebUI.waitForElementVisible(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'), GlobalVariable.minAngularWait)
-=======
-		
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 	
         WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
 	    WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-	
->>>>>>> 9f14438ae698024de19d504add175d011d35bdf4
+
 		WebUI.waitForElementClickable(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
 		WebUI.delay(2)
