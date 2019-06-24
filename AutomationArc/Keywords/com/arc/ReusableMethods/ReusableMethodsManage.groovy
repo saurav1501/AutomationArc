@@ -621,13 +621,16 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+	
+	    WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+	    WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+	
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), GlobalVariable.minAngularWait)
 
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle')),"Building Settings", false)
-		Thread.sleep(2000)
 
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'), 5)
@@ -1359,10 +1362,6 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public void verifyEnergyPortfolioManagerAppInstallByDefault(){
 
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)
-		 WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Manage'))*/
-
 		WebUI.scrollToElement(findTestObject('Object Repository/Manage/App/a_ Apps'),2)
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.click(findTestObject('Object Repository/Manage/App/a_ Apps'))
@@ -1376,7 +1375,9 @@ public class ReusableMethodsManage extends BaseClass {
 		println "Uninstalling App and check uninstalled message."
 		WebUI.click(findTestObject('Object Repository/Manage/App/BPortfolioManager'))
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/Manage/App/BPortfolioManager'), GlobalVariable.maxAngularWait)
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/AppUninstalledMessage'))
+	
 	}
 
 
@@ -1718,7 +1719,12 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 		
+<<<<<<< HEAD
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/TeamModule/TeamMembersFirstRow'))
+=======
+		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/TeamModule/TeamMembersFirstRow'),GlobalVariable.TeamMember,FailureHandling.CONTINUE_ON_FAILURE)	
+		
+>>>>>>> 14eb073c7f649d81270cc8fb085ec958f54d2534
 		WebUI.scrollToElement(findTestObject('Manage/TeamModule/input_input'), 2)
 		WebUI.setText(findTestObject('Manage/TeamModule/input_input'),GlobalVariable.TeamMember)
 		WebUI.delay(1)
@@ -3232,6 +3238,8 @@ public class ReusableMethodsManage extends BaseClass {
 
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/Setting/lobbySurveyBtn'), 15)
 		WebUI.click(findTestObject('Object Repository/Manage/Setting/lobbySurveyBtn'))
+		WebUI.delay(2)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/Manage/Setting/lobbySurveyBtn'), GlobalVariable.avgAngularWait)
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
@@ -3766,7 +3774,13 @@ public class ReusableMethodsManage extends BaseClass {
 	public void riderShipCreateMeterTest() throws IOException, InterruptedException {
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+	
+	
+	   WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+	   WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+		
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/TRNotification/div_Ridership'), GlobalVariable.minAngularWait)
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/TRNotification/div_Ridership'),10)
 		WebUI.click(findTestObject('Object Repository/DataInput/TRNotification/div_Ridership'))

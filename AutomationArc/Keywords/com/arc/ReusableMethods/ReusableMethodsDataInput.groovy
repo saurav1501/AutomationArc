@@ -6553,7 +6553,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 30)
 		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
 		WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
-		//WebUI.delay(3)
+	    WebUI.delay(3)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_kWh'), 10)
@@ -7119,8 +7119,14 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		/********* Verifying the Generated score for total score & Energy & Water & Waste & Transport & Human Experience under data Input section ********/
 		WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
-		WebUI.delay(10)
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+	
+	
+	    WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+	    WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+	
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'),10)
 		//Verifying the Performance score
 		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
@@ -7129,9 +7135,10 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.verifyMatch(totalPerformaceScore , actotalScore, false)
 
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
-		WebUI.delay(15)
+		WebUI.delay(18)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TotalPerformanceScore'),10)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/Score/TotalPerformanceScore'), GlobalVariable.minAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
 		
 		//Verifying the Performance score
 		String totalperformaceScore = WebUI.getText(findTestObject('PerformanceScore/Score/TotalPerformanceScore'))
