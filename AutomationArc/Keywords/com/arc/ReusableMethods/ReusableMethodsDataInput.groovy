@@ -5039,9 +5039,10 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 				WebUI.click(findTestObject('Object Repository/DataInput/Survey/SaveButtonToRecordSurveyData'))
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-			
+			    WebUI.delay(2)
 				WebUI.dragAndDropToObject(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'), findTestObject('Object Repository/DataInput/Survey/ExtremelySatisfySpanText'))
 				WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
+				WebUI.delay(2)
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 				WebUI.click(findTestObject('DataInput/Survey/Submit1'))
 				WebUI.waitForElementClickable(findTestObject('DataInput/Survey/Submit'), GlobalVariable.avgAngularWait)
@@ -5121,9 +5122,9 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
 				//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'),4)  
-				WebUI.delay(1)
+				WebUI.delay(2)
 				WebUI.dragAndDropToObject(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'), findTestObject('Object Repository/DataInput/Survey/ExtremelySatisfySpanText'))
-				WebUI.delay(1)
+				WebUI.delay(2)
 				WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
