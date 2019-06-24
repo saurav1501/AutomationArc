@@ -554,7 +554,7 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		reusableMethodsSearch.searchProgram(sheetName,rowNum)
 
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-
+        WebUI.delay(2)
 		if((WebUI.getAttribute(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'), "class", FailureHandling.OPTIONAL).equals("pl20 collapsed"))){
 			println "Scores"
 			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
@@ -705,16 +705,18 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		 WebUI.click(findTestObject('Manage/Parking/Manage'))
 		 WebUI.delay(1)*/
 		WebUI.click(findTestObject('PerformanceScore/a_ Settings'))
-		WebUI.delay(7)
+		//WebUI.delay(7)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.scrollToElement(findTestObject('PerformanceScore/span_All Actions'),5)
 		WebUI.click(findTestObject('PerformanceScore/span_All Actions'))
-		WebUI.delay(3)
-		//WebUI.waitForElementClickable(findTestObject('PerformanceScore/PerformanceScore'),3)
+		//WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('PerformanceScore/PerformanceScore'))
-		WebUI.delay(15)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		//Verifying the default functionality of performance score
 		reusableMethodsSearch.searchProgram(sheetName, rowNum)
-		WebUI.delay(10)
+		//WebUI.delay(10)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		String performaceScore = WebUI.getText(findTestObject('PerformanceScore/span_Performance Score'))
 		WebUI.verifyMatch(performaceScore , 'Performance Score', false)
 	}

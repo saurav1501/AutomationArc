@@ -371,7 +371,8 @@ public class ReusableMethodsManage extends BaseClass {
 
 
 		WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/manageProject'))
-		WebUI.delay(5)
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DashboardNavigationNewUI/projectPageProjectTextVerification'), 20)
 		String projectTextVerification= WebUI.getText(findTestObject('Object Repository/DashboardNavigationNewUI/projectPageProjectTextVerification'))
 		WebUI.verifyMatch("Project", projectTextVerification, false)
@@ -997,6 +998,9 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(4)
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
@@ -2177,11 +2181,6 @@ public class ReusableMethodsManage extends BaseClass {
 
 		//Verify the billing order file
 		String orderId = data.getCellData(sheetName,"OrderId", rowNum)
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)
-		 WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Manage'))*/
-		//WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
-		//WebUI.delay(5)
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
 		//WebUI.delay(6)
@@ -2202,10 +2201,6 @@ public class ReusableMethodsManage extends BaseClass {
 		String regdAmt = data.getCellData(sheetName, "RegAmount", rowNum)
 		String reviewAmt = data.getCellData(sheetName, "ReviewAmount", rowNum)
 		String registrationDate = data.getCellData(sheetName, "RegDate", rowNum)
-
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)
-		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))*/
 		WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Loaders/ProjectDashboardLoader'), 30)
@@ -2236,20 +2231,6 @@ public class ReusableMethodsManage extends BaseClass {
 			String reviewOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/ReviewOrderId'))
 			data.setCellData(sheetName, "ReviewId", rowNum,reviewOrderId)
 		}
-
-		//Assert.assertEquals(regAmount, regdAmt)
-		/*	String reviewAmount= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/ReviewAmount'))
-		 WebUI.verifyMatch(reviewAmt, reviewAmount, false,FailureHandling.CONTINUE_ON_FAILURE)
-		 */	//Review Payment details verification
-		/*
-		 String revieDate= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/ReviewPaymentDate'))
-		 String reviewOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/ReviewOrderId'))
-		 String reviewAmount= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/ReviewAmount'))
-		 String reviewStatus= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/ReviewPaymentStatus'))
-		 String revieworderId = data.setCellData(sheetName, "ReviewId", rowNum,reviewOrderId)
-		 Assert.assertEquals(revieDate, verifyBillingDate() )
-		 //	Assert.assertEquals(reviewAmount, reviewAmt)
-		 Assert.assertEquals(reviewStatus, "Completed")*/
 	}
 
 
@@ -2259,9 +2240,7 @@ public class ReusableMethodsManage extends BaseClass {
 		String regdAmt = data.getCellData(sheetName, "RegAmount", rowNum)
 		String reviewAmt = data.getCellData(sheetName, "DiscReviewAmount", rowNum)
 		String registrationDate = data.getCellData(sheetName, "RegDate", rowNum)
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)
-		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))*/
+		
 		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
 			println "Manage"
 			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
@@ -2438,10 +2417,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void verifyAgreementDateSignAndType(){
-		//String agreementDate = data.getCellData(sheetName, "RegDate", rowNum)
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(4)
-		 WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Manage'))*/
+		
 		WebUI.scrollToElement(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'),2)
 		WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
@@ -3026,6 +3002,8 @@ public class ReusableMethodsManage extends BaseClass {
 		 WebUI.delay(1)*/
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
 		WebUI.delay(2)
@@ -3902,22 +3880,19 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public void billingStatusPrice2(String sheetName, int rowNum){
 		if(GlobalVariable.environment=='dev'){
-			WebUI.delay(2)
-			//String regdAmt = data.getCellData(sheetName,"RAmount2To4", rowNum)
+			
+			WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 			String paymentStatus = data.getCellData(sheetName, "PaymentStatus", rowNum)
 			WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-			WebUI.delay(1)
+			WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 			if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
 				println "Manage"
 				WebUI.delay(2)
 				WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 			}
-			//WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 			WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
 			WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
-
-			WebUI.delay(5)
-
+			WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 			String regDate= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/registrationPaymentDate'))
 			String regOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationOrderId'))
 			String regOrderType= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/span_REGISTRATION'))
@@ -3928,20 +3903,20 @@ public class ReusableMethodsManage extends BaseClass {
 
 		}
 		else {
-			WebUI.delay(2)
+			WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 			String regdAmt = data.getCellData(sheetName,"RAmount2To4", rowNum)
 			String paymentStatus = data.getCellData(sheetName, "PaymentStatus", rowNum)
 			WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-			WebUI.delay(1)
+			WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 			if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
 				println "Manage"
-				WebUI.delay(2)
+				WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 				WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 			}
-			//WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+			
 			WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
 			WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
-			WebUI.delay(5)
+			WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 			String regDate= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/registrationPaymentDate'))
 			String regOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationOrderId'))
 			String regOrderType= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/span_REGISTRATION'))

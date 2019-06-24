@@ -198,7 +198,8 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		//WebUI.click(findTestObject('Object Repository/SubmitReview/clickOnSideBar'))
 		//WebUI.delay(5)
 		WebUI.click(findTestObject('SubmitReview/a_ Review'))
-		WebUI.delay(15)
+		//WebUI.delay(15)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/SubmitReviewText')), "Submit for Review", false, FailureHandling.CONTINUE_ON_FAILURE)
 		//for preRequisite
 		(1..10).each {
@@ -443,25 +444,32 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		//WebUI.click(findTestObject('Object Repository/SubmitReview/clickOnSideBar'))
 		//WebUI.delay(5)
 		WebUI.click(findTestObject('SubmitReview/a_ Review'))
-		WebUI.delay(6)
+		//WebUI.delay(6)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/SubmitReviewText')), "Submit for Review",false, FailureHandling.CONTINUE_ON_FAILURE )
 
 		//WebUI.waitForElementClickable(findTestObject('Object Repository/SubmitReview/ClickOnCertificationType'), 3)
 		//WebUI.scrollToElement(findTestObject('Object Repository/SubmitReview/ClickOnCertificationType'),3)
-		WebUI.delay(20)
+		//WebUI.delay(20)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.click(findTestObject('Object Repository/SubmitReview/ClickOnCertificationType'))
-		WebUI.delay(3)
+		//WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.click(findTestObject('Object Repository/SubmitReview/SelectPre-Certification'))
-		WebUI.delay(5)
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/PreCertificationText')), "Pre-Certification", false, FailureHandling.CONTINUE_ON_FAILURE)
 		(1..28).each {
 			WebUI.check(findTestObject('SubmitReview/CheckBoxReview',[('index') : it]))
 		}
 		WebUI.scrollToElement(findTestObject('SubmitReview/div_Upload'),3)
 		WebUI.click(findTestObject('SubmitReview/div_Upload'))
-		WebUI.delay(6)
+		//WebUI.delay(6)
+		
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		ReusableMethodsDataInput.uploadFile(UploadDocumentDataInput)
-		WebUI.delay(4)
+		//WebUI.delay(4)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.sendKeys(findTestObject('Object Repository/SubmitReview/SubmitReviewTextAreaAdditionalMessage'), "Submit Pre Certification Test Message")
 		WebUI.click(findTestObject('Object Repository/SubmitReview/ClickToSaveAddtionalTextArea'))
 		//WebUI.refresh()
@@ -500,11 +508,13 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 	}
 	@Keyword
 	public void submitPreCertAndVerifySuccessMessage(){
-		WebUI.delay(5)
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.scrollToElement(findTestObject('Object Repository/SubmitReview/SubmitPreCertification'), 3)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/SubmitReview/SubmitPreCertification'),9)
 		WebUI.click(findTestObject('Object Repository/SubmitReview/SubmitPreCertification'))
-		WebUI.delay(8)
+		//WebUI.delay(8)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/MessageSuccessfullySubmitted')), "Successfully Submitted", false, FailureHandling.CONTINUE_ON_FAILURE)
 	}
 
@@ -517,7 +527,8 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		//WebUI.delay(10)
 		//WebUI.waitForElementVisible(findTestObject('Object Repository/SubmitReview/SummaryModalReviewPage'),6)
 		//performanceScoreDataInputCheckboxSelection()
-		WebUI.delay(4)
+		//WebUI.delay(4)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('Object Repository/SubmitReview/button_Continue'))
 		WebUI.click(findTestObject('Object Repository/SubmitReview/ChangeCreditLink'))
 		WebUI.delay(4)
@@ -740,7 +751,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		//WebUI.click(findTestObject('Object Repository/SubmitReview/ClickToSelectYear'))
 		//WebUI.delay(2)
 		//WebUI.click(findTestObject('Object Repository/SubmitReview/ClickToSelectMonth'))
-		//WebUI.delay(2)
+		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/SubmitReview/ClickOnDay'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
@@ -1071,7 +1082,8 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		println destinationUnZippedFolder
 		//deleteFile(sourceZipFile)
 		//deleteFile(sourceExtractedFile)
-		WebUI.delay(5)
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.scrollToElement(findTestObject('Object Repository/PerformanceScore/AdminToolReviewButton'), 4)
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/AdminToolReviewButton'))
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/AdminToolsReviewSearchBar'))
@@ -1165,13 +1177,16 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 
 	@Keyword
 	public void VerifyChangeTextInSubmitReviewWhenPaymentIsPending(){
-		WebUI.delay(4)
+		//WebUI.delay(4)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('SubmitReview/a_ Review'))
 		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),40)
-		WebUI.delay(7)
+		//WebUI.delay(7)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/SubmitReviewText')), "Submit for Review", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyElementVisible(findTestObject('Object Repository/SubmitReview/ProjectIsStillUnderReviewText'))
-		WebUI.delay(2)
+		//WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	}
 
 	@Keyword
