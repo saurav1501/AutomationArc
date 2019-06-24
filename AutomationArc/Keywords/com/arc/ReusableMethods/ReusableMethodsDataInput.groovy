@@ -1115,87 +1115,117 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		 WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
 		 WebUI.delay(2)*/
 		WebUI.click(findTestObject('Object Repository/DataInput/CreditFileupload/ClickOnPreRequisite'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreditFileupload/PreRequisiteTransitFirstCredit'))
-
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		for(int i= 0;i<10;i++){
-			WebUI.delay(5)
+			
 			if(i==0){
 				//pdf upload
 				WebUI.click(findTestObject('Object Repository/DataInput/CreditFileupload/ClickButtonToUpload'))
-				WebUI.delay(2)
+				//WebUI.delay(2)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				uploadFile(UploadDocumentDataInput)
-				WebUI.delay(4)
+				//WebUI.delay(4)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/CreditFileupload/DeleteButton',[index: 1]), 6)
-				WebUI.delay(3)
+				//WebUI.delay(3)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				//textfile
 				WebUI.click(findTestObject('Object Repository/DataInput/CreditFileupload/ClickButtonToUpload'))
-				WebUI.delay(2)
+				//WebUI.delay(2)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				uploadFile(UploadTextFile)
-				WebUI.delay(4)
+				//WebUI.delay(4)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/CreditFileupload/DeleteButton',[index: 2]), 6)
-				WebUI.delay(3)
+				//WebUI.delay(3)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				//jpg upload
 				WebUI.click(findTestObject('Object Repository/DataInput/CreditFileupload/ClickButtonToUpload'))
-				WebUI.delay(2)
+				//WebUI.delay(2)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				uploadFile(UploadJpeg)
-				WebUI.delay(4)
+				//WebUI.delay(4)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/CreditFileupload/DeleteButton',[index: 3]), 6)
-				WebUI.delay(3)
+				//WebUI.delay(3)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				//upload png
 				WebUI.click(findTestObject('Object Repository/DataInput/CreditFileupload/ClickButtonToUpload'))
-				WebUI.delay(2)
+				//WebUI.delay(2)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				uploadFile(UploadPng)
-				WebUI.delay(4)
+				//WebUI.delay(4)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/CreditFileupload/DeleteButton',[index: 4]), 6)
-				WebUI.delay(3)
+				//WebUI.delay(3)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				//upload gif
 				WebUI.click(findTestObject('Object Repository/DataInput/CreditFileupload/ClickButtonToUpload'))
-				WebUI.delay(2)
+				//WebUI.delay(2)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				uploadFile(UploadGif)
-				WebUI.delay(4)
+				//WebUI.delay(4)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/CreditFileupload/DeleteButton',[index: 5]), 6)
-				WebUI.delay(3)
+				//WebUI.delay(3)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				//upload xls
 				WebUI.click(findTestObject('Object Repository/DataInput/CreditFileupload/ClickButtonToUpload'))
-				WebUI.delay(2)
+				//WebUI.delay(2)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				uploadFile(UploadXls)
-				WebUI.delay(4)
+				//WebUI.delay(4)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/CreditFileupload/DeleteButton',[index: 6]), 6)
-				WebUI.delay(3)
+				//WebUI.delay(3)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				//upload docs
 				WebUI.click(findTestObject('Object Repository/DataInput/CreditFileupload/ClickButtonToUpload'))
-				WebUI.delay(2)
+				//WebUI.delay(2)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				uploadFile(UploadDocs)
-				WebUI.delay(4)
+				//WebUI.delay(4)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/CreditFileupload/DeleteButton',[index: 7]), 6)
-				WebUI.delay(3)
+				//WebUI.delay(3)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				WebUI.click(findTestObject('Object Repository/DataInput/CreditFileupload/NextButtonCredit'))
 
 			}
 			else{
 				WebUI.click(findTestObject('Object Repository/DataInput/CreditFileupload/ClickButtonToUpload'))
-				WebUI.delay(2)
+				//WebUI.delay(2)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				uploadFile(UploadDocumentDataInput)
-				WebUI.delay(4)
+				//WebUI.delay(4)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/CreditFileupload/DeleteButton',[index: 1]), 6)
-				WebUI.delay(3)
+				//WebUI.delay(3)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				WebUI.click(findTestObject('Object Repository/DataInput/CreditFileupload/NextButtonCredit'))
 			}
 		}
 
-		WebUI.delay(5)
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreditFileupload/BasePointSideBar'))
-		WebUI.delay(3)
+		//WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreditFileupload/BasePointTransitFirstCredit'))
 		for(int i=0; i<23;i++){
-			WebUI.delay(5)
+			//WebUI.delay(5)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			WebUI.click(findTestObject('Object Repository/DataInput/CreditFileupload/ClickButtonToUpload'))
-			WebUI.delay(2)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+			//WebUI.delay(2)
 			uploadFile(UploadDocumentDataInput)
-			WebUI.delay(4)
+			//WebUI.delay(4)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/CreditFileupload/DeleteButton',[index: 1]), 6)
-			WebUI.delay(3)
+			//WebUI.delay(3)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			WebUI.click(findTestObject('Object Repository/DataInput/CreditFileupload/NextButtonCredit'))
 		}
 
@@ -2768,12 +2798,17 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		ReusableMethodsLogin.waitForPageLoad(60)
 		ReusableMethodsLogin.waitForIframeLoad(60)
-		WebUI.delay(6)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		//WebUI.delay(6)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'), 60)
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'))
-		WebUI.delay(3)
+		//WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'),2)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
-		WebUI.delay(4)
+		//WebUI.delay(4)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter start_'))
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker'))
 		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
@@ -2796,10 +2831,12 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
 		WebUI.sendKeys(findTestObject('Object Repository/DataInput/CreateMeterBuilding/wasteGenerated'), '1000')
 		WebUI.sendKeys(findTestObject('Object Repository/DataInput/CreateMeterBuilding/wasteDiverted'), '800')
-		WebUI.delay(1)
+		//WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.sendKeys(findTestObject('Object Repository/DataInput/CreateMeterBuilding/source') ,'office')
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/deleteButtonOne'), 20)
-		WebUI.delay(4)
+		//WebUI.delay(4)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		//WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/SuccessGreenTick'),20)
 		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Update'), 3)
 		//WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Update'))
@@ -2810,7 +2847,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), 20)
 		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'),2)
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
-		WebUI.delay(6)
+		//WebUI.delay(6)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter start_'))
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker'))
 		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
@@ -2833,10 +2871,12 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
 		WebUI.sendKeys(findTestObject('Object Repository/DataInput/CreateMeterBuilding/wasteGenerated'), '500')
 		WebUI.sendKeys(findTestObject('Object Repository/DataInput/CreateMeterBuilding/wasteDiverted'), '200')
-		WebUI.delay(1)
+		//WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.sendKeys(findTestObject('Object Repository/DataInput/CreateMeterBuilding/source') ,'office')
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/deleteButtonTwo'), 20)
-		WebUI.delay(4)
+		//WebUI.delay(4)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		//WebUI.waitForElementNotVisible(findTestObject('Object Repository/DataInput/saveButtonDataInput'), 20)
 		//WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Update'))
 		//WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/SuccessGreenTick'),20)
@@ -2847,7 +2887,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), 20)
 		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'),2)
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
-		WebUI.delay(6)
+		//WebUI.delay(6)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter start_'))
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker'))
 		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
@@ -2870,10 +2911,12 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
 		WebUI.sendKeys(findTestObject('Object Repository/DataInput/CreateMeterBuilding/wasteGenerated'), '600')
 		WebUI.sendKeys(findTestObject('Object Repository/DataInput/CreateMeterBuilding/wasteDiverted'), '300')
-		WebUI.delay(1)
+		//WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.sendKeys(findTestObject('Object Repository/DataInput/CreateMeterBuilding/source') ,'office')
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/deleteButtonThree'), 20)
-		WebUI.delay(4)
+		//WebUI.delay(4)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		//WebUI.waitForElementNotVisible(findTestObject('Object Repository/DataInput/saveButtonDataInput'), 20)
 		//WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Update'))
 		//WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/SuccessGreenTick'),20)
@@ -2885,7 +2928,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		ReusableMethodsLogin.waitForIframeLoad(60)
 		//verifying the data inputted is persisting or not
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'))
-		WebUI.delay(5)
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/wasteGeneratedReadingOne'),'value'),'600')
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/wasteGeneratedReadingTwo'),'value'),'500')
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/wasteGeneratedReadingThree'),'value'),'1000')
@@ -4568,16 +4612,6 @@ public class ReusableMethodsDataInput  extends BaseClass{
 			WebUI.click(findTestObject('DataInput/CityCom/SaveButton18'))
 			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
-			/*	Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/TextboxValue1'),"value"), reading1,"Not Valid")
-			 Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/TextboxValue2'),"value"),reading2,"Not Valid")
-			 Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/HTextboxValue3'),"value"),reading1,"Not Valid")
-			 Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/HTextboxValue4'),"value"),reading2,"Not Valid")
-			 Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/HTextboxValue5'),"value"),reading1,"Not Valid")
-			 Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/HTextboxValue6'),"value"),reading2,"Not Valid")
-			 Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/HTextboxValue7'),"value"),reading3,"Not Valid")
-			 Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/HTextboxValue8'),"value"),reading4,"Not Valid")
-			 Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/HTextboxValue9'),"value"),reading5,"Not Valid")
-			 */
 		}
 	}
 
@@ -5456,14 +5490,6 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.closeWindowIndex(1)
 		WebUI.switchToWindowIndex(0)
 
-		//WebUI.closeWindowIndex(1)
-		//WebUI.closeWindowIndex(2)
-		//driver.switchTo().window(MainWindowHandle)
-
-		//WebUI.closeWindowIndex(1)
-		//driver.switchTo().window(MainWindowHandle)
-
-
 	}
 
 
@@ -5471,11 +5497,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	@Keyword
 	public void percentageSurveyResponseRateCalculationTransit() throws IOException, InterruptedException, Exception{
-		/*WebUI.delay(5)
-		 WebUI.click(findTestObject('Manage/Parking/Manage'))
-		 WebUI.delay(2)
-		 WebUI.click(findTestObject('Manage/Parking/ManageProject'))
-		 WebUI.delay(2)*/
+		
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
 		WebUI.delay(10)
 		WebUI.scrollToElement(findTestObject('Manage/Project/WeightedOccupancy'), 10)
@@ -5530,18 +5552,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	@Keyword
 	public void percentageSurveyResponseRateCalculationBuiding() throws IOException, InterruptedException, Exception{
-		/*WebUI.delay(2)
-		 WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)
-		 WebUI.click(findTestObject('Manage/Parking/Manage'))
-		 WebUI.delay(1)
-		 WebUI.click(findTestObject('Manage/Parking/ManageProject'))
-		 WebUI.delay(2)*/
-		/*WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
-		 WebUI.delay(10)
-		 WebUI.scrollToElement(findTestObject('Manage/ProjectDetailVerification/projectoccupancy'), 10)
-		 String projectoccupancy = WebUI.getAttribute((findTestObject('Manage/ProjectDetailVerification/projectoccupancy')),'value')
-		 double projectOccupancy= Double.parseDouble(projectoccupancy)*/
+		
 		WebUI.click(findTestObject('Manage/Parking/ManageProject'))
 		WebUI.delay(6)
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
@@ -5634,23 +5645,6 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.verifyElementPresent(findTestObject('Object Repository/DataInput/DataInputFileUpload/AddNewWaterMeterButton'), 5)
 	}
 
-
-
-	/*@Keyword
-	 public void checkEnergyMeterGraph(){
-	 //WebUI.delay(18)
-	 WebUI.delay(7)
-	 WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
-	 WebUI.delay(5)
-	 WebUI.click(findTestObject('Object Repository/DataInput/Graphs/DetailsTab'))
-	 WebUI.delay(5)
-	 WebDriver driver  = DriverFactory.getWebDriver()
-	 List<WebElement> element = driver.findElements(By.xpath('((((//*[@id="chart-id"]//*[name()="svg"]/*[name()="g"]))[7])//*[name()="g"])[3]'))
-	 println element.size()
-	 WebUI.mouseOver(findTestObject('Object Repository/DataInput/Graphs/GraphValueOne'))
-	 String value= WebUI.getAttribute(findTestObject('Object Repository/DataInput/Graphs/GraphValueOne'), "textContent")
-	 println value
-	 }*/
 
 	@Keyword
 	public void waterScoreShouldNotrecomputemun(String sheetName){
@@ -5804,20 +5798,20 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	@Keyword
 	public void HumanExpMeterReadingValidationUI()throws IOException, InterruptedException {
 		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.click(findTestObject('DataInput/CityCom/a_ Data Input'))
+		 WebUI.click(findTestObject('DataInput/CityCom/a_ Data Input'))
 		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.click(findTestObject('DataInput/CityCom/span_Human Experience'))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.waitForPageLoad(10)
-		WebUI.click(findTestObject('DataInput/CityCom/EducationAddYear'))
+		 WebUI.click(findTestObject('DataInput/CityCom/span_Human Experience'))
+		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		 WebUI.waitForPageLoad(10)
+		 WebUI.click(findTestObject('DataInput/CityCom/EducationAddYear'))
 		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
 
-		WebUI.setText(findTestObject('DataInput/CityCom/TextboxValue1'), '5000')
+		 WebUI.setText(findTestObject('DataInput/CityCom/TextboxValue1'), '5000')
 		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+1))
+		 WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+1))
 		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.verifyElementPresent(findTestObject('DataInput/CityCom/Hum/TextValidationPercentPercentvalueshouldnotexceed100'),5)
+		 WebUI.verifyElementPresent(findTestObject('DataInput/CityCom/Hum/TextValidationPercentPercentvalueshouldnotexceed100'),5)
 
 		/****************************Verifying the Notification of Error message******************************/
 		WebUI.clearText(findTestObject('DataInput/CityCom/TextboxValue1'))
@@ -5891,22 +5885,22 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	public void GinicoefficientHumanExpMeterReadingValidationUI()throws IOException, InterruptedException {
 
 		WebUI.click(findTestObject('DataInput/CityCom/GiniAddYear'))
-		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
 		WebUI.setText(findTestObject('DataInput/CityC/TextBox4'), '5000')
-		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+4))
-		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.verifyElementPresent(findTestObject('DataInput/CityCom/Hum/Gini'),5)
 
 		/****************************Verifying the Notification of Error message******************************/
 		WebUI.clearText(findTestObject('DataInput/CityC/TextBox4'))
-		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.setText(findTestObject('DataInput/CityC/TextBox4'),'1')
-		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton'+4),2)
 		WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+4))
-		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityC/TextBox4'),"value"),'1',"Not Valid")
 	}
 
@@ -6014,20 +6008,6 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianHouseholdYearLabel')), "Year", false)
 		//WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianHouseholdUSDollarPerYearLabel')), "US Dollars/Year", false)
 		WebUI.verifyElementPresent(findTestObject('Manage/CityCom/USDollar'), 3, FailureHandling.CONTINUE_ON_FAILURE)
-		/*	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianHouseholdActionLabel')), "Actions", false)
-		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/UnemploymentYearLabel')), "Year", false)
-		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/UnemploymentPercentLabel')), "Percent", false)
-		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/UnemploymentActionsLabel')), "Actions", false)
-		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianAirQualityYearLabel')), "Year", false)
-		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianAirQualityValueLabel')), "Value (Between 0 And 500)", false)
-		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianAirQualityActionsLabel')), "Actions", false)
-		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/AirQulaityDaysYearLabel')), "Year", false)
-		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/AirQualityDaysValueLabel')), "Value (Between 0 And 365)", false)
-		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/AirQualityDaysActionsLabel')), "Actions", false)
-		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/ViolentCrimeYearLabel')), "Year", false)
-		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/ViolentCrimeValueLabel')), "Value", false)
-		 WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/ViolentCrimeActionsLabel')), "Actions", false)
-		 */
 	}
 
 
@@ -6094,22 +6074,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(2)
 		uploadFile(UploadDocs)
 		WebUI.delay(4)
-		/*WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/NoOfFiles'))
-		 WebUI.delay(5)
-		 String fileName1= WebUI.getText(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentOne'))
-		 String fileName2= WebUI.getText(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentTwo'))
-		 String fileName3= WebUI.getText(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentThree'))
-		 String fileName4= WebUI.getText(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentFour'))
-		 String fileName5= WebUI.getText(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentFive'))
-		 String fileName6= WebUI.getText(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentSix'))
-		 String fileName7= WebUI.getText(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentSeven'))
-		 Assert.assertEquals(fileName1,"USGBC.pdf")
-		 Assert.assertEquals(fileName2,"txtFileUpload.txt")
-		 Assert.assertEquals(fileName3,"Parking SJ.jpg")
-		 Assert.assertEquals(fileName4,"uploadPng.png")
-		 Assert.assertEquals(fileName5,"uploadGif.gif")
-		 Assert.assertEquals(fileName6,"uploasExcel.xlsx")
-		 Assert.assertEquals(fileName7,"uploadDoc.docx")*/
+		
 	}
 
 

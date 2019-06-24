@@ -285,12 +285,8 @@ public class ReusableMethodsPayment extends BaseClass{
 		println list.get(randonNumber).getText()
 		data.setCellData(sheetName, "SpaceType", rowNum,list.get(randonNumber).getText())
 		list.get(randonNumber).click()
-		
-		
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
-	
-		
 		String stype=list.get(randonNumber).getText()
 
 		if((stype.equals("Industrial Manufacturing")) || (stype.equals("Laboratory")) || (stype.equals("Data Center")) ||
@@ -308,22 +304,16 @@ public class ReusableMethodsPayment extends BaseClass{
 		data.setCellData(sheetName, "OwnerType", rowNum,list1.get(randonNumber1).getText())
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/organization'),ownerOrg)
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/organization'))
-		
-		
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
-		
-		
 		WebUI.waitForElementVisible(findTestObject('Add_Project_Details/span_Habitat for Humanity'), 60)
 		WebUI.click(findTestObject('Add_Project_Details/span_Habitat for Humanity'))
 		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/ownerEmail'), ownerMail)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/ownerCountry'), ownerCountry, false)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/ratingSystem'), prjRating , false)
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/saveButtonProjectDetails'))
-		
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
-		
 		String title= DriverFactory.getWebDriver().getCurrentUrl()
 		println title
 		String Project_ID= title.substring(title.indexOf('1'),title.indexOf('1')+10 )

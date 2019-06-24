@@ -806,12 +806,7 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 	@Keyword
 	public void individualScoreUIAllFieldVerification() throws IOException, InterruptedException {
 
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)
-		 WebUI.click(findTestObject('PerformanceScore/a_ CreditsActions'))
-		 WebUI.delay(1)
-		 WebUI.click(findTestObject('PerformanceScore/Score/a_ Score'))
-		 WebUI.delay(1)*/
+		
 		/********* Verifying all fields UI  Score for individual Energy , Water , Waste , Transport , Human Exp , Base Point ************* */	
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Base Points'))
@@ -880,12 +875,7 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 	@Keyword
 	public void totalPerformanceScoreUIAllFieldVerificationCityComOtherNone() throws IOException, InterruptedException {
 
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)
-		 WebUI.click(findTestObject('PerformanceScore/a_ CreditsActions'))
-		 WebUI.delay(1)
-		 WebUI.click(findTestObject('PerformanceScore/Score/a_ Score'))
-		 WebUI.delay(1)*/
+		
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Total'))
 		//WebUI.delay(5)
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)

@@ -178,7 +178,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		//WebUI.delay(5)
 		WebUI.click(findTestObject('SubmitReview/a_ Review'))
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/SubmitReviewText')), "Submit for Review", false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		//for preRequisite
 		(1..10).each {
 			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/CreditStatus',[('index') : it])),'Missing', false, FailureHandling.CONTINUE_ON_FAILURE)
@@ -428,7 +428,8 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		//WebUI.click(findTestObject('Object Repository/SubmitReview/clickOnSideBar'))
 		//WebUI.delay(5)
 		WebUI.click(findTestObject('SubmitReview/a_ Review'))
-		WebUI.delay(6)
+		//WebUI.delay(6)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/SubmitReviewText')), "Submit for Review", false, FailureHandling.CONTINUE_ON_FAILURE)
 		//check whether the information for registration payment is pending or not
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/CheckRegistrationPaymentPendingText')), "Registration payment is still under process", false, FailureHandling.CONTINUE_ON_FAILURE)
