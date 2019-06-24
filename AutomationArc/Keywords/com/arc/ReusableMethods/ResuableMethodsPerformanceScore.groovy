@@ -319,13 +319,26 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.delay(2)
 		
 		String projectId = data.getCellData(sheetName,"ProjectID",rowNum)
+				
 		WebUI.click(findTestObject('PerformanceScore/RecomputeScoreButton'))
 		WebUI.delay(3)
 		WebUI.setText(findTestObject('PerformanceScore/PorjectId'),projectId)
 		WebUI.delay(2)
 		WebUI.click(findTestObject('PerformanceScore/RecomputeScore'))
-		WebUI.delay(22)
-		WebUI.waitForElementVisible(findTestObject('PerformanceScore/Score/EnergyScore'),120)
+		
+		boolean keepGoing = WebUI.waitForAngularLoad(240, FailureHandling.CONTINUE_ON_FAILURE)
+		
+		if(keepGoing== false)
+		
+			for(int i=0;i<=1;i++){
+			WebUI.click(findTestObject('PerformanceScore/RecomputeScoreButton'))
+			WebUI.delay(3)
+			WebUI.setText(findTestObject('PerformanceScore/PorjectId'),projectId)
+			WebUI.delay(2)
+			WebUI.click(findTestObject('PerformanceScore/RecomputeScore'))
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+			}
 		
 		String energyScore = WebUI.getText(findTestObject('PerformanceScore/Score/EnergyScore'))
 		String waterScore = WebUI.getText(findTestObject('PerformanceScore/Score/WaterSocre'))
