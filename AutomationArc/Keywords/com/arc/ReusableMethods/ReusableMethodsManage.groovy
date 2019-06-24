@@ -1721,7 +1721,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 		
-		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/TeamModule/TeamMembersFirstRow'),GlobalVariable.TeamMember)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/TeamModule/TeamMembersFirstRow'),GlobalVariable.TeamMember,FailureHandling.CONTINUE_ON_FAILURE)	
 		
 		WebUI.scrollToElement(findTestObject('Manage/TeamModule/input_input'), 2)
 		WebUI.setText(findTestObject('Manage/TeamModule/input_input'),GlobalVariable.TeamMember)
