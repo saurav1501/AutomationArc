@@ -423,15 +423,11 @@ public class ReusableMethodsBasePoint extends BaseClass{
 	}
 	@Keyword
 	public void basePointTotalScoreTest(){
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(2)
-		 WebUI.click(findTestObject('PerformanceScore/a_ CreditsActions'))
-		 WebUI.delay(5)
-		 WebUI.click(findTestObject('PerformanceScore/Score/a_ Score'))*/
+		
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Base Points'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.waitForElementVisible(findTestObject('Object Repository/BasePoint/BasePoint'),20)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/BasePoint/BasePoint'),GlobalVariable.avgAngularWait)
 		WebUI.delay(10)
 		String basepointScore = WebUI.getText(findTestObject('Object Repository/BasePoint/BasePoint'))
 		WebUI.verifyMatch(basepointScore ,'10', false)

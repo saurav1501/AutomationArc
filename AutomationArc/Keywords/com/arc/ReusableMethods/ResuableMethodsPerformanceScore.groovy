@@ -588,31 +588,60 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		 WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/BasePointScore'),10)
 		 String basepointScore = WebUI.getText(findTestObject('PerformanceScore/Score/BasePointScore'))
 		 WebUI.verifyMatch(basepointScore , basePointScore, false)*/
-
+		if((WebUI.getAttribute(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'), "class", FailureHandling.OPTIONAL).equals("pl20 collapsed"))){
+			println "Scores"
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+			WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		}
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Energy'))
 		WebUI.delay(12)
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/EnergyPerScore'),10)
 		String energyperScore = WebUI.getText(findTestObject('PerformanceScore/Score/EnergyPerScore'))
 		WebUI.verifyMatch(energyperScore , energyScore, false)
 
+		if((WebUI.getAttribute(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'), "class", FailureHandling.OPTIONAL).equals("pl20 collapsed"))){
+			println "Scores"
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+			WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		}
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Water'))
 		WebUI.delay(12)
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/WaterPerScore'),10)
 		String waterpfScore = WebUI.getText(findTestObject('PerformanceScore/Score/WaterPerScore'))
 		WebUI.verifyMatch(waterpfScore ,waterScore, false)
-
+		
+		if((WebUI.getAttribute(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'), "class", FailureHandling.OPTIONAL).equals("pl20 collapsed"))){
+			println "Scores"
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+			WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		}
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Waste'))
 		WebUI.delay(12)
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/WastePerSocre'),10)
 		String wastepfScore = WebUI.getText(findTestObject('PerformanceScore/Score/WastePerSocre'))
 		WebUI.verifyMatch(wastepfScore ,wasteScore , false)
 
+		if((WebUI.getAttribute(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'), "class", FailureHandling.OPTIONAL).equals("pl20 collapsed"))){
+			println "Scores"
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+			WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		}
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Transportation'))
 		WebUI.delay(12)
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TransportperScore'),10)
 		String transportperScore = WebUI.getText(findTestObject('PerformanceScore/Score/TransportperScore'))
 		WebUI.verifyMatch(transportperScore ,transportScore, false)
 
+		if((WebUI.getAttribute(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'), "class", FailureHandling.OPTIONAL).equals("pl20 collapsed"))){
+			println "Scores"
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+			WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		}
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Human Experience'))
 		WebUI.delay(12)
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/HumanExpScore'),10)
