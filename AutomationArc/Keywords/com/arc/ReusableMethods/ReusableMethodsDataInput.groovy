@@ -1650,7 +1650,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/NoOfFiles'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentOne'),GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentOne'), GlobalVariable.minAngularWait)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentOne')),"USGBC.pdf")
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentOne')),"USGBC.pdf",false)
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/closeModel'))
 		//WebUI.delay(6)
 		WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
@@ -1664,7 +1664,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/NoOfFiles'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentTwo'),GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentTwo'), GlobalVariable.minAngularWait)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentTwo')),"txtFileUpload.txt")
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentTwo')),"txtFileUpload.txt",false)
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/closeModel'))
 		
 		//WebUI.delay(6)
@@ -1680,7 +1680,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/NoOfFiles'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentThree'),GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentThree'), GlobalVariable.minAngularWait)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentThree')),"Parking SJ.jpg")
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentThree')),"Parking SJ.jpg",false)
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/closeModel'))
 		
 		//WebUI.delay(6)
@@ -1696,7 +1696,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/NoOfFiles'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentFour'),GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentFour'), GlobalVariable.minAngularWait)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentFour')),"uploadPng.png")
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentFour')),"uploadPng.png",false)
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/closeModel'))
 		
 		//WebUI.delay(6)
@@ -1712,7 +1712,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/NoOfFiles'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentFive'),GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentFive'), GlobalVariable.minAngularWait)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentFive')),"uploadGif.gif")
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentFive')),"uploadGif.gif",false)
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/closeModel'))
 		//WebUI.delay(6)
 		//xls file
@@ -1727,7 +1727,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/NoOfFiles'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentSix'),GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentSix'), GlobalVariable.minAngularWait)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentSix')),"uploasExcel.xlsx")
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentSix')),"uploasExcel.xlsx",false)
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/closeModel'))
 		//WebUI.delay(6)
 		//doc file
@@ -1742,7 +1742,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/NoOfFiles'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentSeven'),GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentSeven'), GlobalVariable.minAngularWait)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentSeven')),"uploadDoc.docx")
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentSeven')),"uploadDoc.docx",false)
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/closeModel'))
 		//WebUI.delay(6)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
