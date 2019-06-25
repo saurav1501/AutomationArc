@@ -26,7 +26,6 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 	public void buildingAddNewProject(String sheetName , int rowNum) {
 
 		/**************Reading data form excel sheet*************************/
-		addProject:
 
 		String prjName      = data.getCellData(sheetName,"ProjectName", rowNum)
 		String prjType 		= data.getCellData(sheetName, "ProjectType", rowNum)
@@ -76,7 +75,7 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		//WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 
 		//String PaymentPageText = WebUI.getText(findTestObject('Add_Project_Details/VerifyPaymentPage_ text'))
-		if(WebUI.getText(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'))=='Project Setu'){
+		//if(WebUI.getText(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'))=='Project Setu')
 			WebUI.verifyMatch(WebUI.getText(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup')),'Project Setup',true)
 			String title= DriverFactory.getWebDriver().getCurrentUrl()
 			println title
@@ -87,19 +86,10 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 			data.setCellData(sheetName,"ProjectID", rowNum, Project_ID)
 			data.setCellData(sheetName,"RegDate", rowNum, ReusableMethodsManage.verifyBillingDate())
 			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		}
-		else{
-			WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
-			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-			continue addProject
-		}
-
+		
 	}
 
-
-
 	@Keyword
-	@Step
 	public void buildingTransitAddNewProject(String sheetName , int rowNum) {
 		/**************Reading data form excel sheet*************************/
 		String prjName          = data.getCellData(sheetName,"ProjectName", rowNum)
