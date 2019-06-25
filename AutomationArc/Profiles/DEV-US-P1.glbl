@@ -106,7 +106,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>Team Member DEV</description>
-      <initValue>'dev-01@gmail.com'</initValue>
+      <initValue>'usgbcarc1@gmail.com'</initValue>
       <name>TeamMember</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -246,7 +246,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'dev-02@gmail.com'</initValue>
+      <initValue>'usgbcarc2@gmail.com'</initValue>
       <name>TeamMember2</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

@@ -90,7 +90,6 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.click(findTestObject('SubmitReview/a_ Review'))
 		//WebUI.delay(13)
 		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'), GlobalVariable.maxAngularWait)
-		WebUI.click(findTestObject('SubmitReview/button_Continue'))
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/SubmitReviewText')), "Submit for Review", false, FailureHandling.CONTINUE_ON_FAILURE)
