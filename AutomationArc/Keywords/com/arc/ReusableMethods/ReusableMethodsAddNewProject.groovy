@@ -11,11 +11,11 @@ import org.openqa.selenium.WebElement
 import com.arc.BaseClass.BaseClass
 import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.model.FailureHandling
+import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.driver.DriverFactory
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 import internal.GlobalVariable
-import io.qameta.allure.Step
 
 public class ReusableMethodsAddNewProject extends BaseClass{
 	ReusableMethodsNavigation navigation = new ReusableMethodsNavigation()
@@ -26,8 +26,8 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 	public void buildingAddNewProject(String sheetName , int rowNum) {
 
 		/**************Reading data form excel sheet*************************/
-		addProject:
-
+        int counter=0
+		project:
 		String prjName      = data.getCellData(sheetName,"ProjectName", rowNum)
 		String prjType 		= data.getCellData(sheetName, "ProjectType", rowNum)
 		String prjRating 	= data.getCellData(sheetName, "RatingSystem", rowNum)
@@ -89,17 +89,19 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		}
 		else{
+			counter++
+			if(counter==3){
+			KeywordUtil.markFailed("Project not created")
+			return
+			}
 			WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
-			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-			continue addProject
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+			continue project
 		}
-
+		
 	}
 
-
-
 	@Keyword
-	@Step
 	public void buildingTransitAddNewProject(String sheetName , int rowNum) {
 		/**************Reading data form excel sheet*************************/
 		String prjName          = data.getCellData(sheetName,"ProjectName", rowNum)
@@ -398,6 +400,8 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 
 	@Keyword
 	public void parkingAddNewProject(String sheetName , int rowNum) {
+		int counter=0
+		project:
 		String prjName      = data.getCellData(sheetName,"ProjectName", rowNum)
 		String prjType 		= data.getCellData(sheetName, "ProjectType", rowNum)
 		String prjRating 	= data.getCellData(sheetName, "RatingSystem", rowNum)
@@ -480,8 +484,10 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		//WebUI.delay(5)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/paymentPageNewUI/paymentPageTextPurchase'),40)
-		String purchase= WebUI.getText(findTestObject('Object Repository/paymentPageNewUI/paymentPageTextPurchase'))
-		WebUI.verifyMatch("Purchase", purchase, false)
+		//String purchase= WebUI.getText(findTestObject('Object Repository/paymentPageNewUI/paymentPageTextPurchase'))
+		
+		if(WebUI.waitForElementPresent(findTestObject('Object Repository/paymentPageNewUI/paymentPageTextPurchase'), 30, FailureHandling.OPTIONAL)){
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/paymentPageNewUI/paymentPageTextPurchase')),"Purchase", false)
 		String title= DriverFactory.getWebDriver().getCurrentUrl()
 		println title
 		String Project_ID= title.substring(title.indexOf('1'),title.indexOf('1')+10 )
@@ -490,6 +496,18 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		data.setCellData(sheetName,"RegDate", rowNum, ReusableMethodsManage.verifyBillingDate())
 		//WebUI.delay(5)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		}
+		else{
+			counter++
+			if(counter==3){
+			KeywordUtil.markFailed("Project not created")
+			return
+			}
+			WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+			navigation.clickAddProject()
+			continue project
+		}
 	}
 
 	//Add new project for building Other and None
