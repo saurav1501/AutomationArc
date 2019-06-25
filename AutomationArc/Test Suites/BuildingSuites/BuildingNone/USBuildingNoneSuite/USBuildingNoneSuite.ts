@@ -1571,16 +1571,16 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/AgreementVerifyServiceAgreementPdfDetailsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>74be4d57-cf91-4422-aa45-1e87cfd43f91</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Common/1_15_4/SettingScoreVersionPageUpdate_1_15_4Test</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>19299410-af74-4512-956e-f5b6b5c783f9</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/CertiVerifyCertificationLogoVisibleTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>74be4d57-cf91-4422-aa45-1e87cfd43f91</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Common/1_15_4/SettingScoreVersionPageUpdate_1_15_4Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>e12543c6-e8fc-4b79-a168-e45701ecdb5a</guid>

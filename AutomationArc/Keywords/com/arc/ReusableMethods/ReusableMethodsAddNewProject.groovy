@@ -426,7 +426,8 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		data.setCellData(sheetName,"ProjectName", rowNum, ProjectName)
 
 		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/projectName'), ProjectName)
-		WebUI.delay(1)
+		//WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/selectProjectType'),prjRating,false )
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/noOfParkingSpaces'),parkingSpaces )
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/noOfParkingLevel'),parkingStructure)
@@ -449,35 +450,36 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/organization'),ownerOrg)
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/organization'))
-		WebUI.delay(2)
+		//WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Add_Project_Details/Humidity'))
 		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/ownerEmail'), ownerMail)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/ownerCountry'), ownerCountry, false)
-
 		WebUI.sendKeys(findTestObject('Add_Project_Details/Area'), area)
-		WebUI.delay(1)
-
+		//WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/streetName'), prjAddress)
-		WebUI.delay(2)
-
+		//WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/cityName'), prjCity)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/countryName'), prjCountry, false)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/stateName'),prjState, false)
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/zipCode'), prjZip)
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/clickOnSignAgreement'))
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/addProjectNextButton'))
-		WebUI.delay(5)
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/paymentPageNewUI/paymentPageTextPurchase'),40)
 		String purchase= WebUI.getText(findTestObject('Object Repository/paymentPageNewUI/paymentPageTextPurchase'))
 		WebUI.verifyMatch("Purchase", purchase, false)
-
 		String title= DriverFactory.getWebDriver().getCurrentUrl()
 		println title
 		String Project_ID= title.substring(title.indexOf('1'),title.indexOf('1')+10 )
 		println Project_ID
 		data.setCellData(sheetName,"ProjectID", rowNum, Project_ID)
 		data.setCellData(sheetName,"RegDate", rowNum, ReusableMethodsManage.verifyBillingDate())
-		WebUI.delay(5)
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	}
 
 	//Add new project for building Other and None

@@ -2274,7 +2274,8 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
 	
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		WebUI.delay(6)
+		//wait modified from 6 to 16
+		WebUI.delay(16)
 
 		String KWHReading = data.getCellData(sheetName,"EnergykWh",2)
 		String noOfDays = data.getCellData(sheetName,"ENoOfDays",2)

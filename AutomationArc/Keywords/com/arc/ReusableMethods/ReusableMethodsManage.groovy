@@ -1118,12 +1118,17 @@ public class ReusableMethodsManage extends BaseClass {
 
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.maxAngularWait)
+<<<<<<< HEAD
 
 
+=======
+		
+>>>>>>> bfe3dab2cf047098a2d8182dc94fa6ee6f9ee870
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), GlobalVariable.minAngularWait)
+		WebUI.delay(4)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
-		WebUI.delay(1)
+		WebUI.delay(4)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 
@@ -1718,9 +1723,15 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Manage/TeamModule/a_ Team'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+<<<<<<< HEAD
 
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/TeamModule/TeamMembersFirstRow'),GlobalVariable.TeamMember,FailureHandling.CONTINUE_ON_FAILURE)
 
+=======
+		
+		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/TeamModule/TeamMembersFirstRow'),GlobalVariable.avgAngularWait,FailureHandling.CONTINUE_ON_FAILURE)	
+		
+>>>>>>> bfe3dab2cf047098a2d8182dc94fa6ee6f9ee870
 		WebUI.scrollToElement(findTestObject('Manage/TeamModule/input_input'), 2)
 		WebUI.setText(findTestObject('Manage/TeamModule/input_input'),GlobalVariable.TeamMember)
 		WebUI.delay(1)
@@ -1957,12 +1968,18 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.scrollToElement(findTestObject('Manage/TeamModule/input_input'), 2)
 		WebUI.setText(findTestObject('Manage/TeamModule/input_input'),GlobalVariable.TeamMember)
 		WebUI.click(findTestObject('Manage/TeamModule/button_Add Member'))
+<<<<<<< HEAD
 
 		WebUI.waitForElementClickable(findTestObject('Manage/TeamModule/button_Add Member'), GlobalVariable.TeamMember)
 
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
+=======
+		WebUI.waitForElementClickable(findTestObject('Manage/TeamModule/button_Add Member'), GlobalVariable.minAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+>>>>>>> bfe3dab2cf047098a2d8182dc94fa6ee6f9ee870
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/TeamModule/sameRoleAddAgainErrMsg'), 20)
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/TeamModule/sameRoleAddAgainErrMsg'))
 		WebUI.clearText(findTestObject('Manage/TeamModule/input_input'))
@@ -2320,14 +2337,16 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void billingStatusParking(String sheetName, int rowNum){
-		WebUI.delay(5)
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		String regdAmt = data.getCellData(sheetName, "RegAmount", rowNum)
 		String registrationDate = data.getCellData(sheetName, "RegDate", rowNum)
 
 		WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/BillingParksmart'),2)
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/BillingParksmart'))
 		//Registration Payment details verification
-		WebUI.delay(5)
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		String regDate= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/registrationPaymentDate'))
 		WebUI.verifyMatch(regDate, registrationDate ,false,FailureHandling.CONTINUE_ON_FAILURE)
 		String regOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationOrderId'))
