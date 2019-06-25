@@ -123,8 +123,6 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		ReusableMethodsDataInput.uploadFile(UploadDocumentDataInput)
 		WebUI.sendKeys(findTestObject('Object Repository/SubmitReview/SubmitReviewTextAreaAdditionalMessage'), "Submit Performance Score Verification Test Message")
 		WebUI.delay(2)
-		WebUI.sendKeys(findTestObject('Object Repository/SubmitReview/SubmitReviewTextAreaAdditionalMessage'), "Submit Performance Score Verification Test Message")
-		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/SubmitReview/ClickToSaveAddtionalTextArea'))
 		WebUI.click(findTestObject('SubmitReview/button_Continue'))
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
@@ -132,13 +130,11 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/VerifyTotalCredits')),'5', false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
-		
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/VerifyPerformanceScoreVerificationTextOnSummeryPage')), "Performance Score Verification", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.setText(findTestObject('SubmitReview/input_form-control ng-untouche'), 'abhishekkumar@groupten.com')
 		WebUI.click(findTestObject('SubmitReview/span_Send'))
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
-		
 		WebUI.click(findTestObject('SubmitReview/button_Continue'))
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
