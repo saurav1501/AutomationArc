@@ -24,7 +24,10 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 	@Keyword
 	//Add project new Building
 	public void buildingAddNewProject(String sheetName , int rowNum) {
+
 		/**************Reading data form excel sheet*************************/
+		addProject:
+
 		String prjName      = data.getCellData(sheetName,"ProjectName", rowNum)
 		String prjType 		= data.getCellData(sheetName, "ProjectType", rowNum)
 		String prjRating 	= data.getCellData(sheetName, "RatingSystem", rowNum)
@@ -69,21 +72,28 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/zipCode'), prjZip)
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/clickOnSignAgreement'))
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/addProjectNextButton'))
-		
-		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-		
+
+		//WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+
 		//String PaymentPageText = WebUI.getText(findTestObject('Add_Project_Details/VerifyPaymentPage_ text'))
-		String PaymentPageText = WebUI.getText(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'))
-		WebUI.verifyMatch(PaymentPageText,'Project Setup',true)
-		String title= DriverFactory.getWebDriver().getCurrentUrl()
-		println title
-		String Project_ID= title.substring(title.indexOf('9'),title.indexOf('9')+10 )
-		println Project_ID
-		//WebUI.getText(findTestObject('Object Repository/Add_Project_Details/td_BuildingID'))
-		//System.out.println()
-		data.setCellData(sheetName,"ProjectID", rowNum, Project_ID)
-		data.setCellData(sheetName,"RegDate", rowNum, ReusableMethodsManage.verifyBillingDate())
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		if(WebUI.getText(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'))=='Project Setu'){
+			WebUI.verifyMatch(WebUI.getText(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup')),'Project Setup',true)
+			String title= DriverFactory.getWebDriver().getCurrentUrl()
+			println title
+			String Project_ID= title.substring(title.indexOf('9'),title.indexOf('9')+10 )
+			println Project_ID
+			//WebUI.getText(findTestObject('Object Repository/Add_Project_Details/td_BuildingID'))
+			//System.out.println()
+			data.setCellData(sheetName,"ProjectID", rowNum, Project_ID)
+			data.setCellData(sheetName,"RegDate", rowNum, ReusableMethodsManage.verifyBillingDate())
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		}
+		else{
+			WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+			continue addProject
+		}
+
 	}
 
 
@@ -145,9 +155,9 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/zipCode'), prjZip)
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/clickOnSignAgreement'))
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/addProjectNextButton'))
-		
+
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-		
+
 		String PaymentPageText = WebUI.getText(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'))
 		WebUI.verifyMatch(PaymentPageText,'Project Setup',true)
 		String title= DriverFactory.getWebDriver().getCurrentUrl()
@@ -156,7 +166,7 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		println Project_ID
 		data.setCellData(sheetName,"ProjectID", rowNum, Project_ID)
 		data.setCellData(sheetName,"RegDate", rowNum, ReusableMethodsManage.verifyBillingDate())
-	    WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 	}
 
 
@@ -242,16 +252,16 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		//WebUI.delay(5)
 	}
-	
+
 	@Keyword
 	public void addNewProjectCityScore(String sheetName , int rowNum) {
 		/**************Reading data form excel sheet*************************/
-		
+
 		String srowNum = rowNum.toString()
 		data.setCellData(sheetName,"rowNum", 2, srowNum)
 		//data.setCellIntData(sheetName,"rowNum" , 2, rowNum)
-		
-				
+
+
 		String prjName      = data.getCellData(sheetName,"ProjectName", rowNum)
 		String prjType 		= data.getCellData(sheetName, "ProjectType", rowNum)
 		String prjRating 	= data.getCellData(sheetName, "RatingSystem", rowNum)
@@ -315,10 +325,10 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/cityName'),prjCity)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/countryName'),prjCountry, false)
 		//WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/stateName'),prjState, false)
-		
+
 		WebUI.selectOptionByValue(findTestObject('Object Repository/AddProjectNewUI/stateName'),prjState, false, FailureHandling.CONTINUE_ON_FAILURE)
 		//WebUI.selectoptionByV
-		
+
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/zipCode'), prjZip)
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/clickOnSignAgreement'))
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/addProjectNextButton'))
@@ -336,12 +346,12 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		//WebUI.delay(5)
 	}
 
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
 
 	@Keyword
 	public void addNewProjectCityORCompop(String sheetName , int rowNum) {

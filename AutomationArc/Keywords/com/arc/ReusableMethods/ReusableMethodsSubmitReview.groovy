@@ -96,36 +96,19 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/VerifyPerformanceScoreVerificationTest')), "Performance Score Verification", false, FailureHandling.CONTINUE_ON_FAILURE)
 		//reviewAmount = WebUI.getText(findTestObject('Object Repository/SubmitReview/ReviewAmount'))
 		performanceScoreDataInputCheckboxSelection()
-		
-		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'), GlobalVariable.maxAngularWait)
-		WebUI.click(findTestObject('SubmitReview/button_Continue'))
 		WebUI.scrollToElement(findTestObject('SubmitReview/div_Upload'), 3)
 		WebUI.click(findTestObject('SubmitReview/div_Upload'))
 		WebUI.delay(2)
-		
-		
-		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'), GlobalVariable.maxAngularWait)
-		WebUI.click(findTestObject('SubmitReview/button_Continue'))
 		ReusableMethodsDataInput.uploadFile(UploadDocumentDataInput)
-		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'), GlobalVariable.maxAngularWait)
-		WebUI.click(findTestObject('SubmitReview/button_Continue'))
-			
 		WebUI.sendKeys(findTestObject('Object Repository/SubmitReview/SubmitReviewTextAreaAdditionalMessage'), "Submit Performance Score Verification Test Message")
 		WebUI.delay(2)
-		
-		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'), GlobalVariable.maxAngularWait)
-		WebUI.click(findTestObject('SubmitReview/button_Continue'))
-		
 		WebUI.click(findTestObject('Object Repository/SubmitReview/ClickToSaveAddtionalTextArea'))
-		
-		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'), GlobalVariable.maxAngularWait)
 		WebUI.click(findTestObject('SubmitReview/button_Continue'))
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
 		
 		//Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/SubmitReview/SubmitReviewTextAreaAdditionalMessage'),'value'),'Submit Performance Score Verification Test Message')
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/VerifyTotalCredits')),'5', false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.click(findTestObject('cc'))
 		
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
