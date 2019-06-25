@@ -300,7 +300,7 @@ public class ReusableMethodsNavigation {
 
 	@Keyword
 	public void navigateToAnalyticsEnergy() {
-		WebUI.waitForElementClickable(findTestObject('Object Repository/Analytics/Nav/a_ Water'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementClickable(findTestObject('Analytics/Nav/a_ Energy'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Analytics/Nav/a_ Energy'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
