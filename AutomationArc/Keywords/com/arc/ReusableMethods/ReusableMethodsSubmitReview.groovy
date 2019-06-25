@@ -84,17 +84,13 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 
 	@Keyword
 	public void performanceScoreSelectionAndSummary(){
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)*/
-		//WebUI.delay(3)
+		
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
 		WebUI.click(findTestObject('SubmitReview/a_ Review'))
 		//WebUI.delay(13)
-		
-		WebUI.waitForElementClickable(WebUI.click(findTestObject('SubmitReview/button_Continue')), GlobalVariable.maxAngularWait)
-		
-		
+		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'), GlobalVariable.maxAngularWait)
+		WebUI.click(findTestObject('SubmitReview/button_Continue'))
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/SubmitReviewText')), "Submit for Review", false, FailureHandling.CONTINUE_ON_FAILURE)
@@ -102,27 +98,29 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		//reviewAmount = WebUI.getText(findTestObject('Object Repository/SubmitReview/ReviewAmount'))
 		performanceScoreDataInputCheckboxSelection()
 		
-		WebUI.waitForElementClickable(WebUI.click(findTestObject('SubmitReview/button_Continue')), GlobalVariable.maxAngularWait)
+		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'), GlobalVariable.maxAngularWait)
+		WebUI.click(findTestObject('SubmitReview/button_Continue'))
 		WebUI.scrollToElement(findTestObject('SubmitReview/div_Upload'), 3)
 		WebUI.click(findTestObject('SubmitReview/div_Upload'))
 		WebUI.delay(2)
 		
 		
-		WebUI.waitForElementClickable(WebUI.click(findTestObject('SubmitReview/button_Continue')), GlobalVariable.maxAngularWait)
+		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'), GlobalVariable.maxAngularWait)
+		WebUI.click(findTestObject('SubmitReview/button_Continue'))
 		ReusableMethodsDataInput.uploadFile(UploadDocumentDataInput)
-		WebUI.waitForElementClickable(WebUI.click(findTestObject('SubmitReview/button_Continue')), GlobalVariable.maxAngularWait)
-	
+		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'), GlobalVariable.maxAngularWait)
+		WebUI.click(findTestObject('SubmitReview/button_Continue'))
 			
 		WebUI.sendKeys(findTestObject('Object Repository/SubmitReview/SubmitReviewTextAreaAdditionalMessage'), "Submit Performance Score Verification Test Message")
 		WebUI.delay(2)
 		
-		WebUI.waitForElementClickable(WebUI.click(findTestObject('SubmitReview/button_Continue')), GlobalVariable.maxAngularWait)
-	
+		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'), GlobalVariable.maxAngularWait)
+		WebUI.click(findTestObject('SubmitReview/button_Continue'))
 		
 		WebUI.click(findTestObject('Object Repository/SubmitReview/ClickToSaveAddtionalTextArea'))
 		
-		WebUI.waitForElementClickable(WebUI.click(findTestObject('SubmitReview/button_Continue')), GlobalVariable.maxAngularWait)
-		
+		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'), GlobalVariable.maxAngularWait)
+		WebUI.click(findTestObject('SubmitReview/button_Continue'))
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
 		
