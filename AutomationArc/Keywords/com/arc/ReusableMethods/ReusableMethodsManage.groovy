@@ -3349,8 +3349,9 @@ public class ReusableMethodsManage extends BaseClass {
 
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-
-
+        WebUI.delay(2)
+		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), 30)
+        WebUI.scrollToElement(findTestObject('DataInput/Survey/div_Transportation Survey'),5)
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
 
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)

@@ -26,7 +26,8 @@ try {
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.createEnergyMeterWithDifferentUnits'()
 
 } catch (Throwable t) {
-	System.out.println(t.getLocalizedMessage())
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/CancelMeterCreateButton'))
+		System.out.println(t.getLocalizedMessage())
 		Error e1 = new Error(t.getMessage())
 		e1.setStackTrace(t.getStackTrace())
 		e1.printStackTrace()
