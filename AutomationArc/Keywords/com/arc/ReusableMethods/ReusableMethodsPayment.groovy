@@ -423,8 +423,8 @@ public class ReusableMethodsPayment extends BaseClass{
 		}
 		WebUI.waitForElementVisible(findTestObject('PaymenntLocator/NextButton'), 70)
 		WebUI.click(findTestObject('PaymenntLocator/NextButton'))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait,FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
 		//WebUI.delay(10)
 	}
 
