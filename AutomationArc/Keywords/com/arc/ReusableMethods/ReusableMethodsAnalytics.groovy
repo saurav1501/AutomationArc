@@ -431,12 +431,14 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 	@Keyword
 	public void surveyRepRate(){
-		WebUI.delay(4)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), GlobalVariable.minAngularWait)
-
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+	    WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+	    WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+	    WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+	
+		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
 		WebUI.delay(3)
 		//WebUI.delay(5)
@@ -447,7 +449,11 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 		/******Verify that survey response rate% is calculated on the basis of the following formula [ Response %ge = (No. of responses/Occupancy)*100 ] . Always count the no of responses by counting the no of rows of HUMAN EXPERIENCE survey results.*****/
 		WebUI.click(findTestObject('DataInput/Survey/OccupantSatisfactionSurv'))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		
 		WebUI.click(findTestObject('Object Repository/DataInput/Survey/SurveryResponseText'))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		
 		//WebUI.delay(10)
 		String humsurveyResponsePercentage = WebUI.getText(findTestObject('DataInput/Survey/SurveyResponsePercentage'))
 		String humsurveyResponsepercentage1 = humsurveyResponsePercentage.replace("%" ,"")
@@ -2273,8 +2279,11 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 		navigation.navigateToAnalyticsEnergy()
+		WebUI.delay(5)
 		navigation.navigateToAnalyticsWater()
+		WebUI.delay(5)
 		navigation.navigateToAnalyticsWaste()
+		WebUI.delay(5)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'), GlobalVariable.avgAngularWait)
 		WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'), 10)
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
