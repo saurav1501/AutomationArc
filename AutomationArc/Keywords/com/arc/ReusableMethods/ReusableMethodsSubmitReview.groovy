@@ -23,6 +23,7 @@ import internal.GlobalVariable
 
 public class ReusableMethodsSubmitReview extends BaseClass{
 	public static String reviewAmount
+	ReusableMethodsNavigation navigation = new ReusableMethodsNavigation()
 
 	public static void performanceScoreDataInputCheckboxSelection(){
 		//WebUI.waitForElementVisible(findTestObject('Object Repository/SubmitReview/EnergyCheckBox'), 20)
@@ -82,34 +83,53 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		//Assert.assertEquals(WebUI.getText(findTestObject('Object Repository/DataInput/CreditFileupload/BasePointFileCountCityComm')),'1')
 	}
 
+
+	public void retrynavigateToreviewPage(){
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.scrollToElement(findTestObject('SubmitReview/a_ Review'),GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('SubmitReview/a_ Review'))
+		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),GlobalVariable.minAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
+		
+		boolean notclickable = WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),GlobalVariable.minAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
+		
+		if(notclickable==false){
+		navigation.navigateToAnalyticsEnergy()
+		WebUI.scrollToElement(findTestObject('SubmitReview/a_ Review'),GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('SubmitReview/a_ Review'))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),GlobalVariable.minAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		
+		}
+		
+	}
+	
+
+		
+
 	@Keyword
 	public void performanceScoreSelectionAndSummary(){
-		
-		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
-		WebUI.click(findTestObject('SubmitReview/a_ Review'))
-		//WebUI.delay(13)
-		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'), GlobalVariable.maxAngularWait)
-		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
+		retrynavigateToreviewPage()
+	
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/SubmitReviewText')), "Submit for Review", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/VerifyPerformanceScoreVerificationTest')), "Performance Score Verification", false, FailureHandling.CONTINUE_ON_FAILURE)
-		//reviewAmount = WebUI.getText(findTestObject('Object Repository/SubmitReview/ReviewAmount'))
 		performanceScoreDataInputCheckboxSelection()
-		WebUI.scrollToElement(findTestObject('SubmitReview/div_Upload'), 3)
+     	WebUI.scrollToElement(findTestObject('SubmitReview/div_Upload'), 3)
 		WebUI.click(findTestObject('SubmitReview/div_Upload'))
 		WebUI.delay(2)
 		ReusableMethodsDataInput.uploadFile(UploadDocumentDataInput)
+		WebUI.sendKeys(findTestObject('Object Repository/SubmitReview/SubmitReviewTextAreaAdditionalMessage'), "Submit Performance Score Verification Test Message")
+		WebUI.delay(2)
 		WebUI.sendKeys(findTestObject('Object Repository/SubmitReview/SubmitReviewTextAreaAdditionalMessage'), "Submit Performance Score Verification Test Message")
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/SubmitReview/ClickToSaveAddtionalTextArea'))
 		WebUI.click(findTestObject('SubmitReview/button_Continue'))
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
-		
-		//Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/SubmitReview/SubmitReviewTextAreaAdditionalMessage'),'value'),'Submit Performance Score Verification Test Message')
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/VerifyTotalCredits')),'5', false, FailureHandling.CONTINUE_ON_FAILURE)
-		
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
 		

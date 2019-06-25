@@ -56,6 +56,11 @@ public class MasterTestListener extends BaseClass {
 		count= testSuiteId.size()
 		println count
 		println testSuiteId[count-1] 
+		
+		String currentRatings = testSuiteId[count-1]
+		data.setCellData(GlobalVariable.BDataInput,"currentRatings", 2,currentRatings)
+		
+		
 		Country= testSuiteId[count-1].substring(0,2)
 		println Country
 		WebUI.openBrowser('')
