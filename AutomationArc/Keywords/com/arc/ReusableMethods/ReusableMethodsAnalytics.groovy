@@ -2440,14 +2440,14 @@ public class ReusableMethodsAnalytics extends BaseClass{
 				uicarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.toString()
 	
 				
-							if(uicarbonemissionsMTCO2esqft==cannulCarbonemissionsMTCO2epersqft)
+				if(uicarbonemissionsMTCO2esqft==cannulCarbonemissionsMTCO2epersqft)
 				{
 				
 				WebUI.verifyMatch(uicarbonemissionsMTCO2esqft, cannulCarbonemissionsMTCO2epersqft, false)
 			
 				}
 		      
-				else (uicarbonemissionsMTCO2esqft!=cannulCarbonemissionsMTCO2epersqft)
+				else if(uicarbonemissionsMTCO2esqft!=cannulCarbonemissionsMTCO2epersqft)
 			
 			    {
 				refreshAnalytics()
@@ -2458,18 +2458,18 @@ public class ReusableMethodsAnalytics extends BaseClass{
 				WebUI.verifyMatch(uicarbonemissionsMTCO2esqft, cannulCarbonemissionsMTCO2epersqft,false,FailureHandling.OPTIONAL)
 			    }
 				
-				boolean invalidValue = WebUI.verifyMatch(uicarbonemissionsMTCO2esqft, cannulCarbonemissionsMTCO2epersqft,false,FailureHandling.OPTIONAL)
-				
-					if(invalidValue==false)
-					{
-					refreshAnalytics()
-					UIcarbonemissionsMTCO2epersqft = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualCarbonPerSQFt'))
-					UIearbonEmissionsMTCO2epersqft =  UIcarbonemissionsMTCO2epersqft.replace(',', '')
-					UIcarbonemissionsMTCO2esqft = new BigDecimal(UIearbonEmissionsMTCO2epersqft)
-					UIcarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.setScale(1,RoundingMode.HALF_UP)
-					WebUI.verifyMatch(uicarbonemissionsMTCO2esqft, cannulCarbonemissionsMTCO2epersqft, false)
-				 }
-				
+			    boolean invalidValue = WebUI.verifyMatch(uicarbonemissionsMTCO2esqft, cannulCarbonemissionsMTCO2epersqft,false,FailureHandling.OPTIONAL)
+			
+			    if(invalidValue==false)
+				{
+				refreshAnalytics()
+				UIcarbonemissionsMTCO2epersqft = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualCarbonPerSQFt'))
+				UIearbonEmissionsMTCO2epersqft =  UIcarbonemissionsMTCO2epersqft.replace(',', '')
+				UIcarbonemissionsMTCO2esqft = new BigDecimal(UIearbonEmissionsMTCO2epersqft)
+				UIcarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.setScale(1,RoundingMode.HALF_UP)
+				WebUI.verifyMatch(uicarbonemissionsMTCO2esqft, cannulCarbonemissionsMTCO2epersqft, false)
+		     }	
+	
 			
 			}
 			else if(native_unit=='lbs/kWh'||native_unit=='Tonnes (imperial)/kWh'||native_unit=='lbs/MWh'||native_unit=='Tonnes (imperial)/MWh')
@@ -2516,7 +2516,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 			
 				}
 		      
-				else (uicarbonemissionsMTCO2esqft!=cannulCarbonemissionsMTCO2epersqft)
+				else if(uicarbonemissionsMTCO2esqft!=cannulCarbonemissionsMTCO2epersqft)
 			
 			    {
 				refreshAnalytics()
@@ -2527,7 +2527,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 				WebUI.verifyMatch(uicarbonemissionsMTCO2esqft, cannulCarbonemissionsMTCO2epersqft,false,FailureHandling.OPTIONAL)
 			    }
 				
-				boolean invalidValue = WebUI.verifyMatch(uicarbonemissionsMTCO2esqft, cannulCarbonemissionsMTCO2epersqft,false,FailureHandling.OPTIONAL)
+			    boolean invalidValue = WebUI.verifyMatch(uicarbonemissionsMTCO2esqft, cannulCarbonemissionsMTCO2epersqft,false,FailureHandling.OPTIONAL)
 			
 			    if(invalidValue==false)
 				{
@@ -2538,9 +2538,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 				UIcarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.setScale(1,RoundingMode.HALF_UP)
 				WebUI.verifyMatch(uicarbonemissionsMTCO2esqft, cannulCarbonemissionsMTCO2epersqft, false)
 		     }	
-			
-			
-			}
+		}
 	
 			else if(native_unit=='kg/kWh'||native_unit=='kg/MWh'||native_unit=='Tonnes (metric)/MWh'||native_unit=='Tonnes (metric)/kwh')
 			{
@@ -2577,14 +2575,14 @@ public class ReusableMethodsAnalytics extends BaseClass{
 	
 				uicarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.toString()
 	
-							if(uicarbonemissionsMTCO2esqft==cannulCarbonemissionsMTCO2epersqft)
+				if(uicarbonemissionsMTCO2esqft==cannulCarbonemissionsMTCO2epersqft)
 				{
 				
 				WebUI.verifyMatch(uicarbonemissionsMTCO2esqft, cannulCarbonemissionsMTCO2epersqft, false)
 			
 				}
 		      
-				else (uicarbonemissionsMTCO2esqft!=cannulCarbonemissionsMTCO2epersqft)
+				else if(uicarbonemissionsMTCO2esqft!=cannulCarbonemissionsMTCO2epersqft)
 			
 			    {
 				refreshAnalytics()
@@ -2595,19 +2593,18 @@ public class ReusableMethodsAnalytics extends BaseClass{
 				WebUI.verifyMatch(uicarbonemissionsMTCO2esqft, cannulCarbonemissionsMTCO2epersqft,false,FailureHandling.OPTIONAL)
 			    }
 				
-				boolean invalidValue = WebUI.verifyMatch(uicarbonemissionsMTCO2esqft, cannulCarbonemissionsMTCO2epersqft,false,FailureHandling.OPTIONAL)
-				
-					if(invalidValue==false)
-					{
-					refreshAnalytics()
-					UIcarbonemissionsMTCO2epersqft = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualCarbonPerSQFt'))
-					UIearbonEmissionsMTCO2epersqft =  UIcarbonemissionsMTCO2epersqft.replace(',', '')
-					UIcarbonemissionsMTCO2esqft = new BigDecimal(UIearbonEmissionsMTCO2epersqft)
-					UIcarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.setScale(1,RoundingMode.HALF_UP)
-					WebUI.verifyMatch(uicarbonemissionsMTCO2esqft, cannulCarbonemissionsMTCO2epersqft, false)
-				 }
-				
-			}
+			    boolean invalidValue = WebUI.verifyMatch(uicarbonemissionsMTCO2esqft, cannulCarbonemissionsMTCO2epersqft,false,FailureHandling.OPTIONAL)
+			
+			    if(invalidValue==false)
+				{
+				refreshAnalytics()
+				UIcarbonemissionsMTCO2epersqft = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualCarbonPerSQFt'))
+				UIearbonEmissionsMTCO2epersqft =  UIcarbonemissionsMTCO2epersqft.replace(',', '')
+				UIcarbonemissionsMTCO2esqft = new BigDecimal(UIearbonEmissionsMTCO2epersqft)
+				UIcarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.setScale(1,RoundingMode.HALF_UP)
+				WebUI.verifyMatch(uicarbonemissionsMTCO2esqft, cannulCarbonemissionsMTCO2epersqft, false)
+		     }	
+		}
 		}
 		else if(ratingSystem=='USBuildingNoneSuite')
 		{
