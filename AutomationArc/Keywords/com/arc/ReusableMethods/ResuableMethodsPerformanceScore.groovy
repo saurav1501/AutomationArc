@@ -564,13 +564,10 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		//Search the project
 		reusableMethodsSearch.searchProgram(sheetName,rowNum)
 
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-        WebUI.delay(2)
+        WebUI.delay(5)
 		if((WebUI.getAttribute(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'), "class", FailureHandling.OPTIONAL).equals("pl20 collapsed"))){
 			println "Scores"
-			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 			WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
-			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		}
 		//WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
