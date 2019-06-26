@@ -11,8 +11,11 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//*[@class=&quot;meterListByType-meterName&quot;])[1]
-</value>
+         <value>//div[(text() = '
+                                        Building Settings
+                                    ' or . = '
+                                        Building Settings
+                                    ')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

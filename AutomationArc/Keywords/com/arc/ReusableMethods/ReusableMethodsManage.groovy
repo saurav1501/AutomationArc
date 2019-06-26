@@ -526,15 +526,6 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
-
-
-		/*
-		 findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown')
-		 findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOccupancy')
-		 findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea')
-		 findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours')
-		 findTestObject('Object Repository/DataInput/CreateMeterBuilding/OperationalDays')
-		 */
 		//operating hours
 
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
@@ -3366,7 +3357,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
 		String MainWindowHandle = driver.getWindowHandle()
-
+		WebUI.scrollToElement(findTestObject('DataInput/Survey/CopySurveyLink'),5)
 		WebUI.click(findTestObject('DataInput/Survey/CopySurveyLink'))
 		WebUI.delay(1)
 		WebUI.click(findTestObject('DataInput/Survey/English'))

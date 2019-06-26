@@ -76,7 +76,7 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		//WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 
 		//String PaymentPageText = WebUI.getText(findTestObject('Add_Project_Details/VerifyPaymentPage_ text'))
-		if(WebUI.getText(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'))=='Project Setu'){
+		if(WebUI.waitForElementPresent(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'),GlobalVariable.minAngularWait,FailureHandling.OPTIONAL) && WebUI.waitForElementVisible(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'),GlobalVariable.minAngularWait,FailureHandling.OPTIONAL) ){
 			WebUI.verifyMatch(WebUI.getText(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup')),'Project Setup',true)
 			String title= DriverFactory.getWebDriver().getCurrentUrl()
 			println title
@@ -393,9 +393,6 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 
 		String PaymentPageText = WebUI.getText(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'))
 		WebUI.verifyMatch(PaymentPageText,'Project Setup',true)
-
-		/*WebUI.click(findTestObject('Page_Arc dashboard/Back'))
-		 WebUI.delay(5)*/
 	}
 
 	@Keyword
@@ -440,28 +437,16 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		data.setCellData(sheetName,"ProjectName", rowNum, ProjectName)
 
 		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/projectName'), ProjectName)
-		//WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/selectProjectType'),prjRating,false )
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/noOfParkingSpaces'),parkingSpaces )
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/noOfParkingLevel'),parkingStructure)
-		//WebUI.click(findTestObject('Object Repository/AddProjectNewUI/spaceType'))
-		/*List<WebElement> list= driver.findElements(By.xpath("//*[@ng-repeat='type in spaceType']"))
-		 int size = list.size()
-		 int randonNumber = ThreadLocalRandom.current().nextInt(0, size)
-		 println list.get(randonNumber).getText()
-		 data.setCellData(sheetName, "SpaceType", rowNum,list.get(randonNumber).getText())
-		 list.get(randonNumber).click()
-		 WebUI.click(findTestObject('Object Repository/AddProjectNewUI/ownerType'))*/
 		List<WebElement> list1= driver.findElements(By.xpath("//*[@ng-repeat='type in ownerType']"))
 		int size1 = list1.size()
 		int randonNumber1 = ThreadLocalRandom.current().nextInt(0, size1)
 		println list1.get(randonNumber1).getText()
 		list1.get(randonNumber1).click()
 		data.setCellData(sheetName, "OwnerType", rowNum,list1.get(randonNumber1).getText())
-		/*WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/spaceType'), spaceType, true)
-		 WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/ownerType'), ownerType, true)*/
-
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/organization'),ownerOrg)
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/organization'))
 		//WebUI.delay(2)
@@ -470,10 +455,8 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/ownerEmail'), ownerMail)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/ownerCountry'), ownerCountry, false)
 		WebUI.sendKeys(findTestObject('Add_Project_Details/Area'), area)
-		//WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/streetName'), prjAddress)
-		//WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/cityName'), prjCity)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/countryName'), prjCountry, false)
@@ -481,12 +464,8 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/zipCode'), prjZip)
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/clickOnSignAgreement'))
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/addProjectNextButton'))
-		//WebUI.delay(5)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		WebUI.waitForElementVisible(findTestObject('Object Repository/paymentPageNewUI/paymentPageTextPurchase'),40)
-		//String purchase= WebUI.getText(findTestObject('Object Repository/paymentPageNewUI/paymentPageTextPurchase'))
-		
-		if(WebUI.waitForElementPresent(findTestObject('Object Repository/paymentPageNewUI/paymentPageTextPurchase'), 30, FailureHandling.OPTIONAL)){
+		if(WebUI.waitForElementPresent(findTestObject('Object Repository/paymentPageNewUI/paymentPageTextPurchase'), 30, FailureHandling.OPTIONAL) && WebUI.waitForElementVisible(findTestObject('Object Repository/paymentPageNewUI/paymentPageTextPurchase'), 30, FailureHandling.OPTIONAL) ){
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/paymentPageNewUI/paymentPageTextPurchase')),"Purchase", false)
 		String title= DriverFactory.getWebDriver().getCurrentUrl()
 		println title
