@@ -35,7 +35,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	WebDriver driver  = DriverFactory.getWebDriver()
 	public static Robot robot = new Robot()
-	
+
 	ResuableMethodsPerformanceScore  performanceScore = new ResuableMethodsPerformanceScore()
 
 
@@ -98,7 +98,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	@Keyword
 	public void uploadArcDataTemplateBuildingAnalytics(){
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
-	    WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'), GlobalVariable.minAngularWait)
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'))
 		WebUI.delay(1)
@@ -143,7 +143,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(4)
 		WebUI.click(findTestObject('DataInput/ClickToUploadFileButton'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-	
+
 		String successmessage= WebUI.getText(findTestObject('Object Repository/DataInput/ExcelUploadSuccessMessage'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyMatch(successmessage,'Excel submitted successfully. We will send you an email when your data is processed.' , true)
@@ -458,10 +458,10 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		//WebUI.delay(15)
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	    WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-	    WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-	    WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-	
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+
 		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/CreateMeterBuilding/EnergyMeterViaFileUpload'), 60)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/EnergyMeterViaFileUpload'), 60)
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/EnergyMeterViaFileUpload'))
@@ -1126,7 +1126,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/CreditFileupload/PreRequisiteTransitFirstCredit'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		for(int i= 0;i<10;i++){
-			
+
 			if(i==0){
 				//pdf upload
 				WebUI.click(findTestObject('Object Repository/DataInput/CreditFileupload/ClickButtonToUpload'))
@@ -1522,7 +1522,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		//WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/CreditFileupload/DeleteButtonCityComm',[index: 7]), 6)
 		WebUI.delay(5)
-		
+
 	}
 
 	public static void setClipboardData(String string) {
@@ -1631,7 +1631,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(2)
 		uploadFile(UploadDocs)
 		WebUI.delay(8)
-		
+
 	}
 
 
@@ -1672,7 +1672,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentOne'), GlobalVariable.minAngularWait)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentOne')),"txtFileUpload.txt",false)
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/closeModel'))
-		
+
 		WebUI.delay(3)
 		//jpg file
 		WebUI.waitForElementClickable(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'),GlobalVariable.minAngularWait)
@@ -1689,9 +1689,9 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentOne'), GlobalVariable.minAngularWait)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentOne')),"Parking SJ.jpg",false)
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/closeModel'))
-		
+
 		WebUI.delay(3)
-		
+
 		//Png file
 		WebUI.waitForElementClickable(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'),GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
@@ -1706,7 +1706,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentOne'), GlobalVariable.minAngularWait)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentOne')),"uploadPng.png",false)
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/closeModel'))
-		
+
 		WebUI.delay(3)
 		//gif file
 		WebUI.waitForElementClickable(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'),GlobalVariable.minAngularWait)
@@ -3295,7 +3295,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 
 		WebUI.scrollToElement(findTestObject('Object Repository/dataInputNewUI/dataInputTextVerification'), 3)
-        WebUI.waitForElementPresent(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'), 60)
+		WebUI.waitForElementPresent(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'), 60)
 		WebUI.waitForElementVisible(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'), 60)
 		WebUI.waitForElementClickable(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'),20)
 		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'))
@@ -3975,7 +3975,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('DataInput/CityCom/a_ Data Input'))
 		//WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-	    WebUI.waitForElementPresent(findTestObject('DataInput/CityCom/span_Waste'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('DataInput/CityCom/span_Waste'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('DataInput/CityCom/span_Waste'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('DataInput/CityCom/span_Waste'))
 		//WebUI.delay(4)
@@ -4340,7 +4340,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 			WebUI.sendKeys(findTestObject('DataInput/CityCom/TextboxValue2'), VMTPercapita)
 			WebUI.click(findTestObject('DataInput/CityCom/SaveButton2'))
 			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-			
+
 		}
 
 	}
@@ -4678,7 +4678,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/ProsperityAddPrevYear'), 60)
 		WebUI.click(findTestObject('DataInput/CityCom/ProsperityAddPrevYear'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		
+
 		WebUI.scrollToElement(findTestObject('DataInput/Exp/Unemployment_Add Year'), 2)
 		WebUI.waitForElementClickable(findTestObject('DataInput/Exp/Unemployment_Add Year'), 60)
 		WebUI.click(findTestObject('DataInput/Exp/Unemployment_Add Year'))
@@ -4963,29 +4963,29 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	public void surveySubmit(String sheetName) throws IOException, InterruptedException, Exception{
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-		
+
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-		
+
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-		
-		
+
+
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
-		
+
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-		
+
 		String MainWindowHandle = driver.getWindowHandle()
-		
+
 		WebUI.click(findTestObject('DataInput/Survey/CopySurveyLink'))
 		WebUI.delay(1)
 		WebUI.click(findTestObject('DataInput/Survey/English'))
-		
+
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-		
+
 		for( int rowNum=2;rowNum<=5;rowNum++)
 		{
 			if(rowNum==2)
@@ -5014,20 +5014,20 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				r.keyPress(KeyEvent.VK_V)
 				r.keyRelease(KeyEvent.VK_CONTROL)
 				r.keyRelease(KeyEvent.VK_V)
-		
+
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 				r.keyPress(KeyEvent.VK_ENTER)
 				r.keyRelease(KeyEvent.VK_ENTER)
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 				WebUI.delay(5)
 				WebUI.switchToWindowIndex(1)
-				
+
 				WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'), GlobalVariable.avgAngularWait)
 				WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'), GlobalVariable.avgAngularWait)
 				WebUI.click(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'))
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-			
-	
+
+
 				int it=1;
 				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk1)
 				it++
@@ -5054,14 +5054,14 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 				WebUI.click(findTestObject('Object Repository/DataInput/Survey/SaveButtonToRecordSurveyData'))
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-			    WebUI.delay(2)
+				WebUI.delay(2)
 				WebUI.dragAndDropToObject(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'), findTestObject('Object Repository/DataInput/Survey/ExtremelySatisfySpanText'))
 				WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
 				WebUI.delay(2)
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 				WebUI.click(findTestObject('DataInput/Survey/Submit1'))
 				WebUI.waitForElementClickable(findTestObject('DataInput/Survey/Submit'), GlobalVariable.avgAngularWait)
-				
+
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 				WebUI.verifyMatch(WebUI.getText(findTestObject('DataInput/Survey/Thank')), "Options that enhance your satisfaction", false)
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
@@ -5086,27 +5086,27 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				r.keyRelease(KeyEvent.VK_CONTROL)
 				r.keyRelease(KeyEvent.VK_T)
 				WebUI.delay(1)
-			
+
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 				r.keyPress(KeyEvent.VK_CONTROL)
 				r.keyPress(KeyEvent.VK_V)
 				r.keyRelease(KeyEvent.VK_CONTROL)
 				r.keyRelease(KeyEvent.VK_V)
 				WebUI.delay(1)
-				
+
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 				r.keyPress(KeyEvent.VK_ENTER)
 				r.keyRelease(KeyEvent.VK_ENTER)
-				
+
 				WebUI.switchToWindowIndex(2)
 				WebUI.delay(5)
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-				
+
 				WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'), GlobalVariable.avgAngularWait)
 				WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'), GlobalVariable.avgAngularWait)
 				WebUI.click(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'))
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-						
+
 				int it=1;
 				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk1)
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
@@ -5136,7 +5136,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				WebUI.click(findTestObject('Object Repository/DataInput/Survey/SaveButtonToRecordSurveyData'))
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
-				//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'),4)  
+				//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'),4)
 				WebUI.delay(2)
 				WebUI.dragAndDropToObject(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'), findTestObject('Object Repository/DataInput/Survey/ExtremelySatisfySpanText'))
 				WebUI.delay(2)
@@ -5658,24 +5658,24 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	@Keyword
 	public void percentageSurveyResponseRateCalculationTransit() throws IOException, InterruptedException, Exception{
-		
+
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-        WebUI.waitForElementPresent(findTestObject('Manage/Project/WeightedOccupancy'), GlobalVariable.minAngularWait)
-	    WebUI.waitForElementVisible(findTestObject('Manage/Project/WeightedOccupancy'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('Manage/Project/WeightedOccupancy'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('Manage/Project/WeightedOccupancy'), GlobalVariable.minAngularWait)
 		WebUI.scrollToElement(findTestObject('Manage/Project/WeightedOccupancy'), 10)
 		String projectoccupancy = WebUI.getAttribute(findTestObject('Manage/Project/WeightedOccupancy'),'value')
 		double projectOccupancy= Double.parseDouble(projectoccupancy)
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
-		
+
 		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.maxAngularWait)
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
-		
+
 		/******Verify that survey response rate% is calculated on the basis of the following formula [ Response %ge = (No. of responses/Occupancy)*100 ] . Always count the no of responses by counting the no of rows of transport survey results.*****/
 		String surveyResponsePercentage = WebUI.getText(findTestObject('DataInput/Survey/SurveyResponsePercentage'))
 		String surveyResponsepercentage1 = surveyResponsePercentage.replace("%","")
@@ -5695,7 +5695,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('DataInput/Survey/OccupantSatisfactionSurv'))
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
-		
+
 		String humsurveyResponsePercentage = WebUI.getText(findTestObject('DataInput/Survey/SurveyResponsePercentage'))
 		String humsurveyResponsepercentage1 = surveyResponsePercentage.replace("%" ,"")
 		String humsurveyResponsepercentage = humsurveyResponsepercentage1.replaceAll("\\s","")
@@ -5716,7 +5716,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	@Keyword
 	public void percentageSurveyResponseRateCalculationBuiding() throws IOException, InterruptedException, Exception{
-		
+
 		WebUI.click(findTestObject('Manage/Parking/ManageProject'))
 		WebUI.delay(6)
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
@@ -5768,31 +5768,31 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	@Keyword
 	public void dataInputNavigationTest() throws IOException, InterruptedException, Exception{
-	
+
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyElementPresent(findTestObject('DataInput/Nav/No Energy meter present'), 5, FailureHandling.CONTINUE_ON_FAILURE)
-		
+
 		WebUI.click(findTestObject('DataInput/Nav/button_Next'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyElementPresent(findTestObject('DataInput/Nav/No Water meter present'), 5, FailureHandling.CONTINUE_ON_FAILURE)
-		
+
 		WebUI.click(findTestObject('DataInput/Nav/button_Next'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyElementPresent(findTestObject('DataInput/Nav/No readings present for Was'), 5, FailureHandling.CONTINUE_ON_FAILURE)
-		
+
 		WebUI.click(findTestObject('DataInput/Nav/button_Next'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyElementPresent(findTestObject('DataInput/Nav/Transportation Survey'), 5, FailureHandling.CONTINUE_ON_FAILURE)
-	
+
 		WebUI.click(findTestObject('DataInput/Nav/button_Next'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyElementPresent(findTestObject('DataInput/Nav/Hum Exp Satisfaction'), 5, FailureHandling.CONTINUE_ON_FAILURE)
-		
+
 		WebUI.click(findTestObject('DataInput/Nav/button_Next'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyElementPresent(findTestObject('DataInput/Nav/No Energy meter present'), 5, FailureHandling.CONTINUE_ON_FAILURE)
-		
+
 
 	}
 
@@ -5814,16 +5814,16 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	public void waterScoreShouldNotrecomputemun(String sheetName){
 		WebUI.scrollToElement(findTestObject('DataInput/Survey/a_ Data Input'),5)
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
-		
+
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-		
+
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-		
+
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/MeterWater/AnalyticsWater meter'), GlobalVariable.minAngularWait)
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/MeterWater/AnalyticsWater meter'), GlobalVariable.minAngularWait)
-	
+
 		String uIwaterScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/WaterScore'))
 		data.setCellData(sheetName,"waterScore",5,uIwaterScore)
 
@@ -5837,15 +5837,15 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/a_Municipality supplied reclai'))
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/WaterScore'),40)
-		
+
 		//CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsPerformanceScore.analyticsgenratePerformanceScoreAdminToolOtherNone1'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
-		
+
 		performanceScore.analyticsgenratePerformanceScoreAdminToolOtherNone1(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
-		
+
 		WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-		
+
 
 
 		String waterScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/WaterScore'))
@@ -5857,11 +5857,11 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	public void waterScoreShouldNotrecomputemunReclaimedonsite(){
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-	
-	
-	    WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-    	WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-	
+
+
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+
 
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/MeterWater/button_Municipality supplied'),4)
 		WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/button_Municipality supplied'))
@@ -5869,9 +5869,9 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		WebUI.click(findTestObject('Add_Project_Details/Star/a_Reclaimed onsite'))
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/WaterScore'),40)
-		
+
 		performanceScore.analyticsgenratePerformanceScoreAdminToolOtherNone1(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
-		
+
 		WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
@@ -5888,19 +5888,19 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		WebUI.click(findTestObject('Add_Project_Details/Star/a_Municipality supplied potabl'))
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/WaterScore'),40)
-		
+
 		performanceScore.analyticsgenratePerformanceScoreAdminToolOtherNone1(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
-		
+
 		WebUI.closeWindowIndex(1)
 		WebUI.switchToWindowIndex(0)
 		WebUI.delay(2)
-	
+
 		/********************Changing to the default score of water ***********************************************/
 		WebUI.scrollToElement(findTestObject('PerformanceScore/DataInput/WaterScore'),5)
 		String awaterScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/WaterScore'))
 		String pwaterScore = data.getCellData(sheetName,"waterScore", 5)
 		WebUI.verifyMatch(awaterScore, pwaterScore, false)
-		
+
 
 	}
 	@Keyword
@@ -5987,21 +5987,21 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	}
 	@Keyword
 	public void HumanExpMeterReadingValidationUI()throws IOException, InterruptedException {
-		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		 WebUI.click(findTestObject('DataInput/CityCom/a_ Data Input'))
-		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		 WebUI.click(findTestObject('DataInput/CityCom/span_Human Experience'))
-		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		 WebUI.waitForPageLoad(10)
-		 WebUI.click(findTestObject('DataInput/CityCom/EducationAddYear'))
-		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.click(findTestObject('DataInput/CityCom/a_ Data Input'))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.click(findTestObject('DataInput/CityCom/span_Human Experience'))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(10)
+		WebUI.click(findTestObject('DataInput/CityCom/EducationAddYear'))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
 
-		 WebUI.setText(findTestObject('DataInput/CityCom/TextboxValue1'), '5000')
-		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		 WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+1))
-		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		 WebUI.verifyElementPresent(findTestObject('DataInput/CityCom/Hum/TextValidationPercentPercentvalueshouldnotexceed100'),5)
+		WebUI.setText(findTestObject('DataInput/CityCom/TextboxValue1'), '5000')
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+1))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.verifyElementPresent(findTestObject('DataInput/CityCom/Hum/TextValidationPercentPercentvalueshouldnotexceed100'),5)
 
 		/****************************Verifying the Notification of Error message******************************/
 		WebUI.clearText(findTestObject('DataInput/CityCom/TextboxValue1'))
@@ -6025,22 +6025,22 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		WebUI.scrollToElement(findTestObject('DataInput/CityCom/BachelorAddYear'), 2)
 		WebUI.click(findTestObject('DataInput/CityCom/BachelorAddYear'))
-		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
 		WebUI.setText(findTestObject('DataInput/CityCom/HTextBox2'), '5000')
-		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+2))
-		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.verifyElementPresent(findTestObject('DataInput/CityCom/Hum/TextValidationPercentPercentvalueshouldnotexceed100'),5)
 
 		/****************************Verifying the Notification of Error message******************************/
 		WebUI.clearText(findTestObject('DataInput/CityCom/HTextBox2'))
-		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.setText(findTestObject('DataInput/CityCom/HTextBox2'), '20')
-		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton'+2),2)
 		WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+2))
-		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/HTextBox2'),"value"),'20',"Not Valid")
 
 
@@ -6051,22 +6051,22 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForPageLoad(10)
 		WebUI.scrollToElement(findTestObject('DataInput/CityCom/EquAddYear'),2)
 		WebUI.click(findTestObject('DataInput/CityCom/EquAddYear'))
-		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
 		WebUI.setText(findTestObject('DataInput/CityC/TextBox3'), '5000')
-		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+3))
-		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.verifyElementPresent(findTestObject('DataInput/CityCom/Hum/TextValidationPercentPercentvalueshouldnotexceed100'),5)
 
 		/****************************Verifying the Notification of Error message******************************/
 		WebUI.clearText(findTestObject('DataInput/CityC/TextBox3'))
-		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.setText(findTestObject('DataInput/CityC/TextBox3'), '20')
-		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton'+3),2)
 		WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+3))
-		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityC/TextBox3'),"value"),'20',"Not Valid")
 
 
@@ -6264,7 +6264,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(2)
 		uploadFile(UploadDocs)
 		WebUI.delay(4)
-		
+
 	}
 
 
@@ -6343,7 +6343,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-	
+
 		//Verifying the Performance score
 		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
 		data.setCellData(GlobalVariable.BDataInput,"TotalScore", GlobalVariable.rowNumTwo,totalPerformaceScore)
@@ -6410,7 +6410,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-	
+
 		//Verifying the Performance score
 		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
 		data.setCellData(GlobalVariable.BDataInput,"TotalScore", GlobalVariable.rowNumTwo,totalPerformaceScore)
@@ -6473,11 +6473,11 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 
-		
+
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
 		//Verifying the Performance score
-		
+
 		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
 		data.setCellData(GlobalVariable.BDataInput,"TotalScore", GlobalVariable.rowNumTwo,totalPerformaceScore)
 
@@ -6517,18 +6517,18 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		WebUI.scrollToElement(findTestObject('DataInput/Survey/a_ Data Input'),5)
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
-		
+
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-		
+
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-		
+
 		WebUI.waitForElementClickable(findTestObject('Analytics/17/Building Settings'), 60)
 		WebUI.click(findTestObject('Analytics/17/Building Settings'))
 		WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		
+
 		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/Setting/Setting'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Setting/Setting'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Setting/Setting'), GlobalVariable.minAngularWait)
@@ -6569,7 +6569,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 30)
 		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
 		WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
-	    WebUI.delay(3)
+		WebUI.delay(3)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_kWh'), 10)
@@ -6719,15 +6719,15 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		WebUI.scrollToElement(findTestObject('DataInput/Survey/a_ Data Input'),5)
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
-		
+
 
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-			
+
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-		
-		
+
+
 		WebUI.waitForElementClickable(findTestObject('Analytics/17/Building Settings'), 10)
 		WebUI.doubleClick(findTestObject('Analytics/17/Building Settings'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
@@ -7069,7 +7069,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		/********* Verifying the Generated score for total score & Energy & Water & Waste & Transport & Human Experience under data Input section ********/
 		WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
-		
+
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Setting/Setting'), 60)
@@ -7142,14 +7142,14 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		/********* Verifying the Generated score for total score & Energy & Water & Waste & Transport & Human Experience under data Input section ********/
 		WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
-		
+
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-	
-	
-	    WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-	    WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-	
+
+
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'),10)
 		//Verifying the Performance score
 		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
@@ -7162,7 +7162,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TotalPerformanceScore'),10)
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/Score/TotalPerformanceScore'), GlobalVariable.minAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
-		
+
 		//Verifying the Performance score
 		String totalperformaceScore = WebUI.getText(findTestObject('PerformanceScore/Score/TotalPerformanceScore'))
 		print totalperformaceScore

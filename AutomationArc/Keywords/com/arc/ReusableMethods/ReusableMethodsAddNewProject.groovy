@@ -160,6 +160,8 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 
+		if(WebUI.waitForElementPresent(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'),GlobalVariable.minAngularWait, FailureHandling.OPTIONAL && WebUI.waitForElementVisible(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'),GlobalVariable.minAngularWait, FailureHandling.OPTIONAL))
+		{
 		String PaymentPageText = WebUI.getText(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'))
 		WebUI.verifyMatch(PaymentPageText,'Project Setup',true)
 		String title= DriverFactory.getWebDriver().getCurrentUrl()
@@ -169,6 +171,7 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		data.setCellData(sheetName,"ProjectID", rowNum, Project_ID)
 		data.setCellData(sheetName,"RegDate", rowNum, ReusableMethodsManage.verifyBillingDate())
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		}
 	}
 
 

@@ -1026,7 +1026,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		
+
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
 
@@ -1712,9 +1712,9 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
-		
-		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/TeamModule/TeamMembersFirstRow'),GlobalVariable.avgAngularWait,FailureHandling.CONTINUE_ON_FAILURE)	
-		
+
+		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/TeamModule/TeamMembersFirstRow'),GlobalVariable.avgAngularWait,FailureHandling.CONTINUE_ON_FAILURE)
+
 		WebUI.scrollToElement(findTestObject('Manage/TeamModule/input_input'), 2)
 		WebUI.setText(findTestObject('Manage/TeamModule/input_input'),GlobalVariable.TeamMember)
 		WebUI.delay(1)
@@ -3342,9 +3342,9 @@ public class ReusableMethodsManage extends BaseClass {
 
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-        WebUI.delay(2)
+		WebUI.delay(2)
 		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), 30)
-        WebUI.scrollToElement(findTestObject('DataInput/Survey/div_Transportation Survey'),5)
+		WebUI.scrollToElement(findTestObject('DataInput/Survey/div_Transportation Survey'),5)
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
 
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
