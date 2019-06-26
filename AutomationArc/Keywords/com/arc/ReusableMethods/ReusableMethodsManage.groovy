@@ -526,15 +526,6 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
-
-
-		/*
-		 findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown')
-		 findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOccupancy')
-		 findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea')
-		 findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours')
-		 findTestObject('Object Repository/DataInput/CreateMeterBuilding/OperationalDays')
-		 */
 		//operating hours
 
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
