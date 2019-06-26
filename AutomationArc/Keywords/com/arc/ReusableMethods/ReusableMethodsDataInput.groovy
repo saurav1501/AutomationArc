@@ -6471,9 +6471,13 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.scrollToElement(findTestObject('DataInput/Survey/a_ Data Input'),5)
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+<<<<<<< HEAD
 
 
 
+=======
+		
+>>>>>>> 8dff7886b55b7111f82da8b8b09499bc1a649cb3
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
 		//Verifying the Performance score

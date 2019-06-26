@@ -1003,6 +1003,7 @@ public class ReusableMethodsPayment extends BaseClass{
 		WebUI.setText(findTestObject('SubmitReview/input_email'), partyEmail)
 		WebUI.setText(findTestObject('SubmitReview/input_phone'), '9486861522')
 		WebUI.click(findTestObject('SubmitReview/span_Continue'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	}
 
 
