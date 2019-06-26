@@ -67,12 +67,15 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	public void uploadArcDataTemplatetrial(){
 
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
-		WebUI.delay(7)
+		//WebUI.delay(7)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'),GlobalVariable.minAngularWait )
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'),5)
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'))
-		WebUI.delay(6)
+		//WebUI.delay(6)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/span_Upload.XLS'), 20)
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/span_Upload.XLS'))
-		WebUI.delay(3)
+		//WebUI.delay(3)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/ClickOnUploadToSelectFile'),3)
 		WebUI.sendKeys(findTestObject('Object Repository/DataInput/UploadArcDataTemplete'),BaseClass.UploadArcDataTemplete )
 		WebUI.delay(4)
@@ -84,7 +87,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/DataInput/button_CLOSE'))
 		WebUI.refresh()
-		WebUI.delay(10)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	}
 
 	//Verify the default units displayed on the Graphs y-axis

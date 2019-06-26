@@ -3358,7 +3358,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
 		String MainWindowHandle = driver.getWindowHandle()
-
+		WebUI.scrollToElement(findTestObject('DataInput/Survey/CopySurveyLink'),5)
 		WebUI.click(findTestObject('DataInput/Survey/CopySurveyLink'))
 		WebUI.delay(1)
 		WebUI.click(findTestObject('DataInput/Survey/English'))
