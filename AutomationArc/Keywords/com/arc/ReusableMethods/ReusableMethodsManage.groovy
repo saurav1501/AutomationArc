@@ -639,25 +639,31 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Object Repository/DataInput/OperatingHourDropdown'))
 		Thread.sleep(2000)
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/OperatingHours160'),5)
-		Thread.sleep(2000)
+		Thread.sleep(1000)
+		
 		WebUI.click(findTestObject('Object Repository/DataInput/OperatingHours160'))
-		Thread.sleep(2000)
+		Thread.sleep(5000)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'), 5)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'))
-		Thread.sleep(3000)
+		Thread.sleep(1000)
 		WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'), '10000')
-		Thread.sleep(2000)
+		Thread.sleep(1000)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle'))
-		Thread.sleep(2000)
+		Thread.sleep(5000)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
 		WebUI.click(findTestObject('Object Repository/DataInput/UnitTypeDorpdown'))
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/SI'), 2)
 		WebUI.click(findTestObject('Object Repository/DataInput/SI'))
-
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		Thread.sleep(2000)
+		Thread.sleep(4000)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+	    WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		
 
 
 		/************************Verifying under Manage Section *****************************************/
@@ -671,7 +677,7 @@ public class ReusableMethodsManage extends BaseClass {
 		/************************Verifying under Analytics Section *****************************************/
 
 		ReusNavigate.navigateToAnalyticsTotal()
-
+		
 		String area = WebUI.getText(findTestObject('Analytics/TotalAnalytics/Area'))
 		WebUI.verifyMatch(area,'10,000', false)
 

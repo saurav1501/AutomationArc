@@ -502,11 +502,17 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 
 	@Keyword
 	public void submitCertificationAndVerifySuccessMessage(){
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+	    WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 		WebUI.scrollToElement(findTestObject('Object Repository/SubmitReview/SubmitCertification'),3)
 		WebUI.waitForElementNotClickable(findTestObject('Object Repository/SubmitReview/SubmitCertification'),9)
 		WebUI.click(findTestObject('Object Repository/SubmitReview/SubmitCertification'))
-		WebUI.delay(8)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		
+		WebUI.waitForElementPresent(findTestObject('Object Repository/SubmitReview/MessageSuccessfullySubmitted'), GlobalVariable.avgAngularWait)
+        WebUI.waitForElementVisible(findTestObject('Object Repository/SubmitReview/MessageSuccessfullySubmitted'), GlobalVariable.avgAngularWait)
+		
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/MessageSuccessfullySubmitted')), "Successfully Submitted", false, FailureHandling.CONTINUE_ON_FAILURE)
 	}
 	@Keyword
