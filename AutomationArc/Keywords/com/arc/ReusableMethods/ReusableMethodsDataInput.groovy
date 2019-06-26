@@ -1997,7 +1997,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		int i=0
 		for (credit in credits) {
 			if(i==6)
-				break
+			break
 			println credit.getText()
 			Assert.assertTrue(credit.getText().equalsIgnoreCase(performCredits[i]))
 
@@ -6471,13 +6471,6 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.scrollToElement(findTestObject('DataInput/Survey/a_ Data Input'),5)
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-<<<<<<< HEAD
-
-
-
-=======
-		
->>>>>>> 8dff7886b55b7111f82da8b8b09499bc1a649cb3
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
 		//Verifying the Performance score
@@ -7085,9 +7078,9 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		int utotalPerformaceScore = Integer.parseInt(totalPerformaceScore)
 
 		if(utotalPerformaceScore>utotalScore)
-			KeywordUtil.markPassed("!!! Total Score is increased for this Project after changing the emission factor !!!")
+		KeywordUtil.markPassed("!!! Total Score is increased for this Project after changing the emission factor !!!")
 		else
-			KeywordUtil.markFailedAndStop("!!! Total Score is Not increased for this  Project after changing the emission factor !!!")
+		KeywordUtil.markFailedAndStop("!!! Total Score is Not increased for this  Project after changing the emission factor !!!")
 
 
 		/*WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
@@ -7118,9 +7111,9 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		int utotalPerformaceScore = Integer.parseInt(totalPerformaceScore)
 
 		if(utotalPerformaceScore<utotalScore)
-			KeywordUtil.markPassed("!!! Total Score is decrease for this Project after changing the emission factor !!!")
+		KeywordUtil.markPassed("!!! Total Score is decrease for this Project after changing the emission factor !!!")
 		else
-			KeywordUtil.markFailedAndStop("!!! Total Score is Not Decrease for this Project after changing the emission factor !!!")
+		KeywordUtil.markFailedAndStop("!!! Total Score is Not Decrease for this Project after changing the emission factor !!!")
 
 
 		/*	WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))

@@ -631,7 +631,7 @@ public class ReusableMethodsManage extends BaseClass {
 		Thread.sleep(2000)
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/OperatingHours160'),5)
 		Thread.sleep(1000)
-		
+
 		WebUI.click(findTestObject('Object Repository/DataInput/OperatingHours160'))
 		Thread.sleep(5000)
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
@@ -653,8 +653,8 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Object Repository/DataInput/SI'))
 		Thread.sleep(4000)
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	    WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-		
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
 
 
 		/************************Verifying under Manage Section *****************************************/
@@ -668,7 +668,7 @@ public class ReusableMethodsManage extends BaseClass {
 		/************************Verifying under Analytics Section *****************************************/
 
 		ReusNavigate.navigateToAnalyticsTotal()
-		
+
 		String area = WebUI.getText(findTestObject('Analytics/TotalAnalytics/Area'))
 		WebUI.verifyMatch(area,'10,000', false)
 
