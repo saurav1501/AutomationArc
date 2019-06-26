@@ -231,11 +231,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-<<<<<<< HEAD
       <initValue>'usgbcarc2@gmail.com'</initValue>
-=======
-      <initValue>'usgbcarc1@gmail.com'</initValue>
->>>>>>> 26654f922f12c109e740ca2aff91eb6a9b88455a
       <name>TeamMember2</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
