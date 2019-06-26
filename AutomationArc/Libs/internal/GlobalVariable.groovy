@@ -101,7 +101,6 @@ Profile DEV-US-P2 : Explicit Wait Timeout
 Profile QAS-CA : Explicit Wait Timeout
 Profile QAS-CN : Explicit Wait Timeout
 Profile QAS-IND : Explicit Wait Timeout
-Profile QAS-US-P1 : Explicit Wait Timeout
 Profile QAS-US-P2 : Explicit Wait Timeout
 Profile QAS-US-User2 : Explicit Wait Timeout
 Profile STG-CA : Explicit Wait Timeout
@@ -124,7 +123,6 @@ Profile DEV-US-P2 : Adding US projects
 Profile QAS-CA : Adding canada projects
 Profile QAS-CN : Adding china projects
 Profile QAS-IND : Adding India projects
-Profile QAS-US-P1 : Adding US projects
 Profile QAS-US-P2 : Adding US projects
 Profile QAS-US-User2 : Adding US projects
 Profile STG-CA : Adding canada projects
@@ -142,7 +140,6 @@ Profile DEV-US-P2 : Adding new team member
 Profile QAS-CA : Adding new team member 
 Profile QAS-CN : Adding new team member 
 Profile QAS-IND : Adding new team member 
-Profile QAS-US-P1 : Adding new team member 
 Profile QAS-US-P2 : Adding new team member 
 Profile QAS-US-User2 : Adding new team member 
 Profile STG-CA : Adding new team member 
@@ -160,7 +157,6 @@ Profile DEV-US-P2 : Adding Credit Card payment details
 Profile QAS-CA : Adding Credit Card payment details 
 Profile QAS-CN : Adding Credit Card payment details 
 Profile QAS-IND : Adding Credit Card payment details 
-Profile QAS-US-P1 : Adding Credit Card payment details 
 Profile QAS-US-P2 : Adding Credit Card payment details 
 Profile QAS-US-User2 : Adding Credit Card payment details 
 Profile STG-CA : Adding Credit Card payment details 
@@ -257,7 +253,6 @@ Profile STG-IND : Adding new Inida community projects </p>
     /**
      * <p>Profile DEV-US-P1 : old score version of Buiding
 Profile DEV-US-P2 : old score version of Buiding
-Profile QAS-US-P1 : old score version project of Building
 Profile QAS-US-P2 : old score version project of Building
 Profile QAS-US-User2 : old score version project of Building
 Profile STG-US-P1 : old score version of Buiding
@@ -291,15 +286,13 @@ Profile STG-US-P2 : old score version of Buiding</p>
     public static Object AllProjectUrl
      
     /**
-     * <p>Profile QAS-US-P1 : Result sheet to store the result
-Profile QAS-US-P2 : Result sheet to store the result</p>
+     * <p>Profile QAS-US-P2 : Result sheet to store the result</p>
      */
     public static Object Result
      
     /**
      * <p>Profile DEV-US-P1 : old score version of Transit
 Profile DEV-US-P2 : old score version of Transit
-Profile QAS-US-P1 : Old score version project of Transit
 Profile QAS-US-P2 : Old score version project of Transit
 Profile QAS-US-User2 : Old score version project of Transit
 Profile STG-US-P1 : old score version of Transit
@@ -330,7 +323,6 @@ Profile STG-US-P2 : old score version of Transit</p>
     /**
      * <p>Profile DEV-US-P1 : Pricing sheet 
 Profile DEV-US-P2 : Pricing sheet 
-Profile QAS-US-P1 : Pricing sheet for checking the pricing for different countries.
 Profile QAS-US-P2 : Pricing sheet for checking the pricing for different countries.
 Profile STG-US-P1 : Pricing Sheet
 Profile STG-US-P2 : Pricing Sheet</p>
@@ -358,16 +350,14 @@ Profile STG-US-P2 : Pricing Sheet</p>
     public static Object TeamMember2
      
     /**
-     * <p>Profile QAS-US-P1 : Project team admin and arc administrator name
-Profile QAS-US-P2 : Project team admin and arc administrator name
+     * <p>Profile QAS-US-P2 : Project team admin and arc administrator name
 Profile STG-US-P1 : Project team admin and arc administrator name
 Profile STG-US-P2 : Project team admin and arc administrator name</p>
      */
     public static Object projectTeamAdminAndArcAdminName
      
     /**
-     * <p>Profile QAS-US-P1 : Project team admin and arc administrator email
-Profile QAS-US-P2 : Project team admin and arc administrator email
+     * <p>Profile QAS-US-P2 : Project team admin and arc administrator email
 Profile STG-US-P1 : Project team admin and arc administrator email id
 Profile STG-US-P2 : Project team admin and arc administrator email id</p>
      */
@@ -386,7 +376,6 @@ Profile STG-US-P2 : Project team admin and arc administrator email id</p>
     /**
      * <p>Profile DEV-US-P1 : Team Member DEV
 Profile DEV-US-P2 : Team Member DEV
-Profile QAS-US-P1 : Team Member QAS
 Profile QAS-US-P2 : Team Member QAS
 Profile QAS-US-User2 : Team Member QAS
 Profile STG-US-P1 : Team Member STG
@@ -429,8 +418,7 @@ Profile STG-US-P2 : New Added Project</p>
     public static Object teamMemName
      
     /**
-     * <p>Profile QAS-US-P1 : Human Experience and Transportation
-Profile QAS-US-P2 : Human Experience and Transportation
+     * <p>Profile QAS-US-P2 : Human Experience and Transportation
 Profile QAS-US-User2 : Human Experience and Transportation</p>
      */
     public static Object TemplateHE
@@ -476,6 +464,11 @@ Profile STG-US-P2 : payment via credit card</p>
     /**
      * <p></p>
      */
+    public static Object TestCount
+     
+    /**
+     * <p></p>
+     */
     public static Object rowNumTwelve
      
     /**
@@ -493,11 +486,6 @@ Profile STG-US-P2 : payment via credit card</p>
      */
     public static Object rowNumFifteen
      
-    /**
-     * <p></p>
-     */
-    public static Object TestCount
-     
 
     static {
         def allVariables = [:]        
@@ -508,11 +496,6 @@ Profile STG-US-P2 : payment via credit card</p>
         allVariables.put('QAS-CA', allVariables['default'] + ['url' : 'http://www.qas.arconline.io/', 'userName' : 'usgbcarc@gmail.com', 'password' : 'initpass', 'timeOut' : 40, 'env' : 'ARCDataTemplete/QasArcTest.xlsx', 'BuildingSheet' : 'CanadaBuildingProject', 'BuildingTeam' : 'BTeam', 'CCPayment' : 'Payment', 'rowNumTwo' : 2, 'rowNumThree' : 3, 'rowNumFour' : 4, 'rowNumFive' : 5, 'rowNumSix' : 6, 'CitySheet' : 'CanadaCityProject', 'CommunitySheet' : 'CanadaCommunityProject', 'CDataInput' : 'CDataInput', 'rowNumSeven' : 7, 'rowNumEight' : 8, 'PortfoliosSheet' : 'Portfolio', 'BDataInput' : 'BDataInput', 'adminUrl' : 'qas.app.arconline.io/admin', 'adminUserName' : 'qasgbciadmin@gbci.com', 'adminPassword' : 'initpass', 'rowNumNine' : 9, 'ExcelTemplateData' : 'ExcelTemplateDataVerificationSheet.xlsx', 'TemplateEnergyData' : 'Energy', 'TemplateWaterData' : 'Water', 'TemplateWasteData' : 'Waste', 'AllProjectUrl' : 'https://qas.app.arconline.io/app/projects/my-projects/?project-type=all'])
         allVariables.put('QAS-CN', allVariables['default'] + ['url' : 'http://www.qas.arconline.io/', 'userName' : 'usgbcarc@gmail.com', 'password' : 'initpass', 'timeOut' : 40, 'env' : 'ARCDataTemplete/QasArcTest.xlsx', 'BuildingSheet' : 'ChinaBuildingProejct', 'BuildingTeam' : 'BTeam', 'CCPayment' : 'Payment', 'rowNumTwo' : 2, 'rowNumThree' : 3, 'rowNumFour' : 4, 'rowNumFive' : 5, 'rowNumSix' : 6, 'CitySheet' : 'ChinaCityProject', 'CommunitySheet' : 'ChinaCommunityProject', 'CDataInput' : 'CDataInput', 'rowNumSeven' : 7, 'rowNumEight' : 8, 'PortfoliosSheet' : 'Portfolio', 'BDataInput' : 'BDataInput', 'adminUrl' : 'qas.app.arconline.io/admin', 'adminUserName' : 'qasgbciadmin@gbci.com', 'adminPassword' : 'initpass', 'rowNumNine' : 9, 'ExcelTemplateData' : 'ExcelTemplateDataVerificationSheet.xlsx', 'TemplateEnergyData' : 'Energy', 'TemplateWaterData' : 'Water', 'TemplateWasteData' : 'Waste', 'AllProjectUrl' : 'https://qas.app.arconline.io/app/projects/my-projects/?project-type=all'])
         allVariables.put('QAS-IND', allVariables['default'] + ['url' : 'http://www.qas.arconline.io/', 'userName' : 'usgbcarc@gmail.com', 'password' : 'initpass', 'timeOut' : 40, 'env' : 'ARCDataTemplete/QasArcTest.xlsx', 'BuildingSheet' : 'BuildingIndiaProject', 'BuildingTeam' : 'BTeam', 'CCPayment' : 'Payment', 'rowNumTwo' : 2, 'rowNumThree' : 3, 'rowNumFour' : 4, 'rowNumFive' : 5, 'rowNumSix' : 6, 'CitySheet' : 'CityIndiaProject', 'CommunitySheet' : 'CommunityIndiaProject', 'CDataInput' : 'CDataInput', 'rowNumSeven' : 7, 'rowNumEight' : 8, 'BDataInput' : 'BDataInput', 'adminUrl' : 'qas.app.arconline.io/admin', 'adminUserName' : 'qasgbciadmin@gbci.com', 'adminPassword' : 'initpass', 'rowNumNine' : 9, 'ExcelTemplateData' : 'ExcelTemplateDataVerificationSheet.xlsx', 'TemplateEnergyData' : 'Energy', 'TemplateWaterData' : 'Water', 'TemplateWasteData' : 'Waste', 'AllProjectUrl' : 'https://qas.app.arconline.io/app/projects/my-projects/?project-type=all', 'TemplateHE' : 'HumanExp', 'Result' : 'Result', 'rowNumTen' : 10, 'rowNumEleven' : 11, 'TeamMemberPassword' : 'initpass', 'creditCard' : 'creditCard', 'checkPayment' : 'check', 'pricingSheet' : 'Pricing', 'LEEDURL' : 'https://leedonline-qas.usgbc.org/', 'UserId' : '0010639470', 'LEEDData' : 'LEEDData', 'projectTeamAdminAndArcAdminName' : 'ARC USGBC', 'projectTeamAdminAndArcAdminEmail' : 'usgbcarc@gmail.com', 'TeamMember2' : 'qas-02@gmail.com', 'teamMemberName' : 'qas1 mishra'])
-<<<<<<< HEAD
-        allVariables.put('QAS-US-P1', allVariables['default'] + ['url' : 'http://www.qas.arconline.io/', 'userName' : 'usgbcarc@gmail.com', 'password' : 'initpass', 'timeOut' : 40, 'env' : 'ARCDataTemplete/QasArcTest.xlsx', 'BuildingSheet' : 'USBuildingProject', 'BuildingTeam' : 'BTeam', 'CCPayment' : 'Payment', 'rowNumTwo' : 2, 'rowNumThree' : 3, 'rowNumFour' : 4, 'rowNumFive' : 5, 'rowNumSix' : 6, 'CitySheet' : 'USCityProject', 'CommunitySheet' : 'USCommunityProject', 'CDataInput' : 'CDataInput', 'PortfoliosSheet' : 'PortfolioQAS', 'rowNumSeven' : 7, 'rowNumEight' : 8, 'BDataInput' : 'BDataInput', 'TeamMember' : 'usgbcarc1@gmail.com', 'adminUrl' : 'qas.app.arconline.io/admin', 'adminUserName' : 'qasgbciadmin@gbci.com', 'adminPassword' : 'initpass', 'rowNumNine' : 9, 'teamMemName' : 'Saurav K', 'ExcelTemplateData' : 'ExcelTemplateDataVerificationSheet.xlsx', 'TemplateEnergyData' : 'Energy', 'TemplateWaterData' : 'Water', 'TeamMemberPassword' : 'initpass', 'TemplateWasteData' : 'Waste', 'rowNumTen' : 10, 'AllProjectUrl' : 'https://qas.app.arconline.io/app/projects/my-projects/?project-type=all', 'TemplateHE' : 'HumanExp', 'appUrl' : 'https://qas.app.arconline.io/', 'rowNumEleven' : 11, 'creditCard' : 'creditCard', 'checkPayment' : 'check', 'pricingSheet' : 'Pricing', 'LEEDURL' : 'https://leedonline-qas.usgbc.org/', 'validationSheet' : 'Validation', 'LEEDData' : 'LEEDData', 'projectTeamAdminAndArcAdminName' : 'Saurav K', 'projectTeamAdminAndArcAdminEmail' : 'usgbcarc@gmail.com', 'UserId' : '0010639470', 'TeamMember2' : 'usgbcarc2@gmail.com', 'teamMemberName' : 'qas1 mishra', 'Result' : 'Result', 'environment' : 'qas', 'downloadDir' : '/var/lib/jenkins/Downloads/', 'rowNumTwelve' : 12, 'rowNumThirteen' : 13, 'rowNumFourteen' : 14, 'rowNumFifteen' : 15, 'minAngularWait' : 60, 'avgAngularWait' : 120, 'maxAngularWait' : 240])
-=======
-        allVariables.put('QAS-US-P1', allVariables['default'] + ['url' : 'http://www.qas.arconline.io/', 'userName' : 'usgbcarc@gmail.com', 'password' : 'initpass', 'timeOut' : 40, 'env' : 'ARCDataTemplete/QasArcTest.xlsx', 'BuildingSheet' : 'USBuildingProject', 'BuildingTeam' : 'BTeam', 'CCPayment' : 'Payment', 'rowNumTwo' : 2, 'rowNumThree' : 3, 'rowNumFour' : 4, 'rowNumFive' : 5, 'rowNumSix' : 6, 'CitySheet' : 'USCityProject', 'CommunitySheet' : 'USCommunityProject', 'CDataInput' : 'CDataInput', 'PortfoliosSheet' : 'PortfolioQAS', 'rowNumSeven' : 7, 'rowNumEight' : 8, 'BDataInput' : 'BDataInput', 'TeamMember' : 'usgbcarc1@gmail.com', 'adminUrl' : 'qas.app.arconline.io/admin', 'adminUserName' : 'qasgbciadmin@gbci.com', 'adminPassword' : 'initpass', 'rowNumNine' : 9, 'teamMemName' : 'Saurav K', 'ExcelTemplateData' : 'ExcelTemplateDataVerificationSheet.xlsx', 'TemplateEnergyData' : 'Energy', 'TemplateWaterData' : 'Water', 'TeamMemberPassword' : 'initpass', 'TemplateWasteData' : 'Waste', 'rowNumTen' : 10, 'AllProjectUrl' : 'https://qas.app.arconline.io/app/projects/my-projects/?project-type=all', 'TemplateHE' : 'HumanExp', 'appUrl' : 'https://qas.app.arconline.io/', 'rowNumEleven' : 11, 'creditCard' : 'creditCard', 'checkPayment' : 'check', 'pricingSheet' : 'Pricing', 'LEEDURL' : 'https://leedonline-qas.usgbc.org/', 'validationSheet' : 'Validation', 'LEEDData' : 'LEEDData', 'projectTeamAdminAndArcAdminName' : 'Saurav K', 'projectTeamAdminAndArcAdminEmail' : 'usgbcarc@gmail.com', 'UserId' : '0010639470', 'TeamMember2' : 'usgbcarc1@gmail.com', 'teamMemberName' : 'qas1 mishra', 'Result' : 'Result', 'environment' : 'qas', 'downloadDir' : '/var/lib/jenkins/Downloads/', 'rowNumTwelve' : 12, 'rowNumThirteen' : 13, 'rowNumFourteen' : 14, 'rowNumFifteen' : 15, 'minAngularWait' : 60, 'avgAngularWait' : 120, 'maxAngularWait' : 240])
->>>>>>> 26654f922f12c109e740ca2aff91eb6a9b88455a
         allVariables.put('QAS-US-P2', allVariables['default'] + ['url' : 'http://www.qas.arconline.io/', 'userName' : 'akumar@usgbc.org', 'password' : 'initpass', 'timeOut' : 40, 'env' : 'ARCDataTemplete/QasArcTest.xlsx', 'BuildingSheet' : 'USBuildingProject', 'BuildingTeam' : 'BTeam', 'CCPayment' : 'Payment', 'rowNumTwo' : 2, 'rowNumThree' : 3, 'rowNumFour' : 4, 'rowNumFive' : 5, 'rowNumSix' : 6, 'CitySheet' : 'USCityProject', 'CommunitySheet' : 'USCommunityProject', 'CDataInput' : 'CDataInput', 'PortfoliosSheet' : 'PortfolioQAS', 'rowNumSeven' : 7, 'rowNumEight' : 8, 'BDataInput' : 'BDataInput', 'TeamMember' : 'usgbcarc1@gmail.com', 'adminUrl' : 'qas.app.arconline.io/admin', 'adminUserName' : 'qasgbciadmin@gbci.com', 'adminPassword' : 'initpass', 'rowNumNine' : 9, 'teamMemName' : 'Saurav K', 'ExcelTemplateData' : 'ExcelTemplateDataVerificationSheet.xlsx', 'TemplateEnergyData' : 'Energy', 'TemplateWaterData' : 'Water', 'TeamMemberPassword' : 'initpass', 'TemplateWasteData' : 'Waste', 'rowNumTen' : 10, 'AllProjectUrl' : 'https://qas.app.arconline.io/app/projects/my-projects/?project-type=all', 'TemplateHE' : 'HumanExp', 'appUrl' : 'https://qas.app.arconline.io/', 'rowNumEleven' : 11, 'creditCard' : 'creditCard', 'checkPayment' : 'check', 'pricingSheet' : 'Pricing', 'LEEDURL' : 'https://leedonline-qas.usgbc.org/', 'validationSheet' : 'Validation', 'LEEDData' : 'LEEDData', 'projectTeamAdminAndArcAdminName' : 'Saurav K', 'projectTeamAdminAndArcAdminEmail' : 'akumar@usgbc.org', 'UserId' : '0010640231', 'TeamMember2' : 'usgbcarc2@gmail.com', 'teamMemberName' : 'qas1 mishra', 'Result' : 'Result', 'downloadDir' : '/var/lib/jenkins/Downloads/', 'minAngularWait' : 60, 'avgAngularWait' : 120, 'maxAngularWait' : 240])
         allVariables.put('QAS-US-User2', allVariables['default'] + ['url' : 'http://www.qas.arconline.io/', 'userName' : 'testuser2@usgbc.org', 'password' : 'initpass', 'timeOut' : 40, 'env' : 'ARCDataTemplete/QasArcTest.xlsx', 'BuildingSheet' : 'USBuildingProject', 'BuildingTeam' : 'BTeam', 'CCPayment' : 'Payment', 'rowNumTwo' : 2, 'rowNumThree' : 3, 'rowNumFour' : 4, 'rowNumFive' : 5, 'rowNumSix' : 6, 'CitySheet' : 'USCityProject', 'CommunitySheet' : 'USCommunityProject', 'CDataInput' : 'CDataInput', 'PortfoliosSheet' : 'Portfolio', 'rowNumSeven' : 7, 'rowNumEight' : 8, 'BDataInput' : 'BDataInput', 'TeamMember' : 'qas-02@gmail.com', 'adminUrl' : 'qas.app.arconline.io/admin', 'adminUserName' : 'qasgbciadmin@gbci.com', 'adminPassword' : 'initpass', 'rowNumNine' : 9, 'teamMemName' : 'ARC USGBC', 'ExcelTemplateData' : 'ExcelTemplateDataVerificationSheet.xlsx', 'TemplateEnergyData' : 'Energy', 'TemplateWaterData' : 'Water', 'TeamMemberPassword' : 'initpass', 'TemplateWasteData' : 'Waste', 'rowNumTen' : 10, 'AllProjectUrl' : 'https://qas.app.arconline.io/app/projects/my-projects/?project-type=all', 'TemplateHE' : 'HumanExp', 'appUrl' : 'https://qas.app.arconline.io/'])
         allVariables.put('STG-CA', allVariables['default'] + ['url' : 'http://www.stg.arconline.io/', 'userName' : 'Saurav@groupten.com', 'password' : 'LEEDg10', 'timeOut' : 40, 'env' : 'ARCDataTemplete/QasArcTest.xlsx', 'BuildingSheet' : 'CanadaBuildingProject', 'BuildingTeam' : 'BTeam', 'CCPayment' : 'Payment', 'rowNumTwo' : 2, 'rowNumThree' : 3, 'rowNumFour' : 4, 'rowNumFive' : 5, 'rowNumSix' : 6, 'CitySheet' : 'CanadaCityProject', 'CommunitySheet' : 'CanadaCommunityProject', 'CDataInput' : 'CDataInput', 'rowNumSeven' : 7, 'rowNumEight' : 8, 'PortfoliosSheet' : 'Portfolio', 'BDataInput' : 'BDataInput', 'adminUrl' : 'stg.app.arconline.io/admin', 'adminUserName' : 'stggbciadmin@gbci.com', 'adminPassword' : 'initpass', 'rowNumNine' : 9, 'ExcelTemplateData' : 'ExcelTemplateDataVerificationSheet.xlsx', 'TemplateEnergyData' : 'Energy', 'TemplateWaterData' : 'Water', 'TemplateWasteData' : 'Waste', 'AllProjectUrl' : 'https://stg.app.arconline.io/app/projects/my-projects/?project-type=all'])
@@ -602,11 +585,11 @@ Profile STG-US-P2 : payment via credit card</p>
         avgAngularWait = selectedVariables["avgAngularWait"]
         maxAngularWait = selectedVariables["maxAngularWait"]
         validationSheet = selectedVariables["validationSheet"]
+        TestCount = selectedVariables["TestCount"]
         rowNumTwelve = selectedVariables["rowNumTwelve"]
         rowNumThirteen = selectedVariables["rowNumThirteen"]
         rowNumFourteen = selectedVariables["rowNumFourteen"]
         rowNumFifteen = selectedVariables["rowNumFifteen"]
-        TestCount = selectedVariables["TestCount"]
         
     }
 }
