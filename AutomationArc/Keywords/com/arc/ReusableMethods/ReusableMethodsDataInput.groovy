@@ -3291,6 +3291,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 
@@ -3313,11 +3314,14 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/DOWNLOAD_DataInputReport'))
+		WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/cancelButton'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/cancelButton'))
 		WebUI.delay(8)
 		//'Verifying the file is download in the User defined Path'
 		Assert.assertTrue(isFileDownloaded('Export Data.xlsx'), 'Failed to download Expected document')
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	}
 
 
@@ -5660,6 +5664,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	public void percentageSurveyResponseRateCalculationTransit() throws IOException, InterruptedException, Exception{
 
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
+		WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForElementPresent(findTestObject('Manage/Project/WeightedOccupancy'), GlobalVariable.minAngularWait)
@@ -5668,11 +5673,16 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		String projectoccupancy = WebUI.getAttribute(findTestObject('Manage/Project/WeightedOccupancy'),'value')
 		double projectOccupancy= Double.parseDouble(projectoccupancy)
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+		WebUI.delay(5)
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
-
+		
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+		
 		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.maxAngularWait)
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
+		WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
 
@@ -5693,6 +5703,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.verifyMatch(responsePecentageTr, surveyResponsepercentage, false)
 		/******Verify that survey response rate% is calculated on the basis of the following formula [ Response %ge = (No. of responses/Occupancy)*100 ] . Always count the no of responses by counting the no of rows of HUMAN EXPERIENCE survey results.*****/
 		WebUI.click(findTestObject('DataInput/Survey/OccupantSatisfactionSurv'))
+		WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
 
@@ -6743,8 +6754,9 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForElementClickable(findTestObject('Analytics/17/Manually Enter Emission'), 10)
 		WebUI.scrollToElement(findTestObject('Analytics/17/Manually Enter Emission'), 3)
 		WebUI.click(findTestObject('Analytics/17/Manually Enter Emission'))
-		WebUI.delay(3)
+		WebUI.delay(8)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
 		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
 		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)

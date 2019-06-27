@@ -221,12 +221,6 @@
       <testCaseId>Test Cases/Common/Notification/Transit/VerifyNotificatinEffectOnOtherSectionAfterDeleteingRiderShipMeterRedTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>642c1d0f-ed10-47d1-b5a6-97e2427eb8d7</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/DownloadAndVerifyExportedDataTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>b2473b43-561e-4e17-a3ea-30e7e1e7877c</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -1209,6 +1203,12 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/Manage/VerifyStringFieldErrorOppHour_RiderShip_FullStaff_AvgTimeTest</testCaseId>
+   </testCaseLink>
+     <testCaseLink>
+      <guid>642c1d0f-ed10-47d1-b5a6-97e2427eb8d7</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/DownloadAndVerifyExportedDataTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d3ff66ed-e64a-458a-86c4-1c5fcfd7069a</guid>

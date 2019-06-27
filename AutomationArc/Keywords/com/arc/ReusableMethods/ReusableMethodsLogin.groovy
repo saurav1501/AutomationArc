@@ -63,7 +63,11 @@ public class ReusableMethodsLogin extends BaseClass{
 	public void loginIntoArcApplication(String Username,String Password) {
 		
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/clickOnLogin'), GlobalVariable.maxAngularWait)
+		
 		WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/clickOnLogin'))
+		WebUI.delay(2)
+		
 		WebUI.setText(findTestObject('Page_Home  Arc/input_name'), Username)
 		WebUI.setText(findTestObject('Page_Home  Arc/input_pass'), Password)
 	
@@ -74,6 +78,7 @@ public class ReusableMethodsLogin extends BaseClass{
 		WebUI.waitForElementClickable(findTestObject('Object Repository/Page_Home  Arc/ClickNavProjectText'), 10)
 		WebUI.click(findTestObject('Object Repository/Page_Home  Arc/ClickNavProjectText'))
 		WebUI.waitForElementPresent(findTestObject('Page_Arc dashboard/span_My Projects'), 30)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		String postLoginText = WebUI.getText(findTestObject('Page_Arc dashboard/span_My Projects'))
 		WebUI.verifyMatch(postLoginText, 'My Projects',true)
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
