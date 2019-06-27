@@ -264,4 +264,9 @@
       <initValue>240</initValue>
       <name>maxAngularWait</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://leedonline-qas.usgbc.org/projects'</initValue>
+      <name>AllProjectUrlLeedOnline</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

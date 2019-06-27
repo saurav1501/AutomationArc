@@ -1204,7 +1204,7 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/Manage/VerifyStringFieldErrorOppHour_RiderShip_FullStaff_AvgTimeTest</testCaseId>
    </testCaseLink>
-     <testCaseLink>
+   <testCaseLink>
       <guid>642c1d0f-ed10-47d1-b5a6-97e2427eb8d7</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

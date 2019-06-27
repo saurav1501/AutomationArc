@@ -11,6 +11,7 @@ import org.openqa.selenium.WebElement
 import com.arc.BaseClass.BaseClass
 import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.model.FailureHandling
+import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.driver.DriverFactory
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
@@ -18,11 +19,14 @@ import internal.GlobalVariable
 
 public class ReusableMethodsSchools extends BaseClass{
 	public  WebDriver driver = DriverFactory.getWebDriver()
-
+	ReusableMethodsNavigation navigation = new ReusableMethodsNavigation()
 
 	@Keyword
 	public void addNewSchoolProjectRegistration(String sheetName, int rowNum){
 
+		int counter=0
+		project:
+		
 		clickClaimYourSchool()
 		claimASchool()
 
@@ -48,8 +52,10 @@ public class ReusableMethodsSchools extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/addProjectNextButton'))
 		WebUI.delay(5)
 		//String PaymentPageText = WebUI.getText(findTestObject('Add_Project_Details/VerifyPaymentPage_ text'))
-		String PaymentPageText = WebUI.getText(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'))
-		WebUI.verifyMatch(PaymentPageText,'Project Setup',true)
+		//String PaymentPageText = WebUI.getText(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'))
+		if(WebUI.waitForElementPresent(findTestObject('paymentPageNewUI/paymentPageTextProjetSetu'),GlobalVariable.minAngularWait,FailureHandling.OPTIONAL) && WebUI.waitForElementVisible(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'),GlobalVariable.minAngularWait,FailureHandling.OPTIONAL))
+		{
+		WebUI.verifyMatch(WebUI.getText(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup')),'Project Setup',true)
 		String title= DriverFactory.getWebDriver().getCurrentUrl()
 		println title
 		String Project_ID= title.substring(title.indexOf('9'),title.indexOf('9')+10 )
@@ -59,7 +65,19 @@ public class ReusableMethodsSchools extends BaseClass{
 		data.setCellData(sheetName,"ProjectID", rowNum, Project_ID)
 		data.setCellData(sheetName,"RegDate", rowNum, ReusableMethodsManage.verifyBillingDate())
 		WebUI.delay(5)
+		}
+		else{
+			counter++
+			if(counter==3){
+			KeywordUtil.markFailed("Project not created")
+			return
+			}
+			navigateToBuildingSchools()
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+			continue project
+		}
 	}
+	
 
 
 	@Keyword

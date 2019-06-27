@@ -176,7 +176,7 @@ public class ReusableMethodsPayment extends BaseClass{
 		WebUI.verifyMatch("Purchase", purchase, false)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/DashboardNavigationNewUI/Dash/select_LEED for CitiesOtherNon'), prjRating , false)
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/saveButtonProjectDetails'))
-		WebUI.delay(20)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/AddProjectNewUI/saveButtonProjectDetails'),10)
 		boolean notEditable = WebUI.setText(findTestObject('Object Repository/DashboardNavigationNewUI/Dash/select_LEED for CitiesOtherNon'),'None', FailureHandling.OPTIONAL)
 		println ("DEBUG boolean value "+notEditable)

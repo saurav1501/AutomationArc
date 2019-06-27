@@ -1158,6 +1158,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.setText(findTestObject('Object Repository/PerformanceScore/AdminToolsReviewSearchBar'), projectId)
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/AdminToolReviewSearchButton'))
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/PerformanceScore/SnapshotLinkToDownload'), 20, FailureHandling.STOP_ON_FAILURE)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/PerformanceScore/SnapshotLinkToDownload'), 20, FailureHandling.STOP_ON_FAILURE)
 		WebUI.closeWindowIndex(1)
 		WebUI.delay(1)

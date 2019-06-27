@@ -162,8 +162,8 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 
-		//if(WebUI.waitForElementPresent(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'),GlobalVariable.minAngularWait, FailureHandling.OPTIONAL && WebUI.waitForElementVisible(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'),GlobalVariable.minAngularWait, FailureHandling.OPTIONAL))
-		WebUI.waitForElementPresent(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'),GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
+		if(WebUI.waitForElementPresent(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'),GlobalVariable.avgAngularWait, FailureHandling.OPTIONAL) && WebUI.waitForElementVisible(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'),GlobalVariable.avgAngularWait, FailureHandling.OPTIONAL))
+		{
 		String PaymentPageText = WebUI.getText(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'))
 		WebUI.verifyMatch(PaymentPageText,'Project Setup',true)
 		String title= DriverFactory.getWebDriver().getCurrentUrl()
@@ -173,7 +173,17 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		data.setCellData(sheetName,"ProjectID", rowNum, Project_ID)
 		data.setCellData(sheetName,"RegDate", rowNum, ReusableMethodsManage.verifyBillingDate())
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-		
+		}
+		else{
+			counter++
+			if(counter==3){
+			KeywordUtil.markFailed("Project not created")
+			return
+			}
+			WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+			continue project
+		}
 		
 		
 	}
@@ -182,6 +192,9 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 	@Keyword
 	public void addNewProjectCityORCom(String sheetName , int rowNum) {
 		/**************Reading data form excel sheet*************************/
+		int counter=0
+		project:
+		
 		String prjName      = data.getCellData(sheetName,"ProjectName", rowNum)
 		String prjType 		= data.getCellData(sheetName, "ProjectType", rowNum)
 		String prjRating 	= data.getCellData(sheetName, "RatingSystem", rowNum)
@@ -250,6 +263,9 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/addProjectNextButton'))
 		//WebUI.delay(5)
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		
+		if(WebUI.waitForElementPresent(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'),GlobalVariable.avgAngularWait, FailureHandling.OPTIONAL) && WebUI.waitForElementVisible(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'),GlobalVariable.avgAngularWait, FailureHandling.OPTIONAL))
+		{
 		String PaymentPageText = WebUI.getText(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'))
 		WebUI.verifyMatch(PaymentPageText,'Project Setup',true)
 		String title= DriverFactory.getWebDriver().getCurrentUrl()
@@ -259,13 +275,25 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		data.setCellData(sheetName,"ProjectID", rowNum, Project_ID)
 		data.setCellData(sheetName,"RegDate", rowNum, ReusableMethodsManage.verifyBillingDate())
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-		//WebUI.delay(5)
+	    }
+	    else{
+		counter++
+		if(counter==3){
+		KeywordUtil.markFailed("Project not created")
+		return
+		}
+		WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		continue project
+	  }
+		
 	}
 
 	@Keyword
 	public void addNewProjectCityScore(String sheetName , int rowNum) {
 		/**************Reading data form excel sheet*************************/
 
+		
 		String srowNum = rowNum.toString()
 		data.setCellData(sheetName,"rowNum", 2, srowNum)
 		//data.setCellIntData(sheetName,"rowNum" , 2, rowNum)

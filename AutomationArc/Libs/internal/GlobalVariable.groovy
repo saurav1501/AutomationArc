@@ -467,6 +467,11 @@ Profile STG-US-P2 : payment via credit card</p>
     /**
      * <p></p>
      */
+    public static Object AllProjectUrlLeedOnline
+     
+    /**
+     * <p></p>
+     */
     public static Object validationSheet
      
     /**
@@ -571,6 +576,7 @@ Profile STG-US-P2 : payment via credit card</p>
             minAngularWait = selectedVariables['minAngularWait']
             avgAngularWait = selectedVariables['avgAngularWait']
             maxAngularWait = selectedVariables['maxAngularWait']
+            AllProjectUrlLeedOnline = selectedVariables['AllProjectUrlLeedOnline']
             validationSheet = selectedVariables['validationSheet']
             rowNumTwelve = selectedVariables['rowNumTwelve']
             rowNumThirteen = selectedVariables['rowNumThirteen']
