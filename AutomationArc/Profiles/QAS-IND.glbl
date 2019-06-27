@@ -211,12 +211,22 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'qas-02@gmail.com'</initValue>
+      <initValue>'usgbcarc2@gmail.com'</initValue>
       <name>TeamMember2</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
       <initValue>'qas1 mishra'</initValue>
       <name>teamMemberName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'usgbcarc1@gmail.com'</initValue>
+      <name>TeamMember</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'/var/lib/jenkins/Downloads/'</initValue>
+      <name>downloadDir</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>
