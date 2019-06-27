@@ -2385,6 +2385,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 				UIearbonEmissionsMTCO2epersqft =  UIcarbonemissionsMTCO2epersqft.replace(',', '')
 				UIcarbonemissionsMTCO2esqft = new BigDecimal(UIearbonEmissionsMTCO2epersqft)
 				UIcarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.setScale(1,RoundingMode.HALF_UP)
+				uicarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.toString()
 				WebUI.verifyMatch(uicarbonemissionsMTCO2esqft, cannulCarbonemissionsMTCO2epersqft,false,FailureHandling.OPTIONAL)
 			    }
 				
@@ -2397,6 +2398,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 				UIearbonEmissionsMTCO2epersqft =  UIcarbonemissionsMTCO2epersqft.replace(',', '')
 				UIcarbonemissionsMTCO2esqft = new BigDecimal(UIearbonEmissionsMTCO2epersqft)
 				UIcarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.setScale(1,RoundingMode.HALF_UP)
+				uicarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.toString()
 				WebUI.verifyMatch(uicarbonemissionsMTCO2esqft, cannulCarbonemissionsMTCO2epersqft, false)
 		     }	
 			
@@ -2455,6 +2457,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 				UIearbonEmissionsMTCO2epersqft =  UIcarbonemissionsMTCO2epersqft.replace(',', '')
 				UIcarbonemissionsMTCO2esqft = new BigDecimal(UIearbonEmissionsMTCO2epersqft)
 				UIcarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.setScale(1,RoundingMode.HALF_UP)
+				uicarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.toString()
 				WebUI.verifyMatch(uicarbonemissionsMTCO2esqft, cannulCarbonemissionsMTCO2epersqft,false,FailureHandling.OPTIONAL)
 			    }
 				
@@ -2467,6 +2470,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 				UIearbonEmissionsMTCO2epersqft =  UIcarbonemissionsMTCO2epersqft.replace(',', '')
 				UIcarbonemissionsMTCO2esqft = new BigDecimal(UIearbonEmissionsMTCO2epersqft)
 				UIcarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.setScale(1,RoundingMode.HALF_UP)
+				uicarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.toString()
 				WebUI.verifyMatch(uicarbonemissionsMTCO2esqft, cannulCarbonemissionsMTCO2epersqft, false)
 		     }	
 	
@@ -2524,6 +2528,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 				UIearbonEmissionsMTCO2epersqft =  UIcarbonemissionsMTCO2epersqft.replace(',', '')
 				UIcarbonemissionsMTCO2esqft = new BigDecimal(UIearbonEmissionsMTCO2epersqft)
 				UIcarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.setScale(1,RoundingMode.HALF_UP)
+				uicarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.toString()
 				WebUI.verifyMatch(uicarbonemissionsMTCO2esqft, cannulCarbonemissionsMTCO2epersqft,false,FailureHandling.OPTIONAL)
 			    }
 				
@@ -2536,6 +2541,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 				UIearbonEmissionsMTCO2epersqft =  UIcarbonemissionsMTCO2epersqft.replace(',', '')
 				UIcarbonemissionsMTCO2esqft = new BigDecimal(UIearbonEmissionsMTCO2epersqft)
 				UIcarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.setScale(1,RoundingMode.HALF_UP)
+				uicarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.toString()
 				WebUI.verifyMatch(uicarbonemissionsMTCO2esqft, cannulCarbonemissionsMTCO2epersqft, false)
 		     }	
 		}
@@ -2590,6 +2596,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 				UIearbonEmissionsMTCO2epersqft =  UIcarbonemissionsMTCO2epersqft.replace(',', '')
 				UIcarbonemissionsMTCO2esqft = new BigDecimal(UIearbonEmissionsMTCO2epersqft)
 				UIcarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.setScale(1,RoundingMode.HALF_UP)
+				uicarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.toString()
 				WebUI.verifyMatch(uicarbonemissionsMTCO2esqft, cannulCarbonemissionsMTCO2epersqft,false,FailureHandling.OPTIONAL)
 			    }
 				
@@ -2602,6 +2609,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 				UIearbonEmissionsMTCO2epersqft =  UIcarbonemissionsMTCO2epersqft.replace(',', '')
 				UIcarbonemissionsMTCO2esqft = new BigDecimal(UIearbonEmissionsMTCO2epersqft)
 				UIcarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.setScale(1,RoundingMode.HALF_UP)
+				uicarbonemissionsMTCO2esqft = UIcarbonemissionsMTCO2esqft.toString()
 				WebUI.verifyMatch(uicarbonemissionsMTCO2esqft, cannulCarbonemissionsMTCO2epersqft, false)
 		     }	
 		}
