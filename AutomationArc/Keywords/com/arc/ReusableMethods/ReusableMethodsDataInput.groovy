@@ -5676,14 +5676,10 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(5)
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
-<<<<<<< HEAD
 		
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
 		
-=======
-
->>>>>>> 3e69cca05b19ddf74b7ce518130028af13567e7d
 		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.maxAngularWait)
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
 		WebUI.delay(2)
