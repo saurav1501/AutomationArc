@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GlobalVariableEntities>
    <description></description>
-   <name>QAS-IND</name>
+   <name>QAS-IND-P2</name>
    <tag></tag>
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
@@ -11,7 +11,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'usgbcarc@gmail.com'</initValue>
+      <initValue>'akumar@usgbc.org'</initValue>
       <name>userName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -96,6 +96,11 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
+      <initValue>'PortfolioQAS'</initValue>
+      <name>PortfoliosSheet</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
       <initValue>'BDataInput'</initValue>
       <name>BDataInput</name>
    </GlobalVariableEntity>
@@ -146,11 +151,6 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'HumanExp'</initValue>
-      <name>TemplateHE</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
       <initValue>'Result'</initValue>
       <name>Result</name>
    </GlobalVariableEntity>
@@ -191,28 +191,8 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'0010639470'</initValue>
+      <initValue>'0010640231'</initValue>
       <name>UserId</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'LEEDData'</initValue>
-      <name>LEEDData</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'ARC USGBC'</initValue>
-      <name>projectTeamAdminAndArcAdminName</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'usgbcarc@gmail.com'</initValue>
-      <name>projectTeamAdminAndArcAdminEmail</name>
-   </GlobalVariableEntity>
-   <GlobalVariableEntity>
-      <description></description>
-      <initValue>'usgbcarc2@gmail.com'</initValue>
-      <name>TeamMember2</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
@@ -221,8 +201,28 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'usgbcarc1@gmail.com'</initValue>
-      <name>TeamMember</name>
+      <initValue>'usgbcarc2@gmail.com'</initValue>
+      <name>TeamMember2</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Saurav K'</initValue>
+      <name>projectTeamAdminAndArcAdminName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'akumar@usgbc.org'</initValue>
+      <name>projectTeamAdminAndArcAdminEmail</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'LEEDData'</initValue>
+      <name>LEEDData</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://qas.app.arconline.io/'</initValue>
+      <name>appUrl</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
@@ -231,8 +231,23 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://qas.app.arconline.io/'</initValue>
-      <name>appUrl</name>
+      <initValue>'qas'</initValue>
+      <name>environment</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'usgbcarc1@gmail.com'</initValue>
+      <name>TeamMember</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'HumanExp'</initValue>
+      <name>TemplateHE</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Saurav K'</initValue>
+      <name>teamMemName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
@@ -248,5 +263,10 @@
       <description></description>
       <initValue>240</initValue>
       <name>maxAngularWait</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://leedonline-qas.usgbc.org/projects'</initValue>
+      <name>AllProjectUrlLeedOnline</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

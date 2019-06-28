@@ -509,6 +509,7 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		data.setCellData(sheetName,"ProjectID", rowNum, Project_ID)
 		data.setCellData(sheetName,"RegDate", rowNum, ReusableMethodsManage.verifyBillingDate())
 		//WebUI.delay(5)
+		SAPSyncFlag=true
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		}
 		else{

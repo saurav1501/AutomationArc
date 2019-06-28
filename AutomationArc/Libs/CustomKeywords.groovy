@@ -1114,6 +1114,12 @@ def static "com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram"(
          , 	rowNum)
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram"(
+    	String projectID	) {
+    (new com.arc.ReusableMethods.ReusableMethodsSearch()).searchProgram(
+        	projectID)
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsSearch.searchProgramCity"(
     	String sheetName	
      , 	int rowNum	) {

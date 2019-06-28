@@ -96,7 +96,7 @@ Profile DEV-US-P1 : Explicit Wait Timeout
 Profile DEV-US-P2 : Explicit Wait Timeout
 Profile QAS-CA : Explicit Wait Timeout
 Profile QAS-CN : Explicit Wait Timeout
-Profile QAS-IND : Explicit Wait Timeout
+Profile QAS-IND-P2 : Explicit Wait Timeout
 Profile QAS-US-P1 : Explicit Wait Timeout
 Profile QAS-US-P2 : Explicit Wait Timeout
 Profile QAS-US-User2 : Explicit Wait Timeout
@@ -119,7 +119,7 @@ Profile DEV-US-P1 : Adding US projects
 Profile DEV-US-P2 : Adding US projects
 Profile QAS-CA : Adding canada projects
 Profile QAS-CN : Adding china projects
-Profile QAS-IND : Adding India projects
+Profile QAS-IND-P2 : Adding India projects
 Profile QAS-US-P1 : Adding US projects
 Profile QAS-US-P2 : Adding US projects
 Profile QAS-US-User2 : Adding US projects
@@ -137,7 +137,7 @@ Profile DEV-US-P1 : Adding new team member
 Profile DEV-US-P2 : Adding new team member 
 Profile QAS-CA : Adding new team member 
 Profile QAS-CN : Adding new team member 
-Profile QAS-IND : Adding new team member 
+Profile QAS-IND-P2 : Adding new team member 
 Profile QAS-US-P1 : Adding new team member 
 Profile QAS-US-P2 : Adding new team member 
 Profile QAS-US-User2 : Adding new team member 
@@ -155,7 +155,7 @@ Profile DEV-US-P1 : Adding Credit Card payment details
 Profile DEV-US-P2 : Adding Credit Card payment details 
 Profile QAS-CA : Adding Credit Card payment details 
 Profile QAS-CN : Adding Credit Card payment details 
-Profile QAS-IND : Adding Credit Card payment details 
+Profile QAS-IND-P2 : Adding Credit Card payment details 
 Profile QAS-US-P1 : Adding Credit Card payment details 
 Profile QAS-US-P2 : Adding Credit Card payment details 
 Profile QAS-US-User2 : Adding Credit Card payment details 
@@ -194,7 +194,7 @@ Profile STG-US-P2 : Adding Credit Card payment details </p>
      
     /**
      * <p>Profile DEV-IND : Adding new  india city projects 
-Profile QAS-IND : Adding new  india city projects 
+Profile QAS-IND-P2 : Adding new  india city projects 
 Profile STG-IND : Adding new  india city projects </p>
      */
     public static Object CitySheet
@@ -203,7 +203,7 @@ Profile STG-IND : Adding new  india city projects </p>
      * <p>Profile DEV-IND : Adding new Inida community projects 
 Profile QAS-CA : Adding new canada projects
 Profile QAS-CN : Adding new china projects
-Profile QAS-IND : Adding new Inida community projects 
+Profile QAS-IND-P2 : Adding new Inida community projects 
 Profile STG-CA : Adding new canada projects
 Profile STG-CN : Adding new china projects
 Profile STG-IND : Adding new Inida community projects </p>

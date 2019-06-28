@@ -269,4 +269,9 @@
       <initValue>'https://leedonline-qas.usgbc.org/projects'</initValue>
       <name>AllProjectUrlLeedOnline</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'qas'</initValue>
+      <name>environment</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>
