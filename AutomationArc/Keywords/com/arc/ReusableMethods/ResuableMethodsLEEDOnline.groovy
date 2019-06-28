@@ -261,7 +261,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.click(findTestObject('LEEDOnline/ProjReg/Continue'))
 		WebUI.delay(5)
 		if(WebUI.waitForElementPresent(findTestObject('LEEDOnline/ProjReg/button_I AGREE'), GlobalVariable.minAngularWait, FailureHandling.OPTIONAL) && WebUI.waitForElementVisible(findTestObject('LEEDOnline/ProjReg/button_I AGREE'),GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)){
-			KeywordUtil.markFailed("Project created")
+			KeywordUtil.markPassed("Project created")
 		}
 		else{
 			counter++

@@ -623,16 +623,16 @@
       <testCaseId>Test Cases/Common/Analytics/1.17/GramskWh/AnnualCarbonEmissions (MTCO2e)PersqftTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>c4e81c51-b50e-4529-a3a9-6648023e4bbc</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Common/Analytics/1.17/GramskWh/AnnualCarbonEmissions(MTCO2e)ProjectTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>05b9073a-5170-4b84-89fa-0ad633c88a05</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Common/Analytics/1.17/GramskWh/AnnualCarbonEmissions(MTCO2e)PerOccupancyTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>c4e81c51-b50e-4529-a3a9-6648023e4bbc</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Common/Analytics/1.17/GramskWh/AnnualCarbonEmissions(MTCO2e)ProjectTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>39acf585-ec98-4f24-ae7e-066ef8c900f6</guid>

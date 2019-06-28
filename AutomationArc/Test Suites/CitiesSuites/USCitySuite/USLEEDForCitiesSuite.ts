@@ -161,16 +161,16 @@
       <testCaseId>Test Cases/MyCities/LEEDForCities/DataInputHumanExperiencePageTextValidationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>972813db-97ef-4067-aa61-006fe248f16c</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCities/LEEDForCities/AdminToolScoreRecomputeTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>72c843e8-049e-44a1-a541-9175f3294074</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/MyCities/LEEDForCities/SetPerformanceScoreDefaultTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>972813db-97ef-4067-aa61-006fe248f16c</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCities/LEEDForCities/AdminToolScoreRecomputeTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>458f74f5-5664-4a2c-a950-88a142fdeb0d</guid>
