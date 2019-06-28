@@ -2456,6 +2456,8 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.scrollToElement(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'),2)
 		WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForElementClickable(findTestObject('Manage/VerifyAgreementFile/button_Download'), 20)
+		WebUI.delay(2)
 		WebUI.click(findTestObject('Manage/VerifyAgreementFile/button_Download'))
 		WebUI.delay(5)
 		Assert.assertTrue(ReusDataInput.isFileDownloaded('Agreement.pdf'), "Agreement File Didn't downloaded successfully")

@@ -746,7 +746,6 @@ public class ReusableMethodsPayment extends BaseClass{
 
 	@Keyword
 	public void payNowReviewPaymentUS(){
-		s
 		WebUI.scrollToElement(findTestObject('PayNowRegistrationPaymentIN/a_ Billing'), 2)
 		WebUI.click(findTestObject('PayNowRegistrationPaymentIN/a_ Billing'))
 		WebUI.click(findTestObject('PayNowRegistrationPaymentIN/button_Pay now'))
