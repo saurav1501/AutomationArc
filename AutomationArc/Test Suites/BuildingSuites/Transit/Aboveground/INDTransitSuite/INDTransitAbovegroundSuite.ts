@@ -113,12 +113,6 @@
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/ProjectDetailsVerificationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>83a106e0-cb79-4f5f-b355-437e2b287e02</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/PayNowRegistrationPaymentINTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>ff27cf7e-7f65-427f-b98f-ac4ffbe318e8</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -197,16 +191,10 @@
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/CertiVerifyCertificationDetailsForNotCertfiedProjectsTest.java</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>fbde140b-dad0-4e29-90af-df6861ae8726</guid>
+      <guid>83a106e0-cb79-4f5f-b355-437e2b287e02</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/INDCertificationReviewTransitAboveGroundTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>7df24f79-a3d6-4f76-a64d-b8a9fa732927</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/BillingDateAndStatusTest</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/PayNowRegistrationPaymentINTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>1e31d210-4d27-4425-aadb-944211ccc4c2</guid>
@@ -219,6 +207,18 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/AgreementFileDownloadTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>fbde140b-dad0-4e29-90af-df6861ae8726</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/INDCertificationReviewTransitAboveGroundTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>7df24f79-a3d6-4f76-a64d-b8a9fa732927</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/BillingDateAndStatusTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>449ac6ea-8b8b-487c-a01d-5b08cf746f9e</guid>
@@ -281,6 +281,24 @@
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/SettingVerifySettingsPageDetailsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>8fac955f-c561-4613-bf01-1881b07ddd3b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/ResourcesButtonNavigationTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>ee3d7229-6ccf-4ff7-a182-763e17bdde4c</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/ProjectVerifyFieldPresentOnContainsResUnitsOptionYesTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>eb9fc709-0c56-4202-b294-c33329399f7c</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/ProjectVerifyGrossFloorAreaUnitOnSelectionOfIPSITest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>07988852-9a64-4dee-a49e-74e0126fd2b7</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -291,12 +309,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/VerifyAndDownloadBillingReceiptTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>a40bff88-04ed-4db5-af65-5abd9fe027ea</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/ProjectDetailsVerificationAfterExcelUploadTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>6eafd8bb-61df-40b0-bdaa-e6c2e6f1fe8d</guid>
@@ -317,34 +329,10 @@
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/CertiVerifyCertificationDetailsForProjectsPointsAddedFromAdminToolTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>8fac955f-c561-4613-bf01-1881b07ddd3b</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/ResourcesButtonNavigationTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>d3c43e39-09ae-458a-abea-41001f63150a</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/CertiVerifyCertificationLogoVisibleTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>ee3d7229-6ccf-4ff7-a182-763e17bdde4c</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/ProjectVerifyFieldPresentOnContainsResUnitsOptionYesTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>2ab014cb-26b0-419a-b0fe-74eac7b31d8c</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/ProjectVerifyOccAndOprHrsNotZeroTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>eb9fc709-0c56-4202-b294-c33329399f7c</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/ProjectVerifyGrossFloorAreaUnitOnSelectionOfIPSITest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>2e31df67-9a43-4c32-9db3-d350e06b496c</guid>
