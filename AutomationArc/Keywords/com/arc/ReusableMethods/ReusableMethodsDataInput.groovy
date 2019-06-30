@@ -5025,12 +5025,12 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 				WebUI.delay(5)
 				WebUI.switchToWindowIndex(1)
-
+				WebUI.delay(1)
 				WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'), GlobalVariable.avgAngularWait)
 				WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'), GlobalVariable.avgAngularWait)
+				WebUI.delay(2)
 				WebUI.click(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'))
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
 
 				int it=1;
 				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk1)
@@ -5105,9 +5105,9 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				WebUI.switchToWindowIndex(2)
 				WebUI.delay(5)
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
 				WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'), GlobalVariable.avgAngularWait)
 				WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'), GlobalVariable.avgAngularWait)
+				WebUI.delay(1)
 				WebUI.click(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'))
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
