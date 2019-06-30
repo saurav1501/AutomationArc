@@ -89,28 +89,10 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/BuildingWaterMeterCreateTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>8b33b411-d634-4a3b-9832-b41df9fcad60</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/PayNowRegistrationPaymentINTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>3637d52d-f6e5-49c6-8f27-2b167dcb0fdc</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/CheckChangeCreditNavigatesToSelectionPageTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>28cbadc7-07d5-41fc-bdb1-22259171e8b3</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/INDVerifySEZFilesUploadedInBillingSectionTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>e11a7875-8361-40bf-91dc-96041ff24de9</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/INDPerformanceScoreVerificationByCheckTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d6630276-cded-4079-957f-92aea67f019f</guid>
@@ -147,6 +129,24 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/AppVerifyUninstalledMessageWhileUninstallingAppsTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>8b33b411-d634-4a3b-9832-b41df9fcad60</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/PayNowRegistrationPaymentINTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>3637d52d-f6e5-49c6-8f27-2b167dcb0fdc</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/CheckChangeCreditNavigatesToSelectionPageTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>e11a7875-8361-40bf-91dc-96041ff24de9</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/INDPerformanceScoreVerificationByCheckTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>32c287fc-2900-4d90-a427-cb3ee4bd4496</guid>
