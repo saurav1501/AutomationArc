@@ -2735,11 +2735,7 @@
 			</matcher>
 		</filter>
 		<filter>
-<<<<<<< HEAD
-			<id>1561714863982</id>
-=======
 			<id>1561601405639</id>
->>>>>>> 56d794f71ba3e5f85ff7995392331f65f1db22eb
 			<name></name>
 			<type>10</type>
 			<matcher>
@@ -2748,11 +2744,7 @@
 			</matcher>
 		</filter>
 		<filter>
-<<<<<<< HEAD
-			<id>1561714864034</id>
-=======
 			<id>1561601408975</id>
->>>>>>> 56d794f71ba3e5f85ff7995392331f65f1db22eb
 			<name></name>
 			<type>6</type>
 			<matcher>

@@ -434,17 +434,12 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-<<<<<<< HEAD
-		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
 
-=======
 	    WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 	    WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
 	    WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
 		WebUI.delay(2)
->>>>>>> 56d794f71ba3e5f85ff7995392331f65f1db22eb
+
 		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
 		WebUI.delay(3)
