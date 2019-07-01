@@ -201,7 +201,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'stg-02@gmail.com'</initValue>
+      <initValue>'usgbcarc2@gmail.com'</initValue>
       <name>TeamMember2</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -236,7 +236,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'stg-01@gmail.com'</initValue>
+      <initValue>'usgbcarc1@gmail.com'</initValue>
       <name>TeamMember</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -248,5 +248,20 @@
       <description></description>
       <initValue>'Saurav K'</initValue>
       <name>teamMemName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>60</initValue>
+      <name>minAngularWait</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>120</initValue>
+      <name>avgAngularWait</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>240</initValue>
+      <name>maxAngularWait</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

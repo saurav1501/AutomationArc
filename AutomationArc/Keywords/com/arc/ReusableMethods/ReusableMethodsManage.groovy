@@ -636,7 +636,7 @@ public class ReusableMethodsManage extends BaseClass {
 		Thread.sleep(5000)
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'), 5)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'), 5)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'))
@@ -2456,6 +2456,8 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.scrollToElement(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'),2)
 		WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForElementClickable(findTestObject('Manage/VerifyAgreementFile/button_Download'), 20)
+		WebUI.delay(2)
 		WebUI.click(findTestObject('Manage/VerifyAgreementFile/button_Download'))
 		WebUI.delay(5)
 		Assert.assertTrue(ReusDataInput.isFileDownloaded('Agreement.pdf'), "Agreement File Didn't downloaded successfully")
@@ -3536,6 +3538,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 		println(pdfText)
 		println("project name in excel"+prjName)
+		KeywordUtil.markWarning('Agreement details are : '+pdfText)
 		//Assert.assertTrue(pdfText.contains("PARKSMART™ SERVICES AGREEMENT"), "Parking Agreement is not downloaded");
 		Assert.assertTrue(pdfText.contains("User Name : "+name), "PDF not contains the required user name.")
 		Assert.assertTrue(pdfText.contains("User Email : "+email), "PDF not contains the required user email.")

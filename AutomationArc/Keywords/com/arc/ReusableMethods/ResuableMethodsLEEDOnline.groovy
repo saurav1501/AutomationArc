@@ -7,6 +7,7 @@ import java.text.SimpleDateFormat
 import com.arc.BaseClass.BaseClass
 import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.model.FailureHandling
+import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 import internal.GlobalVariable
@@ -75,6 +76,8 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 	@Keyword
 	public void buildingAddNewProject(String sheetName , int rowNum) {
 		/**************Reading data form excel sheet*************************/
+		int counter=0
+		project:
 		String prjName      = data.getCellData(sheetName,"ProjectName", rowNum)
 		String prjType 		= data.getCellData(sheetName, "ProjectType", rowNum)
 		String prjRating 	= data.getCellData(sheetName, "RatingSystem", rowNum)
@@ -134,6 +137,20 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.delay(4)
 		WebUI.click(findTestObject('LEEDOnline/ProjReg/Continue'))
 		WebUI.delay(5)
+		if(WebUI.waitForElementPresent(findTestObject('LEEDOnline/ProjReg/button_I AGREE'), GlobalVariable.minAngularWait, FailureHandling.OPTIONAL) && WebUI.waitForElementVisible(findTestObject('LEEDOnline/ProjReg/button_I AGREE'),GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)){
+			KeywordUtil.markPassed("Project created")
+		}
+		else{
+			counter++
+			if(counter==3){
+			KeywordUtil.markFailed("Project not created")
+			return
+			}
+			WebUI.navigateToUrl(GlobalVariable.AllProjectUrlLeedOnline)
+			WebUI.delay(5)
+			continue project
+		}
+		
 	}
 
 
@@ -141,6 +158,9 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 	@Keyword
 	public void addNewProjectCityORCom(String sheetName , int rowNum, String registerAs) {
 		/**************Reading data form excel sheet*************************/
+		
+		int counter=0
+		project:
 		String prjName      = data.getCellData(sheetName,"ProjectName", rowNum)
 		String prjType 		= data.getCellData(sheetName, "ProjectType", rowNum)
 		String prjRating 	= data.getCellData(sheetName, "RatingSystem", rowNum)
@@ -240,6 +260,20 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.delay(2)
 		WebUI.click(findTestObject('LEEDOnline/ProjReg/Continue'))
 		WebUI.delay(5)
+		if(WebUI.waitForElementPresent(findTestObject('LEEDOnline/ProjReg/button_I AGREE'), GlobalVariable.minAngularWait, FailureHandling.OPTIONAL) && WebUI.waitForElementVisible(findTestObject('LEEDOnline/ProjReg/button_I AGREE'),GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)){
+			KeywordUtil.markPassed("Project created")
+		}
+		else{
+			counter++
+			if(counter==3){
+			KeywordUtil.markFailed("Project not created")
+			return
+			}
+			WebUI.navigateToUrl(GlobalVariable.AllProjectUrlLeedOnline)
+			WebUI.delay(5)
+			continue project
+		}
+		
 	}
 
 

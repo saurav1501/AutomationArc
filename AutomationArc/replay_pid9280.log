@@ -1,0 +1,6 @@
+JvmtiExport can_access_local_variables 0
+JvmtiExport can_hotswap_or_post_breakpoint 0
+JvmtiExport can_post_on_exceptions 0
+# 105 ciObject found
+ciMethod java/util/zip/ZipFile getEntry (Ljava/lang/String;)Ljava/util/zip/ZipEntry; 2065 1 11539 0 -1
+ciMethodData java/util/zip/ZipFile getEntry (Ljava/lang/String;)Ljava/util/zip/ZipEntry; 0 0 orig 264 88 115 73 115 0 0 0 0 176 72 38 23 0 0 0 0 112 2 0 0 64 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 77 68 79 32 101 120 116 114 97 32 100 97 116 97 32 108 111 99 107 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 25 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 1 0 0 81 97 1 0 1 0 0 0 48 22 0 0 0 0 0 0 2 0 0 0 0 0 15 0 2 0 0 0 32 1 0 0 255 255 255 255 7 0 1 0 0 0 0 0 data 36 0x10007 0x2c2a 0x30 0x0 0xa0002 0x0 0x160002 0x2c2a 0x220005 0x18e 0x1a528f60 0x2a91 0x100041588 0xb 0x260002 0x2c2b 0x2d0007 0x2b5c 0x88 0xcf 0x330007 0x0 0x48 0xcf 0x390002 0xcf 0x3c0003 0xcf 0x28 0x420002 0x0 0x4c0002 0xcf 0x580003 0x2b5c 0x18 oops 2 10 java/util/zip/ZipCoder

@@ -47,6 +47,35 @@ public class ReusableMethodsSearch extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/search_Result'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 	}
+	
+	
+	//Search project By Project ID parameter (For Retry payment method)
+	
+	@Keyword
+	public void searchProgram(String projectID) {
+	
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))
+		WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		
+		WebUI.setText(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'), projectID)
+		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		
+		WebUI.waitForElementVisible(findTestObject('Page_Arc dashboard/no_Project (1 project)'),GlobalVariable.avgAngularWait)
+		String nuberOfProjects = WebUI.getText(findTestObject('Page_Arc dashboard/no_Project (1 project)'))
+		println nuberOfProjects
+		
+		WebUI.delay(1)
+		WebUI.verifyMatch(nuberOfProjects,'Project (1 project)', false)
+		WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		
+		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/search_Result'))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+	}
 
 	@Keyword
 	public void searchProgramCity(String sheetName , int rowNum) {
