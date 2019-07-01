@@ -81,7 +81,7 @@ public class ResuableMethodsGRESB extends BaseClass {
 
 	}
 
-	
+
 	@Keyword
 	public void  createGresbDataIND(String sheetName, int rowNum) throws IOException, InterruptedException {
 
@@ -117,7 +117,7 @@ public class ResuableMethodsGRESB extends BaseClass {
 		WebUI.delay(500)
 
 	}
-	
+
 	@Keyword
 	public void  ownerCountry(String sheetName, int rowNum) throws IOException, InterruptedException {
 
@@ -184,7 +184,7 @@ public class ResuableMethodsGRESB extends BaseClass {
 		String ownerMail 	= data.getCellData(sheetName, "GOwnerEmail", rowNum);
 		String ownerName = data.getCellData(sheetName, "GOwnerOrg", rowNum);
 		Date date = new Date(System.currentTimeMillis())
-		
+
 
 		/*	WebUI.click(findTestObject('Portfolio/GRESB/button_Import from GRESB'))
 		 WebUI.delay(5)*/
@@ -233,13 +233,13 @@ public class ResuableMethodsGRESB extends BaseClass {
 
 	@Keyword
 	public void regPaymentBillDetailTest(String sheetName){
-		
+
 		String name 	= data.getCellData(sheetName, "BillDetail", 2)
 		String email 	= data.getCellData(sheetName, "BillDetail", 3)
 		String address 	= data.getCellData(sheetName, "BillDetail", 4)
 		String city 	= data.getCellData(sheetName, "BillDetail", 5)
-		
-		println name 
+
+		println name
 
 		String UIname = WebUI.getAttribute(findTestObject('Object Repository/paymentPageNewUI/billingName'),'value')
 		WebUI.verifyMatch(UIname, name, false, FailureHandling.CONTINUE_ON_FAILURE)
@@ -265,12 +265,12 @@ public class ResuableMethodsGRESB extends BaseClass {
 		/*WebUI.click(findTestObject('Portfolio/GRESB/Owner/a_Click here'))
 		 WebUI.delay(2)*/
 		Date date = new Date(System.currentTimeMillis())
-		
+
 		String ownerName1= ownerName.substring(0, 9)
 		String OwnerName = ownerName1 +formatarDate.format(date)
 		data.setCellData(sheetName,"GOwnerOrg", rowNum, OwnerName)
-		
-		
+
+
 		WebUI.clearText(findTestObject('Add_Project_Details/Payment/OwnerName'))
 		WebUI.sendKeys(findTestObject('Add_Project_Details/Payment/OwnerName'), OwnerName)
 
@@ -300,7 +300,6 @@ public class ResuableMethodsGRESB extends BaseClass {
 		String regMemberName = WebUI.getText(findTestObject('Add_Project_Details/Payment/SearchOwner'))
 		WebUI.verifyMatch(regMemberName,OwnerName,false )
 		WebUI.delay(5)
-
 	}
 
 
@@ -314,7 +313,7 @@ public class ResuableMethodsGRESB extends BaseClass {
 
 		WebUI.click(findTestObject('Object Repository/Portfolio/GRESB/input_Click here_gresb-search'))
 		WebUI.delay(2)
-		
+
 		WebUI.click(findTestObject('Object Repository/Portfolio/GRESB/input_Click here_gresb-search'))
 		WebUI.delay(2)
 
@@ -434,7 +433,7 @@ public class ResuableMethodsGRESB extends BaseClass {
 		//Assert.assertTrue(WebUI.getAttribute(findTestObject('Portfolio/Total/textarea_Mob'),"value").contains(orgContact),"Not Valid")
 		//Assert.assertTrue(WebUI.getAttribute(findTestObject('Portfolio/Total/textarea_Description'),"value").contains(prjDesc),"Not Valid")
 	}
-	
+
 	@Keyword
 	public void gresbPortfolioDetailsIND(String sheetName, int rowNum) throws IOException, InterruptedException {
 
@@ -457,7 +456,7 @@ public class ResuableMethodsGRESB extends BaseClass {
 		//Assert.assertTrue(WebUI.getAttribute(findTestObject('Portfolio/Total/textarea_Mob'),"value").contains(orgContact),"Not Valid")
 		//Assert.assertTrue(WebUI.getAttribute(findTestObject('Portfolio/Total/textarea_Description'),"value").contains(prjDesc),"Not Valid")
 	}
-	
+
 	@Keyword
 	public void verifyErrorNotification(String sheetName, int rowNum) throws IOException, InterruptedException {
 		WebUI.delay(8)
