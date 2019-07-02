@@ -2,14 +2,18 @@ package com.arc.ReusableMethods
 
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
+import java.awt.Robot
+import java.awt.event.KeyEvent
 import java.text.SimpleDateFormat
 
+import org.openqa.selenium.WebDriver
 import org.testng.Assert
 
 import com.arc.BaseClass.BaseClass
 import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.util.KeywordUtil
+import com.kms.katalon.core.webui.driver.DriverFactory
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 import internal.GlobalVariable
@@ -20,7 +24,8 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 	ReusableMethodsSearch reusableMethodsSearch = new 	ReusableMethodsSearch()
 
 	SimpleDateFormat formatarDate = new SimpleDateFormat(' HH:mm:ss')
-
+	WebDriver driver  = DriverFactory.getWebDriver()
+	public static Robot robot = new Robot()
 
 
 	@Keyword
@@ -1155,10 +1160,10 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		String reading3  = data.getCellData(sheetName, "Reading3", rowNum)
 		String meterName=  data.getCellData(sheetName, "MeterName", rowNum)
 
-		WebUI.scrollToElement(findTestObject('Object Repository/LEEDOnline/Credits/energyPerformance'), 3)
-		WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/energyPerformance'),FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/energyPerformanceDataTab'),FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.waitForElementNotVisible(findTestObject('Object Repository/LEEDOnline/Credits/widgetLoader'), 10,FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.scrollToElement(findTestObject('Object Repository/LEEDOnline/Credits/energyPerformance'), 3)
+		//WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/energyPerformance'),FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/energyPerformanceDataTab'),FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.waitForElementNotVisible(findTestObject('Object Repository/LEEDOnline/Credits/widgetLoader'), 10,FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.waitForElementPresent(findTestObject('Object Repository/LEEDOnline/Credits/meterTab'), 30)
 		WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/meterTab'),FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.delay(2)
@@ -1283,7 +1288,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		//WebUI.waitForElementNotVisible(findTestObject('Object Repository/DataInput/saveButtonDataInput'), 20)
 		//WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/SuccessGreenTick'),20)
 		//WebUI.delay(5)
-		
+
 		WebUI.refresh()
 		//WebUI.delay(15)
 		//WebUI.delay(5)
@@ -1299,10 +1304,354 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ReadingTwo'),'value'),reading2)
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ReadingThree'),'value'),reading1)
 
-
-
 	}
 
+
+	//LEED Online Create Water meter
+	@Keyword
+	public void createWaterMeterLEEDOnline(String sheetName, int rowNum){
+
+		String reading1  = data.getCellData(sheetName, "Reading1", rowNum)
+		String reading2  = data.getCellData(sheetName, "Reading2", rowNum)
+		String reading3  = data.getCellData(sheetName, "Reading3", rowNum)
+		String meterName=  data.getCellData(sheetName, "MeterName", rowNum)
+
+
+		//WebUI.scrollToElement(findTestObject('Object Repository/LEEDOnline/Credits/energyPerformance'), 3)
+		//WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/energyPerformance'),FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/energyPerformanceDataTab'),FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.waitForElementNotVisible(findTestObject('Object Repository/LEEDOnline/Credits/widgetLoader'), 10,FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/LEEDOnline/Credits/meterTab'), 30)
+		WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/meterTab'),FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.delay(2)
+		ReusableMethodsLogin.waitForPageLoad(60)
+
+		WebUI.waitForElementPresent(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'),60)
+		WebUI.waitForElementVisible(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'),60)
+		WebUI.waitForElementClickable(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'),60)
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'))
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/a_Add New Meter'))
+		//WebUI.delay(3)
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_Next'))
+		WebUI.delay(2)
+		WebUI.sendKeys(findTestObject('DataInput/CreateMeterBuilding/input_addMeterModal-body-Eleme'), meterName)
+		println meterName
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_ELECTRICITY'))
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/a_WATER'))
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_ADD'))
+		WebUI.waitForElementNotVisible(findTestObject('DataInput/CreateMeterBuilding/button_ADD'), 20)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/TestWaterMeter'), 5)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/TestWaterMeter'))
+		WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/meterTab'),FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.delay(2)
+		//reading one
+		//WebUI.delay(8)
+		WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'),meterName, FailureHandling.STOP_ON_FAILURE)
+		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'),2)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
+		//WebUI.delay(4)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter start_'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.mouseOver(findTestObject('DataInput/CreateMeterBuilding/year_2018'))
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/year_2018'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Jan'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Jan'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter end_da'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.mouseOver(findTestObject('DataInput/CreateMeterBuilding/year_2018'))
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/year_2018'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Feb'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Feb'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
+		WebUI.setText(findTestObject('DataInput/CreateMeterBuilding/input_fw600 reading ng-pristin'), reading1)
+		//WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Update'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/deleteButtonOne'), 20)
+		//WebUI.waitForElementNotVisible(findTestObject('Object Repository/DataInput/saveButtonDataInput'), 20)
+		//WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/SuccessGreenTick'),20)
+		//reading two
+
+		//WebUI.delay(5)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), 20)
+		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'),2)
+		WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
+		//WebUI.delay(4)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter start_'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.mouseOver(findTestObject('DataInput/CreateMeterBuilding/year_2018'))
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/year_2018'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Mar'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Mar'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter end_da'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.mouseOver(findTestObject('DataInput/CreateMeterBuilding/year_2018'))
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/year_2018'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Apr'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Apr'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
+		WebUI.setText(findTestObject('DataInput/CreateMeterBuilding/input_fw600 reading ng-pristin'), reading2)
+		//WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Update'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/deleteButtonTwo'), 20)
+		//reading 3
+
+		//WebUI.delay(5)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), 20)
+		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'),2)
+		WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
+		//WebUI.delay(4)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter start_'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.mouseOver(findTestObject('DataInput/CreateMeterBuilding/year_2018'))
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/year_2018'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_May'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_May'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter end_da'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.mouseOver(findTestObject('DataInput/CreateMeterBuilding/year_2018'))
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/year_2018'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Jun'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Jun'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
+		WebUI.setText(findTestObject('DataInput/CreateMeterBuilding/input_fw600 reading ng-pristin'), reading3)
+		//WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Update'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/deleteButtonThree'), 20)
+		//WebUI.waitForElementNotVisible(findTestObject('Object Repository/DataInput/saveButtonDataInput'), 20)
+		WebUI.refresh()
+		//ReusableMethodsLogin.waitForloaderToDisappear(60)
+		//ReusableMethodsLogin.waitForPageLoad(60)
+		ReusableMethodsLogin.waitForIframeLoad(60)
+		WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/meterTab'),FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.delay(2)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/TestWaterMeter'), 5)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/TestWaterMeter'))
+		WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/meterTab'),FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.delay(2)
+		Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ReadingOne'),'value'),reading3)
+		Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ReadingTwo'),'value'),reading2)
+		Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ReadingThree'),'value'),reading1)
+	}
+
+
+	@Keyword
+	public void surveySubmit(String sheetName) throws IOException, InterruptedException, Exception{
+
+		//WebUI.scrollToElement(findTestObject('Object Repository/LEEDOnline/Credits/energyPerformance'), 3)
+		//WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/energyPerformance'),FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/energyPerformanceDataTab'),FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.waitForElementNotVisible(findTestObject('Object Repository/LEEDOnline/Credits/widgetLoader'), 10,FailureHandling.CONTINUE_ON_FAILURE)
+
+
+		WebUI.waitForElementPresent(findTestObject('Object Repository/LEEDOnline/Credits/meterTab'), 30)
+		WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/meterTab'),FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.delay(2)
+		WebUI.scrollToElement(findTestObject('DataInput/Survey/div_Transportation Survey'), 5)
+		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/LEEDOnline/Credits/meterTab'), 30)
+		WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/meterTab'),FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.delay(2)
+		String MainWindowHandle = driver.getWindowHandle()
+		WebUI.scrollToElement(findTestObject('Object Repository/LEEDOnline/Transportation/ClickOnSurveyButton'), 5)
+		WebUI.click(findTestObject('Object Repository/LEEDOnline/Transportation/ClickOnSurveyButton'))
+		WebUI.delay(1)
+		WebUI.click(findTestObject('Object Repository/LEEDOnline/Transportation/SelectEnglishLanguage'))
+
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
+		for( int rowNum=2;rowNum<=5;rowNum++)
+		{
+			if(rowNum==2)
+			{
+				String walk1 = data.getCellData(sheetName, "Walk", rowNum)
+				String walk2 = data.getCellData(sheetName, "Bus", rowNum)
+				String walk3 = data.getCellData(sheetName, "Tram", rowNum)
+				String walk4 = data.getCellData(sheetName, "Heavyrail", rowNum)
+				String walk5 = data.getCellData(sheetName, "Motorcycle", rowNum)
+				String walk6 = data.getCellData(sheetName, "Carsolo", rowNum)
+				String walk7 = data.getCellData(sheetName, "Carpool", rowNum)
+				String walk8 = data.getCellData(sheetName, "Caralternative", rowNum)
+				String name = data.getCellData(sheetName, "Name", rowNum)
+
+				Robot r = new Robot();
+				r.keyPress(KeyEvent.VK_CONTROL);
+				r.keyPress(KeyEvent.VK_T);
+				r.keyRelease(KeyEvent.VK_CONTROL)
+				r.keyRelease(KeyEvent.VK_T)
+				WebUI.delay(1)
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+				//To switch to the new tab
+
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+				r.keyPress(KeyEvent.VK_CONTROL)
+				r.keyPress(KeyEvent.VK_V)
+				r.keyRelease(KeyEvent.VK_CONTROL)
+				r.keyRelease(KeyEvent.VK_V)
+
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+				r.keyPress(KeyEvent.VK_ENTER)
+				r.keyRelease(KeyEvent.VK_ENTER)
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+				WebUI.delay(5)
+				WebUI.switchToWindowIndex(1)
+				WebUI.delay(1)
+				WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'), GlobalVariable.avgAngularWait)
+				WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'), GlobalVariable.avgAngularWait)
+				WebUI.delay(2)
+				WebUI.click(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'))
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
+				int it=1;
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk1)
+				it++
+
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), '0')
+				it++
+
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), '0')
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk2)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk3)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk4)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk5)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk6)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk7)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk8)
+				it++
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+				WebUI.click(findTestObject('Object Repository/DataInput/Survey/SaveButtonToRecordSurveyData'))
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+				WebUI.delay(2)
+				WebUI.dragAndDropToObject(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'), findTestObject('Object Repository/DataInput/Survey/ExtremelySatisfySpanText'))
+				WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
+				WebUI.delay(2)
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+				WebUI.click(findTestObject('DataInput/Survey/Submit1'))
+				WebUI.waitForElementClickable(findTestObject('DataInput/Survey/Submit'), GlobalVariable.avgAngularWait)
+
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+				WebUI.verifyMatch(WebUI.getText(findTestObject('DataInput/Survey/Thank')), "Options that enhance your satisfaction", false)
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
+				println "Survey Submited Successufully"
+			}
+			else
+			{
+
+				String walk1 = data.getCellData(sheetName, "Walk", rowNum)
+				String walk2 = data.getCellData(sheetName, "Bus", rowNum)
+				String walk3 = data.getCellData(sheetName, "Tram", rowNum)
+				String walk4 = data.getCellData(sheetName, "Heavyrail", rowNum)
+				String walk5 = data.getCellData(sheetName, "Motorcycle", rowNum)
+				String walk6 = data.getCellData(sheetName, "Carsolo", rowNum)
+				String walk7 = data.getCellData(sheetName, "Carpool", rowNum)
+				String walk8 = data.getCellData(sheetName, "Caralternative", rowNum)
+				String name = data.getCellData(sheetName, "Name", rowNum)
+				Robot r = new Robot();
+				r.keyPress(KeyEvent.VK_CONTROL);
+				r.keyPress(KeyEvent.VK_T);
+				r.keyRelease(KeyEvent.VK_CONTROL)
+				r.keyRelease(KeyEvent.VK_T)
+				WebUI.delay(1)
+
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+				r.keyPress(KeyEvent.VK_CONTROL)
+				r.keyPress(KeyEvent.VK_V)
+				r.keyRelease(KeyEvent.VK_CONTROL)
+				r.keyRelease(KeyEvent.VK_V)
+				WebUI.delay(1)
+
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+				r.keyPress(KeyEvent.VK_ENTER)
+				r.keyRelease(KeyEvent.VK_ENTER)
+
+				WebUI.switchToWindowIndex(2)
+				WebUI.delay(5)
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+				WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'), GlobalVariable.avgAngularWait)
+				WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'), GlobalVariable.avgAngularWait)
+				WebUI.delay(1)
+				WebUI.click(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'))
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
+				int it=1;
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk1)
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+				it++
+
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), '0')
+				it++
+
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), '0')
+				it++
+
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk2)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk3)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk4)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk5)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk6)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk7)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk8)
+				it++
+
+				WebUI.click(findTestObject('Object Repository/DataInput/Survey/SaveButtonToRecordSurveyData'))
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
+				//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'),4)
+				WebUI.delay(2)
+				WebUI.dragAndDropToObject(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'), findTestObject('Object Repository/DataInput/Survey/ExtremelySatisfySpanText'))
+				WebUI.delay(2)
+				WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
+				WebUI.click(findTestObject('DataInput/Survey/Submit'))
+				WebUI.waitForElementClickable(findTestObject('DataInput/Survey/Submit'), GlobalVariable.avgAngularWait)
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+				WebUI.verifyMatch(WebUI.getText(findTestObject('DataInput/Survey/Thank')), "Options that enhance your satisfaction", false)
+				println "Survey Submited Successufully"
+				WebUI.closeWindowIndex(2)
+			}
+			WebUI.switchToWindowIndex(0)
+		}
+		WebUI.closeWindowIndex(1)
+		WebUI.delay(2)
+		WebUI.switchToWindowIndex(0)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+	}
 
 
 }

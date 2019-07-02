@@ -15,16 +15,16 @@ import internal.GlobalVariable as GlobalVariable
 
 try {
 	
-	   //CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsLEEDOnline.loginIntoLEEDOnlineWithGlobalVariable'()
+	  // CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsLEEDOnline.loginIntoLEEDOnlineWithGlobalVariable'()
 	   
 	   //CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsLEEDOnline.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumTwo)
 	   
-	   //CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsLEEDOnline.navigateToCreditsSection'()
+	  // CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsLEEDOnline.navigateToCreditsSection'()
 	   
-       CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsLEEDOnline.createEnergyMeterLEEDOnline'(GlobalVariable.BDataInput, GlobalVariable.rowNumTwo)
+	   CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsLEEDOnline.surveySubmit'(GlobalVariable.BDataInput)
 	   
-	     
-		} catch (Throwable t) {
+		 
+	} catch (Throwable t) {
 		
 		System.out.println(t.getLocalizedMessage())
 		Error e1 = new Error(t.getMessage())
