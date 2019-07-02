@@ -6,12 +6,12 @@
    <elementGuidId>165d4ec4-698d-4908-a2a1-19ab25d14cf1</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//*[@id = 'data_input' and (text() = '  Data Input' or . = '  Data Input')]</value>
-      </entry>
-      <entry>
          <key>XPATH</key>
          <value>//a[(text() = '  Data Input' or . = '  Data Input')]</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[@id = 'data_input' and (text() = '  Data Input' or . = '  Data Input')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

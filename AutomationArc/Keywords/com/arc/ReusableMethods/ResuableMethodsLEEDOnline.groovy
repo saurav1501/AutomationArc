@@ -4,6 +4,8 @@ import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
 import java.text.SimpleDateFormat
 
+import org.testng.Assert
+
 import com.arc.BaseClass.BaseClass
 import com.kms.katalon.core.annotation.Keyword
 import com.kms.katalon.core.model.FailureHandling
@@ -143,14 +145,13 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		else{
 			counter++
 			if(counter==3){
-			KeywordUtil.markFailed("Project not created")
-			return
+				KeywordUtil.markFailed("Project not created")
+				return
 			}
 			WebUI.navigateToUrl(GlobalVariable.AllProjectUrlLeedOnline)
 			WebUI.delay(5)
 			continue project
 		}
-		
 	}
 
 
@@ -158,7 +159,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 	@Keyword
 	public void addNewProjectCityORCom(String sheetName , int rowNum, String registerAs) {
 		/**************Reading data form excel sheet*************************/
-		
+
 		int counter=0
 		project:
 		String prjName      = data.getCellData(sheetName,"ProjectName", rowNum)
@@ -266,14 +267,14 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		else{
 			counter++
 			if(counter==3){
-			KeywordUtil.markFailed("Project not created")
-			return
+				KeywordUtil.markFailed("Project not created")
+				return
 			}
 			WebUI.navigateToUrl(GlobalVariable.AllProjectUrlLeedOnline)
 			WebUI.delay(5)
 			continue project
 		}
-		
+
 	}
 
 
@@ -535,7 +536,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 	//Addenum to validate the city comm projects
 	@Keyword
 	public void verifyAgreementLOProjectsAgreementTypeCityComm(){
-		
+
 		String type = WebUI.getText(findTestObject('Manage/VerifyAgreementFile/agreementTypeLO'))
 		WebUI.verifyMatch(type,"Addendum" ,false)
 		WebUI.verifyElementPresent(findTestObject('LEEDOnline/Manage/Arc'), 12)
@@ -553,7 +554,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
 
 		//Registration Payment details verification
-             
+
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		if(GlobalVariable.environment=='dev'){
 			String regOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationOrderId'))
@@ -1143,6 +1144,161 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.waitForElementVisible(findTestObject('Object Repository/LEEDOnline/Timeline/PrecertificationPreliminaryReviewText'), 20)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/LEEDOnline/Timeline/PreCertPreLiminaryReviewStatus')),"Under review", false)
 	}
+
+
+	//LEED Online data Input Meter Create
+	@Keyword
+	public void createEnergyMeterLEEDOnline( String sheetName, int rowNum){
+
+		String reading1  = data.getCellData(sheetName, "Reading1", rowNum)
+		String reading2  = data.getCellData(sheetName, "Reading2", rowNum)
+		String reading3  = data.getCellData(sheetName, "Reading3", rowNum)
+		String meterName=  data.getCellData(sheetName, "MeterName", rowNum)
+
+		WebUI.scrollToElement(findTestObject('Object Repository/LEEDOnline/Credits/energyPerformance'), 3)
+		WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/energyPerformance'),FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/energyPerformanceDataTab'),FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.waitForElementNotVisible(findTestObject('Object Repository/LEEDOnline/Credits/widgetLoader'), 10,FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/LEEDOnline/Credits/meterTab'), 30)
+		WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/meterTab'),FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.delay(2)
+
+		WebUI.waitForElementPresent(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'), 60)
+		WebUI.waitForElementClickable(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'), 60)
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'))
+		//WebUI.delay(5)
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/a_Add New Meter'))
+		//WebUI.delay(3)
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_Next'))
+		WebUI.delay(2)
+		WebUI.sendKeys(findTestObject('DataInput/CreateMeterBuilding/input_addMeterModal-body-Eleme'), meterName)
+		//WebUI.delay(2)
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_ELECTRICITY'))
+		//WebUI.delay(5)
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/a_ELECTRICITY'))
+		//WebUI.delay(2)
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_ADD'))
+		WebUI.waitForElementNotVisible(findTestObject('DataInput/CreateMeterBuilding/button_ADD'), 20)
+		//reading one
+
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/CreateEnergyAndWaterMeterWithDifferentCombinations/div_Test Energy Meter'))
+		WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/meterTab'),FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.delay(2)
+
+		//WebUI.delay(8)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), 20)
+		WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'),meterName, FailureHandling.STOP_ON_FAILURE)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), 5)
+		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'),2)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
+		//WebUI.delay(4)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter start_'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.mouseOver(findTestObject('DataInput/CreateMeterBuilding/year_2018'))
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/year_2018'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Jan'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Jan'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter end_da'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.mouseOver(findTestObject('DataInput/CreateMeterBuilding/year_2018'))
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/year_2018'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Feb'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Feb'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
+		WebUI.setText(findTestObject('DataInput/CreateMeterBuilding/input_fw600 reading ng-pristin'), reading1)
+		//WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Update'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/deleteButtonOne'), 20)
+		//WebUI.waitForElementNotVisible(findTestObject('Object Repository/DataInput/saveButtonDataInput'), 20)
+		//WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/SuccessGreenTick'),20)
+		//reading two
+		//WebUI.delay(5)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), 20)
+		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'),2)
+		WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
+		//WebUI.delay(4)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter start_'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.mouseOver(findTestObject('DataInput/CreateMeterBuilding/year_2018'))
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/year_2018'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Mar'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Mar'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter end_da'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.mouseOver(findTestObject('DataInput/CreateMeterBuilding/year_2018'))
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/year_2018'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Apr'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Apr'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
+		WebUI.setText(findTestObject('DataInput/CreateMeterBuilding/input_fw600 reading ng-pristin'), reading2)
+		//WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Update'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/deleteButtonTwo'), 20)
+		//WebUI.waitForElementNotVisible(findTestObject('Object Repository/DataInput/saveButtonDataInput'), 20)
+		//WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/SuccessGreenTick'),20)
+		//reading 3
+		//WebUI.delay(5)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), 20)
+		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'),2)
+		WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
+		//WebUI.delay(4)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter start_'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.mouseOver(findTestObject('DataInput/CreateMeterBuilding/year_2018'))
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/year_2018'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_May'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_May'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter end_da'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.mouseOver(findTestObject('DataInput/CreateMeterBuilding/year_2018'))
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/year_2018'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Jun'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Jun'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
+		WebUI.setText(findTestObject('DataInput/CreateMeterBuilding/input_fw600 reading ng-pristin'), reading3)
+		//WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Update'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/deleteButtonThree'), 20)
+		//WebUI.waitForElementNotVisible(findTestObject('Object Repository/DataInput/saveButtonDataInput'), 20)
+		//WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/SuccessGreenTick'),20)
+		//WebUI.delay(5)
+		
+		WebUI.refresh()
+		//WebUI.delay(15)
+		//WebUI.delay(5)
+		//ReusableMethodsLogin.waitForloaderToDisappear(60)
+		//ReusableMethodsLogin.waitForPageLoad(60)
+		ReusableMethodsLogin.waitForIframeLoad(60)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/CreateEnergyAndWaterMeterWithDifferentCombinations/div_Test Energy Meter'))
+		Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ReadingOne'),'value'),reading3)
+		Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ReadingTwo'),'value'),reading2)
+		Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ReadingThree'),'value'),reading1)
+
+
+
+	}
+
 
 
 }
