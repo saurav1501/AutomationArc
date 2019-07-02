@@ -1490,6 +1490,42 @@ def static "com.arc.ReusableMethods.ReusableMethodsNavigation.projectDashboardNa
     (new com.arc.ReusableMethods.ReusableMethodsNavigation()).projectDashboardNavigationAfterPaymentCityCommEndToEnd()
 }
 
+def static "com.arc.ReusableMethods.ResuableMethodsSetting.setExclude"() {
+    (new com.arc.ReusableMethods.ResuableMethodsSetting()).setExclude()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsSetting.occupantEnergy"() {
+    (new com.arc.ReusableMethods.ResuableMethodsSetting()).occupantEnergy()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsSetting.occupantWater"() {
+    (new com.arc.ReusableMethods.ResuableMethodsSetting()).occupantWater()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsSetting.occupantWaste"() {
+    (new com.arc.ReusableMethods.ResuableMethodsSetting()).occupantWaste()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsSetting.occupantTransport"() {
+    (new com.arc.ReusableMethods.ResuableMethodsSetting()).occupantTransport()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsSetting.occupantHum"() {
+    (new com.arc.ReusableMethods.ResuableMethodsSetting()).occupantHum()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsSetting.areaEnergy"() {
+    (new com.arc.ReusableMethods.ResuableMethodsSetting()).areaEnergy()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsSetting.areaWater"() {
+    (new com.arc.ReusableMethods.ResuableMethodsSetting()).areaWater()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsSetting.areaWaste"() {
+    (new com.arc.ReusableMethods.ResuableMethodsSetting()).areaWaste()
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsPayment.selectTrial"() {
     (new com.arc.ReusableMethods.ReusableMethodsPayment()).selectTrial()
 }

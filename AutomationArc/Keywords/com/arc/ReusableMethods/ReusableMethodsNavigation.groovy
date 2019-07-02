@@ -13,8 +13,6 @@ import com.kms.katalon.core.webui.driver.DriverFactory
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 import internal.GlobalVariable
-import io.qameta.allure.Epic
-import io.qameta.allure.Feature
 import io.qameta.allure.Step
 
 public class ReusableMethodsNavigation {
@@ -137,7 +135,7 @@ public class ReusableMethodsNavigation {
 		WebUI.delay(2)
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-		
+
 		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
@@ -803,5 +801,32 @@ public class ReusableMethodsNavigation {
 		 verifyFullAccessPopupNotVisible()*/
 	}
 
+	public void navigateIntoDataInput(){
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/a_ Data Input'),GlobalVariable.avgAngularWait)
+		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'),GlobalVariable.minAngularWait)
+
+		boolean notvisiable = WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'),GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
+
+		if(notvisiable==false){
+			WebUI.delay(5)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+			WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'),GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
+
+		}
+		notvisiable = WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'),2,FailureHandling.OPTIONAL)
+		if(notvisiable==false){
+			WebUI.refresh()
+			WebUI.delay(10)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+			WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'),GlobalVariable.minAngularWait)
+			WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'),GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
+		}
+
+	}
 
 }
