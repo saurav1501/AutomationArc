@@ -7,10 +7,14 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>//iframe[@id = 'datainput-widget' and @ref_element = 'Object Repository/DataInput/iframe_datainput-widget']</value>
+         <value>//iframe[@id = 'datainput-widget']</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@id='datainput-widget'] | //*[@id=&quot;arcWidget&quot;]/iframe</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

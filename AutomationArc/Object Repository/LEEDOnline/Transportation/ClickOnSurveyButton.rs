@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>leedonlineIframe</name>
+   <name>ClickOnSurveyButton</name>
    <tag></tag>
-   <elementGuidId>1e00352f-8d0e-4d59-a764-e39018c8a6df</elementGuidId>
+   <elementGuidId>bb789cfa-126d-448d-9208-7808205b491c</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>id(&quot;arcWidget&quot;)/iframe[1]</value>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id='datainput-widget'] | //*[@id=&quot;arcWidget&quot;]/iframe</value>
+         <value>(//*[@class=&quot;btn-vertical dropdown-toggle btn btn-default button--cancel&quot;])[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -19,8 +19,8 @@
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath</name>
+      <name>ref_element</name>
       <type>Main</type>
-      <value>id(&quot;arcWidget&quot;)/iframe[1]</value>
+      <value>Object Repository/LEEDOnline/leedOnlineIframe/leedonlineIframe</value>
    </webElementProperties>
 </WebElementEntity>

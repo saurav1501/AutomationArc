@@ -37,12 +37,13 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	public static Robot robot = new Robot()
 	public ReusableMethodsNavigation navigation = new ReusableMethodsNavigation()
 	ResuableMethodsPerformanceScore  performanceScore = new ResuableMethodsPerformanceScore()
-
+    ReusableMethodsNavigation navigation = new ReusableMethodsNavigation()
 
 	@Keyword
 	public void uploadArcDataTemplate(){
 
-		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		navigation.navigateIntoDataInput()
 		WebUI.delay(5)
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'))
 		WebUI.delay(2)
@@ -66,7 +67,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	@Keyword
 	public void uploadArcDataTemplatetrial(){
 
-		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		navigation.navigateIntoDataInput()
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.delay(2)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'),GlobalVariable.minAngularWait)
@@ -97,7 +99,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	@Keyword
 	public void uploadArcDataTemplateBuildingAnalytics(){
-		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		navigation.navigateIntoDataInput()
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'), GlobalVariable.minAngularWait)
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'))
@@ -128,7 +131,9 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	@Keyword
 	public void uploadArcDataTemplateTransit(){
-		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		
+		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		navigation.navigateIntoDataInput()
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'), GlobalVariable.minAngularWait)
 		//Trial flow is dependent on it, if we uncomment it the trial flow will fail
@@ -156,7 +161,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	@Keyword
 	public void uploadArcDataTemplateLEEDV4(){
-		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		navigation.navigateIntoDataInput()
 		WebUI.delay(15)
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'))
 		WebUI.delay(2)
@@ -183,7 +189,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ CreditsActions'))
 		}
-		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		navigation.navigateIntoDataInput()
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'), GlobalVariable.minAngularWait)
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'))
@@ -210,7 +217,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	@Keyword
 	public void uploadArcDataTemplateTransitBelow(){
 		//WebUI.delay(11)
-		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		navigation.navigateIntoDataInput()
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'))
 		WebUI.delay(5)
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/span_Upload.XLS'))
@@ -349,7 +357,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	@Keyword
 	public void verifyWasteGraphpopulatedAfterExcelUpload(String sheetName){
 		/*WebUI.delay(15)*/
-		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		navigation.navigateIntoDataInput()
 		WebUI.delay(10)
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'))
 		WebUI.delay(6)
@@ -456,7 +465,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	@Keyword
 	public void verifyEnergyGraphpopulatedAfterExcelUpload(String sheetName){
 		//WebUI.delay(15)
-		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		navigation.navigateIntoDataInput()
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
@@ -626,8 +636,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	public void verifyTransportationGraphpopulatedAfterExcelUploadNewScore(String sheetName, int rowNum){
 		//WebUI.refresh()
 		WebUI.delay(15)
-		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
-
+		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		navigation.navigateIntoDataInput()
 		WebUI.delay(3)
 		WebUI.click(findTestObject('Object Repository/DataInput/Survey/div_Transportation Survey'))
 		//WebUI.waitForAngularLoad(10)
@@ -673,7 +683,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	public void verifyHumanCo2BuildingGraphpopulatedAfterExcelUploadNewScore(String sheetName, int rowNum){
 		//WebUI.refresh()
 		WebUI.delay(15)
-		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		navigation.navigateIntoDataInput()
 		WebUI.delay(4)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ClickOccupantSatisfaction'))
 		WebUI.delay(10)
@@ -708,7 +719,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	public void verifyDocumentTabFileUploadFunctionality(String sheetName, int rowNum){
 
 		//WebUI.delay(18)
-		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		navigation.navigateIntoDataInput()
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'))
 		WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), "Waste Data", FailureHandling.STOP_ON_FAILURE)
 		WebUI.delay(5)
@@ -2023,7 +2035,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	@Keyword
 	public void deleteEnergyAndWaterMeterReadingBuilding(){
 		WebUI.delay(3)
-		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		navigation.navigateIntoDataInput()
 		WebUI.delay(15)
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/TestEnergyMeterNew'), 3)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/TestEnergyMeterNew'))
@@ -2453,6 +2466,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		//WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		//WebUI.delay(2)
+		WebUI.waitForElementPresent(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'), 60)
 		WebUI.waitForElementClickable(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'), 60)
 		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'))
 		//WebUI.delay(5)
@@ -3290,7 +3304,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	public void verifyAndDownloadExportData(){
 
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		navigation.navigateIntoDataInput()
 		WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
@@ -3336,8 +3351,9 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		//WebUI.delay(6)
 
 		//Ridership
-		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		//WebUI.delay(5)
+		navigation.navigateIntoDataInput()
 		ReusableMethodsLogin.waitForPageLoad(60)
 		ReusableMethodsLogin.waitForIframeLoad(60)
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/HumanExperienceTransit/Ridership'), 2)
@@ -5077,7 +5093,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	@Keyword
 	public void devsurveySubmit(String sheetName) throws IOException, InterruptedException, Exception{
 		WebUI.delay(5)
-		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+		//WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+		navigation.navigateIntoDataInput()
 		WebUI.delay(12)
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
 		WebUI.delay(5)
@@ -5339,7 +5356,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	@Keyword
 	public void surveyLanguageCopySurveyLink(){
 
-		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+		//WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+		navigation.navigateIntoDataInput()
 		WebUI.delay(8)
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
 		WebUI.delay(5)
@@ -5618,7 +5636,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	@Keyword
 	public void surveySubmitOneTime(String sheetName ,int rowNum) throws IOException, InterruptedException, Exception{
 		WebUI.delay(8)
-		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+		//WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+		navigation.navigateIntoDataInput()
 		WebUI.delay(12)
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
 		WebUI.delay(5)
@@ -5745,8 +5764,17 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	@Keyword
 	public void percentageSurveyResponseRateCalculationBuiding() throws IOException, InterruptedException, Exception{
+<<<<<<< HEAD
   
 		navigation.navigateIntoDataInput()
+=======
+
+		WebUI.click(findTestObject('Manage/Parking/ManageProject'))
+		WebUI.delay(6)
+		//WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+		navigation.navigateIntoDataInput()
+		WebUI.delay(10)
+>>>>>>> fc88bee18040ff86b735e1aa454b908dc4851805
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
 		WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
@@ -5877,7 +5905,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	@Keyword
 	public void dataInputNavigationTest() throws IOException, InterruptedException, Exception{
 
-		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+		//WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+		navigation.navigateIntoDataInput()
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyElementPresent(findTestObject('DataInput/Nav/No Energy meter present'), 5, FailureHandling.CONTINUE_ON_FAILURE)
 
@@ -5921,8 +5950,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	@Keyword
 	public void waterScoreShouldNotrecomputemun(String sheetName){
 		WebUI.scrollToElement(findTestObject('DataInput/Survey/a_ Data Input'),5)
-		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
-
+		//WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+		navigation.navigateIntoDataInput()
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 

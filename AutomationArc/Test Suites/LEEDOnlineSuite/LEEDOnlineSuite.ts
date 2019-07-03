@@ -113,105 +113,123 @@
       <testCaseId>Test Cases/LEEDONLINE/DataInput/DataInputDataValidationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>579f0555-44c3-40d4-9217-9f60fef991e5</guid>
+      <guid>2d21244b-9d57-4900-9fad-9fc8de102f7b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
+      <testCaseId>Test Cases/LEEDONLINE/CreateEnergyMeterLEEDOnlineTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>653a5eba-2e9c-4179-8a77-2f86d5e578d6</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/LEEDONLINE/CreateWaterMeterLEEDOnlineTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>15ce6277-ef81-4362-993c-2902e263af9c</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/LEEDONLINE/SubmitSurveyLEEDOnlineTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>579f0555-44c3-40d4-9217-9f60fef991e5</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDONLINE/DataInput/VerifyScoreDisplayingInDataInputTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>e1fd1403-f87c-44ca-8cad-186193d931fa</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDONLINE/DataInput/ReviewSubmitLeedOnlineTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>2e1dab6d-c49b-4d0e-8179-77621e8d76b0</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDONLINE/AddendumAgreementVerificationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>9fa5ab25-e76c-4ef4-b6bf-6094b7c30ef8</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDONLINE/VerifyBillingDateStatusAmountTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>08f143c3-8ca9-481b-b2c6-c22375f5f071</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDONLINE/Team/TeamAddTeamMemberTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>7a130b35-cfee-4d45-98f3-3ae57a4c7395</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Team/VerifyDefautRoleTeamMemberTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>43960193-ebd7-490f-8e88-52065b1c711a</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Team/TeamAddingSameRoleForAMemberAgainTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>701649eb-d531-4eeb-aa18-6716c451f728</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Team/TeamVerifyPrjAdminAndArcAdministratorCreateBydefaultInNewProjectTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d887b601-8c81-448d-ac15-96dd02727bca</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Team/TeamVerifyProjectAdminCanNotEditTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>786acbb3-1322-4820-867c-517c95c59308</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Team/TeamArcAdministratorCanNotEditWhenOnePresentTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>23685259-86bb-42b0-ab0d-041058e69ac6</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Team/TeamVerifyProjectShouldNotHaveoreThanOneAdminTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>f077ab87-856b-4622-9665-fcef93317eaf</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/Team/TeamEditRoleMemberToArcAdministratorTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>afb2de53-dc6b-4b1c-97cf-1e8a8d47e066</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDONLINE/ScoreVersionVerificationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>a12f0314-0b43-4c5e-8baa-c50a39df9107</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDONLINE/FeedBack/FeedbackBlankFieldsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>be57dc6d-6d72-40ad-9253-0a75319cd914</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDONLINE/FeedBack/FeedbackInfoWellPerOrderTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>8633ebd7-f352-4808-905a-252e2a7215a8</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDONLINE/FeedBack/FeedbackProjectIdUserIDTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>85f75617-0f0e-4d15-ba90-c5f53c2f55d2</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDONLINE/FeedBack/FeedbackSubmitTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

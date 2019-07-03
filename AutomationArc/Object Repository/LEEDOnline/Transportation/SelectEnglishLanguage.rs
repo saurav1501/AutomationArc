@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>leedonlineIframe</name>
+   <name>SelectEnglishLanguage</name>
    <tag></tag>
-   <elementGuidId>1e00352f-8d0e-4d59-a764-e39018c8a6df</elementGuidId>
+   <elementGuidId>454d8047-9141-4340-b957-83193c3ebb6f</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value>id(&quot;arcWidget&quot;)/iframe[1]</value>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id='datainput-widget'] | //*[@id=&quot;arcWidget&quot;]/iframe</value>
+         <value>//*[@ng-click=&quot;copyLink('en')&quot;]//div[span='English']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -19,8 +19,8 @@
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>xpath</name>
+      <name>ref_element</name>
       <type>Main</type>
-      <value>id(&quot;arcWidget&quot;)/iframe[1]</value>
+      <value>Object Repository/LEEDOnline/leedOnlineIframe/leedonlineIframe</value>
    </webElementProperties>
 </WebElementEntity>
