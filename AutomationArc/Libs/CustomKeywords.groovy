@@ -7,6 +7,8 @@ import java.lang.String
 
 import com.kms.katalon.core.testobject.TestObject
 
+import com.kms.katalon.core.model.FailureHandling
+
 import java.sql.Connection
 
 
@@ -1928,8 +1930,516 @@ def static "com.arc.ReusableMethods.ReusableMethodsMeasuresParking.permissionReq
     (new com.arc.ReusableMethods.ReusableMethodsMeasuresParking()).permissionRequestsTeamMan()
 }
 
+def static "com.katalon.plugin.keyword.calendar.SetDateCalendarKeyword.setDate"(
+    	TestObject to	
+     , 	int day	
+     , 	int month	
+     , 	int year	
+     , 	int slideTimeOut	
+     , 	FailureHandling flowControl	) {
+    (new com.katalon.plugin.keyword.calendar.SetDateCalendarKeyword()).setDate(
+        	to
+         , 	day
+         , 	month
+         , 	year
+         , 	slideTimeOut
+         , 	flowControl)
+}
+
 def static "com.arc.BaseClass.CommonMethod.clickCancel"() {
     (new com.arc.BaseClass.CommonMethod()).clickCancel()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.uploadArcDataTemplate"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).uploadArcDataTemplate()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.uploadArcDataTemplatetrial"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).uploadArcDataTemplatetrial()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyGraphDefaultUnitsPresentOnXAxis"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyGraphDefaultUnitsPresentOnXAxis()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.uploadArcDataTemplateBuildingAnalytics"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).uploadArcDataTemplateBuildingAnalytics()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.uploadArcDataTemplateTransit"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).uploadArcDataTemplateTransit()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.uploadArcDataTemplateLEEDV4"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).uploadArcDataTemplateLEEDV4()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.uploadArcDataTemplateTransitAboveAnalytics"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).uploadArcDataTemplateTransitAboveAnalytics()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.uploadArcDataTemplateTransitBelow"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).uploadArcDataTemplateTransitBelow()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyErrorWasteDivertedGreaterThanWasteGeneration"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyErrorWasteDivertedGreaterThanWasteGeneration()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyEnergyReadingUploadedViaExcel"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyEnergyReadingUploadedViaExcel(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyWaterReadingUploadedViaExcel"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyWaterReadingUploadedViaExcel(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyWasteReadingUploadedViaExcel"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyWasteReadingUploadedViaExcel(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyWasteGraphpopulatedAfterExcelUpload"(
+    	String sheetName	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyWasteGraphpopulatedAfterExcelUpload(
+        	sheetName)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyEnergyGraphpopulatedAfterExcelUpload"(
+    	String sheetName	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyEnergyGraphpopulatedAfterExcelUpload(
+        	sheetName)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyWaterGraphpopulatedAfterExcelUpload"(
+    	String sheetName	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyWaterGraphpopulatedAfterExcelUpload(
+        	sheetName)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyHumanCo2BuildingGraphpopulatedAfterExcelUpload"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyHumanCo2BuildingGraphpopulatedAfterExcelUpload(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyHumanCo2BuildingTransitGraphpopulatedAfterExcelUpload"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyHumanCo2BuildingTransitGraphpopulatedAfterExcelUpload(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyTransportationGraphpopulatedAfterExcelUpload"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyTransportationGraphpopulatedAfterExcelUpload(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyTransportationGraphpopulatedAfterExcelUploadNewScore"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyTransportationGraphpopulatedAfterExcelUploadNewScore(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyHumanCo2BuildingGraphpopulatedAfterExcelUploadNewScore"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyHumanCo2BuildingGraphpopulatedAfterExcelUploadNewScore(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyDocumentTabFileUploadFunctionality"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyDocumentTabFileUploadFunctionality(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyFilterDataInput"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyFilterDataInput()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.editMeterReading"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).editMeterReading(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.uploadCreditFormTest"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).uploadCreditFormTest()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.fileUploadDataInput"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).fileUploadDataInput()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.largeFileUploadDataInputForSnapshot"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).largeFileUploadDataInputForSnapshot()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.fileUploadDataInputWithDifferentLanguages"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).fileUploadDataInputWithDifferentLanguages()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.creditFileUploadTransit"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).creditFileUploadTransit()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.creditFileUploadCityComm"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).creditFileUploadCityComm()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.fileUploadDataInputHumanExperience"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).fileUploadDataInputHumanExperience()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.fileUploadCityCommEnergyMeter"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).fileUploadCityCommEnergyMeter()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.fileUploadDataInputWater"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).fileUploadDataInputWater()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.fileUploadDataInputWaste"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).fileUploadDataInputWaste()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.fileUploadDataInputWasteViaCloud"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).fileUploadDataInputWasteViaCloud()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.clickCancel"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).clickCancel()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.newMeterBuidingFieldVerification"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).newMeterBuidingFieldVerification()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.addNewMeterBuildingDefaultfuelType"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).addNewMeterBuildingDefaultfuelType()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.performanceCreditVisibilityCityComm"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).performanceCreditVisibilityCityComm()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.performanceCreditBuilding"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).performanceCreditBuilding()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.deleteEnergyAndWaterMeterReadingBuilding"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).deleteEnergyAndWaterMeterReadingBuilding()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.deleteEnergyAndWaterMeterReadingCityComm"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).deleteEnergyAndWaterMeterReadingCityComm()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyTheCommentAndActivity"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyTheCommentAndActivity()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.editEnergyMeterBuilding"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).editEnergyMeterBuilding()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.editWaterMeterBuilding"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).editWaterMeterBuilding()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createEnergyMeterInternational"(
+    	String sheetName	
+     , 	String sheetName1	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createEnergyMeterInternational(
+        	sheetName
+         , 	sheetName1
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createEnergyMeterWithDifferentUnits"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createEnergyMeterWithDifferentUnits()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.countEnergyMeter"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).countEnergyMeter()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.countWaterMeter"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).countWaterMeter()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createEnergyMeter"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createEnergyMeter(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createWaterMeterWithDifferentUnits"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createWaterMeterWithDifferentUnits()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createWaterMeter"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createWaterMeter(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createWasteMeter"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createWasteMeter()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.humanExperienceMeter"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).humanExperienceMeter(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyAndDownloadExportData"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyAndDownloadExportData()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.humanExperienceMeterTransitRidership"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).humanExperienceMeterTransitRidership(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createEnergyMeterReadingTrial"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createEnergyMeterReadingTrial(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createWaterMeterReadingTrial"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createWaterMeterReadingTrial(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createEnergyMeterReadingPrevious"(
+    	String sheetName	
+     , 	int rowNum1	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createEnergyMeterReadingPrevious(
+        	sheetName
+         , 	rowNum1)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyEnergyScore"(
+    	String sheetName	
+     , 	int rowNum1	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyEnergyScore(
+        	sheetName
+         , 	rowNum1)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyWaterScore"(
+    	String sheetName	
+     , 	int rowNum1	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyWaterScore(
+        	sheetName
+         , 	rowNum1)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyWasteScore"(
+    	String sheetName	
+     , 	int rowNum1	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyWasteScore(
+        	sheetName
+         , 	rowNum1)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyTransportScore"(
+    	String sheetName	
+     , 	int rowNum1	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyTransportScore(
+        	sheetName
+         , 	rowNum1)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createEnergyMeterReading"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createEnergyMeterReading(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createWaterMeterReading"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createWaterMeterReading(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createWaterMeterReadingPrevious"(
+    	String sheetName	
+     , 	int rowNum1	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createWaterMeterReadingPrevious(
+        	sheetName
+         , 	rowNum1)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyHumExpScore"(
+    	String sheetName	
+     , 	int rowNum1	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyHumExpScore(
+        	sheetName
+         , 	rowNum1)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createWasteGenerationMeterReading"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createWasteGenerationMeterReading(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createWaste"(
+    	String sheetName	
+     , 	int rowNum1	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createWaste(
+        	sheetName
+         , 	rowNum1)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createWasteGenerationMeterReadingTrial"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createWasteGenerationMeterReadingTrial(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createTransportReading"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createTransportReading(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createTransportPrev"(
+    	String sheetName	
+     , 	int rowNum1	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createTransportPrev(
+        	sheetName
+         , 	rowNum1)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createTransportReadingTrial"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createTransportReadingTrial(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createHumanExpMeterReading"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createHumanExpMeterReading(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createHumanExpMeterAQI"(
+    	String sheetName	
+     , 	int rowNum1	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createHumanExpMeterAQI(
+        	sheetName
+         , 	rowNum1)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createHumanExpMeterHighSchool"(
+    	String sheetName	
+     , 	int rowNum1	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createHumanExpMeterHighSchool(
+        	sheetName
+         , 	rowNum1)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createHumanExpMeterGini"(
+    	String sheetName	
+     , 	int rowNum1	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createHumanExpMeterGini(
+        	sheetName
+         , 	rowNum1)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createHumanExpMeterHProsUnemployment"(
+    	String sheetName	
+     , 	int rowNum1	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createHumanExpMeterHProsUnemployment(
+        	sheetName
+         , 	rowNum1)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createHumanExpMeterCrime"(
+    	String sheetName	
+     , 	int rowNum1	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createHumanExpMeterCrime(
+        	sheetName
+         , 	rowNum1)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createHumanExpMeterReadingTrial"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createHumanExpMeterReadingTrial(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.humanExpMeterReading"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).humanExpMeterReading()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createADMeterReading"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createADMeterReading(
+        	sheetName
+         , 	rowNum)
 }
 
 def static "com.arc.ReusableMethods.ReusableMethodsAnalytics.downloadAndVerifySurveyExportedData"() {

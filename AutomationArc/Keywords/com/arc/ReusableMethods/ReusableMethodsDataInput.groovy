@@ -4982,24 +4982,9 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	@Keyword
 	public void surveySubmit(String sheetName) throws IOException, InterruptedException, Exception{
-<<<<<<< HEAD
-		navigation.navigateIntoDataInput()
-		/*WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
-		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
-		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-
-*/
-=======
 		
 		navigation.navigateIntoDataInput()
-
->>>>>>> 5e31c8441c97665330b67c08d35cf29ba4cd951d
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
 
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
