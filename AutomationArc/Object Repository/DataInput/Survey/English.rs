@@ -6,12 +6,12 @@
    <elementGuidId>91450ec6-9956-419c-a6a4-e67307609c40</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>#sideNavContainer > md-content > div.meterContent-wrapper.ng-scope > div.row > div.hidden-xs.hidden-sm.col-md-3.survey-response > div:nth-child(3) > ul > li:nth-child(1)</value>
+         <key>XPATH</key>
+         <value>(//*[text()='English'])[2]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//div[@class=&quot;dropdown email-dropdown open&quot;]/ul[@class=&quot;dropdown-menu&quot;]/li[@class=&quot;language_unit&quot;]/div[@class=&quot;left-right-align&quot;]/span[1][count(. | //*[(text() = 'English' or . = 'English')]) = count(//*[(text() = 'English' or . = 'English')])]</value>
+         <key>BASIC</key>
+         <value>#sideNavContainer > md-content > div.meterContent-wrapper.ng-scope > div.row > div.hidden-xs.hidden-sm.col-md-3.survey-response > div:nth-child(3) > ul > li:nth-child(1)</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

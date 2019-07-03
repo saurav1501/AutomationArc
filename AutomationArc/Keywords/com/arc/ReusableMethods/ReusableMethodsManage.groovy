@@ -1488,16 +1488,15 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void VerifyGFAUnitOnChangeOfUnitsIPAndSI(String sheetName, int rowNum){
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		ReusNavigate.navigateIntoDataInput()
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'),GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'),GlobalVariable.minAngularWait)
 
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle')),"Building Settings", false)
+		//WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle')),"Building Settings", false)
 		println "Verify if the unit changes on the changing of unit type."
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'), 5)

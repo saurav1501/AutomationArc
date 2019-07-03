@@ -46,7 +46,6 @@ public class ResuableMethodsSetting {
 		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/ExcludeSpaces'), GlobalVariable.minAngularWait)
 		WebUI.check(findTestObject('DataInput/Settings18/ExcludeSpaces'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		
 	}
 
 	public void checkRadioAllOccupant(){
@@ -59,7 +58,6 @@ public class ResuableMethodsSetting {
 		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/button_Close'), GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('DataInput/Settings18/button_Close'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		
 	}
 
 	public void checkRegularOccupant(){
@@ -72,7 +70,6 @@ public class ResuableMethodsSetting {
 		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/button_Close'), GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('DataInput/Settings18/button_Close'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		
 	}
 	public void checkVisitorOccupant(){
 		WebUI.scrollToElement(findTestObject('DataInput/Settings18/Visitors_radiobtn'), GlobalVariable.minAngularWait)
@@ -84,9 +81,9 @@ public class ResuableMethodsSetting {
 		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/button_Close'), GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('DataInput/Settings18/button_Close'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		}
+	}
 
-	  public void buildingSettings(){
+	public void buildingSettings(){
 		WebUI.waitForElementClickable(findTestObject('Analytics/17/Building Settings'),GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('Analytics/17/Building Settings'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
@@ -98,81 +95,70 @@ public class ResuableMethodsSetting {
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/a_Occupants'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/a_Occupants'), GlobalVariable.minAngularWait)
-		
-	  }
-	
+	}
+
 	public void occupant(){
 		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/a_Occupants'), GlobalVariable.minAngularWait)
-        WebUI.click(findTestObject('DataInput/Settings18/a_Occupants'))
+		WebUI.click(findTestObject('DataInput/Settings18/a_Occupants'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/VISITOR'),GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/VISITOR'),GlobalVariable.minAngularWait)
-		
-	   }
-	
+	}
+
 	public void area(){
 		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/a_Gross Floor Area'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('DataInput/Settings18/a_Gross Floor Area'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/addDataButton'),GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/addDataButton'),GlobalVariable.minAngularWait)
-		
-	   }
-	
+	}
+
 	public void clickGeneral(){
 		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/General'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('DataInput/Settings18/General'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/a_General'),GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/a_General'),GlobalVariable.minAngularWait)
-
-			
 	}
-	
+
 	public void addrowVisibility(){
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/addDataButton'),GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/addDataButton'),GlobalVariable.minAngularWait)
-		
 	}
-		public void selectEnergy(){
-			clickGeneral()
-			WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/a_Energy'), GlobalVariable.minAngularWait)
-			WebUI.click(findTestObject('DataInput/Settings18/a_Energy'))
-			addrowVisibility()
-			
-		}
-		
-		public void selectWater(){
-			clickGeneral()
-			WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/a_Water'), GlobalVariable.minAngularWait)
-			WebUI.click(findTestObject('DataInput/Settings18/a_Water'))
-			addrowVisibility()
-	
-		}
-		public void selectWaste(){
-			clickGeneral()
-			WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/a_Waste'), GlobalVariable.minAngularWait)
-			WebUI.click(findTestObject('DataInput/Settings18/a_Waste'))
-			addrowVisibility()
-	
-		}
-		public void selectTransport(){
-			clickGeneral()
-			WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/a_Transportation'), GlobalVariable.minAngularWait)
-			WebUI.click(findTestObject('DataInput/Settings18/a_Transportation'))
-			addrowVisibility()
-	
-		}
-	
-		public void selectHum(){
-			clickGeneral()
-			WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/a_Human Experience'), GlobalVariable.minAngularWait)
-			WebUI.click(findTestObject('DataInput/Settings18/a_Human Experience'))
-			addrowVisibility()
-		
-		}
-	
+	public void selectEnergy(){
+		clickGeneral()
+		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/a_Energy'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('DataInput/Settings18/a_Energy'))
+		addrowVisibility()
+	}
+
+	public void selectWater(){
+		clickGeneral()
+		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/a_Water'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('DataInput/Settings18/a_Water'))
+		addrowVisibility()
+	}
+	public void selectWaste(){
+		clickGeneral()
+		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/a_Waste'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('DataInput/Settings18/a_Waste'))
+		addrowVisibility()
+	}
+	public void selectTransport(){
+		clickGeneral()
+		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/a_Transportation'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('DataInput/Settings18/a_Transportation'))
+		addrowVisibility()
+	}
+
+	public void selectHum(){
+		clickGeneral()
+		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/a_Human Experience'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('DataInput/Settings18/a_Human Experience'))
+		addrowVisibility()
+	}
+
 	@Keyword
 	public void setExclude(){
 		navigation.navigateIntoDataInput()
@@ -182,71 +168,58 @@ public class ResuableMethodsSetting {
 		checkRegularOccupant()
 		checkVisitorOccupant()
 	}
-	
-	@Keyword
-	 public void occupantEnergy()
-	 {
-		 navigation.navigateIntoDataInput()
-		 occupant()
-		 selectEnergy()
-		 
-		 
-     }
 
-	 @Keyword
-	 public void occupantWater()
-	 {
-		 navigation.navigateIntoDataInput()
-		 occupant()
-		 selectWater()
-	 }
-	 
-	 @Keyword
-	 public void occupantWaste()
-	 {
-		 navigation.navigateIntoDataInput()
-		 occupant()
-		 selectWaste()
-	 }
-	 
-	 @Keyword
-	 public void occupantTransport()
-	 {
-		 navigation.navigateIntoDataInput()
-		 occupant()
-		 selectTransport()
-		 
-	 }
-	 
-	 @Keyword
-	 public void occupantHum()
-	 {
-		 navigation.navigateIntoDataInput()
-		 occupant()
-		 selectHum()
-	 }
-	 
-	 @Keyword
-	 public void areaEnergy()
-	 {
-		 navigation.navigateIntoDataInput()
-		 area()
-		 selectEnergy()
-	 }
-	 @Keyword
-	 public void areaWater()
-	 {
-		 navigation.navigateIntoDataInput()
-		 area()
-		 selectWater()
-	 }
-	 @Keyword
-	 public void areaWaste()
-	 {
-		 navigation.navigateIntoDataInput()
-		 area()
-		 selectWaste()
-	 }
-	
-} 
-	 
+	@Keyword
+	public void occupantEnergy() {
+		navigation.navigateIntoDataInput()
+		occupant()
+		selectEnergy()
+	}
+
+	@Keyword
+	public void occupantWater() {
+		navigation.navigateIntoDataInput()
+		occupant()
+		selectWater()
+	}
+
+	@Keyword
+	public void occupantWaste() {
+		navigation.navigateIntoDataInput()
+		occupant()
+		selectWaste()
+	}
+
+	@Keyword
+	public void occupantTransport() {
+		navigation.navigateIntoDataInput()
+		occupant()
+		selectTransport()
+	}
+
+	@Keyword
+	public void occupantHum() {
+		navigation.navigateIntoDataInput()
+		occupant()
+		selectHum()
+	}
+
+	@Keyword
+	public void areaEnergy() {
+		navigation.navigateIntoDataInput()
+		area()
+		selectEnergy()
+	}
+	@Keyword
+	public void areaWater() {
+		navigation.navigateIntoDataInput()
+		area()
+		selectWater()
+	}
+	@Keyword
+	public void areaWaste() {
+		navigation.navigateIntoDataInput()
+		area()
+		selectWaste()
+	}
+}
