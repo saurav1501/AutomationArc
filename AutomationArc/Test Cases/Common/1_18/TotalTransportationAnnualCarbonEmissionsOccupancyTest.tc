@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description>Transportation daily carbon emissions (MTCO2e) * 313</description>
-   <name>TransportationAnnualCarbonEmissionsOccupancyTest</name>
+   <name>TotalTransportationAnnualCarbonEmissionsOccupancyTest</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>e6955f50-9ebe-4307-8053-8bbd62cfd5ae</testCaseGuid>

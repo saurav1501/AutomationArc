@@ -337,7 +337,8 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 				WebUI.delay(2)
 				WebUI.click(findTestObject('PerformanceScore/RecomputeScore'))
 				WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait,GlobalVariable.avgAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
-			}
+				keepGoing = WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
+				}
 
 		String energyScore = WebUI.getText(findTestObject('PerformanceScore/Score/EnergyScore'))
 		String waterScore = WebUI.getText(findTestObject('PerformanceScore/Score/WaterSocre'))

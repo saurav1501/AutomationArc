@@ -5259,7 +5259,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 		//To switch to the new tab
 
-		for( int rowNum=2;rowNum<=5;rowNum++)
+		for( int rowNum=2;rowNum<=3;rowNum++)
 		{
 			
 				String walk1 = data.getCellData(sheetName, "Walk", rowNum)
@@ -5745,20 +5745,23 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	@Keyword
 	public void percentageSurveyResponseRateCalculationBuiding() throws IOException, InterruptedException, Exception{
-
-		WebUI.click(findTestObject('Manage/Parking/ManageProject'))
-		WebUI.delay(6)
-		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
-		WebUI.delay(10)
+  
+		navigation.navigateIntoDataInput()
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
-		WebUI.delay(3)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle')),"Building Settings", false)
-		WebUI.delay(3)
+		WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		
 		String projectoccupancy = WebUI.getAttribute((findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne')),'value')
 		double projectOccupancy= Double.parseDouble(projectoccupancy)
 
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
-		WebUI.delay(10)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(2)
+		WebUI.waitForElementPresent(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
+	
 		/******Verify that survey response rate% is calculated on the basis of the following formula [ Response %ge = (No. of responses/Occupancy)*100 ] . Always count the no of responses by counting the no of rows of transport survey results.*****/
 		String surveyResponsePercentage = WebUI.getText(findTestObject('DataInput/Survey/SurveyResponsePercentage'))
 		String surveyResponsepercentage1 = surveyResponsePercentage.replace("%","")
@@ -5776,7 +5779,14 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.verifyMatch(responsePecentageTr, surveyResponsepercentage, false)
 		/******Verify that survey response rate% is calculated on the basis of the following formula [ Response %ge = (No. of responses/Occupancy)*100 ] . Always count the no of responses by counting the no of rows of HUMAN EXPERIENCE survey results.*****/
 		WebUI.click(findTestObject('DataInput/Survey/OccupantSatisfactionSurv'))
-		WebUI.delay(10)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(2)
+
+		WebUI.waitForElementPresent(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
+	
+		
 		String humsurveyResponsePercentage = WebUI.getText(findTestObject('DataInput/Survey/SurveyResponsePercentage'))
 		String humsurveyResponsepercentage1 = surveyResponsePercentage.replace("%" ,"")
 		String humsurveyResponsepercentage = humsurveyResponsepercentage1.replaceAll("\\s","")
@@ -5794,6 +5804,75 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.verifyMatch(humsurveyResponsePercentage, surveyResponsePercentage, false)
 
 	}
+	
+	@Keyword
+	public void percentageSurveyResponseRateCalculationBuidingV3(String sheetName,int rowNum) throws IOException, InterruptedException, Exception{
+  
+		
+		String occupant = data.getCellData(sheetName,'BOccupancy', rowNum)
+		double doccupant = Double.parseDouble(occupant)
+		
+		navigation.navigateIntoDataInput()
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
+		WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		
+		
+		String projectoccupancy = WebUI.getAttribute((findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne')),'value')
+		double projectOccupancy= Double.parseDouble(projectoccupancy)
+
+		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(2)
+		WebUI.waitForElementPresent(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
+		
+		
+		/******Verify that survey response rate% is calculated on the basis of the following formula [ Response %ge = (No. of responses/Occupancy)*100 ] . Always count the no of responses by counting the no of rows of transport survey results.*****/
+		String surveyResponsePercentage = WebUI.getText(findTestObject('DataInput/Survey/SurveyResponsePercentage'))
+		String surveyResponsepercentage1 = surveyResponsePercentage.replace("%","")
+		String surveyResponsepercentage = surveyResponsepercentage1.replaceAll("\\s","")
+		double surveyresponsepercentage= Double.parseDouble(surveyResponsepercentage)
+		println surveyResponsepercentage
+
+		double calculatedresponsePecentage = (doccupant/projectOccupancy)*100
+
+		BigDecimal responsePecentage = new BigDecimal(calculatedresponsePecentage)
+		responsePecentage = responsePecentage.setScale(2,RoundingMode.HALF_UP)
+		String responsePecentageTr = Double.toString(responsePecentage)
+		println responsePecentageTr
+
+		WebUI.verifyMatch(responsePecentageTr, surveyResponsepercentage, false)
+		/******Verify that survey response rate% is calculated on the basis of the following formula [ Response %ge = (No. of responses/Occupancy)*100 ] . Always count the no of responses by counting the no of rows of HUMAN EXPERIENCE survey results.*****/
+		WebUI.click(findTestObject('DataInput/Survey/OccupantSatisfactionSurv'))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(2)
+
+		WebUI.waitForElementPresent(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
+	
+		
+		String humsurveyResponsePercentage = WebUI.getText(findTestObject('DataInput/Survey/SurveyResponsePercentage'))
+		String humsurveyResponsepercentage1 = surveyResponsePercentage.replace("%" ,"")
+		String humsurveyResponsepercentage = humsurveyResponsepercentage1.replaceAll("\\s","")
+
+		print humsurveyResponsepercentage
+		double humsurveyresponsepercentage= Double.parseDouble(humsurveyResponsepercentage)
+
+		double humcalculatedresponsePecentage = (doccupant/projectOccupancy)*100
+		BigDecimal responsePecentagehum = new BigDecimal(calculatedresponsePecentage)
+		responsePecentagehum = responsePecentagehum.setScale(2, RoundingMode.HALF_UP)
+		String responsePecentagehu = Double.toString(responsePecentage)
+
+		Assert.assertEquals(responsePecentagehu,humsurveyResponsepercentage)
+		/***************Verify that survey response rate percentage is same in Transport and HE tabs.***********************************/
+		WebUI.verifyMatch(humsurveyResponsePercentage, surveyResponsePercentage, false)
+
+	}
+
 
 	@Keyword
 	public void dataInputNavigationTest() throws IOException, InterruptedException, Exception{

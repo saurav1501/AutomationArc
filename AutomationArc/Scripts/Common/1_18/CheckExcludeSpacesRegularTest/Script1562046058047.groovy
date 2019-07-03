@@ -16,8 +16,7 @@ import internal.GlobalVariable as GlobalVariable
 
 try {
 	
-	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumThree)
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsAnalytics.averagedailywastedivSqFeet'(GlobalVariable.BDataInput, GlobalVariable.rowNumFive)
+   CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsSetting.checkRegular'()
  
  } catch (Throwable t) {
 	 System.out.println(t.getLocalizedMessage())

@@ -159,67 +159,180 @@ public class ResuableMethodsSetting {
 		addrowVisibility()
 	}
 
-	@Keyword
 	public void setExclude(){
 		navigation.navigateIntoDataInput()
 		moreSettings()
-		checkExclude()
-		checkRadioAllOccupant()
-		checkRegularOccupant()
-		checkVisitorOccupant()
+	
+		
+	}
+	
+	@Keyword
+	public void checkAllOccpant()
+	{
+	setExclude()
+	checkExclude()
+	checkRadioAllOccupant()
+    }
+	
+	@Keyword
+	public void checkRegular()
+	{
+	setExclude()
+	checkRegularOccupant()
 	}
 
 	@Keyword
+	public void checkVisitor()
+	{
+	setExclude()
+	checkVisitorOccupant()
+	}
+	
+	
+	public void occupantGen() {
+		navigation.navigateIntoDataInput()
+		buildingSettings()
+		occupant()
+		clickGeneral()
+	}
 	public void occupantEnergy() {
 		navigation.navigateIntoDataInput()
+		buildingSettings()
 		occupant()
 		selectEnergy()
 	}
 
-	@Keyword
+
 	public void occupantWater() {
 		navigation.navigateIntoDataInput()
+		buildingSettings()
 		occupant()
 		selectWater()
 	}
 
-	@Keyword
+	
 	public void occupantWaste() {
 		navigation.navigateIntoDataInput()
+		buildingSettings()
 		occupant()
 		selectWaste()
 	}
 
-	@Keyword
+
 	public void occupantTransport() {
 		navigation.navigateIntoDataInput()
+		buildingSettings()
 		occupant()
 		selectTransport()
 	}
 
-	@Keyword
+
 	public void occupantHum() {
 		navigation.navigateIntoDataInput()
+		buildingSettings()
 		occupant()
 		selectHum()
 	}
 
-	@Keyword
+
+	public void areaGeneral() {
+		navigation.navigateIntoDataInput()
+		buildingSettings()
+		area()
+		clickGeneral()
+	}
+	
 	public void areaEnergy() {
 		navigation.navigateIntoDataInput()
+		buildingSettings()
 		area()
 		selectEnergy()
 	}
-	@Keyword
+
 	public void areaWater() {
 		navigation.navigateIntoDataInput()
+		buildingSettings()
 		area()
 		selectWater()
 	}
-	@Keyword
+
 	public void areaWaste() {
 		navigation.navigateIntoDataInput()
+		buildingSettings()
 		area()
 		selectWaste()
 	}
+	
+	@Keyword
+	public void verifyareaAfterDataUpload(String sheetName,int rowNum)
+	{
+		//******************************************General*********************************/
+		
+		areaGeneral()
+		
+		WebUI.verifyMatch(sheetName, sheetName, false, FailureHandling.CONTINUE_ON_FAILURE)
+		
+		//******************************************Energy*********************************/
+		areaEnergy()
+		WebUI.verifyMatch(sheetName, sheetName, false, FailureHandling.CONTINUE_ON_FAILURE)
+		
+		//******************************************Water*********************************/
+		areaWater()
+		WebUI.verifyMatch(sheetName, sheetName, false, FailureHandling.CONTINUE_ON_FAILURE)
+		
+		//******************************************Waste*********************************/
+		areaWaste()
+		WebUI.verifyMatch(sheetName, sheetName, false, FailureHandling.CONTINUE_ON_FAILURE)
+		
+	}
+	
+	@Keyword
+	public void verifyOccupupantAfterDataUpload(String sheetName,int rowNum)
+	{
+		
+		//******************************************General*********************************/
+		occupantGen()
+		WebUI.verifyMatch(sheetName, sheetName, false, FailureHandling.CONTINUE_ON_FAILURE)
+		
+		//******************************************Energy*********************************/
+		occupantEnergy()
+		WebUI.verifyMatch(sheetName, sheetName, false, FailureHandling.CONTINUE_ON_FAILURE)
+		
+		//******************************************Water*********************************/
+		occupantWater()
+		WebUI.verifyMatch(sheetName, sheetName, false, FailureHandling.CONTINUE_ON_FAILURE)
+		
+		//******************************************Waste*********************************/
+		occupantWaste()
+		WebUI.verifyMatch(sheetName, sheetName, false, FailureHandling.CONTINUE_ON_FAILURE)
+		
+		
+		//******************************************Transport*********************************/
+		occupantTransport()
+		
+		//******************************************Regular*********************************/
+		WebUI.verifyMatch(sheetName, sheetName, false, FailureHandling.CONTINUE_ON_FAILURE)
+		
+		//******************************************Visitor*********************************/
+		WebUI.verifyMatch(sheetName, sheetName, false, FailureHandling.CONTINUE_ON_FAILURE)
+		
+		
+		//******************************************Total***********************************/
+		WebUI.verifyMatch(sheetName, sheetName, false, FailureHandling.CONTINUE_ON_FAILURE)
+		
+	
+		//******************************************HumanExpericence*********************************/
+		occupantHum()
+		
+		WebUI.verifyMatch(sheetName, sheetName, false, FailureHandling.CONTINUE_ON_FAILURE)
+		//******************************************Visitor*********************************/
+		
+		WebUI.verifyMatch(sheetName, sheetName, false, FailureHandling.CONTINUE_ON_FAILURE)
+		
+		//******************************************Total***********************************/
+		WebUI.verifyMatch(sheetName, sheetName, false, FailureHandling.CONTINUE_ON_FAILURE)
+
+		
+	}
+	
 }

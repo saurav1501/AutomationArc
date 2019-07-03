@@ -14,8 +14,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
 try {
-	
-	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumThree)
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToAnalyticsTotal'()
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsAnalytics.avgoccupainttest'(GlobalVariable.BDataInput, GlobalVariable.rowNumSeven)
  
  } catch (Throwable t) {

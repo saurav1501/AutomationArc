@@ -21,9 +21,8 @@ import internal.GlobalVariable as GlobalVariable
 
 try{
 	
-	        //CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumFive)
-			CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.percentageSurveyResponseRateCalculationBuiding'()
-	
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.percentageSurveyResponseRateCalculationBuidingV3'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumFourteen)
+
 	} catch (Throwable t) {
 		  System.out.println(t.getLocalizedMessage())
 		  Error e1 = new Error(t.getMessage())
