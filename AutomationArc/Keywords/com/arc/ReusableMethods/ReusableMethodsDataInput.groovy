@@ -37,7 +37,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	public static Robot robot = new Robot()
 
 	ResuableMethodsPerformanceScore  performanceScore = new ResuableMethodsPerformanceScore()
-    ReusableMethodsNavigation navigation = new ReusableMethodsNavigation()
+	ReusableMethodsNavigation navigation = new ReusableMethodsNavigation()
 
 	@Keyword
 	public void uploadArcDataTemplate(){
@@ -131,7 +131,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	@Keyword
 	public void uploadArcDataTemplateTransit(){
-		
+
 		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		navigation.navigateIntoDataInput()
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
@@ -209,6 +209,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.verifyMatch(successmessage,'Excel submitted successfully. We will send you an email when your data is processed.' , true)
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.delay(17)
 		WebUI.click(findTestObject('Object Repository/DataInput/button_CLOSE'))
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 
@@ -4981,7 +4982,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	@Keyword
 	public void surveySubmit(String sheetName) throws IOException, InterruptedException, Exception{
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		navigation.navigateIntoDataInput()
+		/*WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
@@ -4991,14 +4993,14 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
 
-
+*/
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
 
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
 		String MainWindowHandle = driver.getWindowHandle()
-
+		WebUI.delay(1)
 		WebUI.click(findTestObject('DataInput/Survey/CopySurveyLink'))
 		WebUI.delay(1)
 		WebUI.click(findTestObject('DataInput/Survey/English'))
@@ -5078,6 +5080,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				WebUI.dragAndDropToObject(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'), findTestObject('Object Repository/DataInput/Survey/ExtremelySatisfySpanText'))
 				WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
 				WebUI.delay(2)
+				WebUI.selectOptionByLabel(findTestObject('Object Repository/DataInput/Survey/OccupantTypeSurvey'), "Regular Occupant", false)
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 				WebUI.click(findTestObject('DataInput/Survey/Submit1'))
 				WebUI.waitForElementClickable(findTestObject('DataInput/Survey/Submit'), GlobalVariable.avgAngularWait)
@@ -5162,7 +5165,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				WebUI.delay(2)
 				WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
+				WebUI.selectOptionByLabel(findTestObject('Object Repository/DataInput/Survey/OccupantTypeSurvey'), "Regular Occupant", false)
 				WebUI.click(findTestObject('DataInput/Survey/Submit'))
 				WebUI.waitForElementClickable(findTestObject('DataInput/Survey/Submit'), GlobalVariable.avgAngularWait)
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
