@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;meter_item&quot;]/div[7]/div[1]/button/span[2]/text()</value>
+         <value>(//span[@class = 'meterData-btn--uploadExcelTitle'])[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

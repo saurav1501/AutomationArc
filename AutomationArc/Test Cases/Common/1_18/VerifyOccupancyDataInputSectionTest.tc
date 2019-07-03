@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>CheckExcludeSpacesTest</name>
+   <name>VerifyOccupancyDataInputSectionTest</name>
    <tag></tag>
    <comment></comment>
-   <testCaseGuid>ed4b34f5-6784-4b2f-9aa8-bcc92f5ccdb0</testCaseGuid>
+   <testCaseGuid>de8d08b5-7a7d-4844-9e75-c5bb5a8eb501</testCaseGuid>
 </TestCaseEntity>

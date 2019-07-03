@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>average occupant satisfaction = sum(satisfaction points)/(no of survey submitted)</description>
+   <name>RegularBuldingsOccupantAverageOccupantSatisfactionTest</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>d6dcc236-dab5-4e67-80f1-4d2a4f9591fb</testCaseGuid>
+</TestCaseEntity>

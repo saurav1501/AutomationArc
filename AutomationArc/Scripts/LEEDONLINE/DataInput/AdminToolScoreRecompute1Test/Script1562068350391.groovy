@@ -21,8 +21,6 @@ import internal.GlobalVariable as GlobalVariable
 
 try {
 		
-	
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginArcAdminToolWithGlobalVariable'()
 	CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsPerformanceScore.analyticsgenratePerformanceScoreAdminToolOtherNone'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumTwo)
 	
 } catch (Throwable t) {

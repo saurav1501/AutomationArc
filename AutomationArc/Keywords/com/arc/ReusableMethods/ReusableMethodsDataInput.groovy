@@ -35,7 +35,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	WebDriver driver  = DriverFactory.getWebDriver()
 	public static Robot robot = new Robot()
-
+	public ReusableMethodsNavigation navigation = new ReusableMethodsNavigation()
 	ResuableMethodsPerformanceScore  performanceScore = new ResuableMethodsPerformanceScore()
 	ReusableMethodsNavigation navigation = new ReusableMethodsNavigation()
 
@@ -4982,6 +4982,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	@Keyword
 	public void surveySubmit(String sheetName) throws IOException, InterruptedException, Exception{
+<<<<<<< HEAD
 		navigation.navigateIntoDataInput()
 		/*WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
@@ -4994,6 +4995,11 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
 
 */
+=======
+		
+		navigation.navigateIntoDataInput()
+
+>>>>>>> 5e31c8441c97665330b67c08d35cf29ba4cd951d
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
 
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
@@ -5007,11 +5013,24 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		
+		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard()
+		Transferable contents = clipboard.getContents(null)
+		String url = (String) contents.getTransferData(DataFlavor.stringFlavor)
+		data.setCellData(sheetName, "Url", GlobalVariable.rowNumTwo, url)
+		
+		Robot r = new Robot();
+		r.keyPress(KeyEvent.VK_CONTROL);
+		r.keyPress(KeyEvent.VK_T);
+		r.keyRelease(KeyEvent.VK_CONTROL)
+		r.keyRelease(KeyEvent.VK_T)
+		WebUI.delay(1)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		//To switch to the new tab
 
 		for( int rowNum=2;rowNum<=5;rowNum++)
 		{
-			if(rowNum==2)
-			{
+			
 				String walk1 = data.getCellData(sheetName, "Walk", rowNum)
 				String walk2 = data.getCellData(sheetName, "Bus", rowNum)
 				String walk3 = data.getCellData(sheetName, "Tram", rowNum)
@@ -5021,29 +5040,12 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				String walk7 = data.getCellData(sheetName, "Carpool", rowNum)
 				String walk8 = data.getCellData(sheetName, "Caralternative", rowNum)
 				String name = data.getCellData(sheetName, "Name", rowNum)
-
-				Robot r = new Robot();
-				r.keyPress(KeyEvent.VK_CONTROL);
-				r.keyPress(KeyEvent.VK_T);
-				r.keyRelease(KeyEvent.VK_CONTROL)
-				r.keyRelease(KeyEvent.VK_T)
-				WebUI.delay(1)
-				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-				//To switch to the new tab
-
-				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-				r.keyPress(KeyEvent.VK_CONTROL)
-				r.keyPress(KeyEvent.VK_V)
-				r.keyRelease(KeyEvent.VK_CONTROL)
-				r.keyRelease(KeyEvent.VK_V)
-
-				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-				r.keyPress(KeyEvent.VK_ENTER)
-				r.keyRelease(KeyEvent.VK_ENTER)
+                
+				WebUI.switchToWindowIndex(1)
+			    WebUI.navigateToUrl(url)
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 				WebUI.delay(5)
-				WebUI.switchToWindowIndex(1)
-				WebUI.delay(1)
+				
 				WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'), GlobalVariable.avgAngularWait)
 				WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'), GlobalVariable.avgAngularWait)
 				WebUI.delay(2)
@@ -5076,12 +5078,15 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 				WebUI.click(findTestObject('Object Repository/DataInput/Survey/SaveButtonToRecordSurveyData'))
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-				WebUI.delay(2)
+				WebUI.delay(3)
 				WebUI.dragAndDropToObject(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'), findTestObject('Object Repository/DataInput/Survey/ExtremelySatisfySpanText'))
 				WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
 				WebUI.delay(2)
 				WebUI.selectOptionByLabel(findTestObject('Object Repository/DataInput/Survey/OccupantTypeSurvey'), "Regular Occupant", false)
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+				
+				WebUI.selectOptionByLabel(findTestObject('DataInput/Survey/OccupantType'),'Regular Occupant', false)
+				
 				WebUI.click(findTestObject('DataInput/Survey/Submit1'))
 				WebUI.waitForElementClickable(findTestObject('DataInput/Survey/Submit'), GlobalVariable.avgAngularWait)
 
@@ -5090,33 +5095,9 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
 				println "Survey Submited Successufully"
-			}
-			else
-			{
+			
 
-				String walk1 = data.getCellData(sheetName, "Walk", rowNum)
-				String walk2 = data.getCellData(sheetName, "Bus", rowNum)
-				String walk3 = data.getCellData(sheetName, "Tram", rowNum)
-				String walk4 = data.getCellData(sheetName, "Heavyrail", rowNum)
-				String walk5 = data.getCellData(sheetName, "Motorcycle", rowNum)
-				String walk6 = data.getCellData(sheetName, "Carsolo", rowNum)
-				String walk7 = data.getCellData(sheetName, "Carpool", rowNum)
-				String walk8 = data.getCellData(sheetName, "Caralternative", rowNum)
-				String name = data.getCellData(sheetName, "Name", rowNum)
-				Robot r = new Robot();
-				r.keyPress(KeyEvent.VK_CONTROL);
-				r.keyPress(KeyEvent.VK_T);
-				r.keyRelease(KeyEvent.VK_CONTROL)
-				r.keyRelease(KeyEvent.VK_T)
-				WebUI.delay(1)
-
-				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-				r.keyPress(KeyEvent.VK_CONTROL)
-				r.keyPress(KeyEvent.VK_V)
-				r.keyRelease(KeyEvent.VK_CONTROL)
-				r.keyRelease(KeyEvent.VK_V)
-				WebUI.delay(1)
-
+<<<<<<< HEAD
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 				r.keyPress(KeyEvent.VK_ENTER)
 				r.keyRelease(KeyEvent.VK_ENTER)
@@ -5174,12 +5155,15 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				WebUI.closeWindowIndex(2)
 			}
 			WebUI.switchToWindowIndex(0)
+=======
+>>>>>>> 5e31c8441c97665330b67c08d35cf29ba4cd951d
 		}
 		WebUI.closeWindowIndex(1)
 		WebUI.delay(2)
 		WebUI.switchToWindowIndex(0)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 	}
+
 
 
 
@@ -5334,6 +5318,114 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(2)
 		WebUI.switchToWindowIndex(0)
 		WebUI.delay(2)
+	}
+	
+	@Keyword
+	public void surveySubmitVisitor(String sheetName) throws IOException, InterruptedException, Exception{
+		
+		navigation.navigateIntoDataInput()
+
+		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
+
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
+		String MainWindowHandle = driver.getWindowHandle()
+
+		WebUI.click(findTestObject('DataInput/Survey/CopySurveyLink'))
+		WebUI.delay(1)
+		WebUI.click(findTestObject('DataInput/Survey/English'))
+
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		
+		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard()
+		Transferable contents = clipboard.getContents(null)
+		String url = (String) contents.getTransferData(DataFlavor.stringFlavor)
+		data.setCellData(sheetName, "Url", GlobalVariable.rowNumTwo, url)
+		
+		Robot r = new Robot();
+		r.keyPress(KeyEvent.VK_CONTROL);
+		r.keyPress(KeyEvent.VK_T);
+		r.keyRelease(KeyEvent.VK_CONTROL)
+		r.keyRelease(KeyEvent.VK_T)
+		WebUI.delay(1)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		//To switch to the new tab
+
+		for( int rowNum=2;rowNum<=3;rowNum++)
+		{
+			
+				String walk1 = data.getCellData(sheetName, "Walk", rowNum)
+				String walk2 = data.getCellData(sheetName, "Bus", rowNum)
+				String walk3 = data.getCellData(sheetName, "Tram", rowNum)
+				String walk4 = data.getCellData(sheetName, "Heavyrail", rowNum)
+				String walk5 = data.getCellData(sheetName, "Motorcycle", rowNum)
+				String walk6 = data.getCellData(sheetName, "Carsolo", rowNum)
+				String walk7 = data.getCellData(sheetName, "Carpool", rowNum)
+				String walk8 = data.getCellData(sheetName, "Caralternative", rowNum)
+				String name = data.getCellData(sheetName, "Name", rowNum)
+                
+				WebUI.switchToWindowIndex(1)
+			    WebUI.navigateToUrl(url)
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+				WebUI.delay(5)
+				
+				WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'), GlobalVariable.avgAngularWait)
+				WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'), GlobalVariable.avgAngularWait)
+				WebUI.delay(2)
+				WebUI.click(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'))
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
+				int it=1;
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk1)
+				it++
+
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), '0')
+				it++
+
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), '0')
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk2)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk3)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk4)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk5)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk6)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk7)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk8)
+				it++
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+				WebUI.click(findTestObject('Object Repository/DataInput/Survey/SaveButtonToRecordSurveyData'))
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+				WebUI.delay(3)
+				WebUI.dragAndDropToObject(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'), findTestObject('Object Repository/DataInput/Survey/ExtremelySatisfySpanText'))
+				WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
+				WebUI.delay(2)
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+				
+				WebUI.selectOptionByLabel(findTestObject('DataInput/Survey/OccupantType'),'Visitor', false)
+				
+				WebUI.click(findTestObject('DataInput/Survey/Submit1'))
+				WebUI.waitForElementClickable(findTestObject('DataInput/Survey/Submit'), GlobalVariable.avgAngularWait)
+
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+				WebUI.verifyMatch(WebUI.getText(findTestObject('DataInput/Survey/Thank')), "Options that enhance your satisfaction", false)
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
+				println "Survey Submited Successufully"
+			
+
+		}
+		WebUI.closeWindowIndex(1)
+		WebUI.delay(2)
+		WebUI.switchToWindowIndex(0)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 	}
 
 
@@ -5749,21 +5841,32 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	@Keyword
 	public void percentageSurveyResponseRateCalculationBuiding() throws IOException, InterruptedException, Exception{
+<<<<<<< HEAD
+  
+		navigation.navigateIntoDataInput()
+=======
 
 		WebUI.click(findTestObject('Manage/Parking/ManageProject'))
 		WebUI.delay(6)
 		//WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
 		navigation.navigateIntoDataInput()
 		WebUI.delay(10)
+>>>>>>> fc88bee18040ff86b735e1aa454b908dc4851805
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
-		WebUI.delay(3)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle')),"Building Settings", false)
-		WebUI.delay(3)
+		WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		
 		String projectoccupancy = WebUI.getAttribute((findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne')),'value')
 		double projectOccupancy= Double.parseDouble(projectoccupancy)
 
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
-		WebUI.delay(10)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(2)
+		WebUI.waitForElementPresent(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
+	
 		/******Verify that survey response rate% is calculated on the basis of the following formula [ Response %ge = (No. of responses/Occupancy)*100 ] . Always count the no of responses by counting the no of rows of transport survey results.*****/
 		String surveyResponsePercentage = WebUI.getText(findTestObject('DataInput/Survey/SurveyResponsePercentage'))
 		String surveyResponsepercentage1 = surveyResponsePercentage.replace("%","")
@@ -5781,7 +5884,14 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.verifyMatch(responsePecentageTr, surveyResponsepercentage, false)
 		/******Verify that survey response rate% is calculated on the basis of the following formula [ Response %ge = (No. of responses/Occupancy)*100 ] . Always count the no of responses by counting the no of rows of HUMAN EXPERIENCE survey results.*****/
 		WebUI.click(findTestObject('DataInput/Survey/OccupantSatisfactionSurv'))
-		WebUI.delay(10)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(2)
+
+		WebUI.waitForElementPresent(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
+	
+		
 		String humsurveyResponsePercentage = WebUI.getText(findTestObject('DataInput/Survey/SurveyResponsePercentage'))
 		String humsurveyResponsepercentage1 = surveyResponsePercentage.replace("%" ,"")
 		String humsurveyResponsepercentage = humsurveyResponsepercentage1.replaceAll("\\s","")
@@ -5799,6 +5909,75 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.verifyMatch(humsurveyResponsePercentage, surveyResponsePercentage, false)
 
 	}
+	
+	@Keyword
+	public void percentageSurveyResponseRateCalculationBuidingV3(String sheetName,int rowNum) throws IOException, InterruptedException, Exception{
+  
+		
+		String occupant = data.getCellData(sheetName,'BOccupancy', rowNum)
+		double doccupant = Double.parseDouble(occupant)
+		
+		navigation.navigateIntoDataInput()
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
+		WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		
+		
+		String projectoccupancy = WebUI.getAttribute((findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne')),'value')
+		double projectOccupancy= Double.parseDouble(projectoccupancy)
+
+		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(2)
+		WebUI.waitForElementPresent(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
+		
+		
+		/******Verify that survey response rate% is calculated on the basis of the following formula [ Response %ge = (No. of responses/Occupancy)*100 ] . Always count the no of responses by counting the no of rows of transport survey results.*****/
+		String surveyResponsePercentage = WebUI.getText(findTestObject('DataInput/Survey/SurveyResponsePercentage'))
+		String surveyResponsepercentage1 = surveyResponsePercentage.replace("%","")
+		String surveyResponsepercentage = surveyResponsepercentage1.replaceAll("\\s","")
+		double surveyresponsepercentage= Double.parseDouble(surveyResponsepercentage)
+		println surveyResponsepercentage
+
+		double calculatedresponsePecentage = (doccupant/projectOccupancy)*100
+
+		BigDecimal responsePecentage = new BigDecimal(calculatedresponsePecentage)
+		responsePecentage = responsePecentage.setScale(2,RoundingMode.HALF_UP)
+		String responsePecentageTr = Double.toString(responsePecentage)
+		println responsePecentageTr
+
+		WebUI.verifyMatch(responsePecentageTr, surveyResponsepercentage, false)
+		/******Verify that survey response rate% is calculated on the basis of the following formula [ Response %ge = (No. of responses/Occupancy)*100 ] . Always count the no of responses by counting the no of rows of HUMAN EXPERIENCE survey results.*****/
+		WebUI.click(findTestObject('DataInput/Survey/OccupantSatisfactionSurv'))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(2)
+
+		WebUI.waitForElementPresent(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
+	
+		
+		String humsurveyResponsePercentage = WebUI.getText(findTestObject('DataInput/Survey/SurveyResponsePercentage'))
+		String humsurveyResponsepercentage1 = surveyResponsePercentage.replace("%" ,"")
+		String humsurveyResponsepercentage = humsurveyResponsepercentage1.replaceAll("\\s","")
+
+		print humsurveyResponsepercentage
+		double humsurveyresponsepercentage= Double.parseDouble(humsurveyResponsepercentage)
+
+		double humcalculatedresponsePecentage = (doccupant/projectOccupancy)*100
+		BigDecimal responsePecentagehum = new BigDecimal(calculatedresponsePecentage)
+		responsePecentagehum = responsePecentagehum.setScale(2, RoundingMode.HALF_UP)
+		String responsePecentagehu = Double.toString(responsePecentage)
+
+		Assert.assertEquals(responsePecentagehu,humsurveyResponsepercentage)
+		/***************Verify that survey response rate percentage is same in Transport and HE tabs.***********************************/
+		WebUI.verifyMatch(humsurveyResponsePercentage, surveyResponsePercentage, false)
+
+	}
+
 
 	@Keyword
 	public void dataInputNavigationTest() throws IOException, InterruptedException, Exception{

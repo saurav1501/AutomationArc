@@ -7,7 +7,11 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
+<<<<<<< HEAD
          <value>//*[@ng-click=&quot;copyLink('en')&quot;]//a['English']</value>
+=======
+         <value>(//*[text()='English'])[2]</value>
+>>>>>>> 5e31c8441c97665330b67c08d35cf29ba4cd951d
       </entry>
       <entry>
          <key>BASIC</key>

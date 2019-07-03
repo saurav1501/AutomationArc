@@ -337,7 +337,8 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 				WebUI.delay(2)
 				WebUI.click(findTestObject('PerformanceScore/RecomputeScore'))
 				WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait,GlobalVariable.avgAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
-			}
+				keepGoing = WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
+				}
 
 		String energyScore = WebUI.getText(findTestObject('PerformanceScore/Score/EnergyScore'))
 		String waterScore = WebUI.getText(findTestObject('PerformanceScore/Score/WaterSocre'))
@@ -1214,15 +1215,18 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		 WebUI.delay(3)*/
 
 		WebUI.scrollToElement(findTestObject('PerformanceScore/Score/a_ Energy'),2)
-		WebUI.delay(1)
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Energy'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
+      
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/RaceTrack/CURRENT ENERGY'), GlobalVariable.avgAngularWait)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/RaceTrack/CURRENT ENERGY'), GlobalVariable.avgAngularWait)
+		
 		WebUI.click(findTestObject('PerformanceScore/RaceTrack/CURRENT ENERGY'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
+		
+	
 		Boolean analyticsEnergy = WebUI.verifyTextPresent('CARBON CONSUMPTION', false)
 		Assert.assertTrue(analyticsEnergy)
 
@@ -1232,7 +1236,11 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Water'))
+		WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/RaceTrack/CURRENT WATER'), GlobalVariable.avgAngularWait)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/RaceTrack/CURRENT WATER'), GlobalVariable.avgAngularWait)
+	
 		WebUI.click(findTestObject('PerformanceScore/RaceTrack/CURRENT WATER'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
@@ -1246,6 +1254,11 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Waste'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/RaceTrack/CURRENT WASTE'), GlobalVariable.avgAngularWait)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/RaceTrack/CURRENT WASTE'), GlobalVariable.avgAngularWait)
+	
+		
 		WebUI.click(findTestObject('PerformanceScore/RaceTrack/CURRENT WASTE'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		Boolean analyticsWaste = WebUI.verifyTextPresent('WASTE GENERATION/DIVERSION', false)
@@ -1256,6 +1269,10 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Transportation'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/RaceTrack/CURRENT TRANSPORTATION'), GlobalVariable.avgAngularWait)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/RaceTrack/CURRENT TRANSPORTATION'), GlobalVariable.avgAngularWait)
+		
 		WebUI.click(findTestObject('PerformanceScore/RaceTrack/CURRENT TRANSPORTATION'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		Boolean analyticsTransport = WebUI.verifyTextPresent('Transportation', false)
@@ -1268,6 +1285,10 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/RaceTrack/CURRENT HUMAN EXPERIENCE'), GlobalVariable.avgAngularWait)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/RaceTrack/CURRENT HUMAN EXPERIENCE'), GlobalVariable.avgAngularWait)
+	
+		
 		WebUI.click(findTestObject('PerformanceScore/RaceTrack/CURRENT HUMAN EXPERIENCE'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		Boolean analyticsHumExp = WebUI.verifyTextPresent('Human Experience', false)

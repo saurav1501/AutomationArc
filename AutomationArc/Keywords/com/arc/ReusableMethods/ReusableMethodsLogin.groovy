@@ -193,11 +193,12 @@ public class ReusableMethodsLogin extends BaseClass{
 	
 		loginIntoArcAppUrl()
 		
-	    boolean myProject = WebUI.waitForElementPresent(findTestObject('Page_Arc dashboard/span_My Projects'),10)
+	    boolean myProject = WebUI.waitForElementPresent(findTestObject('Page_Arc dashboard/span_My Projects'),GlobalVariable.maxAngularWait)
 	   
 		if(myProject==false)
 		for(int i=0;i<5;i++)
 	    loginIntoArcAppUrl()
+		myProject = WebUI.waitForElementPresent(findTestObject('Page_Arc dashboard/span_My Projects'),GlobalVariable.maxAngularWait)
 	    
 		
 	}

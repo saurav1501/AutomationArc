@@ -3420,8 +3420,8 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		/*String UIAnnualwaterconsumption = WebUI.getText(findTestObject('Analytics/Cal/WAnualcarbon'))
 		 double dUIAnnualwaterconsumption =  Double.parseDouble(UIAnnualwaterconsumption)
 		 */
-		String totalUnitGal = data.getCellData(sheetName,"WaterconGal",rowNum)
-		String noOfDays = data.getCellData(sheetName,"WaterNoOfDays",rowNum)
+		String totalUnitGal = data.getCellData(sheetName,"WaterconGal",2)
+		String noOfDays = data.getCellData(sheetName,"WaterNoOfDays",2)
 
 		Double dnoOfDays =  Double.parseDouble(noOfDays)
 		Double dtotalUnitGal =  Double.parseDouble(totalUnitGal)
@@ -3453,8 +3453,8 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		 String uIwaterconsumptiongalPerOccupany =  UIwaterconsumptiongalPerOccupany.replace(',', '')
 		 Double dUIwaterconsumptiongalPerOccupany =  Double.parseDouble(uIwaterconsumptiongalPerOccupany)
 		 */
-		String totalUnitGal = data.getCellData(sheetName,"WaterconGal",rowNum)
-		String noOfDays = data.getCellData(sheetName,"WaterNoOfDays",rowNum)
+		String totalUnitGal = data.getCellData(sheetName,"WaterconGal",2)
+		String noOfDays = data.getCellData(sheetName,"WaterNoOfDays",2)
 
 		Double dnoOfDays =  Double.parseDouble(noOfDays)
 		Double dtotalUnitGal =  Double.parseDouble(totalUnitGal)
@@ -3672,8 +3672,8 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		 Double UiwastegenOccupancy =  Double.parseDouble(UIwastegenOccupancy)
 		 */
 
-		String totalUnitlbs = data.getCellData(sheetName,"GWasteReading",rowNum)
-		String noOfDays = data.getCellData(sheetName,"WasteNoOfDays",rowNum)
+		String totalUnitlbs = data.getCellData(sheetName,"GWasteReading",2)
+		String noOfDays = data.getCellData(sheetName,"WasteNoOfDays",2)
 
 		Double dnoOfDays =  Double.parseDouble(noOfDays)
 		Double dtotalUnitlbs =  Double.parseDouble(totalUnitlbs)
@@ -3716,8 +3716,9 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 		String grossAreasqft = data.getCellData(sheetName,"GrossAreasqft",rowNum)
 		Double dgrossAreasqft =  Double.parseDouble(grossAreasqft)
-		String totalUnitlbs = data.getCellData(sheetName,"DWasteReading",rowNum)
-		String noOfDays = data.getCellData(sheetName,"WasteNoOfDays",rowNum)
+		
+		String totalUnitlbs = data.getCellData(sheetName,"DWasteReading",2)
+		String noOfDays = data.getCellData(sheetName,"WasteNoOfDays",2)
 
 		Double dnoOfDays =  Double.parseDouble(noOfDays)
 		Double dtotalUnitlbs =  Double.parseDouble(totalUnitlbs)
@@ -3747,8 +3748,9 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		Double dBOccupancy =  Double.parseDouble(BOccupancy)
 		String grossAreasqft = data.getCellData(sheetName,"GrossAreasqft",rowNum)
 		Double dgrossAreasqft =  Double.parseDouble(grossAreasqft)
-		String totalUnitlbs = data.getCellData(sheetName,"DWasteReading",rowNum)
-		String noOfDays = data.getCellData(sheetName,"WasteNoOfDays",rowNum)
+		
+		String totalUnitlbs = data.getCellData(sheetName,"DWasteReading",2)
+		String noOfDays = data.getCellData(sheetName,"WasteNoOfDays",2)
 
 		Double dnoOfDays =  Double.parseDouble(noOfDays)
 		Double dtotalUnitlbs =  Double.parseDouble(totalUnitlbs)
@@ -4035,6 +4037,74 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		/****************UI Verses Calculated Value Annual transport per Occupancy*****************************/
 		WebUI.verifyMatch(UIcUitransOccupancy, cannual_annual_carbon_emissionin_lbsOCCp, false)
 	}
+	@Keyword
+	public void annualCarbonwtransportOccupancyV3(String sheetName ,int rowNum) {
+		
+		String BOccupancy = data.getCellData(sheetName,"BOccupancy",rowNum)
+		Double dBOccupancy =  Double.parseDouble(BOccupancy)
+
+		String walk1 = data.getCellData(sheetName, "Walk", rowNum)
+		double dwalk = Double.parseDouble(walk1)
+		double cwalk = dwalk * 0.0
+
+		String bus1 = data.getCellData(sheetName, "Bus", rowNum)
+		double bus2 = Double.parseDouble(bus1)
+		double cbus = bus2 * 0.68
+
+		String tram1 = data.getCellData(sheetName, "Tram", rowNum)
+		double tram2 = Double.parseDouble(tram1)
+		double clight_rail = tram2 * 0.44
+
+		String heavyrail1 = data.getCellData(sheetName, "Heavyrail", rowNum)
+		double heavyrail2 = Double.parseDouble(heavyrail1)
+		double cheavy_rail =  heavyrail2 * 0.33
+
+		String motorcycle1 = data.getCellData(sheetName, "Motorcycle", rowNum)
+		double motorcycle2 = Double.parseDouble(motorcycle1)
+		double cmotorcycle =  motorcycle2 * 0.26
+
+		String carsolo1 = data.getCellData(sheetName, "Carsolo", rowNum)
+		double carsolo2 = Double.parseDouble(carsolo1)
+		double ccar = carsolo2 * 0.93
+
+		String Carpool1 = data.getCellData(sheetName, "Carpool", rowNum)
+		double Carpool2 = Double.parseDouble(Carpool1)
+		double ccar23 = Carpool2 * 0.39
+
+		String Caralternative1 = data.getCellData(sheetName, "Caralternative", rowNum)
+		double Caralternative2 = Double.parseDouble(Caralternative1)
+		double ccars4 = Caralternative2 * 0.44
+
+		double totalTransportCarobn = cwalk + cbus + clight_rail + cheavy_rail + cmotorcycle + ccar + ccar23 + ccars4
+
+		double  Avg_route = totalTransportCarobn / 4
+		println Avg_route
+
+		double  Avg_carbon_emission = Avg_route * 0.00045359237
+		println Avg_carbon_emission
+
+		double daily_carbon_emission = Avg_carbon_emission * 2 * dBOccupancy
+		println daily_carbon_emission
+
+		double annual_carbon_emissionin = daily_carbon_emission * 313
+		println annual_carbon_emissionin
+
+		double annual_annual_carbon_emissionin_lbs = annual_carbon_emissionin / 0.00045359237
+
+		String annual_annual_carbon_emissionin_lbsOCC= annual_annual_carbon_emissionin_lbs/dBOccupancy
+
+		BigDecimal annual_annual_carbon_emissionin_lbsOCCp = new BigDecimal(annual_annual_carbon_emissionin_lbsOCC)
+		annual_annual_carbon_emissionin_lbsOCCp = annual_annual_carbon_emissionin_lbsOCCp.setScale(4,RoundingMode.HALF_UP)
+
+		String cannual_annual_carbon_emissionin_lbsOCCp = annual_annual_carbon_emissionin_lbsOCCp.toString()
+
+		String UIcUitransOccup = WebUI.getText(findTestObject('Analytics/Transport/Aoccupancy'))
+		String UIcUitransOccupancy =  UIcUitransOccup.replace(',', '')
+
+		/****************UI Verses Calculated Value Annual transport per Occupancy*****************************/
+		WebUI.verifyMatch(UIcUitransOccupancy, cannual_annual_carbon_emissionin_lbsOCCp, false)
+	}
+
 
 	@Keyword
 	public void totalannual_carbon_emissions() {
