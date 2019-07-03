@@ -1474,7 +1474,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/meterTab'),FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.delay(2)
 		String MainWindowHandle = driver.getWindowHandle()
-		WebUI.scrollToElement(findTestObject('Object Repository/LEEDOnline/Transportation/ClickOnSurveyButton'), 5)
+		//WebUI.scrollToElement(findTestObject('Object Repository/LEEDOnline/Transportation/ClickOnSurveyButton'), 5)
 		WebUI.click(findTestObject('Object Repository/LEEDOnline/Transportation/ClickOnSurveyButton'))
 		WebUI.delay(1)
 		WebUI.click(findTestObject('Object Repository/LEEDOnline/Transportation/SelectEnglishLanguage'))
