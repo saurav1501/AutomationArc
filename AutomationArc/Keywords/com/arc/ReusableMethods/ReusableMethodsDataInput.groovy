@@ -5003,7 +5003,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		Transferable contents = clipboard.getContents(null)
 		String url = (String) contents.getTransferData(DataFlavor.stringFlavor)
 		data.setCellData(sheetName, "Url", GlobalVariable.rowNumTwo, url)
-
+		WebUI.delay(2)
 		Robot r = new Robot();
 		r.keyPress(KeyEvent.VK_CONTROL);
 		r.keyPress(KeyEvent.VK_T);
@@ -5067,10 +5067,275 @@ public class ReusableMethodsDataInput  extends BaseClass{
 			WebUI.dragAndDropToObject(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'), findTestObject('Object Repository/DataInput/Survey/ExtremelySatisfySpanText'))
 			WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
 			WebUI.delay(2)
-			WebUI.selectOptionByLabel(findTestObject('Object Repository/DataInput/Survey/OccupantTypeSurvey'), "Regular Occupant", false)
+			//WebUI.selectOptionByLabel(findTestObject('Object Repository/DataInput/Survey/OccupantTypeSurvey'), "Regular Occupant", false)
 			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
-			WebUI.selectOptionByLabel(findTestObject('DataInput/Survey/OccupantType'),'Regular Occupant', false)
+			//WebUI.selectOptionByLabel(findTestObject('DataInput/Survey/OccupantType'),'Regular Occupant', false)
+
+			WebUI.click(findTestObject('DataInput/Survey/Submit1'))
+			WebUI.waitForElementClickable(findTestObject('DataInput/Survey/Submit'), GlobalVariable.avgAngularWait)
+
+			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+			WebUI.verifyMatch(WebUI.getText(findTestObject('DataInput/Survey/SurveyThanksMessage')), "Thank you for taking our survey!", false)
+			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
+			println "Survey Submited Successufully"
+
+			WebUI.switchToWindowIndex(0)
+
+		}
+		WebUI.closeWindowIndex(1)
+		WebUI.delay(2)
+		WebUI.switchToWindowIndex(0)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+	}
+
+
+
+
+	@Keyword
+	public void devsurveySubmit(String sheetName) throws IOException, InterruptedException, Exception{
+		WebUI.delay(5)
+		//WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+		navigation.navigateIntoDataInput()
+		WebUI.delay(12)
+		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
+		WebUI.delay(5)
+		String MainWindowHandle = driver.getWindowHandle()
+		WebUI.click(findTestObject('DataInput/Survey/CopySurveyLink'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('DataInput/Survey/English'))
+		WebUI.delay(5)
+		for( int rowNum=2;rowNum<=5;rowNum++)
+		{
+			if(rowNum==2)
+			{
+				String walk1 = data.getCellData(sheetName, "Walk", rowNum)
+				String walk2 = data.getCellData(sheetName, "Bus", rowNum)
+				String walk3 = data.getCellData(sheetName, "Tram", rowNum)
+				String walk4 = data.getCellData(sheetName, "Heavyrail", rowNum)
+				String walk5 = data.getCellData(sheetName, "Motorcycle", rowNum)
+				String walk6 = data.getCellData(sheetName, "Carsolo", rowNum)
+				String walk7 = data.getCellData(sheetName, "Carpool", rowNum)
+				String walk8 = data.getCellData(sheetName, "Caralternative", rowNum)
+				String name = data.getCellData(sheetName, "Name", rowNum)
+
+				Robot r = new Robot();
+				r.keyPress(KeyEvent.VK_CONTROL);
+				r.keyPress(KeyEvent.VK_T);
+				r.keyRelease(KeyEvent.VK_CONTROL)
+				r.keyRelease(KeyEvent.VK_T)
+				WebUI.delay(7)
+				//To switch to the new tab
+				WebUI.switchToWindowIndex(1)
+				WebUI.delay(2)
+				r.keyPress(KeyEvent.VK_CONTROL)
+				r.keyPress(KeyEvent.VK_V)
+				r.keyRelease(KeyEvent.VK_CONTROL)
+				r.keyRelease(KeyEvent.VK_V)
+				WebUI.delay(2)
+				r.keyPress(KeyEvent.VK_ENTER)
+				r.keyRelease(KeyEvent.VK_ENTER)
+				WebUI.delay(17)
+
+				WebUI.click(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'))
+				int it=1;
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk1)
+				it++
+
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk2)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk3)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk4)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk5)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk6)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk7)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk8)
+				it++
+				WebUI.delay(1)
+				WebUI.click(findTestObject('Object Repository/DataInput/Survey/SaveButtonToRecordSurveyData'))
+				WebUI.delay(4)
+				WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'),4)
+
+				WebUI.dragAndDropToObject(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'), findTestObject('Object Repository/DataInput/Survey/ExtremelySatisfySpanText'))
+				WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
+				WebUI.delay(2)
+				WebUI.click(findTestObject('DataInput/Survey/Submit1'))
+				WebUI.delay(3)
+				WebUI.verifyMatch(WebUI.getText(findTestObject('DataInput/Survey/Thank')), "Options that enhance your satisfaction", false)
+				WebUI.delay(3)
+
+				println "Survey Submited Successufully"
+			}
+			else
+			{
+
+				String walk1 = data.getCellData(sheetName, "Walk", rowNum)
+				String walk2 = data.getCellData(sheetName, "Bus", rowNum)
+				String walk3 = data.getCellData(sheetName, "Tram", rowNum)
+				String walk4 = data.getCellData(sheetName, "Heavyrail", rowNum)
+				String walk5 = data.getCellData(sheetName, "Motorcycle", rowNum)
+				String walk6 = data.getCellData(sheetName, "Carsolo", rowNum)
+				String walk7 = data.getCellData(sheetName, "Carpool", rowNum)
+				String walk8 = data.getCellData(sheetName, "Caralternative", rowNum)
+				String name = data.getCellData(sheetName, "Name", rowNum)
+				Robot r = new Robot();
+				r.keyPress(KeyEvent.VK_CONTROL);
+				r.keyPress(KeyEvent.VK_T);
+				r.keyRelease(KeyEvent.VK_CONTROL)
+				r.keyRelease(KeyEvent.VK_T)
+				WebUI.delay(4)
+				WebUI.switchToWindowIndex(2)
+				WebUI.delay(3)
+				r.keyPress(KeyEvent.VK_CONTROL)
+				r.keyPress(KeyEvent.VK_V)
+				r.keyRelease(KeyEvent.VK_CONTROL)
+				r.keyRelease(KeyEvent.VK_V)
+
+				WebUI.delay(2)
+				r.keyPress(KeyEvent.VK_ENTER)
+				r.keyRelease(KeyEvent.VK_ENTER)
+				WebUI.delay(10)
+				WebUI.click(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'))
+				int it=1;
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk1)
+				WebUI.delay(1)
+				it++
+
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk2)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk3)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk4)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk5)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk6)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk7)
+				it++
+				WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk8)
+				it++
+
+				WebUI.click(findTestObject('Object Repository/DataInput/Survey/SaveButtonToRecordSurveyData'))
+				WebUI.delay(4)
+
+				WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'),4)
+
+				WebUI.dragAndDropToObject(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'), findTestObject('Object Repository/DataInput/Survey/ExtremelySatisfySpanText'))
+				WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
+				WebUI.delay(1)
+
+				WebUI.click(findTestObject('DataInput/Survey/Submit'))
+				WebUI.delay(3)
+				WebUI.verifyMatch(WebUI.getText(findTestObject('DataInput/Survey/Thank')), "Options that enhance your satisfaction", false)
+				WebUI.delay(3)
+				println "Survey Submited Successufully"
+				WebUI.closeWindowIndex(2)
+			}
+			WebUI.switchToWindowIndex(0)
+		}
+		WebUI.closeWindowIndex(1)
+		WebUI.delay(2)
+		WebUI.switchToWindowIndex(0)
+		WebUI.delay(2)
+	}
+
+	@Keyword
+	public void surveySubmitVisitor(String sheetName) throws IOException, InterruptedException, Exception{
+
+		navigation.navigateIntoDataInput()
+
+		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
+
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
+		String MainWindowHandle = driver.getWindowHandle()
+
+		WebUI.click(findTestObject('DataInput/Survey/CopySurveyLink'))
+		WebUI.delay(1)
+		WebUI.click(findTestObject('DataInput/Survey/English'))
+
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
+		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard()
+		Transferable contents = clipboard.getContents(null)
+		String url = (String) contents.getTransferData(DataFlavor.stringFlavor)
+		data.setCellData(sheetName, "Url", GlobalVariable.rowNumTwo, url)
+
+		Robot r = new Robot();
+		r.keyPress(KeyEvent.VK_CONTROL);
+		r.keyPress(KeyEvent.VK_T);
+		r.keyRelease(KeyEvent.VK_CONTROL)
+		r.keyRelease(KeyEvent.VK_T)
+		WebUI.delay(1)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		//To switch to the new tab
+
+		for( int rowNum=2;rowNum<=3;rowNum++)
+		{
+
+			String walk1 = data.getCellData(sheetName, "Walk", rowNum)
+			String walk2 = data.getCellData(sheetName, "Bus", rowNum)
+			String walk3 = data.getCellData(sheetName, "Tram", rowNum)
+			String walk4 = data.getCellData(sheetName, "Heavyrail", rowNum)
+			String walk5 = data.getCellData(sheetName, "Motorcycle", rowNum)
+			String walk6 = data.getCellData(sheetName, "Carsolo", rowNum)
+			String walk7 = data.getCellData(sheetName, "Carpool", rowNum)
+			String walk8 = data.getCellData(sheetName, "Caralternative", rowNum)
+			String name = data.getCellData(sheetName, "Name", rowNum)
+
+			WebUI.switchToWindowIndex(1)
+			WebUI.navigateToUrl(url)
+			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+			WebUI.delay(5)
+
+			WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'), GlobalVariable.avgAngularWait)
+			WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'), GlobalVariable.avgAngularWait)
+			WebUI.delay(2)
+			WebUI.click(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'))
+			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
+			int it=1;
+			WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk1)
+			it++
+
+			WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), '0')
+			it++
+
+			WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), '0')
+			it++
+			WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk2)
+			it++
+			WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk3)
+			it++
+			WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk4)
+			it++
+			WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk5)
+			it++
+			WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk6)
+			it++
+			WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk7)
+			it++
+			WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk8)
+			it++
+			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+			WebUI.click(findTestObject('Object Repository/DataInput/Survey/SaveButtonToRecordSurveyData'))
+			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+			WebUI.delay(3)
+			WebUI.dragAndDropToObject(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'), findTestObject('Object Repository/DataInput/Survey/ExtremelySatisfySpanText'))
+			WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
+			WebUI.delay(2)
+			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
+			WebUI.selectOptionByLabel(findTestObject('DataInput/Survey/OccupantType'),'Visitor', false)
 
 			WebUI.click(findTestObject('DataInput/Survey/Submit1'))
 			WebUI.waitForElementClickable(findTestObject('DataInput/Survey/Submit'), GlobalVariable.avgAngularWait)
@@ -5080,208 +5345,316 @@ public class ReusableMethodsDataInput  extends BaseClass{
 			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
 			println "Survey Submited Successufully"
-		
+
+
+		}
+		WebUI.closeWindowIndex(1)
+		WebUI.delay(2)
+		WebUI.switchToWindowIndex(0)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+	}
+
+
+
+	@Keyword
+	public void surveyLanguageCopySurveyLink(){
+
+		//WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+		navigation.navigateIntoDataInput()
+		WebUI.delay(8)
+		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
+		WebUI.delay(5)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Survey/CopySurveyLink'), 20)
+		WebUI.click(findTestObject('DataInput/Survey/CopySurveyLink'))
+		WebUI.delay(2)
+
+		String english =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_English'))
+		String french =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_French'))
+		String port =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_Portuguese'))
+		String german =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_German'))
+		String spanish =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_Spanish'))
+		String chinese =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_Chinese'))
+
+		WebUI.verifyMatch(english,'English', false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(french,'French', false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(port, 'Portuguese', false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(german, 'German', false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(spanish, 'Spanish', false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(chinese, 'Chinese', false, FailureHandling.CONTINUE_ON_FAILURE)
+
+	}
+
+	@Keyword
+	public void navigateToFrench() throws IOException, InterruptedException, Exception{
+		WebUI.waitForElementVisible(findTestObject('DataInput/Survey/CopySurveyLink'), 20)
+		WebUI.click(findTestObject('Object Repository/DataInput/Language/span_French'))
+		WebUI.delay(2)
+
+	}
+
+	@Keyword
+	public void navigateToPort() throws IOException, InterruptedException, Exception{
+		WebUI.waitForElementVisible(findTestObject('DataInput/Survey/CopySurveyLink'), 20)
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/DataInput/Language/span_Portuguese'))
+		WebUI.delay(2)
+	}
+
+	@Keyword
+	public void navigateToGerman() throws IOException, InterruptedException, Exception{
+		WebUI.waitForElementVisible(findTestObject('DataInput/Survey/CopySurveyLink'), 20)
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/DataInput/Language/span_German'))
+		WebUI.delay(2)
+
+	}
+
+	@Keyword
+	public void navigateToSpanish() throws IOException, InterruptedException, Exception{
+		WebUI.waitForElementVisible(findTestObject('DataInput/Survey/CopySurveyLink'), 20)
+		WebUI.click(findTestObject('Object Repository/DataInput/Language/span_Spanish'))
+		WebUI.delay(2)
+
+	}
+
+	@Keyword
+	public void navigateToChinese() throws IOException, InterruptedException, Exception{
+		WebUI.waitForElementVisible(findTestObject('DataInput/Survey/CopySurveyLink'), 20)
+		WebUI.click(findTestObject('Object Repository/DataInput/Language/span_Chinese'))
+		WebUI.delay(2)
+
+	}
+
+	@Keyword
+	public void surveySubmitDifferentLang(String sheetName, int rowNum1) throws IOException, InterruptedException, Exception{
+		int rowNum=2;
+		Robot r = new Robot()
+		String walk1 = data.getCellData(sheetName, "Walk", rowNum)
+		String walk2 = data.getCellData(sheetName, "Bus", rowNum)
+		String walk3 = data.getCellData(sheetName, "Tram", rowNum)
+		String walk4 = data.getCellData(sheetName, "Heavyrail", rowNum)
+		String walk5 = data.getCellData(sheetName, "Motorcycle", rowNum)
+		String walk6 = data.getCellData(sheetName, "Carsolo", rowNum)
+		String walk7 = data.getCellData(sheetName, "Carpool", rowNum)
+		String walk8 = data.getCellData(sheetName, "Caralternative", rowNum)
+		//	String name = data.getCellData(sheetName, "Name", rowNum)
+		String languageRespecitive = data.getCellData(sheetName, "Thanku", rowNum1)
+		WebUI.delay(1)
+		r.keyPress(KeyEvent.VK_CONTROL)
+		r.keyPress(KeyEvent.VK_T)
+		r.keyRelease(KeyEvent.VK_CONTROL)
+		r.keyRelease(KeyEvent.VK_T)
+
+		WebUI.delay(4)
+		WebUI.switchToWindowIndex(1)
+		WebUI.delay(1)
+		r.keyPress(KeyEvent.VK_CONTROL)
+		r.keyPress(KeyEvent.VK_V)
+		r.keyRelease(KeyEvent.VK_CONTROL)
+		r.keyRelease(KeyEvent.VK_V)
+		WebUI.delay(4)
+		r.keyPress(KeyEvent.VK_ENTER)
+		r.keyRelease(KeyEvent.VK_ENTER)
+		WebUI.delay(5)
+
+		WebUI.scrollToElement(findTestObject('DataInput/Survey/WalkR1'),10)
+		WebUI.setText(findTestObject('DataInput/Survey/WalkR1'), walk1)
+		WebUI.setText(findTestObject('DataInput/Survey/BusR1'), walk2)
+		WebUI.setText(findTestObject('DataInput/Survey/TramR1'), walk3)
+		WebUI.setText(findTestObject('DataInput/Survey/HeavyRailR1'), walk4)
+		WebUI.setText(findTestObject('DataInput/Survey/MotorcycleR1'), walk5)
+		WebUI.setText(findTestObject('DataInput/Survey/carSoloR1'), walk6)
+		WebUI.setText(findTestObject('DataInput/Survey/car23R1'), walk7)
+		WebUI.setText(findTestObject('DataInput/Survey/cars4R1'), walk8)
+		WebUI.click(findTestObject('DataInput/Survey/ACCEPTANDCLOSE'),FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.delay(2)
+		/*	WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'),name)
+		 WebUI.delay(2)
+		 */	WebUI.click(findTestObject('DataInput/Survey/Submit'))
+		WebUI.delay(3)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Survey/Thank'), 20)
+		String ulanguageRespecitive = WebUI.getText(findTestObject('DataInput/Survey/ThankuLanguage'))
+		WebUI.verifyMatch(languageRespecitive, languageRespecitive, false, FailureHandling.CONTINUE_ON_FAILURE)
+
+		WebUI.click(findTestObject('Object Repository/DataInput/Survey/ReloadSurvey'))
+		WebUI.delay(3)
+		WebUI.waitForPageLoad(GlobalVariable.timeOut)
+		println "Survey Submited Successufully"
+		WebUI.verifyTextPresent("Your World is Alive!", false, FailureHandling.STOP_ON_FAILURE)
+		WebUI.verifyTextPresent(sheetName, false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.closeWindowIndex(1)
+		WebUI.switchToWindowIndex(0)
+	}
+
+
+
+
+	@Keyword
+	public void surveyLanguageEmail(){
+
+		WebUI.scrollToElement(findTestObject('DataInput/Language/button_Email Survey'),3)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Language/button_Email Survey'), 20)
+		WebUI.click(findTestObject('DataInput/Language/button_Email Survey'))
+		WebUI.delay(2)
+
+		String english =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_English'))
+		String french =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_French'))
+		String port =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_Portuguese'))
+		String german =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_German'))
+		String spanish =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_Spanish'))
+		String chinese =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_Chinese'))
+
+		WebUI.verifyMatch(english, 'English', false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(french, 'French', false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(port, 'Portuguese', false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(german, 'German', false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(spanish, 'Spanish', false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(chinese, 'Chinese', false, FailureHandling.CONTINUE_ON_FAILURE)
+
+	}
+
+
+	@Keyword
+	public void surveySubmitTr(String sheetName) throws IOException, InterruptedException, Exception{
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.maxAngularWait)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Survey/div_Transportation Survey'), 40)
+		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Survey/CopySurveyLink'), 20)
+		WebUI.click(findTestObject('DataInput/Survey/CopySurveyLink'))
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.click(findTestObject('DataInput/Survey/English'))
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard()
+		Transferable contents = clipboard.getContents(null)
+		String url = (String) contents.getTransferData(DataFlavor.stringFlavor)
+		data.setCellData(sheetName, "Url", GlobalVariable.rowNumTwo, url)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		Robot r = new Robot()
+		for( int rowNum=2;rowNum<=5;rowNum++)
+		{
+
+			if(rowNum==2)
+			{
+				String walk1 = data.getCellData(sheetName, "Walk", rowNum)
+				String walk2 = data.getCellData(sheetName, "Bus", rowNum)
+				String walk3 = data.getCellData(sheetName, "Tram", rowNum)
+				String walk4 = data.getCellData(sheetName, "Heavyrail", rowNum)
+				String walk5 = data.getCellData(sheetName, "Motorcycle", rowNum)
+				String walk6 = data.getCellData(sheetName, "Carsolo", rowNum)
+				String walk7 = data.getCellData(sheetName, "Carpool", rowNum)
+				String walk8 = data.getCellData(sheetName, "Caralternative", rowNum)
+				String name = data.getCellData(sheetName, "Name", rowNum)
+
+				r.keyPress(KeyEvent.VK_CONTROL);
+				r.keyPress(KeyEvent.VK_T);
+				r.keyRelease(KeyEvent.VK_CONTROL)
+				r.keyRelease(KeyEvent.VK_T)
+				WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+
+				r.keyPress(KeyEvent.VK_CONTROL)
+				r.keyPress(KeyEvent.VK_V)
+				r.keyRelease(KeyEvent.VK_CONTROL)
+				r.keyRelease(KeyEvent.VK_V)
+				WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+				r.keyPress(KeyEvent.VK_ENTER)
+				r.keyRelease(KeyEvent.VK_ENTER)
+				WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+				WebUI.switchToWindowIndex(1)
+				WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+
+				WebUI.scrollToElement(findTestObject('DataInput/Survey/WalkR1'), 10)
+				WebUI.setText(findTestObject('DataInput/Survey/WalkR1'), walk1)
+				WebUI.setText(findTestObject('DataInput/Survey/BusR1'), walk2)
+				WebUI.setText(findTestObject('DataInput/Survey/TramR1'), walk3)
+				WebUI.setText(findTestObject('DataInput/Survey/HeavyRailR1'), walk4)
+				WebUI.setText(findTestObject('DataInput/Survey/MotorcycleR1'), walk5)
+				WebUI.setText(findTestObject('DataInput/Survey/carSoloR1'), walk6)
+				WebUI.setText(findTestObject('DataInput/Survey/car23R1'), walk7)
+				WebUI.setText(findTestObject('DataInput/Survey/cars4R1'), walk8)
+
+				boolean surveyAccept = WebUI.verifyElementVisible(findTestObject('DataInput/Survey/ACCEPTANDCLOSE'),FailureHandling.OPTIONAL)
+				println surveyAccept
+				if((surveyAccept)){
+					WebUI.click(findTestObject('DataInput/Survey/ACCEPTANDCLOSE'))
+				}
+				WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+				WebUI.click(findTestObject('DataInput/Survey/Submit'))
+				WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+				WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Survey/ReloadSurvey'), 20)
+				WebUI.click(findTestObject('Object Repository/DataInput/Survey/ReloadSurvey'))
+				WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+				WebUI.waitForPageLoad(GlobalVariable.timeOut)
+				println "Survey Submited Successufully"
+				//WebUI.verifyElementVisible(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/YourWorldIsAliveText'), FailureHandling.CONTINUE_ON_FAILURE)
+				/*WebUI.closeWindowIndex(1)
+				 WebUI.switchToWindowIndex(0)*/
+			}
+			else
+			{
+
+				String walk1 = data.getCellData(sheetName, "Walk", rowNum)
+				String walk2 = data.getCellData(sheetName, "Bus", rowNum)
+				String walk3 = data.getCellData(sheetName, "Tram", rowNum)
+				String walk4 = data.getCellData(sheetName, "Heavyrail", rowNum)
+				String walk5 = data.getCellData(sheetName, "Motorcycle", rowNum)
+				String walk6 = data.getCellData(sheetName, "Carsolo", rowNum)
+				String walk7 = data.getCellData(sheetName, "Carpool", rowNum)
+				String walk8 = data.getCellData(sheetName, "Caralternative", rowNum)
+				String name = data.getCellData(sheetName, "Name", rowNum)
+
+				WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+				WebUI.navigateToUrl(url)
+				WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+
+				WebUI.scrollToElement(findTestObject('DataInput/Survey/WalkR1'), 10)
+				WebUI.setText(findTestObject('DataInput/Survey/WalkR1'), walk1)
+				WebUI.setText(findTestObject('DataInput/Survey/BusR1'), walk2)
+				WebUI.setText(findTestObject('DataInput/Survey/TramR1'), walk3)
+				WebUI.setText(findTestObject('DataInput/Survey/HeavyRailR1'),walk4)
+				WebUI.setText(findTestObject('DataInput/Survey/MotorcycleR1'), walk5)
+				WebUI.setText(findTestObject('DataInput/Survey/carSoloR1'), walk6)
+				WebUI.setText(findTestObject('DataInput/Survey/car23R1'), walk7)
+				WebUI.setText(findTestObject('DataInput/Survey/cars4R1'), walk8)
+				//WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
+				WebUI.click(findTestObject('DataInput/Survey/Submit'))
+				WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+				WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Survey/ReloadSurvey'), 20)
+				WebUI.click(findTestObject('Object Repository/DataInput/Survey/ReloadSurvey'))
+				WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+				WebUI.waitForPageLoad(GlobalVariable.timeOut)
+				WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+				println "Survey Submited Successufully"
+
+			}
+
+		}
+		WebUI.closeWindowIndex(1)
 		WebUI.switchToWindowIndex(0)
 
 	}
-	WebUI.closeWindowIndex(1)
-	WebUI.delay(2)
-	WebUI.switchToWindowIndex(0)
-	WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-}
-
-
-
-
-@Keyword
-public void devsurveySubmit(String sheetName) throws IOException, InterruptedException, Exception{
-	WebUI.delay(5)
-	//WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
-	navigation.navigateIntoDataInput()
-	WebUI.delay(12)
-	WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
-	WebUI.delay(5)
-	String MainWindowHandle = driver.getWindowHandle()
-	WebUI.click(findTestObject('DataInput/Survey/CopySurveyLink'))
-	WebUI.delay(2)
-	WebUI.click(findTestObject('DataInput/Survey/English'))
-	WebUI.delay(5)
-	for( int rowNum=2;rowNum<=5;rowNum++)
-	{
-		if(rowNum==2)
-		{
-			String walk1 = data.getCellData(sheetName, "Walk", rowNum)
-			String walk2 = data.getCellData(sheetName, "Bus", rowNum)
-			String walk3 = data.getCellData(sheetName, "Tram", rowNum)
-			String walk4 = data.getCellData(sheetName, "Heavyrail", rowNum)
-			String walk5 = data.getCellData(sheetName, "Motorcycle", rowNum)
-			String walk6 = data.getCellData(sheetName, "Carsolo", rowNum)
-			String walk7 = data.getCellData(sheetName, "Carpool", rowNum)
-			String walk8 = data.getCellData(sheetName, "Caralternative", rowNum)
-			String name = data.getCellData(sheetName, "Name", rowNum)
-
-			Robot r = new Robot();
-			r.keyPress(KeyEvent.VK_CONTROL);
-			r.keyPress(KeyEvent.VK_T);
-			r.keyRelease(KeyEvent.VK_CONTROL)
-			r.keyRelease(KeyEvent.VK_T)
-			WebUI.delay(7)
-			//To switch to the new tab
-			WebUI.switchToWindowIndex(1)
-			WebUI.delay(2)
-			r.keyPress(KeyEvent.VK_CONTROL)
-			r.keyPress(KeyEvent.VK_V)
-			r.keyRelease(KeyEvent.VK_CONTROL)
-			r.keyRelease(KeyEvent.VK_V)
-			WebUI.delay(2)
-			r.keyPress(KeyEvent.VK_ENTER)
-			r.keyRelease(KeyEvent.VK_ENTER)
-			WebUI.delay(17)
-
-			WebUI.click(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'))
-			int it=1;
-			WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk1)
-			it++
-
-			WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk2)
-			it++
-			WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk3)
-			it++
-			WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk4)
-			it++
-			WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk5)
-			it++
-			WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk6)
-			it++
-			WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk7)
-			it++
-			WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk8)
-			it++
-			WebUI.delay(1)
-			WebUI.click(findTestObject('Object Repository/DataInput/Survey/SaveButtonToRecordSurveyData'))
-			WebUI.delay(4)
-			WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'),4)
-
-			WebUI.dragAndDropToObject(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'), findTestObject('Object Repository/DataInput/Survey/ExtremelySatisfySpanText'))
-			WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
-			WebUI.delay(2)
-			WebUI.click(findTestObject('DataInput/Survey/Submit1'))
-			WebUI.delay(3)
-			WebUI.verifyMatch(WebUI.getText(findTestObject('DataInput/Survey/Thank')), "Options that enhance your satisfaction", false)
-			WebUI.delay(3)
-
-			println "Survey Submited Successufully"
-		}
-		else
-		{
-
-			String walk1 = data.getCellData(sheetName, "Walk", rowNum)
-			String walk2 = data.getCellData(sheetName, "Bus", rowNum)
-			String walk3 = data.getCellData(sheetName, "Tram", rowNum)
-			String walk4 = data.getCellData(sheetName, "Heavyrail", rowNum)
-			String walk5 = data.getCellData(sheetName, "Motorcycle", rowNum)
-			String walk6 = data.getCellData(sheetName, "Carsolo", rowNum)
-			String walk7 = data.getCellData(sheetName, "Carpool", rowNum)
-			String walk8 = data.getCellData(sheetName, "Caralternative", rowNum)
-			String name = data.getCellData(sheetName, "Name", rowNum)
-			Robot r = new Robot();
-			r.keyPress(KeyEvent.VK_CONTROL);
-			r.keyPress(KeyEvent.VK_T);
-			r.keyRelease(KeyEvent.VK_CONTROL)
-			r.keyRelease(KeyEvent.VK_T)
-			WebUI.delay(4)
-			WebUI.switchToWindowIndex(2)
-			WebUI.delay(3)
-			r.keyPress(KeyEvent.VK_CONTROL)
-			r.keyPress(KeyEvent.VK_V)
-			r.keyRelease(KeyEvent.VK_CONTROL)
-			r.keyRelease(KeyEvent.VK_V)
-
-			WebUI.delay(2)
-			r.keyPress(KeyEvent.VK_ENTER)
-			r.keyRelease(KeyEvent.VK_ENTER)
-			WebUI.delay(10)
-			WebUI.click(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'))
-			int it=1;
-			WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk1)
-			WebUI.delay(1)
-			it++
-
-			WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk2)
-			it++
-			WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk3)
-			it++
-			WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk4)
-			it++
-			WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk5)
-			it++
-			WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk6)
-			it++
-			WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk7)
-			it++
-			WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk8)
-			it++
-
-			WebUI.click(findTestObject('Object Repository/DataInput/Survey/SaveButtonToRecordSurveyData'))
-			WebUI.delay(4)
-
-			WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'),4)
-
-			WebUI.dragAndDropToObject(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'), findTestObject('Object Repository/DataInput/Survey/ExtremelySatisfySpanText'))
-			WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
-			WebUI.delay(1)
-
-			WebUI.click(findTestObject('DataInput/Survey/Submit'))
-			WebUI.delay(3)
-			WebUI.verifyMatch(WebUI.getText(findTestObject('DataInput/Survey/Thank')), "Options that enhance your satisfaction", false)
-			WebUI.delay(3)
-			println "Survey Submited Successufully"
-			WebUI.closeWindowIndex(2)
-		}
-		WebUI.switchToWindowIndex(0)
-	}
-	WebUI.closeWindowIndex(1)
-	WebUI.delay(2)
-	WebUI.switchToWindowIndex(0)
-	WebUI.delay(2)
-}
-
-@Keyword
-public void surveySubmitVisitor(String sheetName) throws IOException, InterruptedException, Exception{
-
-	navigation.navigateIntoDataInput()
-
-	WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
-
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
-	String MainWindowHandle = driver.getWindowHandle()
-
-	WebUI.click(findTestObject('DataInput/Survey/CopySurveyLink'))
-	WebUI.delay(1)
-	WebUI.click(findTestObject('DataInput/Survey/English'))
-
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
-	Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard()
-	Transferable contents = clipboard.getContents(null)
-	String url = (String) contents.getTransferData(DataFlavor.stringFlavor)
-	data.setCellData(sheetName, "Url", GlobalVariable.rowNumTwo, url)
-
-	Robot r = new Robot();
-	r.keyPress(KeyEvent.VK_CONTROL);
-	r.keyPress(KeyEvent.VK_T);
-	r.keyRelease(KeyEvent.VK_CONTROL)
-	r.keyRelease(KeyEvent.VK_T)
-	WebUI.delay(1)
-	WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-	//To switch to the new tab
-
-	for( int rowNum=2;rowNum<=3;rowNum++)
-	{
-
+	@Keyword
+	public void surveySubmitOneTime(String sheetName ,int rowNum) throws IOException, InterruptedException, Exception{
+		WebUI.delay(8)
+		//WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+		navigation.navigateIntoDataInput()
+		WebUI.delay(12)
+		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
+		WebUI.delay(5)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Survey/CopySurveyLink'), 20)
+		WebUI.click(findTestObject('DataInput/Survey/CopySurveyLink'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('DataInput/Survey/English'))
+		WebUI.delay(2)
+		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard()
+		Transferable contents = clipboard.getContents(null)
+		String url = (String) contents.getTransferData(DataFlavor.stringFlavor)
+		data.setCellData(sheetName, "Url", GlobalVariable.rowNumTwo, url)
+		WebUI.delay(6)
+		Robot r = new Robot()
 		String walk1 = data.getCellData(sheetName, "Walk", rowNum)
 		String walk2 = data.getCellData(sheetName, "Bus", rowNum)
 		String walk3 = data.getCellData(sheetName, "Tram", rowNum)
@@ -5291,2029 +5664,1656 @@ public void surveySubmitVisitor(String sheetName) throws IOException, Interrupte
 		String walk7 = data.getCellData(sheetName, "Carpool", rowNum)
 		String walk8 = data.getCellData(sheetName, "Caralternative", rowNum)
 		String name = data.getCellData(sheetName, "Name", rowNum)
-
+		WebUI.delay(2)
+		((JavascriptExecutor)driver).executeScript('window.open("");')
+		WebUI.delay(4)
 		WebUI.switchToWindowIndex(1)
+		WebUI.delay(2)
 		WebUI.navigateToUrl(url)
+
+		WebUI.scrollToElement(findTestObject('DataInput/Survey/WalkR1'), 10)
+		WebUI.setText(findTestObject('DataInput/Survey/WalkR1'), walk1)
+		WebUI.setText(findTestObject('DataInput/Survey/BusR1'), walk2)
+		WebUI.setText(findTestObject('DataInput/Survey/TramR1'), walk3)
+		WebUI.setText(findTestObject('DataInput/Survey/HeavyRailR1'), walk4)
+		WebUI.setText(findTestObject('DataInput/Survey/MotorcycleR1'), walk5)
+		WebUI.setText(findTestObject('DataInput/Survey/carSoloR1'), walk6)
+		WebUI.setText(findTestObject('DataInput/Survey/car23R1'), walk7)
+		WebUI.setText(findTestObject('DataInput/Survey/cars4R1'), walk8)
+		WebUI.click(findTestObject('DataInput/Survey/ACCEPTANDCLOSE'),FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.delay(2)
+		//WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
+		WebUI.delay(2)
+		WebUI.click(findTestObject('DataInput/Survey/Submit'))
+		WebUI.delay(3)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Survey/ReloadSurvey'), 20)
+		WebUI.click(findTestObject('Object Repository/DataInput/Survey/ReloadSurvey'))
+		WebUI.delay(3)
+		WebUI.waitForPageLoad(GlobalVariable.timeOut)
+		println "Survey Submited Successufully"
+		//WebUI.verifyElementVisible(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/YourWorldIsAliveText'), FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.closeWindowIndex(1)
+		WebUI.switchToWindowIndex(0)
+
+	}
+
+
+
+
+	@Keyword
+	public void percentageSurveyResponseRateCalculationTransit() throws IOException, InterruptedException, Exception{
+
+		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForElementPresent(findTestObject('Manage/Project/WeightedOccupancy'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('Manage/Project/WeightedOccupancy'), GlobalVariable.minAngularWait)
+		WebUI.scrollToElement(findTestObject('Manage/Project/WeightedOccupancy'), 10)
+		String projectoccupancy = WebUI.getAttribute(findTestObject('Manage/Project/WeightedOccupancy'),'value')
+		double projectOccupancy= Double.parseDouble(projectoccupancy)
+		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
+
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.maxAngularWait)
+		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
+
+		/******Verify that survey response rate% is calculated on the basis of the following formula [ Response %ge = (No. of responses/Occupancy)*100 ] . Always count the no of responses by counting the no of rows of transport survey results.*****/
+		String surveyResponsePercentage = WebUI.getText(findTestObject('DataInput/Survey/SurveyResponsePercentage'))
+		String surveyResponsepercentage1 = surveyResponsePercentage.replace("%","")
+		String surveyResponsepercentage = surveyResponsepercentage1.replaceAll("\\s","")
+		double surveyresponsepercentage= Double.parseDouble(surveyResponsepercentage)
+		println surveyResponsepercentage
+
+		double calculatedresponsePecentage = (4/projectOccupancy)*100
+
+		BigDecimal responsePecentage = new BigDecimal(calculatedresponsePecentage)
+		responsePecentage = responsePecentage.setScale(2,RoundingMode.HALF_UP)
+		String responsePecentageTr = Double.toString(responsePecentage)
+		println responsePecentageTr
+
+		WebUI.verifyMatch(responsePecentageTr, surveyResponsepercentage, false)
+		/******Verify that survey response rate% is calculated on the basis of the following formula [ Response %ge = (No. of responses/Occupancy)*100 ] . Always count the no of responses by counting the no of rows of HUMAN EXPERIENCE survey results.*****/
+		WebUI.click(findTestObject('DataInput/Survey/OccupantSatisfactionSurv'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
+
+		String humsurveyResponsePercentage = WebUI.getText(findTestObject('DataInput/Survey/SurveyResponsePercentage'))
+		String humsurveyResponsepercentage1 = surveyResponsePercentage.replace("%" ,"")
+		String humsurveyResponsepercentage = humsurveyResponsepercentage1.replaceAll("\\s","")
+
+		print humsurveyResponsepercentage
+		double humsurveyresponsepercentage= Double.parseDouble(humsurveyResponsepercentage)
+
+		double humcalculatedresponsePecentage = (4/projectOccupancy)*100
+		BigDecimal responsePecentagehum = new BigDecimal(calculatedresponsePecentage)
+		responsePecentagehum = responsePecentagehum.setScale(2, RoundingMode.HALF_UP)
+		String responsePecentagehu = Double.toString(responsePecentage)
+
+		Assert.assertEquals(responsePecentagehu,humsurveyResponsepercentage)
+		/***************Verify that survey response rate percentage is same in Transport and HE tabs.***********************************/
+		WebUI.verifyMatch(humsurveyResponsePercentage, surveyResponsePercentage, false)
+
+	}
+
+	@Keyword
+	public void percentageSurveyResponseRateCalculationBuiding() throws IOException, InterruptedException, Exception{
+
+		navigation.navigateIntoDataInput()
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
+		WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
+		String projectoccupancy = WebUI.getAttribute((findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne')),'value')
+		double projectOccupancy= Double.parseDouble(projectoccupancy)
+
+		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(2)
+		WebUI.waitForElementPresent(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
+
+		/******Verify that survey response rate% is calculated on the basis of the following formula [ Response %ge = (No. of responses/Occupancy)*100 ] . Always count the no of responses by counting the no of rows of transport survey results.*****/
+		String surveyResponsePercentage = WebUI.getText(findTestObject('DataInput/Survey/SurveyResponsePercentage'))
+		String surveyResponsepercentage1 = surveyResponsePercentage.replace("%","")
+		String surveyResponsepercentage = surveyResponsepercentage1.replaceAll("\\s","")
+		double surveyresponsepercentage= Double.parseDouble(surveyResponsepercentage)
+		println surveyResponsepercentage
+
+		double calculatedresponsePecentage = (4/projectOccupancy)*100
+
+		BigDecimal responsePecentage = new BigDecimal(calculatedresponsePecentage)
+		responsePecentage = responsePecentage.setScale(2,RoundingMode.HALF_UP)
+		String responsePecentageTr = Double.toString(responsePecentage)
+		println responsePecentageTr
+
+		WebUI.verifyMatch(responsePecentageTr, surveyResponsepercentage, false)
+		/******Verify that survey response rate% is calculated on the basis of the following formula [ Response %ge = (No. of responses/Occupancy)*100 ] . Always count the no of responses by counting the no of rows of HUMAN EXPERIENCE survey results.*****/
+		WebUI.click(findTestObject('DataInput/Survey/OccupantSatisfactionSurv'))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(2)
+
+		WebUI.waitForElementPresent(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
+
+
+		String humsurveyResponsePercentage = WebUI.getText(findTestObject('DataInput/Survey/SurveyResponsePercentage'))
+		String humsurveyResponsepercentage1 = surveyResponsePercentage.replace("%" ,"")
+		String humsurveyResponsepercentage = humsurveyResponsepercentage1.replaceAll("\\s","")
+
+		print humsurveyResponsepercentage
+		double humsurveyresponsepercentage= Double.parseDouble(humsurveyResponsepercentage)
+
+		double humcalculatedresponsePecentage = (4/projectOccupancy)*100
+		BigDecimal responsePecentagehum = new BigDecimal(calculatedresponsePecentage)
+		responsePecentagehum = responsePecentagehum.setScale(2, RoundingMode.HALF_UP)
+		String responsePecentagehu = Double.toString(responsePecentage)
+
+		Assert.assertEquals(responsePecentagehu,humsurveyResponsepercentage)
+		/***************Verify that survey response rate percentage is same in Transport and HE tabs.***********************************/
+		WebUI.verifyMatch(humsurveyResponsePercentage, surveyResponsePercentage, false)
+
+	}
+
+	@Keyword
+	public void percentageSurveyResponseRateCalculationBuidingV3(String sheetName,int rowNum) throws IOException, InterruptedException, Exception{
+
+
+		String occupant = data.getCellData(sheetName,'BOccupancy', rowNum)
+		double doccupant = Double.parseDouble(occupant)
+
+		navigation.navigateIntoDataInput()
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
+		WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
+
+		String projectoccupancy = WebUI.getAttribute((findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne')),'value')
+		double projectOccupancy= Double.parseDouble(projectoccupancy)
+
+		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(2)
+		WebUI.waitForElementPresent(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
+
+
+		/******Verify that survey response rate% is calculated on the basis of the following formula [ Response %ge = (No. of responses/Occupancy)*100 ] . Always count the no of responses by counting the no of rows of transport survey results.*****/
+		String surveyResponsePercentage = WebUI.getText(findTestObject('DataInput/Survey/SurveyResponsePercentage'))
+		String surveyResponsepercentage1 = surveyResponsePercentage.replace("%","")
+		String surveyResponsepercentage = surveyResponsepercentage1.replaceAll("\\s","")
+		double surveyresponsepercentage= Double.parseDouble(surveyResponsepercentage)
+		println surveyResponsepercentage
+
+		double calculatedresponsePecentage = (doccupant/projectOccupancy)*100
+
+		BigDecimal responsePecentage = new BigDecimal(calculatedresponsePecentage)
+		responsePecentage = responsePecentage.setScale(2,RoundingMode.HALF_UP)
+		String responsePecentageTr = Double.toString(responsePecentage)
+		println responsePecentageTr
+
+		WebUI.verifyMatch(responsePecentageTr, surveyResponsepercentage, false)
+		/******Verify that survey response rate% is calculated on the basis of the following formula [ Response %ge = (No. of responses/Occupancy)*100 ] . Always count the no of responses by counting the no of rows of HUMAN EXPERIENCE survey results.*****/
+		WebUI.click(findTestObject('DataInput/Survey/OccupantSatisfactionSurv'))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(2)
+
+		WebUI.waitForElementPresent(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
+
+
+		String humsurveyResponsePercentage = WebUI.getText(findTestObject('DataInput/Survey/SurveyResponsePercentage'))
+		String humsurveyResponsepercentage1 = surveyResponsePercentage.replace("%" ,"")
+		String humsurveyResponsepercentage = humsurveyResponsepercentage1.replaceAll("\\s","")
+
+		print humsurveyResponsepercentage
+		double humsurveyresponsepercentage= Double.parseDouble(humsurveyResponsepercentage)
+
+		double humcalculatedresponsePecentage = (doccupant/projectOccupancy)*100
+		BigDecimal responsePecentagehum = new BigDecimal(calculatedresponsePecentage)
+		responsePecentagehum = responsePecentagehum.setScale(2, RoundingMode.HALF_UP)
+		String responsePecentagehu = Double.toString(responsePecentage)
+
+		Assert.assertEquals(responsePecentagehu,humsurveyResponsepercentage)
+		/***************Verify that survey response rate percentage is same in Transport and HE tabs.***********************************/
+		WebUI.verifyMatch(humsurveyResponsePercentage, surveyResponsePercentage, false)
+
+	}
+
+
+	@Keyword
+	public void dataInputNavigationTest() throws IOException, InterruptedException, Exception{
+
+		//WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+		navigation.navigateIntoDataInput()
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.verifyElementPresent(findTestObject('DataInput/Nav/No Energy meter present'), 5, FailureHandling.CONTINUE_ON_FAILURE)
+
+		WebUI.click(findTestObject('DataInput/Nav/button_Next'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.verifyElementPresent(findTestObject('DataInput/Nav/No Water meter present'), 5, FailureHandling.CONTINUE_ON_FAILURE)
+
+		WebUI.click(findTestObject('DataInput/Nav/button_Next'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.verifyElementPresent(findTestObject('DataInput/Nav/No readings present for Was'), 5, FailureHandling.CONTINUE_ON_FAILURE)
+
+		WebUI.click(findTestObject('DataInput/Nav/button_Next'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.verifyElementPresent(findTestObject('DataInput/Nav/Transportation Survey'), 5, FailureHandling.CONTINUE_ON_FAILURE)
+
+		WebUI.click(findTestObject('DataInput/Nav/button_Next'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.verifyElementPresent(findTestObject('DataInput/Nav/Hum Exp Satisfaction'), 5, FailureHandling.CONTINUE_ON_FAILURE)
+
+		WebUI.click(findTestObject('DataInput/Nav/button_Next'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.verifyElementPresent(findTestObject('DataInput/Nav/No Energy meter present'), 5, FailureHandling.CONTINUE_ON_FAILURE)
+
+
+	}
+
+	@Keyword
+	public void allActionNavigationTest() throws IOException, InterruptedException, Exception{
+
+	}
+	//Add New Meter" in Energy Tab, should be present, to create a new meter
+	@Keyword
+	public void checkEnergyAndWaterMeterCreateTabDataInput(){
+		WebUI.verifyElementPresent(findTestObject('Object Repository/DataInput/DataInputFileUpload/EnergyTabDataInput'), 5)
+		WebUI.verifyElementPresent(findTestObject('Object Repository/DataInput/DataInputFileUpload/AddNewMeterButton'), 5)
+		WebUI.verifyElementPresent(findTestObject('Object Repository/DataInput/DataInputFileUpload/WaterMeterTab'), 5)
+		WebUI.verifyElementPresent(findTestObject('Object Repository/DataInput/DataInputFileUpload/AddNewWaterMeterButton'), 5)
+	}
+
+
+	@Keyword
+	public void waterScoreShouldNotrecomputemun(String sheetName){
+		WebUI.scrollToElement(findTestObject('DataInput/Survey/a_ Data Input'),5)
+		//WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+		navigation.navigateIntoDataInput()
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/MeterWater/AnalyticsWater meter'), GlobalVariable.minAngularWait)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/MeterWater/AnalyticsWater meter'), GlobalVariable.minAngularWait)
+
+		String uIwaterScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/WaterScore'))
+		data.setCellData(sheetName,"waterScore",5,uIwaterScore)
+
+		WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/AnalyticsWater meter'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/Details'))
+		WebUI.delay(2)
+
+		WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/button_Municipality supplied'))
+		WebUI.delay(2)
+
+		WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/a_Municipality supplied reclai'))
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/WaterScore'),40)
+
+		//CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsPerformanceScore.analyticsgenratePerformanceScoreAdminToolOtherNone1'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
+
+		performanceScore.analyticsgenratePerformanceScoreAdminToolOtherNone1(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
+
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+
+
+
+		String waterScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/WaterScore'))
+		WebUI.verifyMatch(waterScore,'0', false)
+
+	}
+
+	@Keyword
+	public void waterScoreShouldNotrecomputemunReclaimedonsite(){
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
+
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+
+
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/MeterWater/button_Municipality supplied'),4)
+		WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/button_Municipality supplied'))
+		WebUI.delay(2)
+
+		WebUI.click(findTestObject('Add_Project_Details/Star/a_Reclaimed onsite'))
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/WaterScore'),40)
+
+		performanceScore.analyticsgenratePerformanceScoreAdminToolOtherNone1(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
+
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
+		String rwaterScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/WaterScore'))
+
+		WebUI.verifyMatch(rwaterScore,'0', false, FailureHandling.CONTINUE_ON_FAILURE)
+	}
+	@Keyword
+	public void waterScoreShouldrecomput(String sheetName){
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/MeterWater/button_Municipality supplied'),4)
+		WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/button_Municipality supplied'))
+		WebUI.delay(2)
+
+		WebUI.click(findTestObject('Add_Project_Details/Star/a_Municipality supplied potabl'))
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/WaterScore'),40)
+
+		performanceScore.analyticsgenratePerformanceScoreAdminToolOtherNone1(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
+
+		WebUI.closeWindowIndex(1)
+		WebUI.switchToWindowIndex(0)
+		WebUI.delay(2)
+
+		/********************Changing to the default score of water ***********************************************/
+		WebUI.scrollToElement(findTestObject('PerformanceScore/DataInput/WaterScore'),5)
+		String awaterScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/WaterScore'))
+		String pwaterScore = data.getCellData(sheetName,"waterScore", 5)
+		WebUI.verifyMatch(awaterScore, pwaterScore, false)
+
+
+	}
+	@Keyword
+	public void CitydefaultNotification(){
+		String noOfDefalutNoti =WebUI.getText(findTestObject('Object Repository/DataInput/Notification/DefaultNotifcaiton'))
+		WebUI.verifyMatch(noOfDefalutNoti,'5', false)
+
+
+
+	}
+
+	@Keyword
+	public void NotificationNavigationTest(){
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Notification/DefaultNotifcaiton'),5)
+		WebUI.click(findTestObject('Object Repository/DataInput/Notification/DefaultNotifcaiton'))
+		WebUI.delay(1)
+		WebUI.click(findTestObject('DataInput/Notification/Energy'))
+		WebUI.delay(5)
+		WebUI.verifyElementPresent(findTestObject('Object Repository/DataInput/Notification/span_Energy'), 2)
+
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Notification/DefaultNotifcaiton'),5)
+		WebUI.click(findTestObject('Object Repository/DataInput/Notification/DefaultNotifcaiton'))
+		WebUI.delay(1)
+		WebUI.click(findTestObject('DataInput/Notification/Water'))
+		WebUI.delay(5)
+		WebUI.verifyElementPresent(findTestObject('Object Repository/DataInput/Notification/span_Water'), 2)
+
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Notification/DefaultNotifcaiton'),5)
+		WebUI.click(findTestObject('Object Repository/DataInput/Notification/DefaultNotifcaiton'))
+		WebUI.delay(1)
+		WebUI.click(findTestObject('DataInput/Notification/Waste'))
+		WebUI.delay(5)
+		WebUI.verifyElementPresent(findTestObject('Object Repository/DataInput/Notification/span_Waste'), 2)
+
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Notification/DefaultNotifcaiton'),5)
+		WebUI.click(findTestObject('Object Repository/DataInput/Notification/DefaultNotifcaiton'))
+		WebUI.delay(1)
+		WebUI.click(findTestObject('DataInput/Notification/Transport'))
+		WebUI.delay(5)
+		WebUI.verifyElementPresent(findTestObject('Object Repository/DataInput/Notification/span_Transportation'), 2)
+
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Notification/DefaultNotifcaiton'),5)
+		WebUI.click(findTestObject('Object Repository/DataInput/Notification/DefaultNotifcaiton'))
+		WebUI.delay(1)
+		WebUI.click(findTestObject('DataInput/Notification/Hum'))
+		WebUI.delay(5)
+		WebUI.verifyElementPresent(findTestObject('Object Repository/DataInput/Notification/span_Human Experience'), 2)
+
+
+	}
+
+	@Keyword
+	public void NotificatioBellTest(){
+
+		WebUI.verifyElementNotVisible(findTestObject('Object Repository/DataInput/Notification/BellNotification'),FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Notification/DefaultNotifcaiton'),5)
+		WebUI.click(findTestObject('Object Repository/DataInput/Notification/DefaultNotifcaiton'))
+		WebUI.delay(1)
+		WebUI.verifyElementNotVisible(findTestObject('Object Repository/DataInput/Notification/You have 1 notification'),FailureHandling.CONTINUE_ON_FAILURE)
+
+	}
+	@Keyword
+	public void precertificationCreditAssionTest(){
+		WebUI.delay(3)
+		WebUI.click(findTestObject('Page_Arc dashboard/a_ Precertification'))
+		WebUI.delay(3)
+		WebUI.click(findTestObject('PreRequisite/CityCom/span_Commit to sharing data'))
+		WebUI.delay(3)
+
+		WebUI.click(findTestObject('BasePoint/BasePointCreditCom/TeamIconClick'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('BasePoint/BasePointCreditCom/TeamMemberSelection'))
+		WebUI.delay(10)
+
+		String teamMemUI = WebUI.getText(findTestObject("BasePoint/BasePointCreditCom/VerifyAddedTeamSuccessully"))
+		WebUI.verifyMatch(GlobalVariable.teamMemName,teamMemUI, false)
+
+		WebUI.click(findTestObject('Page_Arc dashboard/a_ Precertification'))
+		WebUI.delay(3)
+
+		String pteamMemUI = WebUI.getText(findTestObject('Object Repository/DataInput/CityC/VerifyTeam'))
+		WebUI.verifyMatch(GlobalVariable.teamMemName,pteamMemUI, false)
+
+	}
+	@Keyword
+	public void HumanExpMeterReadingValidationUI()throws IOException, InterruptedException {
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.click(findTestObject('DataInput/CityCom/a_ Data Input'))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.click(findTestObject('DataInput/CityCom/span_Human Experience'))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(10)
+		WebUI.click(findTestObject('DataInput/CityCom/EducationAddYear'))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+
+
+		WebUI.setText(findTestObject('DataInput/CityCom/TextboxValue1'), '5000')
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+1))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.verifyElementPresent(findTestObject('DataInput/CityCom/Hum/TextValidationPercentPercentvalueshouldnotexceed100'),5)
+
+		/****************************Verifying the Notification of Error message******************************/
+		WebUI.clearText(findTestObject('DataInput/CityCom/TextboxValue1'))
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.setText(findTestObject('DataInput/CityCom/TextboxValue1'),'20')
+		//WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton'+1),2)
+		WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+1))
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/TextboxValue1'),"value"),'20',"Not Valid")
+
+
+	}
+
+
+	@Keyword
+	public void PopulationHumanExpMeterReadingValidationUI()throws IOException, InterruptedException {
+
+		WebUI.scrollToElement(findTestObject('DataInput/CityCom/BachelorAddYear'), 2)
+		WebUI.click(findTestObject('DataInput/CityCom/BachelorAddYear'))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+
+		WebUI.setText(findTestObject('DataInput/CityCom/HTextBox2'), '5000')
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+2))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.verifyElementPresent(findTestObject('DataInput/CityCom/Hum/TextValidationPercentPercentvalueshouldnotexceed100'),5)
+
+		/****************************Verifying the Notification of Error message******************************/
+		WebUI.clearText(findTestObject('DataInput/CityCom/HTextBox2'))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.setText(findTestObject('DataInput/CityCom/HTextBox2'), '20')
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton'+2),2)
+		WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+2))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/HTextBox2'),"value"),'20',"Not Valid")
+
+
+	}
+	@Keyword
+	public void EQUITABILITYHumanExpMeterReadingValidationUI()throws IOException, InterruptedException {
+
+		WebUI.waitForPageLoad(10)
+		WebUI.scrollToElement(findTestObject('DataInput/CityCom/EquAddYear'),2)
+		WebUI.click(findTestObject('DataInput/CityCom/EquAddYear'))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+
+		WebUI.setText(findTestObject('DataInput/CityC/TextBox3'), '5000')
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+3))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.verifyElementPresent(findTestObject('DataInput/CityCom/Hum/TextValidationPercentPercentvalueshouldnotexceed100'),5)
+
+		/****************************Verifying the Notification of Error message******************************/
+		WebUI.clearText(findTestObject('DataInput/CityC/TextBox3'))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.setText(findTestObject('DataInput/CityC/TextBox3'), '20')
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton'+3),2)
+		WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+3))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityC/TextBox3'),"value"),'20',"Not Valid")
+
+
+	}
+	@Keyword
+	public void GinicoefficientHumanExpMeterReadingValidationUI()throws IOException, InterruptedException {
+
+		WebUI.click(findTestObject('DataInput/CityCom/GiniAddYear'))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+
+		WebUI.setText(findTestObject('DataInput/CityC/TextBox4'), '5000')
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+4))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.verifyElementPresent(findTestObject('DataInput/CityCom/Hum/Gini'),5)
+
+		/****************************Verifying the Notification of Error message******************************/
+		WebUI.clearText(findTestObject('DataInput/CityC/TextBox4'))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.setText(findTestObject('DataInput/CityC/TextBox4'),'1')
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton'+4),2)
+		WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+4))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityC/TextBox4'),"value"),'1',"Not Valid")
+	}
+
+
+	//City Data Input Text validation
+	@Keyword
+	public void validateCityCommEnergyDataInputText(){
+
+		//Verify the title text
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTextOne')),"GHG Emissions (CO2 equivalent)", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTextTwo')), "Enter tons of CO2 equivalent per year per capita", false)
+
+		//Verify the reading title
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyYearLabel')), "Year", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTonsYearCapita')),"Tons/Year/Capita",false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyActionsLabel')),"Actions", false)
+	}
+
+
+
+	@Keyword
+	public void validateCityCommWaterDataInputText(){
+
+		//Verify the title Text
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTextOne')),"Domestic Water Consumption", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTextTwo')), "Enter domestic water consumption per capita", false)
+
+		//Verify the reading title
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterYearLabel')), "Year", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterValueLabel')),"Value",false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterUnitLabel')),"Unit", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterDurationLabel')),"Duration", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterActionsLabel')),"Actions", false)
+	}
+
+	@Keyword
+	public void validateCityCommWasteDataInputText(){
+
+		//Verify the solid waste generation title Text
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTextOne')),"Municipal solid waste generation intensity", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTextTwo')), "Enter muncipal solid waste generated per year per capita", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWasteTextThree')),"Municipal solid waste diversion rate from landfill", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWasteTextFour')), "Enter muncipal solid waste diversion rate", false)
+
+		//Verify the solid waste generation reading title
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterYearLabel')), "Year", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterValueLabel')),"Tons/Year/Capita",false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterUnitLabel')),"Actions", false)
+
+		//verify the solid waste diversion reading title
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWasteDivYearLabel')), "Year", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWasteDivPercentLabel')),"Percent",false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWasteDivActionsLabel')),"Actions", false)
+
+	}
+
+
+	@Keyword
+	public void validateCityCommTransportationDataInputText(){
+
+		//Verify the solid waste generation title Text
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTextOne')),"Vehicle miles traveled on individual vehicles daily (VMT)", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTextTwo')), "Enter total vehicle miles traveled per day per capita", false)
+
+		//Verify the transportation reading title
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterYearLabel')), "Year", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterValueLabel')),"Miles/Day/Capita",false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterUnitLabel')),"Actions", false)
+
+	}
+
+
+	@Keyword
+	public void validateCityCommHumanExperienceDataInputText(){
+
+		//Verify the human experience
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/EducationTitle')), "Education", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/PopulationWithHighSchoolDegree')), "Population with (at least) High School degree", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/PopulationWithBachelorDegree')), "Population with (at least) Bachelor's degree", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/EquitabilityTitle')), "Equitability", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/Median gross rentLabel')), "Median gross rent as % of household income", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/Gini coefficientLabel')), "Gini coefficient (for income distribution)", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ProsperityTitle')), "Prosperity", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/MedianHouseHoldLabel')), "Median household income", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/UnEmploymentRate')), "Unemployment rate", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/HealthAndSafetyTitle')), "Health & Safety", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/MedianAirQualityIndexLabel')), "Median air quality index (AQI)", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/AirQulaityDaysUnhealthyLabel')), "Air quality days unhealthy for sensitive groups", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ViolentCrimeLabel')), "Violent Crime per year per capita", false)
+
+		//Verify the title
+
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/HighSchoolYearLabel')), "Year", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/HighSchoolPercentLabel')), "Percent", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/HighSchoolActionsLabel')), "Actions", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/BachelorDegreeYearLabel')), "Year", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/BachelorDegreePercentLabel')), "Percent", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/BachelorDegreeActionsLabel')), "Actions", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianGrossYearLabel')), "Year", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianGrossPercentLabel')), "Percent", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianGrossActionsLabel')), "Actions", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/GiniCoefficientYearLabel')), "Year", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/GiniCoefficientValueLabel')), "Value (between 0 And 1)", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/GiniCoefficientActionsLabel')), "Actions", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianHouseholdYearLabel')), "Year", false)
+		//WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianHouseholdUSDollarPerYearLabel')), "US Dollars/Year", false)
+		WebUI.verifyElementPresent(findTestObject('Manage/CityCom/USDollar'), 3, FailureHandling.CONTINUE_ON_FAILURE)
+	}
+
+
+
+	@Keyword
+	public void fileUploadDataInputWasteTest(){
+		WebUI.delay(18)
+		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'), 3)
+		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'))
+		WebUI.delay(5)
+		//pdf file
+		//WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
+		WebUI.delay(2)
+		WebUI.sendKeys(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'), UploadDocumentDataInput)
+		//WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
+		WebUI.delay(2)
+		//uploadFile(UploadDocumentDataInput)
+		WebUI.delay(2)
+		//text file
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
+		WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
+		WebUI.delay(2)
+		uploadFile(UploadTextFile)
+		//WebUI.delay(4)
+		//jpg file
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
+		WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
+		WebUI.delay(2)
+		uploadFile(UploadJpeg)
+		//WebUI.delay(4)
+		//Png file
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
+		WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
+		uploadFile(UploadPng)
+		//WebUI.delay(4)
+		//gif file
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
+		WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
+		WebUI.delay(2)
+		uploadFile(UploadGif)
+		WebUI.delay(4)
+		//xls file
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
+		WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
+		WebUI.delay(2)
+		uploadFile(UploadXls)
+		//WebUI.delay(4)
+		//doc file
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
+		WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
+		WebUI.delay(2)
+		uploadFile(UploadDocs)
+		WebUI.delay(4)
+
+	}
+
+
+	//Verify data upload template present and can be download in resources section
+	@Keyword
+	public void verifyTheDataUploadTemplateInResourcesTab(){
+		WebUI.delay(5)
+		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+		WebUI.delay(10)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Resources/div_Guides'), 4)
+		WebUI.click(findTestObject('Object Repository/DataInput/Resources/div_Guides'))
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Resources/div_Guides (1)'),10)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Resources/div_Guides (1)')),"Guides", false)
+		WebUI.delay(8)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Resources/a_ENERGY STAR Template'), 5)
+		WebUI.click(findTestObject('Object Repository/DataInput/Resources/a_ENERGY STAR Template'))
+		WebUI.delay(7)
+		robot.keyPress(KeyEvent.VK_ENTER)
+		robot.keyRelease(KeyEvent.VK_ENTER)
+		robot.keyPress(KeyEvent.VK_ENTER)
+		robot.keyRelease(KeyEvent.VK_ENTER)
+		robot.keyPress(KeyEvent.VK_ENTER)
+		robot.keyRelease(KeyEvent.VK_ENTER)
+		WebUI.delay(5)
+		Assert.assertTrue(isFileDownloaded('Arc_Data_Template_building_v4.1.xlsm'), 'Failed to download Expected document')
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Resources/a_ENERGY STAR Integration Guide')), "ENERGY STAR Integration Guide", false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Resources/a_Data Guide for Buildings')), "Data Guide for Buildings", false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Resources/a_Data Review Checklist')), "Data Review Checklist", false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Resources/a_ENERGY STAR Template')), "ENERGY STAR Template", false, FailureHandling.CONTINUE_ON_FAILURE)
+	}
+
+	@Keyword
+	public void deleteIncompleteMeterReading(){
+		WebUI.delay(12)
+		ReusableMethodsLogin.waitForIframeLoad(60)
+		WebUI.delay(2)
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'))
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/a_Add New Meter'))
+		WebUI.delay(3)
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_Next'))
+		WebUI.delay(3)
+		WebUI.sendKeys(findTestObject('DataInput/CreateMeterBuilding/input_addMeterModal-body-Eleme'),"Energy Meter for Incomplete Readings")
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_ELECTRICITY'))
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/a_ELECTRICITY'))
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/CreateEnergyAndWaterMeterWithDifferentCombinations/ClickOnSelectUnit'))
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/CreateEnergyAndWaterMeterWithDifferentCombinations/SelectKBtu'))
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/CreateEnergyAndWaterMeterWithDifferentCombinations/ClickOnFuelSource'))
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/CreateEnergyAndWaterMeterWithDifferentCombinations/SelectOnGenerateOnSiteSolar'))
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_ADD'))
+		WebUI.waitForElementNotVisible(findTestObject('DataInput/CreateMeterBuilding/button_ADD'), 20)
+		WebUI.delay(5)
+		WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'),"Energy Meter for Incomplete Readings", FailureHandling.STOP_ON_FAILURE)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), 5)
+		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'),2)
+		WebUI.delay(3)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
+		WebUI.delay(4)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/DeletereadingOne'))
+		WebUI.delay(4)
+		WebUI.verifyElementNotPresent(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter start_'), 3)
+
+	}
+
+	@Keyword
+	public void createEmissionFactor1(String sheetName, int rowNum){
+
+		String emissionFactor  = data.getCellData(sheetName, "EmissionFactor", rowNum)
 		WebUI.delay(5)
 
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'), GlobalVariable.avgAngularWait)
-		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'), GlobalVariable.avgAngularWait)
+		WebUI.scrollToElement(findTestObject('DataInput/Survey/a_ Data Input'),5)
+		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+
+		ReusableMethodsLogin.waitForPageLoad(60)
+		ReusableMethodsLogin.waitForIframeLoad(60)
+		WebUI.delay(8)
+
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+
+		//Verifying the Performance score
+		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
+		data.setCellData(GlobalVariable.BDataInput,"TotalScore", GlobalVariable.rowNumTwo,totalPerformaceScore)
+
+		WebUI.doubleClick(findTestObject('Analytics/17/Building Settings'))
+		WebUI.delay(4)
+
+		WebUI.waitForElementClickable(findTestObject('Analytics/17/span_Emission Factor'), 10)
+		WebUI.scrollToElement(findTestObject('Analytics/17/span_Emission Factor'), 3)
+		WebUI.click(findTestObject('Analytics/17/span_Emission Factor'))
+		WebUI.delay(5)
+
+		WebUI.waitForElementClickable(findTestObject('Analytics/17/Custom Emission Facto'), 10)
+		WebUI.scrollToElement(findTestObject('Analytics/17/Custom Emission Facto'), 3)
+		WebUI.click(findTestObject('Analytics/17/Custom Emission Facto'))
+		WebUI.delay(5)
+
+		WebUI.waitForElementClickable(findTestObject('Analytics/17/Manually Enter Emission'), 10)
+		WebUI.scrollToElement(findTestObject('Analytics/17/Manually Enter Emission'), 3)
+		WebUI.click(findTestObject('Analytics/17/Manually Enter Emission'))
+		WebUI.delay(5)
+
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), 10)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
+		WebUI.delay(4)
+
+		WebUI.waitForElementClickable(findTestObject('Analytics/Cal/StartDate'), 10)
+		WebUI.scrollToElement(findTestObject('Analytics/Cal/StartDate'), 2)
+		WebUI.click(findTestObject('Analytics/Cal/StartDate'))
 		WebUI.delay(2)
-		WebUI.click(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'))
+
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.mouseOver(findTestObject('DataInput/CreateMeterBuilding/year_2018'))
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/year_2018'))
+
+		WebUI.scrollToElement(findTestObject('Analytics/17/span_Aug'), 2)
+		WebUI.mouseOver(findTestObject('Analytics/17/span_Aug'))
+		WebUI.click(findTestObject('Analytics/17/span_Aug'))
+		WebUI.delay(2)
+
+		WebUI.scrollToElement(findTestObject('Analytics/17/1Aug2018'), 2)
+		WebUI.mouseOver(findTestObject('Analytics/17/1Aug2018'))
+		WebUI.click(findTestObject('Analytics/17/1Aug2018'))
+		WebUI.delay(4)
+		WebUI.setText(findTestObject('Analytics/17/Reading1'),emissionFactor)
+
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
+		WebUI.delay(4)
+
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/deleteButtonOne'), 20)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), 20)
+
+	}
+
+
+	@Keyword
+	public void createEmissionFactor(String sheetName, int rowNum){
+
+		String emissionFactor  = data.getCellData(sheetName, "EmissionFactor", rowNum)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+
+		//Verifying the Performance score
+		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
+		data.setCellData(GlobalVariable.BDataInput,"TotalScore", GlobalVariable.rowNumTwo,totalPerformaceScore)
+
+		WebUI.waitForElementClickable(findTestObject('Analytics/17/Manually Enter Emission'), 10)
+		WebUI.scrollToElement(findTestObject('Analytics/17/Manually Enter Emission'), 3)
+		WebUI.click(findTestObject('Analytics/17/Manually Enter Emission'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), 10)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+
+		WebUI.waitForElementClickable(findTestObject('Analytics/Cal/StartDate'), 10)
+		WebUI.scrollToElement(findTestObject('Analytics/Cal/StartDate'), 2)
+		WebUI.click(findTestObject('Analytics/Cal/StartDate'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker'))
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
+		WebUI.mouseOver(findTestObject('DataInput/CreateMeterBuilding/year_2018'))
+		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/year_2018'))
+
+		WebUI.scrollToElement(findTestObject('Analytics/17/span_Aug'), 2)
+		WebUI.mouseOver(findTestObject('Analytics/17/span_Aug'))
+		WebUI.click(findTestObject('Analytics/17/span_Aug'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+
+		WebUI.scrollToElement(findTestObject('Analytics/17/1Aug2018'), 2)
+		WebUI.mouseOver(findTestObject('Analytics/17/1Aug2018'))
+		WebUI.click(findTestObject('Analytics/17/1Aug2018'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.setText(findTestObject('Analytics/17/Reading1'),emissionFactor)
+
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/deleteButtonOne'), 20)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), 20)
+
+
+
+	}
+
+	@Keyword
+	public void updateEmissionFactor(String sheetName, int rowNum){
+
+		String emissionFactor  = data.getCellData(sheetName, "EmissionFactor", rowNum)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.scrollToElement(findTestObject('DataInput/Survey/a_ Data Input'),5)
+		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+		//Verifying the Performance score
+
+		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
+		data.setCellData(GlobalVariable.BDataInput,"TotalScore", GlobalVariable.rowNumTwo,totalPerformaceScore)
+
+		WebUI.doubleClick(findTestObject('Analytics/17/Building Settings'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Setting/Setting'), 10)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Setting/Setting'), 3)
+		WebUI.click(findTestObject('Object Repository/DataInput/Setting/Setting'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Setting/a_Emission Factor'), 10)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Setting/a_Emission Factor'), 3)
+		WebUI.click(findTestObject('Object Repository/DataInput/Setting/a_Emission Factor'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('Analytics/17/Manually Enter Emission'), 10)
+		WebUI.scrollToElement(findTestObject('Analytics/17/Manually Enter Emission'), 3)
+		WebUI.click(findTestObject('Analytics/17/Manually Enter Emission'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.clearText(findTestObject('Analytics/17/Reading1'))
+		WebUI.setText(findTestObject('Analytics/17/Reading1'),emissionFactor)
+
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/deleteButtonOne'), 20)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), 20)
+
+
+
+	}
+
+	@Keyword
+	public void navigateToEmession(String sheetName, int rowNum){
+
+		WebUI.scrollToElement(findTestObject('DataInput/Survey/a_ Data Input'),5)
+		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
-		int it=1;
-		WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk1)
-		it++
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
 
-		WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), '0')
-		it++
+		WebUI.waitForElementClickable(findTestObject('Analytics/17/Building Settings'), 60)
+		WebUI.click(findTestObject('Analytics/17/Building Settings'))
+		WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
-		WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), '0')
-		it++
-		WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk2)
-		it++
-		WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk3)
-		it++
-		WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk4)
-		it++
-		WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk5)
-		it++
-		WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk6)
-		it++
-		WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk7)
-		it++
-		WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk8)
-		it++
-		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-		WebUI.click(findTestObject('Object Repository/DataInput/Survey/SaveButtonToRecordSurveyData'))
-		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/Setting/Setting'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Setting/Setting'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Setting/Setting'), GlobalVariable.minAngularWait)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Setting/Setting'), 2)
+		WebUI.click(findTestObject('Object Repository/DataInput/Setting/Setting'))
+		WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Setting/a_Emission Factor'), GlobalVariable.minAngularWait)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Setting/a_Emission Factor'), 3)
+		WebUI.click(findTestObject('Object Repository/DataInput/Setting/a_Emission Factor'))
+		WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('Analytics/17/Manually Enter Emission'), GlobalVariable.minAngularWait)
+		WebUI.scrollToElement(findTestObject('Analytics/17/Manually Enter Emission'), 3)
+		WebUI.click(findTestObject('Analytics/17/Manually Enter Emission'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+	}
+
+	@Keyword
+	public void updateUnitgramkwh(String sheetName, int rowNum){
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/button_grams'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_grams'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_grams'),3)
+		WebUI.click(findTestObject('DataInput/Occupancy/a_grams'))
 		WebUI.delay(3)
-		WebUI.dragAndDropToObject(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'), findTestObject('Object Repository/DataInput/Survey/ExtremelySatisfySpanText'))
-		WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 30)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
+		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_kWh'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_kWh'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/a_kWh'))
+		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (gramskWh)'),10, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (gramskWh)'), 10, FailureHandling.CONTINUE_ON_FAILURE)
+
+
+	}
+
+	@Keyword
+	public void updateUnitgrammwh(String sheetName, int rowNum){
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/button_grams'))
+		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_grams'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_grams'),3)
+		WebUI.click(findTestObject('DataInput/Occupancy/a_grams'))
+		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
+		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_MWh'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_MWh'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/a_MWh'))
+		WebUI.delay(3)
+
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (gramsMWh)'),10, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (gramsMWh)'), 10, FailureHandling.CONTINUE_ON_FAILURE)
+
+	}
+	@Keyword
+	public void updateUnitLBSkbtu(String sheetName, int rowNum){
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/button_grams'))
+		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_lbs'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_lbs'),3)
+		WebUI.click(findTestObject('DataInput/Occupancy/a_lbs'))
+		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
+		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_kBtu'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_kBtu'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/a_kBtu'))
+		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (lbskBtu)'),10, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (lbskBtu)'), 10, FailureHandling.CONTINUE_ON_FAILURE)
+
+	}
+
+	@Keyword
+	public void updateUnitLBSkwh(String sheetName, int rowNum){
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/button_grams'))
 		WebUI.delay(2)
-		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
-		WebUI.selectOptionByLabel(findTestObject('DataInput/Survey/OccupantType'),'Visitor', false)
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_lbs'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_lbs'),3)
+		WebUI.click(findTestObject('DataInput/Occupancy/a_lbs'))
+		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
-		WebUI.click(findTestObject('DataInput/Survey/Submit1'))
-		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/Submit'), GlobalVariable.avgAngularWait)
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
-		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('DataInput/Survey/Thank')), "Options that enhance your satisfaction", false)
-		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
-		println "Survey Submited Successufully"
-
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_kWh'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_kWh'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/a_kWh'))
+		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (lbskWh)'),10, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (lbskWh)'), 10, FailureHandling.CONTINUE_ON_FAILURE)
 
 	}
-	WebUI.closeWindowIndex(1)
-	WebUI.delay(2)
-	WebUI.switchToWindowIndex(0)
-	WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-}
+
+	@Keyword
+	public void updateUnitLBSmwh(String sheetName, int rowNum){
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/button_grams'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_lbs'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_lbs'),3)
+		WebUI.click(findTestObject('DataInput/Occupancy/a_lbs'))
+		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_MWh'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_MWh'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/a_MWh'))
+		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (lbsMWh)'),10, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (lbsMWh)'), 10, FailureHandling.CONTINUE_ON_FAILURE)
+
+	}
+
+
+	@Keyword
+	public void updateUnitgramkbtu(String sheetName, int rowNum){
+
+		WebUI.scrollToElement(findTestObject('DataInput/Survey/a_ Data Input'),5)
+		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+
+
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+
+
+		WebUI.waitForElementClickable(findTestObject('Analytics/17/Building Settings'), 10)
+		WebUI.doubleClick(findTestObject('Analytics/17/Building Settings'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Setting/Setting'), 10)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Setting/Setting'), 3)
+		WebUI.click(findTestObject('Object Repository/DataInput/Setting/Setting'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Setting/a_Emission Factor'), 10)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Setting/a_Emission Factor'), 3)
+		WebUI.click(findTestObject('Object Repository/DataInput/Setting/a_Emission Factor'))
+		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('Analytics/17/Manually Enter Emission'), 10)
+		WebUI.scrollToElement(findTestObject('Analytics/17/Manually Enter Emission'), 3)
+		WebUI.click(findTestObject('Analytics/17/Manually Enter Emission'))
+		WebUI.delay(8)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/button_grams'))
+		WebUI.delay(2)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_grams'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_grams'),3)
+		WebUI.click(findTestObject('DataInput/Occupancy/a_grams'))
+		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
+		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_kBtu'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_kBtu'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/a_kBtu'))
+
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (gramskBtu)'),10, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (gramskBtu)'), 10, FailureHandling.CONTINUE_ON_FAILURE)
+
+	}
+
+	@Keyword
+	public void updateUnitKGkbtu(String sheetName, int rowNum){
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/button_grams'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_kg'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_kg'),3)
+		WebUI.click(findTestObject('DataInput/Occupancy/a_kg'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_kBtu'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_kBtu'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/a_kBtu'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (kgkBtu)'),10, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (kgkBtu)'), 10, FailureHandling.CONTINUE_ON_FAILURE)
+
+	}
+
+	@Keyword
+	public void updateUnitKGkwh(String sheetName, int rowNum){
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/button_grams'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_kg'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_kg'),3)
+		WebUI.click(findTestObject('DataInput/Occupancy/a_kg'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_kWh'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_kWh'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/a_kWh'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (kgkWh)'),10, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (kgkWh)'), 10, FailureHandling.CONTINUE_ON_FAILURE)
+
+	}
+
+	@Keyword
+	public void updateUnitKGmwh(String sheetName, int rowNum){
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/button_grams'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_kg'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_kg'),3)
+		WebUI.click(findTestObject('DataInput/Occupancy/a_kg'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_MWh'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_MWh'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/a_MWh'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (kgMWh)'),10, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (kgMWh)'), 10, FailureHandling.CONTINUE_ON_FAILURE)
+
+	}
+
+	@Keyword
+	public void updateUnitTIkbtu(String sheetName, int rowNum){
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/button_grams'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_Tonnes (imperial)'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_Tonnes (imperial)'),3)
+		WebUI.click(findTestObject('DataInput/Occupancy/a_Tonnes (imperial)'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_kBtu'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_kBtu'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/a_kBtu'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (Tonnes (imperial)kBt'),10, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (Tonnes (imperial)kBt'), 10, FailureHandling.CONTINUE_ON_FAILURE)
+
+	}
+
+	@Keyword
+	public void updateUnitTIkwh(String sheetName, int rowNum){
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/button_grams'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_Tonnes (imperial)'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_Tonnes (imperial)'),3)
+		WebUI.click(findTestObject('DataInput/Occupancy/a_Tonnes (imperial)'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_kWh'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_kWh'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/a_kWh'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (Tonnes (imperial)kWh'),10, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (Tonnes (imperial)kWh'), 10, FailureHandling.CONTINUE_ON_FAILURE)
+
+	}
+
+	@Keyword
+	public void updateUnitTImwh(String sheetName, int rowNum){
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/button_grams'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_Tonnes (imperial)'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_Tonnes (imperial)'),3)
+		WebUI.click(findTestObject('DataInput/Occupancy/a_Tonnes (imperial)'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_MWh'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_MWh'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/a_MWh'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (Tonnes (imperial)MWh'),10, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (Tonnes (imperial)MWh'), 10, FailureHandling.CONTINUE_ON_FAILURE)
+
+	}
+
+	@Keyword
+	public void updateUnitTMkbtu(String sheetName, int rowNum){
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/button_grams'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_Tonnes (metric)'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_Tonnes (metric)'),3)
+		WebUI.click(findTestObject('DataInput/Occupancy/a_Tonnes (metric)'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_kBtu'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_kBtu'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/a_kBtu'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (Tonnes (imperial)kBt'),10, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (Tonnes (imperial)kBt'), 10, FailureHandling.CONTINUE_ON_FAILURE)
+
+	}
+
+	@Keyword
+	public void updateUnitTMkwh(String sheetName, int rowNum){
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/button_grams'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_Tonnes (metric)'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_Tonnes (metric)'),3)
+		WebUI.click(findTestObject('DataInput/Occupancy/a_Tonnes (metric)'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_kWh'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_kWh'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/a_kWh'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (Tonnes (imperial)kWh'),10, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (Tonnes (imperial)kWh'), 10, FailureHandling.CONTINUE_ON_FAILURE)
+
+	}
+
+	@Keyword
+	public void updateUnitTMmwh(String sheetName, int rowNum){
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/button_grams'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_Tonnes (metric)'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_Tonnes (metric)'),3)
+		WebUI.click(findTestObject('DataInput/Occupancy/a_Tonnes (metric)'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_MWh'), 10)
+		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_MWh'), 3)
+		WebUI.click(findTestObject('DataInput/Occupancy/a_MWh'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (Tonnes (metric)MWh)'),10, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (Tonnes (metric)MWh)'), 10, FailureHandling.CONTINUE_ON_FAILURE)
+
+	}
 
 
 
-@Keyword
-public void surveyLanguageCopySurveyLink(){
+	@Keyword
+	public void scoreShouldMoreVerify(String sheetName, int rowNum){
 
-	//WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
-	navigation.navigateIntoDataInput()
-	WebUI.delay(8)
-	WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
-	WebUI.delay(5)
-	WebUI.waitForElementVisible(findTestObject('DataInput/Survey/CopySurveyLink'), 20)
-	WebUI.click(findTestObject('DataInput/Survey/CopySurveyLink'))
-	WebUI.delay(2)
+		String totalScore  = data.getCellData(sheetName, "TotalScore", rowNum)
+		int utotalScore = Integer.parseInt(totalScore)
 
-	String english =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_English'))
-	String french =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_French'))
-	String port =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_Portuguese'))
-	String german =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_German'))
-	String spanish =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_Spanish'))
-	String chinese =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_Chinese'))
-
-	WebUI.verifyMatch(english,'English', false, FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.verifyMatch(french,'French', false, FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.verifyMatch(port, 'Portuguese', false, FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.verifyMatch(german, 'German', false, FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.verifyMatch(spanish, 'Spanish', false, FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.verifyMatch(chinese, 'Chinese', false, FailureHandling.CONTINUE_ON_FAILURE)
-
-}
-
-@Keyword
-public void navigateToFrench() throws IOException, InterruptedException, Exception{
-	WebUI.waitForElementVisible(findTestObject('DataInput/Survey/CopySurveyLink'), 20)
-	WebUI.click(findTestObject('Object Repository/DataInput/Language/span_French'))
-	WebUI.delay(2)
-
-}
-
-@Keyword
-public void navigateToPort() throws IOException, InterruptedException, Exception{
-	WebUI.waitForElementVisible(findTestObject('DataInput/Survey/CopySurveyLink'), 20)
-	WebUI.delay(2)
-	WebUI.click(findTestObject('Object Repository/DataInput/Language/span_Portuguese'))
-	WebUI.delay(2)
-}
-
-@Keyword
-public void navigateToGerman() throws IOException, InterruptedException, Exception{
-	WebUI.waitForElementVisible(findTestObject('DataInput/Survey/CopySurveyLink'), 20)
-	WebUI.delay(2)
-	WebUI.click(findTestObject('Object Repository/DataInput/Language/span_German'))
-	WebUI.delay(2)
-
-}
-
-@Keyword
-public void navigateToSpanish() throws IOException, InterruptedException, Exception{
-	WebUI.waitForElementVisible(findTestObject('DataInput/Survey/CopySurveyLink'), 20)
-	WebUI.click(findTestObject('Object Repository/DataInput/Language/span_Spanish'))
-	WebUI.delay(2)
-
-}
-
-@Keyword
-public void navigateToChinese() throws IOException, InterruptedException, Exception{
-	WebUI.waitForElementVisible(findTestObject('DataInput/Survey/CopySurveyLink'), 20)
-	WebUI.click(findTestObject('Object Repository/DataInput/Language/span_Chinese'))
-	WebUI.delay(2)
-
-}
-
-@Keyword
-public void surveySubmitDifferentLang(String sheetName, int rowNum1) throws IOException, InterruptedException, Exception{
-	int rowNum=2;
-	Robot r = new Robot()
-	String walk1 = data.getCellData(sheetName, "Walk", rowNum)
-	String walk2 = data.getCellData(sheetName, "Bus", rowNum)
-	String walk3 = data.getCellData(sheetName, "Tram", rowNum)
-	String walk4 = data.getCellData(sheetName, "Heavyrail", rowNum)
-	String walk5 = data.getCellData(sheetName, "Motorcycle", rowNum)
-	String walk6 = data.getCellData(sheetName, "Carsolo", rowNum)
-	String walk7 = data.getCellData(sheetName, "Carpool", rowNum)
-	String walk8 = data.getCellData(sheetName, "Caralternative", rowNum)
-	//	String name = data.getCellData(sheetName, "Name", rowNum)
-	String languageRespecitive = data.getCellData(sheetName, "Thanku", rowNum1)
-	WebUI.delay(1)
-	r.keyPress(KeyEvent.VK_CONTROL)
-	r.keyPress(KeyEvent.VK_T)
-	r.keyRelease(KeyEvent.VK_CONTROL)
-	r.keyRelease(KeyEvent.VK_T)
-
-	WebUI.delay(4)
-	WebUI.switchToWindowIndex(1)
-	WebUI.delay(1)
-	r.keyPress(KeyEvent.VK_CONTROL)
-	r.keyPress(KeyEvent.VK_V)
-	r.keyRelease(KeyEvent.VK_CONTROL)
-	r.keyRelease(KeyEvent.VK_V)
-	WebUI.delay(4)
-	r.keyPress(KeyEvent.VK_ENTER)
-	r.keyRelease(KeyEvent.VK_ENTER)
-	WebUI.delay(5)
-
-	WebUI.scrollToElement(findTestObject('DataInput/Survey/WalkR1'),10)
-	WebUI.setText(findTestObject('DataInput/Survey/WalkR1'), walk1)
-	WebUI.setText(findTestObject('DataInput/Survey/BusR1'), walk2)
-	WebUI.setText(findTestObject('DataInput/Survey/TramR1'), walk3)
-	WebUI.setText(findTestObject('DataInput/Survey/HeavyRailR1'), walk4)
-	WebUI.setText(findTestObject('DataInput/Survey/MotorcycleR1'), walk5)
-	WebUI.setText(findTestObject('DataInput/Survey/carSoloR1'), walk6)
-	WebUI.setText(findTestObject('DataInput/Survey/car23R1'), walk7)
-	WebUI.setText(findTestObject('DataInput/Survey/cars4R1'), walk8)
-	WebUI.click(findTestObject('DataInput/Survey/ACCEPTANDCLOSE'),FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.delay(2)
-	/*	WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'),name)
-	 WebUI.delay(2)
-	 */	WebUI.click(findTestObject('DataInput/Survey/Submit'))
-	WebUI.delay(3)
-	WebUI.waitForElementVisible(findTestObject('DataInput/Survey/Thank'), 20)
-	String ulanguageRespecitive = WebUI.getText(findTestObject('DataInput/Survey/ThankuLanguage'))
-	WebUI.verifyMatch(languageRespecitive, languageRespecitive, false, FailureHandling.CONTINUE_ON_FAILURE)
-
-	WebUI.click(findTestObject('Object Repository/DataInput/Survey/ReloadSurvey'))
-	WebUI.delay(3)
-	WebUI.waitForPageLoad(GlobalVariable.timeOut)
-	println "Survey Submited Successufully"
-	WebUI.verifyTextPresent("Your World is Alive!", false, FailureHandling.STOP_ON_FAILURE)
-	WebUI.verifyTextPresent(sheetName, false, FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.closeWindowIndex(1)
-	WebUI.switchToWindowIndex(0)
-}
+		String actotalScore  = data.getCellData(sheetName, "ATotalScore", rowNum)
 
 
+		/********* Verifying the Generated score for total score & Energy & Water & Waste & Transport & Human Experience under data Input section ********/
+		WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
 
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
-@Keyword
-public void surveyLanguageEmail(){
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Setting/Setting'), 60)
 
-	WebUI.scrollToElement(findTestObject('DataInput/Language/button_Email Survey'),3)
-	WebUI.waitForElementVisible(findTestObject('DataInput/Language/button_Email Survey'), 20)
-	WebUI.click(findTestObject('DataInput/Language/button_Email Survey'))
-	WebUI.delay(2)
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'),10)
+		//Verifying the Performance score
+		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
+		print totalPerformaceScore
+		int utotalPerformaceScore = Integer.parseInt(totalPerformaceScore)
 
-	String english =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_English'))
-	String french =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_French'))
-	String port =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_Portuguese'))
-	String german =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_German'))
-	String spanish =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_Spanish'))
-	String chinese =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_Chinese'))
-
-	WebUI.verifyMatch(english, 'English', false, FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.verifyMatch(french, 'French', false, FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.verifyMatch(port, 'Portuguese', false, FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.verifyMatch(german, 'German', false, FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.verifyMatch(spanish, 'Spanish', false, FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.verifyMatch(chinese, 'Chinese', false, FailureHandling.CONTINUE_ON_FAILURE)
-
-}
-
-
-@Keyword
-public void surveySubmitTr(String sheetName) throws IOException, InterruptedException, Exception{
-	WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-	WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
-	WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-	WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.maxAngularWait)
-	WebUI.waitForElementVisible(findTestObject('DataInput/Survey/div_Transportation Survey'), 40)
-	WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
-	WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-	WebUI.waitForElementVisible(findTestObject('DataInput/Survey/CopySurveyLink'), 20)
-	WebUI.click(findTestObject('DataInput/Survey/CopySurveyLink'))
-	WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-	WebUI.click(findTestObject('DataInput/Survey/English'))
-	WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-	Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard()
-	Transferable contents = clipboard.getContents(null)
-	String url = (String) contents.getTransferData(DataFlavor.stringFlavor)
-	data.setCellData(sheetName, "Url", GlobalVariable.rowNumTwo, url)
-	WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-	Robot r = new Robot()
-	for( int rowNum=2;rowNum<=5;rowNum++)
-	{
-
-		if(rowNum==2)
-		{
-			String walk1 = data.getCellData(sheetName, "Walk", rowNum)
-			String walk2 = data.getCellData(sheetName, "Bus", rowNum)
-			String walk3 = data.getCellData(sheetName, "Tram", rowNum)
-			String walk4 = data.getCellData(sheetName, "Heavyrail", rowNum)
-			String walk5 = data.getCellData(sheetName, "Motorcycle", rowNum)
-			String walk6 = data.getCellData(sheetName, "Carsolo", rowNum)
-			String walk7 = data.getCellData(sheetName, "Carpool", rowNum)
-			String walk8 = data.getCellData(sheetName, "Caralternative", rowNum)
-			String name = data.getCellData(sheetName, "Name", rowNum)
-
-			r.keyPress(KeyEvent.VK_CONTROL);
-			r.keyPress(KeyEvent.VK_T);
-			r.keyRelease(KeyEvent.VK_CONTROL)
-			r.keyRelease(KeyEvent.VK_T)
-			WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-
-			r.keyPress(KeyEvent.VK_CONTROL)
-			r.keyPress(KeyEvent.VK_V)
-			r.keyRelease(KeyEvent.VK_CONTROL)
-			r.keyRelease(KeyEvent.VK_V)
-			WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-			r.keyPress(KeyEvent.VK_ENTER)
-			r.keyRelease(KeyEvent.VK_ENTER)
-			WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-			WebUI.switchToWindowIndex(1)
-			WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-
-			WebUI.scrollToElement(findTestObject('DataInput/Survey/WalkR1'), 10)
-			WebUI.setText(findTestObject('DataInput/Survey/WalkR1'), walk1)
-			WebUI.setText(findTestObject('DataInput/Survey/BusR1'), walk2)
-			WebUI.setText(findTestObject('DataInput/Survey/TramR1'), walk3)
-			WebUI.setText(findTestObject('DataInput/Survey/HeavyRailR1'), walk4)
-			WebUI.setText(findTestObject('DataInput/Survey/MotorcycleR1'), walk5)
-			WebUI.setText(findTestObject('DataInput/Survey/carSoloR1'), walk6)
-			WebUI.setText(findTestObject('DataInput/Survey/car23R1'), walk7)
-			WebUI.setText(findTestObject('DataInput/Survey/cars4R1'), walk8)
-
-			boolean surveyAccept = WebUI.verifyElementVisible(findTestObject('DataInput/Survey/ACCEPTANDCLOSE'),FailureHandling.OPTIONAL)
-			println surveyAccept
-			if((surveyAccept)){
-				WebUI.click(findTestObject('DataInput/Survey/ACCEPTANDCLOSE'))
-			}
-			WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-			WebUI.click(findTestObject('DataInput/Survey/Submit'))
-			WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-			WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Survey/ReloadSurvey'), 20)
-			WebUI.click(findTestObject('Object Repository/DataInput/Survey/ReloadSurvey'))
-			WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-			WebUI.waitForPageLoad(GlobalVariable.timeOut)
-			println "Survey Submited Successufully"
-			//WebUI.verifyElementVisible(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/YourWorldIsAliveText'), FailureHandling.CONTINUE_ON_FAILURE)
-			/*WebUI.closeWindowIndex(1)
-			 WebUI.switchToWindowIndex(0)*/
-		}
+		if(utotalPerformaceScore>utotalScore)
+			KeywordUtil.markPassed("!!! Total Score is increased for this Project after changing the emission factor !!!")
 		else
-		{
+			KeywordUtil.markFailedAndStop("!!! Total Score is Not increased for this  Project after changing the emission factor !!!")
 
-			String walk1 = data.getCellData(sheetName, "Walk", rowNum)
-			String walk2 = data.getCellData(sheetName, "Bus", rowNum)
-			String walk3 = data.getCellData(sheetName, "Tram", rowNum)
-			String walk4 = data.getCellData(sheetName, "Heavyrail", rowNum)
-			String walk5 = data.getCellData(sheetName, "Motorcycle", rowNum)
-			String walk6 = data.getCellData(sheetName, "Carsolo", rowNum)
-			String walk7 = data.getCellData(sheetName, "Carpool", rowNum)
-			String walk8 = data.getCellData(sheetName, "Caralternative", rowNum)
-			String name = data.getCellData(sheetName, "Name", rowNum)
 
-			WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-			WebUI.navigateToUrl(url)
-			WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		/*WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
+		 WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TotalPerformanceScore'),10)
+		 WebUI.delay(15)
+		 String totalperformaceScore = WebUI.getText(findTestObject('PerformanceScore/Score/TotalPerformanceScore'))
+		 int uTotalPagetotalScore = Integer.parseInt(totalperformaceScore)
+		 if(uTotalPagetotalScore>utotalScore)
+		 KeywordUtil.markPassed("!!! Total Score is increased for this Project after changing the emission factor !!!")
+		 else
+		 KeywordUtil.markFailedAndStop("!!! Total Score is Not increased for this  Project after changing the emission factor !!!")
+		 */
+	}
+	@Keyword
+	public void scoreShouldLessVerify(String sheetName, int rowNum){
 
-			WebUI.scrollToElement(findTestObject('DataInput/Survey/WalkR1'), 10)
-			WebUI.setText(findTestObject('DataInput/Survey/WalkR1'), walk1)
-			WebUI.setText(findTestObject('DataInput/Survey/BusR1'), walk2)
-			WebUI.setText(findTestObject('DataInput/Survey/TramR1'), walk3)
-			WebUI.setText(findTestObject('DataInput/Survey/HeavyRailR1'),walk4)
-			WebUI.setText(findTestObject('DataInput/Survey/MotorcycleR1'), walk5)
-			WebUI.setText(findTestObject('DataInput/Survey/carSoloR1'), walk6)
-			WebUI.setText(findTestObject('DataInput/Survey/car23R1'), walk7)
-			WebUI.setText(findTestObject('DataInput/Survey/cars4R1'), walk8)
-			//WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
-			WebUI.click(findTestObject('DataInput/Survey/Submit'))
-			WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-			WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Survey/ReloadSurvey'), 20)
-			WebUI.click(findTestObject('Object Repository/DataInput/Survey/ReloadSurvey'))
-			WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-			WebUI.waitForPageLoad(GlobalVariable.timeOut)
-			WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-			println "Survey Submited Successufully"
+		String totalScore  = data.getCellData(sheetName, "TotalScore", rowNum)
+		int utotalScore = Integer.parseInt(totalScore)
 
+		/********* Verifying the Generated score for total score under data Input section ********/
+		WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
+		WebUI.delay(8)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Setting/Setting'), 60)
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'),10)
+		//Verifying the Performance score
+		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
+		print totalPerformaceScore
+		int utotalPerformaceScore = Integer.parseInt(totalPerformaceScore)
+
+		if(utotalPerformaceScore<utotalScore)
+			KeywordUtil.markPassed("!!! Total Score is decrease for this Project after changing the emission factor !!!")
+		else
+			KeywordUtil.markFailedAndStop("!!! Total Score is Not Decrease for this Project after changing the emission factor !!!")
+
+
+		/*	WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
+		 WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TotalPerformanceScore'),10)
+		 WebUI.delay(15)
+		 String totalperformaceScore = WebUI.getText(findTestObject('PerformanceScore/Score/TotalPerformanceScore'))
+		 int uTotalPagetotalScore = Integer.parseInt(totalperformaceScore)
+		 if(uTotalPagetotalScore<utotalScore)
+		 KeywordUtil.markPassed("!!! Total Score is increased for this Project after changing the emission factor !!!")
+		 else
+		 KeywordUtil.markFailedAndStop("!!! Total Score is Not increased for this  Project after changing the emission factor !!!")
+		 */
+
+	}
+
+
+	@Keyword
+	public void scoreShouldNotChangeVerify(String sheetName, int rowNum){
+
+		String totalScore  = data.getCellData(sheetName, "TotalScore", rowNum)
+		String actotalScore  = data.getCellData(sheetName, "ATotalScore", rowNum)
+
+
+		/********* Verifying the Generated score for total score & Energy & Water & Waste & Transport & Human Experience under data Input section ********/
+		WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
+
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
+
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'),10)
+		//Verifying the Performance score
+		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
+		print totalPerformaceScore
+		WebUI.verifyMatch(totalPerformaceScore ,totalScore, false)
+		WebUI.verifyMatch(totalPerformaceScore , actotalScore, false)
+
+		WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
+		WebUI.delay(18)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TotalPerformanceScore'),10)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/Score/TotalPerformanceScore'), GlobalVariable.minAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
+
+		//Verifying the Performance score
+		String totalperformaceScore = WebUI.getText(findTestObject('PerformanceScore/Score/TotalPerformanceScore'))
+		print totalperformaceScore
+		WebUI.verifyMatch(totalperformaceScore , totalScore, false)
+		WebUI.verifyMatch(totalperformaceScore , actotalScore, false)
+
+	}
+
+
+	@Keyword
+	public void verifyTheCommentCityCommunityDoesnotIncludeMeterName(){
+
+		//WebUI.delay(4)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		if((WebUI.getText(findTestObject('Object Repository/DataInput/ActivityCommentCityComm')).contains("Saurav K has added new data for GHG Emissions for the period"))){
+			KeywordUtil.markPassed("Meter name is not included in the activity comment")
+		}
+		else{
+			KeywordUtil.markFailed("Meter name is included in the acivity comment ")
 		}
 
+
 	}
-	WebUI.closeWindowIndex(1)
-	WebUI.switchToWindowIndex(0)
-
-}
-@Keyword
-public void surveySubmitOneTime(String sheetName ,int rowNum) throws IOException, InterruptedException, Exception{
-	WebUI.delay(8)
-	//WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
-	navigation.navigateIntoDataInput()
-	WebUI.delay(12)
-	WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
-	WebUI.delay(5)
-	WebUI.waitForElementVisible(findTestObject('DataInput/Survey/CopySurveyLink'), 20)
-	WebUI.click(findTestObject('DataInput/Survey/CopySurveyLink'))
-	WebUI.delay(2)
-	WebUI.click(findTestObject('DataInput/Survey/English'))
-	WebUI.delay(2)
-	Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard()
-	Transferable contents = clipboard.getContents(null)
-	String url = (String) contents.getTransferData(DataFlavor.stringFlavor)
-	data.setCellData(sheetName, "Url", GlobalVariable.rowNumTwo, url)
-	WebUI.delay(6)
-	Robot r = new Robot()
-	String walk1 = data.getCellData(sheetName, "Walk", rowNum)
-	String walk2 = data.getCellData(sheetName, "Bus", rowNum)
-	String walk3 = data.getCellData(sheetName, "Tram", rowNum)
-	String walk4 = data.getCellData(sheetName, "Heavyrail", rowNum)
-	String walk5 = data.getCellData(sheetName, "Motorcycle", rowNum)
-	String walk6 = data.getCellData(sheetName, "Carsolo", rowNum)
-	String walk7 = data.getCellData(sheetName, "Carpool", rowNum)
-	String walk8 = data.getCellData(sheetName, "Caralternative", rowNum)
-	String name = data.getCellData(sheetName, "Name", rowNum)
-	WebUI.delay(2)
-	((JavascriptExecutor)driver).executeScript('window.open("");')
-	WebUI.delay(4)
-	WebUI.switchToWindowIndex(1)
-	WebUI.delay(2)
-	WebUI.navigateToUrl(url)
-
-	WebUI.scrollToElement(findTestObject('DataInput/Survey/WalkR1'), 10)
-	WebUI.setText(findTestObject('DataInput/Survey/WalkR1'), walk1)
-	WebUI.setText(findTestObject('DataInput/Survey/BusR1'), walk2)
-	WebUI.setText(findTestObject('DataInput/Survey/TramR1'), walk3)
-	WebUI.setText(findTestObject('DataInput/Survey/HeavyRailR1'), walk4)
-	WebUI.setText(findTestObject('DataInput/Survey/MotorcycleR1'), walk5)
-	WebUI.setText(findTestObject('DataInput/Survey/carSoloR1'), walk6)
-	WebUI.setText(findTestObject('DataInput/Survey/car23R1'), walk7)
-	WebUI.setText(findTestObject('DataInput/Survey/cars4R1'), walk8)
-	WebUI.click(findTestObject('DataInput/Survey/ACCEPTANDCLOSE'),FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.delay(2)
-	//WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
-	WebUI.delay(2)
-	WebUI.click(findTestObject('DataInput/Survey/Submit'))
-	WebUI.delay(3)
-	WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Survey/ReloadSurvey'), 20)
-	WebUI.click(findTestObject('Object Repository/DataInput/Survey/ReloadSurvey'))
-	WebUI.delay(3)
-	WebUI.waitForPageLoad(GlobalVariable.timeOut)
-	println "Survey Submited Successufully"
-	//WebUI.verifyElementVisible(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/YourWorldIsAliveText'), FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.closeWindowIndex(1)
-	WebUI.switchToWindowIndex(0)
-
-}
-
-
-
-
-@Keyword
-public void percentageSurveyResponseRateCalculationTransit() throws IOException, InterruptedException, Exception{
-
-	WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-	WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-	WebUI.waitForElementPresent(findTestObject('Manage/Project/WeightedOccupancy'), GlobalVariable.minAngularWait)
-	WebUI.waitForElementVisible(findTestObject('Manage/Project/WeightedOccupancy'), GlobalVariable.minAngularWait)
-	WebUI.scrollToElement(findTestObject('Manage/Project/WeightedOccupancy'), 10)
-	String projectoccupancy = WebUI.getAttribute(findTestObject('Manage/Project/WeightedOccupancy'),'value')
-	double projectOccupancy= Double.parseDouble(projectoccupancy)
-	WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
-	WebUI.delay(5)
-	WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-	WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
-
-	WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-	WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.maxAngularWait)
-	WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-	WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
-
-	/******Verify that survey response rate% is calculated on the basis of the following formula [ Response %ge = (No. of responses/Occupancy)*100 ] . Always count the no of responses by counting the no of rows of transport survey results.*****/
-	String surveyResponsePercentage = WebUI.getText(findTestObject('DataInput/Survey/SurveyResponsePercentage'))
-	String surveyResponsepercentage1 = surveyResponsePercentage.replace("%","")
-	String surveyResponsepercentage = surveyResponsepercentage1.replaceAll("\\s","")
-	double surveyresponsepercentage= Double.parseDouble(surveyResponsepercentage)
-	println surveyResponsepercentage
-
-	double calculatedresponsePecentage = (4/projectOccupancy)*100
-
-	BigDecimal responsePecentage = new BigDecimal(calculatedresponsePecentage)
-	responsePecentage = responsePecentage.setScale(2,RoundingMode.HALF_UP)
-	String responsePecentageTr = Double.toString(responsePecentage)
-	println responsePecentageTr
-
-	WebUI.verifyMatch(responsePecentageTr, surveyResponsepercentage, false)
-	/******Verify that survey response rate% is calculated on the basis of the following formula [ Response %ge = (No. of responses/Occupancy)*100 ] . Always count the no of responses by counting the no of rows of HUMAN EXPERIENCE survey results.*****/
-	WebUI.click(findTestObject('DataInput/Survey/OccupantSatisfactionSurv'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-	WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
-
-	String humsurveyResponsePercentage = WebUI.getText(findTestObject('DataInput/Survey/SurveyResponsePercentage'))
-	String humsurveyResponsepercentage1 = surveyResponsePercentage.replace("%" ,"")
-	String humsurveyResponsepercentage = humsurveyResponsepercentage1.replaceAll("\\s","")
-
-	print humsurveyResponsepercentage
-	double humsurveyresponsepercentage= Double.parseDouble(humsurveyResponsepercentage)
-
-	double humcalculatedresponsePecentage = (4/projectOccupancy)*100
-	BigDecimal responsePecentagehum = new BigDecimal(calculatedresponsePecentage)
-	responsePecentagehum = responsePecentagehum.setScale(2, RoundingMode.HALF_UP)
-	String responsePecentagehu = Double.toString(responsePecentage)
-
-	Assert.assertEquals(responsePecentagehu,humsurveyResponsepercentage)
-	/***************Verify that survey response rate percentage is same in Transport and HE tabs.***********************************/
-	WebUI.verifyMatch(humsurveyResponsePercentage, surveyResponsePercentage, false)
-
-}
-
-@Keyword
-public void percentageSurveyResponseRateCalculationBuiding() throws IOException, InterruptedException, Exception{
-	
-	navigation.navigateIntoDataInput()
-	WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
-	WebUI.delay(1)
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
-	String projectoccupancy = WebUI.getAttribute((findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne')),'value')
-	double projectOccupancy= Double.parseDouble(projectoccupancy)
-
-	WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-	WebUI.delay(2)
-	WebUI.waitForElementPresent(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
-	WebUI.waitForElementVisible(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
-
-	/******Verify that survey response rate% is calculated on the basis of the following formula [ Response %ge = (No. of responses/Occupancy)*100 ] . Always count the no of responses by counting the no of rows of transport survey results.*****/
-	String surveyResponsePercentage = WebUI.getText(findTestObject('DataInput/Survey/SurveyResponsePercentage'))
-	String surveyResponsepercentage1 = surveyResponsePercentage.replace("%","")
-	String surveyResponsepercentage = surveyResponsepercentage1.replaceAll("\\s","")
-	double surveyresponsepercentage= Double.parseDouble(surveyResponsepercentage)
-	println surveyResponsepercentage
-
-	double calculatedresponsePecentage = (4/projectOccupancy)*100
-
-	BigDecimal responsePecentage = new BigDecimal(calculatedresponsePecentage)
-	responsePecentage = responsePecentage.setScale(2,RoundingMode.HALF_UP)
-	String responsePecentageTr = Double.toString(responsePecentage)
-	println responsePecentageTr
-
-	WebUI.verifyMatch(responsePecentageTr, surveyResponsepercentage, false)
-	/******Verify that survey response rate% is calculated on the basis of the following formula [ Response %ge = (No. of responses/Occupancy)*100 ] . Always count the no of responses by counting the no of rows of HUMAN EXPERIENCE survey results.*****/
-	WebUI.click(findTestObject('DataInput/Survey/OccupantSatisfactionSurv'))
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-	WebUI.delay(2)
-
-	WebUI.waitForElementPresent(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
-	WebUI.waitForElementVisible(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
-
-
-	String humsurveyResponsePercentage = WebUI.getText(findTestObject('DataInput/Survey/SurveyResponsePercentage'))
-	String humsurveyResponsepercentage1 = surveyResponsePercentage.replace("%" ,"")
-	String humsurveyResponsepercentage = humsurveyResponsepercentage1.replaceAll("\\s","")
-
-	print humsurveyResponsepercentage
-	double humsurveyresponsepercentage= Double.parseDouble(humsurveyResponsepercentage)
-
-	double humcalculatedresponsePecentage = (4/projectOccupancy)*100
-	BigDecimal responsePecentagehum = new BigDecimal(calculatedresponsePecentage)
-	responsePecentagehum = responsePecentagehum.setScale(2, RoundingMode.HALF_UP)
-	String responsePecentagehu = Double.toString(responsePecentage)
-
-	Assert.assertEquals(responsePecentagehu,humsurveyResponsepercentage)
-	/***************Verify that survey response rate percentage is same in Transport and HE tabs.***********************************/
-	WebUI.verifyMatch(humsurveyResponsePercentage, surveyResponsePercentage, false)
-
-}
-
-@Keyword
-public void percentageSurveyResponseRateCalculationBuidingV3(String sheetName,int rowNum) throws IOException, InterruptedException, Exception{
-
-
-	String occupant = data.getCellData(sheetName,'BOccupancy', rowNum)
-	double doccupant = Double.parseDouble(occupant)
-
-	navigation.navigateIntoDataInput()
-	WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
-	WebUI.delay(1)
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
-
-	String projectoccupancy = WebUI.getAttribute((findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne')),'value')
-	double projectOccupancy= Double.parseDouble(projectoccupancy)
-
-	WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-	WebUI.delay(2)
-	WebUI.waitForElementPresent(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
-	WebUI.waitForElementVisible(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
-
-
-	/******Verify that survey response rate% is calculated on the basis of the following formula [ Response %ge = (No. of responses/Occupancy)*100 ] . Always count the no of responses by counting the no of rows of transport survey results.*****/
-	String surveyResponsePercentage = WebUI.getText(findTestObject('DataInput/Survey/SurveyResponsePercentage'))
-	String surveyResponsepercentage1 = surveyResponsePercentage.replace("%","")
-	String surveyResponsepercentage = surveyResponsepercentage1.replaceAll("\\s","")
-	double surveyresponsepercentage= Double.parseDouble(surveyResponsepercentage)
-	println surveyResponsepercentage
-
-	double calculatedresponsePecentage = (doccupant/projectOccupancy)*100
-
-	BigDecimal responsePecentage = new BigDecimal(calculatedresponsePecentage)
-	responsePecentage = responsePecentage.setScale(2,RoundingMode.HALF_UP)
-	String responsePecentageTr = Double.toString(responsePecentage)
-	println responsePecentageTr
-
-	WebUI.verifyMatch(responsePecentageTr, surveyResponsepercentage, false)
-	/******Verify that survey response rate% is calculated on the basis of the following formula [ Response %ge = (No. of responses/Occupancy)*100 ] . Always count the no of responses by counting the no of rows of HUMAN EXPERIENCE survey results.*****/
-	WebUI.click(findTestObject('DataInput/Survey/OccupantSatisfactionSurv'))
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-	WebUI.delay(2)
-
-	WebUI.waitForElementPresent(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
-	WebUI.waitForElementVisible(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
-
-
-	String humsurveyResponsePercentage = WebUI.getText(findTestObject('DataInput/Survey/SurveyResponsePercentage'))
-	String humsurveyResponsepercentage1 = surveyResponsePercentage.replace("%" ,"")
-	String humsurveyResponsepercentage = humsurveyResponsepercentage1.replaceAll("\\s","")
-
-	print humsurveyResponsepercentage
-	double humsurveyresponsepercentage= Double.parseDouble(humsurveyResponsepercentage)
-
-	double humcalculatedresponsePecentage = (doccupant/projectOccupancy)*100
-	BigDecimal responsePecentagehum = new BigDecimal(calculatedresponsePecentage)
-	responsePecentagehum = responsePecentagehum.setScale(2, RoundingMode.HALF_UP)
-	String responsePecentagehu = Double.toString(responsePecentage)
-
-	Assert.assertEquals(responsePecentagehu,humsurveyResponsepercentage)
-	/***************Verify that survey response rate percentage is same in Transport and HE tabs.***********************************/
-	WebUI.verifyMatch(humsurveyResponsePercentage, surveyResponsePercentage, false)
-
-}
-
-
-@Keyword
-public void dataInputNavigationTest() throws IOException, InterruptedException, Exception{
-
-	//WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
-	navigation.navigateIntoDataInput()
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-	WebUI.verifyElementPresent(findTestObject('DataInput/Nav/No Energy meter present'), 5, FailureHandling.CONTINUE_ON_FAILURE)
-
-	WebUI.click(findTestObject('DataInput/Nav/button_Next'))
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-	WebUI.verifyElementPresent(findTestObject('DataInput/Nav/No Water meter present'), 5, FailureHandling.CONTINUE_ON_FAILURE)
-
-	WebUI.click(findTestObject('DataInput/Nav/button_Next'))
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-	WebUI.verifyElementPresent(findTestObject('DataInput/Nav/No readings present for Was'), 5, FailureHandling.CONTINUE_ON_FAILURE)
-
-	WebUI.click(findTestObject('DataInput/Nav/button_Next'))
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-	WebUI.verifyElementPresent(findTestObject('DataInput/Nav/Transportation Survey'), 5, FailureHandling.CONTINUE_ON_FAILURE)
-
-	WebUI.click(findTestObject('DataInput/Nav/button_Next'))
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-	WebUI.verifyElementPresent(findTestObject('DataInput/Nav/Hum Exp Satisfaction'), 5, FailureHandling.CONTINUE_ON_FAILURE)
-
-	WebUI.click(findTestObject('DataInput/Nav/button_Next'))
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-	WebUI.verifyElementPresent(findTestObject('DataInput/Nav/No Energy meter present'), 5, FailureHandling.CONTINUE_ON_FAILURE)
-
-
-}
-
-@Keyword
-public void allActionNavigationTest() throws IOException, InterruptedException, Exception{
-
-}
-//Add New Meter" in Energy Tab, should be present, to create a new meter
-@Keyword
-public void checkEnergyAndWaterMeterCreateTabDataInput(){
-	WebUI.verifyElementPresent(findTestObject('Object Repository/DataInput/DataInputFileUpload/EnergyTabDataInput'), 5)
-	WebUI.verifyElementPresent(findTestObject('Object Repository/DataInput/DataInputFileUpload/AddNewMeterButton'), 5)
-	WebUI.verifyElementPresent(findTestObject('Object Repository/DataInput/DataInputFileUpload/WaterMeterTab'), 5)
-	WebUI.verifyElementPresent(findTestObject('Object Repository/DataInput/DataInputFileUpload/AddNewWaterMeterButton'), 5)
-}
-
-
-@Keyword
-public void waterScoreShouldNotrecomputemun(String sheetName){
-	WebUI.scrollToElement(findTestObject('DataInput/Survey/a_ Data Input'),5)
-	//WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
-	navigation.navigateIntoDataInput()
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-	WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-	WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/MeterWater/AnalyticsWater meter'), GlobalVariable.minAngularWait)
-	WebUI.scrollToElement(findTestObject('Object Repository/DataInput/MeterWater/AnalyticsWater meter'), GlobalVariable.minAngularWait)
-
-	String uIwaterScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/WaterScore'))
-	data.setCellData(sheetName,"waterScore",5,uIwaterScore)
-
-	WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/AnalyticsWater meter'))
-	WebUI.delay(2)
-	WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/Details'))
-	WebUI.delay(2)
-
-	WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/button_Municipality supplied'))
-	WebUI.delay(2)
-
-	WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/a_Municipality supplied reclai'))
-	WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/WaterScore'),40)
-
-	//CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsPerformanceScore.analyticsgenratePerformanceScoreAdminToolOtherNone1'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
-
-	performanceScore.analyticsgenratePerformanceScoreAdminToolOtherNone1(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
-
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-	WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-
-
-
-	String waterScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/WaterScore'))
-	WebUI.verifyMatch(waterScore,'0', false)
-
-}
-
-@Keyword
-public void waterScoreShouldNotrecomputemunReclaimedonsite(){
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
-
-	WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-	WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-
-
-	WebUI.scrollToElement(findTestObject('Object Repository/DataInput/MeterWater/button_Municipality supplied'),4)
-	WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/button_Municipality supplied'))
-	WebUI.delay(2)
-
-	WebUI.click(findTestObject('Add_Project_Details/Star/a_Reclaimed onsite'))
-	WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/WaterScore'),40)
-
-	performanceScore.analyticsgenratePerformanceScoreAdminToolOtherNone1(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
-
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
-	String rwaterScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/WaterScore'))
-
-	WebUI.verifyMatch(rwaterScore,'0', false, FailureHandling.CONTINUE_ON_FAILURE)
-}
-@Keyword
-public void waterScoreShouldrecomput(String sheetName){
-	WebUI.scrollToElement(findTestObject('Object Repository/DataInput/MeterWater/button_Municipality supplied'),4)
-	WebUI.click(findTestObject('Object Repository/DataInput/MeterWater/button_Municipality supplied'))
-	WebUI.delay(2)
-
-	WebUI.click(findTestObject('Add_Project_Details/Star/a_Municipality supplied potabl'))
-	WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/WaterScore'),40)
-
-	performanceScore.analyticsgenratePerformanceScoreAdminToolOtherNone1(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
-
-	WebUI.closeWindowIndex(1)
-	WebUI.switchToWindowIndex(0)
-	WebUI.delay(2)
-
-	/********************Changing to the default score of water ***********************************************/
-	WebUI.scrollToElement(findTestObject('PerformanceScore/DataInput/WaterScore'),5)
-	String awaterScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/WaterScore'))
-	String pwaterScore = data.getCellData(sheetName,"waterScore", 5)
-	WebUI.verifyMatch(awaterScore, pwaterScore, false)
-
-
-}
-@Keyword
-public void CitydefaultNotification(){
-	String noOfDefalutNoti =WebUI.getText(findTestObject('Object Repository/DataInput/Notification/DefaultNotifcaiton'))
-	WebUI.verifyMatch(noOfDefalutNoti,'5', false)
-
-
-
-}
-
-@Keyword
-public void NotificationNavigationTest(){
-	WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Notification/DefaultNotifcaiton'),5)
-	WebUI.click(findTestObject('Object Repository/DataInput/Notification/DefaultNotifcaiton'))
-	WebUI.delay(1)
-	WebUI.click(findTestObject('DataInput/Notification/Energy'))
-	WebUI.delay(5)
-	WebUI.verifyElementPresent(findTestObject('Object Repository/DataInput/Notification/span_Energy'), 2)
-
-	WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Notification/DefaultNotifcaiton'),5)
-	WebUI.click(findTestObject('Object Repository/DataInput/Notification/DefaultNotifcaiton'))
-	WebUI.delay(1)
-	WebUI.click(findTestObject('DataInput/Notification/Water'))
-	WebUI.delay(5)
-	WebUI.verifyElementPresent(findTestObject('Object Repository/DataInput/Notification/span_Water'), 2)
-
-	WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Notification/DefaultNotifcaiton'),5)
-	WebUI.click(findTestObject('Object Repository/DataInput/Notification/DefaultNotifcaiton'))
-	WebUI.delay(1)
-	WebUI.click(findTestObject('DataInput/Notification/Waste'))
-	WebUI.delay(5)
-	WebUI.verifyElementPresent(findTestObject('Object Repository/DataInput/Notification/span_Waste'), 2)
-
-	WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Notification/DefaultNotifcaiton'),5)
-	WebUI.click(findTestObject('Object Repository/DataInput/Notification/DefaultNotifcaiton'))
-	WebUI.delay(1)
-	WebUI.click(findTestObject('DataInput/Notification/Transport'))
-	WebUI.delay(5)
-	WebUI.verifyElementPresent(findTestObject('Object Repository/DataInput/Notification/span_Transportation'), 2)
-
-	WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Notification/DefaultNotifcaiton'),5)
-	WebUI.click(findTestObject('Object Repository/DataInput/Notification/DefaultNotifcaiton'))
-	WebUI.delay(1)
-	WebUI.click(findTestObject('DataInput/Notification/Hum'))
-	WebUI.delay(5)
-	WebUI.verifyElementPresent(findTestObject('Object Repository/DataInput/Notification/span_Human Experience'), 2)
-
-
-}
-
-@Keyword
-public void NotificatioBellTest(){
-
-	WebUI.verifyElementNotVisible(findTestObject('Object Repository/DataInput/Notification/BellNotification'),FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Notification/DefaultNotifcaiton'),5)
-	WebUI.click(findTestObject('Object Repository/DataInput/Notification/DefaultNotifcaiton'))
-	WebUI.delay(1)
-	WebUI.verifyElementNotVisible(findTestObject('Object Repository/DataInput/Notification/You have 1 notification'),FailureHandling.CONTINUE_ON_FAILURE)
-
-}
-@Keyword
-public void precertificationCreditAssionTest(){
-	WebUI.delay(3)
-	WebUI.click(findTestObject('Page_Arc dashboard/a_ Precertification'))
-	WebUI.delay(3)
-	WebUI.click(findTestObject('PreRequisite/CityCom/span_Commit to sharing data'))
-	WebUI.delay(3)
-
-	WebUI.click(findTestObject('BasePoint/BasePointCreditCom/TeamIconClick'))
-	WebUI.delay(2)
-	WebUI.click(findTestObject('BasePoint/BasePointCreditCom/TeamMemberSelection'))
-	WebUI.delay(10)
-
-	String teamMemUI = WebUI.getText(findTestObject("BasePoint/BasePointCreditCom/VerifyAddedTeamSuccessully"))
-	WebUI.verifyMatch(GlobalVariable.teamMemName,teamMemUI, false)
-
-	WebUI.click(findTestObject('Page_Arc dashboard/a_ Precertification'))
-	WebUI.delay(3)
-
-	String pteamMemUI = WebUI.getText(findTestObject('Object Repository/DataInput/CityC/VerifyTeam'))
-	WebUI.verifyMatch(GlobalVariable.teamMemName,pteamMemUI, false)
-
-}
-@Keyword
-public void HumanExpMeterReadingValidationUI()throws IOException, InterruptedException {
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.click(findTestObject('DataInput/CityCom/a_ Data Input'))
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.click(findTestObject('DataInput/CityCom/span_Human Experience'))
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.waitForPageLoad(10)
-	WebUI.click(findTestObject('DataInput/CityCom/EducationAddYear'))
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-
-
-	WebUI.setText(findTestObject('DataInput/CityCom/TextboxValue1'), '5000')
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+1))
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.verifyElementPresent(findTestObject('DataInput/CityCom/Hum/TextValidationPercentPercentvalueshouldnotexceed100'),5)
-
-	/****************************Verifying the Notification of Error message******************************/
-	WebUI.clearText(findTestObject('DataInput/CityCom/TextboxValue1'))
-	//WebUI.delay(5)
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.setText(findTestObject('DataInput/CityCom/TextboxValue1'),'20')
-	//WebUI.delay(1)
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton'+1),2)
-	WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+1))
-	//WebUI.delay(5)
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/TextboxValue1'),"value"),'20',"Not Valid")
-
-
-}
-
-
-@Keyword
-public void PopulationHumanExpMeterReadingValidationUI()throws IOException, InterruptedException {
-
-	WebUI.scrollToElement(findTestObject('DataInput/CityCom/BachelorAddYear'), 2)
-	WebUI.click(findTestObject('DataInput/CityCom/BachelorAddYear'))
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-
-	WebUI.setText(findTestObject('DataInput/CityCom/HTextBox2'), '5000')
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+2))
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.verifyElementPresent(findTestObject('DataInput/CityCom/Hum/TextValidationPercentPercentvalueshouldnotexceed100'),5)
-
-	/****************************Verifying the Notification of Error message******************************/
-	WebUI.clearText(findTestObject('DataInput/CityCom/HTextBox2'))
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.setText(findTestObject('DataInput/CityCom/HTextBox2'), '20')
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton'+2),2)
-	WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+2))
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/HTextBox2'),"value"),'20',"Not Valid")
-
-
-}
-@Keyword
-public void EQUITABILITYHumanExpMeterReadingValidationUI()throws IOException, InterruptedException {
-
-	WebUI.waitForPageLoad(10)
-	WebUI.scrollToElement(findTestObject('DataInput/CityCom/EquAddYear'),2)
-	WebUI.click(findTestObject('DataInput/CityCom/EquAddYear'))
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-
-	WebUI.setText(findTestObject('DataInput/CityC/TextBox3'), '5000')
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+3))
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.verifyElementPresent(findTestObject('DataInput/CityCom/Hum/TextValidationPercentPercentvalueshouldnotexceed100'),5)
-
-	/****************************Verifying the Notification of Error message******************************/
-	WebUI.clearText(findTestObject('DataInput/CityC/TextBox3'))
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.setText(findTestObject('DataInput/CityC/TextBox3'), '20')
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton'+3),2)
-	WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+3))
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityC/TextBox3'),"value"),'20',"Not Valid")
-
-
-}
-@Keyword
-public void GinicoefficientHumanExpMeterReadingValidationUI()throws IOException, InterruptedException {
-
-	WebUI.click(findTestObject('DataInput/CityCom/GiniAddYear'))
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-
-	WebUI.setText(findTestObject('DataInput/CityC/TextBox4'), '5000')
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+4))
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.verifyElementPresent(findTestObject('DataInput/CityCom/Hum/Gini'),5)
-
-	/****************************Verifying the Notification of Error message******************************/
-	WebUI.clearText(findTestObject('DataInput/CityC/TextBox4'))
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.setText(findTestObject('DataInput/CityC/TextBox4'),'1')
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton'+4),2)
-	WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+4))
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityC/TextBox4'),"value"),'1',"Not Valid")
-}
-
-
-//City Data Input Text validation
-@Keyword
-public void validateCityCommEnergyDataInputText(){
-
-	//Verify the title text
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTextOne')),"GHG Emissions (CO2 equivalent)", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTextTwo')), "Enter tons of CO2 equivalent per year per capita", false)
-
-	//Verify the reading title
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyYearLabel')), "Year", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTonsYearCapita')),"Tons/Year/Capita",false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyActionsLabel')),"Actions", false)
-}
-
-
-
-@Keyword
-public void validateCityCommWaterDataInputText(){
-
-	//Verify the title Text
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTextOne')),"Domestic Water Consumption", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTextTwo')), "Enter domestic water consumption per capita", false)
-
-	//Verify the reading title
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterYearLabel')), "Year", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterValueLabel')),"Value",false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterUnitLabel')),"Unit", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterDurationLabel')),"Duration", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterActionsLabel')),"Actions", false)
-}
-
-@Keyword
-public void validateCityCommWasteDataInputText(){
-
-	//Verify the solid waste generation title Text
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTextOne')),"Municipal solid waste generation intensity", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTextTwo')), "Enter muncipal solid waste generated per year per capita", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWasteTextThree')),"Municipal solid waste diversion rate from landfill", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWasteTextFour')), "Enter muncipal solid waste diversion rate", false)
-
-	//Verify the solid waste generation reading title
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterYearLabel')), "Year", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterValueLabel')),"Tons/Year/Capita",false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterUnitLabel')),"Actions", false)
-
-	//verify the solid waste diversion reading title
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWasteDivYearLabel')), "Year", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWasteDivPercentLabel')),"Percent",false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWasteDivActionsLabel')),"Actions", false)
-
-}
-
-
-@Keyword
-public void validateCityCommTransportationDataInputText(){
-
-	//Verify the solid waste generation title Text
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTextOne')),"Vehicle miles traveled on individual vehicles daily (VMT)", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTextTwo')), "Enter total vehicle miles traveled per day per capita", false)
-
-	//Verify the transportation reading title
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterYearLabel')), "Year", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterValueLabel')),"Miles/Day/Capita",false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterUnitLabel')),"Actions", false)
-
-}
-
-
-@Keyword
-public void validateCityCommHumanExperienceDataInputText(){
-
-	//Verify the human experience
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/EducationTitle')), "Education", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/PopulationWithHighSchoolDegree')), "Population with (at least) High School degree", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/PopulationWithBachelorDegree')), "Population with (at least) Bachelor's degree", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/EquitabilityTitle')), "Equitability", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/Median gross rentLabel')), "Median gross rent as % of household income", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/Gini coefficientLabel')), "Gini coefficient (for income distribution)", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ProsperityTitle')), "Prosperity", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/MedianHouseHoldLabel')), "Median household income", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/UnEmploymentRate')), "Unemployment rate", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/HealthAndSafetyTitle')), "Health & Safety", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/MedianAirQualityIndexLabel')), "Median air quality index (AQI)", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/AirQulaityDaysUnhealthyLabel')), "Air quality days unhealthy for sensitive groups", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ViolentCrimeLabel')), "Violent Crime per year per capita", false)
-
-	//Verify the title
-
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/HighSchoolYearLabel')), "Year", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/HighSchoolPercentLabel')), "Percent", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/HighSchoolActionsLabel')), "Actions", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/BachelorDegreeYearLabel')), "Year", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/BachelorDegreePercentLabel')), "Percent", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/BachelorDegreeActionsLabel')), "Actions", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianGrossYearLabel')), "Year", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianGrossPercentLabel')), "Percent", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianGrossActionsLabel')), "Actions", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/GiniCoefficientYearLabel')), "Year", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/GiniCoefficientValueLabel')), "Value (between 0 And 1)", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/GiniCoefficientActionsLabel')), "Actions", false)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianHouseholdYearLabel')), "Year", false)
-	//WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/HumanExperience/ReadingLabel/MedianHouseholdUSDollarPerYearLabel')), "US Dollars/Year", false)
-	WebUI.verifyElementPresent(findTestObject('Manage/CityCom/USDollar'), 3, FailureHandling.CONTINUE_ON_FAILURE)
-}
-
-
-
-@Keyword
-public void fileUploadDataInputWasteTest(){
-	WebUI.delay(18)
-	//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'), 3)
-	//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
-	WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'))
-	WebUI.delay(5)
-	//pdf file
-	//WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
-	WebUI.delay(2)
-	WebUI.sendKeys(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'), UploadDocumentDataInput)
-	//WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
-	WebUI.delay(2)
-	//uploadFile(UploadDocumentDataInput)
-	WebUI.delay(2)
-	//text file
-	WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
-	WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
-	WebUI.delay(2)
-	WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
-	WebUI.delay(2)
-	uploadFile(UploadTextFile)
-	//WebUI.delay(4)
-	//jpg file
-	WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
-	WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
-	WebUI.delay(2)
-	WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
-	WebUI.delay(2)
-	uploadFile(UploadJpeg)
-	//WebUI.delay(4)
-	//Png file
-	WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
-	WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
-	WebUI.delay(2)
-	WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
-	uploadFile(UploadPng)
-	//WebUI.delay(4)
-	//gif file
-	WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
-	WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
-	WebUI.delay(2)
-	WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
-	WebUI.delay(2)
-	uploadFile(UploadGif)
-	WebUI.delay(4)
-	//xls file
-	WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
-	WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
-	WebUI.delay(2)
-	WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
-	WebUI.delay(2)
-	uploadFile(UploadXls)
-	//WebUI.delay(4)
-	//doc file
-	WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
-	WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
-	WebUI.delay(2)
-	WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
-	WebUI.delay(2)
-	uploadFile(UploadDocs)
-	WebUI.delay(4)
-
-}
-
-
-//Verify data upload template present and can be download in resources section
-@Keyword
-public void verifyTheDataUploadTemplateInResourcesTab(){
-	WebUI.delay(5)
-	WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
-	WebUI.delay(10)
-	WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Resources/div_Guides'), 4)
-	WebUI.click(findTestObject('Object Repository/DataInput/Resources/div_Guides'))
-	WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Resources/div_Guides (1)'),10)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Resources/div_Guides (1)')),"Guides", false)
-	WebUI.delay(8)
-	WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Resources/a_ENERGY STAR Template'), 5)
-	WebUI.click(findTestObject('Object Repository/DataInput/Resources/a_ENERGY STAR Template'))
-	WebUI.delay(7)
-	robot.keyPress(KeyEvent.VK_ENTER)
-	robot.keyRelease(KeyEvent.VK_ENTER)
-	robot.keyPress(KeyEvent.VK_ENTER)
-	robot.keyRelease(KeyEvent.VK_ENTER)
-	robot.keyPress(KeyEvent.VK_ENTER)
-	robot.keyRelease(KeyEvent.VK_ENTER)
-	WebUI.delay(5)
-	Assert.assertTrue(isFileDownloaded('Arc_Data_Template_building_v4.1.xlsm'), 'Failed to download Expected document')
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Resources/a_ENERGY STAR Integration Guide')), "ENERGY STAR Integration Guide", false, FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Resources/a_Data Guide for Buildings')), "Data Guide for Buildings", false, FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Resources/a_Data Review Checklist')), "Data Review Checklist", false, FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Resources/a_ENERGY STAR Template')), "ENERGY STAR Template", false, FailureHandling.CONTINUE_ON_FAILURE)
-}
-
-@Keyword
-public void deleteIncompleteMeterReading(){
-	WebUI.delay(12)
-	ReusableMethodsLogin.waitForIframeLoad(60)
-	WebUI.delay(2)
-	WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'))
-	WebUI.click(findTestObject('DataInput/CreateMeterBuilding/a_Add New Meter'))
-	WebUI.delay(3)
-	WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_Next'))
-	WebUI.delay(3)
-	WebUI.sendKeys(findTestObject('DataInput/CreateMeterBuilding/input_addMeterModal-body-Eleme'),"Energy Meter for Incomplete Readings")
-	WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_ELECTRICITY'))
-	WebUI.click(findTestObject('DataInput/CreateMeterBuilding/a_ELECTRICITY'))
-	WebUI.click(findTestObject('DataInput/CreateMeterBuilding/CreateEnergyAndWaterMeterWithDifferentCombinations/ClickOnSelectUnit'))
-	WebUI.click(findTestObject('DataInput/CreateMeterBuilding/CreateEnergyAndWaterMeterWithDifferentCombinations/SelectKBtu'))
-	WebUI.click(findTestObject('DataInput/CreateMeterBuilding/CreateEnergyAndWaterMeterWithDifferentCombinations/ClickOnFuelSource'))
-	WebUI.click(findTestObject('DataInput/CreateMeterBuilding/CreateEnergyAndWaterMeterWithDifferentCombinations/SelectOnGenerateOnSiteSolar'))
-	WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_ADD'))
-	WebUI.waitForElementNotVisible(findTestObject('DataInput/CreateMeterBuilding/button_ADD'), 20)
-	WebUI.delay(5)
-	WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'),"Energy Meter for Incomplete Readings", FailureHandling.STOP_ON_FAILURE)
-	WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), 5)
-	//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'),2)
-	WebUI.delay(3)
-	WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
-	WebUI.delay(4)
-	WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/DeletereadingOne'))
-	WebUI.delay(4)
-	WebUI.verifyElementNotPresent(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter start_'), 3)
-
-}
-
-@Keyword
-public void createEmissionFactor1(String sheetName, int rowNum){
-
-	String emissionFactor  = data.getCellData(sheetName, "EmissionFactor", rowNum)
-	WebUI.delay(5)
-
-	WebUI.scrollToElement(findTestObject('DataInput/Survey/a_ Data Input'),5)
-	WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
-
-	ReusableMethodsLogin.waitForPageLoad(60)
-	ReusableMethodsLogin.waitForIframeLoad(60)
-	WebUI.delay(8)
-
-	WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-	WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-
-	//Verifying the Performance score
-	String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
-	data.setCellData(GlobalVariable.BDataInput,"TotalScore", GlobalVariable.rowNumTwo,totalPerformaceScore)
-
-	WebUI.doubleClick(findTestObject('Analytics/17/Building Settings'))
-	WebUI.delay(4)
-
-	WebUI.waitForElementClickable(findTestObject('Analytics/17/span_Emission Factor'), 10)
-	WebUI.scrollToElement(findTestObject('Analytics/17/span_Emission Factor'), 3)
-	WebUI.click(findTestObject('Analytics/17/span_Emission Factor'))
-	WebUI.delay(5)
-
-	WebUI.waitForElementClickable(findTestObject('Analytics/17/Custom Emission Facto'), 10)
-	WebUI.scrollToElement(findTestObject('Analytics/17/Custom Emission Facto'), 3)
-	WebUI.click(findTestObject('Analytics/17/Custom Emission Facto'))
-	WebUI.delay(5)
-
-	WebUI.waitForElementClickable(findTestObject('Analytics/17/Manually Enter Emission'), 10)
-	WebUI.scrollToElement(findTestObject('Analytics/17/Manually Enter Emission'), 3)
-	WebUI.click(findTestObject('Analytics/17/Manually Enter Emission'))
-	WebUI.delay(5)
-
-	WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), 10)
-	WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
-	WebUI.delay(4)
-
-	WebUI.waitForElementClickable(findTestObject('Analytics/Cal/StartDate'), 10)
-	WebUI.scrollToElement(findTestObject('Analytics/Cal/StartDate'), 2)
-	WebUI.click(findTestObject('Analytics/Cal/StartDate'))
-	WebUI.delay(2)
-
-	WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker'))
-	WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
-	WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
-	WebUI.mouseOver(findTestObject('DataInput/CreateMeterBuilding/year_2018'))
-	WebUI.click(findTestObject('DataInput/CreateMeterBuilding/year_2018'))
-
-	WebUI.scrollToElement(findTestObject('Analytics/17/span_Aug'), 2)
-	WebUI.mouseOver(findTestObject('Analytics/17/span_Aug'))
-	WebUI.click(findTestObject('Analytics/17/span_Aug'))
-	WebUI.delay(2)
-
-	WebUI.scrollToElement(findTestObject('Analytics/17/1Aug2018'), 2)
-	WebUI.mouseOver(findTestObject('Analytics/17/1Aug2018'))
-	WebUI.click(findTestObject('Analytics/17/1Aug2018'))
-	WebUI.delay(4)
-	WebUI.setText(findTestObject('Analytics/17/Reading1'),emissionFactor)
-
-	WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
-	WebUI.delay(4)
-
-	WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/deleteButtonOne'), 20)
-	WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), 20)
-
-}
-
-
-@Keyword
-public void createEmissionFactor(String sheetName, int rowNum){
-
-	String emissionFactor  = data.getCellData(sheetName, "EmissionFactor", rowNum)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-
-	WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-	WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-
-	//Verifying the Performance score
-	String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
-	data.setCellData(GlobalVariable.BDataInput,"TotalScore", GlobalVariable.rowNumTwo,totalPerformaceScore)
-
-	WebUI.waitForElementClickable(findTestObject('Analytics/17/Manually Enter Emission'), 10)
-	WebUI.scrollToElement(findTestObject('Analytics/17/Manually Enter Emission'), 3)
-	WebUI.click(findTestObject('Analytics/17/Manually Enter Emission'))
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-
-	WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), 10)
-	WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-
-	WebUI.waitForElementClickable(findTestObject('Analytics/Cal/StartDate'), 10)
-	WebUI.scrollToElement(findTestObject('Analytics/Cal/StartDate'), 2)
-	WebUI.click(findTestObject('Analytics/Cal/StartDate'))
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-
-	WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker'))
-	WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
-	WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
-	WebUI.mouseOver(findTestObject('DataInput/CreateMeterBuilding/year_2018'))
-	WebUI.click(findTestObject('DataInput/CreateMeterBuilding/year_2018'))
-
-	WebUI.scrollToElement(findTestObject('Analytics/17/span_Aug'), 2)
-	WebUI.mouseOver(findTestObject('Analytics/17/span_Aug'))
-	WebUI.click(findTestObject('Analytics/17/span_Aug'))
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-
-	WebUI.scrollToElement(findTestObject('Analytics/17/1Aug2018'), 2)
-	WebUI.mouseOver(findTestObject('Analytics/17/1Aug2018'))
-	WebUI.click(findTestObject('Analytics/17/1Aug2018'))
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.setText(findTestObject('Analytics/17/Reading1'),emissionFactor)
-
-	WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-
-	WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/deleteButtonOne'), 20)
-	WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), 20)
-
-
-
-}
-
-@Keyword
-public void updateEmissionFactor(String sheetName, int rowNum){
-
-	String emissionFactor  = data.getCellData(sheetName, "EmissionFactor", rowNum)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.scrollToElement(findTestObject('DataInput/Survey/a_ Data Input'),5)
-	WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-	WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-	WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-	//Verifying the Performance score
-
-	String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
-	data.setCellData(GlobalVariable.BDataInput,"TotalScore", GlobalVariable.rowNumTwo,totalPerformaceScore)
-
-	WebUI.doubleClick(findTestObject('Analytics/17/Building Settings'))
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Setting/Setting'), 10)
-	WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Setting/Setting'), 3)
-	WebUI.click(findTestObject('Object Repository/DataInput/Setting/Setting'))
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Setting/a_Emission Factor'), 10)
-	WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Setting/a_Emission Factor'), 3)
-	WebUI.click(findTestObject('Object Repository/DataInput/Setting/a_Emission Factor'))
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('Analytics/17/Manually Enter Emission'), 10)
-	WebUI.scrollToElement(findTestObject('Analytics/17/Manually Enter Emission'), 3)
-	WebUI.click(findTestObject('Analytics/17/Manually Enter Emission'))
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.clearText(findTestObject('Analytics/17/Reading1'))
-	WebUI.setText(findTestObject('Analytics/17/Reading1'),emissionFactor)
-
-	WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/deleteButtonOne'), 20)
-	WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), 20)
-
-
-
-}
-
-@Keyword
-public void navigateToEmession(String sheetName, int rowNum){
-
-	WebUI.scrollToElement(findTestObject('DataInput/Survey/a_ Data Input'),5)
-	WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
-
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
-	WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-	WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('Analytics/17/Building Settings'), 60)
-	WebUI.click(findTestObject('Analytics/17/Building Settings'))
-	WebUI.delay(1)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/Setting/Setting'), GlobalVariable.minAngularWait)
-	WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Setting/Setting'), GlobalVariable.minAngularWait)
-	WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Setting/Setting'), GlobalVariable.minAngularWait)
-	WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Setting/Setting'), 2)
-	WebUI.click(findTestObject('Object Repository/DataInput/Setting/Setting'))
-	WebUI.delay(1)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Setting/a_Emission Factor'), GlobalVariable.minAngularWait)
-	WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Setting/a_Emission Factor'), 3)
-	WebUI.click(findTestObject('Object Repository/DataInput/Setting/a_Emission Factor'))
-	WebUI.delay(1)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('Analytics/17/Manually Enter Emission'), GlobalVariable.minAngularWait)
-	WebUI.scrollToElement(findTestObject('Analytics/17/Manually Enter Emission'), 3)
-	WebUI.click(findTestObject('Analytics/17/Manually Enter Emission'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-}
-
-@Keyword
-public void updateUnitgramkwh(String sheetName, int rowNum){
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/button_grams'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_grams'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_grams'),3)
-	WebUI.click(findTestObject('DataInput/Occupancy/a_grams'))
-	WebUI.delay(3)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 30)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
-	WebUI.delay(3)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_kWh'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_kWh'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/a_kWh'))
-	WebUI.delay(3)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (gramskWh)'),10, FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (gramskWh)'), 10, FailureHandling.CONTINUE_ON_FAILURE)
-
-
-}
-
-@Keyword
-public void updateUnitgrammwh(String sheetName, int rowNum){
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/button_grams'))
-	WebUI.delay(3)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_grams'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_grams'),3)
-	WebUI.click(findTestObject('DataInput/Occupancy/a_grams'))
-	WebUI.delay(3)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
-	WebUI.delay(3)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_MWh'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_MWh'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/a_MWh'))
-	WebUI.delay(3)
-
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-	WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (gramsMWh)'),10, FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (gramsMWh)'), 10, FailureHandling.CONTINUE_ON_FAILURE)
-
-}
-@Keyword
-public void updateUnitLBSkbtu(String sheetName, int rowNum){
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/button_grams'))
-	WebUI.delay(3)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_lbs'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_lbs'),3)
-	WebUI.click(findTestObject('DataInput/Occupancy/a_lbs'))
-	WebUI.delay(3)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
-	WebUI.delay(3)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_kBtu'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_kBtu'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/a_kBtu'))
-	WebUI.delay(3)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-	WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (lbskBtu)'),10, FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (lbskBtu)'), 10, FailureHandling.CONTINUE_ON_FAILURE)
-
-}
-
-@Keyword
-public void updateUnitLBSkwh(String sheetName, int rowNum){
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/button_grams'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_lbs'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_lbs'),3)
-	WebUI.click(findTestObject('DataInput/Occupancy/a_lbs'))
-	WebUI.delay(3)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_kWh'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_kWh'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/a_kWh'))
-	WebUI.delay(3)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-	WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (lbskWh)'),10, FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (lbskWh)'), 10, FailureHandling.CONTINUE_ON_FAILURE)
-
-}
-
-@Keyword
-public void updateUnitLBSmwh(String sheetName, int rowNum){
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/button_grams'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_lbs'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_lbs'),3)
-	WebUI.click(findTestObject('DataInput/Occupancy/a_lbs'))
-	WebUI.delay(3)
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_MWh'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_MWh'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/a_MWh'))
-	WebUI.delay(3)
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-	WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (lbsMWh)'),10, FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (lbsMWh)'), 10, FailureHandling.CONTINUE_ON_FAILURE)
-
-}
-
-
-@Keyword
-public void updateUnitgramkbtu(String sheetName, int rowNum){
-
-	WebUI.scrollToElement(findTestObject('DataInput/Survey/a_ Data Input'),5)
-	WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
-
-
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
-	WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-	WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-
-
-	WebUI.waitForElementClickable(findTestObject('Analytics/17/Building Settings'), 10)
-	WebUI.doubleClick(findTestObject('Analytics/17/Building Settings'))
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Setting/Setting'), 10)
-	WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Setting/Setting'), 3)
-	WebUI.click(findTestObject('Object Repository/DataInput/Setting/Setting'))
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Setting/a_Emission Factor'), 10)
-	WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Setting/a_Emission Factor'), 3)
-	WebUI.click(findTestObject('Object Repository/DataInput/Setting/a_Emission Factor'))
-	WebUI.delay(3)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('Analytics/17/Manually Enter Emission'), 10)
-	WebUI.scrollToElement(findTestObject('Analytics/17/Manually Enter Emission'), 3)
-	WebUI.click(findTestObject('Analytics/17/Manually Enter Emission'))
-	WebUI.delay(8)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-	WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/button_grams'))
-	WebUI.delay(2)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_grams'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_grams'),3)
-	WebUI.click(findTestObject('DataInput/Occupancy/a_grams'))
-	WebUI.delay(3)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
-	WebUI.delay(3)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_kBtu'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_kBtu'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/a_kBtu'))
-
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (gramskBtu)'),10, FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (gramskBtu)'), 10, FailureHandling.CONTINUE_ON_FAILURE)
-
-}
-
-@Keyword
-public void updateUnitKGkbtu(String sheetName, int rowNum){
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/button_grams'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_kg'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_kg'),3)
-	WebUI.click(findTestObject('DataInput/Occupancy/a_kg'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_kBtu'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_kBtu'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/a_kBtu'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-	WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (kgkBtu)'),10, FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (kgkBtu)'), 10, FailureHandling.CONTINUE_ON_FAILURE)
-
-}
-
-@Keyword
-public void updateUnitKGkwh(String sheetName, int rowNum){
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/button_grams'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_kg'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_kg'),3)
-	WebUI.click(findTestObject('DataInput/Occupancy/a_kg'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_kWh'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_kWh'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/a_kWh'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-	WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (kgkWh)'),10, FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (kgkWh)'), 10, FailureHandling.CONTINUE_ON_FAILURE)
-
-}
-
-@Keyword
-public void updateUnitKGmwh(String sheetName, int rowNum){
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/button_grams'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_kg'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_kg'),3)
-	WebUI.click(findTestObject('DataInput/Occupancy/a_kg'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_MWh'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_MWh'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/a_MWh'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-	WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (kgMWh)'),10, FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (kgMWh)'), 10, FailureHandling.CONTINUE_ON_FAILURE)
-
-}
-
-@Keyword
-public void updateUnitTIkbtu(String sheetName, int rowNum){
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/button_grams'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_Tonnes (imperial)'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_Tonnes (imperial)'),3)
-	WebUI.click(findTestObject('DataInput/Occupancy/a_Tonnes (imperial)'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_kBtu'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_kBtu'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/a_kBtu'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-	WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (Tonnes (imperial)kBt'),10, FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (Tonnes (imperial)kBt'), 10, FailureHandling.CONTINUE_ON_FAILURE)
-
-}
-
-@Keyword
-public void updateUnitTIkwh(String sheetName, int rowNum){
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/button_grams'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_Tonnes (imperial)'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_Tonnes (imperial)'),3)
-	WebUI.click(findTestObject('DataInput/Occupancy/a_Tonnes (imperial)'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_kWh'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_kWh'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/a_kWh'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-	WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (Tonnes (imperial)kWh'),10, FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (Tonnes (imperial)kWh'), 10, FailureHandling.CONTINUE_ON_FAILURE)
-
-}
-
-@Keyword
-public void updateUnitTImwh(String sheetName, int rowNum){
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/button_grams'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_Tonnes (imperial)'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_Tonnes (imperial)'),3)
-	WebUI.click(findTestObject('DataInput/Occupancy/a_Tonnes (imperial)'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_MWh'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_MWh'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/a_MWh'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-	WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (Tonnes (imperial)MWh'),10, FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (Tonnes (imperial)MWh'), 10, FailureHandling.CONTINUE_ON_FAILURE)
-
-}
-
-@Keyword
-public void updateUnitTMkbtu(String sheetName, int rowNum){
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/button_grams'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_Tonnes (metric)'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_Tonnes (metric)'),3)
-	WebUI.click(findTestObject('DataInput/Occupancy/a_Tonnes (metric)'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_kBtu'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_kBtu'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/a_kBtu'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-	WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (Tonnes (imperial)kBt'),10, FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (Tonnes (imperial)kBt'), 10, FailureHandling.CONTINUE_ON_FAILURE)
-
-}
-
-@Keyword
-public void updateUnitTMkwh(String sheetName, int rowNum){
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/button_grams'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_Tonnes (metric)'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_Tonnes (metric)'),3)
-	WebUI.click(findTestObject('DataInput/Occupancy/a_Tonnes (metric)'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_kWh'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_kWh'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/a_kWh'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-	WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (Tonnes (imperial)kWh'),10, FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (Tonnes (imperial)kWh'), 10, FailureHandling.CONTINUE_ON_FAILURE)
-
-}
-
-@Keyword
-public void updateUnitTMmwh(String sheetName, int rowNum){
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_grams'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_grams'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/button_grams'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_Tonnes (metric)'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_Tonnes (metric)'),3)
-	WebUI.click(findTestObject('DataInput/Occupancy/a_Tonnes (metric)'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/button_kBtu'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/button_kBtu'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/button_kBtu'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/a_MWh'), 10)
-	WebUI.scrollToElement(findTestObject('DataInput/Occupancy/a_MWh'), 3)
-	WebUI.click(findTestObject('DataInput/Occupancy/a_MWh'))
-	WebUI.delay(2)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-	WebUI.waitForElementPresent(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (Tonnes (metric)MWh)'),10, FailureHandling.CONTINUE_ON_FAILURE)
-	WebUI.waitForElementVisible(findTestObject('DataInput/Occupancy/Page_Arc dashboard/th_VALUE (Tonnes (metric)MWh)'), 10, FailureHandling.CONTINUE_ON_FAILURE)
-
-}
-
-
-
-@Keyword
-public void scoreShouldMoreVerify(String sheetName, int rowNum){
-
-	String totalScore  = data.getCellData(sheetName, "TotalScore", rowNum)
-	int utotalScore = Integer.parseInt(totalScore)
-
-	String actotalScore  = data.getCellData(sheetName, "ATotalScore", rowNum)
-
-
-	/********* Verifying the Generated score for total score & Energy & Water & Waste & Transport & Human Experience under data Input section ********/
-	WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
-
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Setting/Setting'), 60)
-
-	WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'),10)
-	//Verifying the Performance score
-	String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
-	print totalPerformaceScore
-	int utotalPerformaceScore = Integer.parseInt(totalPerformaceScore)
-
-	if(utotalPerformaceScore>utotalScore)
-	KeywordUtil.markPassed("!!! Total Score is increased for this Project after changing the emission factor !!!")
-	else
-	KeywordUtil.markFailedAndStop("!!! Total Score is Not increased for this  Project after changing the emission factor !!!")
-
-
-	/*WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
-	 WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TotalPerformanceScore'),10)
-	 WebUI.delay(15)
-	 String totalperformaceScore = WebUI.getText(findTestObject('PerformanceScore/Score/TotalPerformanceScore'))
-	 int uTotalPagetotalScore = Integer.parseInt(totalperformaceScore)
-	 if(uTotalPagetotalScore>utotalScore)
-	 KeywordUtil.markPassed("!!! Total Score is increased for this Project after changing the emission factor !!!")
-	 else
-	 KeywordUtil.markFailedAndStop("!!! Total Score is Not increased for this  Project after changing the emission factor !!!")
-	 */
-}
-@Keyword
-public void scoreShouldLessVerify(String sheetName, int rowNum){
-
-	String totalScore  = data.getCellData(sheetName, "TotalScore", rowNum)
-	int utotalScore = Integer.parseInt(totalScore)
-
-	/********* Verifying the Generated score for total score under data Input section ********/
-	WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
-	WebUI.delay(8)
-	WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Setting/Setting'), 60)
-	WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'),10)
-	//Verifying the Performance score
-	String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
-	print totalPerformaceScore
-	int utotalPerformaceScore = Integer.parseInt(totalPerformaceScore)
-
-	if(utotalPerformaceScore<utotalScore)
-	KeywordUtil.markPassed("!!! Total Score is decrease for this Project after changing the emission factor !!!")
-	else
-	KeywordUtil.markFailedAndStop("!!! Total Score is Not Decrease for this Project after changing the emission factor !!!")
-
-
-	/*	WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
-	 WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TotalPerformanceScore'),10)
-	 WebUI.delay(15)
-	 String totalperformaceScore = WebUI.getText(findTestObject('PerformanceScore/Score/TotalPerformanceScore'))
-	 int uTotalPagetotalScore = Integer.parseInt(totalperformaceScore)
-	 if(uTotalPagetotalScore<utotalScore)
-	 KeywordUtil.markPassed("!!! Total Score is increased for this Project after changing the emission factor !!!")
-	 else
-	 KeywordUtil.markFailedAndStop("!!! Total Score is Not increased for this  Project after changing the emission factor !!!")
-	 */
-
-}
-
-
-@Keyword
-public void scoreShouldNotChangeVerify(String sheetName, int rowNum){
-
-	String totalScore  = data.getCellData(sheetName, "TotalScore", rowNum)
-	String actotalScore  = data.getCellData(sheetName, "ATotalScore", rowNum)
-
-
-	/********* Verifying the Generated score for total score & Energy & Water & Waste & Transport & Human Experience under data Input section ********/
-	WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
-
-	WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
-
-	WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-	WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-
-	WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'),10)
-	//Verifying the Performance score
-	String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
-	print totalPerformaceScore
-	WebUI.verifyMatch(totalPerformaceScore ,totalScore, false)
-	WebUI.verifyMatch(totalPerformaceScore , actotalScore, false)
-
-	WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
-	WebUI.delay(18)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-	WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TotalPerformanceScore'),10)
-	WebUI.waitForElementVisible(findTestObject('PerformanceScore/Score/TotalPerformanceScore'), GlobalVariable.minAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
-
-	//Verifying the Performance score
-	String totalperformaceScore = WebUI.getText(findTestObject('PerformanceScore/Score/TotalPerformanceScore'))
-	print totalperformaceScore
-	WebUI.verifyMatch(totalperformaceScore , totalScore, false)
-	WebUI.verifyMatch(totalperformaceScore , actotalScore, false)
-
-}
-
-
-@Keyword
-public void verifyTheCommentCityCommunityDoesnotIncludeMeterName(){
-
-	//WebUI.delay(4)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-	if((WebUI.getText(findTestObject('Object Repository/DataInput/ActivityCommentCityComm')).contains("Saurav K has added new data for GHG Emissions for the period"))){
-		KeywordUtil.markPassed("Meter name is not included in the activity comment")
-	}
-	else{
-		KeywordUtil.markFailed("Meter name is included in the acivity comment ")
-	}
-
-
-}
 }
 
