@@ -3546,6 +3546,16 @@ def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifyTheHereLin
     (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).verifyTheHereLinkRedirectToGivenRespectiveLink()
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifySnapshotFileNameUploadedBuildingLEED"(
+    	String sheetName	
+     , 	int rowNum	
+     , 	String ratingSystem	) {
+    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).verifySnapshotFileNameUploadedBuildingLEED(
+        	sheetName
+         , 	rowNum
+         , 	ratingSystem)
+}
+
 def static "com.arc.ReusableMethods.ResuableMethodsGRESB.downloadGresbtemplete"() {
     (new com.arc.ReusableMethods.ResuableMethodsGRESB()).downloadGresbtemplete()
 }

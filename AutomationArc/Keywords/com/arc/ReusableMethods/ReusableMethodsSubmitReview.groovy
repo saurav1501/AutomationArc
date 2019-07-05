@@ -1291,4 +1291,92 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 	}
 
 
+	//Download and Verify the snapshot generated for LEED Online Projects
+	@Keyword
+	public void verifySnapshotFileNameUploadedBuildingLEED(String sheetName, int rowNum, String ratingSystem){
+
+		String projectId = data.getCellData(sheetName, "ProjectID", rowNum)
+		String fileName= projectId+".zip"
+		String sourceZipFile= GlobalVariable.downloadDir+fileName
+		println sourceZipFile
+		String sourceExtractedFileEnergy= GlobalVariable.downloadDir+projectId+"/"+ratingSystem+"/Performance Score Verification/energy/"
+		println sourceExtractedFileEnergy
+		String sourceExtractedFileWater= GlobalVariable.downloadDir+projectId+"/"+ratingSystem+"/Performance Score Verification/water/"
+		String sourceExtractedFileWaste= GlobalVariable.downloadDir+projectId+"/"+ratingSystem+"/Performance Score Verification/waste/"
+
+		String destinationUnZippedFolder= GlobalVariable.downloadDir
+		println destinationUnZippedFolder
+		//deleteFile(sourceZipFile)
+		//deleteFile(sourceExtractedFile)
+		WebUI.delay(5)
+		WebUI.scrollToElement(findTestObject('Object Repository/PerformanceScore/AdminToolReviewButton'), 4)
+		WebUI.click(findTestObject('Object Repository/PerformanceScore/AdminToolReviewButton'))
+		WebUI.click(findTestObject('Object Repository/PerformanceScore/AdminToolsReviewSearchBar'))
+		WebUI.setText(findTestObject('Object Repository/PerformanceScore/AdminToolsReviewSearchBar'), projectId)
+		WebUI.click(findTestObject('Object Repository/PerformanceScore/AdminToolReviewSearchButton'))
+		WebUI.waitForElementVisible(findTestObject('Object Repository/PerformanceScore/SnapshotLinkToDownload'), 20, FailureHandling.STOP_ON_FAILURE)
+		WebUI.click(findTestObject('Object Repository/PerformanceScore/SnapshotLinkToDownload'))
+		WebUI.delay(10)
+		unzip(sourceZipFile, destinationUnZippedFolder)
+		WebUI.delay(5)
+		/*println isFileExtracted('Test de téléchargement de fichier(French).txt')
+		 println isFileExtracted('Upload do arquivo de teste(Portugues).txt')
+		 println isFileExtracted('Testen Sie den Datei-Upload(Greman).txt')
+		 println isFileExtracted('Carga de archivos de prueba(Spanish).txt')
+		 println isFileExtracted('測試文件上傳(ChineseT).txt')
+		 println isFileExtracted('测试文件上传(ChineseS).txt')
+		 println isFileExtracted('테스트 파일 업로드(Korean).txt')
+		 println isFileExtracted('Test Dosyası Yüklemesi(Turkish).txt')*/
+
+		/*Assert.assertTrue(isFileExtracted('GBCI PAN Card.pdf'), "GBCI PAN Card File Didn't downloaded successfully")
+		 Assert.assertTrue(isFileExtracted('GBCI-Noida-GST Registration Certificate.pdf'), "GBCI-Noida-GST Registration Certificate File Didn't downloaded successfully")
+		 */
+		if((isFileExtracted('Test de téléchargement de fichier(French).txt', sourceExtractedFileEnergy)))
+			KeywordUtil.markWarning("Test de téléchargement de fichier(French).txt file is present  ")
+		else
+			KeywordUtil.markFailed("Test de téléchargement de fichier(French).txt file not present")
+
+		if((isFileExtracted('Upload do arquivo de teste(Portugues).txt', sourceExtractedFileEnergy)))
+			KeywordUtil.markWarning("Upload do arquivo de teste(Portugues).txt file present ")
+		else
+			KeywordUtil.markFailed("Upload do arquivo de teste(Portugues).txt file not present")
+
+		if((isFileExtracted('Testen Sie den Datei-Upload(Greman).txt', sourceExtractedFileEnergy)))
+			KeywordUtil.markWarning("Testen Sie den Datei-Upload(Greman).txt file present ")
+		else
+			KeywordUtil.markFailed("Testen Sie den Datei-Upload(Greman).txt file not present")
+
+		if((isFileExtracted('Carga de archivos de prueba(Spanish).txt', sourceExtractedFileEnergy)))
+			KeywordUtil.markWarning("Carga de archivos de prueba(Spanish).txt file present")
+		else
+			KeywordUtil.markFailed("Carga de archivos de prueba(Spanish).txt file Not present")
+
+		if((isFileExtracted('測試文件上傳(ChineseT).txt', sourceExtractedFileEnergy)))
+			KeywordUtil.markWarning("測試文件上傳(ChineseT).txt file is present  ")
+		else
+			KeywordUtil.markFailed("測試文件上傳(ChineseT).txt file Not present")
+
+		if((isFileExtracted('测试文件上传(ChineseS).txt', sourceExtractedFileEnergy)))
+			KeywordUtil.markWarning("测试文件上传(ChineseS).txt file is present  ")
+		else
+			KeywordUtil.markFailed("测试文件上传(ChineseS).txt file Not present")
+
+		if((isFileExtracted('테스트 파일 업로드(Korean).txt', sourceExtractedFileEnergy)))
+			KeywordUtil.markWarning("테스트 파일 업로드(Korean).txt file is present  ")
+		else
+			KeywordUtil.markFailed("테스트 파일 업로드(Korean).txt file Not present")
+
+		if((isFileExtracted('Test Dosyası Yüklemesi(Turkish).txt', sourceExtractedFileEnergy)))
+			KeywordUtil.markWarning("Test Dosyası Yüklemesi(Turkish).txt file is present  ")
+		else
+			KeywordUtil.markFailed("Test Dosyası Yüklemesi(Turkish).txt file Not present")
+	}
+
+	
+	
+	
+	
+	
+	
+	
 }
