@@ -5067,7 +5067,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 			WebUI.dragAndDropToObject(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'), findTestObject('Object Repository/DataInput/Survey/ExtremelySatisfySpanText'))
 			WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
 			WebUI.delay(2)
-			WebUI.selectOptionByLabel(findTestObject('Object Repository/DataInput/Survey/OccupantTypeSurvey'), "Regular Occupant", false)
+			//WebUI.selectOptionByLabel(findTestObject('Object Repository/DataInput/Survey/OccupantTypeSurvey'), "Regular Occupant", false)
 			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
 			//WebUI.selectOptionByLabel(findTestObject('DataInput/Survey/OccupantType'),'Regular Occupant', false)
