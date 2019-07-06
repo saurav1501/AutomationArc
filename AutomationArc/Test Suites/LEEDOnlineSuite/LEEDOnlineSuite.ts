@@ -97,13 +97,13 @@
    <testCaseLink>
       <guid>712ce288-3e0e-4195-8406-27932017a597</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/LEEDONLINE/DataInput/SubmitSurveyTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>0543d67f-b644-450f-8441-e6dc16df94ae</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/LEEDONLINE/DataInput/AdminToolScoreRecomputeTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -115,25 +115,25 @@
    <testCaseLink>
       <guid>2d21244b-9d57-4900-9fad-9fc8de102f7b</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/LEEDONLINE/CreateEnergyMeterLEEDOnlineTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>653a5eba-2e9c-4179-8a77-2f86d5e578d6</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/LEEDONLINE/CreateWaterMeterLEEDOnlineTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>15ce6277-ef81-4362-993c-2902e263af9c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/LEEDONLINE/SubmitSurveyLEEDOnlineTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>579f0555-44c3-40d4-9217-9f60fef991e5</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/LEEDONLINE/DataInput/VerifyScoreDisplayingInDataInputTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
