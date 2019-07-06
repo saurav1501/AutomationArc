@@ -5067,7 +5067,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 			WebUI.dragAndDropToObject(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'), findTestObject('Object Repository/DataInput/Survey/ExtremelySatisfySpanText'))
 			WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
 			WebUI.delay(2)
-			//WebUI.selectOptionByLabel(findTestObject('Object Repository/DataInput/Survey/OccupantTypeSurvey'), "Regular Occupant", false)
+			WebUI.selectOptionByLabel(findTestObject('Object Repository/DataInput/Survey/OccupantTypeSurvey'), "Regular Occupant", false)
 			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
 			//WebUI.selectOptionByLabel(findTestObject('DataInput/Survey/OccupantType'),'Regular Occupant', false)
@@ -5076,7 +5076,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 			WebUI.waitForElementClickable(findTestObject('DataInput/Survey/Submit'), GlobalVariable.avgAngularWait)
 
 			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-			WebUI.verifyMatch(WebUI.getText(findTestObject('DataInput/Survey/SurveyThanksMessage')), "Thank you for taking our survey!", false)
+			WebUI.verifyMatch(WebUI.getText(findTestObject('DataInput/Survey/Thank')), "Options that enhance your satisfaction", false)
 			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
 			println "Survey Submited Successufully"
