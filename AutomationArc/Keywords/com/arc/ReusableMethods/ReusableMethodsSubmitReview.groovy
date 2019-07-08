@@ -840,14 +840,21 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		println('Total Files Available in the folder are : ' + dir_contents.length)
 		for (int i = 0; i < dir_contents.length; i++) {
 			println('File Name at '+ i +' is : ' + dir_contents[i].getName())
+			fileNamePrint(dir_contents[i].getName())
 			if (dir_contents[i].getName().equals(fileName)) {
 				return flag = true
 			}
 		}
 		return flag
 	}
-
-
+   
+	//print the file name
+    public void fileNamePrint(String name){
+		
+		KeywordUtil.markWarning(name)
+	}
+	
+	
 
 	private static void unzip(String zipFilePath, String destDir) {
 		File dir = new File(destDir);
