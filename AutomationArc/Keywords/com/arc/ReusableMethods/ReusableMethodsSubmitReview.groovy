@@ -1304,6 +1304,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		String sourceExtractedFileWater= GlobalVariable.downloadDir+projectId+"/"+ratingSystem+"/Performance Score Verification/water/"
 		String sourceExtractedFileWaste= GlobalVariable.downloadDir+projectId+"/"+ratingSystem+"/Performance Score Verification/waste/"
         String sourceExtractedSnapshotFile=GlobalVariable.downloadDir+projectId+"/"+ratingSystem+"/"
+		
 		String destinationUnZippedFolder= GlobalVariable.downloadDir
 		println destinationUnZippedFolder
 		//deleteFile(sourceZipFile)
