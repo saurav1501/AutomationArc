@@ -13,7 +13,7 @@
    <testCaseLink>
       <guid>073b3f0c-55c1-4407-a499-8b96a102904b</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/AddNewProjectTest</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
@@ -37,7 +37,7 @@
    <testCaseLink>
       <guid>8b173a83-06ac-4996-b40e-150a3de15195</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/PaymentByCheckTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -49,19 +49,19 @@
    <testCaseLink>
       <guid>4154e5d6-784d-479d-91c5-37fa626357f6</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/UploadArcDataTemplateTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>e90f2395-6d75-435d-ade0-c6f2098a4423</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/SubmitSurveyTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d325b717-db3c-4653-94f3-9e0fa551b45f</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/VisitorsSubmitSurveyTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
