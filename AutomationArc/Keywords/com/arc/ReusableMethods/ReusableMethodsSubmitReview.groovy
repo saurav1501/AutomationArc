@@ -1,4 +1,4 @@
-	package com.arc.ReusableMethods
+package com.arc.ReusableMethods
 
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
@@ -1303,7 +1303,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		println sourceExtractedFileEnergy
 		String sourceExtractedFileWater= GlobalVariable.downloadDir+projectId+"/"+ratingSystem+"/Performance Score Verification/water/"
 		String sourceExtractedFileWaste= GlobalVariable.downloadDir+projectId+"/"+ratingSystem+"/Performance Score Verification/waste/"
-
+        String sourceExtractedSnapshotFile=GlobalVariable.downloadDir+projectId+"/"+ratingSystem+"/"
 		String destinationUnZippedFolder= GlobalVariable.downloadDir
 		println destinationUnZippedFolder
 		//deleteFile(sourceZipFile)
@@ -1318,12 +1318,13 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/SnapshotLinkToDownload'))
 		WebUI.delay(10)
 		unzip(sourceZipFile, destinationUnZippedFolder)
+		KeywordUtil.markWarning("Snapshot Files are Extracted successfully")
 		WebUI.delay(5)
 		
-		if((isFileExtracted('Test de téléchargement de fichier(French).txt', sourceExtractedFileEnergy)))
-		KeywordUtil.markWarning("Test de téléchargement de fichier(French).txt file is present  ")
+		if((isFileExtracted('snapshot.xlsx', sourceExtractedSnapshotFile)))
+		KeywordUtil.markWarning("Snapshot.xlsx file is present  ")
 	    else
-		KeywordUtil.markFailed("Test de téléchargement de fichier(French).txt file not present")
+		KeywordUtil.markFailed("Snapshot.xlsx file not present")
 		
 		/*if((isFileExtracted('Test de téléchargement de fichier(French).txt', sourceExtractedFileEnergy)))
 			KeywordUtil.markWarning("Test de téléchargement de fichier(French).txt file is present  ")
