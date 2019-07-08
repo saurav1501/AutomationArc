@@ -1,4 +1,4 @@
-	package com.arc.ReusableMethods
+package com.arc.ReusableMethods
 
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
@@ -90,34 +90,34 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.scrollToElement(findTestObject('SubmitReview/a_ Review'),GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('SubmitReview/a_ Review'))
 		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),GlobalVariable.minAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
-		
-		boolean notclickable = WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),GlobalVariable.minAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
-		
-		if(notclickable==false){
-		navigation.navigateToAnalyticsEnergy()
-		WebUI.scrollToElement(findTestObject('SubmitReview/a_ Review'),GlobalVariable.minAngularWait)
-		WebUI.click(findTestObject('SubmitReview/a_ Review'))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),GlobalVariable.minAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-		
-		}
-		
-	}
-	
 
-		
+		boolean notclickable = WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),GlobalVariable.minAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
+
+		if(notclickable==false){
+			navigation.navigateToAnalyticsEnergy()
+			WebUI.scrollToElement(findTestObject('SubmitReview/a_ Review'),GlobalVariable.minAngularWait)
+			WebUI.click(findTestObject('SubmitReview/a_ Review'))
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+			WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),GlobalVariable.minAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
+		}
+
+	}
+
+
+
 
 	@Keyword
 	public void performanceScoreSelectionAndSummary(){
 		retrynavigateToreviewPage()
-	
+
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/SubmitReviewText')), "Submit for Review", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/VerifyPerformanceScoreVerificationTest')), "Performance Score Verification", false, FailureHandling.CONTINUE_ON_FAILURE)
 		performanceScoreDataInputCheckboxSelection()
-     	WebUI.scrollToElement(findTestObject('SubmitReview/div_Upload'), 3)
+		WebUI.scrollToElement(findTestObject('SubmitReview/div_Upload'), 3)
 		WebUI.click(findTestObject('SubmitReview/div_Upload'))
 		WebUI.delay(2)
 		ReusableMethodsDataInput.uploadFile(UploadDocumentDataInput)
@@ -324,7 +324,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.click(findTestObject('SubmitReview/a_ Review'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/SubmitReview/button_Continue'), GlobalVariable.minAngularWait)
-		
+
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/SubmitReviewText')), "Submit for Review",false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/CertificationTextCity')), "Certification", false, FailureHandling.CONTINUE_ON_FAILURE)
 		/*(1..28).each {
@@ -468,7 +468,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.scrollToElement(findTestObject('SubmitReview/div_Upload'),3)
 		WebUI.click(findTestObject('SubmitReview/div_Upload'))
 		//WebUI.delay(6)
-		
+
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		ReusableMethodsDataInput.uploadFile(UploadDocumentDataInput)
 		//WebUI.delay(4)
@@ -503,16 +503,16 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 	@Keyword
 	public void submitCertificationAndVerifySuccessMessage(){
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	    WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 		WebUI.scrollToElement(findTestObject('Object Repository/SubmitReview/SubmitCertification'),3)
 		WebUI.waitForElementNotClickable(findTestObject('Object Repository/SubmitReview/SubmitCertification'),9)
 		WebUI.click(findTestObject('Object Repository/SubmitReview/SubmitCertification'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-		
+
 		WebUI.waitForElementPresent(findTestObject('Object Repository/SubmitReview/MessageSuccessfullySubmitted'), GlobalVariable.avgAngularWait)
-        WebUI.waitForElementVisible(findTestObject('Object Repository/SubmitReview/MessageSuccessfullySubmitted'), GlobalVariable.avgAngularWait)
-		
+		WebUI.waitForElementVisible(findTestObject('Object Repository/SubmitReview/MessageSuccessfullySubmitted'), GlobalVariable.avgAngularWait)
+
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/MessageSuccessfullySubmitted')), "Successfully Submitted", false, FailureHandling.CONTINUE_ON_FAILURE)
 	}
 	@Keyword
@@ -533,15 +533,15 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.click(findTestObject('SubmitReview/a_ Review'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-		
+
 		WebUI.waitForElementClickable(findTestObject('Object Repository/SubmitReview/button_Continue'), GlobalVariable.avgAngularWait)
-		
+
 		WebUI.click(findTestObject('Object Repository/SubmitReview/button_Continue'))
 		WebUI.click(findTestObject('Object Repository/SubmitReview/ChangeCreditLink'))
-		
+
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-		
+
 		String url=WebUI.getUrl()
 		Assert.assertTrue(url.contains('submitforreview/selection'))
 		println 'Change credit successfully redirected to the Selection page'
@@ -737,20 +737,20 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.refresh()
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-	
+
 		WebUI.waitForElementClickable(findTestObject('Object Repository/SubmitReview/ReviewDate'), GlobalVariable.minAngularWait)
-		
+
 		DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy")
 		Date date = new Date()
 		println dateFormat.format(date)
 		//check if able to select the current date and previous year as reporting year
 		WebUI.waitForElementVisible(findTestObject('Object Repository/SubmitReview/ReviewDate'), 20)
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/SubmitReview/ReviewDate'),'value'), dateFormat.format(date))
-		
+
 		WebUI.click(findTestObject('Object Repository/SubmitReview/ClickToSelectDate'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-	
+
 		//WebUI.waitForElementVisible(findTestObject('Object Repository/SubmitReview/ClickCurrentMonth'), 20)
 		//WebUI.scrollToElement(findTestObject('Object Repository/SubmitReview/ClickCurrentMonth'),10)
 		//WebUI.click(findTestObject('Object Repository/SubmitReview/ClickCurrentMonth'))
@@ -765,7 +765,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/SubmitReview/ClickOnDay'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-	
+
 		/*WebUI.click(findTestObject('Object Repository/SubmitReview/ReportingDate'))
 		 WebUI.delay(2)
 		 WebUI.setText(findTestObject('Object Repository/SubmitReview/ReportingDate'),"02/02/2017" )*/
@@ -790,24 +790,24 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		performanceScoreDataInputCheckboxSelection()
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-	
+
 		WebUI.click(findTestObject('SubmitReview/button_Continue'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-	
+
 		String reportingPeriod= WebUI.getText(findTestObject('Object Repository/SubmitReview/SummaryPageReportingPeriod'))
 		//Assert.assertEquals('02/02/2016 - 02/02/2017', reportingPeriod)
 		Assert.assertEquals(WebUI.getText(findTestObject('Object Repository/SubmitReview/SummaryPageScoreSubmitted')), reportingScore+"/100")
-		
+
 		//WebUI.mouseOver(findTestObject('Object Repository/SubmitReview/ScoreSidebar'))
 		WebUI.click(findTestObject('Object Repository/SubmitReview/ScoreSidebar'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-	
+
 		WebUI.click(findTestObject('Object Repository/SubmitReview/ScoreTotalSideBar'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-	
+
 		String scoreTotal = WebUI.getText(findTestObject('Object Repository/SubmitReview/TotalScore'))
 		println scoreTotal
 		Assert.assertEquals(scoreTotal, currentScore)
@@ -840,14 +840,21 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		println('Total Files Available in the folder are : ' + dir_contents.length)
 		for (int i = 0; i < dir_contents.length; i++) {
 			println('File Name at '+ i +' is : ' + dir_contents[i].getName())
+			fileNamePrint(dir_contents[i].getName())
 			if (dir_contents[i].getName().equals(fileName)) {
 				return flag = true
 			}
 		}
 		return flag
 	}
-
-
+   
+	//print the file name
+    public void fileNamePrint(String name){
+		
+		KeywordUtil.markWarning(name)
+	}
+	
+	
 
 	private static void unzip(String zipFilePath, String destDir) {
 		File dir = new File(destDir);
@@ -1291,4 +1298,80 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 	}
 
 
+	//Download and Verify the snapshot generated for LEED Online Projects
+	@Keyword
+	public void verifySnapshotFileNameUploadedBuildingLEED(String sheetName, int rowNum, String ratingSystem){
+
+		String projectId = data.getCellData(sheetName, "ProjectID", rowNum)
+		String fileName= projectId+".zip"
+		String sourceZipFile= GlobalVariable.downloadDir+fileName
+		println sourceZipFile
+		String sourceExtractedFileEnergy= GlobalVariable.downloadDir+projectId+"/"+ratingSystem+"/Performance Score Verification/energy/"
+		println sourceExtractedFileEnergy
+		String sourceExtractedFileWater= GlobalVariable.downloadDir+projectId+"/"+ratingSystem+"/Performance Score Verification/water/"
+		String sourceExtractedFileWaste= GlobalVariable.downloadDir+projectId+"/"+ratingSystem+"/Performance Score Verification/waste/"
+        String sourceExtractedSnapshotFile=GlobalVariable.downloadDir+projectId+"/"+ratingSystem+"/"
+		
+		String destinationUnZippedFolder= GlobalVariable.downloadDir
+		println destinationUnZippedFolder
+		//deleteFile(sourceZipFile)
+		//deleteFile(sourceExtractedFile)
+		WebUI.delay(5)
+		WebUI.scrollToElement(findTestObject('Object Repository/PerformanceScore/AdminToolReviewButton'), 4)
+		WebUI.click(findTestObject('Object Repository/PerformanceScore/AdminToolReviewButton'))
+		WebUI.click(findTestObject('Object Repository/PerformanceScore/AdminToolsReviewSearchBar'))
+		WebUI.setText(findTestObject('Object Repository/PerformanceScore/AdminToolsReviewSearchBar'), projectId)
+		WebUI.click(findTestObject('Object Repository/PerformanceScore/AdminToolReviewSearchButton'))
+		WebUI.waitForElementVisible(findTestObject('Object Repository/PerformanceScore/SnapshotLinkToDownload'), 20, FailureHandling.STOP_ON_FAILURE)
+		WebUI.click(findTestObject('Object Repository/PerformanceScore/SnapshotLinkToDownload'))
+		WebUI.delay(10)
+		unzip(sourceZipFile, destinationUnZippedFolder)
+		KeywordUtil.markWarning("Snapshot Files are Extracted successfully")
+		WebUI.delay(5)
+		
+		if((isFileExtracted('snapshot.xlsx', sourceExtractedSnapshotFile)))
+		KeywordUtil.markWarning("Snapshot.xlsx file is present  ")
+	    else
+		KeywordUtil.markFailed("Snapshot.xlsx file not present")
+		
+		/*if((isFileExtracted('Test de téléchargement de fichier(French).txt', sourceExtractedFileEnergy)))
+			KeywordUtil.markWarning("Test de téléchargement de fichier(French).txt file is present  ")
+		else
+			KeywordUtil.markFailed("Test de téléchargement de fichier(French).txt file not present")
+
+		if((isFileExtracted('Upload do arquivo de teste(Portugues).txt', sourceExtractedFileEnergy)))
+			KeywordUtil.markWarning("Upload do arquivo de teste(Portugues).txt file present ")
+		else
+			KeywordUtil.markFailed("Upload do arquivo de teste(Portugues).txt file not present")
+
+		if((isFileExtracted('Testen Sie den Datei-Upload(Greman).txt', sourceExtractedFileEnergy)))
+			KeywordUtil.markWarning("Testen Sie den Datei-Upload(Greman).txt file present ")
+		else
+			KeywordUtil.markFailed("Testen Sie den Datei-Upload(Greman).txt file not present")
+
+		if((isFileExtracted('Carga de archivos de prueba(Spanish).txt', sourceExtractedFileEnergy)))
+			KeywordUtil.markWarning("Carga de archivos de prueba(Spanish).txt file present")
+		else
+			KeywordUtil.markFailed("Carga de archivos de prueba(Spanish).txt file Not present")
+
+		if((isFileExtracted('測試文件上傳(ChineseT).txt', sourceExtractedFileEnergy)))
+			KeywordUtil.markWarning("測試文件上傳(ChineseT).txt file is present  ")
+		else
+			KeywordUtil.markFailed("測試文件上傳(ChineseT).txt file Not present")
+
+		if((isFileExtracted('测试文件上传(ChineseS).txt', sourceExtractedFileEnergy)))
+			KeywordUtil.markWarning("测试文件上传(ChineseS).txt file is present  ")
+		else
+			KeywordUtil.markFailed("测试文件上传(ChineseS).txt file Not present")
+
+		if((isFileExtracted('테스트 파일 업로드(Korean).txt', sourceExtractedFileEnergy)))
+			KeywordUtil.markWarning("테스트 파일 업로드(Korean).txt file is present  ")
+		else
+			KeywordUtil.markFailed("테스트 파일 업로드(Korean).txt file Not present")
+
+		if((isFileExtracted('Test Dosyası Yüklemesi(Turkish).txt', sourceExtractedFileEnergy)))
+			KeywordUtil.markWarning("Test Dosyası Yüklemesi(Turkish).txt file is present  ")
+		else
+			KeywordUtil.markFailed("Test Dosyası Yüklemesi(Turkish).txt file Not present")*/
+	}
 }

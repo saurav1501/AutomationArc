@@ -1956,10 +1956,13 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.uploadArcDataTempla
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).uploadArcDataTemplateBuildingAnalytics()
 }
 
+<<<<<<< HEAD
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.uploadArcDataTemplateBuildingAnalytics18"() {
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).uploadArcDataTemplateBuildingAnalytics18()
 }
 
+=======
+>>>>>>> bbe0d3a01e87e146d1d58396c12ba85bb4c36944
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.uploadArcDataTemplateTransit"() {
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).uploadArcDataTemplateTransit()
 }
@@ -3556,6 +3559,16 @@ def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.adminToolReturnR
 
 def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifyTheHereLinkRedirectToGivenRespectiveLink"() {
     (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).verifyTheHereLinkRedirectToGivenRespectiveLink()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifySnapshotFileNameUploadedBuildingLEED"(
+    	String sheetName	
+     , 	int rowNum	
+     , 	String ratingSystem	) {
+    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).verifySnapshotFileNameUploadedBuildingLEED(
+        	sheetName
+         , 	rowNum
+         , 	ratingSystem)
 }
 
 def static "com.arc.ReusableMethods.ResuableMethodsGRESB.downloadGresbtemplete"() {

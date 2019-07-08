@@ -1087,23 +1087,34 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 
 	//Mark the leed online credits for review
 	public static void markCreditForReview(){
+
 		WebUI.waitForElementVisible(findTestObject('Object Repository/LEEDOnline/Review/markProjectInformation'), 60)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/LEEDOnline/Review/markProjectInformation'), 20)
 		WebUI.click(findTestObject('Object Repository/LEEDOnline/Review/markProjectInformation'))
-		WebUI.waitForElementVisible(findTestObject('Object Repository/LEEDOnline/Review/creditStatusProjectInformation'), 20)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/LEEDOnline/Review/creditStatusProjectInformation'), 60)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/LEEDOnline/Review/creditStatusProjectInformation'), 60)
+		WebUI.click(findTestObject('Object Repository/LEEDOnline/Review/markTransportationPerformance'))
+		WebUI.waitForElementVisible(findTestObject('Object Repository/LEEDOnline/Review/creditStatusTransportationPerformance'), 60)
+		WebUI.click(findTestObject('Object Repository/LEEDOnline/Review/markWaterPerformance'))
+		WebUI.waitForElementVisible(findTestObject('Object Repository/LEEDOnline/Review/creditStatusWaterPerformance'), 60)
 		WebUI.click(findTestObject('Object Repository/LEEDOnline/Review/markEnergyEfficiencyBestMngtPractice'))
-		WebUI.waitForElementVisible(findTestObject('Object Repository/LEEDOnline/Review/creditStatusEnergyEfficiencyBestManagement'), 20)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/LEEDOnline/Review/creditStatusEnergyEfficiencyBestManagement'), 60)
+		WebUI.click(findTestObject('Object Repository/LEEDOnline/Review/markEnergyPerformance'))
+		WebUI.waitForElementVisible(findTestObject('Object Repository/LEEDOnline/Review/creditStatusEnergyPerformance'), 60)
 		WebUI.click(findTestObject('Object Repository/LEEDOnline/Review/markFundamentalReinfringementMgnt'))
-		WebUI.waitForElementVisible(findTestObject('Object Repository/LEEDOnline/Review/creditStatusFundamentalReInfringement'), 20)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/LEEDOnline/Review/creditStatusFundamentalReInfringement'), 60)
 		WebUI.click(findTestObject('Object Repository/LEEDOnline/Review/markPurchasingPolicy'))
-		WebUI.waitForElementVisible(findTestObject('Object Repository/LEEDOnline/Review/creditStatusPurchasingPolicy'), 20)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/LEEDOnline/Review/creditStatusPurchasingPolicy'), 60)
 		WebUI.click(findTestObject('Object Repository/LEEDOnline/Review/markFacilityMaintenanceAndRenovation'))
-		WebUI.waitForElementVisible(findTestObject('Object Repository/LEEDOnline/Review/creditStatusFacilityMaintenance'), 20)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/LEEDOnline/Review/creditStatusFacilityMaintenance'), 60)
+		WebUI.click(findTestObject('Object Repository/LEEDOnline/Review/markWastePerformance'))
+		WebUI.waitForElementVisible(findTestObject('Object Repository/LEEDOnline/Review/creditStatusWastePerformance'), 60)
 		WebUI.click(findTestObject('Object Repository/LEEDOnline/Review/markMinimumIndoorAirQuality'))
-		WebUI.waitForElementVisible(findTestObject('Object Repository/LEEDOnline/Review/creditStatusMinimumIndoorAirQuality'), 20)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/LEEDOnline/Review/creditStatusMinimumIndoorAirQuality'), 60)
 		WebUI.click(findTestObject('Object Repository/LEEDOnline/Review/markEnviornmentalTobacoSmokeControl'))
-		WebUI.waitForElementVisible(findTestObject('Object Repository/LEEDOnline/Review/creditStatusEnviornmentalSmokeControl'), 20)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/LEEDOnline/Review/creditStatusEnviornmentalSmokeControl'), 60)
 		WebUI.click(findTestObject('Object Repository/LEEDOnline/Review/markGreenCleaningPolicy'))
-		WebUI.waitForElementVisible(findTestObject('Object Repository/LEEDOnline/Review/creditStatusGreenCleaningPolicy'), 20)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/LEEDOnline/Review/creditStatusGreenCleaningPolicy'), 60)
 	}
 
 
@@ -1130,6 +1141,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		//WebUI.click(findTestObject('Object Repository/LEEDOnline/Review/clickOnCredits'))
 		WebUI.click(findTestObject('Object Repository/LEEDOnline/ProjectMenu/credits'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/LEEDOnline/Credits/submitReviewButton'),20)
+		WebUI.delay(5)
 		markCreditForReview()
 		WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/submitReviewButton'))
 		WebUI.waitForElementVisible( findTestObject('Object Repository/LEEDOnline/Review/submitButtonToSubmitCredits'),20)
@@ -1253,10 +1265,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		//WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Update'))
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/deleteButtonTwo'), 20)
-		//WebUI.waitForElementNotVisible(findTestObject('Object Repository/DataInput/saveButtonDataInput'), 20)
-		//WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/SuccessGreenTick'),20)
-		//reading 3
-		//WebUI.delay(5)
+		
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), 20)
 		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'),2)
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
@@ -1285,15 +1294,8 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		//WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Update'))
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/deleteButtonThree'), 20)
-		//WebUI.waitForElementNotVisible(findTestObject('Object Repository/DataInput/saveButtonDataInput'), 20)
-		//WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/SuccessGreenTick'),20)
-		//WebUI.delay(5)
 
 		WebUI.refresh()
-		//WebUI.delay(15)
-		//WebUI.delay(5)
-		//ReusableMethodsLogin.waitForloaderToDisappear(60)
-		//ReusableMethodsLogin.waitForPageLoad(60)
 		ReusableMethodsLogin.waitForIframeLoad(60)
 		WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/meterTab'),FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.delay(2)
@@ -1374,11 +1376,8 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		//WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Update'))
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/deleteButtonOne'), 20)
-		//WebUI.waitForElementNotVisible(findTestObject('Object Repository/DataInput/saveButtonDataInput'), 20)
-		//WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/SuccessGreenTick'),20)
+		
 		//reading two
-
-		//WebUI.delay(5)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), 20)
 		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'),2)
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
@@ -1438,10 +1437,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		//WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Update'))
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/deleteButtonThree'), 20)
-		//WebUI.waitForElementNotVisible(findTestObject('Object Repository/DataInput/saveButtonDataInput'), 20)
 		WebUI.refresh()
-		//ReusableMethodsLogin.waitForloaderToDisappear(60)
-		//ReusableMethodsLogin.waitForPageLoad(60)
 		ReusableMethodsLogin.waitForIframeLoad(60)
 		WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/meterTab'),FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.delay(2)
@@ -1653,5 +1649,5 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 	}
 
-
+	
 }

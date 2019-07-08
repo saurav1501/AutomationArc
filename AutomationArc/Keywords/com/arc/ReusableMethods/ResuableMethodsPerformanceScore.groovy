@@ -357,6 +357,15 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 
 		String ptotalPerformanceScore = totalPerformanceScore.toString()
 		data.setCellData(GlobalVariable.BDataInput,"ATotalScore", GlobalVariable.rowNumTwo, ptotalPerformanceScore)
+		
+		//Save the admin tool score in the Excel data verification sheet
+		dataExcelTemplate.setCellData(GlobalVariable.LEEDData, "energyScore", GlobalVariable.rowNumTwo, energyScore )
+		dataExcelTemplate.setCellData(GlobalVariable.LEEDData, "waterScore", GlobalVariable.rowNumTwo, waterScore)
+		dataExcelTemplate.setCellData(GlobalVariable.LEEDData, "wasteScore", GlobalVariable.rowNumTwo, wasteScore)
+		dataExcelTemplate.setCellData(GlobalVariable.LEEDData, "transportation", GlobalVariable.rowNumTwo, transportScore)
+		dataExcelTemplate.setCellData(GlobalVariable.LEEDData, "humanExperience", GlobalVariable.rowNumTwo, humanExpScore)
+
+		
 		/*	WebUI.closeWindowIndex(1)
 		 WebUI.delay(2)*/
 		WebUI.switchToWindowIndex(0)
