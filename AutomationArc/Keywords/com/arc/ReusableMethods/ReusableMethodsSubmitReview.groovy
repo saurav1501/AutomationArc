@@ -90,34 +90,34 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.scrollToElement(findTestObject('SubmitReview/a_ Review'),GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('SubmitReview/a_ Review'))
 		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),GlobalVariable.minAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
-		
-		boolean notclickable = WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),GlobalVariable.minAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
-		
-		if(notclickable==false){
-		navigation.navigateToAnalyticsEnergy()
-		WebUI.scrollToElement(findTestObject('SubmitReview/a_ Review'),GlobalVariable.minAngularWait)
-		WebUI.click(findTestObject('SubmitReview/a_ Review'))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),GlobalVariable.minAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-		
-		}
-		
-	}
-	
 
-		
+		boolean notclickable = WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),GlobalVariable.minAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
+
+		if(notclickable==false){
+			navigation.navigateToAnalyticsEnergy()
+			WebUI.scrollToElement(findTestObject('SubmitReview/a_ Review'),GlobalVariable.minAngularWait)
+			WebUI.click(findTestObject('SubmitReview/a_ Review'))
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+			WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'),GlobalVariable.minAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
+		}
+
+	}
+
+
+
 
 	@Keyword
 	public void performanceScoreSelectionAndSummary(){
 		retrynavigateToreviewPage()
-	
+
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/SubmitReviewText')), "Submit for Review", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/VerifyPerformanceScoreVerificationTest')), "Performance Score Verification", false, FailureHandling.CONTINUE_ON_FAILURE)
 		performanceScoreDataInputCheckboxSelection()
-     	WebUI.scrollToElement(findTestObject('SubmitReview/div_Upload'), 3)
+		WebUI.scrollToElement(findTestObject('SubmitReview/div_Upload'), 3)
 		WebUI.click(findTestObject('SubmitReview/div_Upload'))
 		WebUI.delay(2)
 		ReusableMethodsDataInput.uploadFile(UploadDocumentDataInput)
@@ -324,7 +324,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.click(findTestObject('SubmitReview/a_ Review'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/SubmitReview/button_Continue'), GlobalVariable.minAngularWait)
-		
+
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/SubmitReviewText')), "Submit for Review",false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/CertificationTextCity')), "Certification", false, FailureHandling.CONTINUE_ON_FAILURE)
 		/*(1..28).each {
@@ -468,7 +468,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.scrollToElement(findTestObject('SubmitReview/div_Upload'),3)
 		WebUI.click(findTestObject('SubmitReview/div_Upload'))
 		//WebUI.delay(6)
-		
+
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		ReusableMethodsDataInput.uploadFile(UploadDocumentDataInput)
 		//WebUI.delay(4)
@@ -503,16 +503,16 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 	@Keyword
 	public void submitCertificationAndVerifySuccessMessage(){
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	    WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 		WebUI.scrollToElement(findTestObject('Object Repository/SubmitReview/SubmitCertification'),3)
 		WebUI.waitForElementNotClickable(findTestObject('Object Repository/SubmitReview/SubmitCertification'),9)
 		WebUI.click(findTestObject('Object Repository/SubmitReview/SubmitCertification'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-		
+
 		WebUI.waitForElementPresent(findTestObject('Object Repository/SubmitReview/MessageSuccessfullySubmitted'), GlobalVariable.avgAngularWait)
-        WebUI.waitForElementVisible(findTestObject('Object Repository/SubmitReview/MessageSuccessfullySubmitted'), GlobalVariable.avgAngularWait)
-		
+		WebUI.waitForElementVisible(findTestObject('Object Repository/SubmitReview/MessageSuccessfullySubmitted'), GlobalVariable.avgAngularWait)
+
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/MessageSuccessfullySubmitted')), "Successfully Submitted", false, FailureHandling.CONTINUE_ON_FAILURE)
 	}
 	@Keyword
@@ -533,15 +533,15 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.click(findTestObject('SubmitReview/a_ Review'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-		
+
 		WebUI.waitForElementClickable(findTestObject('Object Repository/SubmitReview/button_Continue'), GlobalVariable.avgAngularWait)
-		
+
 		WebUI.click(findTestObject('Object Repository/SubmitReview/button_Continue'))
 		WebUI.click(findTestObject('Object Repository/SubmitReview/ChangeCreditLink'))
-		
+
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-		
+
 		String url=WebUI.getUrl()
 		Assert.assertTrue(url.contains('submitforreview/selection'))
 		println 'Change credit successfully redirected to the Selection page'
@@ -737,20 +737,20 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.refresh()
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-	
+
 		WebUI.waitForElementClickable(findTestObject('Object Repository/SubmitReview/ReviewDate'), GlobalVariable.minAngularWait)
-		
+
 		DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy")
 		Date date = new Date()
 		println dateFormat.format(date)
 		//check if able to select the current date and previous year as reporting year
 		WebUI.waitForElementVisible(findTestObject('Object Repository/SubmitReview/ReviewDate'), 20)
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/SubmitReview/ReviewDate'),'value'), dateFormat.format(date))
-		
+
 		WebUI.click(findTestObject('Object Repository/SubmitReview/ClickToSelectDate'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-	
+
 		//WebUI.waitForElementVisible(findTestObject('Object Repository/SubmitReview/ClickCurrentMonth'), 20)
 		//WebUI.scrollToElement(findTestObject('Object Repository/SubmitReview/ClickCurrentMonth'),10)
 		//WebUI.click(findTestObject('Object Repository/SubmitReview/ClickCurrentMonth'))
@@ -765,7 +765,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/SubmitReview/ClickOnDay'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-	
+
 		/*WebUI.click(findTestObject('Object Repository/SubmitReview/ReportingDate'))
 		 WebUI.delay(2)
 		 WebUI.setText(findTestObject('Object Repository/SubmitReview/ReportingDate'),"02/02/2017" )*/
@@ -790,24 +790,24 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		performanceScoreDataInputCheckboxSelection()
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-	
+
 		WebUI.click(findTestObject('SubmitReview/button_Continue'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-	
+
 		String reportingPeriod= WebUI.getText(findTestObject('Object Repository/SubmitReview/SummaryPageReportingPeriod'))
 		//Assert.assertEquals('02/02/2016 - 02/02/2017', reportingPeriod)
 		Assert.assertEquals(WebUI.getText(findTestObject('Object Repository/SubmitReview/SummaryPageScoreSubmitted')), reportingScore+"/100")
-		
+
 		//WebUI.mouseOver(findTestObject('Object Repository/SubmitReview/ScoreSidebar'))
 		WebUI.click(findTestObject('Object Repository/SubmitReview/ScoreSidebar'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-	
+
 		WebUI.click(findTestObject('Object Repository/SubmitReview/ScoreTotalSideBar'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-	
+
 		String scoreTotal = WebUI.getText(findTestObject('Object Repository/SubmitReview/TotalScore'))
 		println scoreTotal
 		Assert.assertEquals(scoreTotal, currentScore)
@@ -1372,11 +1372,11 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 			KeywordUtil.markFailed("Test Dosyası Yüklemesi(Turkish).txt file Not present")
 	}
 
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
 }

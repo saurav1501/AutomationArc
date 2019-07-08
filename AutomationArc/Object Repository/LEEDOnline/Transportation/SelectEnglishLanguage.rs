@@ -6,12 +6,11 @@
    <elementGuidId>454d8047-9141-4340-b957-83193c3ebb6f</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>(//*[@ng-click=&quot;copyLink('en')&quot;]//div[span='English'])[2]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@ng-click=&quot;copyLink('en')&quot;]//div[span='English']</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

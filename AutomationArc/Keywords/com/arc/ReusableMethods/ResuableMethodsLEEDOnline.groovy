@@ -1091,6 +1091,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.waitForElementVisible(findTestObject('Object Repository/LEEDOnline/Review/markProjectInformation'), 60)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/LEEDOnline/Review/markProjectInformation'), 20)
 		WebUI.click(findTestObject('Object Repository/LEEDOnline/Review/markProjectInformation'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/LEEDOnline/Review/creditStatusProjectInformation'), 60)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/LEEDOnline/Review/creditStatusProjectInformation'), 60)
 		WebUI.click(findTestObject('Object Repository/LEEDOnline/Review/markTransportationPerformance'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/LEEDOnline/Review/creditStatusTransportationPerformance'), 60)
