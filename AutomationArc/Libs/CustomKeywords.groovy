@@ -1956,13 +1956,10 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.uploadArcDataTempla
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).uploadArcDataTemplateBuildingAnalytics()
 }
 
-<<<<<<< HEAD
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.uploadArcDataTemplateBuildingAnalytics18"() {
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).uploadArcDataTemplateBuildingAnalytics18()
 }
 
-=======
->>>>>>> bbe0d3a01e87e146d1d58396c12ba85bb4c36944
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.uploadArcDataTemplateTransit"() {
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).uploadArcDataTemplateTransit()
 }

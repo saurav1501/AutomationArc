@@ -5015,11 +5015,6 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	@Keyword
 	public void surveySubmit(String sheetName) throws IOException, InterruptedException, Exception{
-<<<<<<< HEAD
-
-		navigation.navigateIntoDataInput()
-=======
->>>>>>> bbe0d3a01e87e146d1d58396c12ba85bb4c36944
 
 
 		navigation.navigateIntoDataInput()
@@ -5041,11 +5036,9 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		Transferable contents = clipboard.getContents(null)
 		String url = (String) contents.getTransferData(DataFlavor.stringFlavor)
 		data.setCellData(sheetName, "Url", GlobalVariable.rowNumTwo, url)
-<<<<<<< HEAD
 
-=======
 		WebUI.delay(2)
->>>>>>> bbe0d3a01e87e146d1d58396c12ba85bb4c36944
+
 		Robot r = new Robot();
 		r.keyPress(KeyEvent.VK_CONTROL);
 		r.keyPress(KeyEvent.VK_T);
@@ -5109,22 +5102,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 			WebUI.dragAndDropToObject(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'), findTestObject('Object Repository/DataInput/Survey/ExtremelySatisfySpanText'))
 			WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
 			WebUI.delay(2)
-<<<<<<< HEAD
-			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
-			WebUI.selectOptionByLabel(findTestObject('DataInput/Survey/OccupantType'),'Regular Occupant', false)
-
-			WebUI.click(findTestObject('DataInput/Survey/Submit1'))
-			WebUI.waitForElementClickable(findTestObject('DataInput/Survey/Submit'), GlobalVariable.avgAngularWait)
-
-			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-			WebUI.verifyMatch(WebUI.getText(findTestObject('DataInput/Survey/Thank')), "Options that enhance your satisfaction", false)
-			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
-			println "Survey Submited Successufully"
-
-=======
-			//WebUI.selectOptionByLabel(findTestObject('Object Repository/DataInput/Survey/OccupantTypeSurvey'), "Regular Occupant", false)
+			WebUI.selectOptionByLabel(findTestObject('Object Repository/DataInput/Survey/OccupantTypeSurvey'), "Regular Occupant", false)
 			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
 			//WebUI.selectOptionByLabel(findTestObject('DataInput/Survey/OccupantType'),'Regular Occupant', false)
@@ -5138,8 +5117,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 			println "Survey Submited Successufully"
 
-			WebUI.switchToWindowIndex(0)
->>>>>>> bbe0d3a01e87e146d1d58396c12ba85bb4c36944
+
 
 		}
 		WebUI.closeWindowIndex(1)
@@ -5827,10 +5805,6 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	public void percentageSurveyResponseRateCalculationBuiding() throws IOException, InterruptedException, Exception{
 
 		navigation.navigateIntoDataInput()
-<<<<<<< HEAD
-
-=======
->>>>>>> bbe0d3a01e87e146d1d58396c12ba85bb4c36944
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
 		WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
@@ -5892,22 +5866,6 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	@Keyword
 	public void percentageSurveyResponseRateCalculationBuidingV3(String sheetName,int rowNum) throws IOException, InterruptedException, Exception{
 
-
-<<<<<<< HEAD
-		navigation.navigateIntoDataInput()
-
-		String occupant = data.getCellData(sheetName,'BOccupancy', rowNum)
-		double doccupant = Double.parseDouble(occupant)
-
-		/*		
-		 WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
-		 WebUI.delay(1)
-		 WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		 WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)*/
-
-
-		String projectoccupancy = data.getCellData(sheetName,'GrossAreasqft',rowNum)
-=======
 		String occupant = data.getCellData(sheetName,'BOccupancy', rowNum)
 		double doccupant = Double.parseDouble(occupant)
 
@@ -5917,9 +5875,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
-
 		String projectoccupancy = WebUI.getAttribute((findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne')),'value')
->>>>>>> bbe0d3a01e87e146d1d58396c12ba85bb4c36944
+
 		double projectOccupancy= Double.parseDouble(projectoccupancy)
 
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
