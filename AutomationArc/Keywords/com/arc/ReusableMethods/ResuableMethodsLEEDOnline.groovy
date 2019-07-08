@@ -1087,7 +1087,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 
 	//Mark the leed online credits for review
 	public static void markCreditForReview(){
-				
+
 		WebUI.waitForElementVisible(findTestObject('Object Repository/LEEDOnline/Review/markProjectInformation'), 60)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/LEEDOnline/Review/markProjectInformation'), 20)
 		WebUI.click(findTestObject('Object Repository/LEEDOnline/Review/markProjectInformation'))
@@ -1265,10 +1265,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		//WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Update'))
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/deleteButtonTwo'), 20)
-		//WebUI.waitForElementNotVisible(findTestObject('Object Repository/DataInput/saveButtonDataInput'), 20)
-		//WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/SuccessGreenTick'),20)
-		//reading 3
-		//WebUI.delay(5)
+		
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), 20)
 		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'),2)
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
@@ -1297,15 +1294,8 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		//WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Update'))
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/deleteButtonThree'), 20)
-		//WebUI.waitForElementNotVisible(findTestObject('Object Repository/DataInput/saveButtonDataInput'), 20)
-		//WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/SuccessGreenTick'),20)
-		//WebUI.delay(5)
 
 		WebUI.refresh()
-		//WebUI.delay(15)
-		//WebUI.delay(5)
-		//ReusableMethodsLogin.waitForloaderToDisappear(60)
-		//ReusableMethodsLogin.waitForPageLoad(60)
 		ReusableMethodsLogin.waitForIframeLoad(60)
 		WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/meterTab'),FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.delay(2)
@@ -1386,11 +1376,8 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		//WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Update'))
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/deleteButtonOne'), 20)
-		//WebUI.waitForElementNotVisible(findTestObject('Object Repository/DataInput/saveButtonDataInput'), 20)
-		//WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/SuccessGreenTick'),20)
+		
 		//reading two
-
-		//WebUI.delay(5)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), 20)
 		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'),2)
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
@@ -1450,10 +1437,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		//WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Update'))
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/deleteButtonThree'), 20)
-		//WebUI.waitForElementNotVisible(findTestObject('Object Repository/DataInput/saveButtonDataInput'), 20)
 		WebUI.refresh()
-		//ReusableMethodsLogin.waitForloaderToDisappear(60)
-		//ReusableMethodsLogin.waitForPageLoad(60)
 		ReusableMethodsLogin.waitForIframeLoad(60)
 		WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/meterTab'),FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.delay(2)
@@ -1665,5 +1649,5 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 	}
 
-
+	
 }

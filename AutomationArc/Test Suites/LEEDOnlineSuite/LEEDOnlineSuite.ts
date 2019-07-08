@@ -13,13 +13,13 @@
    <testCaseLink>
       <guid>dda08a4c-f609-4e29-8aa6-1158fbee7b98</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDONLINE/LoginIntoLEEDOnlineTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d06e5b76-eb8f-4b75-9d71-fb30fa34153e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDONLINE/AddNewProjectTest</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
@@ -43,103 +43,103 @@
    <testCaseLink>
       <guid>487e53fd-ea41-4e02-9f9e-2b4f34cf4595</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDONLINE/GreenBusinessCertificationIncAcceptTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>a347c28b-1a86-40d8-966f-d09174a49977</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDONLINE/RegPaymentCCTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>877340a0-da84-4daf-b4e6-816b8fe4d9ed</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDONLINE/ReceiptPageDetailsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>2913404d-26d9-4a52-b0ce-cc14f8da5ebd</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDONLINE/SearchAddedProjUnderLEEDOnlineAppTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>c6339c41-0ebb-4de3-810a-a1e3c84fc15b</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDONLINE/NavigateToMyBuildingArcTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>231c92ad-0cd9-4767-8e30-5ead799e8b9e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDONLINE/SearchAddedProj(LEEDOnline)UnderArcTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>305fa2a4-dae3-4cf0-a612-909a0f8fd690</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDONLINE/SignAgreementInArcTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>f2d63199-abbd-4ae0-a708-987fd96f38b1</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDONLINE/DataInput/IndivisualScoreWithoutDataTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>6b852d4d-8e61-4c10-b1a1-bca96a45e5bc</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDONLINE/DataInput/UploadArcDataTemplateLEEDNewV4Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>712ce288-3e0e-4195-8406-27932017a597</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDONLINE/DataInput/SubmitSurveyTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>0543d67f-b644-450f-8441-e6dc16df94ae</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDONLINE/DataInput/AdminToolScoreRecomputeTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d84ef37f-7474-4630-906b-d63bdaea488e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDONLINE/DataInput/DataInputDataValidationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>2d21244b-9d57-4900-9fad-9fc8de102f7b</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDONLINE/CreateEnergyMeterLEEDOnlineTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>653a5eba-2e9c-4179-8a77-2f86d5e578d6</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDONLINE/CreateWaterMeterLEEDOnlineTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>15ce6277-ef81-4362-993c-2902e263af9c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDONLINE/SubmitSurveyLEEDOnlineTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>579f0555-44c3-40d4-9217-9f60fef991e5</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDONLINE/DataInput/VerifyScoreDisplayingInDataInputTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>e1fd1403-f87c-44ca-8cad-186193d931fa</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDONLINE/DataInput/ReviewSubmitLeedOnlineTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -231,5 +231,11 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
       <testCaseId>Test Cases/LEEDONLINE/FeedBack/FeedbackSubmitTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>c59324e3-aa2f-4c01-86d4-a3040c1d02b6</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/LEEDONLINE/DownloadAndVerifyTheSnapshotFileNameTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

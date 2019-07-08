@@ -1319,19 +1319,13 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.delay(10)
 		unzip(sourceZipFile, destinationUnZippedFolder)
 		WebUI.delay(5)
-		/*println isFileExtracted('Test de téléchargement de fichier(French).txt')
-		 println isFileExtracted('Upload do arquivo de teste(Portugues).txt')
-		 println isFileExtracted('Testen Sie den Datei-Upload(Greman).txt')
-		 println isFileExtracted('Carga de archivos de prueba(Spanish).txt')
-		 println isFileExtracted('測試文件上傳(ChineseT).txt')
-		 println isFileExtracted('测试文件上传(ChineseS).txt')
-		 println isFileExtracted('테스트 파일 업로드(Korean).txt')
-		 println isFileExtracted('Test Dosyası Yüklemesi(Turkish).txt')*/
-
-		/*Assert.assertTrue(isFileExtracted('GBCI PAN Card.pdf'), "GBCI PAN Card File Didn't downloaded successfully")
-		 Assert.assertTrue(isFileExtracted('GBCI-Noida-GST Registration Certificate.pdf'), "GBCI-Noida-GST Registration Certificate File Didn't downloaded successfully")
-		 */
+		
 		if((isFileExtracted('Test de téléchargement de fichier(French).txt', sourceExtractedFileEnergy)))
+		KeywordUtil.markWarning("Test de téléchargement de fichier(French).txt file is present  ")
+	    else
+		KeywordUtil.markFailed("Test de téléchargement de fichier(French).txt file not present")
+		
+		/*if((isFileExtracted('Test de téléchargement de fichier(French).txt', sourceExtractedFileEnergy)))
 			KeywordUtil.markWarning("Test de téléchargement de fichier(French).txt file is present  ")
 		else
 			KeywordUtil.markFailed("Test de téléchargement de fichier(French).txt file not present")
@@ -1369,14 +1363,6 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		if((isFileExtracted('Test Dosyası Yüklemesi(Turkish).txt', sourceExtractedFileEnergy)))
 			KeywordUtil.markWarning("Test Dosyası Yüklemesi(Turkish).txt file is present  ")
 		else
-			KeywordUtil.markFailed("Test Dosyası Yüklemesi(Turkish).txt file Not present")
+			KeywordUtil.markFailed("Test Dosyası Yüklemesi(Turkish).txt file Not present")*/
 	}
-
-
-
-
-
-
-
-
 }
