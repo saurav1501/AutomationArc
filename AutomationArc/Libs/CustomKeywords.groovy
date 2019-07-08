@@ -984,6 +984,12 @@ def static "com.arc.ReusableMethods.ResuableMethodsLEEDOnline.surveySubmit"(
         	sheetName)
 }
 
+def static "com.arc.ReusableMethods.ResuableMethodsLEEDOnline.surveySubmitArc"(
+    	String sheetName	) {
+    (new com.arc.ReusableMethods.ResuableMethodsLEEDOnline()).surveySubmitArc(
+        	sheetName)
+}
+
 def static "com.arc.ReusableMethods.ResuableMethodsLandingPage.invalidIDLoginTest"() {
     (new com.arc.ReusableMethods.ResuableMethodsLandingPage()).invalidIDLoginTest()
 }

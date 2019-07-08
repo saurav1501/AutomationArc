@@ -18,21 +18,20 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
 
 
+	try {	
+		
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.selectPayNow'()
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSchools.paymentPageSchoolsDetails'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumEleven,5)
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.paymentRegistration'(GlobalVariable.CCPayment , GlobalVariable.rowNumSix, GlobalVariable.creditCard)
+	 
+	} catch (Throwable t) {
+			CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.tearDown'()
+			System.out.println(t.getLocalizedMessage())
+			Error e1 = new Error(t.getMessage())
+			e1.setStackTrace(t.getStackTrace())
+			e1.printStackTrace()
+	}
 
-try{
-	//CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsLEEDOnline.searchProgramL'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumTwo)
-	
-	CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsLEEDOnline.surveySubmitArc'(GlobalVariable.BDataInput)
-	//GlobalVariable.BDataInput
-
-} catch (Throwable t) {
-	WebUI.closeWindowIndex(1)
-	WebUI.delay(2)
-	WebUI.switchToWindowIndex(0)
-	System.out.println(t.getLocalizedMessage())
-	Error e1 = new Error(t.getMessage())
-	e1.setStackTrace(t.getStackTrace())
-	e1.printStackTrace()
-}
