@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>VerifyAreaEnergyWaterWasteTest</name>
+   <name>VerifyAreaEnergyWaterWasteByArcDataTempleteUploadTest</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>1b762ce6-b186-4fe3-a7cb-d042c17d3df2</testCaseGuid>

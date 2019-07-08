@@ -388,6 +388,7 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 				WebUI.delay(2)
 				WebUI.click(findTestObject('PerformanceScore/RecomputeScore'))
 				WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait,FailureHandling.CONTINUE_ON_FAILURE)
+				keepGoing = WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait,FailureHandling.CONTINUE_ON_FAILURE)
 			}
 
 		WebUI.switchToWindowIndex(0)

@@ -56,6 +56,7 @@ public class ResuableMethodsSetting {
 		WebUI.check(findTestObject('DataInput/Settings18/AllOccupants'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/button_Close'), GlobalVariable.avgAngularWait)
+		WebUI.delay(2)
 		WebUI.click(findTestObject('DataInput/Settings18/button_Close'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 	}
@@ -68,6 +69,7 @@ public class ResuableMethodsSetting {
 		WebUI.check(findTestObject('DataInput/Settings18/RegularBuildingOccupant'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/button_Close'), GlobalVariable.avgAngularWait)
+		WebUI.delay(2)
 		WebUI.click(findTestObject('DataInput/Settings18/button_Close'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 	}
@@ -79,6 +81,7 @@ public class ResuableMethodsSetting {
 		WebUI.check(findTestObject('DataInput/Settings18/Visitors_radiobtn'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/button_Close'), GlobalVariable.avgAngularWait)
+		WebUI.delay(2)
 		WebUI.click(findTestObject('DataInput/Settings18/button_Close'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 	}
@@ -112,6 +115,21 @@ public class ResuableMethodsSetting {
 		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/addDataButton'),GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/addDataButton'),GlobalVariable.minAngularWait)
 	}
+
+	public void areaVisibilty(){
+		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/AreaTotalValue'),GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/AreaTotalValue'),GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/Upload1'),GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/Upload1'),GlobalVariable.minAngularWait)
+	}
+	public void occupancyVisibilty(){
+		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/TotalValue'),GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/TotalValue'),GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/Upload'),GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/Upload'),GlobalVariable.minAngularWait)
+	}
+
 
 	public void clickGeneral(){
 		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/General'), GlobalVariable.minAngularWait)
@@ -162,33 +180,28 @@ public class ResuableMethodsSetting {
 	public void setExclude(){
 		navigation.navigateIntoDataInput()
 		moreSettings()
-	
-		
-	}
-	
-	@Keyword
-	public void checkAllOccpant()
-	{
-	setExclude()
-	checkExclude()
-	checkRadioAllOccupant()
-    }
-	
-	@Keyword
-	public void checkRegular()
-	{
-	setExclude()
-	checkRegularOccupant()
 	}
 
 	@Keyword
-	public void checkVisitor()
-	{
-	setExclude()
-	checkVisitorOccupant()
+	public void checkAllOccpant() {
+		setExclude()
+		checkExclude()
+		checkRadioAllOccupant()
 	}
-	
-	
+
+	@Keyword
+	public void checkRegular() {
+		setExclude()
+		checkRegularOccupant()
+	}
+
+	@Keyword
+	public void checkVisitor() {
+		setExclude()
+		checkVisitorOccupant()
+	}
+
+
 	public void occupantGen() {
 		navigation.navigateIntoDataInput()
 		buildingSettings()
@@ -210,7 +223,7 @@ public class ResuableMethodsSetting {
 		selectWater()
 	}
 
-	
+
 	public void occupantWaste() {
 		navigation.navigateIntoDataInput()
 		buildingSettings()
@@ -241,7 +254,7 @@ public class ResuableMethodsSetting {
 		area()
 		clickGeneral()
 	}
-	
+
 	public void areaEnergy() {
 		navigation.navigateIntoDataInput()
 		buildingSettings()
@@ -262,77 +275,138 @@ public class ResuableMethodsSetting {
 		area()
 		selectWaste()
 	}
+
+	@Keyword
+	public void verifyareaAfterDataUpload(String sheetName,int rowNum) {
+		//******************************************General*********************************/
+		areaGeneral()
+		areaVisibilty()
+		String area =WebUI.getText(findTestObject('DataInput/Settings18/AreaTotalValue'))
+		println area
+		WebUI.verifyMatch(area,'3000' , false, FailureHandling.CONTINUE_ON_FAILURE)
+
+
+		//******************************************Energy*********************************/
+		areaEnergy()
+		areaVisibilty()
+		area =WebUI.getText(findTestObject('DataInput/Settings18/AreaTotalValue'))
+		WebUI.verifyMatch(area,'1000' , false, FailureHandling.CONTINUE_ON_FAILURE)
+
+		//******************************************Water*********************************/
+		areaWater()
+		areaVisibilty()
+		area =WebUI.getText(findTestObject('DataInput/Settings18/AreaTotalValue'))
+		WebUI.verifyMatch(area,'2000' , false, FailureHandling.CONTINUE_ON_FAILURE)
+
+		//******************************************Waste*********************************/
+		areaWaste()
+		areaVisibilty()
+		area =WebUI.getText(findTestObject('DataInput/Settings18/AreaTotalValue'))
+		WebUI.verifyMatch(area, '3000' , false, FailureHandling.CONTINUE_ON_FAILURE)
+
+	}
+
+	public void changedUnit(){
+		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/Unit/IP'),GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('DataInput/Settings18/Unit/IP'))
+		WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/Unit/SI'),GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('DataInput/Settings18/Unit/SI'))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(2)
+		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/Unit/GROSS AREA'), GlobalVariable.minAngularWait)
+	    WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/Unit/GROSS AREA'), GlobalVariable.minAngularWait)
+	
+		
+	}
+	
 	
 	@Keyword
-	public void verifyareaAfterDataUpload(String sheetName,int rowNum)
-	{
-		//******************************************General*********************************/
-		
-		areaGeneral()
-		
-		WebUI.verifyMatch(sheetName, sheetName, false, FailureHandling.CONTINUE_ON_FAILURE)
+	public void changedUnit(String sheetName,int rowNum) {
 		
 		//******************************************Energy*********************************/
 		areaEnergy()
-		WebUI.verifyMatch(sheetName, sheetName, false, FailureHandling.CONTINUE_ON_FAILURE)
-		
+		areaVisibilty()
+		changedUnit()
+
 		//******************************************Water*********************************/
 		areaWater()
-		WebUI.verifyMatch(sheetName, sheetName, false, FailureHandling.CONTINUE_ON_FAILURE)
-		
+		areaVisibilty()
+		area =WebUI.getText(findTestObject('DataInput/Settings18/AreaTotalValue'))
+		WebUI.verifyMatch(area,'2000' , false, FailureHandling.CONTINUE_ON_FAILURE)
+
 		//******************************************Waste*********************************/
 		areaWaste()
-		WebUI.verifyMatch(sheetName, sheetName, false, FailureHandling.CONTINUE_ON_FAILURE)
-		
+		areaVisibilty()
+		area =WebUI.getText(findTestObject('DataInput/Settings18/AreaTotalValue'))
+		WebUI.verifyMatch(area, '3000' , false, FailureHandling.CONTINUE_ON_FAILURE)
+
 	}
+
 	
 	@Keyword
-	public void verifyOccupupantAfterDataUpload(String sheetName,int rowNum)
-	{
-		
+	public void verifyOccupupantAfterDataUpload(String sheetName,int rowNum) {
+
 		//******************************************General*********************************/
 		occupantGen()
-		WebUI.verifyMatch(sheetName, sheetName, false, FailureHandling.CONTINUE_ON_FAILURE)
-		
+		occupancyVisibilty()
+		String population = WebUI.getText(findTestObject('DataInput/Settings18/TotalValue'))
+		WebUI.verifyMatch(population,'9', false, FailureHandling.CONTINUE_ON_FAILURE)
+
 		//******************************************Energy*********************************/
 		occupantEnergy()
-		WebUI.verifyMatch(sheetName, sheetName, false, FailureHandling.CONTINUE_ON_FAILURE)
-		
+		occupancyVisibilty()
+		population = WebUI.getText(findTestObject('DataInput/Settings18/TotalValue'))
+		WebUI.verifyMatch(population,'9', false, FailureHandling.CONTINUE_ON_FAILURE)
+
 		//******************************************Water*********************************/
 		occupantWater()
-		WebUI.verifyMatch(sheetName, sheetName, false, FailureHandling.CONTINUE_ON_FAILURE)
-		
+		occupancyVisibilty()
+		population =WebUI.getText(findTestObject('DataInput/Settings18/TotalValue'))
+		WebUI.verifyMatch(population,'9', false, FailureHandling.CONTINUE_ON_FAILURE)
+
+
 		//******************************************Waste*********************************/
 		occupantWaste()
-		WebUI.verifyMatch(sheetName, sheetName, false, FailureHandling.CONTINUE_ON_FAILURE)
-		
-		
+		occupancyVisibilty()
+		population =WebUI.getText(findTestObject('DataInput/Settings18/TotalValue'))
+		WebUI.verifyMatch(population,'9', false, FailureHandling.CONTINUE_ON_FAILURE)
+
+
 		//******************************************Transport*********************************/
 		occupantTransport()
-		
-		//******************************************Regular*********************************/
-		WebUI.verifyMatch(sheetName, sheetName, false, FailureHandling.CONTINUE_ON_FAILURE)
-		
-		//******************************************Visitor*********************************/
-		WebUI.verifyMatch(sheetName, sheetName, false, FailureHandling.CONTINUE_ON_FAILURE)
-		
-		
+		occupancyVisibilty()
+
 		//******************************************Total***********************************/
-		WebUI.verifyMatch(sheetName, sheetName, false, FailureHandling.CONTINUE_ON_FAILURE)
-		
-	
+		population =WebUI.getText(findTestObject('DataInput/Settings18/TotalValue'))
+		WebUI.verifyMatch(population,'9', false, FailureHandling.CONTINUE_ON_FAILURE)
+
+		//******************************************Regular*********************************/
+		String regpopulation =WebUI.getText(findTestObject('DataInput/Settings18/RegularOccupaint'))
+		WebUI.verifyMatch(regpopulation,'5' , false, FailureHandling.CONTINUE_ON_FAILURE)
+
+		//******************************************Visitor*********************************/
+		String visitorpopulation =WebUI.getText(findTestObject('DataInput/Settings18/VISITOR'))
+		WebUI.verifyMatch(visitorpopulation, '4', false, FailureHandling.CONTINUE_ON_FAILURE)
+
 		//******************************************HumanExpericence*********************************/
 		occupantHum()
-		
-		WebUI.verifyMatch(sheetName, sheetName, false, FailureHandling.CONTINUE_ON_FAILURE)
-		//******************************************Visitor*********************************/
-		
-		WebUI.verifyMatch(sheetName, sheetName, false, FailureHandling.CONTINUE_ON_FAILURE)
-		
+		occupancyVisibilty()
 		//******************************************Total***********************************/
-		WebUI.verifyMatch(sheetName, sheetName, false, FailureHandling.CONTINUE_ON_FAILURE)
+		population =WebUI.getText(findTestObject('DataInput/Settings18/TotalValue'))
+		WebUI.verifyMatch(population,'9', false, FailureHandling.CONTINUE_ON_FAILURE)
 
-		
+		//******************************************Regular*********************************/
+		regpopulation =WebUI.getText(findTestObject('DataInput/Settings18/RegularOccupaint'))
+		WebUI.verifyMatch(regpopulation,'5' , false, FailureHandling.CONTINUE_ON_FAILURE)
+
+		//******************************************Visitor*********************************/
+		visitorpopulation =WebUI.getText(findTestObject('DataInput/Settings18/VISITOR'))
+		WebUI.verifyMatch(visitorpopulation, '4', false, FailureHandling.CONTINUE_ON_FAILURE)
+
+
 	}
-	
 }

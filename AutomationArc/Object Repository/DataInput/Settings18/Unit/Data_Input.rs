@@ -1,104 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Upload</name>
+   <name>Data_Input</name>
    <tag></tag>
-   <elementGuidId>39af41ad-a97e-4292-9251-17f6c54984a6</elementGuidId>
-   <selectorCollection>
-      <entry>
-         <key>BASIC</key>
-         <value>//button[@type = 'button' and @ref_element = 'Object Repository/DataInput/Settings18/iframe_Data Input_datainput-wi']</value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>//span[text()='UPLOAD']</value>
-      </entry>
-   </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <elementGuidId>cec890c2-b001-4732-a380-b142dccb812c</elementGuidId>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>button</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>ng-if</name>
-      <type>Main</type>
-      <value>!data.upload_meter</value>
+      <value>iframe</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>type</name>
+      <name>id</name>
       <type>Main</type>
-      <value>button</value>
+      <value>datainput-widget</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>class</name>
+      <name>ng-src</name>
       <type>Main</type>
-      <value>btn uploadBtn btn-default button--cancel dropdown-toggle meterReading-btn--uploadDoc ng-scope</value>
+      <value>https://api.usgbc.org/stg/leed/assets/LEED:1000167940/widget/meter/?access-token=hQeVHvKkL34JS8FlqyJS8YKZVWZ90Y&amp;subscription-key=8e0baacec376430ba0f81a5d960ccbb0&amp;type=all&amp;version=1</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>data-toggle</name>
+      <name>src</name>
       <type>Main</type>
-      <value>dropdown</value>
+      <value>https://api.usgbc.org/stg/leed/assets/LEED:1000167940/widget/meter/?access-token=hQeVHvKkL34JS8FlqyJS8YKZVWZ90Y&amp;subscription-key=8e0baacec376430ba0f81a5d960ccbb0&amp;type=all&amp;version=1</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>height</name>
+      <type>Main</type>
+      <value>1138px</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>width</name>
+      <type>Main</type>
+      <value>100%</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>cd_frame_id_</name>
+      <type>Main</type>
+      <value>61e941f731569861b6f15ea1a89214e6</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;readingsTable&quot;)/tbody[1]/tr[@class=&quot;dynamic_row ng-scope&quot;]/td[@class=&quot;meterReadingDocument--wrapper&quot;]/div[1]/div[@class=&quot;dropdown dropDownuploadOptions&quot;]/button[@class=&quot;btn uploadBtn btn-default button--cancel dropdown-toggle meterReading-btn--uploadDoc ng-scope&quot;]</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>ref_element</name>
-      <type>Main</type>
-      <value>Object Repository/DataInput/Settings18/iframe_Data Input_datainput-wi</value>
+      <value>id(&quot;datainput-widget&quot;)</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
-      <value>(//button[@type='button'])[5]</value>
+      <value>//iframe[@id='datainput-widget']</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
-      <value>//table[@id='readingsTable']/tbody/tr/td[5]/div/div/button</value>
+      <value>//div[@id='meterWidgetContainer']/iframe</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Jan 01, 2010'])[1]/following::button[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Data Input'])[1]/following::iframe[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='DOCUMENTATION'])[1]/following::button[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Next'])[1]/following::iframe[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Computer File'])[1]/preceding::button[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='ENERGY STAR Integration Guide'])[1]/preceding::iframe[1]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Close'])[1]/preceding::iframe[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
-      <value>//td[5]/div/div/button</value>
+      <value>//iframe</value>
    </webElementXpaths>
 </WebElementEntity>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>GrossFloorArea(Energy,Water,Waste,Transport,Hum)ChangeUnitTest</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>03a25a0a-9854-4c41-8cde-49797bfb9b7a</testCaseGuid>
+</TestCaseEntity>

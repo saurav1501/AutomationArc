@@ -20,10 +20,9 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
 try{
-	
-	
-	   CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.percentageSurveyResponseRateCalculationBuidingV3'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumTwelve)
-	
+
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.percentageSurveyResponseRateCalculationBuidingV3'(GlobalVariable.BDataInput, GlobalVariable.rowNumFourteen)
+
 	} catch (Throwable t) {
 		  System.out.println(t.getLocalizedMessage())
 		  Error e1 = new Error(t.getMessage())

@@ -17,7 +17,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//div[@class=&quot;col-md-12 pl0&quot;]/div[@class=&quot;hidden-xs hidden-sm col-md-3 survey-response&quot;]/div[@class=&quot;dropdown email-dropdown&quot;]/button[@class=&quot;btn-vertical dropdown-toggle btn btn-default button--cancel&quot;]</value>
+         <value>//button[@class=&quot;btn-vertical dropdown-toggle btn btn-default button--cancel&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

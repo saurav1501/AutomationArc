@@ -21,7 +21,9 @@ import internal.GlobalVariable as GlobalVariable
 
 try {
 		
-	CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsPerformanceScore.analyticsgenratePerformanceScoreAdminToolOtherNone'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumTwo)
+	
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginArcAdminToolWithGlobalVariable'()
+	CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsPerformanceScore.analyticsgenratePerformanceScoreAdminToolOtherNone1'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
 	
 } catch (Throwable t) {
 	WebUI.switchToWindowIndex(0)
