@@ -3,6 +3,8 @@ package com.arc.ReusableMethods
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
 import java.awt.Robot
+import java.awt.Toolkit
+import java.awt.datatransfer.StringSelection
 import java.awt.event.KeyEvent
 import java.text.SimpleDateFormat
 
@@ -1265,7 +1267,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		//WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Update'))
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/deleteButtonTwo'), 20)
-		
+
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), 20)
 		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'),2)
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
@@ -1308,6 +1310,121 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 
 	}
 
+	
+	public static void setClipboardData(String string) {
+		//StringSelection is a class that can be used for copy and paste operations.
+		StringSelection stringSelection = new StringSelection(string)
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null)
+	}
+
+	public static void uploadFile(String fileLocation) {
+		try {
+			//Setting clipboard with file location
+			setClipboardData(fileLocation)
+			//native key strokes for CTRL, V and ENTER keys
+			Robot robot = new Robot()
+			robot.keyPress(KeyEvent.VK_CONTROL)
+			robot.keyPress(KeyEvent.VK_V)
+			robot.keyRelease(KeyEvent.VK_V)
+			robot.keyRelease(KeyEvent.VK_CONTROL)
+			WebUI.delay(3)
+			robot.keyPress(KeyEvent.VK_ENTER)
+			robot.keyRelease(KeyEvent.VK_ENTER)
+			WebUI.delay(1)
+			/*
+			 robot.keyPress(KeyEvent.VK_ENTER)
+			 robot.keyRelease(KeyEvent.VK_ENTER)*/
+		} catch (Exception exp) {
+			exp.printStackTrace()
+		}
+	}
+
+
+	
+	//Energy Meter file upload LEED Online
+	@Keyword
+	public void fileUploadDataInputWithDifferentLanguagesLEEDOnline(){
+		WebUI.delay(5)
+		WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), "Test Energy Meter", FailureHandling.STOP_ON_FAILURE)
+		WebUI.delay(2)
+		////pdf file
+		WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
+		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
+		WebUI.delay(2)
+		uploadFile(UploadArcDataTempleteSpanish)
+		WebUI.delay(4)
+		//WebUI.sendKeys(findTestObject('DataInput/DataInputFileUpload/sendFileToUpload'),UploadDocumentDataInput)
+		//text file
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
+		//WebUI.scrollToElement(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'),3)
+		WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
+		WebUI.delay(2)
+		uploadFile(UploadArcDataTempleteFrench)
+		WebUI.delay(4)
+		//WebUI.sendKeys(findTestObject('DataInput/DataInputFileUpload/sendFileToUpload'),UploadTextFile)
+		//jpg file
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
+		//WebUI.scrollToElement(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'),3)
+		WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
+		WebUI.delay(2)
+		uploadFile(UploadArcDataTempleteTurkish)
+		WebUI.delay(4)
+		//WebUI.sendKeys(findTestObject('DataInput/DataInputFileUpload/sendFileToUpload'),UploadJpeg)
+		//Png file
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
+		//WebUI.scrollToElement(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'),3)
+		WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
+		WebUI.delay(2)
+		uploadFile(UploadArcDataTempleteGerman)
+		WebUI.delay(4)
+		//WebUI.sendKeys(findTestObject('DataInput/DataInputFileUpload/sendFileToUpload'),UploadPng)
+		//gif file
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
+		//WebUI.scrollToElement(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'),3)
+		WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
+		WebUI.delay(2)
+		uploadFile(UploadArcDataTempletePortugues)
+		WebUI.delay(4)
+		//WebUI.sendKeys(findTestObject('DataInput/DataInputFileUpload/sendFileToUpload'),UploadGif)
+		//xls file
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
+		//WebUI.scrollToElement(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'),3)
+		WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
+		WebUI.delay(2)
+		uploadFile(UploadArcDataTempleteKorean)
+		WebUI.delay(4)
+		//WebUI.sendKeys(findTestObject('DataInput/DataInputFileUpload/sendFileToUpload'),UploadXls)
+		//doc file
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
+		//WebUI.scrollToElement(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'),3)
+		WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
+		WebUI.delay(2)
+		uploadFile(UploadArcDataTempleteChineseSimple)
+		WebUI.delay(6)
+		//WebUI.sendKeys(findTestObject('DataInput/DataInputFileUpload/sendFileToUpload'),UploadDocs)
+		//duplicate doc file
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/uploadProgressSpan'),20)
+		//WebUI.scrollToElement(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'),3)
+		WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
+		WebUI.delay(2)
+		uploadFile(UploadArcDataTempleteChineseTrade)
+		WebUI.delay(4)
+	}
+	
 
 	//LEED Online Create Water meter
 	@Keyword
@@ -1376,7 +1493,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		//WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Update'))
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/deleteButtonOne'), 20)
-		
+
 		//reading two
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), 20)
 		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'),2)
@@ -1649,5 +1766,5 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 	}
 
-	
+
 }
