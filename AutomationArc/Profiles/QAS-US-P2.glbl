@@ -246,7 +246,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'D:\\AutomationArc\\AutomationArc\\AutomationArc\\Download\\'</initValue>
+      <initValue>'/var/lib/jenkins/Downloads/'</initValue>
       <name>downloadDir</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
