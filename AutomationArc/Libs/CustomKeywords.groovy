@@ -966,6 +966,10 @@ def static "com.arc.ReusableMethods.ResuableMethodsLEEDOnline.createEnergyMeterL
          , 	rowNum)
 }
 
+def static "com.arc.ReusableMethods.ResuableMethodsLEEDOnline.fileUploadDataInputWithDifferentLanguagesLEEDOnline"() {
+    (new com.arc.ReusableMethods.ResuableMethodsLEEDOnline()).fileUploadDataInputWithDifferentLanguagesLEEDOnline()
+}
+
 def static "com.arc.ReusableMethods.ResuableMethodsLEEDOnline.createWaterMeterLEEDOnline"(
     	String sheetName	
      , 	int rowNum	) {
