@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify Score impact After Deletion of Area For Energy , Water , Waste .</description>
+   <name>VerifyDeleteOccupancyWaterTest</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>dfd79ca1-c0fc-42fe-a8e2-8295f5921c18</testCaseGuid>
+</TestCaseEntity>

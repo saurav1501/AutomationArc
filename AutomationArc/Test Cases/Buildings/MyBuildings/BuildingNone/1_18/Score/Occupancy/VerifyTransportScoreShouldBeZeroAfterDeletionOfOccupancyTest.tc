@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify Score should Be Zero after Deletion of Area for Energy Water , Waste.</description>
+   <name>VerifyTransportScoreShouldBeZeroAfterDeletionOfOccupancyTest</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>ad543171-bd16-413c-9938-23badff8216e</testCaseGuid>
+</TestCaseEntity>

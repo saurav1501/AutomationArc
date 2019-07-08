@@ -47,10 +47,10 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/SearchProgramTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>4154e5d6-784d-479d-91c5-37fa626357f6</guid>
+      <guid>c78cfd08-fad9-4098-98ff-129a76b33829</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/UploadArcDataTemplateTest</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/UploadArcDataTemplateTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>e90f2395-6d75-435d-ade0-c6f2098a4423</guid>
