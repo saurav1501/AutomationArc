@@ -19,17 +19,15 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKe
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-try {
-		
+try{
 	
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginArcAdminToolWithGlobalVariable'()
-	CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsPerformanceScore.genratePerformanceScoreAdminToolOtherNone'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumTwo)
 	
-} catch (Throwable t) {
-    WebUI.closeWindowIndex(1)
-	WebUI.switchToWindowIndex(0)
-	System.out.println(t.getLocalizedMessage())
-	Error e1 = new Error(t.getMessage())
-	e1.setStackTrace(t.getStackTrace())
-	e1.printStackTrace()
-}
+	   CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.percentageSurveyResponseRateCalculationBuidingV3'(GlobalVariable.BDataInput, GlobalVariable.rowNumTwelve)
+	
+	} catch (Throwable t) {
+		  System.out.println(t.getLocalizedMessage())
+		  Error e1 = new Error(t.getMessage())
+		  e1.setStackTrace(t.getStackTrace())
+		  e1.printStackTrace()
+	 }
+	

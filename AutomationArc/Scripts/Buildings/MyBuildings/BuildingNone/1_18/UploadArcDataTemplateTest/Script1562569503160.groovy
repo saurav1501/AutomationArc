@@ -2,6 +2,9 @@ import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
+
+import javax.swing.text.DefaultEditorKit.CutAction
+
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
 import com.kms.katalon.core.checkpoint.CheckpointFactory as CheckpointFactory
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as MobileBuiltInKeywords
@@ -18,18 +21,22 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKeywords
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
 
-try {
+
+//Upload ARCData Template
+
+	try {
 		
+		//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
+		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.uploadArcDataTemplateBuildingAnalytics18'()
+
+	} catch (Throwable t) {	
+		System.out.println(t.getLocalizedMessage())
+		Error e1 = new Error(t.getMessage())
+		e1.setStackTrace(t.getStackTrace())
+		e1.printStackTrace()
+	}
+
+
 	
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginArcAdminToolWithGlobalVariable'()
-	CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsPerformanceScore.genratePerformanceScoreAdminToolOtherNone'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumTwo)
-	
-} catch (Throwable t) {
-    WebUI.closeWindowIndex(1)
-	WebUI.switchToWindowIndex(0)
-	System.out.println(t.getLocalizedMessage())
-	Error e1 = new Error(t.getMessage())
-	e1.setStackTrace(t.getStackTrace())
-	e1.printStackTrace()
-}

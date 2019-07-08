@@ -258,9 +258,11 @@ public class ReusableMethodsNavigation {
 
 	@Keyword
 	public void navigateToAnalyticsTotal() {
-		WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'), 5)
+		WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'),5)
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		WebUI.delay(2)
 	}
 
 	@Keyword

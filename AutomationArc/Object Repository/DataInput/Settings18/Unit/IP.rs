@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Upload</name>
+   <name>IP</name>
    <tag></tag>
-   <elementGuidId>39af41ad-a97e-4292-9251-17f6c54984a6</elementGuidId>
+   <elementGuidId>a80b6593-eb71-4e6c-a0d6-ef4192e4be81</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//button[@type = 'button' and @ref_element = 'Object Repository/DataInput/Settings18/iframe_Data Input_datainput-wi']</value>
-      </entry>
-      <entry>
          <key>XPATH</key>
-         <value>//span[text()='UPLOAD']</value>
+         <value>(//button[@class = 'btn dropdown-toggle btn-default'])[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -24,25 +20,18 @@
       <value>button</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>ng-if</name>
+      <name>class</name>
       <type>Main</type>
-      <value>!data.upload_meter</value>
+      <value>btn dropdown-toggle btn-default</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>type</name>
       <type>Main</type>
       <value>button</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>class</name>
-      <type>Main</type>
-      <value>btn uploadBtn btn-default button--cancel dropdown-toggle meterReading-btn--uploadDoc ng-scope</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -54,51 +43,70 @@
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
+      <name>aria-expanded</name>
+      <type>Main</type>
+      <value>false</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>text</name>
+      <type>Main</type>
+      <value>
+                            
+                            Imperial System (IP)
+                            
+                            
+                        </value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;readingsTable&quot;)/tbody[1]/tr[@class=&quot;dynamic_row ng-scope&quot;]/td[@class=&quot;meterReadingDocument--wrapper&quot;]/div[1]/div[@class=&quot;dropdown dropDownuploadOptions&quot;]/button[@class=&quot;btn uploadBtn btn-default button--cancel dropdown-toggle meterReading-btn--uploadDoc ng-scope&quot;]</value>
+      <value>id(&quot;meter_item&quot;)/div[@class=&quot;dropdown building_meter_drp display-inline mb20 cursor-pointer ng-scope&quot;]/button[@class=&quot;btn dropdown-toggle btn-default&quot;]</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>ref_element</name>
       <type>Main</type>
-      <value>Object Repository/DataInput/Settings18/iframe_Data Input_datainput-wi</value>
+      <value>Object Repository/DataInput/Settings18/Unit/Data_Input</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
-      <value>(//button[@type='button'])[5]</value>
+      <value>(//button[@type='button'])[4]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
-      <value>//table[@id='readingsTable']/tbody/tr/td[5]/div/div/button</value>
+      <value>//div[@id='meter_item']/div[5]/button</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Jan 01, 2010'])[1]/following::button[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Unit'])[1]/following::button[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='DOCUMENTATION'])[1]/following::button[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Waste'])[2]/following::button[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Computer File'])[1]/preceding::button[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Imperial System (IP)'])[2]/preceding::button[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
-      <value>//td[5]/div/div/button</value>
+      <value>//div[5]/button</value>
    </webElementXpaths>
 </WebElementEntity>

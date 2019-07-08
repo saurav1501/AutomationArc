@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>VerifyScoreShouldBeMoreAfterChangingUnitToSITest</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>93089e8a-6029-4b95-8944-adc361a05acf</testCaseGuid>
+</TestCaseEntity>

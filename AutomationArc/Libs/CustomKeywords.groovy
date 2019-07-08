@@ -1536,6 +1536,14 @@ def static "com.arc.ReusableMethods.ResuableMethodsSetting.verifyareaAfterDataUp
          , 	rowNum)
 }
 
+def static "com.arc.ReusableMethods.ResuableMethodsSetting.changedUnit"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ResuableMethodsSetting()).changedUnit(
+        	sheetName
+         , 	rowNum)
+}
+
 def static "com.arc.ReusableMethods.ResuableMethodsSetting.verifyOccupupantAfterDataUpload"(
     	String sheetName	
      , 	int rowNum	) {
@@ -1950,6 +1958,10 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyGraphDefaultU
 
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.uploadArcDataTemplateBuildingAnalytics"() {
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).uploadArcDataTemplateBuildingAnalytics()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.uploadArcDataTemplateBuildingAnalytics18"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).uploadArcDataTemplateBuildingAnalytics18()
 }
 
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.uploadArcDataTemplateTransit"() {

@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>Upload</name>
+   <name>Upload1</name>
    <tag></tag>
-   <elementGuidId>39af41ad-a97e-4292-9251-17f6c54984a6</elementGuidId>
+   <elementGuidId>1d16261b-d8e1-4e63-8d5d-4e0f77ad2958</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//button[@type = 'button' and @ref_element = 'Object Repository/DataInput/Settings18/iframe_Data Input_datainput-wi']</value>
-      </entry>
-      <entry>
          <key>XPATH</key>
-         <value>//span[text()='UPLOAD']</value>
+         <value>(//span[text()='UPLOAD'])[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

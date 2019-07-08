@@ -435,9 +435,9 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
-	    WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-	    WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-	    WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
 		WebUI.delay(2)
 
 		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.avgAngularWait)
@@ -3464,14 +3464,20 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		Double dUIAnnualwaterconsumption = daily * 365
 		double UIwaterconsumptiongalperOccupany = dUIAnnualwaterconsumption/dBOccupancy
 		BigDecimal UIWaterconsumptiongalperOccupany = new BigDecimal(UIwaterconsumptiongalperOccupany)
-		UIWaterconsumptiongalperOccupany = UIWaterconsumptiongalperOccupany.setScale(4,RoundingMode.HALF_UP)
+		UIWaterconsumptiongalperOccupany = UIWaterconsumptiongalperOccupany.setScale(2,RoundingMode.HALF_UP)
 		String cUIWaterconsumptiongalperOccupany = UIWaterconsumptiongalperOccupany.toString()
 
 		String UIannualcarbonemissionsMTCO2eperOcc = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualWaterConOcc'))
 		String eUIAnnualcarbonemissionsMTCO2eperOcc =  UIannualcarbonemissionsMTCO2eperOcc.replace(',', '')
+		Double eUIAnnualcarbonemissionMTCO2eperOcc =  Double.parseDouble(eUIAnnualcarbonemissionsMTCO2eperOcc)
+		
+		BigDecimal eUIAnnualcarbonemMTCO2eperOcc = new BigDecimal(eUIAnnualcarbonemissionMTCO2eperOcc)
+		eUIAnnualcarbonemMTCO2eperOcc = eUIAnnualcarbonemMTCO2eperOcc.setScale(2,RoundingMode.HALF_UP)
+		String eUIAnnualWaterOcc = eUIAnnualcarbonemMTCO2eperOcc.toString()
 
+		
 		/****************UI Verses Calculated Value water per Occupancy*****************************/
-		WebUI.verifyMatch(eUIAnnualcarbonemissionsMTCO2eperOcc, cUIWaterconsumptiongalperOccupany, false)
+		WebUI.verifyMatch(eUIAnnualWaterOcc, cUIWaterconsumptiongalperOccupany, false)
 	}
 
 	@Keyword
@@ -3614,8 +3620,8 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 	@Keyword
 	public void averagedailywastegeneratedProject(String sheetName ,int rowNum) {
-		String totalUnitlbs = data.getCellData(sheetName,"GWasteReading",rowNum)
-		String noOfDays = data.getCellData(sheetName,"WasteNoOfDays",rowNum)
+		String totalUnitlbs = data.getCellData(sheetName,"GWasteReading",2)
+		String noOfDays = data.getCellData(sheetName,"WasteNoOfDays",2)
 
 		Double dnoOfDays =  Double.parseDouble(noOfDays)
 		Double dtotalUnitlbs =  Double.parseDouble(totalUnitlbs)
@@ -3642,8 +3648,8 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		/*	String UIwastegenSqFeet = WebUI.getText(findTestObject('Analytics/TotalCarbon/AvgDailyGenProj'))
 		 Double dUIwastegenSqFeet =  Double.parseDouble(UIwastegenSqFeet)
 		 */
-		String totalUnitlbs = data.getCellData(sheetName,"GWasteReading",rowNum)
-		String noOfDays = data.getCellData(sheetName,"WasteNoOfDays",rowNum)
+		String totalUnitlbs = data.getCellData(sheetName,"GWasteReading",2)
+		String noOfDays = data.getCellData(sheetName,"WasteNoOfDays",2)
 
 		Double dnoOfDays =  Double.parseDouble(noOfDays)
 		Double dtotalUnitlbs =  Double.parseDouble(totalUnitlbs)
@@ -3716,7 +3722,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 		String grossAreasqft = data.getCellData(sheetName,"GrossAreasqft",rowNum)
 		Double dgrossAreasqft =  Double.parseDouble(grossAreasqft)
-		
+
 		String totalUnitlbs = data.getCellData(sheetName,"DWasteReading",2)
 		String noOfDays = data.getCellData(sheetName,"WasteNoOfDays",2)
 
@@ -3748,7 +3754,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		Double dBOccupancy =  Double.parseDouble(BOccupancy)
 		String grossAreasqft = data.getCellData(sheetName,"GrossAreasqft",rowNum)
 		Double dgrossAreasqft =  Double.parseDouble(grossAreasqft)
-		
+
 		String totalUnitlbs = data.getCellData(sheetName,"DWasteReading",2)
 		String noOfDays = data.getCellData(sheetName,"WasteNoOfDays",2)
 
@@ -4038,8 +4044,8 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		WebUI.verifyMatch(UIcUitransOccupancy, cannual_annual_carbon_emissionin_lbsOCCp, false)
 	}
 	@Keyword
-	public void annualCarbonwtransportOccupancyV3(String sheetName ,int rowNum) {
-		
+	public void annualCarbonwtransportOccupancyV3(String sheetName , int rowNum) {
+
 		String BOccupancy = data.getCellData(sheetName,"BOccupancy",rowNum)
 		Double dBOccupancy =  Double.parseDouble(BOccupancy)
 

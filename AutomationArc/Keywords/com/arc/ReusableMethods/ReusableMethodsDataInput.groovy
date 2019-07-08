@@ -129,6 +129,39 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 	}
 
+	
+	@Keyword
+	public void uploadArcDataTemplateBuildingAnalytics18(){
+		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		navigation.navigateIntoDataInput()
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'), GlobalVariable.minAngularWait)
+		WebUI.doubleClick(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'))
+		WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/span_Upload.XLS'), 20)
+		WebUI.doubleClick(findTestObject('Object Repository/DataInput/span_Upload.XLS'))
+		WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/ClickOnUploadToSelectFile'),8)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/DataInputTemplateFileUploadPopupTitle')),"Upload Spreadsheet",false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.sendKeys(findTestObject('Object Repository/DataInput/UploadArcDataTemplete'),BaseClass.analyticsUploadArcDataTemplete18)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('DataInput/ClickToUploadFileButton'))
+		WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		String successmessage= WebUI.getText(findTestObject('Object Repository/DataInput/ExcelUploadSuccessMessage'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.verifyMatch(successmessage,'Excel submitted successfully. We will send you an email when your data is processed.' , true)
+		WebUI.delay(1)
+		WebUI.click(findTestObject('Object Repository/DataInput/button_CLOSE'))
+		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.refresh()
+		WebUI.delay(10)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+	}
+
 	@Keyword
 	public void uploadArcDataTemplateTransit(){
 
@@ -5003,7 +5036,9 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		Transferable contents = clipboard.getContents(null)
 		String url = (String) contents.getTransferData(DataFlavor.stringFlavor)
 		data.setCellData(sheetName, "Url", GlobalVariable.rowNumTwo, url)
+
 		WebUI.delay(2)
+
 		Robot r = new Robot();
 		r.keyPress(KeyEvent.VK_CONTROL);
 		r.keyPress(KeyEvent.VK_T);
@@ -5067,7 +5102,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 			WebUI.dragAndDropToObject(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'), findTestObject('Object Repository/DataInput/Survey/ExtremelySatisfySpanText'))
 			WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
 			WebUI.delay(2)
-			//WebUI.selectOptionByLabel(findTestObject('Object Repository/DataInput/Survey/OccupantTypeSurvey'), "Regular Occupant", false)
+
+			WebUI.selectOptionByLabel(findTestObject('Object Repository/DataInput/Survey/OccupantTypeSurvey'), "Regular Occupant", false)
 			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
 			//WebUI.selectOptionByLabel(findTestObject('DataInput/Survey/OccupantType'),'Regular Occupant', false)
@@ -5081,7 +5117,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 			println "Survey Submited Successufully"
 
-			WebUI.switchToWindowIndex(0)
+
 
 		}
 		WebUI.closeWindowIndex(1)
@@ -5830,7 +5866,6 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	@Keyword
 	public void percentageSurveyResponseRateCalculationBuidingV3(String sheetName,int rowNum) throws IOException, InterruptedException, Exception{
 
-
 		String occupant = data.getCellData(sheetName,'BOccupancy', rowNum)
 		double doccupant = Double.parseDouble(occupant)
 
@@ -5840,8 +5875,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
-
 		String projectoccupancy = WebUI.getAttribute((findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne')),'value')
+
 		double projectOccupancy= Double.parseDouble(projectoccupancy)
 
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
@@ -5859,14 +5894,21 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		double surveyresponsepercentage= Double.parseDouble(surveyResponsepercentage)
 		println surveyResponsepercentage
 
+		BigDecimal UIresponsePecentage = new BigDecimal(surveyresponsepercentage)
+		UIresponsePecentage = UIresponsePecentage.setScale(0,RoundingMode.HALF_UP)
+		String UIResponsePecentage = Double.toString(UIresponsePecentage)
+
+
+
 		double calculatedresponsePecentage = (doccupant/projectOccupancy)*100
 
 		BigDecimal responsePecentage = new BigDecimal(calculatedresponsePecentage)
-		responsePecentage = responsePecentage.setScale(2,RoundingMode.HALF_UP)
+		responsePecentage = responsePecentage.setScale(0,RoundingMode.HALF_UP)
 		String responsePecentageTr = Double.toString(responsePecentage)
 		println responsePecentageTr
 
-		WebUI.verifyMatch(responsePecentageTr, surveyResponsepercentage, false)
+		WebUI.verifyMatch(UIResponsePecentage, responsePecentageTr, false)
+
 		/******Verify that survey response rate% is calculated on the basis of the following formula [ Response %ge = (No. of responses/Occupancy)*100 ] . Always count the no of responses by counting the no of rows of HUMAN EXPERIENCE survey results.*****/
 		WebUI.click(findTestObject('DataInput/Survey/OccupantSatisfactionSurv'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
@@ -5884,14 +5926,18 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		print humsurveyResponsepercentage
 		double humsurveyresponsepercentage= Double.parseDouble(humsurveyResponsepercentage)
 
+		BigDecimal UIhumsurveyresponsepercentage = new BigDecimal(humsurveyresponsepercentage)
+		UIhumsurveyresponsepercentage = UIhumsurveyresponsepercentage.setScale(0,RoundingMode.HALF_UP)
+		String UIHumsurveyresponsepercentage = Double.toString(UIhumsurveyresponsepercentage)
+
 		double humcalculatedresponsePecentage = (doccupant/projectOccupancy)*100
 		BigDecimal responsePecentagehum = new BigDecimal(calculatedresponsePecentage)
-		responsePecentagehum = responsePecentagehum.setScale(2, RoundingMode.HALF_UP)
+		responsePecentagehum = responsePecentagehum.setScale(0, RoundingMode.HALF_UP)
 		String responsePecentagehu = Double.toString(responsePecentage)
 
-		Assert.assertEquals(responsePecentagehu,humsurveyResponsepercentage)
+		//Assert.assertEquals(responsePecentagehu,humsurveyResponsepercentage)
 		/***************Verify that survey response rate percentage is same in Transport and HE tabs.***********************************/
-		WebUI.verifyMatch(humsurveyResponsePercentage, surveyResponsePercentage, false)
+		WebUI.verifyMatch(UIHumsurveyresponsepercentage, responsePecentagehu, false)
 
 	}
 
