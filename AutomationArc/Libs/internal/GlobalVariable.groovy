@@ -380,6 +380,11 @@ Profile STG-US-P2 : Project team admin and arc administrator email id</p>
     public static Object appUrl
      
     /**
+     * <p></p>
+     */
+    public static Object Promocode
+     
+    /**
      * <p>Profile DEV-US-P1 : Team Member DEV
 Profile DEV-US-P2 : Team Member DEV
 Profile QAS-US-P1 : Team Member QAS
@@ -563,6 +568,7 @@ Profile STG-US-P2 : payment via credit card</p>
             projectTeamAdminAndArcAdminEmail = selectedVariables['projectTeamAdminAndArcAdminEmail']
             LEEDData = selectedVariables['LEEDData']
             appUrl = selectedVariables['appUrl']
+            Promocode = selectedVariables['Promocode']
             TeamMember = selectedVariables['TeamMember']
             rowNumTwentyOne = selectedVariables['rowNumTwentyOne']
             rowNumTwentyTwo = selectedVariables['rowNumTwentyTwo']
