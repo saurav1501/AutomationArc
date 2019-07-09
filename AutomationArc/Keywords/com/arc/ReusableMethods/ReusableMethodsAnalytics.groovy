@@ -431,18 +431,13 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 	@Keyword
 	public void surveyRepRate(){
-		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-
-		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-		WebUI.delay(2)
+		
+		navigation.navigateIntoDataInput()
 
 		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
 		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		//WebUI.delay(5)
 		/******Verify that survey response rate% is calculated on the basis of the following formula [ Response %ge = (No. of responses/Occupancy)*100 ] . Always count the no of responses by counting the no of rows of transport survey results.*****/
 		String trsurveyResponsePercentage = WebUI.getText(findTestObject('DataInput/Survey/SurveyResponsePercentage'))
@@ -474,9 +469,10 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), GlobalVariable.minAngularWait)
-
+		
+        WebUI.waitForElementPresent(findTestObject('Analytics/TotalAnalytics/TransportRep'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('Analytics/TotalAnalytics/TransportRep'), GlobalVariable.minAngularWait)
+		
 		String transportsurveyResponsePercentage = WebUI.getText(findTestObject('Analytics/TotalAnalytics/TransportRep'))
 		String asurveyResponsepercentage1 = transportsurveyResponsePercentage.replace("%","")
 		String asurveyResponsepercentage = asurveyResponsepercentage1.replaceAll("\\s","")
