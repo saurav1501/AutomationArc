@@ -330,7 +330,7 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 
 		if(keepGoing== false)
 
-			for(int i=0;i<=1;i++){
+			for(int i=0;i<=2;i++){
 				WebUI.click(findTestObject('PerformanceScore/RecomputeScoreButton'))
 				WebUI.delay(3)
 				WebUI.setText(findTestObject('PerformanceScore/PorjectId'),projectId)
@@ -338,7 +338,7 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 				WebUI.click(findTestObject('PerformanceScore/RecomputeScore'))
 				WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait,GlobalVariable.avgAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
 				keepGoing = WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
-				}
+			}
 
 		String energyScore = WebUI.getText(findTestObject('PerformanceScore/Score/EnergyScore'))
 		String waterScore = WebUI.getText(findTestObject('PerformanceScore/Score/WaterSocre'))

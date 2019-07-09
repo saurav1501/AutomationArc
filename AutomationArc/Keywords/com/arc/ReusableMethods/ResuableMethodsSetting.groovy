@@ -415,7 +415,7 @@ public class ResuableMethodsSetting extends BaseClass{
 
 
 	@Keyword
-	public void verifyDeleteOccupancyEnergy() {
+	public void verifyDeleteOccupancyEnergy(){
 
 		//******************************************Energy*********************************/
 		occupantEnergy()
@@ -425,7 +425,7 @@ public class ResuableMethodsSetting extends BaseClass{
 	}
 
 	@Keyword
-	public void verifyDeleteOccupancyWater() {
+	public void verifyDeleteOccupancyWater(){
 
 		//******************************************Water*********************************/
 		occupantWater()
@@ -463,16 +463,74 @@ public class ResuableMethodsSetting extends BaseClass{
 	@Keyword
 	public void verifyEnergyScoreShouldZero() {
 
+			
 		//******************************************Energy Score*********************************/
 		WebUI.refresh()
 		WebUI.delay(2)
 
 		navigation.navigateIntoDataInput()
-		occupancyVisibilty()
-		deleteButtonOccupant()
+		String energyPerScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/EnergyScore'))
+		WebUI.verifyMatch(energyPerScore ,'0', false)
 
 	}
 
+	@Keyword
+	public void verifyWaterScoreShouldZero() {
+
+			
+		//******************************************Water Score*********************************/
+		WebUI.refresh()
+		WebUI.delay(2)
+
+		navigation.navigateIntoDataInput()
+		String waterPfScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/WaterScore'))
+		WebUI.verifyMatch(waterPfScore ,'0', false)
+
+	}
+	
+	@Keyword
+	public void verifyWasteScoreShouldZero() {
+
+			
+		//******************************************Waste Score*********************************/
+		WebUI.refresh()
+		WebUI.delay(2)
+
+		navigation.navigateIntoDataInput()
+		String wastePfScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/WasteScore'))
+		WebUI.verifyMatch(wastePfScore ,'0' , false)
+
+	}
+	
+	@Keyword
+	public void verifyTransScoreShouldZero() {
+
+			
+		//******************************************Transport Score*********************************/
+		WebUI.refresh()
+		WebUI.delay(2)
+
+		navigation.navigateIntoDataInput()
+		
+		String transPortperScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TransportScore'))
+		WebUI.verifyMatch(transPortperScore ,'0', false)
+
+	}
+	
+	@Keyword
+	public void verifyHumanScoreShouldZero() {
+
+			
+		//******************************************Transport Score*********************************/
+		WebUI.refresh()
+		WebUI.delay(2)
+
+		navigation.navigateIntoDataInput()
+		
+		String humanexperience = WebUI.getText(findTestObject('PerformanceScore/DataInput/HumanExp'))
+		WebUI.verifyMatch(humanexperience ,'0', false)
+
+	}
 
 	@Keyword
 	public void verifyOccupupantAfterDataUpload(String sheetName,int rowNum) {
