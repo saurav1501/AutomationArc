@@ -1544,6 +1544,50 @@ def static "com.arc.ReusableMethods.ResuableMethodsSetting.changedUnit"(
          , 	rowNum)
 }
 
+def static "com.arc.ReusableMethods.ResuableMethodsSetting.verifyTotalScoreShouldMore"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ResuableMethodsSetting()).verifyTotalScoreShouldMore(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsSetting.verifyDeleteAreaEnergy"() {
+    (new com.arc.ReusableMethods.ResuableMethodsSetting()).verifyDeleteAreaEnergy()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsSetting.verifyDeleteAreaWater"() {
+    (new com.arc.ReusableMethods.ResuableMethodsSetting()).verifyDeleteAreaWater()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsSetting.verifyDeleteAreaWaste"() {
+    (new com.arc.ReusableMethods.ResuableMethodsSetting()).verifyDeleteAreaWaste()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsSetting.verifyDeleteOccupancyEnergy"() {
+    (new com.arc.ReusableMethods.ResuableMethodsSetting()).verifyDeleteOccupancyEnergy()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsSetting.verifyDeleteOccupancyWater"() {
+    (new com.arc.ReusableMethods.ResuableMethodsSetting()).verifyDeleteOccupancyWater()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsSetting.verifyDeleteOccupancyWaste"() {
+    (new com.arc.ReusableMethods.ResuableMethodsSetting()).verifyDeleteOccupancyWaste()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsSetting.verifyDeleteOccupancyTransport"() {
+    (new com.arc.ReusableMethods.ResuableMethodsSetting()).verifyDeleteOccupancyTransport()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsSetting.verifyDeleteOccupancyHumExp"() {
+    (new com.arc.ReusableMethods.ResuableMethodsSetting()).verifyDeleteOccupancyHumExp()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsSetting.verifyEnergyScoreShouldZero"() {
+    (new com.arc.ReusableMethods.ResuableMethodsSetting()).verifyEnergyScoreShouldZero()
+}
+
 def static "com.arc.ReusableMethods.ResuableMethodsSetting.verifyOccupupantAfterDataUpload"(
     	String sheetName	
      , 	int rowNum	) {

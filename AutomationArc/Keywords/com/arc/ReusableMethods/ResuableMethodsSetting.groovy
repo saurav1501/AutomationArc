@@ -1,26 +1,18 @@
 package com.arc.ReusableMethods
 
-import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
-import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
-import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
+import com.arc.BaseClass.BaseClass
 import com.kms.katalon.core.annotation.Keyword
-import com.kms.katalon.core.checkpoint.Checkpoint
-import com.kms.katalon.core.cucumber.keyword.CucumberBuiltinKeywords as CucumberKW
-import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as Mobile
 import com.kms.katalon.core.model.FailureHandling
-import com.kms.katalon.core.testcase.TestCase
-import com.kms.katalon.core.testdata.TestData
-import com.kms.katalon.core.testobject.TestObject
-import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
+import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 import internal.GlobalVariable
 
 
 
-public class ResuableMethodsSetting {
+public class ResuableMethodsSetting extends BaseClass{
 
 	public ReusableMethodsNavigation navigation = new ReusableMethodsNavigation()
 
@@ -318,15 +310,17 @@ public class ResuableMethodsSetting {
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 		WebUI.delay(2)
 		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/Unit/GROSS AREA'), GlobalVariable.minAngularWait)
-	    WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/Unit/GROSS AREA'), GlobalVariable.minAngularWait)
-	
-		
+		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/Unit/GROSS AREA'), GlobalVariable.minAngularWait)
 	}
-	
-	
+
+
 	@Keyword
 	public void changedUnit(String sheetName,int rowNum) {
-		
+
+
+		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
+		data.setCellData(GlobalVariable.BDataInput,"ATotalScore", GlobalVariable.rowNumTwo, totalPerformaceScore)
+
 		//******************************************Energy*********************************/
 		areaEnergy()
 		areaVisibilty()
@@ -335,18 +329,151 @@ public class ResuableMethodsSetting {
 		//******************************************Water*********************************/
 		areaWater()
 		areaVisibilty()
-		area =WebUI.getText(findTestObject('DataInput/Settings18/AreaTotalValue'))
-		WebUI.verifyMatch(area,'2000' , false, FailureHandling.CONTINUE_ON_FAILURE)
+		changedUnit()
 
 		//******************************************Waste*********************************/
 		areaWaste()
 		areaVisibilty()
-		area =WebUI.getText(findTestObject('DataInput/Settings18/AreaTotalValue'))
-		WebUI.verifyMatch(area, '3000' , false, FailureHandling.CONTINUE_ON_FAILURE)
+		changedUnit()
 
 	}
 
-	
+
+	@Keyword
+	public void verifyTotalScoreShouldMore(String sheetName,int rowNum) {
+
+		navigation.navigateIntoDataInput()
+
+		String totalPerformaceScore = data.getCellData(GlobalVariable.BDataInput,"ATotalScore",GlobalVariable.rowNumTwo)
+
+		Integer totalperformaceScore = Integer.compare(totalPerformaceScore)
+
+		String mtotalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
+		Integer mTotalPerformaceScore = Integer.compare(mtotalPerformaceScore)
+
+		if(totalperformaceScore<mTotalPerformaceScore)
+
+			KeywordUtil.markPassed('SUCCESS: PERFORMANCE SCORE IS INCREASED AFTER CHANGING THE UNIT')
+
+		else
+			KeywordUtil.markFailed('FAIL : PERFORMANCE SCORE IS NOT INCREASED AFTER CHANGING THE UNIT')
+	}
+
+
+	public void deleteButtonArea() {
+		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/Unit/DeleteButton'),GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/Unit/DeleteButton'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/Unit/DeleteButton'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('DataInput/Settings18/Unit/DeleteButton'))
+		WebUI.delay(2)
+		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/Unit/DeleteButton'),GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/Unit/DeleteButton'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/Unit/DeleteButton'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('DataInput/Settings18/Unit/DeleteButton'))
+		WebUI.delay(2)
+		WebUI.waitForElementNotPresent(findTestObject('DataInput/Settings18/Unit/DeleteButton'),GlobalVariable.minAngularWait)
+		WebUI.waitForElementNotVisible(findTestObject('DataInput/Settings18/Unit/DeleteButton'), GlobalVariable.minAngularWait)
+	}
+
+	public void deleteButtonOccupant() {
+		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/Unit/DeleteButton'),GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/Unit/DeleteButton'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/Unit/DeleteButton'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('DataInput/Settings18/Unit/DeleteButton'))
+		WebUI.delay(2)
+		WebUI.waitForElementNotPresent(findTestObject('DataInput/Settings18/Unit/DeleteButton'),GlobalVariable.minAngularWait)
+		WebUI.waitForElementNotVisible(findTestObject('DataInput/Settings18/Unit/DeleteButton'), GlobalVariable.minAngularWait)
+	}
+
+	@Keyword
+	public void verifyDeleteAreaEnergy() {
+
+		//******************************************Energy*********************************/
+		areaEnergy()
+		areaVisibilty()
+		deleteButtonArea()
+
+	}
+
+	@Keyword
+	public void verifyDeleteAreaWater() {
+
+		//******************************************Water*********************************/
+		areaWater()
+		areaVisibilty()
+		deleteButtonArea()
+
+	}
+	@Keyword
+	public void verifyDeleteAreaWaste() {
+
+		//******************************************Waste*********************************/
+		areaWaste()
+		areaVisibilty()
+		deleteButtonArea()
+	}
+
+
+	@Keyword
+	public void verifyDeleteOccupancyEnergy() {
+
+		//******************************************Energy*********************************/
+		occupantEnergy()
+		occupancyVisibilty()
+		deleteButtonOccupant()
+
+	}
+
+	@Keyword
+	public void verifyDeleteOccupancyWater() {
+
+		//******************************************Water*********************************/
+		occupantWater()
+		occupancyVisibilty()
+		deleteButtonOccupant()
+
+	}
+	@Keyword
+	public void verifyDeleteOccupancyWaste() {
+		//******************************************Waste*********************************/
+		occupantWaste()
+		occupancyVisibilty()
+		deleteButtonOccupant()
+
+	}
+
+	@Keyword
+	public void verifyDeleteOccupancyTransport() {
+
+		//******************************************Transport*********************************/
+		occupantTransport()
+		occupancyVisibilty()
+		deleteButtonOccupant()
+
+	}
+	@Keyword
+	public void verifyDeleteOccupancyHumExp() {
+
+		//******************************************Human Experience*********************************/
+		occupantHum()
+		occupancyVisibilty()
+		deleteButtonOccupant()
+
+	}
+	@Keyword
+	public void verifyEnergyScoreShouldZero() {
+
+		//******************************************Energy Score*********************************/
+		WebUI.refresh()
+		WebUI.delay(2)
+
+		navigation.navigateIntoDataInput()
+		occupancyVisibilty()
+		deleteButtonOccupant()
+
+	}
+
+
 	@Keyword
 	public void verifyOccupupantAfterDataUpload(String sheetName,int rowNum) {
 

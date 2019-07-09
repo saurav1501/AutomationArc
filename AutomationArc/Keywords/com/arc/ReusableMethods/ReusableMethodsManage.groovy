@@ -510,51 +510,17 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public editOccupanyAreaAndOpreatingHours(){
 
-		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		ReusNavigate.navigateIntoDataInput()
 
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
-
-		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-
-		//WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'))
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), 5)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
-
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
-		//operating hours
-
+		WebUI.delay(3)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'), 5)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'))
-		Thread.sleep(1000)
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
-		/*WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
-		 WebUI.delay(4)
-		 WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter start_'), 10)
-		 WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter start_'))
-		 WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker'))
-		 WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
-		 WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/clickDatePicker2'))
-		 WebUI.mouseOver(findTestObject('DataInput/CreateMeterBuilding/year_2019'))
-		 WebUI.click(findTestObject('DataInput/CreateMeterBuilding/year_2019'))
-		 WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Jan'))
-		 WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/month_Jan'))
-		 WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
-		 WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))*/
+		WebUI.delay(3)
 		WebUI.click(findTestObject('Object Repository/DataInput/OperatingHourDropdown'))
-		Thread.sleep(2000)
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
+		WebUI.delay(2)
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/OperatingHourValue168'),5)
-		//WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'), '168')
 		Thread.sleep(2000)
 
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
@@ -567,7 +533,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 		//WebUI.click(findTestObject('Object Repository/DataInput/SaveButtonBuildingSetting'))
 
-		//Edit Occupancy
+	/*	//Edit Occupancy
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'), 5)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOccupancy'), 5)
@@ -581,7 +547,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle'))
 		Thread.sleep(2000)
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)*/
 
 		//WebUI.click(findTestObject('Object Repository/DataInput/SaveButtonBuildingSetting'))
 
@@ -934,12 +900,10 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void opeartingHour() {
-
-		WebUI.waitForAngularLoad(120, FailureHandling.CONTINUE_ON_FAILURE)
+		ReusNavigate.navigateIntoDataInput()
+		
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
 		WebUI.delay(3)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle')),"Building Settings", false)
-
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'), 5)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'))
@@ -1397,21 +1361,15 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public void verifyManageProjectOccAndOprHrsNotZero(String sheetName, int rowNum){
 
-		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-
+		ReusNavigate.navigateIntoDataInput()
+		
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), 10)
 		//WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'))
-
-
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.delay(1)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle')),"Building Settings", false)
-		//operating hours
+     	//operating hours
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOccupancy'), 5)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOccupancy'))
@@ -3607,7 +3565,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Object Repository/DataInput/CityC/DeleteButton1'))
 		//	 WebUI.click(findTestObject('Object Repository/DataInput/CityC/DeleteButton2'))
 		WebUI.delay(7)
-		WebUI.verifyElementPresent(findTestObject('Object Repository/DataInput/NotSym/svg_AnalyticsEnergy Meter via'),5)
+		WebUI.verifyElementNotPresent(findTestObject('Object Repository/DataInput/NotSym/svg_AnalyticsEnergy Meter via'),5)
 
 	}
 	@Keyword

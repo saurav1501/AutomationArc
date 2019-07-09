@@ -3550,14 +3550,20 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		double avgdaily = dtotalUnitlbs/dnoOfDays
 
 		BigDecimal avgdailywater = new BigDecimal(avgdaily)
-		avgdailywater = avgdailywater.setScale(4,RoundingMode.HALF_UP)
+		avgdailywater = avgdailywater.setScale(2,RoundingMode.HALF_UP)
 
 		String avgdailywaterGenerated = avgdailywater.toString()
 
 		String UIavgdailywaterGenerated = WebUI.getText(findTestObject('Analytics/Cal/WDailycarbon'))
+		Double UIavgdailywaterGenerate =  Double.parseDouble(UIavgdailywaterGenerated)
+	
+		BigDecimal UIavgdailywaterGenerat = new BigDecimal(UIavgdailywaterGenerate)
+		UIavgdailywaterGenerat = UIavgdailywaterGenerat.setScale(2,RoundingMode.HALF_UP)
+		String UIavgdailywaterGen = UIavgdailywaterGenerat.toString()
+		
 
 		/****************UI Verses Calculated Value of annual water generated Per project in LBS *****************************/
-		WebUI.verifyMatch(UIavgdailywaterGenerated, avgdailywaterGenerated, false)
+		WebUI.verifyMatch(UIavgdailywaterGen, avgdailywaterGenerated, false)
 	}
 
 	@Keyword
@@ -4276,11 +4282,22 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		double co2HumExpmean = co2HumExp / nofdayco2HumExp
 
 		BigDecimal co2HumExpMean = new BigDecimal(co2HumExpmean)
-		co2HumExpMean = co2HumExpMean .setScale(4, RoundingMode.HALF_UP)
+		co2HumExpMean = co2HumExpMean .setScale(2, RoundingMode.HALF_UP)
 		String cco2HumexpMean = co2HumExpMean.toString()
 
 		/****************UI Verses Calculated human exp co2 *****************************/
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Analytics/Nav/Co2')), cco2HumexpMean, false)
+		
+		String UICO2 =  WebUI.getText(findTestObject('Analytics/Nav/Co2'))	
+		Double UICO2M= Double.parseDouble(UICO2)
+				
+		BigDecimal UIco2HumExpMean = new BigDecimal(UICO2M)
+		UIco2HumExpMean = UIco2HumExpMean.setScale(2, RoundingMode.HALF_UP)
+		String UIco2HumExp = UIco2HumExpMean.toString()
+		
+		WebUI.verifyMatch(UIco2HumExp, cco2HumexpMean, false)
+			
+		
+		
 	}
 	@Keyword
 	public void totalVolatileOrganicTest(String sheetName ,int rowNum) {
@@ -4294,11 +4311,20 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		double HumExpmean = tvocHumExp / nofdayHumExp
 
 		BigDecimal humExpmean = new BigDecimal(HumExpmean)
-		humExpmean = humExpmean .setScale(4, RoundingMode.HALF_UP)
+		humExpmean = humExpmean .setScale(2, RoundingMode.HALF_UP)
 		String ctvocHumexpMean = humExpmean.toString()
 
 		/****************UI Verses Calculated human exp TVOC *****************************/
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Analytics/Nav/Tvoc')), ctvocHumexpMean, false)
+		String TVOC = WebUI.getText(findTestObject('Analytics/Nav/Tvoc'))
+		
+		
+		
+		Double UITVOC= Double.parseDouble(TVOC)
+		
+		BigDecimal UIUITVOCHumExpMean = new BigDecimal(UITVOC)
+		UIUITVOCHumExpMean = UIUITVOCHumExpMean.setScale(2, RoundingMode.HALF_UP)
+		String UITVOCHumExp = UIUITVOCHumExpMean.toString()
+		WebUI.verifyMatch(UITVOCHumExp, ctvocHumexpMean, false)
 
 	}
 }

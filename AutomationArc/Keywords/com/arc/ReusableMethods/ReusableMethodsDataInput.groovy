@@ -5810,7 +5810,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
-		String projectoccupancy = WebUI.getAttribute((findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne')),'value')
+		String projectoccupancy = WebUI.getText(findTestObject('DataInput/Settings18/AreaTotalValue'))
 		double projectOccupancy= Double.parseDouble(projectoccupancy)
 
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))

@@ -214,4 +214,64 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/VisitorTransportationAnnualCarbonEmissionsOccupancyTest</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>0074ab39-006c-4df0-a73b-e7b81e6c9872</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/Score/GrossFloorArea(Energy,Water,Waste,Transport,Hum)ChangeUnitTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>83bbb999-9996-4c80-8e19-ffd35c1177d5</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/Score/AdminToolScoreMoreRecomputeTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>09b77503-bc81-4ebd-a9db-fb2336c54031</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/Score/VerifyScoreShouldBeMoreAfterChangingUnitToSITest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>c4245957-617d-4edb-91de-c1bea52711fc</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/Score/VerifyDeleteAreaEnergyTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>ca425197-6fbb-4433-9bc4-b19b796e339f</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/Score/VerifyEnergyScoreShouldBeZeroTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>965c74b3-c757-4d62-a3a4-290ffdc0b929</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/Score/VerifyDeleteAreaWaterTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>5e91c67b-0094-4cf6-8c63-a24a3e0ac4b9</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/Score/VerifyWaterScoreShouldBeZeroTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>bce7bffb-ff63-4b12-8bae-2f89485e2cd0</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/Score/VerifyDeleteAreaWasteTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>1b94cb54-0742-4b36-8efd-1247591b43d1</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/Score/VerifyWasteScoreShouldBeZeroTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>d578c6bc-0299-4d1d-a954-8558b717ac17</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/Score/UploadArcDataTemplateTest</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>
