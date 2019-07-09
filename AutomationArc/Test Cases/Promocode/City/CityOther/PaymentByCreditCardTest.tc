@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Make the payment via Credit Card</description>
+   <name>PaymentByCreditCardTest</name>
+   <tag>Payment By credit Card</tag>
+   <comment></comment>
+   <testCaseGuid>bf2714f7-3370-4af0-b821-72c8ef329512</testCaseGuid>
+</TestCaseEntity>
