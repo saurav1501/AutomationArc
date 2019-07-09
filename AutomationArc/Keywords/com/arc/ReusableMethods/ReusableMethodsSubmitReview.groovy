@@ -1334,6 +1334,9 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 	    else
 		KeywordUtil.markFailed("Snapshot.xlsx file not present")
 		
+		WebUI.closeWindowIndex(1)
+		WebUI.delay(1)
+		WebUI.switchToWindowIndex(0)
 		/*if((isFileExtracted('Test de téléchargement de fichier(French).txt', sourceExtractedFileEnergy)))
 			KeywordUtil.markWarning("Test de téléchargement de fichier(French).txt file is present  ")
 		else
