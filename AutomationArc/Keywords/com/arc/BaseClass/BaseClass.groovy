@@ -71,9 +71,9 @@ public class BaseClass {
 	public static String UploadArcDataTempleteTransitanalytics = RunConfiguration.getProjectDir()+"/ARCDataTemplete/AnalyticArc_Data_Template_transit_above.xlsm"
 	public static String UploadArcDataTempleteTransitBelow = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Arc_Data_Template_transit_below_v4.1.xlsm"
 	public static String UploadArcDataTemplete = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Arc_Data_Template_v4.3.xlsm"
-	public static String analyticsUploadArcDataTemplete = RunConfiguration.getProjectDir()+"/ARCDataTemplete/AnalyticArc_Data_TemplateV3.xlsm"
+	public static String analyticsUploadArcDataTemplete = RunConfiguration.getProjectDir()+"/ARCDataTemplete/AnalyticArc_Data_Template.xlsm"
 	
-	public static String analyticsUploadArcDataTemplete18 = RunConfiguration.getProjectDir()+"/ARCDataTemplete/AnalyticArc_Data_Template.xlsm"
+	public static String analyticsUploadArcDataTemplete18 = RunConfiguration.getProjectDir()+"/ARCDataTemplete/AnalyticArc_Data_TemplateV3.xlsm"
 	
 	public static String UploadDocumentDataInput = RunConfiguration.getProjectDir()+"/ARCDataTemplete/USGBC.pdf"
 	public static String UploadTextFile=RunConfiguration.getProjectDir()+"/ARCDataTemplete/txtFileUpload.txt"

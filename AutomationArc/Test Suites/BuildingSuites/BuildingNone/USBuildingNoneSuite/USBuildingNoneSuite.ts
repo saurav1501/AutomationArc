@@ -1523,12 +1523,6 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/SettingVerifySettingsPageDetailsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>37f9b735-62ce-4b6b-b784-0eec494d9826</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ProjectVerifyOccAndOprHrsNotZeroTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>266dc868-3689-40bc-ae4a-4f9ad44a8d51</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
