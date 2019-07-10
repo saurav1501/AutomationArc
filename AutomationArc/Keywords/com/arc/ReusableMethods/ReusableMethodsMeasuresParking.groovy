@@ -766,7 +766,7 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyElementNotVisible(findTestObject('Add_Project_Details/Par/p_LETS GET STARTED'))
 		WebUI.verifyElementNotPresent(findTestObject('Add_Project_Details/Par/p_Select a term to access the'),3)
-
+        
 	}
 
 	@Keyword

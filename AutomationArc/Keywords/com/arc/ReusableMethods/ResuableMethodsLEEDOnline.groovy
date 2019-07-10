@@ -492,11 +492,13 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 	public void teamAdministrator() {
 		WebUI.click(findTestObject('Manage/CityCom/Change/EditStg2'))
 		WebUI.delay(3)
+		WebUI.selectOptionByLabel(findTestObject('Object Repository/Manage/CityCom/Change/TeamRole'),'Developer', false)
+		WebUI.delay(1)
 		WebUI.selectOptionByLabel(findTestObject('Manage/CityCom/Change/select_Select an authorization'),'Project Administrator', false)
 		WebUI.delay(4)
 		WebUI.click(findTestObject('Manage/CityCom/Change/input_No_btn btn-primary'))
 		WebUI.delay(3)
-
+		WebUI.verifyElementNotPresent(findTestObject('Manage/CityCom/Change/input_No_btn btn-primary'), 5)
 	}
 
 
