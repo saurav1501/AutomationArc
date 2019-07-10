@@ -82,11 +82,11 @@ public class ResuableMethodsSetting extends BaseClass{
 		WebUI.waitForElementClickable(findTestObject('Analytics/17/Building Settings'),GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('Analytics/17/Building Settings'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/Setting/Setting'), GlobalVariable.minAngularWait)
-		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Setting/Setting'), GlobalVariable.minAngularWait)
-		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Setting/Setting'), GlobalVariable.minAngularWait)
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Setting/Setting'), 2)
-		WebUI.click(findTestObject('Object Repository/DataInput/Setting/Setting'))
+		WebUI.waitForElementPresent(findTestObject('Analytics/17/Building Settings'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('Analytics/17/Building Settings'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementClickable(findTestObject('Analytics/17/Building Settings'), GlobalVariable.minAngularWait)
+		WebUI.scrollToElement(findTestObject('Analytics/17/Building Settings'), 2)
+		WebUI.click(findTestObject('Analytics/17/Building Settings'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/a_Occupants'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/a_Occupants'), GlobalVariable.minAngularWait)
@@ -463,7 +463,7 @@ public class ResuableMethodsSetting extends BaseClass{
 	@Keyword
 	public void verifyEnergyScoreShouldZero() {
 
-			
+
 		//******************************************Energy Score*********************************/
 		WebUI.refresh()
 		WebUI.delay(2)
@@ -477,7 +477,7 @@ public class ResuableMethodsSetting extends BaseClass{
 	@Keyword
 	public void verifyWaterScoreShouldZero() {
 
-			
+
 		//******************************************Water Score*********************************/
 		WebUI.refresh()
 		WebUI.delay(2)
@@ -487,11 +487,11 @@ public class ResuableMethodsSetting extends BaseClass{
 		WebUI.verifyMatch(waterPfScore ,'0', false)
 
 	}
-	
+
 	@Keyword
 	public void verifyWasteScoreShouldZero() {
 
-			
+
 		//******************************************Waste Score*********************************/
 		WebUI.refresh()
 		WebUI.delay(2)
@@ -501,32 +501,32 @@ public class ResuableMethodsSetting extends BaseClass{
 		WebUI.verifyMatch(wastePfScore ,'0' , false)
 
 	}
-	
+
 	@Keyword
 	public void verifyTransScoreShouldZero() {
 
-			
+
 		//******************************************Transport Score*********************************/
 		WebUI.refresh()
 		WebUI.delay(2)
 
 		navigation.navigateIntoDataInput()
-		
+
 		String transPortperScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TransportScore'))
 		WebUI.verifyMatch(transPortperScore ,'0', false)
 
 	}
-	
+
 	@Keyword
 	public void verifyHumanScoreShouldZero() {
 
-			
+
 		//******************************************Transport Score*********************************/
 		WebUI.refresh()
 		WebUI.delay(2)
 
 		navigation.navigateIntoDataInput()
-		
+
 		String humanexperience = WebUI.getText(findTestObject('PerformanceScore/DataInput/HumanExp'))
 		WebUI.verifyMatch(humanexperience ,'0', false)
 

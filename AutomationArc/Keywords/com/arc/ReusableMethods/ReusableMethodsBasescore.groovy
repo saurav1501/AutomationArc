@@ -293,14 +293,14 @@ public class ReusableMethodsBasescore {
 		 WebUI.delay(1)*/
 		WebUI.click(findTestObject('PreRequisite/a_ Prerequisites'))
 		//WebUI.setViewPortSize(1500,800)
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 		WebUI.click(findTestObject('PreRequisite/span_Site Management Policy'))
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
+        WebUI.scrollToElement(findTestObject('BasePoint/BasePointCreditCom/TeamIconClick'), 4)
 		WebUI.click(findTestObject('BasePoint/BasePointCreditCom/TeamIconClick'))
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 		WebUI.click(findTestObject('BasePoint/BasePointCreditCom/TeamMemberSelection'))
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 
 		String teamMemUI = WebUI.getText(findTestObject("BasePoint/BasePointCreditCom/VerifyAddedTeamSuccessully"))
 		WebUI.verifyMatch(GlobalVariable.teamMemName,teamMemUI, false)

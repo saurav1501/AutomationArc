@@ -129,7 +129,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 	}
 
-	
+
 	@Keyword
 	public void uploadArcDataTemplateBuildingAnalytics18(){
 		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
@@ -6689,20 +6689,12 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	@Keyword
 	public void navigateToEmession(String sheetName, int rowNum){
 
-		WebUI.scrollToElement(findTestObject('DataInput/Survey/a_ Data Input'),5)
-		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
-
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
-		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-
+		navigation.navigateIntoDataInput()
+		WebUI.waitForElementVisible(findTestObject('Analytics/17/Building Settings'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('Analytics/17/Building Settings'), 60)
-		WebUI.click(findTestObject('Analytics/17/Building Settings'))
+		WebUI.doubleClick(findTestObject('Analytics/17/Building Settings'))
 		WebUI.delay(1)
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
+		WebUI.doubleClick(findTestObject('Analytics/17/Building Settings'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/Setting/Setting'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Setting/Setting'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Setting/Setting'), GlobalVariable.minAngularWait)

@@ -7,6 +7,7 @@ import org.testng.Assert
 
 import com.arc.BaseClass.BaseClass
 import com.kms.katalon.core.annotation.Keyword
+import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.testobject.ConditionType
 import com.kms.katalon.core.webui.driver.DriverFactory
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
@@ -369,20 +370,20 @@ public class ReusableMethodsBasePoint extends BaseClass{
 	}
 	@Keyword
 	public void basePromptMessageAttemptedToReadyForReview(){
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 		WebUI.scrollToElement(findTestObject('Object Repository/BasePoint/a_ Base Points (1)'), 10)
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 		WebUI.doubleClick(findTestObject('Object Repository/BasePoint/a_ Base Points (1)'))
-	    WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+	    WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 
 		WebUI.click(findTestObject('Object Repository/BasePoint/span_Site Development - Protec'))
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 
 		WebUI.click(findTestObject('PreRequisite/CheckBox1'))
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 		WebUI.click(findTestObject('PreRequisite/button_Attempted'))
 		WebUI.click(findTestObject('PreRequisite/a_Ready for Review'))
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 
 		String promptText = WebUI.getText(findTestObject('PaymenntLocator/projectDetails/BaseScorePromptText'))
 		String promptText1 = promptText.replaceAll("\\s+","")
@@ -391,7 +392,7 @@ public class ReusableMethodsBasePoint extends BaseClass{
 		WebUI.verifyMatch(promptText1, promptText1, false)
 
 		WebUI.click(findTestObject('BasePoint/button_Ok'))
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 
 	}
 	@Keyword

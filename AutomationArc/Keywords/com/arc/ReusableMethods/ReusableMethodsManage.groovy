@@ -14,6 +14,7 @@ import java.util.zip.ZipInputStream
 import org.apache.pdfbox.pdmodel.PDDocument
 import org.apache.pdfbox.text.PDFTextStripper
 import org.openqa.selenium.WebDriver
+import org.stringtemplate.v4.compiler.STParser.namedArg_return
 import org.testng.Assert
 
 import com.arc.BaseClass.BaseClass
@@ -1074,17 +1075,11 @@ public class ReusableMethodsManage extends BaseClass {
 		print "Entering Average time spend by staff"
 
 		//Navigate to data input section for operating hour
-		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
-		WebUI.delay(1)
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-
-		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.maxAngularWait)
-
+		ReusNavigate.navigateIntoDataInput()
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), GlobalVariable.minAngularWait)
 		WebUI.delay(4)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), 3)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
 		WebUI.delay(4)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
@@ -1450,12 +1445,13 @@ public class ReusableMethodsManage extends BaseClass {
 		ReusNavigate.navigateIntoDataInput()
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'),GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'),GlobalVariable.minAngularWait)
-
-		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), 5)
+		WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
+		WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
 		//WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle')),"Building Settings", false)
 		println "Verify if the unit changes on the changing of unit type."
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'), 10)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'), 5)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'))
