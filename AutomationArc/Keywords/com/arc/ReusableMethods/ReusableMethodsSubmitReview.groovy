@@ -1310,7 +1310,7 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		println sourceExtractedFileEnergy
 		String sourceExtractedFileWater= GlobalVariable.downloadDir+projectId+"/"+ratingSystem+"/Performance Score Verification/water/"
 		String sourceExtractedFileWaste= GlobalVariable.downloadDir+projectId+"/"+ratingSystem+"/Performance Score Verification/waste/"
-        String sourceExtractedSnapshotFile=GlobalVariable.downloadDir+projectId+"/"+ratingSystem+"/"
+        String sourceExtractedSnapshotFile=GlobalVariable.downloadDir+projectId+"/"+ratingSystem+"/Pre-Certification/"
 		
 		String destinationUnZippedFolder= GlobalVariable.downloadDir
 		println destinationUnZippedFolder
