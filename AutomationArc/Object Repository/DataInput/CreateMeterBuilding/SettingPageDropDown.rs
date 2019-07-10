@@ -10,14 +10,14 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//button/span[text()='Occupants']</value>
+         <value>//*[@class=&quot;btn dropdown-toggle btn-default buildingDataDropdown&quot;]</value>
       </entry>
       <entry>
          <key>CSS</key>
          <value>#meter_item > div.dropdown.display-inline.cursor-pointer.ng-scope > button</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
