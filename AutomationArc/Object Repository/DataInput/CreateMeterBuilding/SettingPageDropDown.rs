@@ -10,11 +10,11 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//button[@type='button'])[2]</value>
+         <value>//button/span[text()='Occupants']</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>#meter_item > div:nth-child(3) > button</value>
+         <value>#meter_item > div.dropdown.display-inline.cursor-pointer.ng-scope > button</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

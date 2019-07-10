@@ -24,7 +24,7 @@ import internal.GlobalVariable as GlobalVariable
 try{
 
 	
-	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumFive)
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumFive)
 	
     CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.editOccupanyAreaAndOpreatingHours'()
 

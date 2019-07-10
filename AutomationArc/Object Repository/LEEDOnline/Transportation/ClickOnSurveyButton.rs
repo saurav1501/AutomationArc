@@ -6,12 +6,11 @@
    <elementGuidId>bb789cfa-126d-448d-9208-7808205b491c</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>(//*[@class=&quot;btn-vertical dropdown-toggle btn btn-default button--cancel&quot;])</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>(//*[@class=&quot;btn-vertical dropdown-toggle btn btn-default button--cancel&quot;])[2]</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
