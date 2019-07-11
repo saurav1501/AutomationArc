@@ -617,6 +617,7 @@ public class ResuableMethodsGRESB extends BaseClass {
 
 	@Keyword
 	public void verifyGreenSymbol() throws IOException, InterruptedException {
+
 		WebUI.delay(7)
 		WebUI.waitForAngularLoad(120, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyElementPresent(findTestObject('Portfolio/GRESB/GresbGreen'),5)

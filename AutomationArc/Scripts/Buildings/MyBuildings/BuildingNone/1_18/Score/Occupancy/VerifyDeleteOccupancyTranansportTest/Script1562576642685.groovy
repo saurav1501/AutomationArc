@@ -13,3 +13,12 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
+
+try{
+   CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsSetting.verifyDeleteOccupancyTransport'()
+	}catch (Throwable t) {
+	System.out.println(t.getLocalizedMessage())
+	Error e1 = new Error(t.getMessage())
+	e1.setStackTrace(t.getStackTrace())
+	e1.printStackTrace()
+}

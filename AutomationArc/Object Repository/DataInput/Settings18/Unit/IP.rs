@@ -6,11 +6,15 @@
    <elementGuidId>a80b6593-eb71-4e6c-a0d6-ef4192e4be81</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>CSS</key>
+         <value>#meter_item > div.dropdown.building_meter_drp.display-inline.mb20.cursor-pointer.ng-scope > button > svg</value>
+      </entry>
+      <entry>
          <key>XPATH</key>
          <value>(//button[@class = 'btn dropdown-toggle btn-default'])[1]</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

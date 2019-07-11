@@ -28,7 +28,7 @@ import org.openqa.selenium.Keys as Keys
 
 	try {
 		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.PortfoliosSheet,GlobalVariable.rowNumTwo)
-		WebUI.delay(10)
+		WebUI.delay(5)
 		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.uploadArcDataTemplateLEEDV4'()
 
 	} catch (Throwable t) {	

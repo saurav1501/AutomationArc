@@ -15,7 +15,7 @@ import internal.GlobalVariable as GlobalVariable
 
 try{
 	
-	CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsSetting.verifyTotalScoreShouldMore'()
+	CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsSetting.verifyDeleteAreaEnergy'()
 
 	}catch (Throwable t) {
 	System.out.println(t.getLocalizedMessage())

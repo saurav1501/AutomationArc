@@ -132,9 +132,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	
 	@Keyword
 	public void uploadArcDataTemplateBuildingAnalytics18(){
-		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		
 		navigation.navigateIntoDataInput()
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'), GlobalVariable.minAngularWait)
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'))
 		WebUI.delay(1)
@@ -158,10 +157,20 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(5)
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.refresh()
-		WebUI.delay(10)
+		WebUI.delay(15)
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		navigationTeam()
+		WebUI.delay(2)
+		navigation.navigateIntoDataInput()
+		
 	}
-
+	
+	public void navigationTeam()
+	{
+	WebUI.scrollToElement(findTestObject('Manage/TeamModule/a_ Team'),2)
+	WebUI.click(findTestObject('Manage/TeamModule/a_ Team'))
+	WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+	}
 	@Keyword
 	public void uploadArcDataTemplateTransit(){
 
@@ -196,7 +205,6 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	public void uploadArcDataTemplateLEEDV4(){
 		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		navigation.navigateIntoDataInput()
-		WebUI.delay(15)
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'))
 		WebUI.delay(2)
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/span_Upload.XLS'))
