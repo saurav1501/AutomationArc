@@ -294,4 +294,9 @@
       <initValue>'https://leedonline-dev.usgbc.org/projects'</initValue>
       <name>AllProjectUrlLeedOnline</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Promocode'</initValue>
+      <name>Promocode</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

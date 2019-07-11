@@ -224,4 +224,9 @@
       <initValue>'https://dev.app.arconline.io/login'</initValue>
       <name>appUrl</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Promocode'</initValue>
+      <name>Promocode</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

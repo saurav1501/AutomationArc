@@ -85,11 +85,11 @@ public class ResuableMethodsSetting extends BaseClass{
 		
 		WebUI.doubleClick(findTestObject('Analytics/17/Building Settings'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/Setting/Setting'), GlobalVariable.minAngularWait)
-		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Setting/Setting'), GlobalVariable.minAngularWait)
-		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Setting/Setting'), GlobalVariable.minAngularWait)
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Setting/Setting'), 2)
-		WebUI.click(findTestObject('Object Repository/DataInput/Setting/Setting'))
+		WebUI.waitForElementPresent(findTestObject('Analytics/17/Building Settings'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('Analytics/17/Building Settings'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementClickable(findTestObject('Analytics/17/Building Settings'), GlobalVariable.minAngularWait)
+		WebUI.scrollToElement(findTestObject('Analytics/17/Building Settings'), 2)
+		WebUI.click(findTestObject('Analytics/17/Building Settings'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/a_Occupants'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/a_Occupants'), GlobalVariable.minAngularWait)
@@ -541,9 +541,12 @@ public class ResuableMethodsSetting extends BaseClass{
 		navigationTeam()
 
 		navigation.navigateIntoDataInput()
+<<<<<<< HEAD
 		if(WebUI.getText(findTestObject('PerformanceScore/DataInput/TransportScore')).equalsIgnoreCase('')){
 			WebUI.delay(7)
 		}
+=======
+>>>>>>> 7c9fd1d165f17c434f701c4c662a771015d26c7b
 
 		String transPortperScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TransportScore'))
 		WebUI.verifyMatch(transPortperScore ,'0', false)
@@ -558,9 +561,12 @@ public class ResuableMethodsSetting extends BaseClass{
 		navigationTeam()
 
 		navigation.navigateIntoDataInput()
+<<<<<<< HEAD
 		if(WebUI.getText(findTestObject('PerformanceScore/DataInput/HumanExp')).equalsIgnoreCase('')){
 			WebUI.delay(7)
 		}
+=======
+>>>>>>> 7c9fd1d165f17c434f701c4c662a771015d26c7b
 
 		String humanexperience = WebUI.getText(findTestObject('PerformanceScore/DataInput/HumanExp'))
 		WebUI.verifyMatch(humanexperience ,'0', false)

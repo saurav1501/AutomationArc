@@ -264,4 +264,9 @@
       <initValue>240</initValue>
       <name>maxAngularWait</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Promocode'</initValue>
+      <name>Promocode</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

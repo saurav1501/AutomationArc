@@ -1532,9 +1532,19 @@ public class ReusableMethodsPayment extends BaseClass{
 		//WebUI.verifyMatch(discountedPrice, WebUI.getText(findTestObject('Object Repository/paymentPageNewUI/totalAmount')), false)
 	}
 
-	//apply promocode
-	public void applyPromocode(String pricingSheet, int rowNum){
-		String promoCode= data.getCellData(pricingSheet, "Promocode", rowNum)
+	//apply promocode fifty percent
+	public void applyPromocodeFifty(String dataSheet, int rowNum){
+		String promoCode= dataExcelTemplate.getCellData(dataSheet, "STGPromocodesFifty", rowNum)
+		String discountedPrice = dataExcelTemplate.getCellData(dataSheet, "DiscountedFiftyPrice", rowNum)
+		WebUI.scrollToElement(findTestObject('Object Repository/paymentPageNewUI/promoCode'), 5)
+		WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/promoCode'), promoCode)
+		WebUI.click(findTestObject('Object Repository/paymentPageNewUI/promocodetext'))
+	}
+	
+	//apply promocode hundred percent
+	public void applyPromocodeHundred(String dataSheet, int rowNum){
+		String promoCode= dataExcelTemplate.getCellData(dataSheet, "STGPromocodeHundred", rowNum)
+		String discountedPrice = dataExcelTemplate.getCellData(dataSheet, "DiscountedHundredPrice", rowNum)
 		WebUI.scrollToElement(findTestObject('Object Repository/paymentPageNewUI/promoCode'), 5)
 		WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/promoCode'), promoCode)
 		WebUI.click(findTestObject('Object Repository/paymentPageNewUI/promocodetext'))
@@ -1805,6 +1815,7 @@ public class ReusableMethodsPayment extends BaseClass{
 		WebUI.waitForElementVisible(findTestObject('PaymenntLocator/NextButton'), 40)
 
 	}
+
 
 }
 

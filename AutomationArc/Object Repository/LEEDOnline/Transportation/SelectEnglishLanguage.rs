@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//*[@ng-click=&quot;copyLink('en')&quot;]//div[span='English'])[2]</value>
+         <value>(//*[text()='English'])[2]</value>
       </entry>
       <entry>
          <key>BASIC</key>

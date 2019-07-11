@@ -25,7 +25,9 @@ try {
 	   
 		 
 	} catch (Throwable t) {
-		
+	    WebUI.closeWindowIndex(1)
+	    WebUI.delay(2)
+	    WebUI.switchToWindowIndex(0)
 		System.out.println(t.getLocalizedMessage())
 		Error e1 = new Error(t.getMessage())
 		e1.setStackTrace(t.getStackTrace())

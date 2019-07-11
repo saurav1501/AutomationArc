@@ -492,11 +492,13 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 	public void teamAdministrator() {
 		WebUI.click(findTestObject('Manage/CityCom/Change/EditStg2'))
 		WebUI.delay(3)
+		WebUI.selectOptionByLabel(findTestObject('Object Repository/Manage/CityCom/Change/TeamRole'),'Developer', false)
+		WebUI.delay(1)
 		WebUI.selectOptionByLabel(findTestObject('Manage/CityCom/Change/select_Select an authorization'),'Project Administrator', false)
 		WebUI.delay(4)
 		WebUI.click(findTestObject('Manage/CityCom/Change/input_No_btn btn-primary'))
 		WebUI.delay(3)
-
+		WebUI.verifyElementNotPresent(findTestObject('Manage/CityCom/Change/input_No_btn btn-primary'), 5)
 	}
 
 
@@ -1669,6 +1671,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 				WebUI.dragAndDropToObject(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'), findTestObject('Object Repository/DataInput/Survey/ExtremelySatisfySpanText'))
 				WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
 				WebUI.delay(2)
+				WebUI.selectOptionByLabel(findTestObject('Object Repository/DataInput/Survey/OccupantTypeSurvey'), "Regular Occupant", false)
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 				WebUI.click(findTestObject('DataInput/Survey/Submit1'))
 				WebUI.waitForElementClickable(findTestObject('DataInput/Survey/Submit'), GlobalVariable.avgAngularWait)
@@ -1752,8 +1755,9 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 				WebUI.dragAndDropToObject(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'), findTestObject('Object Repository/DataInput/Survey/ExtremelySatisfySpanText'))
 				WebUI.delay(2)
 				WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
-				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
+				WebUI.delay(2)
+				WebUI.selectOptionByLabel(findTestObject('Object Repository/DataInput/Survey/OccupantTypeSurvey'), "Regular Occupant", false)
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)  
 				WebUI.click(findTestObject('DataInput/Survey/Submit'))
 				WebUI.waitForElementClickable(findTestObject('DataInput/Survey/Submit'), GlobalVariable.avgAngularWait)
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
