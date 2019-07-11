@@ -23,6 +23,7 @@ public class ReusableMethodsPayment extends BaseClass{
 	ReusableMethodsSubmitReview submitReviewObj = new ReusableMethodsSubmitReview()
 	ReusableMethodsSearch reusableMethodsSearch = new ReusableMethodsSearch()
 	WebDriver driver = DriverFactory.getWebDriver()
+	String Project_ID
 	//select for the project trial
 	@Keyword
 	public void selectTrial(){
@@ -123,7 +124,7 @@ public class ReusableMethodsPayment extends BaseClass{
 		String title= DriverFactory.getWebDriver().getCurrentUrl()
 		println title
 		String[] arc=title.split("/");
-		String Project_ID= arc[4]
+		Project_ID= arc[4]
 		println Project_ID
 		if(WebUI.waitForElementPresent(findTestObject('Object Repository/paymentPageNewUI/oneYearSubscription'),10, FailureHandling.OPTIONAL) && WebUI.waitForElementVisible(findTestObject('Object Repository/paymentPageNewUI/oneYearSubscription'), 10, FailureHandling.OPTIONAL) ){
 			Project_ID_Created=arc[4]
@@ -1533,21 +1534,42 @@ public class ReusableMethodsPayment extends BaseClass{
 	}
 
 	//apply promocode fifty percent
+	@Keyword
 	public void applyPromocodeFifty(String dataSheet, int rowNum){
 		String promoCode= dataExcelTemplate.getCellData(dataSheet, "STGPromocodesFifty", rowNum)
 		String discountedPrice = dataExcelTemplate.getCellData(dataSheet, "DiscountedFiftyPrice", rowNum)
 		WebUI.scrollToElement(findTestObject('Object Repository/paymentPageNewUI/promoCode'), 5)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/paymentPageNewUI/promoCode'), 10)
+		WebUI.click(findTestObject('Object Repository/paymentPageNewUI/promoCode'))
+		WebUI.delay(2)
 		WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/promoCode'), promoCode)
 		WebUI.click(findTestObject('Object Repository/paymentPageNewUI/promocodetext'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Promocode/PromocodeDiscount'), GlobalVariable.minAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Promocode/PromocodeDiscount')), "-"+discountedPrice, false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Promocode/TotalAmountAfterDiscount')),discountedPrice , false)
+		dataExcelTemplate.setCellData(dataSheet, "ProjectIDFifty", rowNum, Project_ID)
+		//findTestObject('Object Repository/Promocode/PromocodeDiscount')
+		//findTestObject('Object Repository/Promocode/TotalAmountAfterDiscount')
 	}
-	
+
 	//apply promocode hundred percent
+	@Keyword
 	public void applyPromocodeHundred(String dataSheet, int rowNum){
 		String promoCode= dataExcelTemplate.getCellData(dataSheet, "STGPromocodeHundred", rowNum)
 		String discountedPrice = dataExcelTemplate.getCellData(dataSheet, "DiscountedHundredPrice", rowNum)
+		
 		WebUI.scrollToElement(findTestObject('Object Repository/paymentPageNewUI/promoCode'), 5)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/paymentPageNewUI/promoCode'), 10)
+		WebUI.click(findTestObject('Object Repository/paymentPageNewUI/promoCode'))
+		WebUI.delay(2)
 		WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/promoCode'), promoCode)
 		WebUI.click(findTestObject('Object Repository/paymentPageNewUI/promocodetext'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Promocode/PromocodeDiscount'), GlobalVariable.minAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Promocode/PromocodeDiscount')), "-"+discountedPrice, false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Promocode/TotalAmountAfterDiscount')),discountedPrice , false)
+		dataExcelTemplate.setCellData(dataSheet, "ProjectIDHundred", rowNum, Project_ID)
 	}
 
 

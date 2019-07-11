@@ -10,7 +10,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@class=&quot;dropdown-menu dropdown-menu-building&quot;]//a[text()='Occupancy']</value>
+         <value>//*[@class=&quot;dropdown-menu dropdown-menu-building&quot;]//a[text()='Occupants']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
