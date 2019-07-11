@@ -541,12 +541,11 @@ public class ResuableMethodsSetting extends BaseClass{
 		navigationTeam()
 
 		navigation.navigateIntoDataInput()
-<<<<<<< HEAD
+
 		if(WebUI.getText(findTestObject('PerformanceScore/DataInput/TransportScore')).equalsIgnoreCase('')){
 			WebUI.delay(7)
 		}
-=======
->>>>>>> 7c9fd1d165f17c434f701c4c662a771015d26c7b
+
 
 		String transPortperScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TransportScore'))
 		WebUI.verifyMatch(transPortperScore ,'0', false)
@@ -561,12 +560,11 @@ public class ResuableMethodsSetting extends BaseClass{
 		navigationTeam()
 
 		navigation.navigateIntoDataInput()
-<<<<<<< HEAD
+
 		if(WebUI.getText(findTestObject('PerformanceScore/DataInput/HumanExp')).equalsIgnoreCase('')){
 			WebUI.delay(7)
 		}
-=======
->>>>>>> 7c9fd1d165f17c434f701c4c662a771015d26c7b
+
 
 		String humanexperience = WebUI.getText(findTestObject('PerformanceScore/DataInput/HumanExp'))
 		WebUI.verifyMatch(humanexperience ,'0', false)
