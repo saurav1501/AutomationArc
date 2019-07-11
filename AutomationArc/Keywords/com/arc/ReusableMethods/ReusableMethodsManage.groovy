@@ -1454,7 +1454,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeSelectButtonArea'), 20)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeSelectButtonArea')),"Imperial System (IP)",false,FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeHeader')), "VALUE (square feet)", false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeHeader')), "GROSS AREA (sqft)", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		println "Verified successfully unit changes on the selection of SI and IP unit types."
