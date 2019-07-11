@@ -82,6 +82,10 @@ public class ResuableMethodsSetting extends BaseClass{
 		WebUI.waitForElementClickable(findTestObject('Analytics/17/Building Settings'),GlobalVariable.avgAngularWait)
 		WebUI.waitForElementPresent(findTestObject('Analytics/17/Building Settings'),GlobalVariable.avgAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Analytics/17/Building Settings'),GlobalVariable.avgAngularWait)
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6f92f17b3677267bd3519aa4056e47507c565737
 		WebUI.doubleClick(findTestObject('Analytics/17/Building Settings'))
 
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)

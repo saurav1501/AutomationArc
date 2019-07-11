@@ -7,14 +7,17 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@ng-if=&quot;selected_meter.fuel_type.id == 255&quot;]/button</value>
+         <value>//*[@ng-if=&quot;selected_meter.fuel_type.kind == 'gross_area'&quot;]/button</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>#meter_item > div.dropdown.building_meter_drp.display-inline.mb20.cursor-pointer.ng-scope > button</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

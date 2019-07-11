@@ -27,15 +27,15 @@ import org.openqa.selenium.JavascriptExecutor
 
 //Data Input file Upload
 
-try{
+   try{
 
-	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumFive)
+	   //CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumFive)
 	
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.fileUploadDataInputWaste'()
+	   CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.fileUploadDataInputWaste'()
 
-} catch (Throwable t) {
-	
-	System.out.println(t.getLocalizedMessage())
+    } catch (Throwable t) {
+        WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/closeModel'))
+	    System.out.println(t.getLocalizedMessage())
 		Error e1 = new Error(t.getMessage())
 		e1.setStackTrace(t.getStackTrace())
 		e1.printStackTrace()
