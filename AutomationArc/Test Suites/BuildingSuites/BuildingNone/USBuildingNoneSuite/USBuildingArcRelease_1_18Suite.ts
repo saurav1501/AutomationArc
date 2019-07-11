@@ -340,4 +340,16 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/Score/Occupancy/VerifyHumanExpScoreShouldBeZeroAfterDeletionOfOccupancyTest</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>a4be9f8c-33f2-4dec-9f53-c26ee6538436</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/Score/UploadArcDataTemplateTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>2d06d33a-8e10-4132-b5ed-f895c49da718</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/AdminToolScoreRecompute1Test</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>

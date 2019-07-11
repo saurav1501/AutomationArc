@@ -82,14 +82,15 @@ public class ResuableMethodsSetting extends BaseClass{
 		WebUI.waitForElementClickable(findTestObject('Analytics/17/Building Settings'),GlobalVariable.avgAngularWait)
 		WebUI.waitForElementPresent(findTestObject('Analytics/17/Building Settings'),GlobalVariable.avgAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Analytics/17/Building Settings'),GlobalVariable.avgAngularWait)
-		
 		WebUI.doubleClick(findTestObject('Analytics/17/Building Settings'))
+
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		WebUI.waitForElementPresent(findTestObject('Analytics/17/Building Settings'), GlobalVariable.minAngularWait)
-		WebUI.waitForElementVisible(findTestObject('Analytics/17/Building Settings'), GlobalVariable.minAngularWait)
-		WebUI.waitForElementClickable(findTestObject('Analytics/17/Building Settings'), GlobalVariable.minAngularWait)
-		WebUI.scrollToElement(findTestObject('Analytics/17/Building Settings'), 2)
-		WebUI.click(findTestObject('Analytics/17/Building Settings'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'), GlobalVariable.minAngularWait)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'), 2)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
+
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/a_Occupants'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/a_Occupants'), GlobalVariable.minAngularWait)
@@ -322,9 +323,9 @@ public class ResuableMethodsSetting extends BaseClass{
 
 	@Keyword
 	public void changedUnit() {
-		
+
 		navigation.navigateIntoDataInput()
-        
+
 		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
 		data.setCellData(GlobalVariable.BDataInput,"ATotalScore", GlobalVariable.rowNumTwo, totalPerformaceScore)
 
@@ -345,21 +346,20 @@ public class ResuableMethodsSetting extends BaseClass{
 
 	}
 
-	public void navigationTeam()
-	{
-	WebUI.scrollToElement(findTestObject('Manage/TeamModule/a_ Team'),2)
-	WebUI.click(findTestObject('Manage/TeamModule/a_ Team'))
-	WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+	public void navigationTeam() {
+		WebUI.scrollToElement(findTestObject('Manage/TeamModule/a_ Team'),2)
+		WebUI.click(findTestObject('Manage/TeamModule/a_ Team'))
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 	}
 	@Keyword
 	public void verifyTotalScoreShouldMore() {
 		navigationTeam()
 		navigation.navigateIntoDataInput()
-		
+
 		String totalPerformaceScore = data.getCellData(GlobalVariable.BDataInput,"ATotalScore",GlobalVariable.rowNumTwo)
 
 		Integer totalperformaceScore = Integer.parseInt(totalPerformaceScore)
-		
+
 		if(WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore')).equalsIgnoreCase('')){
 			WebUI.delay(7)
 		}
@@ -387,18 +387,18 @@ public class ResuableMethodsSetting extends BaseClass{
 		WebUI.click(findTestObject('DataInput/Settings18/Unit/DeleteButton'))
 		WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		}
+	}
 
 	public void deleteButtonOccupant() {
 		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/Unit/DeleteButton1'),GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/Unit/DeleteButton1'), GlobalVariable.minAngularWait)
 		//WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/Unit/DeleteButton1'), GlobalVariable.minAngularWait)
 		WebUI.delay(2)
-		 
+
 		WebUI.doubleClick(findTestObject('DataInput/Settings18/Unit/DeleteButton1'))
 		WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		}
+	}
 	public void deleteButtonOccupant1() {
 		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/Unit/DeleteButton2'),GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/Unit/DeleteButton2'), GlobalVariable.minAngularWait)
@@ -407,7 +407,7 @@ public class ResuableMethodsSetting extends BaseClass{
 		WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 	}
-	
+
 
 	@Keyword
 	public void verifyDeleteAreaEnergy() {
@@ -427,6 +427,26 @@ public class ResuableMethodsSetting extends BaseClass{
 		areaVisibilty()
 		deleteButtonArea()
 
+	}
+
+	@Keyword
+	public void verifyDeleteOPHour() {
+
+		//******************************************Water*********************************/
+		navigation.navigateIntoDataInput()
+		buildingSettings()
+
+
+		deleteButtonArea()
+
+	}
+
+	public void opeatingHour(){
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'), 5)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'))
+		WebUI.delay(3)
+		WebUI.click(findTestObject('Object Repository/DataInput/OperatingHourDropdown'))
+		WebUI.delay(2)
 	}
 	@Keyword
 	public void verifyDeleteAreaWaste() {
@@ -495,7 +515,7 @@ public class ResuableMethodsSetting extends BaseClass{
 		if(WebUI.getText(findTestObject('PerformanceScore/DataInput/EnergyScore')).equalsIgnoreCase('')){
 			WebUI.delay(7)
 		}
-		
+
 		String energyPerScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/EnergyScore'))
 		WebUI.verifyMatch(energyPerScore ,'0', false)
 
