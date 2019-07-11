@@ -340,4 +340,40 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/Score/Occupancy/VerifyHumanExpScoreShouldBeZeroAfterDeletionOfOccupancyTest</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>a4be9f8c-33f2-4dec-9f53-c26ee6538436</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/Score/UploadArcDataTemplateTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>a7f173a9-8a73-4555-8531-97fda8748362</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/AdminToolScoreRecompute1Test</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>8b120158-1a8e-4ed2-8146-7e39c1876d78</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/Score/TotalScoreShouldMoreThan50Test</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>c14e9265-8e98-47df-8f93-2be830cde90b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/Score/VerifyDeleteOperatingHourTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>e09a3e4e-c9f8-471b-a8fc-eb0eb6aae808</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/AdminToolScoreRecompute1Test</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>cc7a3600-59b2-44c9-a15f-0aac42f78f81</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/Score/TotalScoreShouldBeZeroTest</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>
