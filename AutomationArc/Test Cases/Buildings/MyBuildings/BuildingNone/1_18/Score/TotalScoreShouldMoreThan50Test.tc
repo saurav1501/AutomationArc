@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TotalScoreShouldMoreThan50Test</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>47fcc090-ab33-4924-b309-6913ec8c23d8</testCaseGuid>
+</TestCaseEntity>

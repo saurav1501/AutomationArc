@@ -1550,6 +1550,14 @@ def static "com.arc.ReusableMethods.ResuableMethodsSetting.verifyTotalScoreShoul
     (new com.arc.ReusableMethods.ResuableMethodsSetting()).verifyTotalScoreShouldMore()
 }
 
+def static "com.arc.ReusableMethods.ResuableMethodsSetting.verifyTotalScoreShouldMore50"() {
+    (new com.arc.ReusableMethods.ResuableMethodsSetting()).verifyTotalScoreShouldMore50()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsSetting.totalPerformanceScoreZero"() {
+    (new com.arc.ReusableMethods.ResuableMethodsSetting()).totalPerformanceScoreZero()
+}
+
 def static "com.arc.ReusableMethods.ResuableMethodsSetting.verifyDeleteAreaEnergy"() {
     (new com.arc.ReusableMethods.ResuableMethodsSetting()).verifyDeleteAreaEnergy()
 }

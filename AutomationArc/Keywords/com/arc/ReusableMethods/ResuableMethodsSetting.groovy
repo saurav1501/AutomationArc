@@ -375,12 +375,47 @@ public class ResuableMethodsSetting extends BaseClass{
 			KeywordUtil.markFailed('FAIL : PERFORMANCE SCORE IS NOT INCREASED AFTER CHANGING THE UNIT')
 	}
 
+	
+	@Keyword
+	public void verifyTotalScoreShouldMore50() {
+		navigationTeam()
+		navigation.navigateIntoDataInput()
 
+		if(WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore')).equalsIgnoreCase('')){
+			WebUI.delay(10)
+		}
+
+		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
+		Integer totalperformaceScore = Integer.parseInt(totalPerformaceScore)
+
+		if(totalperformaceScore >= 50)
+
+			KeywordUtil.markPassed('TOTAL PERFORMANCE SCORE IS RECOMPUTED AND MORE THAN 50')
+
+		else
+			KeywordUtil.markFailed('TOTAL PERFORMANCE SCORE IS NOT RECOMPUTED AND LESS THAN 50')
+	}
+
+	@Keyword
+	public void totalPerformanceScoreZero() {
+		navigationTeam()
+		navigation.navigateIntoDataInput()
+
+		if(WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore')).equalsIgnoreCase('')){
+			WebUI.delay(10)
+		}
+
+		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
+		Integer totalperformaceScore = Integer.parseInt(totalPerformaceScore)
+
+		if(totalperformaceScore == 0)
+
+			KeywordUtil.markPassed('TOTAL PERFORMANCE SCORE IS RECOMPUTED AS ZERO')
+
+		else
+			KeywordUtil.markFailed('TOTAL PERFORMANCE SCORE IS NOT RECOMPUTED MORE THAN ZERO')
+	}
 	public void deleteButtonArea() {
-		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/Unit/DeleteButton'),GlobalVariable.minAngularWait)
-		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/Unit/DeleteButton'), GlobalVariable.minAngularWait)
-		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/Unit/DeleteButton'), GlobalVariable.minAngularWait)
-		WebUI.click(findTestObject('DataInput/Settings18/Unit/DeleteButton'))
 		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/Unit/DeleteButton'),GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/Unit/DeleteButton'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/Unit/DeleteButton'), GlobalVariable.minAngularWait)
@@ -392,9 +427,7 @@ public class ResuableMethodsSetting extends BaseClass{
 	public void deleteButtonOccupant() {
 		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/Unit/DeleteButton1'),GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/Unit/DeleteButton1'), GlobalVariable.minAngularWait)
-		//WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/Unit/DeleteButton1'), GlobalVariable.minAngularWait)
-		WebUI.delay(2)
-
+		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/Unit/DeleteButton1'), GlobalVariable.minAngularWait)
 		WebUI.doubleClick(findTestObject('DataInput/Settings18/Unit/DeleteButton1'))
 		WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
@@ -432,21 +465,23 @@ public class ResuableMethodsSetting extends BaseClass{
 	@Keyword
 	public void verifyDeleteOPHour() {
 
-		//******************************************Water*********************************/
+		//******************************************DELETE BUTTION OP HOUR*********************************/
 		navigation.navigateIntoDataInput()
 		buildingSettings()
-
-
-		deleteButtonArea()
+		opeatingHour()
+		deleteButtonOccupant()
 
 	}
 
 	public void opeatingHour(){
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'), 5)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'))
-		WebUI.delay(3)
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/OperatingHourDropdown'), 5)
 		WebUI.click(findTestObject('Object Repository/DataInput/OperatingHourDropdown'))
 		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 	}
 	@Keyword
 	public void verifyDeleteAreaWaste() {
