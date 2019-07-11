@@ -1542,20 +1542,12 @@ def static "com.arc.ReusableMethods.ResuableMethodsSetting.verifyareaAfterDataUp
          , 	rowNum)
 }
 
-def static "com.arc.ReusableMethods.ResuableMethodsSetting.changedUnit"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ResuableMethodsSetting()).changedUnit(
-        	sheetName
-         , 	rowNum)
+def static "com.arc.ReusableMethods.ResuableMethodsSetting.changedUnit"() {
+    (new com.arc.ReusableMethods.ResuableMethodsSetting()).changedUnit()
 }
 
-def static "com.arc.ReusableMethods.ResuableMethodsSetting.verifyTotalScoreShouldMore"(
-    	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ResuableMethodsSetting()).verifyTotalScoreShouldMore(
-        	sheetName
-         , 	rowNum)
+def static "com.arc.ReusableMethods.ResuableMethodsSetting.verifyTotalScoreShouldMore"() {
+    (new com.arc.ReusableMethods.ResuableMethodsSetting()).verifyTotalScoreShouldMore()
 }
 
 def static "com.arc.ReusableMethods.ResuableMethodsSetting.verifyDeleteAreaEnergy"() {

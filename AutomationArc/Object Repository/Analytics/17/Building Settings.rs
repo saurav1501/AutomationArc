@@ -4,6 +4,20 @@
    <name>Building Settings</name>
    <tag></tag>
    <elementGuidId>aa091c09-a7d7-4f7c-897d-c5eb5b8d0afa</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[@id='sideNavContainer']/md-sidenav/div/table/tbody/tr/td[2]/div</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[(text() = '
+                                        Building Settings
+                                    ' or . = '
+                                        Building Settings
+                                    ') and @ref_element = 'Object Repository/Analytics/17/iframe_Data Input_datainput-wi']</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>

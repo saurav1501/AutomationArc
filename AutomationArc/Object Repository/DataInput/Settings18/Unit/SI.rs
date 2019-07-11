@@ -4,7 +4,17 @@
    <name>SI</name>
    <tag></tag>
    <elementGuidId>0250a15e-1a22-4d7d-a236-fdb48b880d1e</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[(text() = 'Metric System (SI)' or . = 'Metric System (SI)')]</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//a[(text() = 'Metric System (SI)' or . = 'Metric System (SI)') and @ref_element = 'Object Repository/DataInput/Settings18/Unit/Data_Input']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

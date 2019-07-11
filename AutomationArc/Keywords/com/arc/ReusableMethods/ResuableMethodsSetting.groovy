@@ -80,7 +80,10 @@ public class ResuableMethodsSetting extends BaseClass{
 
 	public void buildingSettings(){
 		WebUI.waitForElementClickable(findTestObject('Analytics/17/Building Settings'),GlobalVariable.avgAngularWait)
-		WebUI.click(findTestObject('Analytics/17/Building Settings'))
+		WebUI.waitForElementPresent(findTestObject('Analytics/17/Building Settings'),GlobalVariable.avgAngularWait)
+		WebUI.waitForElementVisible(findTestObject('Analytics/17/Building Settings'),GlobalVariable.avgAngularWait)
+		
+		WebUI.doubleClick(findTestObject('Analytics/17/Building Settings'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementPresent(findTestObject('Analytics/17/Building Settings'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Analytics/17/Building Settings'), GlobalVariable.minAngularWait)
@@ -298,14 +301,17 @@ public class ResuableMethodsSetting extends BaseClass{
 
 	}
 
-	public void changedUnit(){
+	public void changedunit(){
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/Unit/IP'),GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/Unit/IP'),GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/Unit/IP'),GlobalVariable.minAngularWait)
-		WebUI.click(findTestObject('DataInput/Settings18/Unit/IP'))
-		WebUI.delay(1)
+		WebUI.doubleClick(findTestObject('DataInput/Settings18/Unit/IP'))
+		WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/Unit/SI'),GlobalVariable.minAngularWait)
-		WebUI.click(findTestObject('DataInput/Settings18/Unit/SI'))
+		WebUI.doubleClick(findTestObject('DataInput/Settings18/Unit/SI'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 		WebUI.delay(2)
@@ -315,43 +321,53 @@ public class ResuableMethodsSetting extends BaseClass{
 
 
 	@Keyword
-	public void changedUnit(String sheetName,int rowNum) {
-
-
+	public void changedUnit() {
+		
+		navigation.navigateIntoDataInput()
+        
 		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
 		data.setCellData(GlobalVariable.BDataInput,"ATotalScore", GlobalVariable.rowNumTwo, totalPerformaceScore)
 
 		//******************************************Energy*********************************/
 		areaEnergy()
 		areaVisibilty()
-		changedUnit()
+		changedunit()
 
 		//******************************************Water*********************************/
 		areaWater()
 		areaVisibilty()
-		changedUnit()
+		changedunit()
 
 		//******************************************Waste*********************************/
 		areaWaste()
 		areaVisibilty()
-		changedUnit()
+		changedunit()
 
 	}
 
-
+	public void navigationTeam()
+	{
+	WebUI.scrollToElement(findTestObject('Manage/TeamModule/a_ Team'),2)
+	WebUI.click(findTestObject('Manage/TeamModule/a_ Team'))
+	WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+	}
 	@Keyword
-	public void verifyTotalScoreShouldMore(String sheetName,int rowNum) {
-
+	public void verifyTotalScoreShouldMore() {
+		navigationTeam()
 		navigation.navigateIntoDataInput()
-
+		
 		String totalPerformaceScore = data.getCellData(GlobalVariable.BDataInput,"ATotalScore",GlobalVariable.rowNumTwo)
 
-		Integer totalperformaceScore = Integer.compare(totalPerformaceScore)
+		Integer totalperformaceScore = Integer.parseInt(totalPerformaceScore)
+		
+		if(WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore')).equalsIgnoreCase('')){
+			WebUI.delay(7)
+		}
 
 		String mtotalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
-		Integer mTotalPerformaceScore = Integer.compare(mtotalPerformaceScore)
+		Integer mTotalPerformaceScore = Integer.parseInt(mtotalPerformaceScore)
 
-		if(totalperformaceScore<mTotalPerformaceScore)
+		if(totalperformaceScore < mTotalPerformaceScore)
 
 			KeywordUtil.markPassed('SUCCESS: PERFORMANCE SCORE IS INCREASED AFTER CHANGING THE UNIT')
 
@@ -365,25 +381,33 @@ public class ResuableMethodsSetting extends BaseClass{
 		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/Unit/DeleteButton'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/Unit/DeleteButton'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('DataInput/Settings18/Unit/DeleteButton'))
-		WebUI.delay(2)
 		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/Unit/DeleteButton'),GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/Unit/DeleteButton'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/Unit/DeleteButton'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('DataInput/Settings18/Unit/DeleteButton'))
 		WebUI.delay(2)
-		WebUI.waitForElementNotPresent(findTestObject('DataInput/Settings18/Unit/DeleteButton'),GlobalVariable.minAngularWait)
-		WebUI.waitForElementNotVisible(findTestObject('DataInput/Settings18/Unit/DeleteButton'), GlobalVariable.minAngularWait)
-	}
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		}
 
 	public void deleteButtonOccupant() {
-		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/Unit/DeleteButton'),GlobalVariable.minAngularWait)
-		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/Unit/DeleteButton'), GlobalVariable.minAngularWait)
-		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/Unit/DeleteButton'), GlobalVariable.minAngularWait)
-		WebUI.click(findTestObject('DataInput/Settings18/Unit/DeleteButton'))
+		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/Unit/DeleteButton1'),GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/Unit/DeleteButton1'), GlobalVariable.minAngularWait)
+		//WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/Unit/DeleteButton1'), GlobalVariable.minAngularWait)
 		WebUI.delay(2)
-		WebUI.waitForElementNotPresent(findTestObject('DataInput/Settings18/Unit/DeleteButton'),GlobalVariable.minAngularWait)
-		WebUI.waitForElementNotVisible(findTestObject('DataInput/Settings18/Unit/DeleteButton'), GlobalVariable.minAngularWait)
+		 
+		WebUI.doubleClick(findTestObject('DataInput/Settings18/Unit/DeleteButton1'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		}
+	public void deleteButtonOccupant1() {
+		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/Unit/DeleteButton2'),GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/Unit/DeleteButton2'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/Unit/DeleteButton2'), GlobalVariable.minAngularWait)
+		WebUI.doubleClick(findTestObject('DataInput/Settings18/Unit/DeleteButton2'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 	}
+	
 
 	@Keyword
 	public void verifyDeleteAreaEnergy() {
@@ -448,7 +472,7 @@ public class ResuableMethodsSetting extends BaseClass{
 		//******************************************Transport*********************************/
 		occupantTransport()
 		occupancyVisibilty()
-		deleteButtonOccupant()
+		deleteButtonOccupant1()
 
 	}
 	@Keyword
@@ -457,7 +481,7 @@ public class ResuableMethodsSetting extends BaseClass{
 		//******************************************Human Experience*********************************/
 		occupantHum()
 		occupancyVisibilty()
-		deleteButtonOccupant()
+		deleteButtonOccupant1()
 
 	}
 	@Keyword
@@ -465,10 +489,13 @@ public class ResuableMethodsSetting extends BaseClass{
 
 
 		//******************************************Energy Score*********************************/
-		WebUI.refresh()
-		WebUI.delay(2)
+		navigationTeam()
 
 		navigation.navigateIntoDataInput()
+		if(WebUI.getText(findTestObject('PerformanceScore/DataInput/EnergyScore')).equalsIgnoreCase('')){
+			WebUI.delay(7)
+		}
+		
 		String energyPerScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/EnergyScore'))
 		WebUI.verifyMatch(energyPerScore ,'0', false)
 
@@ -479,10 +506,12 @@ public class ResuableMethodsSetting extends BaseClass{
 
 
 		//******************************************Water Score*********************************/
-		WebUI.refresh()
-		WebUI.delay(2)
+		navigationTeam()
 
 		navigation.navigateIntoDataInput()
+		if(WebUI.getText(findTestObject('PerformanceScore/DataInput/WaterScore')).equalsIgnoreCase('')){
+			WebUI.delay(7)
+		}
 		String waterPfScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/WaterScore'))
 		WebUI.verifyMatch(waterPfScore ,'0', false)
 
@@ -493,10 +522,12 @@ public class ResuableMethodsSetting extends BaseClass{
 
 
 		//******************************************Waste Score*********************************/
-		WebUI.refresh()
-		WebUI.delay(2)
+		navigationTeam()
 
 		navigation.navigateIntoDataInput()
+		if(WebUI.getText(findTestObject('PerformanceScore/DataInput/WasteScore')).equalsIgnoreCase('')){
+			WebUI.delay(7)
+		}
 		String wastePfScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/WasteScore'))
 		WebUI.verifyMatch(wastePfScore ,'0' , false)
 
@@ -507,10 +538,14 @@ public class ResuableMethodsSetting extends BaseClass{
 
 
 		//******************************************Transport Score*********************************/
-		WebUI.refresh()
-		WebUI.delay(2)
+		navigationTeam()
 
 		navigation.navigateIntoDataInput()
+
+		if(WebUI.getText(findTestObject('PerformanceScore/DataInput/TransportScore')).equalsIgnoreCase('')){
+			WebUI.delay(7)
+		}
+
 
 		String transPortperScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TransportScore'))
 		WebUI.verifyMatch(transPortperScore ,'0', false)
@@ -522,10 +557,14 @@ public class ResuableMethodsSetting extends BaseClass{
 
 
 		//******************************************Transport Score*********************************/
-		WebUI.refresh()
-		WebUI.delay(2)
+		navigationTeam()
 
 		navigation.navigateIntoDataInput()
+
+		if(WebUI.getText(findTestObject('PerformanceScore/DataInput/HumanExp')).equalsIgnoreCase('')){
+			WebUI.delay(7)
+		}
+
 
 		String humanexperience = WebUI.getText(findTestObject('PerformanceScore/DataInput/HumanExp'))
 		WebUI.verifyMatch(humanexperience ,'0', false)
