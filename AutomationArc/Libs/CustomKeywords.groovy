@@ -1924,6 +1924,22 @@ def static "com.arc.ReusableMethods.ReusableMethodsPayment.SezFileUploadAndVerif
     (new com.arc.ReusableMethods.ReusableMethodsPayment()).SezFileUploadAndVerifyItIsDisplaying()
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsPayment.applyPromocodeFifty"(
+    	String dataSheet	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsPayment()).applyPromocodeFifty(
+        	dataSheet
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsPayment.applyPromocodeHundred"(
+    	String dataSheet	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsPayment()).applyPromocodeHundred(
+        	dataSheet
+         , 	rowNum)
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsPayment.payNowRegistrationDetailsVerification"(
     	String buildingSheet	
      , 	String pricingSheet	

@@ -2,7 +2,6 @@ import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
-import com.kms.katalon.core.annotation.Keyword as Keyword
 import com.kms.katalon.core.checkpoint.Checkpoint as Checkpoint
 import com.kms.katalon.core.checkpoint.CheckpointFactory as CheckpointFactory
 import com.kms.katalon.core.mobile.keyword.MobileBuiltInKeywords as MobileBuiltInKeywords
@@ -20,27 +19,21 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUiBuiltInKe
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import org.testng.Assert as Assert
-import org.testng.annotations.BeforeMethod as BeforeMethod
-import java.lang.String as String
-import java.sql.ResultSet as ResultSet
-import java.text.SimpleDateFormat as SimpleDateFormat
 
-//Add new Project Test
-try {
-    
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToBuilding'()
-    CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsAddNewProject.buildingAddNewProject'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
-  }
-	catch (Throwable t) {
-    System.out.println(t.getLocalizedMessage())
 
-    Error e1 = new Error(t.getMessage())
-
-    e1.setStackTrace(t.getStackTrace())
-
-    e1.printStackTrace()
-
-    
-} 
+	try {	
+		
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.selectPayNow'()
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.paymentPageBuildingOtherNoneDetails'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix,1)
+    CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.applyPromocodeHundred'(GlobalVariable.Promocode, GlobalVariable.rowNumThree)
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.paymentRegistration'(GlobalVariable.CCPayment , GlobalVariable.rowNumTwo,GlobalVariable.creditCard)
 	
+	 
+	} catch (Throwable t) {
+			CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.tearDown'()
+			System.out.println(t.getLocalizedMessage())
+			Error e1 = new Error(t.getMessage())
+			e1.setStackTrace(t.getStackTrace())
+			e1.printStackTrace()
+	}
+

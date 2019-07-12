@@ -24,8 +24,8 @@ import org.openqa.selenium.Keys as Keys
 	try {	
 		
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.selectPayNow'()
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.paymentPageBuildingOtherNoneDetails'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix,5)
-	
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.paymentPageBuildingOtherNoneDetails'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix,1)
+    CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.applyPromocodeFifty'(GlobalVariable.Promocode, GlobalVariable.rowNumThree)
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.paymentRegistration'(GlobalVariable.CCPayment , GlobalVariable.rowNumTwo,GlobalVariable.creditCard)
 	
 	 
