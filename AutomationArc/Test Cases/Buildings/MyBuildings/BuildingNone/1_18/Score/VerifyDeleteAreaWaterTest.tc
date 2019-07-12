@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Verify Score impact After Deletion of Area For Energy , Water , Waste .</description>
+   <description>Verify if ability to delete Area for Water .</description>
    <name>VerifyDeleteAreaWaterTest</name>
    <tag></tag>
    <comment></comment>

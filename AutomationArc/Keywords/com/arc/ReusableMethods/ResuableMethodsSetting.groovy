@@ -38,6 +38,7 @@ public class ResuableMethodsSetting extends BaseClass{
 		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/ExcludeSpaces'), GlobalVariable.minAngularWait)
 		WebUI.check(findTestObject('DataInput/Settings18/ExcludeSpaces'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(2)
 	}
 
 	public void checkRadioAllOccupant(){
@@ -51,6 +52,11 @@ public class ResuableMethodsSetting extends BaseClass{
 		WebUI.delay(2)
 		WebUI.click(findTestObject('DataInput/Settings18/button_Close'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(5)
+		WebUI.refresh()
+		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+	
 	}
 
 	public void checkRegularOccupant(){
@@ -88,9 +94,8 @@ public class ResuableMethodsSetting extends BaseClass{
 		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'), GlobalVariable.minAngularWait)
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'), 2)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'),2)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
-
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/a_Occupants'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/a_Occupants'), GlobalVariable.minAngularWait)
@@ -100,9 +105,10 @@ public class ResuableMethodsSetting extends BaseClass{
 		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/a_Occupants'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('DataInput/Settings18/a_Occupants'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/VISITOR'),GlobalVariable.minAngularWait)
-		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/VISITOR'),GlobalVariable.minAngularWait)
-	}
+		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/VISITOR'),10)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/VISITOR'),10)
+	
+		}
 
 	public void area(){
 		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/a_Gross Floor Area'), GlobalVariable.minAngularWait)
@@ -113,15 +119,10 @@ public class ResuableMethodsSetting extends BaseClass{
 	}
 
 	public void areaVisibilty(){
-		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/AreaTotalValue'),GlobalVariable.minAngularWait)
-		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/AreaTotalValue'),GlobalVariable.minAngularWait)
-
 		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/Upload1'),GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/Upload1'),GlobalVariable.minAngularWait)
 	}
 	public void occupancyVisibilty(){
-		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/TotalValue'),GlobalVariable.minAngularWait)
-		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/TotalValue'),GlobalVariable.minAngularWait)
 		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/Upload'),GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/Upload'),GlobalVariable.minAngularWait)
 	}
@@ -327,6 +328,7 @@ public class ResuableMethodsSetting extends BaseClass{
 		navigation.navigateIntoDataInput()
 
 		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
+		println totalPerformaceScore
 		data.setCellData(GlobalVariable.BDataInput,"ATotalScore", GlobalVariable.rowNumTwo, totalPerformaceScore)
 
 		//******************************************Energy*********************************/
@@ -375,7 +377,7 @@ public class ResuableMethodsSetting extends BaseClass{
 			KeywordUtil.markFailed('FAIL : PERFORMANCE SCORE IS NOT INCREASED AFTER CHANGING THE UNIT')
 	}
 
-	
+
 	@Keyword
 	public void verifyTotalScoreShouldMore50() {
 		navigationTeam()
@@ -510,8 +512,8 @@ public class ResuableMethodsSetting extends BaseClass{
 		deleteButtonOccupant()
 
 	}
-	
-	
+
+
 	public void opeatingHour(){
 		WebUI.delay(1)
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'), 5)

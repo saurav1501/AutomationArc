@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>Verify ability to delete/modify  operating hour for waste.</description>
    <name>WasteDeleteOperatingHourTest</name>
    <tag></tag>
    <comment></comment>

@@ -38,6 +38,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	public ReusableMethodsNavigation navigation = new ReusableMethodsNavigation()
 	ResuableMethodsPerformanceScore  performanceScore = new ResuableMethodsPerformanceScore()
 	ReusableMethodsNavigation navigation = new ReusableMethodsNavigation()
+	ResuableMethodsSetting setting = new ResuableMethodsSetting()
 
 	@Keyword
 	public void uploadArcDataTemplate(){
@@ -158,7 +159,9 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(20)
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		navigationTeam()
+		WebUI.delay(5)
 		WebUI.refresh()
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		navigation.navigateIntoDataInput()
 		
 	}
@@ -5921,19 +5924,20 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		double doccupant = Double.parseDouble(occupant)
 
 		navigation.navigateIntoDataInput()
-		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
-		WebUI.delay(1)
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		
+	
+		//setting.occupantGen()
 
-		String projectoccupancy = WebUI.getAttribute((findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne')),'value')
+		String projectoccupancy = data.getCellData(sheetName,'GrossAreasqft', rowNum)
 
 		double projectOccupancy= Double.parseDouble(projectoccupancy)
-
-		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
+		
+		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'),10)
+		WebUI.doubleClick(findTestObject('DataInput/Survey/div_Transportation Survey'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 		WebUI.delay(2)
+		
 		WebUI.waitForElementPresent(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
 		WebUI.waitForElementVisible(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
 
