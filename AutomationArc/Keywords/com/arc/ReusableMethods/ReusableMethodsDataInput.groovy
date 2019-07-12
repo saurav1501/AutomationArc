@@ -132,7 +132,6 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	@Keyword
 	public void uploadArcDataTemplateBuildingAnalytics18(){
-		
 		navigation.navigateIntoDataInput()
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'), GlobalVariable.minAngularWait)
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'))
@@ -156,11 +155,10 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/button_CLOSE'))
 		WebUI.delay(5)
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-		WebUI.refresh()
-		WebUI.delay(15)
+		WebUI.delay(20)
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		navigationTeam()
-		WebUI.delay(2)
+		WebUI.refresh()
 		navigation.navigateIntoDataInput()
 		
 	}

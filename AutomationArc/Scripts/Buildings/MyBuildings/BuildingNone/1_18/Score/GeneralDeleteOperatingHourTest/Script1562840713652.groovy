@@ -15,10 +15,9 @@ import internal.GlobalVariable as GlobalVariable
 
 try{
 	
-	 CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsPerformanceScore.analyticsgenratePerformanceScoreAdminToolOtherNone1'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
-	 CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsSetting.verifyWasteScoreShouldZero'()
-
-	}catch (Throwable t) {
+ CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsSetting.verifyDeleteOPGenHour'()
+	
+ }catch (Throwable t) {
 	System.out.println(t.getLocalizedMessage())
 	Error e1 = new Error(t.getMessage())
 	e1.setStackTrace(t.getStackTrace())

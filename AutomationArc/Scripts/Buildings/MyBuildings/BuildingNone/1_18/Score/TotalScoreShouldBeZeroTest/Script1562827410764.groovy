@@ -16,7 +16,7 @@ import internal.GlobalVariable as GlobalVariable
 
 
 try{
-	
+	CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsPerformanceScore.analyticsgenratePerformanceScoreAdminToolOtherNone1'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
 	CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsSetting.totalPerformanceScoreZero'()
 
 	}catch (Throwable t) {
