@@ -13,7 +13,7 @@
    <testCaseLink>
       <guid>073b3f0c-55c1-4407-a499-8b96a102904b</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/AddNewProjectTest</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
@@ -37,7 +37,7 @@
    <testCaseLink>
       <guid>8b173a83-06ac-4996-b40e-150a3de15195</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/PaymentByCheckTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
