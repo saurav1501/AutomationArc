@@ -76,8 +76,8 @@ public class ResuableMethodsGRESB extends BaseClass {
 		//WebUI.sendKeys(findTestObject('Portfolio/GRESB/button_Browse'),BaseClass.gresbUpload )
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Portfolio/GRESB/button_UPLOAD'))
-		WebUI.delay(30)
-		WebUI.delay(500)
+		WebUI.delay(250)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
 	}
 
@@ -330,13 +330,14 @@ public class ResuableMethodsGRESB extends BaseClass {
 
 	@Keyword
 	public void signAggrementScoreComp(String sheetName, int rowNum) throws IOException, InterruptedException {
-		WebUI.delay(20)
-		WebUI.waitForElementClickable(findTestObject('Portfolio/GRESB/Owner/ISTProj'),10)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForElementClickable(findTestObject('Portfolio/GRESB/Owner/ISTProj'),GlobalVariable.maxAngularWait)
 		String protfolioID = WebUI.getText(findTestObject('Portfolio/GRESB/Owner/ISTProj'))
 		data.setCellData(sheetName,"PortfolioID",2, protfolioID)
 
 		reusableMethodsSearch.searchProgramPortfolioId(GlobalVariable.PortfoliosSheet,GlobalVariable.rowNumTwo)
-		WebUI.delay(7)
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
 		WebUI.verifyElementPresent(findTestObject('Portfolio/GRESB/Owner/button_Sign Agreement1'),2)
 		WebUI.verifyElementPresent(findTestObject('Portfolio/GRESB/Owner/ScoreComp1'),2)
@@ -347,7 +348,7 @@ public class ResuableMethodsGRESB extends BaseClass {
 
 	@Keyword
 	public void redAlertPopShouldNotDisplay() throws IOException, InterruptedException {
-		WebUI.delay(10)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.verifyElementNotPresent(findTestObject('Portfolio/GRESB/Owner/button_Sign Agreement2'),2)
 		WebUI.verifyElementNotPresent(findTestObject('Portfolio/GRESB/Owner/ScoreComp2'),2)
 	}
@@ -355,10 +356,13 @@ public class ResuableMethodsGRESB extends BaseClass {
 	@Keyword
 	public void acceptAggrement(String sheetName, int rowNum) throws IOException, InterruptedException {
 		WebUI.click(findTestObject('Portfolio/GRESB/Owner/SignAgg1'))
-		WebUI.delay(10)
-		WebUI.scrollToElement(findTestObject('Portfolio/GRESB/Owner/Accept1'),5)
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.scrollToElement(findTestObject('Portfolio/GRESB/Owner/Accept1'),GlobalVariable.avgAngularWait)
+		WebUI.waitForElementClickable(findTestObject('Portfolio/GRESB/Owner/Accept1'),GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('Portfolio/GRESB/Owner/Accept1'))
-		WebUI.delay(10)
+		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		String projestatus = WebUI.getText(findTestObject('Portfolio/GRESB/Owner/Trial1'))
 		WebUI.verifyMatch(projestatus,'Trial', false)
 	}
@@ -372,11 +376,13 @@ public class ResuableMethodsGRESB extends BaseClass {
 		reusableMethodsNavigation.navigateToBuilding()
 
 		reusableMethodsSearch.searchProgram(GlobalVariable.PortfoliosSheet,GlobalVariable.rowNumTwo)
-		WebUI.delay(10)
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
-		WebUI.scrollToElement(findTestObject('Portfolio/GRESB/SignAcceptButton'),5)
+		WebUI.scrollToElement(findTestObject('Portfolio/GRESB/SignAcceptButton'),GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('Portfolio/GRESB/SignAcceptButton'))
-		WebUI.delay(15)
+		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
 		String status = WebUI.getText(findTestObject('Portfolio/GRESB/New/Reg1'))
 		WebUI.verifyMatch(status,'Trial',false)
@@ -395,7 +401,7 @@ public class ResuableMethodsGRESB extends BaseClass {
 		WebUI.delay(2)
 		WebUI.verifyElementPresent(findTestObject('Portfolio/Common/p_Please enter valid email.'), rowNum)
 		WebUI.click(findTestObject('Portfolio/Common/button_CANCEL'))
-		WebUI.delay(15)
+		WebUI.delay(7)
 	}
 
 	@Keyword
@@ -459,7 +465,7 @@ public class ResuableMethodsGRESB extends BaseClass {
 
 	@Keyword
 	public void verifyErrorNotification(String sheetName, int rowNum) throws IOException, InterruptedException {
-		WebUI.delay(8)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.verifyElementPresent(findTestObject('Portfolio/ErrorNotification/Districtheating'),4)
 		WebUI.verifyElementPresent(findTestObject('Portfolio/ErrorNotification/ElectricityMeter'),4)
 		WebUI.verifyElementPresent(findTestObject('Portfolio/ErrorNotification/FuelMeter'),4)
@@ -473,13 +479,14 @@ public class ResuableMethodsGRESB extends BaseClass {
 
 	@Keyword
 	public void verifyEstimatedScore() throws IOException, InterruptedException {
-		WebUI.delay(12)
-		WebUI.verifyElementNotPresent(findTestObject('Portfolio/GRESB/Setting/span_Estimated'),4)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.verifyElementNotPresent(findTestObject('Portfolio/GRESB/Setting/span_Estimated'),GlobalVariable.avgAngularWait)
 	}
 
 	@Keyword
 	public void verifyNoErrorNotification() throws IOException, InterruptedException {
-		WebUI.delay(18)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(2)
 		WebUI.verifyElementNotPresent(findTestObject('Portfolio/ErrorNotification/Districtheating'),4)
 		WebUI.verifyElementNotPresent(findTestObject('Portfolio/ErrorNotification/ElectricityMeter'),4)
 		WebUI.verifyElementNotPresent(findTestObject('Portfolio/ErrorNotification/FuelMeter'),4)
@@ -493,14 +500,15 @@ public class ResuableMethodsGRESB extends BaseClass {
 
 	@Keyword
 	public void modifyDataForEnergy(String sheetName, int rowNum) throws IOException, InterruptedException {
-		WebUI.delay(8)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForElementClickable(findTestObject('Portfolio/ErrorNotification/Energy/td_District heating and Coolin'),10)
 		WebUI.click(findTestObject('Portfolio/ErrorNotification/Energy/td_District heating and Coolin'))
 		WebUI.delay(4)
 		WebUI.setText(findTestObject('Portfolio/Project/InputTextBox'),'100')
-		WebUI.delay(3)
 		WebUI.click(findTestObject('Portfolio/GRESB/SaveButton'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/SuccessGreenTick'),20)
 		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 
 
 		WebUI.click(findTestObject('Portfolio/ErrorNotification/Energy/td_Electricity Meter'))
@@ -516,6 +524,7 @@ public class ResuableMethodsGRESB extends BaseClass {
 		WebUI.click(findTestObject('Portfolio/GRESB/SaveButton'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/SuccessGreenTick'),20)
 		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 	}
 	@Keyword
 	public void modifyDataForWater(String sheetName, int rowNum) throws IOException, InterruptedException {
@@ -579,7 +588,8 @@ public class ResuableMethodsGRESB extends BaseClass {
 		WebUI.setText(findTestObject('DataInput/CreateMeterBuilding/input_fw600 reading ng-pristin'),'23')
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/SuccessGreenTick'),20)
-		WebUI.delay(15)
+		WebUI.delay(10)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 	}
 	@Keyword
 	public void modifyDataForTVOC(String sheetName, int rowNum) throws IOException, InterruptedException {
@@ -612,20 +622,21 @@ public class ResuableMethodsGRESB extends BaseClass {
 		WebUI.setText(findTestObject('DataInput/CreateMeterBuilding/input_fw600 reading ng-pristin'),'23')
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/SuccessGreenTick'),20)
-		WebUI.delay(20)
+		WebUI.delay(10)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 	}
 
 	@Keyword
 	public void verifyGreenSymbol() throws IOException, InterruptedException {
-
-		WebUI.delay(7)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForAngularLoad(120, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyElementPresent(findTestObject('Portfolio/GRESB/GresbGreen'),5)
 	}
 	@Keyword
 	public void verifyOrangeSymbol() throws IOException, InterruptedException {
 		WebUI.delay(10)
-		WebUI.verifyElementPresent(findTestObject('Portfolio/GRESB/Orange'),5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.verifyElementPresent(findTestObject('Portfolio/GRESB/Orange'),GlobalVariable.avgAngularWait)
 	}
 
 	@Keyword
@@ -654,7 +665,7 @@ public class ResuableMethodsGRESB extends BaseClass {
 		WebUI.clearText(findTestObject('Portfolio/Total/portfolio_name'))
 		WebUI.sendKeys(findTestObject('Portfolio/Total/portfolio_name'), " ")
 		WebUI.click(findTestObject('Portfolio/Total/span_Save'))
-		WebUI.delay(10)
+		WebUI.delay(5)
 		WebUI.verifyElementPresent(findTestObject('LoginArc/Page_Arc Skoru  Sustainability perf/Required'),5)
 	}
 

@@ -15,7 +15,7 @@ import internal.GlobalVariable as GlobalVariable
 
 try{
 	
- CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsSetting.verifyDeleteOPHour'()
+ CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsSetting.verifyDeleteWasteOpHour'()
 	
  }catch (Throwable t) {
 	System.out.println(t.getLocalizedMessage())

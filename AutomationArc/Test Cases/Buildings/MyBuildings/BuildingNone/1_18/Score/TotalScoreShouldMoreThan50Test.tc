@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description></description>
+   <description>verify if score should be more than 50 after Re-upload the Arc Data template.</description>
    <name>TotalScoreShouldMoreThan50Test</name>
    <tag></tag>
    <comment></comment>

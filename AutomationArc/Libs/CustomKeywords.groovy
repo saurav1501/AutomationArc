@@ -1566,8 +1566,20 @@ def static "com.arc.ReusableMethods.ResuableMethodsSetting.verifyDeleteAreaWater
     (new com.arc.ReusableMethods.ResuableMethodsSetting()).verifyDeleteAreaWater()
 }
 
-def static "com.arc.ReusableMethods.ResuableMethodsSetting.verifyDeleteOPHour"() {
-    (new com.arc.ReusableMethods.ResuableMethodsSetting()).verifyDeleteOPHour()
+def static "com.arc.ReusableMethods.ResuableMethodsSetting.verifyDeleteOPGenHour"() {
+    (new com.arc.ReusableMethods.ResuableMethodsSetting()).verifyDeleteOPGenHour()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsSetting.verifyDeleteEnergyOPHour"() {
+    (new com.arc.ReusableMethods.ResuableMethodsSetting()).verifyDeleteEnergyOPHour()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsSetting.verifyDeleteWaterOpHour"() {
+    (new com.arc.ReusableMethods.ResuableMethodsSetting()).verifyDeleteWaterOpHour()
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsSetting.verifyDeleteWasteOpHour"() {
+    (new com.arc.ReusableMethods.ResuableMethodsSetting()).verifyDeleteWasteOpHour()
 }
 
 def static "com.arc.ReusableMethods.ResuableMethodsSetting.verifyDeleteAreaWaste"() {

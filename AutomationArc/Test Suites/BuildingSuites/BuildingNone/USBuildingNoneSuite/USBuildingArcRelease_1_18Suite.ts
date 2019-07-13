@@ -362,13 +362,43 @@
       <guid>c14e9265-8e98-47df-8f93-2be830cde90b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/Score/VerifyDeleteOperatingHourTest</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/Score/EnergyDeleteOperatingHourTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>e09a3e4e-c9f8-471b-a8fc-eb0eb6aae808</guid>
+      <guid>8d675588-5661-41d7-8771-ceb855e4ca64</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/AdminToolScoreRecompute1Test</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/Score/VerifyEnergyScoreShouldBeZeroTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>8674e065-0052-40fa-ac1a-79072c36a3a0</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/Score/WaterDeleteOperatingHourTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>a60000b0-7e60-4b20-b502-13c6f5b0c28d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/Score/VerifyWaterScoreShouldBeZeroTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>995a3c24-2316-4f79-9a92-2d1717b4b98f</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/Score/WasteDeleteOperatingHourTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>30b12a83-b114-4f71-baee-bb890155a52a</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/Score/VerifyWasteScoreShouldBeZeroTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>f51fc420-5f86-4517-823e-bb3e16da0048</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/Score/GeneralDeleteOperatingHourTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>cc7a3600-59b2-44c9-a15f-0aac42f78f81</guid>

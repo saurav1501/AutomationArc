@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify ability to delete/modify  operating hour water.</description>
+   <name>WaterDeleteOperatingHourTest</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>c94e2463-2212-4b55-8ca2-d05edc07bf51</testCaseGuid>
+</TestCaseEntity>
