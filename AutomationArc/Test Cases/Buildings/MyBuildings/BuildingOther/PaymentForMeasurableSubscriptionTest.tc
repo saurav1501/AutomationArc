@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Make the payment for the measurabl subscription</description>
+   <name>PaymentForMeasurableSubscriptionTest</name>
+   <tag>Make payment measurabl.</tag>
+   <comment></comment>
+   <testCaseGuid>02d9b4fa-c6e3-4205-9fb1-c99b7488d268</testCaseGuid>
+</TestCaseEntity>

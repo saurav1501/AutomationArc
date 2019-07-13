@@ -512,7 +512,7 @@ public class ReusableMethodsManage extends BaseClass {
 	public editOccupanyAreaAndOpreatingHours(){
 
 		ReusNavigate.navigateIntoDataInput()
-        WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), 5)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), 5)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
 		WebUI.delay(3)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
@@ -802,7 +802,7 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public void mofifyArea(){
 
-		
+
 		navigation.navigateIntoDataInput()
 		setting.buildingSettings()
 		setting.area()
@@ -853,44 +853,39 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public goccupancyErrorUpdate(){
-		
+
 		navigation.navigateIntoDataInput()
 		setting.buildingSettings()
 		setting.occupant()
-		
+
 		String population = WebUI.getText(findTestObject('DataInput/Settings18/TotalValue'))
 		WebUI.verifyMatch(population,'160', false, FailureHandling.CONTINUE_ON_FAILURE)
-		
+
 		/*WebUI.waitForAngularLoad(120, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.scrollToElement(findTestObject('DataInput/Survey/a_ Data Input'),5)
-		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
-		WebUI.delay(8)
-
-		WebUI.waitForElementClickable(findTestObject('Analytics/17/Building Settings'), 60)
-		WebUI.doubleClick(findTestObject('Analytics/17/Building Settings'))
-		WebUI.delay(4)
-
-		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/Setting/Setting'), 60)
-		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Setting/Setting'), 60)
-		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Setting/Setting'), 10)
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Setting/Setting'), 3)
-		WebUI.click(findTestObject('Object Repository/DataInput/Setting/Setting'))
-		WebUI.delay(5)
-
-		WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/OTracker/Page_Arc dashboard/a_Occupancy'), 10)
-		WebUI.scrollToElement(findTestObject('DataInput/Occupancy/OTracker/Page_Arc dashboard/a_Occupancy'), 3)
-		WebUI.click(findTestObject('DataInput/Occupancy/OTracker/Page_Arc dashboard/a_Occupancy'))
-		WebUI.delay(5)
-
-		WebUI.verifyElementVisible(findTestObject('DataInput/Occupancy/OTracker/Page_Arc dashboard/p_Re-enter or change data'), FailureHandling.CONTINUE_ON_FAILURE)
-
-		WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'),'9')
-		WebUI.delay(5)
-		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle'))
-		WebUI.delay(10)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'),'value'),'9', false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyElementNotVisible(findTestObject('DataInput/Occupancy/OTracker/Page_Arc dashboard/p_Re-enter or change data'), FailureHandling.CONTINUE_ON_FAILURE)
-*/
+		 WebUI.scrollToElement(findTestObject('DataInput/Survey/a_ Data Input'),5)
+		 WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+		 WebUI.delay(8)
+		 WebUI.waitForElementClickable(findTestObject('Analytics/17/Building Settings'), 60)
+		 WebUI.doubleClick(findTestObject('Analytics/17/Building Settings'))
+		 WebUI.delay(4)
+		 WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/Setting/Setting'), 60)
+		 WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Setting/Setting'), 60)
+		 WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Setting/Setting'), 10)
+		 WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Setting/Setting'), 3)
+		 WebUI.click(findTestObject('Object Repository/DataInput/Setting/Setting'))
+		 WebUI.delay(5)
+		 WebUI.waitForElementClickable(findTestObject('DataInput/Occupancy/OTracker/Page_Arc dashboard/a_Occupancy'), 10)
+		 WebUI.scrollToElement(findTestObject('DataInput/Occupancy/OTracker/Page_Arc dashboard/a_Occupancy'), 3)
+		 WebUI.click(findTestObject('DataInput/Occupancy/OTracker/Page_Arc dashboard/a_Occupancy'))
+		 WebUI.delay(5)
+		 WebUI.verifyElementVisible(findTestObject('DataInput/Occupancy/OTracker/Page_Arc dashboard/p_Re-enter or change data'), FailureHandling.CONTINUE_ON_FAILURE)
+		 WebUI.setText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'),'9')
+		 WebUI.delay(5)
+		 WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle'))
+		 WebUI.delay(10)
+		 WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'),'value'),'9', false, FailureHandling.CONTINUE_ON_FAILURE)
+		 WebUI.verifyElementNotVisible(findTestObject('DataInput/Occupancy/OTracker/Page_Arc dashboard/p_Re-enter or change data'), FailureHandling.CONTINUE_ON_FAILURE)
+		 */
 
 	}
 
@@ -1315,6 +1310,12 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public void verifyEnergyPortfolioManagerAppInstallByDefault(){
 
+		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+			println "Manage"
+			WebUI.delay(2)
+			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+		}
+		
 		WebUI.scrollToElement(findTestObject('Object Repository/Manage/App/a_ Apps'),2)
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.click(findTestObject('Object Repository/Manage/App/a_ Apps'))
@@ -1323,7 +1324,7 @@ public class ReusableMethodsManage extends BaseClass {
 		println "Verify Portfolio Manager App present"
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/BPortfolioManager'))
 		String text = WebUI.getText(findTestObject('Object Repository/Manage/App/BPortfolioManager'))
-		WebUI.verifyMatch(text,"Installed",false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(text,"Added",false, FailureHandling.CONTINUE_ON_FAILURE)
 
 		println "Uninstalling App and check uninstalled message."
 		WebUI.click(findTestObject('Object Repository/Manage/App/BPortfolioManager'))
@@ -2818,9 +2819,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 	public void verifyAgreementLinks()
 	{
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(4)
-		 WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Manage'))*/
+		
 		WebUI.scrollToElement(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'),2)
 		WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'))
 		WebUI.delay(3)
@@ -2853,10 +2852,6 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void scoreVersionVerification(){
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)
-		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
-		 */
 
 		WebUI.scrollToElement(findTestObject('Manage/CertificationAndScore/a_ Score Version'),2)
 		WebUI.click(findTestObject('Manage/CertificationAndScore/a_ Score Version'))
@@ -2874,11 +2869,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void scoreVersionVerificationCity(){
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)
-		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
-		 */
-		//WebUI.delay(5)
+		
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.scrollToElement(findTestObject('Manage/CertificationAndScore/a_ Score Version'),2)
 		WebUI.click(findTestObject('Manage/CertificationAndScore/a_ Score Version'))
@@ -2946,10 +2937,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void scoreVersionVerification3(){
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)
-		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
-		 WebUI.delay(5)*/
+		
 		WebUI.scrollToElement(findTestObject('Manage/CertificationAndScore/a_ Score Version'),2)
 		WebUI.click(findTestObject('Manage/CertificationAndScore/a_ Score Version'))
 		String scoreVersion = WebUI.getText(findTestObject('Manage/CertificationAndScore/h3_Arc score v2.0'))
@@ -2963,10 +2951,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void scoreVersionVerification1_1(){
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)
-		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
-		 WebUI.delay(5)*/
+		
 		WebUI.scrollToElement(findTestObject('Manage/CertificationAndScore/a_ Score Version'),2)
 		WebUI.click(findTestObject('Manage/CertificationAndScore/a_ Score Version'))
 		String scoreVersion = WebUI.getText(findTestObject('Manage/CertificationAndScore/h3_Arc score v2.0'))
@@ -2985,7 +2970,6 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/CertificationAndScore/currentVersion'))
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/CertificationAndScore/newVersion'))
 		WebUI.delay(2)
-		//WebUI.click(findTestObject('Object Repository/Manage/Setting/ScroeVersionPageSkipButton'))
 		WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
 	}
 
@@ -2995,9 +2979,7 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public void verifyAppInstalledOnDataInputPage(){
 
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)*/
-		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		ReusNavigate.navigateIntoDataInput()
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
@@ -3037,10 +3019,6 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public void verifyAppRemovedOnAddSupportingDocumentsCityComm(){
 
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 //WebUI.delay(1)
-		 //WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Manage'))
-		 WebUI.delay(3)*/
 		WebUI.doubleClick(findTestObject('DataInput/CityCom/a_ Data Input'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('DataInput/CityCom/span_Energy'))
@@ -3054,28 +3032,22 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void verifyUnInstallMsgByUnInstallingApps() throws IOException, InterruptedException {
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)
-		 WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Manage'))*/
+		
 		println "Clicking on Apps"
 		WebUI.scrollToElement(findTestObject('Object Repository/Manage/App/a_ Apps'),2)
-
 		WebUI.click(findTestObject('Object Repository/Manage/App/a_ Apps'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
-		println "Installing Dropbox"
+		println "UnInstalling Dropbox"
 		WebUI.click(findTestObject('Object Repository/Manage/App/BDropbox'))
-		//WebUI.delay(1)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/App/AppUninstalledMessage'),20)
 
-		println  "Installing OneDrive"
+		println  "UnInstalling OneDrive"
 		WebUI.click(findTestObject('Object Repository/Manage/App/BOneDrive'))
-		//WebUI.delay(1)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/App/AppUninstalledMessage'),20)
 
-		println  "Installing GoogleDrive"
+		println  "UnInstalling GoogleDrive"
 		WebUI.click(findTestObject('Object Repository/Manage/App/BgoogleDrive'))
-		//WebUI.delay(5)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/App/AppUninstalledMessage'),20)
 
@@ -3084,9 +3056,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void installCustomApps() throws IOException, InterruptedException {
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)
-		 WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Manage'))*/
+		
 		println "Clicking on Apps"
 		WebUI.scrollToElement(findTestObject('Object Repository/Manage/App/a_ Apps'),2)
 		WebUI.delay(1)
@@ -3094,35 +3064,33 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		println "Installing Dropbox"
-		WebUI.doubleClick(findTestObject('Object Repository/Manage/App/BDropbox'))
+		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/BDropbox'))
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/App/BDropbox')), "Added", false)
 		WebUI.delay(1)
-		//	WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/AppInstalledSuccessMsg'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		
 		println  "Installing OneDrive"
-		WebUI.doubleClick(findTestObject('Object Repository/Manage/App/BOneDrive'))
+		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/BOneDrive'))
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/App/BOneDrive')), "Added", false)
 		WebUI.delay(1)
-		//	WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/AppInstalledSuccessMsg'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		
 		println  "Installing GoogleDrive"
-		WebUI.doubleClick(findTestObject('Object Repository/Manage/App/BgoogleDrive'))
+		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/BgoogleDrive'))
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/App/BgoogleDrive')), "Added", false)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		//	WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/AppInstalledSuccessMsg'))
 	}
 
 	//Manage Settings
 	@Keyword
 	public void verifySettingPageDetailsBuildingAndTransit() throws IOException, InterruptedException {
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)
-		 WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Manage'))*/
-		//WebUI.delay(1)
+		
 		WebUI.scrollToElement(findTestObject('Manage/Setting/a_setting'), 5)
 		WebUI.click(findTestObject('Manage/Setting/a_setting'))
 		//WebUI.delay(3)
 
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
 
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/Setting/lobbySurveyText'))
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/Setting/makeScorePublicText'))
@@ -3220,8 +3188,6 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public void verifyDataResourceAndDataReviewChecklistPdfDownload() throws IOException, InterruptedException {
 
-
-
 		WebUI.scrollToElement(findTestObject('Manage/Setting/a_setting'), 5)
 		WebUI.click(findTestObject('Manage/Setting/a_setting'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
@@ -3250,10 +3216,7 @@ public class ReusableMethodsManage extends BaseClass {
 		String address = data.getCellData(sheetName, "Address", rowNum)
 		String country = data.getCellData(sheetName, "OwnerCountry", rowNum)
 		WebDriver driver  = DriverFactory.getWebDriver()
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)
-		 WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Manage'))
-		 WebUI.delay(1)*/
+		
 		WebUI.scrollToElement(findTestObject('Manage/Setting/a_setting'), 5)
 		WebUI.click(findTestObject('Manage/Setting/a_setting'))
 
@@ -3392,10 +3355,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void verifySEZFilesBillingSection(){
-		/*WebUI.delay(2)
-		 WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)
-		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))*/
+		
 		WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/BillingSection/RegistrationOrderId'), 10)
@@ -3424,12 +3384,12 @@ public class ReusableMethodsManage extends BaseClass {
 		ZipInputStream zipIn = new ZipInputStream(new FileInputStream(zipFilePath))
 		ZipEntry entry = zipIn.getNextEntry()
 		// iterates over entries in the zip file
-		while (entry != null) {
+		 while (entry != null) {
 			String filePath = destDirectory + File.separator + entry.getName()
 			if (!entry.isDirectory()) {
 				// if the entry is a file, extracts it
 				extractFile(zipIn, filePath)
-			} else {
+			 } else {
 				// if the entry is a directory, make the directory
 				File dir = new File(filePath)
 				dir.mkdir()
@@ -3455,9 +3415,6 @@ public class ReusableMethodsManage extends BaseClass {
 		deleteFile(sourceZipFile)
 		deleteFile(sourceExtractedFile)
 		WebUI.delay(5)
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)
-		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))*/
 		WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
 		WebUI.delay(8)
@@ -3500,26 +3457,6 @@ public class ReusableMethodsManage extends BaseClass {
 	}
 
 
-	/*@Keyword
-	 public void getTestDesc(){
-	 BodyContentHandler handler = new BodyContentHandler();
-	 Metadata metadata = new Metadata();
-	 FileInputStream inputstream = new FileInputStream(new File(
-	 CommonMethod.ServiceAgreement));
-	 ParseContext pcontext = new ParseContext();
-	 //parsing the document using PDF parser
-	 PDFParser pdfparser = new PDFParser();
-	 pdfparser.parse(inputstream, handler, metadata,pcontext);
-	 //getting the content of the document
-	 System.out.println("Contents of the PDF :" + handler.toString());
-	 //getting metadata of the document
-	 System.out.println("Metadata of the PDF:");
-	 String[] metadataNames = metadata.names();
-	 for(String name : metadataNames) {
-	 System.out.println(name+ " : " + metadata.get(name));
-	 }
-	 }*/
-
 	@Keyword
 	public void tVOCNotificaitonTest() throws IOException, InterruptedException {
 		WebUI.delay(1)
@@ -3544,7 +3481,6 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Object Repository/DataInput/CityC/DeleteButton1'))
 		WebUI.click(findTestObject('Object Repository/DataInput/CityC/DeleteButton2'))
 		WebUI.delay(7)
-		//WebUI.verifyElementNotPresent(null, BUFFER_SIZE)
 		WebUI.verifyElementNotPresent(findTestObject('DataInput/Not/CO2Notification'),5)
 
 	}
@@ -3554,7 +3490,6 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/div_AnalyticsEnergy Meter via'))
 		WebUI.delay(3)
 		WebUI.click(findTestObject('Object Repository/DataInput/CityC/DeleteButton1'))
-		//	 WebUI.click(findTestObject('Object Repository/DataInput/CityC/DeleteButton2'))
 		WebUI.delay(7)
 		WebUI.verifyElementNotPresent(findTestObject('Object Repository/DataInput/NotSym/svg_AnalyticsEnergy Meter via'),5)
 
@@ -3565,7 +3500,6 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/div_AnalyticsWater meter via u'))
 		WebUI.delay(3)
 		WebUI.click(findTestObject('Object Repository/DataInput/CityC/DeleteButton1'))
-		//	 WebUI.click(findTestObject('Object Repository/DataInput/CityC/DeleteButton2'))
 		WebUI.delay(10)
 		WebUI.verifyElementPresent(findTestObject('Object Repository/DataInput/NotSym/svg_AnalyticsWater meter via u'),5)
 
@@ -3582,7 +3516,6 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
 		WebUI.click(findTestObject('Object Repository/PerformanceScore/DataInput/Delete'))
-		// WebUI.click(findTestObject('Object Repository/DataInput/CityC/DeleteButton2'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 		WebUI.delay(5)
@@ -3663,8 +3596,6 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(2)
 		WebUI.scrollToElement(findTestObject('DataInput/TRNotification/div_Pm10'),5)
 		WebUI.click(findTestObject('DataInput/TRNotification/div_Pm10'))
-		//	WebUI.delay(5)
-		//	WebUI.verifyElementPresent(findTestObject('DataInput/TRNotification/svg_PM10_error_symbol error_sy'),5)
 
 	}
 	@Keyword
@@ -3697,9 +3628,6 @@ public class ReusableMethodsManage extends BaseClass {
 	public void transportsurveyNotifciationTest() throws IOException, InterruptedException {
 		WebUI.delay(1)
 		WebUI.verifyElementVisible(findTestObject('DataInput/Notification1/Waste Data_error_symbol'))
-
-		//WebUI.verifyElementPresent(findTestObject('DataInput/Notification1/Waste Data_error_symbol'),5)
-
 	}
 
 	@Keyword
@@ -3801,7 +3729,6 @@ public class ReusableMethodsManage extends BaseClass {
 				WebUI.delay(2)
 				WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 			}
-			//WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 			WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
 			WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
 
@@ -3810,10 +3737,7 @@ public class ReusableMethodsManage extends BaseClass {
 			String regDate= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/registrationPaymentDate'))
 			String regOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationOrderId'))
 			String regOrderType= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/span_REGISTRATION'))
-			//	String regAmount= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationAmount'))
 			String regStatus= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Status'))
-
-			//	WebUI.verifyMatch(regAmount,regdAmt,false,FailureHandling.CONTINUE_ON_FAILURE)
 			WebUI.verifyMatch(regStatus,paymentStatus,false,FailureHandling.CONTINUE_ON_FAILURE)
 
 		}
@@ -3828,7 +3752,6 @@ public class ReusableMethodsManage extends BaseClass {
 				WebUI.delay(2)
 				WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 			}
-			//WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 			WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
 			WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
 			WebUI.delay(5)
@@ -3838,7 +3761,6 @@ public class ReusableMethodsManage extends BaseClass {
 			String regAmount= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationAmount'))
 			String regStatus= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Status'))
 			WebUI.verifyMatch(regAmount,regdAmt,false,FailureHandling.CONTINUE_ON_FAILURE)
-			//WebUI.verifyMatch(regStatus,paymentStatus,false,FailureHandling.CONTINUE_ON_FAILURE)
 		}
 	}
 
@@ -3862,7 +3784,6 @@ public class ReusableMethodsManage extends BaseClass {
 				WebUI.delay(2)
 				WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 			}
-			//WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 			WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
 			WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
 
@@ -3871,10 +3792,7 @@ public class ReusableMethodsManage extends BaseClass {
 			String regDate= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/registrationPaymentDate'))
 			String regOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationOrderId'))
 			String regOrderType= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/span_REGISTRATION'))
-			//	String regAmount= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationAmount'))
 			String regStatus= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Status'))
-
-			//	WebUI.verifyMatch(regAmount,regdAmt,false,FailureHandling.CONTINUE_ON_FAILURE)
 			WebUI.verifyMatch(regStatus,paymentStatus,false,FailureHandling.CONTINUE_ON_FAILURE)
 
 		}
@@ -3889,7 +3807,6 @@ public class ReusableMethodsManage extends BaseClass {
 				WebUI.delay(2)
 				WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 			}
-			//WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 			WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
 			WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
 			WebUI.delay(5)
@@ -3924,7 +3841,6 @@ public class ReusableMethodsManage extends BaseClass {
 			String regOrderType= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/span_REGISTRATION'))
 			String regAmount= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationAmount'))
 			String regStatus= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Status'))
-			//WebUI.verifyMatch(regAmount,regdAmt,false,FailureHandling.CONTINUE_ON_FAILURE)
 			WebUI.verifyMatch(regStatus,paymentStatus,false,FailureHandling.CONTINUE_ON_FAILURE)
 
 		}
@@ -3957,7 +3873,6 @@ public class ReusableMethodsManage extends BaseClass {
 	public void billingStatusPriceCC(String sheetName, int rowNum){
 		if(GlobalVariable.environment=='dev'){
 			WebUI.delay(2)
-			//String regdAmt = data.getCellData(sheetName,"BillingPrice", rowNum)
 			String paymentStatus = data.getCellData(sheetName, "PaymentStatus", rowNum)
 			WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
 			WebUI.delay(1)
@@ -3966,7 +3881,6 @@ public class ReusableMethodsManage extends BaseClass {
 				WebUI.delay(2)
 				WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 			}
-			//WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 			WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
 			WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
 
@@ -3975,9 +3889,7 @@ public class ReusableMethodsManage extends BaseClass {
 			String regDate= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/registrationPaymentDate'))
 			String regOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationOrderId'))
 			String regOrderType= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/span_REGISTRATION'))
-			//	String regAmount= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationAmount'))
 			String regStatus= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Status'))
-			//WebUI.verifyMatch(regAmount,regdAmt,false,FailureHandling.CONTINUE_ON_FAILURE)
 		}
 		else{
 			WebUI.delay(2)
@@ -3990,7 +3902,6 @@ public class ReusableMethodsManage extends BaseClass {
 				WebUI.delay(2)
 				WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 			}
-			//WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 			WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
 			WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
 
@@ -4003,9 +3914,43 @@ public class ReusableMethodsManage extends BaseClass {
 			String regStatus= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Status'))
 
 			WebUI.verifyMatch(regAmount,regdAmt,false,FailureHandling.CONTINUE_ON_FAILURE)
-			//WebUI.verifyMatch(regStatus,'Completed',false,FailureHandling.CONTINUE_ON_FAILURE)
 		}
 	}
+
+
+	//Measurabl Methods
+
+	//Start the Measurable step
+
+	@Keyword
+	public void NavigateToMeasurablPaymentPage(String paymentType){
+
+		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+			println "Manage"
+			WebUI.delay(2)
+			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+		}
+		
+		WebUI.scrollToElement(findTestObject('Object Repository/Manage/App/a_ Apps'),2)
+		WebUI.click(findTestObject('Object Repository/Manage/App/a_ Apps'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		
+		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/Measurabl/LearnMoreMeasurabl'))
+		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/BillingSection/Measurabl/MeasurablCompanyWebsiteLink'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/Measurabl/GetStartedButtonForMeasurabl'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/BillingSection/Measurabl/IntegrationPaymentTextOnPaymentPage'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/BillingSection/Measurabl/IntegrationPaymentTextOnPaymentPage'), GlobalVariable.minAngularWait)
+		
+		if(paymentType.equals("monthly")){
+			WebUI.click(findTestObject('Object Repository/Manage/BillingSection/Measurabl/MonthlyPaymentCheckbox'))
+		}
+		else{
+			WebUI.click(findTestObject('Object Repository/Manage/BillingSection/Measurabl/MeasurablePriceYearlyCommitment'))
+		}
+	}
+
+
+
 
 
 }

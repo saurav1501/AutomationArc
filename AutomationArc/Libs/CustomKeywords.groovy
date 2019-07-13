@@ -4837,3 +4837,9 @@ def static "com.arc.ReusableMethods.ReusableMethodsManage.billingStatusPriceCC"(
         	sheetName
          , 	rowNum)
 }
+
+def static "com.arc.ReusableMethods.ReusableMethodsManage.NavigateToMeasurablPaymentPage"(
+    	String paymentType	) {
+    (new com.arc.ReusableMethods.ReusableMethodsManage()).NavigateToMeasurablPaymentPage(
+        	paymentType)
+}

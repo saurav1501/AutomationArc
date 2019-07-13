@@ -6,12 +6,11 @@
    <elementGuidId>a831285f-5597-486a-be0b-98816e1f932e</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//*[@data-ng-repeat=&quot;app in integrations&quot;])[2]//td[2]/p[1]</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>(//*[@ng-change=&quot;togglePricing()&quot;])[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

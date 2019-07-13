@@ -558,7 +558,7 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 		//WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.doubleClick(findTestObject('Page_Arc dashboard/span_B1 - Placemaking'))
-	    WebUI.delay(6)
+		WebUI.delay(6)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.mouseOver(findTestObject('Manage/Parking/UploadDoccumentParking'))
 		WebUI.delay(3)
@@ -672,7 +672,7 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 		WebUI.verifyElementVisible(findTestObject('Manage/Parking/Project/td_Gross floor area'), FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyElementNotPresent(findTestObject('Manage/Parking/Project/Space type'),4, FailureHandling.CONTINUE_ON_FAILURE)
 	}
-	
+
 	@Keyword
 	public void verifyProjectDetailsParking(String sheetName,int rowNum) throws IOException, InterruptedException {
 
@@ -766,7 +766,7 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyElementNotVisible(findTestObject('Add_Project_Details/Par/p_LETS GET STARTED'))
 		WebUI.verifyElementNotPresent(findTestObject('Add_Project_Details/Par/p_Select a term to access the'),3)
-        
+
 	}
 
 	@Keyword

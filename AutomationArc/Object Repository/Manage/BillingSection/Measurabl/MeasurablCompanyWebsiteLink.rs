@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description></description>
-   <name>MeasurablePriceYearlyCommitment</name>
+   <description>Check if the company website linkis correct.</description>
+   <name>MeasurablCompanyWebsiteLink</name>
    <tag></tag>
-   <elementGuidId>c46f7138-9bfd-43d7-afbd-eb2ca8b87bba</elementGuidId>
+   <elementGuidId>1a30e33a-5f9b-4d1e-8445-085711471cb7</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//*[@ng-change=&quot;togglePricing()&quot;])[1]</value>
+         <value>//a[text()='Company Website']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

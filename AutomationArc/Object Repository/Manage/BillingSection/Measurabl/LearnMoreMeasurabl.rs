@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description></description>
-   <name>MeasurablePriceYearlyCommitment</name>
+   <description>click on learn more button to start the measurabl</description>
+   <name>LearnMoreMeasurabl</name>
    <tag></tag>
-   <elementGuidId>c46f7138-9bfd-43d7-afbd-eb2ca8b87bba</elementGuidId>
+   <elementGuidId>9dc5c720-3ebc-4fd4-9b38-0f1e9eec5819</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//*[@ng-change=&quot;togglePricing()&quot;])[1]</value>
+         <value>//*[@ng-click=&quot;openHelpSidebar('measurabl')&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
