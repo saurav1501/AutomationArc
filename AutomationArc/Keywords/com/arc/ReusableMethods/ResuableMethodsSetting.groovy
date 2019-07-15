@@ -323,6 +323,10 @@ public class ResuableMethodsSetting extends BaseClass{
 
 		navigation.navigateIntoDataInput()
 
+		if(WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore')).equalsIgnoreCase('')){
+			WebUI.delay(10)
+		}
+		
 		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
 		println totalPerformaceScore
 		data.setCellData(GlobalVariable.BDataInput,"ATotalScore", GlobalVariable.rowNumTwo, totalPerformaceScore)
@@ -359,7 +363,7 @@ public class ResuableMethodsSetting extends BaseClass{
 		Integer totalperformaceScore = Integer.parseInt(totalPerformaceScore)
 
 		if(WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore')).equalsIgnoreCase('')){
-			WebUI.delay(7)
+			WebUI.delay(10)
 		}
 
 		String mtotalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
