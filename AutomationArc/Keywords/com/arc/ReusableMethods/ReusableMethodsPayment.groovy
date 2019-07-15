@@ -23,7 +23,7 @@ public class ReusableMethodsPayment extends BaseClass{
 	ReusableMethodsSubmitReview submitReviewObj = new ReusableMethodsSubmitReview()
 	ReusableMethodsSearch reusableMethodsSearch = new ReusableMethodsSearch()
 	WebDriver driver = DriverFactory.getWebDriver()
-	String Project_ID
+	public static String Project_ID
 	//select for the project trial
 	@Keyword
 	public void selectTrial(){
@@ -1568,7 +1568,7 @@ public class ReusableMethodsPayment extends BaseClass{
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Promocode/PromocodeDiscount'), GlobalVariable.minAngularWait)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Promocode/PromocodeDiscount')), "-"+discountedPrice, false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Promocode/TotalAmountAfterDiscount')),discountedPrice , false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Promocode/TotalAmountAfterDiscount')), '$0.00' , false)
 		dataExcelTemplate.setCellData(dataSheet, "ProjectIDHundred", rowNum, Project_ID)
 	}
 

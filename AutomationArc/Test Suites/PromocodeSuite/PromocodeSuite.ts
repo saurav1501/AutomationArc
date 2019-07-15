@@ -13,8 +13,8 @@
    <testCaseLink>
       <guid>ae0d921a-4d0e-4232-9d15-2798e22198f5</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Promocode/Building/BuildingNone/AddNewProjectTest</testCaseId>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Promocode/Building/BuildingNone/AddNewProjectBuildingNoneTest</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
@@ -37,14 +37,14 @@
    <testCaseLink>
       <guid>474102fb-d6e9-4efa-9c3c-1a83c8709341</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Promocode/Building/BuildingNone/PaymentByCreditCardWithFiftyPercentPromoTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>2414d935-8ba9-4f29-95d7-21c95b2aa3ba</guid>
+      <guid>07d1319f-da81-4749-b12b-cbef10d19e2e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Promocode/Building/BuildingNone/AddNewProjectTest</testCaseId>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Promocode/Building/BuildingNone/AddNewProjectBuildingNoneTest</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
          <type>DEFAULT</type>
@@ -67,7 +67,127 @@
    <testCaseLink>
       <guid>7be8a432-6c27-47d7-90ef-b674db90a19f</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Promocode/Building/BuildingNone/PaymentByCreditCardWithHundredPercentPromoTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>9ee95413-2ec9-4adb-a479-bd22e4f2c26d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Promocode/Building/BuildingOther/AddNewProjectBuildingOtherTest</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>8bfb7deb-b2f8-43dd-8d80-f1846fce6c64</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>dcd0b188-67da-44e0-bc81-b677139ccc68</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>2450e9eb-d5fe-44a0-a0e5-b48e25b0762f</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>0325858c-7f25-4628-a495-3ab00ba6ac4e</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Promocode/Building/BuildingOther/PaymentByCreditCardWithFiftyPercentPromoTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>6733fc40-362e-4208-a67a-5a02d7f5e58f</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Promocode/Building/BuildingOther/AddNewProjectBuildingOtherTest</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>8bfb7deb-b2f8-43dd-8d80-f1846fce6c64</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>dcd0b188-67da-44e0-bc81-b677139ccc68</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>2450e9eb-d5fe-44a0-a0e5-b48e25b0762f</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>55de922a-5a3c-4f91-a5f7-18c8aa46ae78</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>false</isRun>
+      <testCaseId>Test Cases/Promocode/Building/BuildingOther/PaymentByCreditCardWithHundredPercentPromoTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>0b812d84-452e-4f3a-923d-2a6de6d0336e</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Promocode/Building/Schools/AddNewProjectSchoolTest</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>78d9acfb-55c0-4928-881e-f6dcb07c333d</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>d0a7e6fc-9948-4be3-99cb-99ec73ca6160</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>5be44c21-5d81-4c25-b2c1-72b8078b792c</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>1603e7f2-fc44-4169-8b3b-910f163168b3</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Promocode/Building/Schools/PaymentByCreditCardWithFiftyPercentPromoTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>8604f35b-496a-400d-8557-e2cc927a9ca2</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Promocode/Building/Schools/AddNewProjectSchoolTest</testCaseId>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>78d9acfb-55c0-4928-881e-f6dcb07c333d</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>d0a7e6fc-9948-4be3-99cb-99ec73ca6160</variableId>
+      </variableLink>
+      <variableLink>
+         <testDataLinkId></testDataLinkId>
+         <type>DEFAULT</type>
+         <value></value>
+         <variableId>5be44c21-5d81-4c25-b2c1-72b8078b792c</variableId>
+      </variableLink>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>c42a7a7e-2857-4604-b0f4-8ee130d93ae3</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Promocode/Building/Schools/PaymentByCreditCardWithHundredPercentPromoTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
