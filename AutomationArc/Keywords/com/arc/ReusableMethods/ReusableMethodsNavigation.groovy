@@ -252,7 +252,7 @@ public class ReusableMethodsNavigation {
 		WebUI.click(findTestObject('Object Repository/SubmitReview/clickOnSideBar'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait, FailureHandling.OPTIONAL)
 	}
 
 
@@ -260,9 +260,14 @@ public class ReusableMethodsNavigation {
 	public void navigateToAnalyticsTotal() {
 		WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'),5)
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
+		boolean notTrue= WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
+        if(notTrue==false)
+		{
+		WebUI.refresh()
+		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
+		}	
 	}
 
 	@Keyword

@@ -52,10 +52,6 @@ public class ResuableMethodsSetting extends BaseClass{
 		WebUI.delay(2)
 		WebUI.click(findTestObject('DataInput/Settings18/button_Close'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.delay(5)
-		WebUI.refresh()
-		WebUI.delay(5)
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 	
 	}
 
@@ -182,7 +178,7 @@ public class ResuableMethodsSetting extends BaseClass{
 	@Keyword
 	public void checkAllOccpant() {
 		setExclude()
-		checkExclude()
+		//checkExclude()
 		checkRadioAllOccupant()
 	}
 
