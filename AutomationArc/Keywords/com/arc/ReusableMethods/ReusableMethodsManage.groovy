@@ -1330,8 +1330,8 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Object Repository/Manage/App/BPortfolioManager'))
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/Manage/App/BPortfolioManager'), GlobalVariable.maxAngularWait)
-		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/AppUninstalledMessage'))
-
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/App/AppUninstalledMessage'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/App/AppUninstalledMessage'), GlobalVariable.minAngularWait)
 	}
 
 
@@ -3947,9 +3947,17 @@ public class ReusableMethodsManage extends BaseClass {
 		else{
 			WebUI.click(findTestObject('Object Repository/Manage/BillingSection/Measurabl/MeasurablePriceYearlyCommitment'))
 		}
+		
 	}
-
-
+    @Keyword   
+	public void paymentPageMonthlyAndAnuallyPriceValidation(){
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.verifyElementPresent(findTestObject('Object Repository/Manage/BillingSection/Measurabl/AnnualPaymentTextLabel'), GlobalVariable.minAngularWait)
+		WebUI.verifyElementPresent(findTestObject('Object Repository/Manage/BillingSection/Measurabl/MonthlyPaymentCheckbox'), GlobalVariable.minAngularWait)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/AnnualPaymentTextLabel')),'Annually - $120.0 annual payment',false,FailureHandling.STOP_ON_FAILURE)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/MonthlyPaymentCheckbox')),'Monthly - $10.0 per month ($120.0 yearly contract)',false,FailureHandling.STOP_ON_FAILURE)
+		
+	}
 
 
 

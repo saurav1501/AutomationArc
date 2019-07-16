@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify if the correct price is labelled on the payment page.</description>
+   <name>VerifyThePriceTextOnTheMeasurablPaymentPageTest</name>
+   <tag>Verify the price printed on the Payment page</tag>
+   <comment></comment>
+   <testCaseGuid>e9560629-4767-4a2b-bf61-d7c64020a629</testCaseGuid>
+</TestCaseEntity>
