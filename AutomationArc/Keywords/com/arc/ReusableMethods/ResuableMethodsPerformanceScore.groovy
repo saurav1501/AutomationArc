@@ -384,20 +384,19 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.setText(findTestObject('PerformanceScore/PorjectId'),projectId)
 		WebUI.delay(2)
 		WebUI.click(findTestObject('PerformanceScore/RecomputeScore'))
-		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait,FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait, FailureHandling.OPTIONAL)
 
-		boolean keepGoing = WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait,FailureHandling.CONTINUE_ON_FAILURE)
-
+		boolean keepGoing = WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 		if(keepGoing== false)
-
 			for(int i=0;i<=1;i++){
 				WebUI.click(findTestObject('PerformanceScore/RecomputeScoreButton'))
 				WebUI.delay(3)
 				WebUI.setText(findTestObject('PerformanceScore/PorjectId'),projectId)
 				WebUI.delay(2)
 				WebUI.click(findTestObject('PerformanceScore/RecomputeScore'))
-				WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait,FailureHandling.CONTINUE_ON_FAILURE)
-				keepGoing = WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait,FailureHandling.CONTINUE_ON_FAILURE)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
+				keepGoing = WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
+
 			}
 
 		WebUI.switchToWindowIndex(0)

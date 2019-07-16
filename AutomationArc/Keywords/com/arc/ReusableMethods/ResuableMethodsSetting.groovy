@@ -352,7 +352,8 @@ public class ResuableMethodsSetting extends BaseClass{
 	public void navigationTeam() {
 		WebUI.scrollToElement(findTestObject('Manage/TeamModule/a_ Team'),2)
 		WebUI.click(findTestObject('Manage/TeamModule/a_ Team'))
-		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait, FailureHandling.OPTIONAL)
 	}
 	@Keyword
 	public void verifyTotalScoreShouldMore() {
@@ -454,7 +455,7 @@ public class ResuableMethodsSetting extends BaseClass{
 		areaEnergy()
 		areaVisibilty()
 		deleteButtonArea()
-		deleteButtonArea()
+
 
 	}
 
@@ -465,7 +466,7 @@ public class ResuableMethodsSetting extends BaseClass{
 		areaWater()
 		areaVisibilty()
 		deleteButtonArea()
-		deleteButtonArea()
+
 
 	}
 
@@ -529,7 +530,6 @@ public class ResuableMethodsSetting extends BaseClass{
 		//******************************************Waste*********************************/
 		areaWaste()
 		areaVisibilty()
-		deleteButtonArea()
 		deleteButtonArea()
 	}
 

@@ -239,10 +239,10 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/Score/VerifyDeleteAreaEnergyTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>5e91c67b-0094-4cf6-8c63-a24a3e0ac4b9</guid>
+      <guid>ca425197-6fbb-4433-9bc4-b19b796e339f</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/Score/VerifyWaterScoreShouldBeZeroTest</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/Score/VerifyEnergyScoreShouldBeZeroTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>965c74b3-c757-4d62-a3a4-290ffdc0b929</guid>
@@ -251,10 +251,10 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/Score/VerifyDeleteAreaWaterTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>ca425197-6fbb-4433-9bc4-b19b796e339f</guid>
+      <guid>5e91c67b-0094-4cf6-8c63-a24a3e0ac4b9</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/Score/VerifyEnergyScoreShouldBeZeroTest</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/Score/VerifyWaterScoreShouldBeZeroTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>bce7bffb-ff63-4b12-8bae-2f89485e2cd0</guid>
