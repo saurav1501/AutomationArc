@@ -183,6 +183,12 @@ public class ResuableMethodsSetting extends BaseClass{
 	}
 
 	@Keyword
+	public void uncheckAllOccpant() {
+		setExclude()
+		checkExclude()
+	
+	}
+	@Keyword
 	public void checkRegular() {
 		setExclude()
 		checkRegularOccupant()
@@ -371,9 +377,9 @@ public class ResuableMethodsSetting extends BaseClass{
 		String mtotalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
 		Integer mTotalPerformaceScore = Integer.parseInt(mtotalPerformaceScore)
 
-		if(totalperformaceScore < mTotalPerformaceScore)
+		if(totalperformaceScore <= mTotalPerformaceScore)
 
-			KeywordUtil.markPassed('SUCCESS: PERFORMANCE SCORE IS INCREASED AFTER CHANGING THE UNIT')
+			KeywordUtil.markPassed('SUCCESS: PERFORMANCE SCORE IS SAME/INCREASED AFTER CHANGING THE UNIT')
 
 		else
 			KeywordUtil.markFailed('FAIL : PERFORMANCE SCORE IS NOT INCREASED AFTER CHANGING THE UNIT')
