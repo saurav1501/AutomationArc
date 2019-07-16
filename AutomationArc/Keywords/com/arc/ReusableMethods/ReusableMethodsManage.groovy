@@ -3,7 +3,6 @@ import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
 import java.awt.Robot
 import java.awt.event.KeyEvent
-import java.io.IOException
 import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.time.LocalDateTime
@@ -14,13 +13,11 @@ import java.util.zip.ZipInputStream
 import org.apache.pdfbox.pdmodel.PDDocument
 import org.apache.pdfbox.text.PDFTextStripper
 import org.openqa.selenium.WebDriver
-import org.stringtemplate.v4.compiler.STParser.namedArg_return
 import org.testng.Assert
 
 import com.arc.BaseClass.BaseClass
 import com.arc.BaseClass.CommonMethod
 import com.kms.katalon.core.annotation.Keyword
-import com.kms.katalon.core.logging.KeywordLogger
 import com.kms.katalon.core.model.FailureHandling
 import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.driver.DriverFactory
@@ -1315,7 +1312,7 @@ public class ReusableMethodsManage extends BaseClass {
 			WebUI.delay(2)
 			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 		}
-		
+
 		WebUI.scrollToElement(findTestObject('Object Repository/Manage/App/a_ Apps'),2)
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.click(findTestObject('Object Repository/Manage/App/a_ Apps'))
@@ -2819,7 +2816,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 	public void verifyAgreementLinks()
 	{
-		
+
 		WebUI.scrollToElement(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'),2)
 		WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'))
 		WebUI.delay(3)
@@ -2869,7 +2866,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void scoreVersionVerificationCity(){
-		
+
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.scrollToElement(findTestObject('Manage/CertificationAndScore/a_ Score Version'),2)
 		WebUI.click(findTestObject('Manage/CertificationAndScore/a_ Score Version'))
@@ -2937,7 +2934,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void scoreVersionVerification3(){
-		
+
 		WebUI.scrollToElement(findTestObject('Manage/CertificationAndScore/a_ Score Version'),2)
 		WebUI.click(findTestObject('Manage/CertificationAndScore/a_ Score Version'))
 		String scoreVersion = WebUI.getText(findTestObject('Manage/CertificationAndScore/h3_Arc score v2.0'))
@@ -2951,7 +2948,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void scoreVersionVerification1_1(){
-		
+
 		WebUI.scrollToElement(findTestObject('Manage/CertificationAndScore/a_ Score Version'),2)
 		WebUI.click(findTestObject('Manage/CertificationAndScore/a_ Score Version'))
 		String scoreVersion = WebUI.getText(findTestObject('Manage/CertificationAndScore/h3_Arc score v2.0'))
@@ -3032,7 +3029,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void verifyUnInstallMsgByUnInstallingApps() throws IOException, InterruptedException {
-		
+
 		println "Clicking on Apps"
 		WebUI.scrollToElement(findTestObject('Object Repository/Manage/App/a_ Apps'),2)
 		WebUI.click(findTestObject('Object Repository/Manage/App/a_ Apps'))
@@ -3056,7 +3053,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void installCustomApps() throws IOException, InterruptedException {
-		
+
 		println "Clicking on Apps"
 		WebUI.scrollToElement(findTestObject('Object Repository/Manage/App/a_ Apps'),2)
 		WebUI.delay(1)
@@ -3068,13 +3065,13 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/App/BDropbox')), "Added", false)
 		WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		
+
 		println  "Installing OneDrive"
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/BOneDrive'))
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/App/BOneDrive')), "Added", false)
 		WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		
+
 		println  "Installing GoogleDrive"
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/BgoogleDrive'))
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/App/BgoogleDrive')), "Added", false)
@@ -3084,7 +3081,7 @@ public class ReusableMethodsManage extends BaseClass {
 	//Manage Settings
 	@Keyword
 	public void verifySettingPageDetailsBuildingAndTransit() throws IOException, InterruptedException {
-		
+
 		WebUI.scrollToElement(findTestObject('Manage/Setting/a_setting'), 5)
 		WebUI.click(findTestObject('Manage/Setting/a_setting'))
 		//WebUI.delay(3)
@@ -3216,7 +3213,7 @@ public class ReusableMethodsManage extends BaseClass {
 		String address = data.getCellData(sheetName, "Address", rowNum)
 		String country = data.getCellData(sheetName, "OwnerCountry", rowNum)
 		WebDriver driver  = DriverFactory.getWebDriver()
-		
+
 		WebUI.scrollToElement(findTestObject('Manage/Setting/a_setting'), 5)
 		WebUI.click(findTestObject('Manage/Setting/a_setting'))
 
@@ -3355,7 +3352,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void verifySEZFilesBillingSection(){
-		
+
 		WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/BillingSection/RegistrationOrderId'), 10)
@@ -3384,12 +3381,12 @@ public class ReusableMethodsManage extends BaseClass {
 		ZipInputStream zipIn = new ZipInputStream(new FileInputStream(zipFilePath))
 		ZipEntry entry = zipIn.getNextEntry()
 		// iterates over entries in the zip file
-		 while (entry != null) {
+		while (entry != null) {
 			String filePath = destDirectory + File.separator + entry.getName()
 			if (!entry.isDirectory()) {
 				// if the entry is a file, extracts it
 				extractFile(zipIn, filePath)
-			 } else {
+			} else {
 				// if the entry is a directory, make the directory
 				File dir = new File(filePath)
 				dir.mkdir()
@@ -3930,35 +3927,168 @@ public class ReusableMethodsManage extends BaseClass {
 			WebUI.delay(2)
 			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 		}
-		
+
 		WebUI.scrollToElement(findTestObject('Object Repository/Manage/App/a_ Apps'),2)
 		WebUI.click(findTestObject('Object Repository/Manage/App/a_ Apps'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		
+
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/Measurabl/LearnMoreMeasurabl'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/BillingSection/Measurabl/MeasurablCompanyWebsiteLink'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/Measurabl/GetStartedButtonForMeasurabl'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/BillingSection/Measurabl/IntegrationPaymentTextOnPaymentPage'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/BillingSection/Measurabl/IntegrationPaymentTextOnPaymentPage'), GlobalVariable.minAngularWait)
-		
+
 		if(paymentType.equals("monthly")){
 			WebUI.click(findTestObject('Object Repository/Manage/BillingSection/Measurabl/MonthlyPaymentCheckbox'))
 		}
 		else{
 			WebUI.click(findTestObject('Object Repository/Manage/BillingSection/Measurabl/MeasurablePriceYearlyCommitment'))
 		}
-		
+
 	}
-    @Keyword   
+	@Keyword
 	public void paymentPageMonthlyAndAnuallyPriceValidation(){
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyElementPresent(findTestObject('Object Repository/Manage/BillingSection/Measurabl/AnnualPaymentTextLabel'), GlobalVariable.minAngularWait)
 		WebUI.verifyElementPresent(findTestObject('Object Repository/Manage/BillingSection/Measurabl/MonthlyPaymentCheckbox'), GlobalVariable.minAngularWait)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/AnnualPaymentTextLabel')),'Annually - $120.0 annual payment',false,FailureHandling.STOP_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/MonthlyPaymentCheckbox')),'Monthly - $10.0 per month ($120.0 yearly contract)',false,FailureHandling.STOP_ON_FAILURE)
-		
+
 	}
 
 
 
+
+	@Keyword
+	public void billingStatusAndDetailsMeasurabl(String sheetName, int rowNum){
+		//WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		String measurablAmt = data.getCellData(sheetName, "MeasurablAmount", rowNum)
+		String orderType = data.getCellData(sheetName, "MeasurablOrderType", rowNum)
+		String registrationDate = data.getCellData(sheetName, "RegDate", rowNum)
+
+		WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
+		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Loaders/ProjectDashboardLoader'), 30)
+		//Measurabl Payment details verification
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		String regDate= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/MeasurablBillingDate'))
+		WebUI.verifyMatch(regDate, registrationDate, false , FailureHandling.CONTINUE_ON_FAILURE)
+		String measurablOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/MeasurablOrderID'))
+		data.setCellData(sheetName, "MeasurablOrderID", rowNum,measurablOrderId)
+		String regOrderType= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/MeasurablOrderType'))
+		WebUI.verifyMatch(regOrderType, "MEASURABL", false, FailureHandling.CONTINUE_ON_FAILURE)
+		String regStatus= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/MeasurablPaymentStatus'))
+		WebUI.verifyMatch(regStatus, "Completed", false, FailureHandling.CONTINUE_ON_FAILURE)
+		String measurablAmount= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/MeasurablBillingAmount'))
+		WebUI.verifyMatch(measurablAmount, measurablAmt, false, FailureHandling.CONTINUE_ON_FAILURE)
+	}
+
+	@Keyword
+	public void verifyMeasurablIntegrationAllowedOnce(){
+
+		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+			println "Manage"
+			WebUI.delay(2)
+			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+		}
+
+		WebUI.scrollToElement(findTestObject('Object Repository/Manage/App/a_ Apps'),2)
+		WebUI.click(findTestObject('Object Repository/Manage/App/a_ Apps'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/Measurabl/LearnMoreMeasurabl'))
+		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/BillingSection/Measurabl/MeasurablCompanyWebsiteLink'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/Measurabl/GetStartedButtonForMeasurabl'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/BillingSection/Measurabl/VerifyMeasurablIntegrationAllowedOnceText'),GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/BillingSection/Measurabl/VerifyMeasurablIntegrationAllowedOnceText'),GlobalVariable.minAngularWait)
+		String warningMsg= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/VerifyMeasurablIntegrationAllowedOnceText'))
+		WebUI.verifyMatch(warningMsg, "No integration option once integration is done", false)
+		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/Measurabl/CloseWarningPopUp'))
+	}
+
+	public String nextPaymentDate(){
+		Date current = new Date();
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(current);
+		cal.set(Calendar.MONTH, (cal.get(Calendar.MONTH)+1));
+		current = cal.getTime();
+		DateFormat dateFormat = new SimpleDateFormat("MMM dd, yyyy");
+		String date1=  dateFormat.format(current);
+		System.out.println(date1);
+		return date1
+	}
+	
+	@Keyword
+	public void verifyTheIntegrationTabDetails(){
+		
+		String regDate = nextPaymentDate()
+		
+		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/Measurabl/IntegrationsTabs'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		String nameOfIntegration= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/NameOfIntegration'))
+		WebUI.verifyMatch(nameOfIntegration, "Measurabl", false, FailureHandling.CONTINUE_ON_FAILURE)
+		String subscriptionPriceMonthly = WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/SubscriptionPricePerMonth'))
+		WebUI.verifyMatch(subscriptionPriceMonthly, '$10.00 / month', false, FailureHandling.CONTINUE_ON_FAILURE)
+		String subscriptionPriceYearly= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/SubscriptionPriceYearlyCommitment'))
+		WebUI.verifyMatch(subscriptionPriceYearly, '($120.00 yearly commitment)', false, FailureHandling.CONTINUE_ON_FAILURE)
+		String nextPaymentDate= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/NextPaymentDateMeasurabl'))
+		WebUI.verifyMatch(nextPaymentDate,regDate , false, FailureHandling.CONTINUE_ON_FAILURE)
+		String payeename= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/PaymentMethodUserName'))
+		WebUI.verifyMatch(nameOfIntegration, nameOfIntegration, false, FailureHandling.CONTINUE_ON_FAILURE)
+		String cardDetails= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/GetThepartialCardDetails'))
+		WebUI.verifyMatch(cardDetails, "VISA ending *0000", false, FailureHandling.CONTINUE_ON_FAILURE)
+			
+	}
+	@Keyword
+	public void changePaymentMethod(String sheetName, int rowNum){
+		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/Measurabl/ChangePaymentMethodButton'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/GetChangePaymenMethodPageText')),'Change Payment Method',false, FailureHandling.STOP_ON_FAILURE)
+		String cardName   = data.getCellData(sheetName, "CardName", rowNum)
+		String cardNum    = data.getCellData(sheetName, "CardNumber", rowNum)
+		String cardDate   = data.getCellData(sheetName, "Date ", rowNum)
+		String cardCvv    = data.getCellData(sheetName, "CVV", rowNum)
+		String partyName  = data.getCellData(sheetName, "PartyName", rowNum)
+		String partyEmail = data.getCellData(sheetName, "PartyEmail", rowNum)
+		String address    = data.getCellData(sheetName, "Address", rowNum)
+		String city       = data.getCellData(sheetName, "City", rowNum)
+		String country    = data.getCellData(sheetName, "Country", rowNum)
+		String state      = data.getCellData(sheetName, "State", rowNum)
+		String zip        = data.getCellData(sheetName, "Zip", rowNum)
+		String phone      = data.getCellData(sheetName, "Mobile", rowNum)
+
+		WebUI.clearText(findTestObject('Object Repository/paymentPageNewUI/billingName'))
+		WebUI.setText(findTestObject('Object Repository/paymentPageNewUI/billingName'),partyName)
+		WebUI.clearText(findTestObject('Object Repository/paymentPageNewUI/billingEmail'))
+		WebUI.setText(findTestObject('Object Repository/paymentPageNewUI/billingEmail'), partyEmail)
+		WebUI.clearText(findTestObject('Object Repository/paymentPageNewUI/billingAddress'))
+		WebUI.setText(findTestObject('Object Repository/paymentPageNewUI/billingAddress'), address)
+		WebUI.clearText(findTestObject('Object Repository/paymentPageNewUI/billingCity'))
+		WebUI.setText(findTestObject('Object Repository/paymentPageNewUI/billingCity'), city)
+		WebUI.selectOptionByLabel(findTestObject('Object Repository/paymentPageNewUI/billingCountry'), country, false)
+		WebUI.selectOptionByLabel(findTestObject('Object Repository/paymentPageNewUI/billingState'), state , false)
+		WebUI.clearText(findTestObject('Object Repository/paymentPageNewUI/billingZip'))
+		WebUI.setText(findTestObject('Object Repository/paymentPageNewUI/billingZip'),zip )
+		//*********************** Select the payment mode *******************//
+
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
+			WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/CardNumber'),"4012000033330026")
+			WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/ccExpiary'),cardDate)
+			WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/cvvCreditCard'),cardCvv)
+			//promocode field in case if used
+			//WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/promoCode'),promocode)
+			//WebUI.delay(3)
+			WebUI.click(findTestObject('Object Repository/paymentPageNewUI/submitPayment'))
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+			WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/BillingSection/Measurabl/IntegrationsTabs'), GlobalVariable.maxAngularWait)
+			WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/BillingSection/Measurabl/IntegrationsTabs'), GlobalVariable.maxAngularWait)
+			String cardDetails= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/GetThepartialCardDetails'))
+			WebUI.verifyMatch(cardDetails, "VISA ending *0026", false, FailureHandling.CONTINUE_ON_FAILURE)
+	}
+	
 }

@@ -1880,7 +1880,6 @@ public class ReusableMethodsPayment extends BaseClass{
 				//promocode field in case if used
 				//WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/promoCode'),promocode)
 				//WebUI.delay(3)
-
 				WebUI.click(findTestObject('Object Repository/paymentPageNewUI/submitPayment'))
 				WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
