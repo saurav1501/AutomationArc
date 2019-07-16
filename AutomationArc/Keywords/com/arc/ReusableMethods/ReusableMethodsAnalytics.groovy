@@ -4051,6 +4051,10 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		String BOccupancy = data.getCellData(sheetName,"BOccupancy",rowNum)
 		Double dBOccupancy =  Double.parseDouble(BOccupancy)
 
+		
+		String grossAreasqft = data.getCellData(sheetName,"GrossAreasqft",rowNum)
+		Double occupants =  Double.parseDouble(grossAreasqft)
+		
 		String walk1 = data.getCellData(sheetName, "Walk", rowNum)
 		double dwalk = Double.parseDouble(walk1)
 		double cwalk = dwalk * 0.0
@@ -4085,7 +4089,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 		double totalTransportCarobn = cwalk + cbus + clight_rail + cheavy_rail + cmotorcycle + ccar + ccar23 + ccars4
 
-		double  Avg_route = totalTransportCarobn / 4
+		double  Avg_route = totalTransportCarobn / occupants
 		println Avg_route
 
 		double  Avg_carbon_emission = Avg_route * 0.00045359237
@@ -4102,16 +4106,23 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		String annual_annual_carbon_emissionin_lbsOCC= annual_annual_carbon_emissionin_lbs/dBOccupancy
 
 		BigDecimal annual_annual_carbon_emissionin_lbsOCCp = new BigDecimal(annual_annual_carbon_emissionin_lbsOCC)
-		annual_annual_carbon_emissionin_lbsOCCp = annual_annual_carbon_emissionin_lbsOCCp.setScale(4,RoundingMode.HALF_UP)
+		annual_annual_carbon_emissionin_lbsOCCp = annual_annual_carbon_emissionin_lbsOCCp.setScale(2,RoundingMode.HALF_UP)
 
 		String cannual_annual_carbon_emissionin_lbsOCCp = annual_annual_carbon_emissionin_lbsOCCp.toString()
 
 		String UIcUitransOccup = WebUI.getText(findTestObject('Analytics/Transport/Aoccupancy'))
 		String UIcUitransOccupancy =  UIcUitransOccup.replace(',', '')
 
+		double UItransOccupancy = Double.parseDouble(UIcUitransOccupancy)
+		BigDecimal UItrans_Occupancy = new BigDecimal(UItransOccupancy)
+		UItrans_Occupancy = UItrans_Occupancy.setScale(2,RoundingMode.HALF_UP)
+		String UITrans_Occupancy = UItrans_Occupancy.toString()
+
 		/****************UI Verses Calculated Value Annual transport per Occupancy*****************************/
-		WebUI.verifyMatch(UIcUitransOccupancy, cannual_annual_carbon_emissionin_lbsOCCp, false)
-	}
+		WebUI.verifyMatch(UITrans_Occupancy, cannual_annual_carbon_emissionin_lbsOCCp, false)
+	
+		
+		}
 
 
 	@Keyword

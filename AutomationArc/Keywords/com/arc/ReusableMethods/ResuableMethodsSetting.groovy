@@ -305,9 +305,10 @@ public class ResuableMethodsSetting extends BaseClass{
 		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/Unit/IP'),GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/Unit/IP'),GlobalVariable.minAngularWait)
 		WebUI.doubleClick(findTestObject('DataInput/Settings18/Unit/IP'))
-		WebUI.delay(2)
+		WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.scrollToElement(findTestObject('DataInput/Settings18/Unit/SI'),GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/Unit/SI'),GlobalVariable.minAngularWait)
 		WebUI.doubleClick(findTestObject('DataInput/Settings18/Unit/SI'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
@@ -449,10 +450,10 @@ public class ResuableMethodsSetting extends BaseClass{
 
 	@Keyword
 	public void verifyDeleteAreaEnergy() {
-
 		//******************************************Energy*********************************/
 		areaEnergy()
 		areaVisibilty()
+		deleteButtonArea()
 		deleteButtonArea()
 
 	}
@@ -463,6 +464,7 @@ public class ResuableMethodsSetting extends BaseClass{
 		//******************************************Water*********************************/
 		areaWater()
 		areaVisibilty()
+		deleteButtonArea()
 		deleteButtonArea()
 
 	}
@@ -527,6 +529,7 @@ public class ResuableMethodsSetting extends BaseClass{
 		//******************************************Waste*********************************/
 		areaWaste()
 		areaVisibilty()
+		deleteButtonArea()
 		deleteButtonArea()
 	}
 
