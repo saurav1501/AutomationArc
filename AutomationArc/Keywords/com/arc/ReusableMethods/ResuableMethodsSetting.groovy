@@ -377,7 +377,7 @@ public class ResuableMethodsSetting extends BaseClass{
 		String mtotalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
 		Integer mTotalPerformaceScore = Integer.parseInt(mtotalPerformaceScore)
 
-		if(totalperformaceScore <= mTotalPerformaceScore)
+		if(totalperformaceScore < mTotalPerformaceScore)
 
 			KeywordUtil.markPassed('SUCCESS: PERFORMANCE SCORE IS SAME/INCREASED AFTER CHANGING THE UNIT')
 
