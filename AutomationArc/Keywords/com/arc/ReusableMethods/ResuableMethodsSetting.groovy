@@ -52,10 +52,6 @@ public class ResuableMethodsSetting extends BaseClass{
 		WebUI.delay(2)
 		WebUI.click(findTestObject('DataInput/Settings18/button_Close'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.delay(5)
-		WebUI.refresh()
-		WebUI.delay(5)
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 	
 	}
 
@@ -182,7 +178,7 @@ public class ResuableMethodsSetting extends BaseClass{
 	@Keyword
 	public void checkAllOccpant() {
 		setExclude()
-		checkExclude()
+		//checkExclude()
 		checkRadioAllOccupant()
 	}
 
@@ -327,6 +323,10 @@ public class ResuableMethodsSetting extends BaseClass{
 
 		navigation.navigateIntoDataInput()
 
+		if(WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore')).equalsIgnoreCase('')){
+			WebUI.delay(10)
+		}
+		
 		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
 		println totalPerformaceScore
 		data.setCellData(GlobalVariable.BDataInput,"ATotalScore", GlobalVariable.rowNumTwo, totalPerformaceScore)
@@ -363,7 +363,7 @@ public class ResuableMethodsSetting extends BaseClass{
 		Integer totalperformaceScore = Integer.parseInt(totalPerformaceScore)
 
 		if(WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore')).equalsIgnoreCase('')){
-			WebUI.delay(7)
+			WebUI.delay(10)
 		}
 
 		String mtotalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
