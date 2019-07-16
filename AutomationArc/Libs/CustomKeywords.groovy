@@ -1526,6 +1526,10 @@ def static "com.arc.ReusableMethods.ResuableMethodsSetting.checkAllOccpant"() {
     (new com.arc.ReusableMethods.ResuableMethodsSetting()).checkAllOccpant()
 }
 
+def static "com.arc.ReusableMethods.ResuableMethodsSetting.uncheckAllOccpant"() {
+    (new com.arc.ReusableMethods.ResuableMethodsSetting()).uncheckAllOccpant()
+}
+
 def static "com.arc.ReusableMethods.ResuableMethodsSetting.checkRegular"() {
     (new com.arc.ReusableMethods.ResuableMethodsSetting()).checkRegular()
 }

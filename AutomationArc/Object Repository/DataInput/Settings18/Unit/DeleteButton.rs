@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//table[@id='readingsTable']/tbody/tr/td[5])[1]</value>
+         <value>(//*[@ng-click=&quot;deleteReading(data, $index)&quot;])[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

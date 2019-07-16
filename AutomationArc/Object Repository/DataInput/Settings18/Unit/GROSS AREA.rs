@@ -4,7 +4,21 @@
    <name>GROSS AREA</name>
    <tag></tag>
    <elementGuidId>23ac95db-74a5-47fa-8d69-0ab0bb4bf701</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//span[text()=&quot;(square meters)&quot;]</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//th[(text() = 'GROSS AREA
+                                        (sqm)
+                                    ' or . = 'GROSS AREA
+                                        (sqm)
+                                    ') and @ref_element = 'Object Repository/DataInput/Settings18/Unit/Data_Input']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

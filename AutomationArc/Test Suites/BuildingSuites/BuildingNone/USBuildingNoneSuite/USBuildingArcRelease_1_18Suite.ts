@@ -401,6 +401,12 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/Score/GeneralDeleteOperatingHourTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>9c2be3e9-07d1-4e51-8c71-a2f98dfeb428</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/Score/VerifyAbilityToUncheckExcludesSpaceTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>cc7a3600-59b2-44c9-a15f-0aac42f78f81</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

@@ -1570,16 +1570,4 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/Common/1_15_4/SettingScoreVersionPageUpdate_1_15_4Test</testCaseId>
    </testCaseLink>
-   <testCaseLink>
-      <guid>e12543c6-e8fc-4b79-a168-e45701ecdb5a</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/Next/SearchAndNavigateTransitABProjectARC_1063Test</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>1b0c67cd-75c6-4966-adb9-beec9216b9d9</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/Next/SearchAndNavigateNoneDataInputARC_1063Test</testCaseId>
-   </testCaseLink>
 </TestSuiteEntity>

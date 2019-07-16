@@ -183,6 +183,12 @@ public class ResuableMethodsSetting extends BaseClass{
 	}
 
 	@Keyword
+	public void uncheckAllOccpant() {
+		setExclude()
+		checkExclude()
+	
+	}
+	@Keyword
 	public void checkRegular() {
 		setExclude()
 		checkRegularOccupant()
@@ -305,9 +311,10 @@ public class ResuableMethodsSetting extends BaseClass{
 		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/Unit/IP'),GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/Unit/IP'),GlobalVariable.minAngularWait)
 		WebUI.doubleClick(findTestObject('DataInput/Settings18/Unit/IP'))
-		WebUI.delay(2)
+		WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.scrollToElement(findTestObject('DataInput/Settings18/Unit/SI'),GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/Unit/SI'),GlobalVariable.minAngularWait)
 		WebUI.doubleClick(findTestObject('DataInput/Settings18/Unit/SI'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
@@ -351,7 +358,8 @@ public class ResuableMethodsSetting extends BaseClass{
 	public void navigationTeam() {
 		WebUI.scrollToElement(findTestObject('Manage/TeamModule/a_ Team'),2)
 		WebUI.click(findTestObject('Manage/TeamModule/a_ Team'))
-		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait, FailureHandling.OPTIONAL)
 	}
 	@Keyword
 	public void verifyTotalScoreShouldMore() {
@@ -371,7 +379,7 @@ public class ResuableMethodsSetting extends BaseClass{
 
 		if(totalperformaceScore < mTotalPerformaceScore)
 
-			KeywordUtil.markPassed('SUCCESS: PERFORMANCE SCORE IS INCREASED AFTER CHANGING THE UNIT')
+			KeywordUtil.markPassed('SUCCESS: PERFORMANCE SCORE IS SAME/INCREASED AFTER CHANGING THE UNIT')
 
 		else
 			KeywordUtil.markFailed('FAIL : PERFORMANCE SCORE IS NOT INCREASED AFTER CHANGING THE UNIT')
@@ -449,11 +457,11 @@ public class ResuableMethodsSetting extends BaseClass{
 
 	@Keyword
 	public void verifyDeleteAreaEnergy() {
-
 		//******************************************Energy*********************************/
 		areaEnergy()
 		areaVisibilty()
 		deleteButtonArea()
+
 
 	}
 
@@ -464,6 +472,7 @@ public class ResuableMethodsSetting extends BaseClass{
 		areaWater()
 		areaVisibilty()
 		deleteButtonArea()
+
 
 	}
 
