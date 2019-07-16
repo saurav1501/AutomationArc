@@ -388,4 +388,22 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/DownloadAndVerifyTheSnapshotFileNameTest</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>17986020-f79e-43bb-aaa2-0f804ea4b5ad</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/AddMeasurablToTheProjectTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>f83365b7-e6e0-452d-b087-079e8bddc29f</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyThePriceTextOnTheMeasurablPaymentPageTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>7fd019ff-2c4d-4ca9-bdfe-e3002a5bad4a</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/PaymentForMeasurableSubscriptionTest</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>

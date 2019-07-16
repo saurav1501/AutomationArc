@@ -13,12 +13,11 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
+//Add measurable add on to the project
 
-//Make the payment for measurable subscription.
-
-try {
+	try {
 	
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.paymentForMeasurablSubscription'(GlobalVariable.CCPayment , GlobalVariable.rowNumTwo, GlobalVariable.creditCard)
+	  CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.paymentPageMonthlyAndAnuallyPriceValidation'()
 	
 	} catch (Throwable t) {
 		System.out.println(t.getLocalizedMessage())
@@ -26,4 +25,8 @@ try {
 		e1.setStackTrace(t.getStackTrace())
 		e1.printStackTrace()
 	}
+
+
+
+
 	

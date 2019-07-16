@@ -1966,6 +1966,16 @@ def static "com.arc.ReusableMethods.ReusableMethodsPayment.paymentRegistrationCh
          , 	paymentMode)
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsPayment.paymentForMeasurablSubscription"(
+    	String sheetName	
+     , 	int rowNum	
+     , 	String paymentMode	) {
+    (new com.arc.ReusableMethods.ReusableMethodsPayment()).paymentForMeasurablSubscription(
+        	sheetName
+         , 	rowNum
+         , 	paymentMode)
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsMeasuresParking.measureMangementPoint"() {
     (new com.arc.ReusableMethods.ReusableMethodsMeasuresParking()).measureMangementPoint()
 }
@@ -4854,4 +4864,8 @@ def static "com.arc.ReusableMethods.ReusableMethodsManage.NavigateToMeasurablPay
     	String paymentType	) {
     (new com.arc.ReusableMethods.ReusableMethodsManage()).NavigateToMeasurablPaymentPage(
         	paymentType)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsManage.paymentPageMonthlyAndAnuallyPriceValidation"() {
+    (new com.arc.ReusableMethods.ReusableMethodsManage()).paymentPageMonthlyAndAnuallyPriceValidation()
 }
