@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//td[@ng-if=&quot;combined_occupancy&quot;])[2]</value>
+         <value>(//td[@ng-if=&quot;combined_occupancy&quot;])[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

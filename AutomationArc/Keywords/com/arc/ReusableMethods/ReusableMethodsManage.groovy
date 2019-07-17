@@ -946,8 +946,8 @@ public class ReusableMethodsManage extends BaseClass {
 		Thread.sleep(1000)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOccupancy'))
 		Thread.sleep(3000)
-		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'),20)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingRegularOccupantsReading'),'value'), '9',false,FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingRegularOccupantsReading'),20)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingRegularOccupantsReading')), '9',false,FailureHandling.CONTINUE_ON_FAILURE)
 		Thread.sleep(2000)
 
 		//verify Area

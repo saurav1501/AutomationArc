@@ -856,6 +856,9 @@ public class ReusableMethodsPayment extends BaseClass{
 		WebUI.click(findTestObject('PayNowRegistrationPaymentUSTest/button_Pay now_1'))
 		//WebUI.delay(5)
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/BillingSection/RegistrationPaymentStatus'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/BillingSection/RegistrationPaymentStatus'), GlobalVariable.minAngularWait)
+		
 		String regStatus= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationPaymentStatus'))
 		Assert.assertEquals(regStatus, "Completed")
 	}

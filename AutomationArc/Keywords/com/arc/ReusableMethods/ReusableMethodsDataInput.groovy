@@ -7399,7 +7399,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		//WebUI.delay(4)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		if((WebUI.getText(findTestObject('Object Repository/DataInput/ActivityCommentCityComm')).contains("Saurav K has added new data for GHG Emissions for the period"))){
+		if((WebUI.getText(findTestObject('Object Repository/DataInput/ActivityCommentCityComm')).contains("Saurav K has added new data for Ghg Emissions for the period"))){
 			KeywordUtil.markPassed("Meter name is not included in the activity comment")
 		}
 		else{
