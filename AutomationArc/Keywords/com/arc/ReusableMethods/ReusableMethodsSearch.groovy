@@ -25,32 +25,40 @@ public class ReusableMethodsSearch extends BaseClass{
 	public void searchProgram(String sheetName , int rowNum) {
 		String projectId = data.getCellData(sheetName,"ProjectID",rowNum)
 	
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))
-		WebUI.delay(1)
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		
+		navigationSearch()
 		WebUI.setText(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'), projectId)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))
 		WebUI.delay(2)
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		
-		WebUI.waitForElementVisible(findTestObject('Page_Arc dashboard/no_Project (1 project)'),GlobalVariable.avgAngularWait)
-		String nuberOfProjects = WebUI.getText(findTestObject('Page_Arc dashboard/no_Project (1 project)'))
-		println nuberOfProjects
+		boolean returnFalse = WebUI.waitForElementVisible(findTestObject('Page_Arc dashboard/no_Project (1 project)'),GlobalVariable.minAngularWait)
 		
-		WebUI.delay(1)		
-		WebUI.verifyMatch(nuberOfProjects,'Project (1 project)', false)
-		WebUI.delay(1)
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		
+		if(returnFalse==false){
+			navigationSearch()
+			WebUI.clearText(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))
+			WebUI.setText(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'), projectId)
+			WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))
+			WebUI.delay(2)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
+	
+		}
+					
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/search_Result'))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
+		
 	}
 	
+public void navigationSearch(){
+	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
+	WebUI.waitForElementPresent(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'),5)
+	WebUI.waitForElementVisible(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'),5)
+	WebUI.waitForElementClickable(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'),GlobalVariable.minAngularWait)
+	WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))
+	WebUI.delay(1)
+	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 	
-	//Search project By Project ID parameter (For Retry payment method)
 	
+}
 	@Keyword
 	public void searchProgram(String projectID) {
 	
@@ -149,10 +157,12 @@ public class ReusableMethodsSearch extends BaseClass{
 	public void searchProgramPortfolio(String sheetName, int rowNum) {
 		String projectName = data.getCellData(sheetName,"ProjectName",rowNum)
 		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))
 		WebUI.setText(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'), projectName)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))
 		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		String nuberOfProtfolio = WebUI.getText(findTestObject('Portfolio/Common/TNoPortfolio (1 portfolio)'))
 		println nuberOfProtfolio
 		WebUI.verifyMatch(nuberOfProtfolio,'Portfolio (1 portfolio)', false)
@@ -167,6 +177,7 @@ public class ReusableMethodsSearch extends BaseClass{
 
 	@Keyword
 	public void searchProgramPortfolioId(String sheetName, int rowNum) {
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		String projectName = data.getCellData(sheetName,"PortfolioID",rowNum)
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))
@@ -179,9 +190,10 @@ public class ReusableMethodsSearch extends BaseClass{
 		WebUI.waitForElementClickable(findTestObject('Object Repository/Page_Arc dashboard/search_Result'),10)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/search_Result'))
 		WebUI.delay(7)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
 		WebUI.delay(1)
-		WebUI.waitForAngularLoad(120, FailureHandling.CONTINUE_ON_FAILURE)
+
 	}
 	@Keyword
 	public void searchLEEDProgram(String sheetName , int rowNum) {
