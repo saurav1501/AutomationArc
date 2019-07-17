@@ -13,7 +13,7 @@
    <testCaseLink>
       <guid>ddaf6661-bc9b-4394-90eb-4807e8ee882c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/LoginWithBuildingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -133,7 +133,7 @@
    <testCaseLink>
       <guid>78960b03-b9ec-4f68-9ce0-a345e03d0c27</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/DataInputEnergyFileUploadTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -145,7 +145,7 @@
    <testCaseLink>
       <guid>d6611f1f-31f2-4b4d-8cab-4e35850094e9</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/DataInputWaterFileUploadTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -199,7 +199,7 @@
    <testCaseLink>
       <guid>b4d6f03e-f5fc-452a-9989-c242cdf53e55</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/DownloadAndVerifyExportedDataTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -247,19 +247,19 @@
    <testCaseLink>
       <guid>6bdc0630-6610-4738-ae5b-bc67bfe6fd5b</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyWasteMeterDataCreatedViaExcelTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>8be77a1e-d901-4660-bddc-7e9891361742</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyWaterMeterDataCreatedViaExcelTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>34e704d3-5207-4a0b-8505-24066cd4e484</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyEnergyMeterDataCreatedViaExcelTest</testCaseId>
    </testCaseLink>
    <testCaseLink>

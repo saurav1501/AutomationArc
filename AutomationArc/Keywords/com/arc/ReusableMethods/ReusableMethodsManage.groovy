@@ -3972,10 +3972,12 @@ public class ReusableMethodsManage extends BaseClass {
 
 		WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Loaders/ProjectDashboardLoader'), 30)
+		//WebUI.waitForElementPresent(findTestObject('Object Repository/Loaders/ProjectDashboardLoader'), 30)
 		//Measurabl Payment details verification
 		//WebUI.delay(5)
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/Measurabl/PaymentHistoryTab'))
+		WebUI.delay(2)
 		String regDate= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/MeasurablBillingDate'))
 		WebUI.verifyMatch(regDate, registrationDate, false , FailureHandling.CONTINUE_ON_FAILURE)
 		String measurablOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/MeasurablOrderID'))
@@ -4062,7 +4064,7 @@ public class ReusableMethodsManage extends BaseClass {
 		}
 		WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Loaders/ProjectDashboardLoader'), 30)
+		//WebUI.waitForElementPresent(findTestObject('Object Repository/Loaders/ProjectDashboardLoader'), 30)
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/Measurabl/IntegrationsTabs'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
