@@ -856,7 +856,7 @@ public class ReusableMethodsManage extends BaseClass {
 		setting.occupant()
 
 		String population = WebUI.getText(findTestObject('DataInput/Settings18/TotalValue'))
-		WebUI.verifyMatch(population,'200', false, FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.verifyMatch(population,'200Re-enter or change data', false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyElementVisible(findTestObject('DataInput/Occupancy/OTracker/Page_Arc dashboard/Re-enter or changedata'), FailureHandling.CONTINUE_ON_FAILURE)
 
 
@@ -948,8 +948,8 @@ public class ReusableMethodsManage extends BaseClass {
 		Thread.sleep(1000)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOccupancy'))
 		Thread.sleep(3000)
-		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'),20)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingRegularOccupantsReading'),'value'), '9',false,FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingRegularOccupantsReading'),20)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingRegularOccupantsReading')), '9',false,FailureHandling.CONTINUE_ON_FAILURE)
 		Thread.sleep(2000)
 
 		//verify Area
@@ -1454,7 +1454,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeSelectButtonArea'), 20)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeSelectButtonArea')),"Imperial System (IP)",false,FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeHeader')), "GROSS AREA (sqft)", false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeHeader')), "GROSS AREA (square feet)", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		println "Verified successfully unit changes on the selection of SI and IP unit types."
