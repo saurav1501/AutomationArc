@@ -83,6 +83,24 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/NavigationIndividualRaceTrackToAnalyticsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>17986020-f79e-43bb-aaa2-0f804ea4b5ad</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/AddMeasurablToTheProjectTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>7fd019ff-2c4d-4ca9-bdfe-e3002a5bad4a</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/PaymentForMeasurableSubscriptionTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>f83365b7-e6e0-452d-b087-079e8bddc29f</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyThePriceTextOnTheMeasurablPaymentPageTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>bc135ed4-c58a-47fc-8f38-82e03c8f22cf</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -147,6 +165,12 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyEnergyActivityTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>5fc44e57-88db-4f94-a9fd-fb3b1e35d5fa</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/IntegrationTabDetailsVerificationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>939bdd17-05d8-4522-826a-caa08f37f3fa</guid>
@@ -257,6 +281,18 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/SubmitSurveyTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>3b9934a1-a62a-4fec-91e5-5dd057f3dda8</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ChangePaymentMethodMeasurablTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>7c1576a4-ee2e-49c9-922c-bd0b4bafdd1f</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyBillingDetailsMeasurablTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>4ba3fe53-0157-461a-aa4d-1e545a105a7e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -323,24 +359,6 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyDataUploadTemplatePresentInResourcesTab_1_15_4Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>17986020-f79e-43bb-aaa2-0f804ea4b5ad</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/AddMeasurablToTheProjectTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>f83365b7-e6e0-452d-b087-079e8bddc29f</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyThePriceTextOnTheMeasurablPaymentPageTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>7fd019ff-2c4d-4ca9-bdfe-e3002a5bad4a</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/PaymentForMeasurableSubscriptionTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>690053d8-6410-4714-ac1f-1327d30a8b33</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -399,24 +417,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/SettingVerifyLobbySurveyBtnAllowUserToSubmitSurveyManyTimesTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>5fc44e57-88db-4f94-a9fd-fb3b1e35d5fa</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/IntegrationTabDetailsVerificationTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>3b9934a1-a62a-4fec-91e5-5dd057f3dda8</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ChangePaymentMethodMeasurablTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>7c1576a4-ee2e-49c9-922c-bd0b4bafdd1f</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyBillingDetailsMeasurablTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>519fdd53-c6b6-45e3-b797-f221b1b04ab5</guid>
