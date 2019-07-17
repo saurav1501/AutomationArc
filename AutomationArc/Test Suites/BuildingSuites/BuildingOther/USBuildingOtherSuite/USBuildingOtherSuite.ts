@@ -295,133 +295,133 @@
    <testCaseLink>
       <guid>4ba3fe53-0157-461a-aa4d-1e545a105a7e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyNoOfFilesUploadedInSubmitReviewTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>1975d1f8-c8a7-4b94-980f-d9f4a51701bc</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyExportSurveyReportDownloadTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>154c2bd4-a23a-49b9-8c16-3a2d874bf9a9</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/INTPerformanceScoreVerificationCCTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>a2dae379-a3b6-49e8-a83f-6f2c40440a5b</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/PercentageSurveyResponseRateCalculationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>a1653587-0b28-402f-9dd5-db49c7f14cc0</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ValidateTransportationSurveyGraphTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d6a7a461-5d82-4faa-86fc-6786835d99bf</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ValidateHumanExpGraphTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>429c616f-22d7-43e3-ad0a-49fea2ee6eb5</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ValidateEnergyMeterGraphTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>7500c43c-50e5-4ffb-b2a2-b319e8f77024</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ValidateWaterMeterGraphTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>7fbe0fbd-cae0-4e51-8a4f-c3d3c195e9e1</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ValidateWasteDatagraphTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>ebd42140-f5d9-419a-939f-9382485e51fa</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/AdminToolScoreRecomputeTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>1b99ebd6-75bb-404d-8860-a932458edde0</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyDataUploadTemplatePresentInResourcesTab_1_15_4Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>690053d8-6410-4714-ac1f-1327d30a8b33</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/AgreementFileDownloadTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>347762eb-6bed-4da9-acac-a885106d3a79</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ScoreVersionVerificationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>1f0364b4-101c-4a71-83a0-e96563be85e2</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/BillingDateAndStatusTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>afceeecb-a655-4a00-9c5c-b120c985064c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyAndDownloadBillingReceiptTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>fb020715-7ce4-440a-b9fa-ddd78c923b24</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ProjectDetailsVerificationAfterExcelUploadTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>a88c7e41-d7f7-4ffd-82ce-88b0b79aef48</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/DeleteEnergyAndWaterMeterReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>354451ee-5bfa-4dad-a6f0-a2d76c30567c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ChangeBuildingSetting_1_17_Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>84e5b2fb-db33-41e1-a7dd-931f5d354752</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/CreditActionModuleOtherNoneTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>25fe874c-580f-41ed-a3bc-79daee1fbde8</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/SettingVerifyLobbySurveyBtnRemainOnEvenAfterNavigatingFromOtherpageTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>97e07fbb-ee08-475c-a4c1-5985bd6af479</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/SettingVerifyLobbySurveyBtnAllowUserToSubmitSurveyManyTimesTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>519fdd53-c6b6-45e3-b797-f221b1b04ab5</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/DownloadAndVerifyTheSnapshotFileNameTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
