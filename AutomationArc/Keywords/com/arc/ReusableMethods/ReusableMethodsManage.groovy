@@ -949,7 +949,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOccupancy'))
 		Thread.sleep(3000)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'),20)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'),'value'), '9',false,FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingRegularOccupantsReading'),'value'), '9',false,FailureHandling.CONTINUE_ON_FAILURE)
 		Thread.sleep(2000)
 
 		//verify Area
@@ -3954,7 +3954,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyElementPresent(findTestObject('Object Repository/Manage/BillingSection/Measurabl/AnnualPaymentTextLabel'), GlobalVariable.minAngularWait)
 		WebUI.verifyElementPresent(findTestObject('Object Repository/Manage/BillingSection/Measurabl/MonthlyPaymentCheckbox'), GlobalVariable.minAngularWait)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/AnnualPaymentTextLabel')),'Annually - $120.0 annual payment',false,FailureHandling.STOP_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/MonthlyPaymentCheckbox')),'Monthly - $10.0 per month ($120.0 yearly contract)',false,FailureHandling.STOP_ON_FAILURE)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/MonthlyPaymentTextLabel')),'Monthly - $10.0 per month ($120.0 yearly contract)',false,FailureHandling.STOP_ON_FAILURE)
 
 	}
 

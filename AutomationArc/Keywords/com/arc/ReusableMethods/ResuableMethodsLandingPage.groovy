@@ -18,7 +18,7 @@ import internal.GlobalVariable
 public class ResuableMethodsLandingPage extends BaseClass {
 	ReusableMethodsNavigation landingPage =new ReusableMethodsNavigation()
 	Date date = new Date(System.currentTimeMillis())
-	
+
 
 	@Keyword
 	public void invalidIDLoginTest() throws IOException, InterruptedException {
@@ -60,7 +60,7 @@ public class ResuableMethodsLandingPage extends BaseClass {
 		/*WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/clickOnLogin'))
 		 WebUI.delay(2)
 		 */
-		
+
 		WebUI.scrollToElement(findTestObject('Page_Arc dashboard/DashboardPage/a_Cookie Statement'), 12)
 		WebUI.click(findTestObject('Page_Arc dashboard/DashboardPage/a_Cookie Statement'))
 		WebUI.delay(6)
@@ -82,21 +82,20 @@ public class ResuableMethodsLandingPage extends BaseClass {
 
 
 		/*******Check hyperlinks for 'cookie policy' inside banner clicking on the hyperlinks should redirect to correct webpage.*************************//*
-		WebUI.switchToWindowIndex(0)
-		WebUI.scrollToElement(findTestObject('Page_Arc dashboard/DashboardPage/Banner_Cookie Statement'),2)
-		WebUI.click(findTestObject('Page_Arc dashboard/DashboardPage/Banner_Cookie Statement'))
-		WebUI.delay(5)
-		WebUI.switchToWindowIndex(1)
-		String cookiepolicyBanner = WebUI.getText(findTestObject('Page_Arc dashboard/DashboardPage/CookiePolicyPage'))
-		WebUI.verifyMatch(cookiepolicyBanner,'This is the Cookie Policy for Arc, accessible from http://arcskoru.com', false)
-
-		WebUI.click(findTestObject('Page_Arc dashboard/DashboardPage/RedirectPrdPage'))
-		WebUI.delay(5)
-		WebUI.switchToWindowIndex(2)
-		WebUI.verifyTextPresent('Performance is the future of green building', true)
-		WebUI.closeWindowIndex(2)
-		WebUI.closeWindowIndex(1)
-*/		WebUI.switchToWindowIndex(0)
+		 WebUI.switchToWindowIndex(0)
+		 WebUI.scrollToElement(findTestObject('Page_Arc dashboard/DashboardPage/Banner_Cookie Statement'),2)
+		 WebUI.click(findTestObject('Page_Arc dashboard/DashboardPage/Banner_Cookie Statement'))
+		 WebUI.delay(5)
+		 WebUI.switchToWindowIndex(1)
+		 String cookiepolicyBanner = WebUI.getText(findTestObject('Page_Arc dashboard/DashboardPage/CookiePolicyPage'))
+		 WebUI.verifyMatch(cookiepolicyBanner,'This is the Cookie Policy for Arc, accessible from http://arcskoru.com', false)
+		 WebUI.click(findTestObject('Page_Arc dashboard/DashboardPage/RedirectPrdPage'))
+		 WebUI.delay(5)
+		 WebUI.switchToWindowIndex(2)
+		 WebUI.verifyTextPresent('Performance is the future of green building', true)
+		 WebUI.closeWindowIndex(2)
+		 WebUI.closeWindowIndex(1)
+		 */		WebUI.switchToWindowIndex(0)
 		/*		WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/clickOnLogin'))
 		 WebUI.delay(2)*/
 
@@ -135,9 +134,9 @@ public class ResuableMethodsLandingPage extends BaseClass {
 	@Keyword
 	public void hyperlinksTermsofuse() throws IOException, InterruptedException {
 		/*******Check Hyper links  in Login module for 'privacy policy' clicking on the hyperlinks should redirect to correct web-page.*************************/
-/*		WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/clickOnLogin'))
-		WebUI.delay(2)*/
-		WebUI.scrollToElement(findTestObject('Page_Arc dashboard/DashboardPage/a_Terms of Use'),6)		
+		/*		WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/clickOnLogin'))
+		 WebUI.delay(2)*/
+		WebUI.scrollToElement(findTestObject('Page_Arc dashboard/DashboardPage/a_Terms of Use'),6)
 		WebUI.click(findTestObject('Page_Arc dashboard/DashboardPage/a_Terms of Use'))
 		WebUI.delay(5)
 		WebUI.switchToWindowIndex(1)
@@ -339,6 +338,7 @@ public class ResuableMethodsLandingPage extends BaseClass {
 		/**********Verify if Project Registration page is open when add project is clicked on *******************/
 		WebUI.clearText(findTestObject('Object Repository/AddProjectNewUI/projectName'))
 		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/countryName'),'India', false)
 		WebUI.delay(2)
 		WebUI.verifyOptionPresentByLabel(findTestObject('Object Repository/Page_Arc dashboard/DashboardPage/AllProject/select_Andaman and Nico.In.And'), 'Andaman and Nico.In.', false, 5)
@@ -563,7 +563,7 @@ public class ResuableMethodsLandingPage extends BaseClass {
 		String projectId = data.getCellData(sheetName,"ProjectID",rowNum)
 
 		WebUI.click(findTestObject('Page_Arc dashboard/Feedback/FeedBackButton'))
-        WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.click(findTestObject('Page_Arc dashboard/Feedback/happy'))
 		WebUI.click(findTestObject('Page_Arc dashboard/Feedback/IinfoOkay'))
 		WebUI.click(findTestObject('Page_Arc dashboard/Feedback/InfoUnhappy'))
