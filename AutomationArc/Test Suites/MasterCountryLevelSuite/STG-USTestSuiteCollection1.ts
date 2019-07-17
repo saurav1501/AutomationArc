@@ -12,7 +12,6 @@
             <profileName>STG-US-P1</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
-<<<<<<< HEAD
          <runEnabled>false</runEnabled>
          <testSuiteEntity>Test Suites/BuildingSuites/Transit/Aboveground/USTransitSuite/USTransitAbovegroundSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
@@ -22,10 +21,8 @@
             <profileName>STG-US-P1</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
-=======
->>>>>>> be8c6c0cde11bbacbcc2bfddeb846fb9674f9b83
          <runEnabled>false</runEnabled>
-         <testSuiteEntity>Test Suites/BuildingSuites/Transit/Aboveground/USTransitSuite/USTransitAbovegroundSuite</testSuiteEntity>
+         <testSuiteEntity>Test Suites/BuildingSuites/BuildingNone/USBuildingNoneSuite/USBuildingArcRelease_1_18Suite</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>
@@ -57,10 +54,10 @@
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>STG-US-P1</profileName>
+            <profileName>STG-US-P2</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
-         <runEnabled>false</runEnabled>
+         <runEnabled>true</runEnabled>
          <testSuiteEntity>Test Suites/BuildingSuites/BuildingOther/USBuildingOtherSuite/USBuildingOtherSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
