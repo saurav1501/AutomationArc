@@ -121,25 +121,40 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		for(int col=2;col<=7;col++ ) {
 			String projectId 	= data.getCellData(sheetName,"ID", col)
 			String portfolioName 	= data.getCellData(sheetName, "ProjectName", rowNum)
-			WebUI.scrollToElement(findTestObject('Portfolio/Common/span_Add a Project'), 4)
+			WebUI.scrollToElement(findTestObject('Portfolio/Common/span_Add a Project'), 10)
+			WebUI.waitForElementClickable(findTestObject('Portfolio/Common/span_Add a Project'),GlobalVariable.minAngularWait)
 			WebUI.click(findTestObject('Portfolio/Common/span_Add a Project'))
-			WebUI.delay(3)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
+			
+			WebUI.waitForElementClickable(findTestObject('Portfolio/Common/input_searchBarPort'),GlobalVariable.minAngularWait)
 			WebUI.setText(findTestObject('Portfolio/Common/input_searchBarPort'), projectId)
+			
+			WebUI.waitForElementClickable(findTestObject('Portfolio/Common/input_searchBarPort'),GlobalVariable.minAngularWait)
 			WebUI.click(findTestObject('Portfolio/Common/input_searchBarPort'))
+			
 			WebUI.delay(2)
+			WebUI.waitForElementClickable(findTestObject('Portfolio/Common/SelectProjectInPortfolio'),GlobalVariable.minAngularWait)
 			WebUI.click(findTestObject('Portfolio/Common/SelectProjectInPortfolio'))
+			
+			WebUI.waitForElementClickable(findTestObject('Portfolio/Common/input_searchBarPortfolio'),GlobalVariable.minAngularWait)
 			WebUI.setText(findTestObject('Portfolio/Common/input_searchBarPortfolio'),portfolioName)
 			WebUI.click(findTestObject('Portfolio/Common/input_searchBarPortfolio'))
 			WebUI.delay(2)
+			
+			WebUI.waitForElementClickable(findTestObject('Portfolio/Common/SelectPortfolio'),GlobalVariable.minAngularWait)
 			WebUI.click(findTestObject('Portfolio/Common/SelectPortfolio'))
+			WebUI.waitForElementClickable(findTestObject('Portfolio/Common/button_Add'),GlobalVariable.minAngularWait)
 			WebUI.click(findTestObject('Portfolio/Common/button_Add'))
-			WebUI.delay(8)
-			WebUI.waitForElementVisible(findTestObject('Portfolio/Common/button_Done'),6)
-			WebUI.click(findTestObject('Portfolio/Common/button_Done'))
-			WebUI.delay(8)
+		    WebUI.waitForElementClickable(findTestObject('Portfolio/Common/button_Add'),GlobalVariable.minAngularWait)
 			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
+			
+			WebUI.waitForElementVisible(findTestObject('Portfolio/Common/button_Done'),GlobalVariable.minAngularWait)
+			WebUI.click(findTestObject('Portfolio/Common/button_Done'))
+			WebUI.waitForElementClickable(findTestObject('Portfolio/Common/button_Done'),GlobalVariable.minAngularWait)
+			
+			/*WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 			String verifyPortfioio =WebUI.getText(findTestObject('Portfolio/Common/ProjectName'))
-			WebUI.verifyMatch(verifyPortfioio,portfolioName,false)
+			WebUI.verifyMatch(verifyPortfioio,portfolioName,false)*/
 		}
 		println  "5 Projects Successfully added inside portfolio"
 	}
