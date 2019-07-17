@@ -856,7 +856,7 @@ public class ReusableMethodsManage extends BaseClass {
 		setting.occupant()
 
 		String population = WebUI.getText(findTestObject('DataInput/Settings18/TotalValue'))
-		WebUI.verifyMatch(population,'200', false, FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.verifyMatch(population,'200Re-enter or change data', false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyElementVisible(findTestObject('DataInput/Occupancy/OTracker/Page_Arc dashboard/Re-enter or changedata'), FailureHandling.CONTINUE_ON_FAILURE)
 
 

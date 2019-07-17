@@ -14,9 +14,9 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
 try {
-	WebUI.delay(3)
+	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgramPortfolioId'(GlobalVariable.PortfoliosSheet,GlobalVariable.rowNumTwo)
-	WebUI.delay(5)
+	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 	CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsGRESB.verifyOrangeSymbol'()
 }
 catch (Throwable t) {

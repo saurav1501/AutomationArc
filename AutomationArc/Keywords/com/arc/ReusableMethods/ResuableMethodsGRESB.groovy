@@ -465,7 +465,7 @@ public class ResuableMethodsGRESB extends BaseClass {
 
 	@Keyword
 	public void verifyErrorNotification(String sheetName, int rowNum) throws IOException, InterruptedException {
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		reusableMethodsNavigation.navigateIntoDataInput()
 		WebUI.verifyElementPresent(findTestObject('Portfolio/ErrorNotification/Districtheating'),4)
 		WebUI.verifyElementPresent(findTestObject('Portfolio/ErrorNotification/ElectricityMeter'),4)
 		WebUI.verifyElementPresent(findTestObject('Portfolio/ErrorNotification/FuelMeter'),4)
@@ -634,14 +634,16 @@ public class ResuableMethodsGRESB extends BaseClass {
 	}
 	@Keyword
 	public void verifyOrangeSymbol() throws IOException, InterruptedException {
-		WebUI.delay(10)
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(7)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 		WebUI.verifyElementPresent(findTestObject('Portfolio/GRESB/Orange'),GlobalVariable.avgAngularWait)
 	}
 
 	@Keyword
 	public void verifyProjectStatus() throws IOException, InterruptedException {
-		WebUI.delay(8)
+		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 		/*WebUI.click(findTestObject('Portfolio/Total/a_ Manage (1)'))
 		 WebUI.delay(5)*/
 		WebUI.click(findTestObject('Portfolio/Common/PortfolioPage'))
@@ -658,6 +660,7 @@ public class ResuableMethodsGRESB extends BaseClass {
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Portfolio/Common/PortfolioPage'))
 		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 
 		//String projectName   = data.getCellData(sheetName, "ProjectName", 3)
 		WebUI.click(findTestObject('Portfolio/Total/span_Edit'))
@@ -666,6 +669,7 @@ public class ResuableMethodsGRESB extends BaseClass {
 		WebUI.sendKeys(findTestObject('Portfolio/Total/portfolio_name'), " ")
 		WebUI.click(findTestObject('Portfolio/Total/span_Save'))
 		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 		WebUI.verifyElementPresent(findTestObject('LoginArc/Page_Arc Skoru  Sustainability perf/Required'),5)
 	}
 
@@ -680,6 +684,7 @@ public class ResuableMethodsGRESB extends BaseClass {
 		 */		
 		WebUI.click(findTestObject('Portfolio/Common/PortfolioPage'))
 		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 
 		WebUI.scrollToElement(findTestObject('Portfolio/manage/AddProject'), 4)
 		WebUI.click(findTestObject('Portfolio/manage/AddProject'))
@@ -693,10 +698,12 @@ public class ResuableMethodsGRESB extends BaseClass {
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Portfolio/Common/SelectPortfolio'))
 		WebUI.click(findTestObject('Portfolio/Common/button_Add'))
-		WebUI.delay(10)
+		WebUI.delay(7)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 		WebUI.waitForElementVisible(findTestObject('Portfolio/Common/button_Done'),6)
 		WebUI.click(findTestObject('Portfolio/Common/button_Done'))
-		WebUI.delay(9)
+		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 
 		WebUI.scrollToElement(findTestObject('Portfolio/Common/ClickScore'),2)
 		WebUI.click(findTestObject('Portfolio/Common/ClickScore'))
@@ -704,10 +711,12 @@ public class ResuableMethodsGRESB extends BaseClass {
 
 		WebUI.click(findTestObject('Portfolio/Common/PortfolioPage'))
 		WebUI.delay(5)
-
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
+		
 		WebUI.scrollToElement(findTestObject('Object Repository/Portfolio/GRESB/Third'), 3)
 		WebUI.click(findTestObject('Object Repository/Portfolio/GRESB/Third'))
-		WebUI.delay(9)
+		WebUI.delay(8)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 
 		/***************Verifying project is deleted successfully by count no of projects ********************/
 		WebDriver driver  = DriverFactory.getWebDriver()
