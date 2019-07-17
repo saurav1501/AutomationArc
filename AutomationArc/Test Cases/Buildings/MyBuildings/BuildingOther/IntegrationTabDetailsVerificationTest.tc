@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify the details populated on the measurabl tab.</description>
+   <name>IntegrationTabDetailsVerificationTest</name>
+   <tag>Integrations Tab details verification</tag>
+   <comment></comment>
+   <testCaseGuid>3d00b262-7cd1-4ed0-a6e4-7679fd17403f</testCaseGuid>
+</TestCaseEntity>

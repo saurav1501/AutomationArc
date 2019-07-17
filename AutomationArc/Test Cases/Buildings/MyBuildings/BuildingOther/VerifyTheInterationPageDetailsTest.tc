@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify the details on the Integration page.</description>
+   <name>VerifyTheInterationPageDetailsTest</name>
+   <tag>Verify the Integration page details.</tag>
+   <comment></comment>
+   <testCaseGuid>62414374-7758-4f44-9e9d-5e10e89f3b3b</testCaseGuid>
+</TestCaseEntity>

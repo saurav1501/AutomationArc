@@ -4873,3 +4873,27 @@ def static "com.arc.ReusableMethods.ReusableMethodsManage.NavigateToMeasurablPay
 def static "com.arc.ReusableMethods.ReusableMethodsManage.paymentPageMonthlyAndAnuallyPriceValidation"() {
     (new com.arc.ReusableMethods.ReusableMethodsManage()).paymentPageMonthlyAndAnuallyPriceValidation()
 }
+
+def static "com.arc.ReusableMethods.ReusableMethodsManage.billingStatusAndDetailsMeasurabl"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsManage()).billingStatusAndDetailsMeasurabl(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsManage.verifyMeasurablIntegrationAllowedOnce"() {
+    (new com.arc.ReusableMethods.ReusableMethodsManage()).verifyMeasurablIntegrationAllowedOnce()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsManage.verifyTheIntegrationTabDetails"() {
+    (new com.arc.ReusableMethods.ReusableMethodsManage()).verifyTheIntegrationTabDetails()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsManage.changePaymentMethod"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsManage()).changePaymentMethod(
+        	sheetName
+         , 	rowNum)
+}
