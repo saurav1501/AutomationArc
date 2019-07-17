@@ -401,12 +401,6 @@
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/SettingVerifyLobbySurveyBtnAllowUserToSubmitSurveyManyTimesTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>7c1576a4-ee2e-49c9-922c-bd0b4bafdd1f</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyBillingDetailsMeasurablTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>5fc44e57-88db-4f94-a9fd-fb3b1e35d5fa</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -417,6 +411,12 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ChangePaymentMethodMeasurablTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>7c1576a4-ee2e-49c9-922c-bd0b4bafdd1f</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyBillingDetailsMeasurablTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>519fdd53-c6b6-45e3-b797-f221b1b04ab5</guid>

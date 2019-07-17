@@ -1636,10 +1636,11 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/closeModel'))
 		WebUI.delay(3)
 		//text file
+		WebUI.waitForElementClickable(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'),GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('DataInput/DataInputFileUpload/buttonUPLOAD'))
-		WebUI.delay(2)
+		//WebUI.delay(2)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'),GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/clickComputerFile'))
-		WebUI.delay(2)
 		uploadFile(UploadTextFile)
 		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/DataInputFileUpload/NoOfFiles'),GlobalVariable.minAngularWait )
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/NoOfFiles'), GlobalVariable.minAngularWait)
