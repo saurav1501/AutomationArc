@@ -31,7 +31,7 @@ public class ResuableMethodsLandingPage extends BaseClass {
 		WebUI.setText(findTestObject('Page_Home  Arc/input_pass'),'password')
 		WebUI.click(findTestObject('Page_Home  Arc/input_field_policy_accept'))
 		WebUI.click(findTestObject('Page_Home  Arc/button_Log in'))
-		WebUI.delay(6)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 		WebUI.waitForPageLoad(GlobalVariable.timeOut)
 		String errortext = WebUI.getText(findTestObject('Page_Arc dashboard/DashboardPage/ErrorMessageSorry'))
 		String errortextUI= errortext.replaceAll("\\s+","")
@@ -64,6 +64,7 @@ public class ResuableMethodsLandingPage extends BaseClass {
 		WebUI.scrollToElement(findTestObject('Page_Arc dashboard/DashboardPage/a_Cookie Statement'), 12)
 		WebUI.click(findTestObject('Page_Arc dashboard/DashboardPage/a_Cookie Statement'))
 		WebUI.delay(6)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 		WebUI.switchToWindowIndex(1)
 		String cookiepolicyPage = WebUI.getText(findTestObject('Page_Arc dashboard/DashboardPage/CookiePolicyPage'))
 		WebUI.verifyMatch(cookiepolicyPage,'This is the Cookie Policy for Arc, accessible from http://arcskoru.com', false)
@@ -75,6 +76,7 @@ public class ResuableMethodsLandingPage extends BaseClass {
 
 		WebUI.click(findTestObject('Page_Arc dashboard/DashboardPage/RedirectPrdPage'))
 		WebUI.delay(6)
+		
 		WebUI.switchToWindowIndex(2)
 		WebUI.verifyTextPresent('Performance is the future of green building', true)
 		WebUI.closeWindowIndex(2)
@@ -336,11 +338,13 @@ public class ResuableMethodsLandingPage extends BaseClass {
 	@Keyword
 	public void projectRegistrationCountryState() {
 		/**********Verify if Project Registration page is open when add project is clicked on *******************/
+		
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 		WebUI.clearText(findTestObject('Object Repository/AddProjectNewUI/projectName'))
 		WebUI.delay(2)
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/countryName'),'India', false)
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 		WebUI.verifyOptionPresentByLabel(findTestObject('Object Repository/Page_Arc dashboard/DashboardPage/AllProject/select_Andaman and Nico.In.And'), 'Andaman and Nico.In.', false, 5)
 		/*	WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Arc dashboard/DashboardPage/New Folder/Page_Arc dashboard/StateThis field is required'),7)
 		 WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Arc dashboard/DashboardPage/New Folder/Page_Arc dashboard/StateValidation2'),7)
@@ -350,6 +354,7 @@ public class ResuableMethodsLandingPage extends BaseClass {
 	@Keyword
 	public void verifyProjectRegFieldDetails() {
 		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 		/*WebUI.scrollToElement(findTestObject('Object Repository/Add_Project_Details/button_ Add'), 3)
 		 WebUI.click(findTestObject('Object Repository/Add_Project_Details/button_ Add'))*/
 		String optionValue = WebUI.getText(findTestObject('Object Repository/Page_Arc dashboard/DashboardPage/New Folder/ProjectTypeOption'))
@@ -361,11 +366,13 @@ public class ResuableMethodsLandingPage extends BaseClass {
 	public verifyValidationAreaUnit() {
 		/**********Verify the radio buttons for the Units & tool tip text .*******************/
 		WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
-		WebUI.delay(7)
+		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 
 		WebUI.scrollToElement(findTestObject('Object Repository/Add_Project_Details/button_ Add'), 3)
 		WebUI.click(findTestObject('Object Repository/Add_Project_Details/button_ Add'))
 		WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/selectProjectType'), 'Buildings', true)
 
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/DashboardNavigationNewUI/Dash/select_Square feetSquare meter'), 'Square feet', false)
@@ -376,10 +383,10 @@ public class ResuableMethodsLandingPage extends BaseClass {
 	}
 	@Keyword
 	public verifyValidationSpecialCharacter() {
-		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 		WebUI.scrollToElement(findTestObject('Object Repository/Add_Project_Details/button_ Add'), 3)
 		WebUI.click(findTestObject('Object Repository/Add_Project_Details/button_ Add'))
-		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 
 		WebUI.setText(findTestObject('Object Repository/Add_Project_Details/input_name'),'ProjectNameUp40CharacterTestVerifyUPTo40')
 		WebUI.verifyElementNotPresent(findTestObject('Object Repository/Page_Arc dashboard/DashboardPage/New Folder/Page_Arc dashboard/StateThis field is required'),7)
