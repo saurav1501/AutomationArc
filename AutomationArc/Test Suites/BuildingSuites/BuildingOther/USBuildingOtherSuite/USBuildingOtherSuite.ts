@@ -13,7 +13,7 @@
    <testCaseLink>
       <guid>ddaf6661-bc9b-4394-90eb-4807e8ee882c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/LoginWithBuildingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -55,31 +55,31 @@
    <testCaseLink>
       <guid>488b8470-e416-410c-b441-296f6e210cf8</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/UIScoreFieldIndividualTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>23f7b380-e993-4fd7-a0b8-0b16af54e891</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/UIFieldTotalScoreTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>8e99872f-70b4-48a6-95bd-68df8813468d</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/UIScoreWithoutDataTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>7ca9d707-6d4c-45c1-bef7-640c3a867e09</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/NavigationTotalScoreToAnalyticsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>cdf7a5da-c774-4a3c-bb4e-918935d5b268</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/NavigationIndividualRaceTrackToAnalyticsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -229,25 +229,25 @@
    <testCaseLink>
       <guid>6bdc0630-6610-4738-ae5b-bc67bfe6fd5b</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyWasteMeterDataCreatedViaExcelTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>8be77a1e-d901-4660-bddc-7e9891361742</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyWaterMeterDataCreatedViaExcelTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>34e704d3-5207-4a0b-8505-24066cd4e484</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyEnergyMeterDataCreatedViaExcelTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>f89f776d-3cac-4de7-bc48-361356e07d48</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyFilterDataInputForWasteReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -283,31 +283,31 @@
    <testCaseLink>
       <guid>a1653587-0b28-402f-9dd5-db49c7f14cc0</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ValidateTransportationSurveyGraphTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d6a7a461-5d82-4faa-86fc-6786835d99bf</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ValidateHumanExpGraphTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>429c616f-22d7-43e3-ad0a-49fea2ee6eb5</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ValidateEnergyMeterGraphTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>7500c43c-50e5-4ffb-b2a2-b319e8f77024</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ValidateWaterMeterGraphTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>7fbe0fbd-cae0-4e51-8a4f-c3d3c195e9e1</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ValidateWasteDatagraphTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -401,12 +401,6 @@
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/SettingVerifyLobbySurveyBtnAllowUserToSubmitSurveyManyTimesTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>519fdd53-c6b6-45e3-b797-f221b1b04ab5</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/DownloadAndVerifyTheSnapshotFileNameTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>7c1576a4-ee2e-49c9-922c-bd0b4bafdd1f</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -423,5 +417,11 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ChangePaymentMethodMeasurablTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>519fdd53-c6b6-45e3-b797-f221b1b04ab5</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/DownloadAndVerifyTheSnapshotFileNameTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

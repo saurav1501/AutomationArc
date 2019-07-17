@@ -947,7 +947,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOccupancy'))
 		Thread.sleep(3000)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'),20)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'),'value'), '9',false,FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingRegularOccupantsReading'),'value'), '9',false,FailureHandling.CONTINUE_ON_FAILURE)
 		Thread.sleep(2000)
 
 		//verify Area
@@ -3952,7 +3952,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyElementPresent(findTestObject('Object Repository/Manage/BillingSection/Measurabl/AnnualPaymentTextLabel'), GlobalVariable.minAngularWait)
 		WebUI.verifyElementPresent(findTestObject('Object Repository/Manage/BillingSection/Measurabl/MonthlyPaymentCheckbox'), GlobalVariable.minAngularWait)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/AnnualPaymentTextLabel')),'Annually - $120.0 annual payment',false,FailureHandling.STOP_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/MonthlyPaymentCheckbox')),'Monthly - $10.0 per month ($120.0 yearly contract)',false,FailureHandling.STOP_ON_FAILURE)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/MonthlyPaymentTextLabel')),'Monthly - $10.0 per month ($120.0 yearly contract)',false,FailureHandling.STOP_ON_FAILURE)
 
 	}
 
@@ -4019,12 +4019,12 @@ public class ReusableMethodsManage extends BaseClass {
 		System.out.println(date1);
 		return date1
 	}
-	
+
 	@Keyword
 	public void verifyTheIntegrationTabDetails(){
-		
+
 		String regDate = nextPaymentDate()
-		
+
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/Measurabl/IntegrationsTabs'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		String nameOfIntegration= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/NameOfIntegration'))
@@ -4039,7 +4039,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyMatch(nameOfIntegration, nameOfIntegration, false, FailureHandling.CONTINUE_ON_FAILURE)
 		String cardDetails= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/GetThepartialCardDetails'))
 		WebUI.verifyMatch(cardDetails, "VISA ending *0000", false, FailureHandling.CONTINUE_ON_FAILURE)
-			
+
 	}
 	@Keyword
 	public void changePaymentMethod(String sheetName, int rowNum){
@@ -4073,22 +4073,22 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.setText(findTestObject('Object Repository/paymentPageNewUI/billingZip'),zip )
 		//*********************** Select the payment mode *******************//
 
-			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
-			WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/CardNumber'),"4012000033330026")
-			WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/ccExpiary'),cardDate)
-			WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/cvvCreditCard'),cardCvv)
-			//promocode field in case if used
-			//WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/promoCode'),promocode)
-			//WebUI.delay(3)
-			WebUI.click(findTestObject('Object Repository/paymentPageNewUI/submitPayment'))
-			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-			WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/BillingSection/Measurabl/IntegrationsTabs'), GlobalVariable.maxAngularWait)
-			WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/BillingSection/Measurabl/IntegrationsTabs'), GlobalVariable.maxAngularWait)
-			String cardDetails= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/GetThepartialCardDetails'))
-			WebUI.verifyMatch(cardDetails, "VISA ending *0026", false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/CardNumber'),"4012000033330026")
+		WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/ccExpiary'),cardDate)
+		WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/cvvCreditCard'),cardCvv)
+		//promocode field in case if used
+		//WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/promoCode'),promocode)
+		//WebUI.delay(3)
+		WebUI.click(findTestObject('Object Repository/paymentPageNewUI/submitPayment'))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/BillingSection/Measurabl/IntegrationsTabs'), GlobalVariable.maxAngularWait)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/BillingSection/Measurabl/IntegrationsTabs'), GlobalVariable.maxAngularWait)
+		String cardDetails= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/GetThepartialCardDetails'))
+		WebUI.verifyMatch(cardDetails, "VISA ending *0026", false, FailureHandling.CONTINUE_ON_FAILURE)
 	}
-	
+
 }
