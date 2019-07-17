@@ -3939,7 +3939,8 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/Measurabl/GetStartedButtonForMeasurabl'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/BillingSection/Measurabl/IntegrationPaymentTextOnPaymentPage'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/BillingSection/Measurabl/IntegrationPaymentTextOnPaymentPage'), GlobalVariable.minAngularWait)
-
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.delay(3)
 		if(paymentType.equals("monthly")){
 			WebUI.click(findTestObject('Object Repository/Manage/BillingSection/Measurabl/MonthlyPaymentCheckbox'))
 		}

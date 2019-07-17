@@ -17,7 +17,7 @@ import internal.GlobalVariable as GlobalVariable
 
 	try{
 		
-		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.changePaymentMethod'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumFive)
+		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.changePaymentMethod'(GlobalVariable.CCPayment , GlobalVariable.rowNumTwo)
 	}
 	catch(Exception e){
 		e.printStackTrace()
