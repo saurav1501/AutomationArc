@@ -163,14 +163,14 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.refresh()
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		navigation.navigateIntoDataInput()
-		
+
 	}
-	
+
 	public void navigationTeam()
 	{
-	WebUI.scrollToElement(findTestObject('Manage/TeamModule/a_ Team'),2)
-	WebUI.click(findTestObject('Manage/TeamModule/a_ Team'))
-	WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.scrollToElement(findTestObject('Manage/TeamModule/a_ Team'),2)
+		WebUI.click(findTestObject('Manage/TeamModule/a_ Team'))
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 	}
 	@Keyword
 	public void uploadArcDataTemplateTransit(){
@@ -1897,7 +1897,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentFive'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentSix'),GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentSix'), GlobalVariable.minAngularWait)
-  		//WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentOne')),"uploasExcel.xlsx",false)
+		//WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadDocumentOne')),"uploasExcel.xlsx",false)
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/closeModel'))
 		WebUI.delay(3)
 		//doc file
@@ -5996,20 +5996,20 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		double doccupant = Double.parseDouble(occupant)
 
 		navigation.navigateIntoDataInput()
-		
-	
+
+
 		//setting.occupantGen()
 
 		String projectoccupancy = data.getCellData(sheetName,'GrossAreasqft', rowNum)
 
 		double projectOccupancy= Double.parseDouble(projectoccupancy)
-		
+
 		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'),10)
 		WebUI.doubleClick(findTestObject('DataInput/Survey/div_Transportation Survey'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 		WebUI.delay(2)
-		
+
 		WebUI.waitForElementPresent(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
 		WebUI.waitForElementVisible(findTestObject('DataInput/Survey/SurveyResponsePercentage'), GlobalVariable.avgAngularWait)
 
