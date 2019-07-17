@@ -4027,7 +4027,15 @@ public class ReusableMethodsManage extends BaseClass {
 	public void verifyTheIntegrationTabDetails(){
 
 		String regDate = nextPaymentDate()
-
+		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+			println "Manage"
+			WebUI.delay(2)
+			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+		}
+		WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
+		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Loaders/ProjectDashboardLoader'), 30)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/Measurabl/IntegrationsTabs'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		String nameOfIntegration= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/NameOfIntegration'))
@@ -4046,9 +4054,23 @@ public class ReusableMethodsManage extends BaseClass {
 	}
 	@Keyword
 	public void changePaymentMethod(String sheetName, int rowNum){
+		
+		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+			println "Manage"
+			WebUI.delay(2)
+			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+		}
+		WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
+		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Loaders/ProjectDashboardLoader'), 30)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/Measurabl/IntegrationsTabs'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/Measurabl/ChangePaymentMethodButton'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/GetChangePaymenMethodPageText')),'Change Payment Method',false, FailureHandling.STOP_ON_FAILURE)
+		
 		String cardName   = data.getCellData(sheetName, "CardName", rowNum)
 		String cardNum    = data.getCellData(sheetName, "CardNumber", rowNum)
 		String cardDate   = data.getCellData(sheetName, "Date ", rowNum)
