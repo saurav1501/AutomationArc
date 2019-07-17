@@ -4090,6 +4090,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/BillingSection/Measurabl/IntegrationsTabs'), GlobalVariable.maxAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/BillingSection/Measurabl/IntegrationsTabs'), GlobalVariable.maxAngularWait)
+		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/Measurabl/IntegrationsTabs'))
 		String cardDetails= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/GetThepartialCardDetails'))
 		WebUI.verifyMatch(cardDetails, "VISA ending *0026", false, FailureHandling.CONTINUE_ON_FAILURE)
 	}

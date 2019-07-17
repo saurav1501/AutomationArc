@@ -34,7 +34,7 @@ try{
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.fileUploadDataInputWater'()
 
 } catch (Throwable t) {
-	
+	WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/closeModel'))
 	System.out.println(t.getLocalizedMessage())
 		Error e1 = new Error(t.getMessage())
 		e1.setStackTrace(t.getStackTrace())

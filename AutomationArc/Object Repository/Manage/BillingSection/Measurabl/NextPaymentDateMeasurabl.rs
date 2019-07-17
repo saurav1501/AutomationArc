@@ -6,12 +6,11 @@
    <elementGuidId>244dff6b-d3f8-414a-b999-9aba2fe4828d</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//*[@data-ng-repeat=&quot;app in integrations&quot;])[2]//td[3]</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>(//*[@data-ng-repeat=&quot;app in integrations&quot;])[1]//td[3]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
