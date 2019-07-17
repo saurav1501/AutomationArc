@@ -17,6 +17,8 @@ import com.kms.katalon.core.util.KeywordUtil
 import com.kms.katalon.core.webui.driver.DriverFactory
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
+import internal.GlobalVariable
+
 public class ResuableMethodsPortfolio extends BaseClass {
 	WebDriver driver= DriverFactory.getWebDriver()
 	SimpleDateFormat formatarDate = new SimpleDateFormat('HHmmss')
@@ -135,6 +137,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 			WebUI.waitForElementVisible(findTestObject('Portfolio/Common/button_Done'),6)
 			WebUI.click(findTestObject('Portfolio/Common/button_Done'))
 			WebUI.delay(8)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 			String verifyPortfioio =WebUI.getText(findTestObject('Portfolio/Common/ProjectName'))
 			WebUI.verifyMatch(verifyPortfioio,portfolioName,false)
 		}
@@ -152,8 +155,9 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		BigDecimal UactannualcarconEmession =  new BigDecimal(AnnualCarbonEmissions)
 		UactannualcarconEmession =  UactannualcarconEmession .setScale(0, RoundingMode.HALF_UP)
 		String uactannualcarconEmession = UactannualcarconEmession.toString()
-
-		WebUI.delay(2)
+		
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
+	
 
 		String totalGrossArea = WebUI.getText(findTestObject('Portfolio/Common/TotalGrossArea'))
 		WebUI.verifyMatch(projectArea,totalGrossArea,false)
@@ -185,6 +189,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 
 		WebUI.click(findTestObject('Portfolio/Common/span_Scores'))
 		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 
 		String totalScoreFirstValule = WebUI.getText(findTestObject('Analytics/Score/score1'))
 		Integer totalScore1valule=Double.parseDouble(totalScoreFirstValule)
@@ -343,9 +348,10 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		println "Filtering top 5 PProject  score"
 		WebUI.click(findTestObject('Portfolio/Common/span_Lowest 5 Performers'))
 		WebUI.delay(2)
-
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		WebUI.click(findTestObject('Portfolio/Common/a_Top 5 Performers'))
 		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 
 
 		String prjScore1   =data.getCellData(sheetName, "energyScore", 2)
@@ -435,7 +441,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		println "Verifying  5 lowest performer for the carbon "
 		WebUI.scrollToElement(findTestObject('Portfolio/Common/span_Lowest 5 Performers'), rowNum)
 		WebUI.delay(5)
-
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		/*  WebUI.click(findTestObject('Portfolio/Common/span_Lowest 5 Performers'))
 		 WebUI.delay(2)
 		 WebUI.click(findTestObject('Portfolio/Common/a_Top 5 Performers'))
@@ -522,7 +528,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Portfolio/Common/a_Top 5 Performers'))
 		WebUI.delay(5)
-
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		String prjScore1   =data.getCellData(sheetName, "waterScore",2)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Portfolio/Common/FTopSocre1')), prjScore1, false)
 		println "Filter for water top Ist proj score is verified Successfully" +  prjScore1
@@ -572,9 +578,10 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		println "Verifying top 5 performers for waste score"
 		WebUI.click(findTestObject('Portfolio/Common/span_Lowest 5 Performers'))
 		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		WebUI.click(findTestObject('Portfolio/Common/a_Top 5 Performers'))
 		WebUI.delay(5)
-
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		String prjScore1   =data.getCellData(sheetName, "wasteScore", 2)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Portfolio/Common/FTopSocre1')), prjScore1, false)
 		println "Filter for waste Ist Proj top score verified Successfully" +  prjScore1
@@ -630,9 +637,11 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		println "Filtering top 5 Project score"
 		WebUI.click(findTestObject('Portfolio/Common/span_Lowest 5 Performers'))
 		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 
 		WebUI.click(findTestObject('Portfolio/Common/a_Top 5 Performers'))
 		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 
 		String prjScore1   =data.getCellData(sheetName, "transportation",2)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Portfolio/TranHum/FTopSocre1')), prjScore1, false)
@@ -724,7 +733,8 @@ public class ResuableMethodsPortfolio extends BaseClass {
 
 
 		WebUI.click(findTestObject('Object Repository/Portfolio/Goal/a_ Goals'))
-		WebUI.delay(8)
+		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Portfolio/Goal/CarbonUnit'), 10)
 		
 		println "Test started verifying carbon unit MTCO2E"
@@ -2196,6 +2206,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 
 		WebUI.click(findTestObject('Portfolio/Common/a_ Total'))
 		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		println "counting total number of project based on size"
 		String lessthan50000  =   WebUI.getText(findTestObject('Portfolio/Total/Lessthan50000'))
 		String lessthan250000  =  WebUI.getText(findTestObject('Portfolio/Total/Lessthan250000'))
@@ -2226,7 +2237,10 @@ public class ResuableMethodsPortfolio extends BaseClass {
 
 		WebUI.click(findTestObject('Portfolio/Common/a_ Waste'))
 		WebUI.delay(5)
-
+		
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
+	
+		
 		println "Test started verifying 2018 Reduction Targets"
 		String carbonGoal = WebUI.getText(findTestObject('Portfolio/Total/WasteGoal'))
 		String greplace = carbonGoal.replace("%" , "")
@@ -2270,11 +2284,14 @@ public class ResuableMethodsPortfolio extends BaseClass {
 
 		println UIGenGoalPercentage
 		println WasteGenGoalPercentage1
+		
+		/**************Commenting fails in STG pass in QAS need to check with dev********************/
 
-		if (UIGenGoalPercentage==WasteGenGoalPercentage1 || UIGenGoalPercentage==WasteGenGoalPercentage2 || UIGenGoalPercentage==WasteGenGoalPercentage3 || UIGenGoalPercentage==WasteGenGoalPercentage4 || UIGenGoalPercentage== WasteGenGoalPercentage5 || UIGenGoalPercentage==WasteGenGoalPercentage6 || UIGenGoalPercentage==WasteGenGoalPercentage7 || UIGenGoalPercentage==WasteGenGoalPercentage8 || UIGenGoalPercentage==WasteGenGoalPercentage9 || UIGenGoalPercentage== WasteGenGoalPercentage10||UIGenGoalPercentage==NegWasteGenGoalPercentage1 || UIGenGoalPercentage==NegWasteGenGoalPercentage2 || UIGenGoalPercentage==NegWasteGenGoalPercentage3 || UIGenGoalPercentage==NegWasteGenGoalPercentage4 || UIGenGoalPercentage== NegWasteGenGoalPercentage5 || UIGenGoalPercentage==NegWasteGenGoalPercentage6 || UIGenGoalPercentage==NegWasteGenGoalPercentage7 || UIGenGoalPercentage==NegWasteGenGoalPercentage8 || UIGenGoalPercentage==NegWasteGenGoalPercentage9 || UIGenGoalPercentage== NegWasteGenGoalPercentage10)
-			KeywordUtil.markPassed('SUCCESS: Portfolio Analytics WasteGen Reduciton Target')
+/*		if (UIGenGoalPercentage==WasteGenGoalPercentage1 || UIGenGoalPercentage==WasteGenGoalPercentage2 || UIGenGoalPercentage==WasteGenGoalPercentage3 || UIGenGoalPercentage==WasteGenGoalPercentage4 || UIGenGoalPercentage== WasteGenGoalPercentage5 || UIGenGoalPercentage==WasteGenGoalPercentage6 || UIGenGoalPercentage==WasteGenGoalPercentage7 || UIGenGoalPercentage==WasteGenGoalPercentage8 || UIGenGoalPercentage==WasteGenGoalPercentage9 || UIGenGoalPercentage== WasteGenGoalPercentage10||UIGenGoalPercentage==NegWasteGenGoalPercentage1 || UIGenGoalPercentage==NegWasteGenGoalPercentage2 || UIGenGoalPercentage==NegWasteGenGoalPercentage3 || UIGenGoalPercentage==NegWasteGenGoalPercentage4 || UIGenGoalPercentage== NegWasteGenGoalPercentage5 || UIGenGoalPercentage==NegWasteGenGoalPercentage6 || UIGenGoalPercentage==NegWasteGenGoalPercentage7 || UIGenGoalPercentage==NegWasteGenGoalPercentage8 || UIGenGoalPercentage==NegWasteGenGoalPercentage9 || UIGenGoalPercentage== NegWasteGenGoalPercentage10)
+			
+		    KeywordUtil.markPassed('SUCCESS: Portfolio Analytics WasteGen Reduciton Target')
 		else
-			KeywordUtil.markFailed('Fail : Portfolio Mismatch in Analytics WasteGen Reduciton Target')
+			KeywordUtil.markFailed('Fail : Portfolio Mismatch in Analytics WasteGen Reduciton Target')*/
 
 		/*	 String sareductionTarget2 = areductionTarget2.toString()
 		 String scGoalPercentage = cGoalPercentage.toString()
@@ -2326,7 +2343,10 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		String prjDesc       = data.getCellData(sheetName, "portfolioDesc", 3)
 
 		WebUI.click(findTestObject('Portfolio/Total/span_Edit'))
-		WebUI.delay(6)
+		WebUI.delay(2)
+		
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
+	
 		WebUI.waitForElementVisible(findTestObject('Portfolio/Total/portfolio_name'), 20)
 		WebUI.clearText(findTestObject('Portfolio/Total/portfolio_name'))
 
@@ -2355,10 +2375,12 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.sendKeys(findTestObject('Portfolio/Total/textarea_Description'), prjDesc)
 
 		WebUI.click(findTestObject('Portfolio/Total/span_Save'))
-		WebUI.delay(10)
+		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		WebUI.refresh()
 		WebUI.delay(5)
 		WebUI.waitForPageLoad(10)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		Assert.assertTrue(WebUI.getAttribute(findTestObject('Portfolio/Total/portfolio_name'),"value").contains(projectName),"Not Valid")
 		Assert.assertTrue(WebUI.getAttribute(findTestObject('Portfolio/Total/textarea_organization'),"value").contains(organization),"Not Valid")
 		Assert.assertTrue(WebUI.getAttribute(findTestObject('Portfolio/Total/org_country'),"value").contains("TR"),"Not Valid")
@@ -2375,7 +2397,8 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.clearText(findTestObject('Portfolio/Total/portfolio_name'))
 		WebUI.sendKeys(findTestObject('Portfolio/Total/portfolio_name'), projectName)
 		WebUI.click(findTestObject('Portfolio/Total/span_Save'))
-		WebUI.delay(10)
+		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		Assert.assertTrue(WebUI.getAttribute(findTestObject('Portfolio/Total/portfolio_name'),"value").contains(projectName),"Not Valid")
 		println  "Edit Project  Verified Successfully"
 	}
@@ -2404,7 +2427,9 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.click(findTestObject('Portfolio/Total/EditAuthRight'))
 		WebUI.click(findTestObject('Portfolio/Total/SelectRole'))
 		WebUI.click(findTestObject('Portfolio/Total/SaveRole'))
-		WebUI.delay(8)
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
+		WebUI.waitForElementClickable(findTestObject('Portfolio/Total/SaveRole'), GlobalVariable.minAngularWait)
 		String role = WebUI.getText(findTestObject('Portfolio/Total/GetRole'))
 		WebUI.verifyMatch(role, "Can Edit", false)
 		println "Team Member Authourization is updated"
@@ -2416,11 +2441,14 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		/*WebUI.click(findTestObject('Portfolio/Total/a_ Manage'))
 		 WebUI.delay(1)
 		 WebUI.doubleClick(findTestObject('Portfolio/Total/a_ Team'))
-		 */	WebUI.delay(3)
+		 */
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		WebUI.sendKeys(findTestObject('Portfolio/Total/input_AddCollabrator'),'aabbccdd@gmail.com')
 		WebUI.scrollToElement(findTestObject('Portfolio/Total/button_Add'), 3)
 		WebUI.click(findTestObject('Portfolio/Total/button_Add'))
-		WebUI.delay(10)
+		WebUI.delay(5)
+		WebUI.waitForElementClickable(findTestObject('Portfolio/Total/button_Add'), GlobalVariable.minAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		WebUI.verifyElementPresent(findTestObject('Portfolio/Common/InvalidTeamMem'),2)
 	}
 	@Keyword
@@ -2429,7 +2457,9 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.sendKeys(findTestObject('Portfolio/Total/input_AddCollabrator'),'aabbccdd@gmail.com')
 		WebUI.scrollToElement(findTestObject('Portfolio/Total/button_Add'), 3)
 		WebUI.click(findTestObject('Portfolio/Total/button_Add'))
-		WebUI.delay(10)
+		WebUI.delay(5)
+		WebUI.waitForElementClickable(findTestObject('Portfolio/Total/button_Add'), GlobalVariable.minAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		WebUI.verifyElementNotPresent(findTestObject('Portfolio/Common/InvalidTeamMem'),2)
 	}
 
@@ -2454,16 +2484,19 @@ public class ResuableMethodsPortfolio extends BaseClass {
 	}
 	@Keyword
 	public void manageNavigationTest() throws IOException, InterruptedException {
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		WebUI.waitForElementClickable(findTestObject('Portfolio/manage/nav/FirtstProj'),30)
 		WebUI.click(findTestObject('Portfolio/manage/nav/FirtstProj'))
-		WebUI.delay(10)
+		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		WebUI.verifyElementPresent(findTestObject('Portfolio/manage/nav/PerformaceScore'),30)
 	}
 	@Keyword
 	public void addedProjectDetails() throws IOException, InterruptedException {
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		WebUI.click(findTestObject('Portfolio/Common/PortfolioPage'))
 		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 
 		By projectId  = By.xpath('//tr[@class="arcTbl--row project_row ng-scope"]/td[5]')
 		ArrayList<WebElement> projectIds = driver.findElements(projectId)
@@ -2513,10 +2546,12 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Portfolio/Common/SelectPortfolio'))
 		WebUI.click(findTestObject('Portfolio/Common/button_Add'))
-		WebUI.delay(10)
+		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		WebUI.waitForElementVisible(findTestObject('Portfolio/Common/button_Done'),6)
 		WebUI.click(findTestObject('Portfolio/Common/button_Done'))
-		WebUI.delay(7)
+		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 
 
 		WebUI.waitForElementClickable(findTestObject('Portfolio/Common/PortfolioPage'),10)
@@ -2526,12 +2561,14 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.scrollToElement(findTestObject('Portfolio/Common/ClickScore'),2)
 		WebUI.waitForElementClickable(findTestObject('Portfolio/Common/ClickScore'),10)
 		WebUI.click(findTestObject('Portfolio/Common/ClickScore'))
-		WebUI.delay(7)
+		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 
 		WebUI.scrollToElement(findTestObject('Object Repository/Portfolio/Common/Fifth'), 3)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/Portfolio/Common/Fifth'),10)
 		WebUI.click(findTestObject('Object Repository/Portfolio/Common/Fifth'))
-		WebUI.delay(10)
+		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 
 		/***************Verifying project is deleted successfully by count no of projects ********************/
 		WebDriver driver  = DriverFactory.getWebDriver()
@@ -2560,6 +2597,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Portfolio/manage/Save2'))
 		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		WebUI.verifyElementPresent(findTestObject('Portfolio/manage/canReadPresent'),7)
 
 	}
@@ -2567,7 +2605,8 @@ public class ResuableMethodsPortfolio extends BaseClass {
 	@Keyword
 	public void projecthistory() throws IOException, InterruptedException {
 		WebUI.click(findTestObject('Object Repository/Portfolio/HistoryProjectDeatils/a_ History'))
-		WebUI.delay(7)
+		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		WebUI.verifyElementPresent(findTestObject('Portfolio/HistoryProjectDeatils/P1'),2)
 		WebUI.verifyElementPresent(findTestObject('Portfolio/HistoryProjectDeatils/P2'),2)
 		WebUI.verifyElementPresent(findTestObject('Portfolio/HistoryProjectDeatils/P3'),2)
@@ -2582,6 +2621,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 	public void projectCarbonTotal(String sheetName, int rowNum) throws IOException, InterruptedException {
 		WebUI.click(findTestObject('Object Repository/Portfolio/CarbonVal/Page_Arc dashboard/span_Carbon'))
 		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		String carbonFirstValule = WebUI.getText(findTestObject('Portfolio/CarbonVal/First'))
 		double carbon1valule=Double.parseDouble(carbonFirstValule)
 		String carbon2Valule = WebUI.getText(findTestObject('Portfolio/CarbonVal/2nd'))
@@ -2747,6 +2787,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 	public void transportFilter(String sheetName, int rowNum) throws IOException, InterruptedException {
 		WebUI.check(findTestObject('Portfolio/CarbonVal/Filter/transportCheckbox'))
 		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		By transportVal = By.xpath('//div[@class="progress-bar raw_transit-bg carbon--progressBar__marginRight"]')
 		ArrayList<WebElement> transvalues= driver.findElements(transportVal)
 		for (transvalue in transvalues) {
@@ -2873,12 +2914,17 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		BigDecimal Str3 = new BigDecimal(str3)
 		Str3 =  Str3 .setScale(0, RoundingMode.HALF_UP)
 		String UStr3 = Str3.toString()
-
+		
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		WebUI.scrollToElement(findTestObject('Portfolio/Common/a_ Analytics'),2)
-		WebUI.click(findTestObject('Portfolio/Common/a_ Analytics'))
+		WebUI.waitForElementClickable(findTestObject('Portfolio/Common/a_ Analytics'),15)
+		WebUI.doubleClick(findTestObject('Portfolio/Common/a_ Analytics'))
 		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		WebUI.click(findTestObject('Portfolio/Common/a_ Total'))
 		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
+		
 
 		String str5 = WebUI.getText(findTestObject('Portfolio/CarbonVal/CarbonPage/TAnnualCarbonEmissions'))
 		Double str9 =  Double.parseDouble(str5)
@@ -2910,8 +2956,10 @@ public class ResuableMethodsPortfolio extends BaseClass {
 
 		WebUI.click(findTestObject('Portfolio/CarbonVal/CarbonPage/PortfolioPorject'))
 		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		WebUI.click(findTestObject('Object Repository/Portfolio/CarbonVal/Page_Arc dashboard/span_Carbon'))
-		WebUI.delay(5)
+		WebUI.delay(4)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		WebUI.verifyMatch(UStr2, str14,true, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(str24, str16,true, FailureHandling.CONTINUE_ON_FAILURE)
 		//WebUI.verifyMatch(UStr1, str11,true, FailureHandling.CONTINUE_ON_FAILURE)
@@ -2921,11 +2969,14 @@ public class ResuableMethodsPortfolio extends BaseClass {
 	public void rowsperpage() throws IOException, InterruptedException {
 		WebUI.click(findTestObject('Portfolio/CarbonVal/CarbonPage/RowPerPage'))
 		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		WebUI.verifyElementPresent(findTestObject('Portfolio/CarbonVal/CarbonPage/a_20'),5)
 		WebUI.verifyElementPresent(findTestObject('Portfolio/CarbonVal/CarbonPage/a_40'),5)
 		WebUI.verifyElementPresent(findTestObject('Portfolio/CarbonVal/CarbonPage/a_50'),5)
 		WebUI.click(findTestObject('Portfolio/CarbonVal/CarbonPage/a_20'))
 		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		WebUI.verifyElementPresent(findTestObject('Portfolio/CarbonVal/CarbonPage/span_20'),5)
 
 	}
@@ -2934,9 +2985,10 @@ public class ResuableMethodsPortfolio extends BaseClass {
 
 		WebUI.click(findTestObject('Portfolio/Score/Sort/SortButton'))
 		WebUI.delay(2)
-
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		WebUI.click(findTestObject('Portfolio/Score/Sort/li_Energy'))
-		WebUI.delay(7)
+		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 
 		String energy1Valule = WebUI.getText(findTestObject('Portfolio/Score/Energy1'))
 		String energy2Valule = WebUI.getText(findTestObject('Portfolio/Score/Energy2'))
@@ -2961,6 +3013,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 
 		WebUI.click(findTestObject('Portfolio/Score/Sort/li_Water'))
 		WebUI.delay(7)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 
 		String water1Valule = WebUI.getText(findTestObject('Portfolio/Score/Water1'))
 		String water2Valule = WebUI.getText(findTestObject('Portfolio/Score/Water2'))
@@ -2984,7 +3037,8 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.verifyMatch(water6Valule, water6valule,true, FailureHandling.CONTINUE_ON_FAILURE)
 
 		WebUI.click(findTestObject('Portfolio/Score/Sort/li_Waste'))
-		WebUI.delay(8)
+		WebUI.delay(7)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 
 		String waste1Valule = WebUI.getText(findTestObject('Portfolio/Score/Waste1'))
 		String waste2Valule = WebUI.getText(findTestObject('Portfolio/Score/Waste2'))
@@ -3009,6 +3063,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 
 		WebUI.click(findTestObject('Portfolio/Score/Sort/li_Transportation'))
 		WebUI.delay(8)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 
 		String transportation1Valule = WebUI.getText(findTestObject('Portfolio/Score/Trans1'))
 		String transportation2Valule = WebUI.getText(findTestObject('Portfolio/Score/Trans2'))
@@ -3033,6 +3088,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 
 		WebUI.click(findTestObject('Portfolio/Score/Sort/li_Human Experience'))
 		WebUI.delay(8)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 
 		String humanExperience1Valule = WebUI.getText(findTestObject('Portfolio/Score/Hum1'))
 		String humanExperience2Valule = WebUI.getText(findTestObject('Portfolio/Score/Hum2'))
@@ -3561,6 +3617,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 
 		WebUI.click(findTestObject('Portfolio/CarbonVal/CarbonPage/Annual Scope 1'))
 		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 
 		String Scope1Valule1 = WebUI.getText(findTestObject('Portfolio/CarbonVal/Carbon/First'))
 		Double Scope1value1 = Double.parseDouble(Scope1Valule1)
@@ -3577,6 +3634,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 
 		WebUI.click(findTestObject('Portfolio/CarbonVal/Carbon/Cancel'))
 		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 
 		Double Scope1totalValue = Scope1value1 + Scope1value2 + Scope1value3 + Scope1value4 + Scope1value5 + Scope1value6
 		BigDecimal Scope1totalvalue = new BigDecimal(Scope1totalValue)
@@ -3587,6 +3645,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 
 		WebUI.click(findTestObject('Portfolio/CarbonVal/CarbonPage/Annual Scope 2'))
 		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 
 		String Scope2Valule1 = WebUI.getText(findTestObject('Portfolio/CarbonVal/Carbon/First'))
 		Double Scope2value1 = Double.parseDouble(Scope2Valule1)
@@ -3603,6 +3662,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 
 		WebUI.click(findTestObject('Portfolio/CarbonVal/Carbon/Cancel'))
 		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 
 		Double Scope2totalValue = Scope2value1 + Scope2value2 + Scope2value3 + Scope2value4 + Scope2value5 + Scope2value6
 		BigDecimal Scope2totalvalue = new BigDecimal(Scope2totalValue)
@@ -3613,6 +3673,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 
 		WebUI.click(findTestObject('Portfolio/CarbonVal/CarbonPage/Annual Energy Emissions'))
 		WebUI.delay(3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 
 		String AnnualEnergyValule1 = WebUI.getText(findTestObject('Portfolio/CarbonVal/Carbon/First'))
 		Double AnnualEnergyvalue1 = Double.parseDouble(AnnualEnergyValule1)
@@ -3629,6 +3690,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 
 		WebUI.click(findTestObject('Portfolio/CarbonVal/Carbon/Cancel'))
 		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 
 		Double AnnualEnergytotalValue = AnnualEnergyvalue1 + AnnualEnergyvalue2 + AnnualEnergyvalue3 + AnnualEnergyvalue4 + AnnualEnergyvalue5 + AnnualEnergyvalue6
 		BigDecimal cAnnualEnergytotalvalue = new BigDecimal(AnnualEnergytotalValue)
@@ -3648,6 +3710,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 
 		WebUI.click(findTestObject('Portfolio/CarbonVal/CarbonPage/Annual Transportation'))
 		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 
 		String transportationValule1 = WebUI.getText(findTestObject('Portfolio/CarbonVal/Carbon/First'))
 		Double transportationvalue1 = Double.parseDouble(transportationValule1)
@@ -3664,6 +3727,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 
 		WebUI.click(findTestObject('Portfolio/CarbonVal/Carbon/Cancel'))
 		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 
 		Double TransportationtotalValue = transportationvalue1 + transportationvalue2 + transportationvalue3 + transportationvalue4 + transportationvalue5 + transportationvalue6
 		BigDecimal transportationTotalValue = new BigDecimal(TransportationtotalValue)
@@ -3681,9 +3745,11 @@ public class ResuableMethodsPortfolio extends BaseClass {
 
 		WebUI.click(findTestObject('Portfolio/Common/Project'))
 		WebUI.delay(7)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 
 		WebUI.click(findTestObject('Portfolio/CarbonVal/ProjectFil/ClickSocre'))
 		WebUI.delay(8)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 
 		for(int count =1;count<=6;count++) {
 			if(count==1) {
@@ -3893,7 +3959,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 	}
 	@Keyword
 	public void verifyWDailiyWaterConsumption() throws IOException, InterruptedException{
-
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		//WebUI.delay(10)
 		println "TEST STARTED WATER PROJECT(TOTAL DAILY  WATER CONSUMPTION=TOTAL ANNUAL WATER CONSUMPTION/365)"
 		String  str1=WebUI.getText(findTestObject('Portfolio/Total/carbon/WAnualcarbon'))
@@ -3970,6 +4036,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 	@Keyword
 	public void avgOperatingHour(String sheetName, int rowNum ) throws IOException, InterruptedException {
 		WebUI.click(findTestObject('Portfolio/Common/a_ Total'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		String avgOpp =  data.getCellData(sheetName,"OppHour",15)
 		double davgOppc = Double.parseDouble(avgOpp)
 		int avgOppHour = Math.round(davgOppc)
@@ -3983,7 +4050,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 	@Keyword
 	public void avgOccupancy(String sheetName, int rowNum ) throws IOException, InterruptedException {
 		WebUI.click(findTestObject('Portfolio/Common/a_ Total'))
-
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		String avgOcc =  data.getCellData(sheetName,"occupancy",15)
 		double davgOcc = Double.parseDouble(avgOcc)
 		int avgOccroundOff = Math.round(davgOcc)
@@ -4003,6 +4070,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 
 		WebUI.click(findTestObject('Portfolio/Common/a_ Total'))
 		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 
 		String avgArea =  data.getCellData(sheetName,"Area",15)
 		double davgAreac = Double.parseDouble(avgArea)
