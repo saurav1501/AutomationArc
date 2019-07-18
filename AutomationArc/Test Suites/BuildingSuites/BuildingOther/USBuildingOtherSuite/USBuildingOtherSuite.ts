@@ -85,19 +85,19 @@
    <testCaseLink>
       <guid>17986020-f79e-43bb-aaa2-0f804ea4b5ad</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/AddMeasurablToTheProjectTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>f83365b7-e6e0-452d-b087-079e8bddc29f</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyThePriceTextOnTheMeasurablPaymentPageTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>7fd019ff-2c4d-4ca9-bdfe-e3002a5bad4a</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/PaymentForMeasurableSubscriptionTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -277,19 +277,19 @@
    <testCaseLink>
       <guid>5fc44e57-88db-4f94-a9fd-fb3b1e35d5fa</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/IntegrationTabDetailsVerificationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>3b9934a1-a62a-4fec-91e5-5dd057f3dda8</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ChangePaymentMethodMeasurablTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>7c1576a4-ee2e-49c9-922c-bd0b4bafdd1f</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyBillingDetailsMeasurablTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
