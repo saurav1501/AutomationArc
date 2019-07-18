@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@data-ng-repeat=&quot;app in integrations&quot;]//td[4]/p[2]</value>
+         <value>//*[@data-ng-repeat=&quot;app in integrations&quot;]//td[4]/p[2]/span</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
