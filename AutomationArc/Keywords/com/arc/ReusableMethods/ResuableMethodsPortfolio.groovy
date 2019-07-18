@@ -1400,7 +1400,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.selectOptionByLabel(findTestObject('Portfolio/Goal/generated_waste_baseline_year'),baseYear, true)
 		WebUI.delay(1)
 		WebUI.selectOptionByLabel(findTestObject('Portfolio/Goal/generated_waste_target_year'), targetYear, true)
-
+		WebUI.delay(1)
 		String energyGoal = WebUI.getText(findTestObject('Portfolio/Goal/generated_waste_Goal'))
 		String greplace = energyGoal.replace("%" , "")
 		double wGexpected=Double.parseDouble(greplace)
@@ -1415,7 +1415,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.clearText(findTestObject('Object Repository/Portfolio/Goal/waste_textarea'))
 		WebUI.sendKeys(findTestObject('Object Repository/Portfolio/Goal/waste_textarea'),textbox )
 		WebUI.click(findTestObject('Portfolio/Goal/CarbonCurrentProgess'))
-		WebUI.delay(2)
+		WebUI.delay(5)
 		WebUI.refresh()
 		WebUI.delay(5)
 		
@@ -1484,7 +1484,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.selectOptionByLabel(findTestObject('Portfolio/Goal/diverted_waste_baseline_year'),baseYear, true)
 		WebUI.delay(1)
 		WebUI.selectOptionByLabel(findTestObject('Portfolio/Goal/diverted_waste_target_year'),targetYear,true)
-
+		WebUI.delay(1)
 		String energyGoal = WebUI.getText(findTestObject('Portfolio/Goal/generated_waste_Goal'))
 		String greplace = energyGoal.replace("%" , "")
 		double wGexpected=Double.parseDouble(greplace)
@@ -1499,7 +1499,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.clearText(findTestObject('Object Repository/Portfolio/Goal/waste_textarea'))
 		WebUI.sendKeys(findTestObject('Object Repository/Portfolio/Goal/waste_textarea'),textbox )
 		WebUI.click(findTestObject('Portfolio/Goal/CarbonCurrentProgess'))
-		WebUI.delay(2)
+		WebUI.delay(5)
 		WebUI.refresh()
 		WebUI.delay(5)
 		WebUI.waitForAngularLoad(120, FailureHandling.CONTINUE_ON_FAILURE)
