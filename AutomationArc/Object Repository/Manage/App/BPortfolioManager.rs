@@ -6,12 +6,11 @@
    <elementGuidId>c71fd984-0be2-4b10-a52b-79d621169728</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//p[@ng-click=&quot;saveApp('Energy Star Portfolio Manager', '1')&quot;]</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//*[text()=&quot;Energy Star Portfolio Manager&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

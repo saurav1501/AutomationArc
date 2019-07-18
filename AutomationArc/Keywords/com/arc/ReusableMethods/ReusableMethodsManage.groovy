@@ -1322,7 +1322,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 		println "Verify Portfolio Manager App present"
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/BPortfolioManager'))
-		String text = WebUI.getText(findTestObject('Object Repository/Manage/App/BPortfolioManager'))
+		/*String text = WebUI.getText(findTestObject('Object Repository/Manage/App/BPortfolioManager'))
 		WebUI.verifyMatch(text,"Added",false, FailureHandling.CONTINUE_ON_FAILURE)
 
 		println "Uninstalling App and check uninstalled message."
@@ -1331,7 +1331,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.waitForElementClickable(findTestObject('Object Repository/Manage/App/BPortfolioManager'), GlobalVariable.maxAngularWait)
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/App/AppUninstalledMessage'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/App/AppUninstalledMessage'), GlobalVariable.minAngularWait)
-	}
+*/	}
 
 
 	@Keyword
