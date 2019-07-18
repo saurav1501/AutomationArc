@@ -117,7 +117,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 	@Keyword
 	public void AddProjectInPortfolio(String sheetName , int rowNum) throws IOException, InterruptedException {
 		String prjName 	= data.getCellData(sheetName,"ProjectName", rowNum)
-		/**** Adding 5-Projects in Portfolio ****/
+		/**** Adding 6-Projects in Portfolio ****/
 		for(int col=2;col<=7;col++ ) {
 			String projectId 	= data.getCellData(sheetName,"ID", col)
 			String portfolioName 	= data.getCellData(sheetName, "ProjectName", rowNum)
@@ -151,12 +151,13 @@ public class ResuableMethodsPortfolio extends BaseClass {
 			WebUI.waitForElementVisible(findTestObject('Portfolio/Common/button_Done'),GlobalVariable.minAngularWait)
 			WebUI.click(findTestObject('Portfolio/Common/button_Done'))
 			WebUI.waitForElementClickable(findTestObject('Portfolio/Common/button_Done'),GlobalVariable.minAngularWait)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 			
 			/*WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 			String verifyPortfioio =WebUI.getText(findTestObject('Portfolio/Common/ProjectName'))
 			WebUI.verifyMatch(verifyPortfioio,portfolioName,false)*/
 		}
-		println  "5 Projects Successfully added inside portfolio"
+		println  "6 Projects Successfully added inside portfolio"
 	}
 
 	@Keyword
