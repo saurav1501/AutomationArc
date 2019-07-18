@@ -3972,11 +3972,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		/*(1..5).each{
 		 WebUI.waitForElementNotClickable(findTestObject('Object Repository/DataInput/CityCom/DeleteButton',[index: it]), 60)
 		 }*/
-		WebUI.waitForElementNotClickable(findTestObject('DataInput/CityCom/TextboxValue1'), 60)
-		WebUI.waitForElementNotClickable(findTestObject('DataInput/CityCom/TextboxValue2'), 60)
-		WebUI.waitForElementNotClickable(findTestObject('DataInput/CityCom/TextboxValue3'), 60)
-		WebUI.waitForElementNotClickable(findTestObject('DataInput/CityCom/TextboxValue4'), 60)
-		WebUI.waitForElementNotClickable(findTestObject('DataInput/CityCom/TextboxValue5'), 60)
+		
 
 		WebUI.refresh()
 		//WebUI.delay(10)
@@ -4449,7 +4445,9 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		//WebUI.delay(10)
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.scrollToElement(findTestObject('DataInput/CityCom/button_Add Year'), 4)
+		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/button_Add Year'),GlobalVariable.minAngularWait )
 		WebUI.click(findTestObject('DataInput/CityCom/button_Add Year'))
+		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/button_Add Year'),GlobalVariable.minAngularWait )
 		//WebUI.delay(8)
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.scrollToElement(findTestObject('DataInput/CityCom/button_Next Year'), 2)
@@ -4600,7 +4598,9 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		//WebUI.delay(5)
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		//WebUI.waitForPageLoad(10)
+		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/EducationAddYear'),GlobalVariable.minAngularWait )
 		WebUI.click(findTestObject('DataInput/CityCom/EducationAddYear'))
+		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/EducationAddYear'),GlobalVariable.minAngularWait )
 		//WebUI.delay(8)
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.scrollToElement(findTestObject('DataInput/CityCom/EducationAddPrevYear'),2)

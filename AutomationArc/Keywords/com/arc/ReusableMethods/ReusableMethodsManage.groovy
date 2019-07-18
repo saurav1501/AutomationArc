@@ -4045,7 +4045,7 @@ public class ReusableMethodsManage extends BaseClass {
 		String subscriptionPriceMonthly = WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/SubscriptionPricePerMonth'))
 		WebUI.verifyMatch(subscriptionPriceMonthly, '$10.00 / month', false, FailureHandling.CONTINUE_ON_FAILURE)
 		String subscriptionPriceYearly= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/SubscriptionPriceYearlyCommitment'))
-		WebUI.verifyMatch(subscriptionPriceYearly, '($120.00 yearly commitment)', false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(subscriptionPriceYearly, '($120 yearly contract)', false, FailureHandling.CONTINUE_ON_FAILURE)
 		String nextPaymentDate= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/NextPaymentDateMeasurabl'))
 		WebUI.verifyMatch(nextPaymentDate,regDate , false, FailureHandling.CONTINUE_ON_FAILURE)
 		String payeename= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/PaymentMethodUserName'))
