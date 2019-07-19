@@ -6,11 +6,11 @@
    <elementGuidId>d24bd794-3872-4cd6-9331-add896c5fefe</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@class=&quot;meterName--data ng-binding&quot;]</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>(//*[@class=&quot;meterName--data ng-binding&quot;])[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

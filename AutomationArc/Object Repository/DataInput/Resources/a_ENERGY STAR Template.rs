@@ -4,7 +4,17 @@
    <name>a_ENERGY STAR Template</name>
    <tag></tag>
    <elementGuidId>96e47a64-ab03-4326-8f10-495c7333378c</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//a[(text() = 'ENERGY STAR Template ' or . = 'ENERGY STAR Template ') and @ref_element = 'Object Repository/DataInput/Resources/iframe_Data Input_datainput-widget']</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//a[(text() = 'ENERGY STAR Integration Guide')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
