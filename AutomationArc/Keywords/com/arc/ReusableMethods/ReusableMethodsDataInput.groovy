@@ -592,7 +592,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		//WebUI.waitForAngularLoad(10)
 		WebUI.delay(6)
 		String people = dataExcelTemplate.getCellData(sheetName,"SurveyTransportation", rowNum)
-		WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), "Occupant Satisfaction Survey", FailureHandling.STOP_ON_FAILURE)
+		//WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), "Occupant Satisfaction Survey", FailureHandling.STOP_ON_FAILURE)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'))
 		WebUI.delay(6)
 		WebUI.focus(findTestObject('Object Repository/DataInput/Survey/MonthlySurveyGraph'))
@@ -642,7 +642,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/Survey/div_Transportation Survey'))
 		//WebUI.waitForAngularLoad(10)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), "Transportation Survey", FailureHandling.STOP_ON_FAILURE)
+		//WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), "Transportation Survey", FailureHandling.STOP_ON_FAILURE)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'))
 		String people = dataExcelTemplate.getCellData(sheetName,"SurveyTransportation", rowNum)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
@@ -3972,7 +3972,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		/*(1..5).each{
 		 WebUI.waitForElementNotClickable(findTestObject('Object Repository/DataInput/CityCom/DeleteButton',[index: it]), 60)
 		 }*/
-		
+
 
 		WebUI.refresh()
 		//WebUI.delay(10)
