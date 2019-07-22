@@ -262,12 +262,12 @@ public class ReusableMethodsNavigation {
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 		boolean notTrue= WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
-        if(notTrue==false)
+		if(notTrue==false)
 		{
-		WebUI.refresh()
-		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
-		}	
+			WebUI.refresh()
+			WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
+		}
 	}
 
 	@Keyword
@@ -835,5 +835,20 @@ public class ReusableMethodsNavigation {
 		}
 
 	}
+	
+	@Keyword
+	public void verifyViewAppNavigatesToAppsSection(){
+		navigateIntoDataInput()
+		WebUI.doubleClick(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'))
+		WebUI.delay(2)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/ViewAppLinkWasteMeter'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/DataInput/ViewAppLinkWasteMeter'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/App/EnergyStartAppVerification'), GlobalVariable.minAngularWait)
+		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/EnergyStartAppVerification'))
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/App/EnergyStartAppVerification')), "Energy Star Portfolio Manager", false)
+
+		
+	}
+	
 
 }

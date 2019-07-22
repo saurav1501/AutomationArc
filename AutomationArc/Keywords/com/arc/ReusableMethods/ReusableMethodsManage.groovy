@@ -1323,15 +1323,14 @@ public class ReusableMethodsManage extends BaseClass {
 		println "Verify Portfolio Manager App present"
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/BPortfolioManager'))
 		/*String text = WebUI.getText(findTestObject('Object Repository/Manage/App/BPortfolioManager'))
-		WebUI.verifyMatch(text,"Added",false, FailureHandling.CONTINUE_ON_FAILURE)
-
-		println "Uninstalling App and check uninstalled message."
-		WebUI.click(findTestObject('Object Repository/Manage/App/BPortfolioManager'))
-		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-		WebUI.waitForElementClickable(findTestObject('Object Repository/Manage/App/BPortfolioManager'), GlobalVariable.maxAngularWait)
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/App/AppUninstalledMessage'), GlobalVariable.minAngularWait)
-		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/App/AppUninstalledMessage'), GlobalVariable.minAngularWait)
-*/	}
+		 WebUI.verifyMatch(text,"Added",false, FailureHandling.CONTINUE_ON_FAILURE)
+		 println "Uninstalling App and check uninstalled message."
+		 WebUI.click(findTestObject('Object Repository/Manage/App/BPortfolioManager'))
+		 WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		 WebUI.waitForElementClickable(findTestObject('Object Repository/Manage/App/BPortfolioManager'), GlobalVariable.maxAngularWait)
+		 WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/App/AppUninstalledMessage'), GlobalVariable.minAngularWait)
+		 WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/App/AppUninstalledMessage'), GlobalVariable.minAngularWait)
+		 */	}
 
 
 	@Keyword
@@ -3054,6 +3053,38 @@ public class ReusableMethodsManage extends BaseClass {
 
 
 	@Keyword
+	public void verifyNewlyAddedAppPresent(){
+
+		println "Clicking on Apps"
+		WebUI.scrollToElement(findTestObject('Object Repository/Manage/App/a_ Apps'),2)
+		WebUI.delay(1)
+		WebUI.click(findTestObject('Object Repository/Manage/App/a_ Apps'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/App/EnergyStartAppVerification'), GlobalVariable.minAngularWait)
+		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/EnergyStartAppVerification'))
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/App/EnergyStartAppVerification')), "Energy Star Portfolio Manager", false)
+
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/App/MeasurablAppVerification'), GlobalVariable.minAngularWait)
+		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/MeasurablAppVerification'))
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/App/MeasurablAppVerification')), "Measurabl", false)
+
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/App/CommutifiAppVerification'), GlobalVariable.minAngularWait)
+		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/CommutifiAppVerification'))
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/App/CommutifiAppVerification')), "Commutifi", false)
+
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/App/QlearAppVerification'), GlobalVariable.minAngularWait)
+		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/QlearAppVerification'))
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/App/QlearAppVerification')), "QLEAR", false)
+
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/App/ArbnWellAppVerification'), GlobalVariable.minAngularWait)
+		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/ArbnWellAppVerification'))
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/App/ArbnWellAppVerification')), "Arbn well", false)
+
+	}
+
+
+	@Keyword
 	public void installCustomApps() throws IOException, InterruptedException {
 
 		println "Clicking on Apps"
@@ -4059,7 +4090,7 @@ public class ReusableMethodsManage extends BaseClass {
 	}
 	@Keyword
 	public void changePaymentMethod(String sheetName, int rowNum){
-		
+
 		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
 			println "Manage"
 			WebUI.delay(2)
@@ -4071,11 +4102,11 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/Measurabl/IntegrationsTabs'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		
+
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/Measurabl/ChangePaymentMethodButton'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/GetChangePaymenMethodPageText')),'Change Payment Method',false, FailureHandling.STOP_ON_FAILURE)
-		
+
 		String cardName   = data.getCellData(sheetName, "CardName", rowNum)
 		String cardNum    = data.getCellData(sheetName, "CardNumber", rowNum)
 		String cardDate   = data.getCellData(sheetName, "Date ", rowNum)

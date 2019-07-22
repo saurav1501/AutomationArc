@@ -419,6 +419,12 @@
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/SettingVerifyLobbySurveyBtnAllowUserToSubmitSurveyManyTimesTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>870b3f66-1a82-472a-ab71-a198b3c6a0f1</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyViewAppNavigatesToAppsSectionTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>519fdd53-c6b6-45e3-b797-f221b1b04ab5</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

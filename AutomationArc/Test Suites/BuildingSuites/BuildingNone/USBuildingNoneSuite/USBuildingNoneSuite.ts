@@ -1379,6 +1379,12 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/AgreementFileDownloadTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>2eaef136-6b89-4350-8352-70b03439766d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/VerifyNewAddedAppArePresentTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>c8b2a937-014f-46a8-bb41-c751ccdcc47d</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
