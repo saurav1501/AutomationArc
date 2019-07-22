@@ -680,7 +680,6 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	//Transportation Graph verification score version 3
 	@Keyword
 	public void verifyTransportationGraphpopulatedAfterExcelUploadNewScore(String sheetName, int rowNum){
-		//WebUI.refresh()
 		WebUI.delay(15)
 		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		navigation.navigateIntoDataInput()
@@ -689,7 +688,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		//WebUI.waitForAngularLoad(10)
 		WebUI.delay(4)
 		//WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), "Transportation Survey", FailureHandling.STOP_ON_FAILURE)
-		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'))
+		//WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'))
 		String people = dataExcelTemplate.getCellData(sheetName,"SurveyTransportation", rowNum)
 		WebUI.delay(2)
 		WebUI.focus(findTestObject('Object Repository/DataInput/Survey/MonthlySurveyGraph'))
@@ -736,7 +735,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(10)
 		String people = dataExcelTemplate.getCellData(sheetName,"SurveyTransportation", rowNum)
 		//WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), "Occupant Satisfaction Survey", FailureHandling.STOP_ON_FAILURE)
-		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'))
+		//WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'))
 		WebUI.delay(6)
 		WebUI.focus(findTestObject('Object Repository/DataInput/Survey/MonthlySurveyGraph'))
 		Assert.assertTrue(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/TransportResponseToolTip')).contains(people))
@@ -2272,6 +2271,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/Activity/ReplyButton'))
 		WebUI.delay(5)
 		//verify the Comments
+		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/Activity/GetTheCommentPosted'),GlobalVariable.minAngularWait)
 		Assert.assertEquals(WebUI.getText(findTestObject('Object Repository/DataInput/Activity/GetTheCommentPosted')),'This is test comment')
 		Assert.assertEquals(WebUI.getText(findTestObject('Object Repository/DataInput/Activity/GetUserCommented')),GlobalVariable.teamMemName)
 		Assert.assertTrue(WebUI.verifyElementPresent(findTestObject('Object Repository/DataInput/Activity/GetTheCommentTimeStamp'),5))
@@ -6609,7 +6609,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Resources/a_ENERGY STAR Integration Guide')), "ENERGY STAR Integration Guide", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Resources/a_Data Guide for Buildings')), "Data Guide for Buildings", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Resources/a_Data Review Checklist')), "Data Review Checklist", false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Resources/a_ENERGY STAR Template')), "ENERGY STAR Template", false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Resources/a_ENERGY STAR Template')), "Arc Data Template", false, FailureHandling.CONTINUE_ON_FAILURE)
 	}
 
 	@Keyword

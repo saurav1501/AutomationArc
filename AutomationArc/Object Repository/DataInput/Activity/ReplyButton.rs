@@ -6,12 +6,11 @@
    <elementGuidId>ba90dc9f-bb1d-4b91-9574-d24df9a20ca4</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@ng-click=&quot;postReply(reply_data, feed, confidential)&quot;]</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>(//*[@ng-click=&quot;postReply(reply_data, feed, confidential)&quot;])[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

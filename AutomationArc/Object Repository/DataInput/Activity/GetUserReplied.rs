@@ -6,12 +6,11 @@
    <elementGuidId>aac93085-77c7-420f-b3b9-dde853f413b8</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//span[@ng-click=&quot;sendMail(feed.created_by.username)&quot;])[2]</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>(//span[@ng-click=&quot;sendMail(feed.created_by.username)&quot;])[4]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

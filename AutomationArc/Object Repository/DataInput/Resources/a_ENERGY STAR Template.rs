@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//a[(text() = 'ENERGY STAR Integration Guide')]</value>
+         <value>//li[@ng-click=&quot;downloadExcel()&quot;]/a</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
