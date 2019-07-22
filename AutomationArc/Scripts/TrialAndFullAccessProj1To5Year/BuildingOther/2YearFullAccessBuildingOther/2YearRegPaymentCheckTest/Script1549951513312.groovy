@@ -15,7 +15,7 @@ import internal.GlobalVariable as GlobalVariable
 
 try {
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsNavigation.payNow'()
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.paymentPageBuildingOtherNoneDetails'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix,2)
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.paymentPageBuildingOtherNoneDetails'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumFive,2)
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.paymentRegistration'(GlobalVariable.CCPayment , GlobalVariable.rowNumFour, GlobalVariable.checkPayment)
 	
 } catch (Throwable t) {
