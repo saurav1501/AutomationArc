@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>MeterName</name>
+   <name>ClickOnSurveyDropDown</name>
    <tag></tag>
-   <elementGuidId>d24bd794-3872-4cd6-9331-add896c5fefe</elementGuidId>
+   <elementGuidId>9e10dfa7-b7bd-4f1b-b484-8bb1d76befec</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//li[@ng-mouseover=&quot;changeValue('copy_link_dropdown', true)&quot;]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>(//*[@class=&quot;meterName--data ng-binding&quot;])[2]</value>
+         <key>CSS</key>
+         <value>li:nth-child(2) > div > div</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -20,6 +25,6 @@
       <matchCondition>equals</matchCondition>
       <name>ref_element</name>
       <type>Main</type>
-      <value>Object Repository/DataInput/CreateMeterBuilding/CreateEnergyAndWaterMeterWithDifferentCombinations/iframe_datainput-widget</value>
+      <value>Object Repository/DataInput/iframe_datainput-widget</value>
    </webElementProperties>
 </WebElementEntity>

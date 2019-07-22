@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@class='mb15 checkcontainer ng-binding']</value>
+         <value>//*[@class='mb15 checkcontainer']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

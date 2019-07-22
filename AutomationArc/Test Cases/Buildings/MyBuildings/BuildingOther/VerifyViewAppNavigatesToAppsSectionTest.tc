@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify if the view app navigates to Manage-> app section</description>
+   <name>VerifyViewAppNavigatesToAppsSectionTest</name>
+   <tag>Verify View App navigates to Manage -> Apps section</tag>
+   <comment></comment>
+   <testCaseGuid>b055dd10-6c39-4c87-94eb-ffb09081bc17</testCaseGuid>
+</TestCaseEntity>

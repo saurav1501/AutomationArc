@@ -10,6 +10,10 @@
          <value>(//button[@type='button'])[3]</value>
       </entry>
       <entry>
+         <key>CSS</key>
+         <value>div.form-group.meterDetails-form--meterSource > div > div > button</value>
+      </entry>
+      <entry>
          <key>BASIC</key>
          <value>//button[@type = 'button' and (text() = '
                                                     Municipality supplied potable water
@@ -24,7 +28,7 @@
                                                 ') and @ref_element = 'Object Repository/DataInput/MeterWater/iframe_Error Sending Feedback_']</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

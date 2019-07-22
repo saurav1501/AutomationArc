@@ -98,6 +98,7 @@ public class ResuableMethodsSetting extends BaseClass{
 	}
 
 	public void occupant(){
+		WebUI.scrollToElement(findTestObject('DataInput/Settings18/a_Occupants'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/a_Occupants'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('DataInput/Settings18/a_Occupants'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
@@ -107,6 +108,7 @@ public class ResuableMethodsSetting extends BaseClass{
 		}
 
 	public void area(){
+		WebUI.scrollToElement(findTestObject('DataInput/Settings18/a_Gross Floor Area'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('DataInput/Settings18/a_Gross Floor Area'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('DataInput/Settings18/a_Gross Floor Area'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)

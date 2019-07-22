@@ -6,12 +6,11 @@
    <elementGuidId>7633e108-729b-4132-863b-0d0fd1539d02</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//*[@ng-bind-html=&quot;feed.data&quot;])[1]</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>(//*[text()='This is test comment'])[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

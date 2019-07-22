@@ -6,12 +6,11 @@
    <elementGuidId>fb2570f0-684d-43e1-959f-2469403b2aac</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@ng-model=&quot;reply_data&quot;]</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>(//*[@ng-model=&quot;reply_data&quot;])[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

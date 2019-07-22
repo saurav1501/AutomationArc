@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description></description>
-   <name>MonthlyPaymentTextLabel</name>
+   <description>Verify if the Qlear app is present.</description>
+   <name>QlearAppVerification</name>
    <tag></tag>
-   <elementGuidId>1a8b193d-3506-44ef-90f1-2dc769d7c96d</elementGuidId>
+   <elementGuidId>6fd4c956-9774-48c8-88e9-af92a78c84d9</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@class=&quot;checkcontainer&quot;]</value>
+         <value>//*[@ng-click=&quot;openHelpSidebar('qlear')&quot;]/h4</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

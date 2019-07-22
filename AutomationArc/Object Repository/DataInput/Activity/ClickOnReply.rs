@@ -6,12 +6,11 @@
    <elementGuidId>72491126-0245-4275-a178-69b9c9bb4452</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//*[@class=&quot;reply&quot;])[1]</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>(//*[@ng-click=&quot;showReply(feed, this)&quot;])[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

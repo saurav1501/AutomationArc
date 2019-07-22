@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description></description>
-   <name>MonthlyPaymentTextLabel</name>
+   <description>Verify if the commutifi app is present.</description>
+   <name>CommutifiAppVerification</name>
    <tag></tag>
-   <elementGuidId>1a8b193d-3506-44ef-90f1-2dc769d7c96d</elementGuidId>
+   <elementGuidId>44e2c483-2774-4321-8443-3a2c3845d7b7</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@class=&quot;checkcontainer&quot;]</value>
+         <value>//*[@ng-click=&quot;openHelpSidebar('commutifi')&quot;]/h4</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

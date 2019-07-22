@@ -6,12 +6,11 @@
    <elementGuidId>6fa88378-2165-44dd-90a0-b78897fbe184</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@ng-click=&quot;postComment(draft, confidential)&quot;]</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>(//*[@ng-click=&quot;postComment(draft, confidential)&quot;])[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

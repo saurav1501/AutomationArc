@@ -1323,15 +1323,14 @@ public class ReusableMethodsManage extends BaseClass {
 		println "Verify Portfolio Manager App present"
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/BPortfolioManager'))
 		/*String text = WebUI.getText(findTestObject('Object Repository/Manage/App/BPortfolioManager'))
-		WebUI.verifyMatch(text,"Added",false, FailureHandling.CONTINUE_ON_FAILURE)
-
-		println "Uninstalling App and check uninstalled message."
-		WebUI.click(findTestObject('Object Repository/Manage/App/BPortfolioManager'))
-		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-		WebUI.waitForElementClickable(findTestObject('Object Repository/Manage/App/BPortfolioManager'), GlobalVariable.maxAngularWait)
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/App/AppUninstalledMessage'), GlobalVariable.minAngularWait)
-		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/App/AppUninstalledMessage'), GlobalVariable.minAngularWait)
-*/	}
+		 WebUI.verifyMatch(text,"Added",false, FailureHandling.CONTINUE_ON_FAILURE)
+		 println "Uninstalling App and check uninstalled message."
+		 WebUI.click(findTestObject('Object Repository/Manage/App/BPortfolioManager'))
+		 WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		 WebUI.waitForElementClickable(findTestObject('Object Repository/Manage/App/BPortfolioManager'), GlobalVariable.maxAngularWait)
+		 WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/App/AppUninstalledMessage'), GlobalVariable.minAngularWait)
+		 WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/App/AppUninstalledMessage'), GlobalVariable.minAngularWait)
+		 */	}
 
 
 	@Keyword
@@ -3054,6 +3053,38 @@ public class ReusableMethodsManage extends BaseClass {
 
 
 	@Keyword
+	public void verifyNewlyAddedAppPresent(){
+
+		println "Clicking on Apps"
+		WebUI.scrollToElement(findTestObject('Object Repository/Manage/App/a_ Apps'),2)
+		WebUI.delay(1)
+		WebUI.click(findTestObject('Object Repository/Manage/App/a_ Apps'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/App/EnergyStartAppVerification'), GlobalVariable.minAngularWait)
+		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/EnergyStartAppVerification'))
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/App/EnergyStartAppVerification')), "Energy Star Portfolio Manager", false)
+
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/App/MeasurablAppVerification'), GlobalVariable.minAngularWait)
+		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/MeasurablAppVerification'))
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/App/MeasurablAppVerification')), "Measurabl", false)
+
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/App/CommutifiAppVerification'), GlobalVariable.minAngularWait)
+		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/CommutifiAppVerification'))
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/App/CommutifiAppVerification')), "Commutifi", false)
+
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/App/QlearAppVerification'), GlobalVariable.minAngularWait)
+		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/QlearAppVerification'))
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/App/QlearAppVerification')), "QLEAR", false)
+
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/App/ArbnWellAppVerification'), GlobalVariable.minAngularWait)
+		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/ArbnWellAppVerification'))
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/App/ArbnWellAppVerification')), "Arbn well", false)
+
+	}
+
+
+	@Keyword
 	public void installCustomApps() throws IOException, InterruptedException {
 
 		println "Clicking on Apps"
@@ -3264,18 +3295,21 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), 30)
 		WebUI.scrollToElement(findTestObject('DataInput/Survey/div_Transportation Survey'),5)
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
-
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
 		String MainWindowHandle = driver.getWindowHandle()
 		WebUI.scrollToElement(findTestObject('DataInput/Survey/CopySurveyLink'),5)
 		WebUI.click(findTestObject('DataInput/Survey/CopySurveyLink'))
 		WebUI.delay(1)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/Survey/ClickOnSurveyDropDown'), 20)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Survey/ClickOnSurveyDropDown'), 20)
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/Survey/ClickOnSurveyDropDown'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.delay(1)
+		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/English'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('DataInput/Survey/English'))
-
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
 
 		for( int rowNum=2;rowNum<=2;rowNum++)
 		{
@@ -3954,8 +3988,8 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyElementPresent(findTestObject('Object Repository/Manage/BillingSection/Measurabl/AnnualPaymentTextLabel'), GlobalVariable.minAngularWait)
 		WebUI.verifyElementPresent(findTestObject('Object Repository/Manage/BillingSection/Measurabl/MonthlyPaymentCheckbox'), GlobalVariable.minAngularWait)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/AnnualPaymentTextLabel')),'Annually - $120.0 annual payment',false,FailureHandling.STOP_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/MonthlyPaymentTextLabel')),'Monthly - $10.0 per month ($120.0 yearly contract)',false,FailureHandling.STOP_ON_FAILURE)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/AnnualPaymentTextLabel')),'Annually - $120 annual payment',false,FailureHandling.STOP_ON_FAILURE)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/MonthlyPaymentTextLabel')),'Monthly - $10 per month ($120 yearly contract)',false,FailureHandling.STOP_ON_FAILURE)
 
 	}
 
@@ -4045,7 +4079,7 @@ public class ReusableMethodsManage extends BaseClass {
 		String subscriptionPriceMonthly = WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/SubscriptionPricePerMonth'))
 		WebUI.verifyMatch(subscriptionPriceMonthly, '$10.00 / month', false, FailureHandling.CONTINUE_ON_FAILURE)
 		String subscriptionPriceYearly= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/SubscriptionPriceYearlyCommitment'))
-		WebUI.verifyMatch(subscriptionPriceYearly, '($120.00 yearly commitment)', false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(subscriptionPriceYearly, '($120 yearly contract)', false, FailureHandling.CONTINUE_ON_FAILURE)
 		String nextPaymentDate= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/NextPaymentDateMeasurabl'))
 		WebUI.verifyMatch(nextPaymentDate,regDate , false, FailureHandling.CONTINUE_ON_FAILURE)
 		String payeename= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/PaymentMethodUserName'))
@@ -4056,7 +4090,7 @@ public class ReusableMethodsManage extends BaseClass {
 	}
 	@Keyword
 	public void changePaymentMethod(String sheetName, int rowNum){
-		
+
 		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
 			println "Manage"
 			WebUI.delay(2)
@@ -4068,11 +4102,11 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/Measurabl/IntegrationsTabs'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		
+
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/Measurabl/ChangePaymentMethodButton'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Measurabl/GetChangePaymenMethodPageText')),'Change Payment Method',false, FailureHandling.STOP_ON_FAILURE)
-		
+
 		String cardName   = data.getCellData(sheetName, "CardName", rowNum)
 		String cardNum    = data.getCellData(sheetName, "CardNumber", rowNum)
 		String cardDate   = data.getCellData(sheetName, "Date ", rowNum)

@@ -6,12 +6,11 @@
    <elementGuidId>486ecd78-b152-48c1-801f-66c74ab452db</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//span[@class=&quot;tippy_init comment_time ng-binding&quot;]</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>(//span[@class=&quot;tippy_init comment_time ng-binding&quot;])[3]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

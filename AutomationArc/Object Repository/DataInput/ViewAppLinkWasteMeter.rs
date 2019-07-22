@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description>Reply button to post the reply of comment</description>
-   <name>ReplyButton</name>
+   <description></description>
+   <name>ViewAppLinkWasteMeter</name>
    <tag></tag>
-   <elementGuidId>ba90dc9f-bb1d-4b91-9574-d24df9a20ca4</elementGuidId>
+   <elementGuidId>6628fd78-4ded-4f74-9b3b-bf211cb75962</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//*[@ng-click=&quot;postReply(reply_data, feed, confidential)&quot;])[2]</value>
+         <value>//*[@ng-click=&quot;showModal('view_apps_modal')&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -20,6 +21,6 @@
       <matchCondition>equals</matchCondition>
       <name>ref_element</name>
       <type>Main</type>
-      <value>Object Repository/DataInput/CreateMeterBuilding/iframe_datainput-widget</value>
+      <value>Object Repository/DataInput/iframe_datainput-widget</value>
    </webElementProperties>
 </WebElementEntity>

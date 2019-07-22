@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description></description>
-   <name>MonthlyPaymentTextLabel</name>
+   <description>Verify if the Measurabl app is present.</description>
+   <name>MeasurablAppVerification</name>
    <tag></tag>
-   <elementGuidId>1a8b193d-3506-44ef-90f1-2dc769d7c96d</elementGuidId>
+   <elementGuidId>ecbb54c9-671c-4784-919c-ce8445aae7e3</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@class=&quot;checkcontainer&quot;]</value>
+         <value>//*[@ng-click=&quot;openHelpSidebar('measurabl')&quot;]//h4</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

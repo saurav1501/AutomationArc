@@ -10,7 +10,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//span[@class=&quot;tippy_init comment_time ng-binding&quot;])[2]</value>
+         <value>(//span[@class=&quot;tippy_init comment_time ng-binding&quot;])[4]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
