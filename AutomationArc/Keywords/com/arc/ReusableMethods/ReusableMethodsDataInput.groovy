@@ -5621,10 +5621,17 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		navigation.navigateIntoDataInput()
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
-		WebUI.delay(5)
-		WebUI.waitForElementVisible(findTestObject('DataInput/Survey/CopySurveyLink'), 20)
+
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.delay(1)
 		WebUI.click(findTestObject('DataInput/Survey/CopySurveyLink'))
-		WebUI.delay(2)
+		WebUI.delay(1)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/Survey/ClickOnSurveyDropDown'), 20)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Survey/ClickOnSurveyDropDown'), 20)
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/Survey/ClickOnSurveyDropDown'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.delay(1)
 
 		String english =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_English'))
 		String french =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_French'))
@@ -5632,6 +5639,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		String german =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_German'))
 		String spanish =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_Spanish'))
 		String chinese =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_Chinese'))
+		String swidesh =WebUI.getText(findTestObject('DataInput/Language/span_Swidish'))
 
 		WebUI.verifyMatch(english,'English', false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(french,'French', false, FailureHandling.CONTINUE_ON_FAILURE)
@@ -5639,6 +5647,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.verifyMatch(german, 'German', false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(spanish, 'Spanish', false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(chinese, 'Chinese', false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(swidesh, 'Swedish', false, FailureHandling.CONTINUE_ON_FAILURE)	
 
 	}
 
@@ -5742,13 +5751,15 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		String german =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_German'))
 		String spanish =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_Spanish'))
 		String chinese =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_Chinese'))
+		String swidesh =WebUI.getText(findTestObject('DataInput/Language/span_Swidish'))
 
-		WebUI.verifyMatch(english, 'English', false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(french, 'French', false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(english,'English', false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(french,'French', false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(port, 'Portuguese', false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(german, 'German', false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(spanish, 'Spanish', false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(chinese, 'Chinese', false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(swidesh, 'Swedish', false, FailureHandling.CONTINUE_ON_FAILURE)
 
 	}
 

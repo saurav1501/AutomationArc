@@ -17,18 +17,6 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/SearchProgramTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>12df7ee5-2a9f-4f95-8a7c-fc1623d9a918</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/Survey/CopySurveyLinkLanguageOptionTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>1d13927d-2d44-4423-aa45-8f17bd1d2b95</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/Survey/EmailSurveyLanguageOptionTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>b904fb39-bcf0-4f24-857f-d6778acfef52</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>

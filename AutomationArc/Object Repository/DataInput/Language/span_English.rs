@@ -6,11 +6,15 @@
    <elementGuidId>799cba54-7fcf-4532-b0ad-e7516d8244ba</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>XPATH</key>
+         <value>//*[@ng-click=&quot;copyLink('en')&quot;]</value>
+      </entry>
+      <entry>
          <key>CSS</key>
          <value>div.dropdown.email-dropdown.open > ul > li:nth-child(1) > div > span</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>CSS</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>
