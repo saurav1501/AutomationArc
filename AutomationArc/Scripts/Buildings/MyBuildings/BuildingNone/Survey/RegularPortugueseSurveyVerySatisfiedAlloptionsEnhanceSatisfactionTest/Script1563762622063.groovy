@@ -14,16 +14,11 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
 try{
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.navigateToFrench'()
-	
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.surveyLanguageCopySurveyLink'()
-	
-} catch (Throwable t) {
-		WebUI.closeWindowIndex(1)
-		WebUI.switchToWindowIndex(0)
-		System.out.println(t.getLocalizedMessage())
-		Error e1 = new Error(t.getMessage())
-		e1.setStackTrace(t.getStackTrace())
-		e1.printStackTrace()
-		
-}
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.openNewTab'()
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.surveySubmitDiffLangV3'(GlobalVariable.BDataInput,GlobalVariable.rowNumThree)
+  } catch (Throwable t) {
+	  System.out.println(t.getLocalizedMessage())
+	  Error e1 = new Error(t.getMessage())
+	  e1.setStackTrace(t.getStackTrace())
+	  e1.printStackTrace()
+  }

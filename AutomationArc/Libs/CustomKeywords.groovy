@@ -2570,28 +2570,20 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.surveySubmitVisitor
         	sheetName)
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.surveySubmitDiffLangV3"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).surveySubmitDiffLangV3(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.OpenNewTab"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).OpenNewTab()
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.surveyLanguageCopySurveyLink"() {
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).surveyLanguageCopySurveyLink()
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsDataInput.navigateToFrench"() {
-    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).navigateToFrench()
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsDataInput.navigateToPort"() {
-    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).navigateToPort()
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsDataInput.navigateToGerman"() {
-    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).navigateToGerman()
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsDataInput.navigateToSpanish"() {
-    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).navigateToSpanish()
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsDataInput.navigateToChinese"() {
-    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).navigateToChinese()
 }
 
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.surveySubmitDifferentLang"(

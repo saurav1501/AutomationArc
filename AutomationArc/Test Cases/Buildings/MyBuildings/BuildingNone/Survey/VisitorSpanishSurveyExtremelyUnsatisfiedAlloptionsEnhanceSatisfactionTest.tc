@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>SpanishSubmitSurveyTest</name>
+   <name>VisitorSpanishSurveyExtremelyUnsatisfiedAlloptionsEnhanceSatisfactionTest</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>8e599aaf-9fe4-4c4b-9d1e-4f3cc7abe1c8</testCaseGuid>
