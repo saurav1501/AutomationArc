@@ -4919,7 +4919,6 @@ def static "com.arc.ReusableMethods.ReusableMethodsManage.changePaymentMethod"(
         	sheetName
          , 	rowNum)
 }
-<<<<<<< HEAD
 
 def static "com.arc.ReusableMethods.ReusableMethodsManage.verifBillingDetailsForPromocodeReedemProject"(
     	String sheetName	
@@ -4930,5 +4929,3 @@ def static "com.arc.ReusableMethods.ReusableMethodsManage.verifBillingDetailsFor
          , 	rowNum
          , 	promoType)
 }
-=======
->>>>>>> 816dd8c523955739acbc94694939486e49c9f2b7
