@@ -5525,7 +5525,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	@Keyword
 	public void surveySubmitDiffLangV3(String sheetName,int rowNum) throws IOException, InterruptedException, Exception{
-		
+
 		String url = data.getCellData(sheetName,"Url", 2)
 		String walk1 = data.getCellData(sheetName, "Walk", 2)
 		String walk2 = data.getCellData(sheetName, "Bus", 2)
@@ -5647,7 +5647,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.verifyMatch(german, 'German', false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(spanish, 'Spanish', false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(chinese, 'Chinese', false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(swidesh, 'Swedish', false, FailureHandling.CONTINUE_ON_FAILURE)	
+		WebUI.verifyMatch(swidesh, 'Swedish', false, FailureHandling.CONTINUE_ON_FAILURE)
 
 	}
 
