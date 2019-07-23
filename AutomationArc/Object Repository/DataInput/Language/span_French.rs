@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>div.dropdown.email-dropdown.open > ul > li:nth-child(2) > div > span</value>
+         <value>//*[@ng-click=&quot;copyLink('fr')&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>CSS</selectorMethod>

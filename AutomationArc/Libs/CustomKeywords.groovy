@@ -2584,28 +2584,20 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.surveySubmitVisitor
         	sheetName)
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.surveySubmitDiffLangV3"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).surveySubmitDiffLangV3(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.openNewTab"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).openNewTab()
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.surveyLanguageCopySurveyLink"() {
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).surveyLanguageCopySurveyLink()
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsDataInput.navigateToFrench"() {
-    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).navigateToFrench()
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsDataInput.navigateToPort"() {
-    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).navigateToPort()
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsDataInput.navigateToGerman"() {
-    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).navigateToGerman()
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsDataInput.navigateToSpanish"() {
-    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).navigateToSpanish()
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodsDataInput.navigateToChinese"() {
-    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).navigateToChinese()
 }
 
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.surveySubmitDifferentLang"(
@@ -4927,6 +4919,7 @@ def static "com.arc.ReusableMethods.ReusableMethodsManage.changePaymentMethod"(
         	sheetName
          , 	rowNum)
 }
+<<<<<<< HEAD
 
 def static "com.arc.ReusableMethods.ReusableMethodsManage.verifBillingDetailsForPromocodeReedemProject"(
     	String sheetName	
@@ -4937,3 +4930,5 @@ def static "com.arc.ReusableMethods.ReusableMethodsManage.verifBillingDetailsFor
          , 	rowNum
          , 	promoType)
 }
+=======
+>>>>>>> 816dd8c523955739acbc94694939486e49c9f2b7

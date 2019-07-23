@@ -27,7 +27,7 @@ public class ReusableMethodsSchools extends BaseClass{
 
 		int counter=0
 		project:
-		
+
 		clickClaimYourSchool()
 		claimASchool()
 
@@ -56,29 +56,29 @@ public class ReusableMethodsSchools extends BaseClass{
 		//String PaymentPageText = WebUI.getText(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'))
 		if(WebUI.waitForElementPresent(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'),GlobalVariable.minAngularWait,FailureHandling.OPTIONAL) && WebUI.waitForElementVisible(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'),GlobalVariable.minAngularWait,FailureHandling.OPTIONAL))
 		{
-		WebUI.verifyMatch(WebUI.getText(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup')),'Project Setup',true)
-		String title= DriverFactory.getWebDriver().getCurrentUrl()
-		println title
-		String Project_ID= title.substring(title.indexOf('9'),title.indexOf('9')+10 )
-		println Project_ID
-		//WebUI.getText(findTestObject('Object Repository/Add_Project_Details/td_BuildingID'))
-		//System.out.println()
-		data.setCellData(sheetName,"ProjectID", rowNum, Project_ID)
-		data.setCellData(sheetName,"RegDate", rowNum, ReusableMethodsManage.verifyBillingDate())
-		WebUI.delay(5)
+			WebUI.verifyMatch(WebUI.getText(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup')),'Project Setup',true)
+			String title= DriverFactory.getWebDriver().getCurrentUrl()
+			println title
+			String Project_ID= title.substring(title.indexOf('9'),title.indexOf('9')+10 )
+			println Project_ID
+			//WebUI.getText(findTestObject('Object Repository/Add_Project_Details/td_BuildingID'))
+			//System.out.println()
+			data.setCellData(sheetName,"ProjectID", rowNum, Project_ID)
+			data.setCellData(sheetName,"RegDate", rowNum, ReusableMethodsManage.verifyBillingDate())
+			WebUI.delay(5)
 		}
 		else{
 			counter++
 			if(counter==3){
-			KeywordUtil.markFailed("Project not created")
-			return
+				KeywordUtil.markFailed("Project not created")
+				return
 			}
 			navigateToBuildingSchools()
 			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			continue project
 		}
 	}
-	
+
 
 
 	@Keyword
@@ -108,9 +108,9 @@ public class ReusableMethodsSchools extends BaseClass{
 		data.setCellData(sheetName, "SpaceType", rowNum,list.get(randonNumber).getText())
 		list.get(randonNumber).click()
 		if((list.get(randonNumber).getText()=="Industrial Manufacturing") || (list.get(randonNumber).getText()=="Laboratory") || (list.get(randonNumber).getText()=="Data Center") ||
-			(list.get(randonNumber).getText()=="Warehouse: Nonrefrigerated Distribution/Shipping") || (list.get(randonNumber).getText()=="Warehouse: Refrigerated")|| (list.get(randonNumber).getText()=="Warehouse: Self Storage Units") ||
-			 (list.get(randonNumber).getText()=="Warehouse: General")){
-			 uniqueSpaceTypesFlag=true
+		(list.get(randonNumber).getText()=="Warehouse: Nonrefrigerated Distribution/Shipping") || (list.get(randonNumber).getText()=="Warehouse: Refrigerated")|| (list.get(randonNumber).getText()=="Warehouse: Self Storage Units") ||
+		(list.get(randonNumber).getText()=="Warehouse: General")){
+			uniqueSpaceTypesFlag=true
 		}
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/ownerType'))
 		List<WebElement> list1= driver.findElements(By.xpath("//*[@ng-repeat='type in ownerType']"))
@@ -129,51 +129,51 @@ public class ReusableMethodsSchools extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/saveButtonProjectDetails'))
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/AddProjectNewUI/saveButtonProjectDetails'), GlobalVariable.maxAngularWait, FailureHandling.OPTIONAL)
-	    //fetch the current url to get the project id
+		//fetch the current url to get the project id
 		String title= DriverFactory.getWebDriver().getCurrentUrl()
 		println title
 		String[] arc=title.split("/");
 		String Project_ID= arc[4]
 		println Project_ID
 		if(WebUI.waitForElementPresent(findTestObject('Object Repository/paymentPageNewUI/oneYearSubscription'),10, FailureHandling.OPTIONAL) && WebUI.waitForElementVisible(findTestObject('Object Repository/paymentPageNewUI/oneYearSubscription'), 10, FailureHandling.OPTIONAL) ){
-		Project_ID_Created=arc[4]
-		//************* Select the yearly subscription *****************//
-		if(yearOfSubscription==1)
-			WebUI.click(findTestObject('Object Repository/paymentPageNewUI/oneYearSubscription'))
-		else if(yearOfSubscription==2)
-			WebUI.click(findTestObject('Object Repository/paymentPageNewUI/twoYearSubscription'))
-		else if(yearOfSubscription==3)
-			WebUI.click(findTestObject('Object Repository/paymentPageNewUI/threeYearSubscription'))
-		else if(yearOfSubscription==4)
-			WebUI.click(findTestObject('Object Repository/paymentPageNewUI/fourYearSubscription'))
-		else if(yearOfSubscription==5)
-			WebUI.click(findTestObject('Object Repository/paymentPageNewUI/fiveYearSubscription'))
-		WebUI.delay(10)
-		data.setCellData(sheetName,"ProjectID", rowNum, Project_ID)
-		SAPSyncFlag=true
+			Project_ID_Created=arc[4]
+			//************* Select the yearly subscription *****************//
+			if(yearOfSubscription==1)
+				WebUI.click(findTestObject('Object Repository/paymentPageNewUI/oneYearSubscription'))
+			else if(yearOfSubscription==2)
+				WebUI.click(findTestObject('Object Repository/paymentPageNewUI/twoYearSubscription'))
+			else if(yearOfSubscription==3)
+				WebUI.click(findTestObject('Object Repository/paymentPageNewUI/threeYearSubscription'))
+			else if(yearOfSubscription==4)
+				WebUI.click(findTestObject('Object Repository/paymentPageNewUI/fourYearSubscription'))
+			else if(yearOfSubscription==5)
+				WebUI.click(findTestObject('Object Repository/paymentPageNewUI/fiveYearSubscription'))
+			WebUI.delay(10)
+			data.setCellData(sheetName,"ProjectID", rowNum, Project_ID)
+			SAPSyncFlag=true
 		}
 		else{
 			counter++
-		 if(counter==3){
-		    KeywordUtil.markFailed("Project ID Not Created (SAP not Synched)")
-		    return
-		  }
-		  WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
-		  WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		  reusableMethodsSearch.searchProgram(sheetName,rowNum)
-		 if(WebUI.waitForElementPresent(findTestObject('Object Repository/paymentPageNewUI/payNowButton1'),GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)){
-			 WebUI.waitForElementVisible(findTestObject('Object Repository/paymentPageNewUI/payNowButton1'), GlobalVariable.minAngularWait)
-			 WebUI.click(findTestObject('Object Repository/paymentPageNewUI/payNowButton1'))
-			 WebUI.waitForElementPresent(findTestObject("Object Repository/paymentPageNewUI/Purchase"), GlobalVariable.minAngularWait)
-			 String purhanse = WebUI.getText(findTestObject("Object Repository/paymentPageNewUI/Purchase"))
-			 WebUI.verifyMatch(purhanse,'Purchase', false)
-		 }
-		 else{
-			 reusablePayment.selectPayNow()
-		 }
-		 continue payment
+			if(counter==3){
+				KeywordUtil.markFailed("Project ID Not Created (SAP not Synched)")
+				return
+			}
+			WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+			reusableMethodsSearch.searchProgram(sheetName,rowNum)
+			if(WebUI.waitForElementPresent(findTestObject('Object Repository/paymentPageNewUI/payNowButton1'),GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)){
+				WebUI.waitForElementVisible(findTestObject('Object Repository/paymentPageNewUI/payNowButton1'), GlobalVariable.minAngularWait)
+				WebUI.click(findTestObject('Object Repository/paymentPageNewUI/payNowButton1'))
+				WebUI.waitForElementPresent(findTestObject("Object Repository/paymentPageNewUI/Purchase"), GlobalVariable.minAngularWait)
+				String purhanse = WebUI.getText(findTestObject("Object Repository/paymentPageNewUI/Purchase"))
+				WebUI.verifyMatch(purhanse,'Purchase', false)
+			}
+			else{
+				reusablePayment.selectPayNow()
+			}
+			continue payment
 		}
-		
+
 	}
 
 
@@ -204,8 +204,8 @@ public class ReusableMethodsSchools extends BaseClass{
 	@Keyword
 	public void billingStatusDev(String sheetName, int rowNum){
 		WebUI.delay(2)
-	//	String regdAmt = data.getCellData(sheetName, "RegAmount", rowNum)
-	//	String reviewAmt = data.getCellData(sheetName, "ReviewAmount", rowNum)
+		//	String regdAmt = data.getCellData(sheetName, "RegAmount", rowNum)
+		//	String reviewAmt = data.getCellData(sheetName, "ReviewAmount", rowNum)
 		String registrationDate = data.getCellData(sheetName, "RegDate", rowNum)
 
 		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
@@ -247,12 +247,12 @@ public class ReusableMethodsSchools extends BaseClass{
 		WebUI.delay(10)
 	}
 
-	
-	
+
+
 	//Building and Schools
 	@Keyword
 	public void trialProjectDetailsLabelVerification(){
-		
+
 		WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/manageProject'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DashboardNavigationNewUI/projectPageProjectTextVerification'), 20)
 		String projectTextVerification= WebUI.getText(findTestObject('Object Repository/DashboardNavigationNewUI/projectPageProjectTextVerification'))
@@ -284,9 +284,9 @@ public class ReusableMethodsSchools extends BaseClass{
 		//WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectOperationaldays')), "Operational days", false,FailureHandling.CONTINUE_ON_FAILURE)
 		//WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectOccupancy')), "Occupancy", false,FailureHandling.CONTINUE_ON_FAILURE)
 		//WebUI.verifyElementPresent(findTestObject('Object Repository/Manage/Project/ManageProjectLabels/projectOccupancy'), 5)
-		
+
 	}
-	
+
 
 	//Validate Data Input Meter Human experience After v4.1 Excel Upload
 
@@ -642,32 +642,32 @@ public class ReusableMethodsSchools extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/SchoolsLocators/SearchSchoolsLocators/ClickOnHundredRowsPerPage'),FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.delay(3)
 	}
-	
-	
+
+
 	public void selectSchool(){
 		List<WebElement> schoolsName = driver.findElements(By.xpath("//*[@ng-click='addProject(school)']"))
-		  println schoolsName.size()
-	      int size=schoolsName.size()
-		 
+		println schoolsName.size()
+		int size=schoolsName.size()
+
 		for(WebElement ele : schoolsName){
-		  println(ele.getText())
-		  if((ele.getText().equalsIgnoreCase("Claim now"))){
-		      ele.click()
-			  break
-		  }
+			println(ele.getText())
+			if((ele.getText().equalsIgnoreCase("Claim now"))){
+				ele.click()
+				break
+			}
 			else{
-			  size=size-1
-			  println size
-		  }
-		   if ((size<=0)){
-		      println "Hi"
-			  searchSchools()
-			  println "Hi1"
-			  WebUI.delay(5)
-			  schoolsName = driver.findElements(By.xpath("//*[@ng-click='addProject(school)']"))
-			  println schoolsName.size()
-			 //int size=schoolsName.size()
-			  size= schoolsName.size()
+				size=size-1
+				println size
+			}
+			if ((size<=0)){
+				println "Hi"
+				searchSchools()
+				println "Hi1"
+				WebUI.delay(5)
+				schoolsName = driver.findElements(By.xpath("//*[@ng-click='addProject(school)']"))
+				println schoolsName.size()
+				//int size=schoolsName.size()
+				size= schoolsName.size()
 			}
 		}
 	}
@@ -683,16 +683,16 @@ public class ReusableMethodsSchools extends BaseClass{
 		if((WebUI.waitForElementPresent(findTestObject('Object Repository/SchoolsLocators/SearchSchoolsLocators/ClaimNowButton'), 30,FailureHandling.OPTIONAL))){
 			selectSchool()
 		}else{
-		  
-		for(int next=1;next<900;next++){
-			WebUI.click(findTestObject('Object Repository/SchoolsLocators/SearchSchoolsLocators/NextSchoolRecord'))
-			if((WebUI.waitForElementPresent(findTestObject('Object Repository/SchoolsLocators/SearchSchoolsLocators/ClaimNowButton'), 30,FailureHandling.OPTIONAL))){
-				selectSchool()
-				break
+
+			for(int next=1;next<900;next++){
+				WebUI.click(findTestObject('Object Repository/SchoolsLocators/SearchSchoolsLocators/NextSchoolRecord'))
+				if((WebUI.waitForElementPresent(findTestObject('Object Repository/SchoolsLocators/SearchSchoolsLocators/ClaimNowButton'), 30,FailureHandling.OPTIONAL))){
+					selectSchool()
+					break
+				}
 			}
-		 }
 		}
-		
+
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Add_Project_Details/h1_Project Registration'), 20)
 		String projectRegistrationText = WebUI.getText(findTestObject('Object Repository/Add_Project_Details/h1_Project Registration'))
 		WebUI.verifyMatch(projectRegistrationText,'Project Registration',true)

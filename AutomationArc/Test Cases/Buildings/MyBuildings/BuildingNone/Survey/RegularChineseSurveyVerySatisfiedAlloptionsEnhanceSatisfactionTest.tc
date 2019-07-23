@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>ChineseSubmitSurveyTest</name>
+   <name>RegularChineseSurveyVerySatisfiedAlloptionsEnhanceSatisfactionTest</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>99ed67e1-bf29-403f-939c-05c889f1b7bf</testCaseGuid>

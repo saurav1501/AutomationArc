@@ -12,6 +12,7 @@
             <profileName>QAS-US-P2</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
+<<<<<<< HEAD
          <runEnabled>true</runEnabled>
          <testSuiteEntity>Test Suites/BuildingSuites/Transit/Aboveground/USTransitSuite/USTransitAbovegroundSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
@@ -21,6 +22,8 @@
             <profileName>QAS-US-P2</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
+=======
+>>>>>>> 816dd8c523955739acbc94694939486e49c9f2b7
          <runEnabled>true</runEnabled>
          <testSuiteEntity>Test Suites/CitiesSuites/USCitySuite/USLEEDForCitiesSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
@@ -84,7 +87,7 @@
             <profileName>QAS-US-P2</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
-         <runEnabled>false</runEnabled>
+         <runEnabled>true</runEnabled>
          <testSuiteEntity>Test Suites/BuildingSuites/Transit/Underground/USTransitSuite/USTransitUndergroundSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
@@ -93,7 +96,7 @@
             <profileName>QAS-US-P2</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
-         <runEnabled>false</runEnabled>
+         <runEnabled>true</runEnabled>
          <testSuiteEntity>Test Suites/LEEDOnlineSuite/LEEDOnlineSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
@@ -104,6 +107,15 @@
          </configuration>
          <runEnabled>true</runEnabled>
          <testSuiteEntity>Test Suites/BuildingSuites/ParkingSuites/USParkingSuite/USParkingSuite</testSuiteEntity>
+      </TestSuiteRunConfiguration>
+      <TestSuiteRunConfiguration>
+         <configuration>
+            <groupName>Web Desktop</groupName>
+            <profileName>QAS-US-P2</profileName>
+            <runConfigurationId>Firefox</runConfigurationId>
+         </configuration>
+         <runEnabled>true</runEnabled>
+         <testSuiteEntity>Test Suites/BuildingSuites/Transit/Aboveground/USTransitSuite/USTransitAbovegroundSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
    </testSuiteRunConfigurations>
 </TestSuiteCollectionEntity>
