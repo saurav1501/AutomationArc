@@ -413,6 +413,18 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/1_18/Score/TotalScoreShouldBeZeroTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>986ec589-342e-4215-b54e-db237bc7a03b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/Survey/CopySurveyLinkLanguageOptionTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>97bf024a-9342-42e3-bfeb-f725dc3d8544</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/Survey/EmailSurveyLanguageOptionTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>b904fb39-bcf0-4f24-857f-d6778acfef52</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

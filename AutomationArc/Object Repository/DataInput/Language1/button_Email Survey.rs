@@ -3,7 +3,7 @@
    <description></description>
    <name>button_Email Survey</name>
    <tag></tag>
-   <elementGuidId>e24f57bd-4aff-44e9-8cfb-6f030be41009</elementGuidId>
+   <elementGuidId>d288cde9-9175-4190-8a28-07261f7ebbb4</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>

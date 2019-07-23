@@ -1,124 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>button_Email Survey</name>
+   <name>AllLang</name>
    <tag></tag>
-   <elementGuidId>e24f57bd-4aff-44e9-8cfb-6f030be41009</elementGuidId>
+   <elementGuidId>33c92204-22bf-4aad-8659-a735d3a0a602</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-      </entry>
-      <entry>
          <key>XPATH</key>
-         <value>//li[@ng-mouseover=&quot;changeValue('email_dropdown', true)&quot;]</value>
+         <value>//select[@id='survey_language']</value>
       </entry>
       <entry>
          <key>BASIC</key>
-         <value>//*[@title = 'Email Survey' and @aria-expanded = 'false' and @ref_element = 'Object Repository/DataInput/Language/iframe_Data Input_datainput-wi']</value>
+         <value>//select[@id = 'survey_language' and (text() = 'EnglishFrenchPortugueseGermanSpanishChineseSwedish' or . = 'EnglishFrenchPortugueseGermanSpanishChineseSwedish')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
-      <value>button</value>
+      <value>select</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>title</name>
+      <name>id</name>
       <type>Main</type>
-      <value>Email Survey</value>
+      <value>survey_language</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>ng-options</name>
+      <type>Main</type>
+      <value>lang as lang.label for lang in lang.getLanguages() track by lang.id</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>ng-model</name>
+      <type>Main</type>
+      <value>lang.language</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>ng-click</name>
+      <type>Main</type>
+      <value>onChange()</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>ng-init</name>
+      <type>Main</type>
+      <value>langDropInit()</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>tippy_init dropdown-toggle btn-vertical btn btn-primary</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>type</name>
-      <type>Main</type>
-      <value>button</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>data-toggle</name>
-      <type>Main</type>
-      <value>dropdown</value>
+      <value>ng-pristine ng-untouched ng-valid ng-not-empty</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
-      <name>aria-expanded</name>
-      <type>Main</type>
-      <value>false</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>false</isSelected>
-      <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>
-                                        
-                                        Email Survey
-                                    </value>
+      <value>EnglishFrenchPortugueseGermanSpanishChineseSwedish</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;sideNavContainer&quot;)/md-content[@class=&quot;menu-wrapper layout-padding&quot;]/div[@class=&quot;meterContent-wrapper survey_charts_wrapper ng-scope&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;col-md-12 pl0&quot;]/div[@class=&quot;hidden-xs hidden-sm col-md-3 survey-response&quot;]/div[@class=&quot;dropdown email-dropdown&quot;]/button[@class=&quot;tippy_init dropdown-toggle btn-vertical btn btn-primary&quot;]</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>ref_element</name>
-      <type>Main</type>
-      <value>Object Repository/DataInput/Language/iframe_Data Input_datainput-wi</value>
+      <value>id(&quot;survey_language&quot;)</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
-      <value>(//button[@type='button'])[2]</value>
+      <value>//select[@id='survey_language']</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
-      <value>//div[@id='sideNavContainer']/md-content/div[2]/div[2]/div/div[2]/div/button</value>
+      <value>//div[@id='app']/div/div/section/div[3]/div/div/select</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Survey'])[1]/following::button[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Academy for Individualized Study/Indepen, 4601 W. Bonanza Rd'])[1]/following::select[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='English'])[1]/preceding::button[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Route 1'])[1]/preceding::select[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='French'])[1]/preceding::button[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Select Travel Method'])[1]/preceding::select[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
-      <value>//div[2]/div/button</value>
+      <value>//select</value>
    </webElementXpaths>
 </WebElementEntity>

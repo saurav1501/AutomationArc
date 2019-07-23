@@ -13,43 +13,55 @@
    <testCaseLink>
       <guid>84222016-5263-4f26-8ff3-1f7e59eed95a</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/SearchProgramTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>b904fb39-bcf0-4f24-857f-d6778acfef52</guid>
+      <guid>e7f8db47-0e76-49e7-a705-c4fdda0915be</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/Survey/RegularChineseSurveyVerySatisfiedAlloptionsEnhanceSatisfactionTest</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/Survey/CopySurveyLinkLanguageOptionTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>32a9dad5-729f-4326-8a5d-dea295f5283e</guid>
+      <guid>54728303-7034-4443-a102-dcbd5e6a13c1</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/Survey/RegularPortugueseSurveyVerySatisfiedAlloptionsEnhanceSatisfactionTest</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/Survey/EmailSurveyLanguageOptionTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>f9bd4d07-22ca-4e17-9d97-bab8c6348b6e</guid>
+      <guid>87b4e572-6fe4-453b-a1da-6d2f59798016</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/Survey/RegularFrenchSurveyVerySatisfiedAlloptionsEnhanceSatisfactionTest</testCaseId>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/Survey/V2ExtremelySatisfiedChineseSurveyTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>4a57ec14-bac7-4430-8aea-0845c5c161da</guid>
+      <guid>3f4d17e2-3cc3-423b-8fb6-b07e7b9cd594</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/Survey/VisitorGermanSurveyExtremelyUnsatisfiedAlloptionsEnhanceSatisfactionTest</testCaseId>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/Survey/V2ExtremelySatisfiedPortugueseSurveyTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>db3bf06e-d8f5-450f-8e6d-3a3c3119ac2e</guid>
+      <guid>12927a89-c75e-4ee7-b734-18a4e8249dec</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/Survey/VisitorSpanishSurveyExtremelyUnsatisfiedAlloptionsEnhanceSatisfactionTest</testCaseId>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/Survey/V2ExtremelySatisfiedFrenchSurveyTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>1b9c8583-b571-42ce-aac7-4c06d0c2da6b</guid>
+      <guid>f44cf099-cd00-421d-960c-1de990713d78</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/Survey/VisitorSwedishSurveyExtremelyUnsatisfiedAlloptionsEnhanceSatisfactionTest</testCaseId>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/Survey/V2ExtremelyUnsatisfiedGermanSurveyAlloptionSignificantlyReduceSatisfactionTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>4f32009b-382e-4cda-9d66-db77e543da6b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/Survey/V2ExtremelyUnsatisfiedSpanishSurveyAlloptionSignificantlyReduceSatisfactionTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>9c2b2402-11a6-4b80-97c8-4f9df8939f45</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/Survey/V2ExtremelyUnsatisfiedSwedishSurveyAlloptionSignificantlyReduceSatisfactionTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

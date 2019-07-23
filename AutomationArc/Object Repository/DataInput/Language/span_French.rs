@@ -9,8 +9,12 @@
          <key>CSS</key>
          <value>//*[@ng-click=&quot;copyLink('fr')&quot;]</value>
       </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@ng-click=&quot;copyLink('fr')&quot;]</value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>CSS</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

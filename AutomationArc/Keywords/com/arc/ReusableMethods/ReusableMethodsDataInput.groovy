@@ -5591,7 +5591,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		it++
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('Object Repository/DataInput/Survey/SaveButtonToRecordSurveyData'))
-		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'),5)
 
 		if(surveylang=='French'||surveylang=='Portuguese'||surveylang=='Chinese'){
@@ -5607,14 +5607,112 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		markAllCheckbox()
 
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/DataInput/Survey/OccupantTypeSurvey'), surveyType, false)
-		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 
 		WebUI.click(findTestObject('dataInputNewUI/Survey/Submit1'))
 		WebUI.waitForElementPresent(findTestObject('dataInputNewUI/Survey/Welcome'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('dataInputNewUI/Survey/Welcome'), GlobalVariable.minAngularWait)
-		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		WebUI.switchToWindowIndex(0)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 	}
 
+	@Keyword
+	public void surveySubmitDiffLangV2(String sheetName,int rowNum) throws IOException, InterruptedException, Exception{
+
+
+		String url = data.getCellData(sheetName,"V2Url", 2)
+		String walk1 = data.getCellData(sheetName, "Walk", 2)
+		String walk2 = data.getCellData(sheetName, "Bus", 2)
+		String walk3 = data.getCellData(sheetName, "Tram", 2)
+		String walk4 = data.getCellData(sheetName, "Heavyrail", 2)
+		String walk5 = data.getCellData(sheetName, "Motorcycle", 2)
+		String walk6 = data.getCellData(sheetName, "Carsolo", 2)
+		String walk7 = data.getCellData(sheetName, "Carpool", 2)
+		String walk8 = data.getCellData(sheetName, "Caralternative", 2)
+		String name = data.getCellData(sheetName, "Name", 2)
+
+		String surveylang = data.getCellData(sheetName,"surveylang", rowNum)
+
+		WebUI.switchToWindowIndex(1)
+		WebUI.navigateToUrl(url)
+		WebUI.delay(2)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('DataInput/Survey/WalkR1'),20)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Survey/WalkR1'),20)
+
+		boolean surveyAccept = WebUI.verifyElementVisible(findTestObject('DataInput/Survey/ACCEPTANDCLOSE'),FailureHandling.OPTIONAL)
+		println surveyAccept
+		if((surveyAccept==true)){
+			WebUI.click(findTestObject('DataInput/Survey/ACCEPTANDCLOSE'))
+		}
+		
+		WebUI.selectOptionByLabel(findTestObject('dataInputNewUI/SurveyV2/SurveyDropdownLang'),surveylang, false)
+
+		WebUI.scrollToElement(findTestObject('DataInput/Survey/WalkR1'), 10)
+		WebUI.setText(findTestObject('DataInput/Survey/WalkR1'), walk1)
+		WebUI.setText(findTestObject('DataInput/Survey/BusR1'), walk2)
+		WebUI.setText(findTestObject('DataInput/Survey/TramR1'), walk3)
+		WebUI.setText(findTestObject('DataInput/Survey/HeavyRailR1'), walk4)
+		WebUI.setText(findTestObject('DataInput/Survey/MotorcycleR1'), walk5)
+		WebUI.setText(findTestObject('DataInput/Survey/carSoloR1'), walk6)
+		WebUI.setText(findTestObject('DataInput/Survey/car23R1'), walk7)
+		WebUI.setText(findTestObject('DataInput/Survey/cars4R1'), walk8)
+
+		WebUI.scrollToElement(findTestObject('dataInputNewUI/SurveyV2/Sider'),3)
+
+		if(surveylang=='French'||surveylang=='Portuguese'||surveylang=='Chinese'){
+			WebUI.dragAndDropToObject(findTestObject('dataInputNewUI/SurveyV2/Sider'), findTestObject('dataInputNewUI/SurveyV2/ExtremelySatisfySpanText'))
+
+		}
+
+		else{
+			WebUI.dragAndDropToObject(findTestObject('dataInputNewUI/SurveyV2/Sider'), findTestObject('dataInputNewUI/SurveyV2/ExtremelyUnsatisfied'))
+			markAllCheckboxV2()
+		}
+		WebUI.waitForPageLoad(GlobalVariable.timeOut)
+		WebUI.scrollToElement(findTestObject('dataInputNewUI/SurveyV2/Submit1'),3)
+		WebUI.click(findTestObject('dataInputNewUI/SurveyV2/Submit1'))
+		WebUI.waitForPageLoad(GlobalVariable.timeOut)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/Survey/ReloadSurvey'),20)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Survey/ReloadSurvey'),20)
+		WebUI.click(findTestObject('Object Repository/DataInput/Survey/ReloadSurvey'))
+		WebUI.waitForPageLoad(GlobalVariable.timeOut)
+		
+		WebUI.waitForElementPresent(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/clickOnLogin'), 30)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/clickOnLogin'), 10)
+		println "Survey Submited Successufully"
+        
+		WebUI.switchToWindowIndex(0)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+
+
+	}
+
+	public void markAllCheckboxV2(){
+
+		WebUI.scrollToElement(findTestObject('dataInputNewUI/SurveyV2/checkbox_glare'),10)
+
+		WebUI.check(findTestObject('dataInputNewUI/SurveyV2/checkbox_glare'))
+
+		WebUI.check(findTestObject('dataInputNewUI/SurveyV2/checkbox_privacy'))
+
+		WebUI.check(findTestObject('dataInputNewUI/SurveyV2/Cold_checkbox_dark'))
+
+		WebUI.check(findTestObject('dataInputNewUI/SurveyV2/Dirty_checkbox_smelly'))
+
+		WebUI.check(findTestObject('dataInputNewUI/SurveyV2/Extremely Satisfied_chec'))
+
+		WebUI.check(findTestObject('dataInputNewUI/SurveyV2/Hot_checkbox_cold'))
+
+		WebUI.check(findTestObject('dataInputNewUI/SurveyV2/Loud_checkbox_hot'))
+
+		WebUI.check(findTestObject('dataInputNewUI/SurveyV2/Smelly_checkbox_stuffy'))
+
+		WebUI.check(findTestObject('dataInputNewUI/SurveyV2/Stuffy_checkbox_loud'))
+
+
+	}
 	@Keyword
 	public void openNewTab() throws IOException, InterruptedException, Exception{
 		Robot r = new Robot();
@@ -5631,17 +5729,22 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		navigation.navigateIntoDataInput()
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
-
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-		WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/CopySurveyLink'),10)
 		WebUI.click(findTestObject('DataInput/Survey/CopySurveyLink'))
-		WebUI.delay(1)
 		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/Survey/ClickOnSurveyDropDown'), 20)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Survey/ClickOnSurveyDropDown'), 20)
 		WebUI.mouseOver(findTestObject('Object Repository/DataInput/Survey/ClickOnSurveyDropDown'))
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		verifySurveyLang()
+		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
+
+	}
+
+	public void verifySurveyLang(){
 
 		String english =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_English'))
 		String french =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_French'))
@@ -5661,6 +5764,25 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	}
 
+	public void everifySurveyLang(){
+
+		String english =WebUI.getText(findTestObject('Object Repository/DataInput/Language1/span_English'))
+		String french =WebUI.getText(findTestObject('Object Repository/DataInput/Language1/span_French'))
+		String port =WebUI.getText(findTestObject('Object Repository/DataInput/Language1/span_Portuguese'))
+		String german =WebUI.getText(findTestObject('Object Repository/DataInput/Language1/span_German'))
+		String spanish =WebUI.getText(findTestObject('Object Repository/DataInput/Language1/span_Spanish'))
+		String chinese =WebUI.getText(findTestObject('Object Repository/DataInput/Language1/span_Chinese'))
+		String swidesh =WebUI.getText(findTestObject('DataInput/Language1/span_Swidish'))
+
+		WebUI.verifyMatch(english,'English', false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(french,'French', false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(port, 'Portuguese', false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(german, 'German', false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(spanish, 'Spanish', false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(chinese, 'Chinese', false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(swidesh, 'Swedish', false, FailureHandling.CONTINUE_ON_FAILURE)
+
+	}
 
 
 	public void markAllCheckbox(){
@@ -5749,28 +5871,19 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	@Keyword
 	public void surveyLanguageEmail(){
-
-		WebUI.scrollToElement(findTestObject('DataInput/Language/button_Email Survey'),3)
+		navigation.navigateIntoDataInput()
+		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/CopySurveyLink'),10)
+		WebUI.click(findTestObject('DataInput/Survey/CopySurveyLink'))
+		WebUI.waitForElementPresent(findTestObject('DataInput/Language/button_Email Survey'), 20)
 		WebUI.waitForElementVisible(findTestObject('DataInput/Language/button_Email Survey'), 20)
-		WebUI.click(findTestObject('DataInput/Language/button_Email Survey'))
-		WebUI.delay(2)
-
-		String english =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_English'))
-		String french =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_French'))
-		String port =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_Portuguese'))
-		String german =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_German'))
-		String spanish =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_Spanish'))
-		String chinese =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_Chinese'))
-		String swidesh =WebUI.getText(findTestObject('DataInput/Language/span_Swidish'))
-
-		WebUI.verifyMatch(english,'English', false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(french,'French', false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(port, 'Portuguese', false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(german, 'German', false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(spanish, 'Spanish', false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(chinese, 'Chinese', false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(swidesh, 'Swedish', false, FailureHandling.CONTINUE_ON_FAILURE)
-
+		WebUI.mouseOver(findTestObject('DataInput/Language/button_Email Survey'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		everifySurveyLang()
+		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
 	}
 
 
@@ -5799,7 +5912,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard()
 		Transferable contents = clipboard.getContents(null)
 		String url = (String) contents.getTransferData(DataFlavor.stringFlavor)
-		data.setCellData(sheetName, "Url", GlobalVariable.rowNumTwo, url)
+		data.setCellData(sheetName, "V2Url", GlobalVariable.rowNumTwo,url)
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		Robot r = new Robot()
 		for( int rowNum=2;rowNum<=5;rowNum++)
