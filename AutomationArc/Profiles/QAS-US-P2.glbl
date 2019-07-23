@@ -279,4 +279,9 @@
       <initValue>'Promocode'</initValue>
       <name>Promocode</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'QASPromocodeHundred'</initValue>
+      <name>promocodeRegistrationHundred</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

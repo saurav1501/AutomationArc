@@ -190,4 +190,28 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/Promocode/Building/Schools/PaymentByCreditCardWithHundredPercentPromoTest</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>cc5815f7-57b3-4d68-bf39-189541035771</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Promocode/Building/BuildingNone/SearchProjectWithFiftyPercentPromocodeTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>f7f9e674-9a65-49b2-8229-bd55c3bee34a</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/BuildingEnergyMeterCreateTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>36d67886-859e-4860-a84a-de373e6f0a70</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/BuildingWaterMeterCreateTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>478fad8d-4aaf-4e05-b631-59088b214f74</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/BuildingWasteMeterCreateTest</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>

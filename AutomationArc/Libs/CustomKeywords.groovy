@@ -1198,6 +1198,16 @@ def static "com.arc.ReusableMethods.ReusableMethodsSearch.searchLEEDProgram"(
          , 	rowNum)
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsSearch.searchProjectPromocode"(
+    	String sheetName	
+     , 	int rowNum	
+     , 	int promoType	) {
+    (new com.arc.ReusableMethods.ReusableMethodsSearch()).searchProjectPromocode(
+        	sheetName
+         , 	rowNum
+         , 	promoType)
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodSendEmailReport.sendEmailReport"() {
     (new com.arc.ReusableMethods.ReusableMethodSendEmailReport()).sendEmailReport()
 }
@@ -3688,6 +3698,18 @@ def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.verifySnapshotFi
          , 	ratingSystem)
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.submitReviewWithPromocode"() {
+    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).submitReviewWithPromocode()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.applyPromocodeFifty"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).applyPromocodeFifty(
+        	sheetName
+         , 	rowNum)
+}
+
 def static "com.arc.ReusableMethods.ResuableMethodsGRESB.downloadGresbtemplete"() {
     (new com.arc.ReusableMethods.ResuableMethodsGRESB()).downloadGresbtemplete()
 }
@@ -4904,4 +4926,14 @@ def static "com.arc.ReusableMethods.ReusableMethodsManage.changePaymentMethod"(
     (new com.arc.ReusableMethods.ReusableMethodsManage()).changePaymentMethod(
         	sheetName
          , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsManage.verifBillingDetailsForPromocodeReedemProject"(
+    	String sheetName	
+     , 	int rowNum	
+     , 	String promoType	) {
+    (new com.arc.ReusableMethods.ReusableMethodsManage()).verifBillingDetailsForPromocodeReedemProject(
+        	sheetName
+         , 	rowNum
+         , 	promoType)
 }

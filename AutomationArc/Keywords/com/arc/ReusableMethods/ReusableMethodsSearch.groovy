@@ -17,22 +17,22 @@ import internal.GlobalVariable
 
 
 public class ReusableMethodsSearch extends BaseClass{
-	
+
 	public static WebDriver driver = DriverFactory.getWebDriver()
-	
+
 	/*************Search By Project ID **************************************/
 	@Keyword
 	public void searchProgram(String sheetName , int rowNum) {
 		String projectId = data.getCellData(sheetName,"ProjectID",rowNum)
-	
+
 		navigationSearch()
 		WebUI.setText(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'), projectId)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))
 		WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
-		
+
 		boolean returnFalse = WebUI.waitForElementVisible(findTestObject('Page_Arc dashboard/no_Project (1 project)'),GlobalVariable.minAngularWait)
-		
+
 		if(returnFalse==false){
 			navigationSearch()
 			WebUI.clearText(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))
@@ -40,47 +40,43 @@ public class ReusableMethodsSearch extends BaseClass{
 			WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))
 			WebUI.delay(2)
 			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
-	
 		}
-					
+
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/search_Result'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
-		
 	}
-	
-public void navigationSearch(){
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
-	WebUI.waitForElementPresent(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'),5)
-	WebUI.waitForElementVisible(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'),5)
-	WebUI.waitForElementClickable(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'),GlobalVariable.minAngularWait)
-	WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))
-	WebUI.delay(1)
-	WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
-	
-	
-}
+
+	public void navigationSearch(){
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'),5)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'),5)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'),GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))
+		WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
+	}
 	@Keyword
 	public void searchProgram(String projectID) {
-	
+
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))
 		WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		
+
 		WebUI.setText(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'), projectID)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))
 		WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		
+
 		WebUI.waitForElementVisible(findTestObject('Page_Arc dashboard/no_Project (1 project)'),GlobalVariable.avgAngularWait)
 		String nuberOfProjects = WebUI.getText(findTestObject('Page_Arc dashboard/no_Project (1 project)'))
 		println nuberOfProjects
-		
+
 		WebUI.delay(1)
 		WebUI.verifyMatch(nuberOfProjects,'Project (1 project)', false)
 		WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		
+
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/search_Result'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 	}
@@ -89,7 +85,7 @@ public void navigationSearch(){
 	public void searchProgramCity(String sheetName , int rowNum) {
 		int rowNum1  = data.getCellData(GlobalVariable.CitySheet,"rowNum",2)
 		String projectId = data.getCellData(sheetName,"ProjectID",rowNum1)
-	
+
 		//	WebUI.click(findTestObject('Page_Arc dashboard/sideBar'))
 		//WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
@@ -101,7 +97,7 @@ public void navigationSearch(){
 		//WebUI.delay(3)
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Page_Arc dashboard/no_Project (1 project)'),4)
-	//	WebUI.waitForElementPresent(findTestObject('Page_Arc dashboard/no_Project (1 project)'),3)
+		//	WebUI.waitForElementPresent(findTestObject('Page_Arc dashboard/no_Project (1 project)'),3)
 		String nuberOfProjects = WebUI.getText(findTestObject('Page_Arc dashboard/no_Project (1 project)'))
 		println nuberOfProjects
 		WebUI.verifyMatch(nuberOfProjects,'Project (1 project)', false)
@@ -111,7 +107,7 @@ public void navigationSearch(){
 		//WebUI.delay(4)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	}
-	
+
 	@Keyword
 	public void searchProgramForNoProjectPresent(String sheetName , int rowNum) {
 		String projectId = data.getCellData(sheetName,"ProjectID",rowNum)
@@ -166,7 +162,7 @@ public void navigationSearch(){
 		String nuberOfProtfolio = WebUI.getText(findTestObject('Portfolio/Common/TNoPortfolio (1 portfolio)'))
 		println nuberOfProtfolio
 		WebUI.verifyMatch(nuberOfProtfolio,'Portfolio (1 portfolio)', false)
-		
+
 		WebUI.waitForElementClickable(findTestObject('Object Repository/Page_Arc dashboard/search_Result'), 10)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/search_Result'))
 		WebUI.delay(8)
@@ -193,7 +189,6 @@ public void navigationSearch(){
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
 		WebUI.delay(1)
-
 	}
 	@Keyword
 	public void searchLEEDProgram(String sheetName , int rowNum) {
@@ -210,8 +205,8 @@ public void navigationSearch(){
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/search_Result'))
 		WebUI.delay(5)
 	}
-	
-	
+
+
 	public static void searchSchools(){
 		//Search the schools using the 2 character of alphabet
 		WebUI.click(findTestObject('Object Repository/SchoolsLocators/SearchSchoolsLocators/SearchBarSchools'))
@@ -224,55 +219,92 @@ public void navigationSearch(){
 		//click on 100 rows per page
 		WebUI.click(findTestObject('Object Repository/SchoolsLocators/SearchSchoolsLocators/ClickOnHundredRowsPerPage'))
 	}
-	
-	
+
+
 	public static void claimASchool(){
-		
+
 		searchSchools()
-		
+
 		List<WebElement> schoolsName = driver.findElements(By.xpath("//tr[@data-ng-repeat='school in myschools']/td[4]"))
-		
+
 		println schoolsName.size()
 		int size=schoolsName.size()
-		
+
 		for(WebElement ele : schoolsName){
-				
-		   println(ele.getText())
-		   if((ele.getText().equalsIgnoreCase("Claim now"))){
-			   ele.click()
-		   }
-		   else
-		   size=size-1;
-		   if ((size==0)){
-			   searchSchools()
-			   size= schoolsName.size()
-		   }
+
+			println(ele.getText())
+			if((ele.getText().equalsIgnoreCase("Claim now"))){
+				ele.click()
+			}
+			else
+				size=size-1;
+			if ((size==0)){
+				searchSchools()
+				size= schoolsName.size()
+			}
 		}
 	}
-	
-	
-		
-    // function to generate a random string of length n
+
+
+
+	// function to generate a random string of length n
 	public static String getAlphaNumericString(int n){
-		
-	// chose a Character random from this String
-	String AlphaNumericString = "abcdefghijklmnopqrstuvxyz";
-		
-	// create StringBuffer size of AlphaNumericString
-	 StringBuilder sb = new StringBuilder(n);
-		
-	 for (int i = 0; i < n; i++) {
-		
-    // generate a random number between
-	//AlphaNumericString variable length
-	int index = (int)(AlphaNumericString.length()* Math.random());
-	
-	// add Character one by one in end of sb
-	sb.append(AlphaNumericString.charAt(index));
-	}
-		
-	 return sb.toString();
+
+		// chose a Character random from this String
+		String AlphaNumericString = "abcdefghijklmnopqrstuvxyz";
+
+		// create StringBuffer size of AlphaNumericString
+		StringBuilder sb = new StringBuilder(n);
+
+		for (int i = 0; i < n; i++) {
+
+			// generate a random number between
+			//AlphaNumericString variable length
+			int index = (int)(AlphaNumericString.length()* Math.random());
+
+			// add Character one by one in end of sb
+			sb.append(AlphaNumericString.charAt(index));
+		}
+
+		return sb.toString();
 	}
 
+	@Keyword
+	public void searchProjectPromocode(String sheetName, int rowNum, int promoType) {
+		
+		String projectId
+		
+		if(promoType=='hundred'){
+		projectId= data.getCellData(sheetName,"ProjectIDHundred",rowNum)
+		}
+		else{
+			projectId= data.getCellData(sheetName,"ProjectIDFifty",rowNum)
+		}
+		
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))
+		WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.setText(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'), projectId)
+		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))
+		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+
+		WebUI.waitForElementVisible(findTestObject('Page_Arc dashboard/no_Project (1 project)'),GlobalVariable.avgAngularWait)
+		String nuberOfProjects = WebUI.getText(findTestObject('Page_Arc dashboard/no_Project (1 project)'))
+		println nuberOfProjects
+
+		WebUI.delay(1)
+		WebUI.verifyMatch(nuberOfProjects,'Project (1 project)', false)
+		WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/search_Result'))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+	}
+	
+	
+	
 }
 
