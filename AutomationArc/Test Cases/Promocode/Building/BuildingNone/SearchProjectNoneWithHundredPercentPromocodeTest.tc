@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description>Search the project with hundered percent promocode.</description>
-   <name>SearchProjectWithHundredPercentPromocodeTest</name>
+   <name>SearchProjectNoneWithHundredPercentPromocodeTest</name>
    <tag>Search promocode project</tag>
    <comment></comment>
-   <testCaseGuid>892ba918-f97b-42bb-a514-a3499809d0e7</testCaseGuid>
+   <testCaseGuid>8bb14ebb-7139-482c-8cfe-2b228f8c1242</testCaseGuid>
 </TestCaseEntity>

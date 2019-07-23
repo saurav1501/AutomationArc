@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>TotalAmountAfterDiscount</name>
+   <name>TotalAmountAfterDiscountReview</name>
    <tag></tag>
-   <elementGuidId>e78cc6b1-c4d9-4cf2-8375-bc0e85b1e05f</elementGuidId>
+   <elementGuidId>c86ed8fd-2516-4f83-a02f-f55bd8a055eb</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//tr[@ng-if=&quot;promocode_applied&quot;])[2]//td[4]/span[1]</value>
+         <value></value>
       </entry>
       <entry>
          <key>CSS</key>
@@ -15,8 +15,9 @@
       </entry>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
 </WebElementEntity>

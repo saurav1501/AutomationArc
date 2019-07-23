@@ -21,6 +21,8 @@ try{
 
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSubmitReview.submitReviewWithPromocode'()
 	
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSubmitReview.applyPromocodeReview'(GlobalVariable.Promocode, GlobalVariable.rowNumFive, GlobalVariable.promocodeReviewFifty)
+	
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.reviewPaymentByCreditcardINT'(GlobalVariable.CCPayment, GlobalVariable.rowNumNine)
 	
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSubmitReview.submitPerformanceScoreAndVerifySuccessMessage'()

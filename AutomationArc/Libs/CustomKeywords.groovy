@@ -1201,7 +1201,7 @@ def static "com.arc.ReusableMethods.ReusableMethodsSearch.searchLEEDProgram"(
 def static "com.arc.ReusableMethods.ReusableMethodsSearch.searchProjectPromocode"(
     	String sheetName	
      , 	int rowNum	
-     , 	int promoType	) {
+     , 	String promoType	) {
     (new com.arc.ReusableMethods.ReusableMethodsSearch()).searchProjectPromocode(
         	sheetName
          , 	rowNum
@@ -3694,12 +3694,14 @@ def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.submitReviewWith
     (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).submitReviewWithPromocode()
 }
 
-def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.applyPromocodeFifty"(
+def static "com.arc.ReusableMethods.ReusableMethodsSubmitReview.applyPromocodeReview"(
     	String sheetName	
-     , 	int rowNum	) {
-    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).applyPromocodeFifty(
+     , 	int rowNum	
+     , 	String reviewPromoType	) {
+    (new com.arc.ReusableMethods.ReusableMethodsSubmitReview()).applyPromocodeReview(
         	sheetName
-         , 	rowNum)
+         , 	rowNum
+         , 	reviewPromoType)
 }
 
 def static "com.arc.ReusableMethods.ResuableMethodsGRESB.downloadGresbtemplete"() {

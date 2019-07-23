@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Submit the performance score verification for promocode projects.</description>
+   <name>PerformanceScoreVerificationNoneHundredPercentPromoTest</name>
+   <tag>Submit Performance Score Verification</tag>
+   <comment></comment>
+   <testCaseGuid>4647c16b-096f-4345-819c-f9afcda5954f</testCaseGuid>
+</TestCaseEntity>
