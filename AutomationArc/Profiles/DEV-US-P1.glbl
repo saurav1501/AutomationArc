@@ -299,4 +299,24 @@
       <initValue>'Promocode'</initValue>
       <name>Promocode</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'STGPromocodesFifty'</initValue>
+      <name>promocodeRegistrationFifty</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'STGPromocodeHundred'</initValue>
+      <name>promocodeRegistrationHundred</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'STGPromocodeHundredReview'</initValue>
+      <name>promocodeReviewHundred</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'STGPromocodesFiftyReview'</initValue>
+      <name>promocodeReviewFifty</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

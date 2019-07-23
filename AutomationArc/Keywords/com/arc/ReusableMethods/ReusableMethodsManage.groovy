@@ -4153,4 +4153,23 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyMatch(cardDetails, "VISA ending *0026", false, FailureHandling.CONTINUE_ON_FAILURE)
 	}
 
+
+	//Promo code billing amount and status verification
+
+	@Keyword
+	public void verifBillingDetailsForPromocodeReedemProject(String sheetName, int rowNum, String promoType){
+		String regdAmt
+		if(promoType=='fifty')
+			regdAmt = data.getCellData(sheetName,"DiscountedFiftyPrice", rowNum)
+		else
+			regdAmt='$ 0.00'
+
+		String regAmount= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationAmount'))
+		WebUI.verifyMatch(regAmount, regdAmt, false, FailureHandling.CONTINUE_ON_FAILURE)
+		String regStatus= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/Status'))
+		WebUI.verifyMatch(regStatus, "Completed", false, FailureHandling.CONTINUE_ON_FAILURE)
+
+	}
+
+
 }

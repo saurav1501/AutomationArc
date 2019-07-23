@@ -299,4 +299,24 @@
       <initValue>'Promocode'</initValue>
       <name>Promocode</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'QASPromocodeHundred'</initValue>
+      <name>promocodeRegistrationHundred</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'QASPromocodesFifty'</initValue>
+      <name>promocodeRegistrationFifty</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'QASPromocodeHundredReview'</initValue>
+      <name>promocodeReviewHundred</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'QASPromocodesFiftyReview'</initValue>
+      <name>promocodeReviewFifty</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

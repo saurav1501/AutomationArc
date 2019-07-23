@@ -847,14 +847,14 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		}
 		return flag
 	}
-   
+
 	//print the file name
-    public void fileNamePrint(String name){
-		
+	public void fileNamePrint(String name){
+
 		KeywordUtil.markWarning(name)
 	}
-	
-	
+
+
 
 	private static void unzip(String zipFilePath, String destDir) {
 		File dir = new File(destDir);
@@ -1310,8 +1310,8 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		println sourceExtractedFileEnergy
 		String sourceExtractedFileWater= GlobalVariable.downloadDir+projectId+"/"+ratingSystem+"/Performance Score Verification/water/"
 		String sourceExtractedFileWaste= GlobalVariable.downloadDir+projectId+"/"+ratingSystem+"/Performance Score Verification/waste/"
-        String sourceExtractedSnapshotFile=GlobalVariable.downloadDir+projectId+"/"+ratingSystem+"/Pre-Certification/"
-		
+		String sourceExtractedSnapshotFile=GlobalVariable.downloadDir+projectId+"/"+ratingSystem+"/Pre-Certification/"
+
 		String destinationUnZippedFolder= GlobalVariable.downloadDir
 		println destinationUnZippedFolder
 		//deleteFile(sourceZipFile)
@@ -1328,53 +1328,82 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		unzip(sourceZipFile, destinationUnZippedFolder)
 		KeywordUtil.markWarning("Snapshot Files are Extracted successfully")
 		WebUI.delay(5)
-		
+
 		if((isFileExtracted('snapshot.xlsx', sourceExtractedSnapshotFile)))
-		KeywordUtil.markWarning("Snapshot.xlsx file is present  ")
-	    else
-		KeywordUtil.markFailed("Snapshot.xlsx file not present")
-		
+			KeywordUtil.markWarning("Snapshot.xlsx file is present  ")
+		else
+			KeywordUtil.markFailed("Snapshot.xlsx file not present")
+
 		WebUI.closeWindowIndex(1)
 		WebUI.delay(1)
 		WebUI.switchToWindowIndex(0)
 		/*if((isFileExtracted('Test de téléchargement de fichier(French).txt', sourceExtractedFileEnergy)))
-			KeywordUtil.markWarning("Test de téléchargement de fichier(French).txt file is present  ")
-		else
-			KeywordUtil.markFailed("Test de téléchargement de fichier(French).txt file not present")
-
-		if((isFileExtracted('Upload do arquivo de teste(Portugues).txt', sourceExtractedFileEnergy)))
-			KeywordUtil.markWarning("Upload do arquivo de teste(Portugues).txt file present ")
-		else
-			KeywordUtil.markFailed("Upload do arquivo de teste(Portugues).txt file not present")
-
-		if((isFileExtracted('Testen Sie den Datei-Upload(Greman).txt', sourceExtractedFileEnergy)))
-			KeywordUtil.markWarning("Testen Sie den Datei-Upload(Greman).txt file present ")
-		else
-			KeywordUtil.markFailed("Testen Sie den Datei-Upload(Greman).txt file not present")
-
-		if((isFileExtracted('Carga de archivos de prueba(Spanish).txt', sourceExtractedFileEnergy)))
-			KeywordUtil.markWarning("Carga de archivos de prueba(Spanish).txt file present")
-		else
-			KeywordUtil.markFailed("Carga de archivos de prueba(Spanish).txt file Not present")
-
-		if((isFileExtracted('測試文件上傳(ChineseT).txt', sourceExtractedFileEnergy)))
-			KeywordUtil.markWarning("測試文件上傳(ChineseT).txt file is present  ")
-		else
-			KeywordUtil.markFailed("測試文件上傳(ChineseT).txt file Not present")
-
-		if((isFileExtracted('测试文件上传(ChineseS).txt', sourceExtractedFileEnergy)))
-			KeywordUtil.markWarning("测试文件上传(ChineseS).txt file is present  ")
-		else
-			KeywordUtil.markFailed("测试文件上传(ChineseS).txt file Not present")
-
-		if((isFileExtracted('테스트 파일 업로드(Korean).txt', sourceExtractedFileEnergy)))
-			KeywordUtil.markWarning("테스트 파일 업로드(Korean).txt file is present  ")
-		else
-			KeywordUtil.markFailed("테스트 파일 업로드(Korean).txt file Not present")
-
-		if((isFileExtracted('Test Dosyası Yüklemesi(Turkish).txt', sourceExtractedFileEnergy)))
-			KeywordUtil.markWarning("Test Dosyası Yüklemesi(Turkish).txt file is present  ")
-		else
-			KeywordUtil.markFailed("Test Dosyası Yüklemesi(Turkish).txt file Not present")*/
+		 KeywordUtil.markWarning("Test de téléchargement de fichier(French).txt file is present  ")
+		 else
+		 KeywordUtil.markFailed("Test de téléchargement de fichier(French).txt file not present")
+		 if((isFileExtracted('Upload do arquivo de teste(Portugues).txt', sourceExtractedFileEnergy)))
+		 KeywordUtil.markWarning("Upload do arquivo de teste(Portugues).txt file present ")
+		 else
+		 KeywordUtil.markFailed("Upload do arquivo de teste(Portugues).txt file not present")
+		 if((isFileExtracted('Testen Sie den Datei-Upload(Greman).txt', sourceExtractedFileEnergy)))
+		 KeywordUtil.markWarning("Testen Sie den Datei-Upload(Greman).txt file present ")
+		 else
+		 KeywordUtil.markFailed("Testen Sie den Datei-Upload(Greman).txt file not present")
+		 if((isFileExtracted('Carga de archivos de prueba(Spanish).txt', sourceExtractedFileEnergy)))
+		 KeywordUtil.markWarning("Carga de archivos de prueba(Spanish).txt file present")
+		 else
+		 KeywordUtil.markFailed("Carga de archivos de prueba(Spanish).txt file Not present")
+		 if((isFileExtracted('測試文件上傳(ChineseT).txt', sourceExtractedFileEnergy)))
+		 KeywordUtil.markWarning("測試文件上傳(ChineseT).txt file is present  ")
+		 else
+		 KeywordUtil.markFailed("測試文件上傳(ChineseT).txt file Not present")
+		 if((isFileExtracted('测试文件上传(ChineseS).txt', sourceExtractedFileEnergy)))
+		 KeywordUtil.markWarning("测试文件上传(ChineseS).txt file is present  ")
+		 else
+		 KeywordUtil.markFailed("测试文件上传(ChineseS).txt file Not present")
+		 if((isFileExtracted('테스트 파일 업로드(Korean).txt', sourceExtractedFileEnergy)))
+		 KeywordUtil.markWarning("테스트 파일 업로드(Korean).txt file is present  ")
+		 else
+		 KeywordUtil.markFailed("테스트 파일 업로드(Korean).txt file Not present")
+		 if((isFileExtracted('Test Dosyası Yüklemesi(Turkish).txt', sourceExtractedFileEnergy)))
+		 KeywordUtil.markWarning("Test Dosyası Yüklemesi(Turkish).txt file is present  ")
+		 else
+		 KeywordUtil.markFailed("Test Dosyası Yüklemesi(Turkish).txt file Not present")*/
 	}
+
+
+	//submit review with promocode 100% and 50% respectively
+	@Keyword
+	public void submitReviewWithPromocode(){
+
+		WebUI.click(findTestObject('SubmitReview/a_ Review'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementClickable(findTestObject('SubmitReview/button_Continue'), GlobalVariable.minAngularWait)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/SubmitReviewText')), "Submit for Review", false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/VerifyPerformanceScoreVerificationTest')), "Performance Score Verification", false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.scrollToElement(findTestObject('SubmitReview/div_Upload'), 3)
+		WebUI.click(findTestObject('SubmitReview/button_Continue'))
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/SubmitReview/VerifyPerformanceScoreVerificationTextOnSummeryPage')), "Performance Score Verification", false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.setText(findTestObject('SubmitReview/input_form-control ng-untouche'), 'abhishekkumar@groupten.com')
+		WebUI.click(findTestObject('SubmitReview/span_Send'))
+		WebUI.click(findTestObject('SubmitReview/button_Continue'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+	}
+
+	
+	//Apply 50% promocode
+	@Keyword
+	public void applyPromocodeFifty(String sheetName, int rowNum){
+		
+		String fiftyPromo = data.getCellData(sheetName, , rowNum)
+		
+		//findTestObject('Object Repository/Promocode/ApplyPromoCodeReviewPage')
+		//findTestObject('Object Repository/Promocode/TotalAmountAfterDiscount')
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Promocode/ReviewPagePromocodeBox'), GlobalVariable.minAngularWait)
+		WebUI.sendKeys(findTestObject('Object Repository/Promocode/ReviewPagePromocodeBox'), fiftyPromo)
+		
+	}
+	
+	
+
 }

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Search the project with fifty percent promocode.</description>
+   <name>SearchProjectWithFiftyPercentPromocodeTest</name>
+   <tag>Search promocode project</tag>
+   <comment></comment>
+   <testCaseGuid>ece4bfc8-5b71-4fe5-b31e-eb0d7c9f0d1e</testCaseGuid>
+</TestCaseEntity>

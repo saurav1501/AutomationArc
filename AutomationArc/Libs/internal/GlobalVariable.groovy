@@ -477,6 +477,26 @@ Profile STG-US-P2 : payment via credit card</p>
     /**
      * <p></p>
      */
+    public static Object promocodeRegistrationFifty
+     
+    /**
+     * <p></p>
+     */
+    public static Object promocodeRegistrationHundred
+     
+    /**
+     * <p></p>
+     */
+    public static Object promocodeReviewHundred
+     
+    /**
+     * <p></p>
+     */
+    public static Object promocodeReviewFifty
+     
+    /**
+     * <p></p>
+     */
     public static Object validationSheet
      
     /**
@@ -583,6 +603,10 @@ Profile STG-US-P2 : payment via credit card</p>
             avgAngularWait = selectedVariables['avgAngularWait']
             maxAngularWait = selectedVariables['maxAngularWait']
             AllProjectUrlLeedOnline = selectedVariables['AllProjectUrlLeedOnline']
+            promocodeRegistrationFifty = selectedVariables['promocodeRegistrationFifty']
+            promocodeRegistrationHundred = selectedVariables['promocodeRegistrationHundred']
+            promocodeReviewHundred = selectedVariables['promocodeReviewHundred']
+            promocodeReviewFifty = selectedVariables['promocodeReviewFifty']
             validationSheet = selectedVariables['validationSheet']
             rowNumTwelve = selectedVariables['rowNumTwelve']
             rowNumThirteen = selectedVariables['rowNumThirteen']

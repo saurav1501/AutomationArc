@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify the billing amount and status for the project where thr 100% promocode is applied.</description>
+   <name>RegistrationBillingDetailsHundredTest</name>
+   <tag>Verify billing details for 100% promocode</tag>
+   <comment></comment>
+   <testCaseGuid>e79ec92a-837a-4abf-9a49-b875aa750717</testCaseGuid>
+</TestCaseEntity>
