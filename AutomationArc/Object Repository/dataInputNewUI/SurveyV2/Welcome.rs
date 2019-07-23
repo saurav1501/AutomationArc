@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>Welcome</name>
+   <tag></tag>
+   <elementGuidId>9a771578-cbb5-417f-8215-269ec61a0001</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>//*[@id=&quot;app&quot;]/div/div/section/div[3]/div[2]/p</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@id=&quot;app&quot;]/div/div/section/div[3]/div[2]/p</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+</WebElementEntity>

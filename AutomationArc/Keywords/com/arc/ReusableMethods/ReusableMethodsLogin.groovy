@@ -61,16 +61,16 @@ public class ReusableMethodsLogin extends BaseClass{
 
 	@Keyword
 	public void loginIntoArcApplication(String Username,String Password) {
-		
+
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/clickOnLogin'), GlobalVariable.maxAngularWait)
-		
+
 		WebUI.click(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/clickOnLogin'))
 		WebUI.delay(2)
-		
+
 		WebUI.setText(findTestObject('Page_Home  Arc/input_name'), Username)
 		WebUI.setText(findTestObject('Page_Home  Arc/input_pass'), Password)
-	
+
 		WebUI.click(findTestObject('Page_Home  Arc/input_field_policy_accept'))
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.click(findTestObject('Page_Home  Arc/button_Log in'))
@@ -164,7 +164,7 @@ public class ReusableMethodsLogin extends BaseClass{
 		WebUI.waitForPageLoad(GlobalVariable.timeOut)
 		WebUI.navigateToUrl(url)
 		waitForPageLoad(60)
-		
+
 	}
 	@Keyword
 	public void loginArcGlobalVariable() {
@@ -190,17 +190,17 @@ public class ReusableMethodsLogin extends BaseClass{
 
 	@Keyword
 	public void loginIntoArcWithGlobalVariableAppUrl() {
-	
+
 		loginIntoArcAppUrl()
-		
-	    boolean myProject = WebUI.waitForElementPresent(findTestObject('Page_Arc dashboard/span_My Projects'),GlobalVariable.maxAngularWait)
-	   
+
+		boolean myProject = WebUI.waitForElementPresent(findTestObject('Page_Arc dashboard/span_My Projects'),GlobalVariable.maxAngularWait)
+
 		if(myProject==false)
-		for(int i=0;i<5;i++)
-	    loginIntoArcAppUrl()
+			for(int i=0;i<5;i++)
+				loginIntoArcAppUrl()
 		myProject = WebUI.waitForElementPresent(findTestObject('Page_Arc dashboard/span_My Projects'),GlobalVariable.maxAngularWait)
-	    
-		
+
+
 	}
 	public void loginIntoArcAppUrl(){
 		String userName= GlobalVariable.userName
@@ -210,10 +210,10 @@ public class ReusableMethodsLogin extends BaseClass{
 		print screenSize.getHeight()
 		print screenSize.getWidth()
 		Dimension size = new Dimension(1500, 1068)
-		
+
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
-		
+
 		WebUI.navigateToUrl(appUrl)
 		WebUI.getViewportHeight()
 		WebUI.getViewportWidth()
@@ -222,13 +222,13 @@ public class ReusableMethodsLogin extends BaseClass{
 		WebUI.waitForPageLoad(GlobalVariable.timeOut)
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
-		
+
 		WebUI.setViewPortSize(1366,1280)
 		WebUI.getViewportHeight()
 		WebUI.getViewportWidth()
 		WebUI.getViewportLeftPosition()
 		WebUI.getViewportTopPosition()
-		
+
 		WebUI.click(findTestObject('Object Repository/LoginViaAppUrl/CookieACCEPTANDCLOSE'),FailureHandling.OPTIONAL)
 		WebUI.setText(findTestObject('Object Repository/LoginViaAppUrl/UserName'), userName)
 		WebUI.setText(findTestObject('Object Repository/LoginViaAppUrl/UserPassword'), password)
@@ -236,9 +236,9 @@ public class ReusableMethodsLogin extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/LoginViaAppUrl/ClickLOGIN'))
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
-		
+
 	}
-	
+
 
 
 	@Keyword
@@ -246,7 +246,7 @@ public class ReusableMethodsLogin extends BaseClass{
 		String url = GlobalVariable.adminUrl
 		String userName= GlobalVariable.adminUserName
 		String password= GlobalVariable.adminPassword
-	
+
 		Robot r = new Robot()
 
 		r.keyPress(KeyEvent.VK_CONTROL)
@@ -259,7 +259,7 @@ public class ReusableMethodsLogin extends BaseClass{
 		WebUI.switchToWindowIndex(1)
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.navigateToUrl(url)
-	
+
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.setText(findTestObject('PerformanceScore/Username'), userName)
 		WebUI.setText(findTestObject('PerformanceScore/Password'), password)
@@ -307,7 +307,7 @@ public class ReusableMethodsLogin extends BaseClass{
 		WebUI.click(findTestObject('Page_Arc dashboard/logout'))
 		WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		
+
 	}
 
 	@Keyword

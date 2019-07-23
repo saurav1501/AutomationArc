@@ -1,83 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>span_German</name>
+   <name>ExtremelyUnsatisfied</name>
    <tag></tag>
-   <elementGuidId>0d33ac30-4849-42b7-a255-997fc95fc31e</elementGuidId>
+   <elementGuidId>a0b75078-0113-4bc3-91d7-ed01a6535bb9</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value></value>
+         <value>//*[@id=&quot;app&quot;]/section/div[8]/div[2]</value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@ng-click=&quot;copyLink('de')&quot;]</value>
+         <value>//*[@id=&quot;app&quot;]/section/div[8]/div[2]</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[(text() = 'Extremely Unsatisfied' or . = 'Extremely Unsatisfied')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
-      <isSelected>true</isSelected>
+      <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>tag</name>
       <type>Main</type>
       <value>span</value>
    </webElementProperties>
    <webElementProperties>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>class</name>
+      <type>Main</type>
+      <value>fw-600 ng-binding</value>
+   </webElementProperties>
+   <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>German</value>
+      <value>Extremely Unsatisfied</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;sideNavContainer&quot;)/md-content[@class=&quot;menu-wrapper layout-padding&quot;]/div[@class=&quot;meterContent-wrapper survey_charts_wrapper ng-scope&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;col-md-12 pl0&quot;]/div[@class=&quot;hidden-xs hidden-sm col-md-3 survey-response&quot;]/div[@class=&quot;dropdown email-dropdown open&quot;]/ul[@class=&quot;dropdown-menu&quot;]/li[@class=&quot;language_unit&quot;]/div[@class=&quot;left-right-align&quot;]/span[1]</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>ref_element</name>
-      <type>Main</type>
-      <value>Object Repository/DataInput/Language/iframe_Data Input_datainput-wi</value>
+      <value>id(&quot;app&quot;)/div[@class=&quot;ng-scope&quot;]/div[@class=&quot;center-div&quot;]/section[@class=&quot;widget col-md-6 p0 mb0&quot;]/div[@class=&quot;ng-scope&quot;]/div[@class=&quot;survey-card ng-scope&quot;]/div[@class=&quot;mb20 blank&quot;]/div[@class=&quot;between-div mt15&quot;]/span[@class=&quot;fw-600 ng-binding&quot;]</value>
    </webElementProperties>
    <webElementXpaths>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
-      <value>//div[@id='sideNavContainer']/md-content/div[2]/div[2]/div/div[2]/div/ul/li[4]/div/span</value>
+      <value>//div[@id='app']/div/div/section/div[3]/div[2]/div[2]/div[2]/span</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Portuguese'])[1]/following::span[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Slide to your selection'])[1]/following::span[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='French'])[1]/following::span[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='+'])[1]/following::span[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Spanish'])[1]/preceding::span[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Extremely Satisfied'])[1]/preceding::span[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Chinese'])[1]/preceding::span[2]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Submit'])[1]/preceding::span[2]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
-      <value>//li[4]/div/span</value>
+      <value>//div[2]/span</value>
    </webElementXpaths>
 </WebElementEntity>

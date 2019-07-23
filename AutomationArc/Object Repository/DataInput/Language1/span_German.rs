@@ -3,7 +3,7 @@
    <description></description>
    <name>span_German</name>
    <tag></tag>
-   <elementGuidId>0d33ac30-4849-42b7-a255-997fc95fc31e</elementGuidId>
+   <elementGuidId>2ff364c1-4f64-48d2-96dc-a1741d33ac21</elementGuidId>
    <selectorCollection>
       <entry>
          <key>CSS</key>
@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@ng-click=&quot;copyLink('de')&quot;]</value>
+         <value>//*[@ng-click=&quot;emailSurvey('de')&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

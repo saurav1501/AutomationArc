@@ -712,7 +712,7 @@ public class ResuableMethodsGRESB extends BaseClass {
 		WebUI.click(findTestObject('Portfolio/Common/PortfolioPage'))
 		WebUI.delay(5)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
-		
+
 		WebUI.scrollToElement(findTestObject('Object Repository/Portfolio/GRESB/Third'), 3)
 		WebUI.click(findTestObject('Object Repository/Portfolio/GRESB/Third'))
 		WebUI.delay(8)

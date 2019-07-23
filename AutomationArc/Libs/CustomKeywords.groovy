@@ -2582,6 +2582,14 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.surveySubmitDiffLan
          , 	rowNum)
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.surveySubmitDiffLangV2"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).surveySubmitDiffLangV2(
+        	sheetName
+         , 	rowNum)
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.openNewTab"() {
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).openNewTab()
 }

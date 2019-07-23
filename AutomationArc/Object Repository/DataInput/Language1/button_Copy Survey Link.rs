@@ -1,23 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>button_Email Survey</name>
+   <name>button_Copy Survey Link</name>
    <tag></tag>
-   <elementGuidId>e24f57bd-4aff-44e9-8cfb-6f030be41009</elementGuidId>
+   <elementGuidId>3082a045-8e35-4b20-b3c4-742b2a6e4530</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-      </entry>
-      <entry>
          <key>XPATH</key>
-         <value>//li[@ng-mouseover=&quot;changeValue('email_dropdown', true)&quot;]</value>
+         <value>(//button[@title=&quot;Email Survey&quot;])[2]</value>
       </entry>
       <entry>
          <key>BASIC</key>
-         <value>//*[@title = 'Email Survey' and @aria-expanded = 'false' and @ref_element = 'Object Repository/DataInput/Language/iframe_Data Input_datainput-wi']</value>
+         <value>//*[@aria-expanded = 'false' and (text() = '
+                                        
+                                        Copy Survey Link
+                                    ' or . = '
+                                        
+                                        Copy Survey Link
+                                    ') and @ref_element = 'Object Repository/DataInput/Language/iframe_Data Input_datainput-wi']</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -27,18 +30,11 @@
       <value>button</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>title</name>
-      <type>Main</type>
-      <value>Email Survey</value>
-   </webElementProperties>
-   <webElementProperties>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>class</name>
       <type>Main</type>
-      <value>tippy_init dropdown-toggle btn-vertical btn btn-primary</value>
+      <value>btn-vertical dropdown-toggle btn btn-default button--cancel</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -62,13 +58,13 @@
       <value>false</value>
    </webElementProperties>
    <webElementProperties>
-      <isSelected>false</isSelected>
+      <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
       <value>
                                         
-                                        Email Survey
+                                        Copy Survey Link
                                     </value>
    </webElementProperties>
    <webElementProperties>
@@ -76,7 +72,7 @@
       <matchCondition>equals</matchCondition>
       <name>xpath</name>
       <type>Main</type>
-      <value>id(&quot;sideNavContainer&quot;)/md-content[@class=&quot;menu-wrapper layout-padding&quot;]/div[@class=&quot;meterContent-wrapper survey_charts_wrapper ng-scope&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;col-md-12 pl0&quot;]/div[@class=&quot;hidden-xs hidden-sm col-md-3 survey-response&quot;]/div[@class=&quot;dropdown email-dropdown&quot;]/button[@class=&quot;tippy_init dropdown-toggle btn-vertical btn btn-primary&quot;]</value>
+      <value>id(&quot;sideNavContainer&quot;)/md-content[@class=&quot;menu-wrapper layout-padding&quot;]/div[@class=&quot;meterContent-wrapper survey_charts_wrapper ng-scope&quot;]/div[@class=&quot;row&quot;]/div[@class=&quot;col-md-12 pl0&quot;]/div[@class=&quot;hidden-xs hidden-sm col-md-3 survey-response&quot;]/div[@class=&quot;dropdown email-dropdown&quot;]/button[@class=&quot;btn-vertical dropdown-toggle btn btn-default button--cancel&quot;]</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -89,36 +85,42 @@
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:attributes</name>
-      <value>(//button[@type='button'])[2]</value>
+      <value>(//button[@type='button'])[3]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:idRelative</name>
-      <value>//div[@id='sideNavContainer']/md-content/div[2]/div[2]/div/div[2]/div/button</value>
+      <value>//div[@id='sideNavContainer']/md-content/div[2]/div[2]/div/div[2]/div[2]/button</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='Survey'])[1]/following::button[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Chinese'])[1]/following::button[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='English'])[1]/preceding::button[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='Spanish'])[1]/following::button[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:neighbor</name>
-      <value>(.//*[normalize-space(text()) and normalize-space(.)='French'])[1]/preceding::button[1]</value>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='English'])[2]/preceding::button[1]</value>
+   </webElementXpaths>
+   <webElementXpaths>
+      <isSelected>false</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath:neighbor</name>
+      <value>(.//*[normalize-space(text()) and normalize-space(.)='French'])[2]/preceding::button[1]</value>
    </webElementXpaths>
    <webElementXpaths>
       <isSelected>false</isSelected>
       <matchCondition>equals</matchCondition>
       <name>xpath:position</name>
-      <value>//div[2]/div/button</value>
+      <value>//div[2]/div[2]/button</value>
    </webElementXpaths>
 </WebElementEntity>
