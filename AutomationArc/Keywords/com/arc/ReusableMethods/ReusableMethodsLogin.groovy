@@ -257,7 +257,7 @@ public class ReusableMethodsLogin extends BaseClass{
 
 		//To switch to the new tab
 		WebUI.switchToWindowIndex(1)
-		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		//WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.navigateToUrl(url)
 
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)

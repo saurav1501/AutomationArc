@@ -293,6 +293,12 @@
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/PayNowSubmitReviewPaymentUSTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>d1a44cdc-1ad6-4e88-a1ca-b8820e5d4a41</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/DownloadAndVerifyTheSnapshotFileNameTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>e7f8db47-0e76-49e7-a705-c4fdda0915be</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -339,12 +345,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/Survey/V2ExtremelyUnsatisfiedSwedishSurveyAlloptionSignificantlyReduceSatisfactionTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>d1a44cdc-1ad6-4e88-a1ca-b8820e5d4a41</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyTransit/TransitUnderground/DownloadAndVerifyTheSnapshotFileNameTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>6c4559f2-4672-4952-9e79-46a3606942c8</guid>
