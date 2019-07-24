@@ -34,6 +34,7 @@ public class BaseClass {
 	public static boolean uniqueSpaceTypesFlag=false
 	public static boolean SAPSyncFlag=false
 	public static String Project_ID_Created
+	public static String Project_ID_Promocode
 
 
 	//public static String arcReportFile= RunConfiguration.getProjectDir()+"/ARCDataTemplete/ARCReport.xlsx"
