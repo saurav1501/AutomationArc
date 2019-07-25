@@ -1593,10 +1593,19 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.delay(2)
 		String MainWindowHandle = driver.getWindowHandle()
 		//WebUI.scrollToElement(findTestObject('Object Repository/LEEDOnline/Transportation/ClickOnSurveyButton'), 5)
-		WebUI.click(findTestObject('Object Repository/LEEDOnline/Transportation/ClickOnSurveyButton'))
 		WebUI.delay(1)
-		WebUI.click(findTestObject('Object Repository/LEEDOnline/Transportation/SelectEnglishLanguage'))
-
+		WebUI.click(findTestObject('DataInput/Survey/CopySurveyLink'))
+		WebUI.delay(1)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/Survey/ClickOnSurveyDropDown'), 20)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Survey/ClickOnSurveyDropDown'), 20)
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/Survey/ClickOnSurveyDropDown'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.delay(1)
+		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/English'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('DataInput/Survey/English'))
+		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
+		
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
 		for( int rowNum=2;rowNum<=5;rowNum++)
@@ -1787,8 +1796,16 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.delay(1)
 		WebUI.click(findTestObject('DataInput/Survey/CopySurveyLink'))
 		WebUI.delay(1)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/Survey/ClickOnSurveyDropDown'), 20)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Survey/ClickOnSurveyDropDown'), 20)
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/Survey/ClickOnSurveyDropDown'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.delay(1)
+		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/English'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('DataInput/Survey/English'))
-
+		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
+		
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
