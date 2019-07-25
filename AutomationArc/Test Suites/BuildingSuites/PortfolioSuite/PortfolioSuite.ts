@@ -13,19 +13,19 @@
    <testCaseLink>
       <guid>d0f97808-9b98-4f83-8baf-a682daee6033</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyPortfolios/LoginWithPortfolioTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>18381ed7-7e44-4283-81e8-b1c7e4cb9d25</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyPortfolios/CreateNewPortfolioWithSpecialCharacterTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>51b5b838-3b46-4a81-bdee-79648dab555f</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyPortfolios/ProtfoloNameMandatoryTest</testCaseId>
    </testCaseLink>
    <testCaseLink>

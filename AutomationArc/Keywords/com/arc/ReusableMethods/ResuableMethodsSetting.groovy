@@ -52,7 +52,6 @@ public class ResuableMethodsSetting extends BaseClass{
 		WebUI.delay(2)
 		WebUI.click(findTestObject('DataInput/Settings18/button_Close'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-	
 	}
 
 	public void checkRegularOccupant(){
@@ -104,8 +103,7 @@ public class ResuableMethodsSetting extends BaseClass{
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementPresent(findTestObject('DataInput/Settings18/VISITOR'),10)
 		WebUI.waitForElementVisible(findTestObject('DataInput/Settings18/VISITOR'),10)
-	
-		}
+	}
 
 	public void area(){
 		WebUI.scrollToElement(findTestObject('DataInput/Settings18/a_Gross Floor Area'), GlobalVariable.minAngularWait)
@@ -188,7 +186,6 @@ public class ResuableMethodsSetting extends BaseClass{
 	public void uncheckAllOccpant() {
 		setExclude()
 		checkExclude()
-	
 	}
 	@Keyword
 	public void checkRegular() {
@@ -335,7 +332,7 @@ public class ResuableMethodsSetting extends BaseClass{
 		if(WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore')).equalsIgnoreCase('')){
 			WebUI.delay(10)
 		}
-		
+
 		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
 		println totalPerformaceScore
 		data.setCellData(GlobalVariable.BDataInput,"ATotalScore", GlobalVariable.rowNumTwo, totalPerformaceScore)

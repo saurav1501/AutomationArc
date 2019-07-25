@@ -7615,12 +7615,15 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		String totalScore  = data.getCellData(sheetName, "TotalScore", rowNum)
 		int utotalScore = Integer.parseInt(totalScore)
-
+        navigation.navigateIntoDataInput()
 		/********* Verifying the Generated score for total score under data Input section ********/
-		WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
-		WebUI.delay(8)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Setting/Setting'), 60)
-		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'),10)
+		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'),40)
+		
+		if(WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore')).equalsIgnoreCase('')){
+			WebUI.delay(15)
+		}
+
 		//Verifying the Performance score
 		String totalPerformaceScore = WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore'))
 		print totalPerformaceScore
