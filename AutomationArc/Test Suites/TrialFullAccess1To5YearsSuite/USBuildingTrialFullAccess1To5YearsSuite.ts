@@ -95,12 +95,6 @@
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/1YearFullAccessBuildingOther/ValidateTransportationSurveyGraphTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>271d46b6-6206-4a37-869a-35eefdf6ebae</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/1YearFullAccessBuildingOther/ValidateEnergyMeterGraphTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>e0ce3ade-6f98-480d-9c7a-86276b80bc22</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -135,6 +129,12 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/1YearFullAccessBuildingOther/1YearBillingAmountAndStatusTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>271d46b6-6206-4a37-869a-35eefdf6ebae</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/1YearFullAccessBuildingOther/ValidateEnergyMeterGraphTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>47f7f283-b18c-4a3b-8e27-721ef70c823b</guid>

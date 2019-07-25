@@ -1391,19 +1391,24 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 	}
 
 	
-	//Apply 50% promocode
+	//Apply promocode
 	@Keyword
-	public void applyPromocodeFifty(String sheetName, int rowNum){
+	public void applyPromocodeReview(String sheetName, int rowNum, String reviewPromoType){
 		
-		String fiftyPromo = data.getCellData(sheetName, , rowNum)
-		
-		//findTestObject('Object Repository/Promocode/ApplyPromoCodeReviewPage')
-		//findTestObject('Object Repository/Promocode/TotalAmountAfterDiscount')
+		String promoCode = dataExcelTemplate.getCellData(sheetName, reviewPromoType, rowNum)
+	    WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Promocode/ReviewPagePromocodeBox'), GlobalVariable.minAngularWait)
-		WebUI.sendKeys(findTestObject('Object Repository/Promocode/ReviewPagePromocodeBox'), fiftyPromo)
-		
+		WebUI.sendKeys(findTestObject('Object Repository/Promocode/ReviewPagePromocodeBox'), promoCode)
+		WebUI.click(findTestObject('Object Repository/Promocode/ApplyPromoCodeReviewPage'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		if(reviewPromoType==GlobalVariable.promocodeReviewFifty){
+			String reviewDiscountedAmount = dataExcelTemplate.getCellData(sheetName, "DiscountedFiftyPriceReview", rowNum)
+			String discountedReviewDisplayPrice= WebUI.getText(findTestObject('Object Repository/Promocode/TotalAmountAfterDiscountReview'))
+			WebUI.verifyMatch(discountedReviewDisplayPrice, reviewDiscountedAmount, false )
+		}
+		else{
+			String discountedReviewDisplayPrice= WebUI.getText(findTestObject('Object Repository/Promocode/TotalAmountAfterDiscountReview'))
+			WebUI.verifyMatch(discountedReviewDisplayPrice, '$ 0.00', false )
+		}
 	}
-	
-	
-
 }

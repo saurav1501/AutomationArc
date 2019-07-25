@@ -78,5 +78,14 @@
          <runEnabled>true</runEnabled>
          <testSuiteEntity>Test Suites/RegPageAndDashBoardSuite/DashBoardAndRegPageValidationSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
+      <TestSuiteRunConfiguration>
+         <configuration>
+            <groupName>Web Desktop</groupName>
+            <profileName>STG-US-P1</profileName>
+            <runConfigurationId>Firefox</runConfigurationId>
+         </configuration>
+         <runEnabled>true</runEnabled>
+         <testSuiteEntity>Test Suites/PromocodeSuite/PromocodeSuite</testSuiteEntity>
+      </TestSuiteRunConfiguration>
    </testSuiteRunConfigurations>
 </TestSuiteCollectionEntity>

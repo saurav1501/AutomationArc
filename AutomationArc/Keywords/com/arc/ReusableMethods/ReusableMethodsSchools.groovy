@@ -22,6 +22,7 @@ public class ReusableMethodsSchools extends BaseClass{
 	ReusableMethodsNavigation navigation = new ReusableMethodsNavigation()
 	ReusableMethodsSearch reusableMethodsSearch = new ReusableMethodsSearch()
 	ReusableMethodsPayment reusablePayment = new ReusableMethodsPayment()
+	
 	@Keyword
 	public void addNewSchoolProjectRegistration(String sheetName, int rowNum){
 
@@ -133,8 +134,8 @@ public class ReusableMethodsSchools extends BaseClass{
 		String title= DriverFactory.getWebDriver().getCurrentUrl()
 		println title
 		String[] arc=title.split("/");
-		String Project_ID= arc[4]
-		println Project_ID
+		Project_ID_Promocode= arc[4]
+		println Project_ID_Promocode
 		if(WebUI.waitForElementPresent(findTestObject('Object Repository/paymentPageNewUI/oneYearSubscription'),10, FailureHandling.OPTIONAL) && WebUI.waitForElementVisible(findTestObject('Object Repository/paymentPageNewUI/oneYearSubscription'), 10, FailureHandling.OPTIONAL) ){
 			Project_ID_Created=arc[4]
 			//************* Select the yearly subscription *****************//
@@ -149,7 +150,7 @@ public class ReusableMethodsSchools extends BaseClass{
 			else if(yearOfSubscription==5)
 				WebUI.click(findTestObject('Object Repository/paymentPageNewUI/fiveYearSubscription'))
 			WebUI.delay(10)
-			data.setCellData(sheetName,"ProjectID", rowNum, Project_ID)
+			data.setCellData(sheetName,"ProjectID", rowNum, Project_ID_Promocode)
 			SAPSyncFlag=true
 		}
 		else{

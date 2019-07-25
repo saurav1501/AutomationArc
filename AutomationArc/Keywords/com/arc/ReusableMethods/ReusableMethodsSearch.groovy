@@ -270,23 +270,24 @@ public class ReusableMethodsSearch extends BaseClass{
 	}
 
 	@Keyword
-	public void searchProjectPromocode(String sheetName, int rowNum, int promoType) {
+	public void searchProjectPromocode(String sheetName, int rowNum, String promoType) {
 		
 		String projectId
 		
 		if(promoType=='hundred'){
-		projectId= data.getCellData(sheetName,"ProjectIDHundred",rowNum)
+		projectId= dataExcelTemplate.getCellData(sheetName,"ProjectIDHundred",rowNum)
 		}
 		else{
-			projectId= data.getCellData(sheetName,"ProjectIDFifty",rowNum)
+			projectId= dataExcelTemplate.getCellData(sheetName,"ProjectIDFifty",rowNum)
 		}
+		println "Hi"
+		println projectId
 		
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))
 		WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-		WebUI.setText(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'), projectId)
+		WebUI.sendKeys(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'), projectId)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))
 		WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
