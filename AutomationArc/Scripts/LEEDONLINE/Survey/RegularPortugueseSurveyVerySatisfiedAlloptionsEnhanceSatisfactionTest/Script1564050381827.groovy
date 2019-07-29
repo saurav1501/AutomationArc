@@ -14,7 +14,6 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
 try{
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.openNewTab'()
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.surveySubmitDiffLangLV3'(GlobalVariable.BDataInput,GlobalVariable.rowNumThree)
   } catch (Throwable t) {
 	  System.out.println(t.getLocalizedMessage())

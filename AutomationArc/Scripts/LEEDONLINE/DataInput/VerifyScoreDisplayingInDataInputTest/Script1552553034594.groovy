@@ -36,7 +36,8 @@ import internal.GlobalVariable as GlobalVariable
 	   
 	
 	   } catch (Throwable t) {
-		
+	    WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/meterTab'),FailureHandling.CONTINUE_ON_FAILURE)
+	    WebUI.delay(2)
 		System.out.println(t.getLocalizedMessage())
 		Error e1 = new Error(t.getMessage())
 		e1.setStackTrace(t.getStackTrace())

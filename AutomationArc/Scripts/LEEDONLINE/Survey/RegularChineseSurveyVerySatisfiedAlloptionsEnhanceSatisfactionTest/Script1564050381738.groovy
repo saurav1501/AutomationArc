@@ -15,6 +15,7 @@ import internal.GlobalVariable as GlobalVariable
 
 
 try{
+  CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.openNewTab'()
   CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.surveySubmitDiffLangLV3'(GlobalVariable.BDataInput,GlobalVariable.rowNumTwo) 
 } catch (Throwable t) {
 	System.out.println(t.getLocalizedMessage())
