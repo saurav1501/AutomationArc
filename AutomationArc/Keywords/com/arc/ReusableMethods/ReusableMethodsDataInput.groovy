@@ -5618,6 +5618,91 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	}
 
 	@Keyword
+	public void surveySubmitDiffLangLV3(String sheetName,int rowNum) throws IOException, InterruptedException, Exception{
+
+		String url = data.getCellData(sheetName,"V2Url", 2)
+		String walk1 = data.getCellData(sheetName, "Walk", 2)
+		String walk2 = data.getCellData(sheetName, "Bus", 2)
+		String walk3 = data.getCellData(sheetName, "Tram", 2)
+		String walk4 = data.getCellData(sheetName, "Heavyrail", 2)
+		String walk5 = data.getCellData(sheetName, "Motorcycle", 2)
+		String walk6 = data.getCellData(sheetName, "Carsolo", 2)
+		String walk7 = data.getCellData(sheetName, "Carpool", 2)
+		String walk8 = data.getCellData(sheetName, "Caralternative", 2)
+		String name = data.getCellData(sheetName, "Name", 2)
+
+		String surveylang = data.getCellData(sheetName,"surveylang", rowNum)
+		String surveyType = data.getCellData(sheetName,"surveyType", rowNum)
+
+		WebUI.switchToWindowIndex(1)
+		WebUI.navigateToUrl(url)
+		WebUI.delay(2)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForElementPresent(findTestObject('dataInputNewUI/Survey/AllLang'), 10)
+		WebUI.waitForElementVisible(findTestObject('dataInputNewUI/Survey/AllLang'), 10)
+		WebUI.scrollToElement(findTestObject('dataInputNewUI/Survey/AllLang'), 10)
+		WebUI.waitForElementClickable(findTestObject('dataInputNewUI/Survey/AllLang'), 10)
+		WebUI.selectOptionByLabel(findTestObject('dataInputNewUI/Survey/AllLang'),surveylang, false)
+
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'), GlobalVariable.avgAngularWait)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'), GlobalVariable.avgAngularWait)
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'))
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
+		int it=1;
+		WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk1)
+		it++
+
+		WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), '0')
+		it++
+
+		WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), '0')
+		it++
+		WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk2)
+		it++
+		WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk3)
+		it++
+		WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk4)
+		it++
+		WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk5)
+		it++
+		WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk6)
+		it++
+		WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk7)
+		it++
+		WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk8)
+		it++
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.click(findTestObject('Object Repository/DataInput/Survey/SaveButtonToRecordSurveyData'))
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'),5)
+
+		if(surveylang=='French'||surveylang=='Portuguese'||surveylang=='Chinese'){
+			WebUI.dragAndDropToObject(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'), findTestObject('dataInputNewUI/Survey/ExtremelySatisfySpanText'))
+
+		}
+		else{
+			WebUI.dragAndDropToObject(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'), findTestObject('dataInputNewUI/Survey/ExtremelyUnsatisfied'))
+
+		}
+
+		WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
+		markAllCheckbox()
+
+		WebUI.selectOptionByLabel(findTestObject('Object Repository/DataInput/Survey/OccupantTypeSurvey'), surveyType, false)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+
+		WebUI.click(findTestObject('dataInputNewUI/Survey/Submit1'))
+		WebUI.waitForElementPresent(findTestObject('dataInputNewUI/Survey/Welcome'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('dataInputNewUI/Survey/Welcome'), GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		WebUI.switchToWindowIndex(0)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+	}
+
+	
+	@Keyword
 	public void surveySubmitDiffLangV2(String sheetName,int rowNum) throws IOException, InterruptedException, Exception{
 
 
@@ -5744,6 +5829,24 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	}
 
+	@Keyword
+	public void surveyLanguageCopySurveyLinkLEED(){
+		
+		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/CopySurveyLink'),10)
+		WebUI.click(findTestObject('DataInput/Survey/CopySurveyLink'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/Survey/ClickOnSurveyDropDown'), 20)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Survey/ClickOnSurveyDropDown'), 20)
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/Survey/ClickOnSurveyDropDown'))
+		WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		verifySurveyLang()
+		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
+
+	}
 	public void verifySurveyLang(){
 
 		String english =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_English'))
@@ -5886,7 +5989,23 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
 	}
 
+	@Keyword
+	public void surveyLanguageEmailLEED(){
+		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/CopySurveyLink'),10)
+		WebUI.click(findTestObject('DataInput/Survey/CopySurveyLink'))
+		WebUI.waitForElementPresent(findTestObject('DataInput/Language/button_Email Survey'), 20)
+		WebUI.waitForElementVisible(findTestObject('DataInput/Language/button_Email Survey'), 20)
+		WebUI.mouseOver(findTestObject('DataInput/Language/button_Email Survey'))
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		everifySurveyLang()
+		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
+	}
 
+	
 	@Keyword
 	public void surveySubmitTr(String sheetName) throws IOException, InterruptedException, Exception{
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)

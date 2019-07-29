@@ -4,7 +4,17 @@
    <name>iframe_Data Input_datainput-wi</name>
    <tag></tag>
    <elementGuidId>c6de6573-77bf-4ff0-84d5-09e42e8218f4</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//iframe[@id = 'datainput-widget']</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@id='datainput-widget'] | //*[@id=&quot;arcWidget&quot;]/iframe</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
