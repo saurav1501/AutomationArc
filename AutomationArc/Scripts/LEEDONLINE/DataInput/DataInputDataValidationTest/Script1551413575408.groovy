@@ -23,7 +23,7 @@ import internal.GlobalVariable as GlobalVariable
 	   
 	   CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsLEEDOnline.verifyTheEnergyDataPopulatedViaARCInDataInputSection'(GlobalVariable.LEEDData,GlobalVariable.rowNumFour)
 	   
-	   CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsLEEDOnline.verifyTheWaterDataPopulatedViaARCInDataInputSection'(GlobalVariable.LEEDData, GlobalVariable.rowNumFive)
+	  /* CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsLEEDOnline.verifyTheWaterDataPopulatedViaARCInDataInputSection'(GlobalVariable.LEEDData, GlobalVariable.rowNumFive)
 	   
 	   CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsLEEDOnline.verifyTheWasteDataPopulatedViaARCInDataInputSection'(GlobalVariable.LEEDData, GlobalVariable.rowNumTwo)
 	   
@@ -54,7 +54,7 @@ import internal.GlobalVariable as GlobalVariable
 	   CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsLEEDOnline.verifyFormaldehydeTotalDataPopulatedViaARCInDataInputSection'(GlobalVariable.LEEDData, GlobalVariable.rowNumThree)
 	   
 	   CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsLEEDOnline.surveyResponseRatePopulatedViaARCInDataInputSection'()
-	  
+*/	
 	    } catch (Throwable t) {
 		
 		System.out.println(t.getLocalizedMessage())

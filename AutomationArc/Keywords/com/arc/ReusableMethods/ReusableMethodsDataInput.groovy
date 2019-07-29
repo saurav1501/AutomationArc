@@ -5645,9 +5645,16 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		it++
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('Object Repository/DataInput/Survey/SaveButtonToRecordSurveyData'))
+		WebUI.delay(1)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'),10)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'),10)
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'),5)
-
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'),5)
+		
+		WebUI.scrollToElement(findTestObject('dataInputNewUI/Survey/ExtremelySatisfySpanText'),5)
+		WebUI.scrollToElement(findTestObject('dataInputNewUI/Survey/ExtremelyUnsatisfied'),5)
+		
 		if(surveylang=='French'||surveylang=='Portuguese'||surveylang=='Chinese'){
 			WebUI.dragAndDropToObject(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'), findTestObject('dataInputNewUI/Survey/ExtremelySatisfySpanText'))
 
@@ -5656,10 +5663,13 @@ public class ReusableMethodsDataInput  extends BaseClass{
 			WebUI.dragAndDropToObject(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'), findTestObject('dataInputNewUI/Survey/ExtremelyUnsatisfied'))
 
 		}
-
+		WebUI.delay(1)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		
+		WebUI.scrollToElement(findTestObject('DataInput/Survey/survey_tenant_name'),5)
 		WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
 		markAllCheckbox()
-
+        
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/DataInput/Survey/OccupantTypeSurvey'), surveyType, false)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 
@@ -5803,13 +5813,15 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	public void surveyLanguageCopySurveyLinkLEED(){
 		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey1'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey1'))
-		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/CopySurveyLink'),10)
+		WebUI.delay(2)
 		WebUI.click(findTestObject('DataInput/Survey/CopySurveyLink'))
+		WebUI.delay(1)
 		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/Survey/ClickOnSurveyDropDown'), 20)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Survey/ClickOnSurveyDropDown'), 20)
 		WebUI.mouseOver(findTestObject('Object Repository/DataInput/Survey/ClickOnSurveyDropDown'))
-		WebUI.delay(2)
-		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.delay(1)
+		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/English'), GlobalVariable.minAngularWait)
 		verifySurveyLang()
 	
 
@@ -5968,7 +5980,9 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(2)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/CopySurveyLink'),10)
-		WebUI.doubleClick(findTestObject('DataInput/Survey/CopySurveyLink'))
+		WebUI.click(findTestObject('DataInput/Survey/CopySurveyLink'))
+		WebUI.delay(2)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementPresent(findTestObject('DataInput/Language/button_Email Survey'), 20)
 		WebUI.waitForElementVisible(findTestObject('DataInput/Language/button_Email Survey'), 20)
 		WebUI.mouseOver(findTestObject('DataInput/Language/button_Email Survey'))
