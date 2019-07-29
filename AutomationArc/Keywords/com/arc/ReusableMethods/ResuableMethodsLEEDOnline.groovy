@@ -11,7 +11,13 @@ import java.awt.datatransfer.Transferable
 import java.awt.event.KeyEvent
 import java.text.SimpleDateFormat
 
+import org.openqa.selenium.By
+import org.openqa.selenium.By.ById
+import org.openqa.selenium.Keys
 import org.openqa.selenium.WebDriver
+import org.openqa.selenium.WebElement
+import org.openqa.selenium.support.ui.ExpectedConditions
+import org.openqa.selenium.support.ui.WebDriverWait
 import org.testng.Assert
 
 import com.arc.BaseClass.BaseClass
@@ -66,6 +72,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.click(findTestObject('DashboardNavigationNewUI/payment/Cancel'))
 		WebUI.delay(5)
 	}
+	
 	@Keyword
 	public void communityLEEDPage() {
 		/**********Verify if project type selected is  'Building LEED', a pop up to redirect to LEED ONLINE appears. Verify if redirect button works as expected.*******************/
@@ -1055,7 +1062,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.delay(3)
 		WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/closeMeterTab'),FailureHandling.CONTINUE_ON_FAILURE)
 		//Verify the survery response rate
-		WebUI.verifyElementText(findTestObject('Object Repository/LEEDOnline/EnergyMeter/MeterName'), "Transportation Survey",FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.verifyElementText(findTestObject('Object Repository/LEEDOnline/EnergyMeter/MeterName'), "Transportation Survey",FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyEqual(WebUI.getText(findTestObject('Object Repository/LEEDOnline/ScoreDataInput/surveyResponseRate')),"44.44 %",FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/closeMeterTab'),FailureHandling.CONTINUE_ON_FAILURE)
 	}
@@ -1572,6 +1579,17 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ReadingThree'),'value'),reading1)
 	}
 
+	
+	
+	
+	
+	public static void paste(WebElement objectLocator) throws IOException{
+		
+		String selectLinkOpeninNewTab = Keys.chord(Keys.CONTROL,"v");
+		objectLocator.sendKeys(selectLinkOpeninNewTab);
+		
+		}
+	
 
 	@Keyword
 	public void surveySubmit(String sheetName) throws IOException, InterruptedException, Exception{
@@ -1581,7 +1599,8 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		//WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/energyPerformanceDataTab'),FailureHandling.CONTINUE_ON_FAILURE)
 		//WebUI.waitForElementNotVisible(findTestObject('Object Repository/LEEDOnline/Credits/widgetLoader'), 10,FailureHandling.CONTINUE_ON_FAILURE)
 
-
+		//Above section to be commented
+		
 		WebUI.waitForElementPresent(findTestObject('Object Repository/LEEDOnline/Credits/meterTab'), 30)
 		WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/meterTab'),FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.delay(2)
@@ -1603,6 +1622,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.delay(1)
 		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/English'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('DataInput/Survey/English'))
+<<<<<<< HEAD
 		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard()
 		Transferable contents = clipboard.getContents(null)
 		String url = (String) contents.getTransferData(DataFlavor.stringFlavor)
@@ -1611,6 +1631,11 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
 
+=======
+		//WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.minAngularWait)
+		//WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
+		
+>>>>>>> 7e9e8f5f4022f0c6dc31c1075a04938a5e153b29
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
 		for( int rowNum=2;rowNum<=5;rowNum++)
