@@ -647,12 +647,12 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.scrollToElement(findTestObject('Object Repository/LEEDOnline/Credits/energyPerformance'), 3)
 		WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/energyPerformance'),FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/energyPerformanceDataTab'),FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.waitForElementNotVisible(findTestObject('Object Repository/LEEDOnline/Credits/widgetLoader'), 10,FailureHandling.CONTINUE_ON_FAILURE)
+		/*WebUI.waitForElementNotVisible(findTestObject('Object Repository/LEEDOnline/Credits/widgetLoader'), 10,FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyElementText(findTestObject('Object Repository/LEEDOnline/EnergyMeter/MeterName'), "AnalyticsEnergy Meter via upload",FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyEqual(WebUI.getAttribute(findTestObject('Object Repository/LEEDOnline/EnergyMeter/StartDate1'),'value'),startDate,FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyEqual(WebUI.getAttribute(findTestObject('Object Repository/LEEDOnline/EnergyMeter/EndDate1'),'value'),endDate,FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyEqual(WebUI.getAttribute(findTestObject('Object Repository/LEEDOnline/EnergyMeter/readingOne'),'value'),reading1,FailureHandling.CONTINUE_ON_FAILURE)
-
+*/
 	}
 
 	//Water data
@@ -1622,23 +1622,17 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.delay(1)
 		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/English'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('DataInput/Survey/English'))
-<<<<<<< HEAD
+
 		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard()
 		Transferable contents = clipboard.getContents(null)
 		String url = (String) contents.getTransferData(DataFlavor.stringFlavor)
 		data.setCellData(sheetName, "V2Url", GlobalVariable.rowNumTwo,url)
 
-		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.minAngularWait)
-		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
-
-=======
-		//WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.minAngularWait)
-		//WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
-		
->>>>>>> 7e9e8f5f4022f0c6dc31c1075a04938a5e153b29
+		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey1'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey1'))
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
-		for( int rowNum=2;rowNum<=5;rowNum++)
+		for( int rowNum=2;rowNum<3;rowNum++)
 		{
 			if(rowNum==2)
 			{

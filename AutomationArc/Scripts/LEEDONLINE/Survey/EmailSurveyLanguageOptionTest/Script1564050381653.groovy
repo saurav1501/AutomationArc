@@ -26,7 +26,8 @@ try{
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.surveyLanguageEmailLEED'()
 	
 } catch (Throwable t) {
-	
+        WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey1'), GlobalVariable.minAngularWait)
+        WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey1'))
 		System.out.println(t.getLocalizedMessage())
 		Error e1 = new Error(t.getMessage())
 		e1.setStackTrace(t.getStackTrace())

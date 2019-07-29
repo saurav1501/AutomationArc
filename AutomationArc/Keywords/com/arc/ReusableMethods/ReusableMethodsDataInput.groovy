@@ -5801,24 +5801,23 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	@Keyword
 	public void surveyLanguageCopySurveyLinkLEED(){
-		
-		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey1'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey1'))
 		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/CopySurveyLink'),10)
 		WebUI.click(findTestObject('DataInput/Survey/CopySurveyLink'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/Survey/ClickOnSurveyDropDown'), 20)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Survey/ClickOnSurveyDropDown'), 20)
 		WebUI.mouseOver(findTestObject('Object Repository/DataInput/Survey/ClickOnSurveyDropDown'))
-		WebUI.delay(1)
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.delay(2)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 		verifySurveyLang()
-		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.minAngularWait)
-		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
+	
 
 	}
 	public void verifySurveyLang(){
-
+		
+		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/Language/span_English'),5)
+        WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Language/span_English'),4)
 		String english =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_English'))
 		String french =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_French'))
 		String port =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_Portuguese'))
@@ -5838,7 +5837,10 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	}
 
 	public void everifySurveyLang(){
-
+        
+		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/Language1/span_English'),5)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Language1/span_English'),4)
+			
 		String english =WebUI.getText(findTestObject('Object Repository/DataInput/Language1/span_English'))
 		String french =WebUI.getText(findTestObject('Object Repository/DataInput/Language1/span_French'))
 		String port =WebUI.getText(findTestObject('Object Repository/DataInput/Language1/span_Portuguese'))
@@ -5961,18 +5963,19 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	@Keyword
 	public void surveyLanguageEmailLEED(){
-		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey1'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey1'))
+		WebUI.delay(2)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/CopySurveyLink'),10)
-		WebUI.click(findTestObject('DataInput/Survey/CopySurveyLink'))
+		WebUI.doubleClick(findTestObject('DataInput/Survey/CopySurveyLink'))
 		WebUI.waitForElementPresent(findTestObject('DataInput/Language/button_Email Survey'), 20)
 		WebUI.waitForElementVisible(findTestObject('DataInput/Language/button_Email Survey'), 20)
 		WebUI.mouseOver(findTestObject('DataInput/Language/button_Email Survey'))
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 		everifySurveyLang()
-		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.minAngularWait)
-		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
+		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey1'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey1'))
 	}
 
 	
