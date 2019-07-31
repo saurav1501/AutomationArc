@@ -113,6 +113,12 @@
       <testCaseId>Test Cases/LEEDONLINE/DataInput/DataInputDataValidationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>579f0555-44c3-40d4-9217-9f60fef991e5</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/LEEDONLINE/DataInput/VerifyScoreDisplayingInDataInputTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>2d21244b-9d57-4900-9fad-9fc8de102f7b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -137,10 +143,52 @@
       <testCaseId>Test Cases/LEEDONLINE/SubmitSurveyLEEDOnlineTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>579f0555-44c3-40d4-9217-9f60fef991e5</guid>
+      <guid>51b402ee-1c28-4d6b-baae-000b403337b9</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/LEEDONLINE/DataInput/VerifyScoreDisplayingInDataInputTest</testCaseId>
+      <testCaseId>Test Cases/LEEDONLINE/Survey/CopySurveyLinkLanguageOptionTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>521b8de9-77f8-403f-90e3-5c1ed8577ddf</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/LEEDONLINE/Survey/EmailSurveyLanguageOptionTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>7af84125-c0a4-404d-9ef1-8f2e3ffe2e7c</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/LEEDONLINE/Survey/RegularChineseSurveyVerySatisfiedAlloptionsEnhanceSatisfactionTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>366fe6c4-f5ff-4951-a407-b3e0fe3b1b8a</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/LEEDONLINE/Survey/RegularFrenchSurveyVerySatisfiedAlloptionsEnhanceSatisfactionTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>68704a05-bdb0-4246-9f64-e4cd6837bc32</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/LEEDONLINE/Survey/RegularPortugueseSurveyVerySatisfiedAlloptionsEnhanceSatisfactionTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>66272997-eb31-4b43-8c9f-21e89143e046</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/LEEDONLINE/Survey/VisitorGermanSurveyExtremelyUnsatisfiedAlloptionsEnhanceSatisfactionTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>83ec866d-d661-4e02-8442-eda97369114b</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/LEEDONLINE/Survey/VisitorSpanishSurveyExtremelyUnsatisfiedAlloptionsEnhanceSatisfactionTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>868f2b90-c834-48bd-91e3-644597d3cec2</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/LEEDONLINE/Survey/VisitorSwedishSurveyExtremelyUnsatisfiedAlloptionsEnhanceSatisfactionTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>e1fd1403-f87c-44ca-8cad-186193d931fa</guid>

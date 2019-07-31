@@ -648,11 +648,11 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/energyPerformance'),FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/energyPerformanceDataTab'),FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.waitForElementNotVisible(findTestObject('Object Repository/LEEDOnline/Credits/widgetLoader'), 10,FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyElementText(findTestObject('Object Repository/LEEDOnline/EnergyMeter/MeterName'), "AnalyticsEnergy Meter via upload",FailureHandling.CONTINUE_ON_FAILURE)
+		/*WebUI.verifyElementText(findTestObject('Object Repository/LEEDOnline/EnergyMeter/MeterName'), "AnalyticsEnergy Meter via upload",FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyEqual(WebUI.getAttribute(findTestObject('Object Repository/LEEDOnline/EnergyMeter/StartDate1'),'value'),startDate,FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyEqual(WebUI.getAttribute(findTestObject('Object Repository/LEEDOnline/EnergyMeter/EndDate1'),'value'),endDate,FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyEqual(WebUI.getAttribute(findTestObject('Object Repository/LEEDOnline/EnergyMeter/readingOne'),'value'),reading1,FailureHandling.CONTINUE_ON_FAILURE)
-
+*/
 	}
 
 	//Water data
@@ -1095,7 +1095,8 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.verifyMatch(humanExpScore, WebUI.getText(findTestObject('Object Repository/LEEDOnline/ScoreDataInput/humanExpScore')), false,FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.scrollToElement(findTestObject('Object Repository/LEEDOnline/ScoreDataInput/totalScore'), 3)
 		WebUI.verifyMatch(totalScore, WebUI.getText(findTestObject('Object Repository/LEEDOnline/ScoreDataInput/totalScore')), false, FailureHandling.CONTINUE_ON_FAILURE)
-
+		WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/meterTab'),FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.delay(2)
 	}
 
 
@@ -1322,7 +1323,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 
 	}
 
-	
+
 	public static void setClipboardData(String string) {
 		//StringSelection is a class that can be used for copy and paste operations.
 		StringSelection stringSelection = new StringSelection(string)
@@ -1352,7 +1353,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 	}
 
 
-	
+
 	//Energy Meter file upload LEED Online
 	@Keyword
 	public void fileUploadDataInputWithDifferentLanguagesLEEDOnline(){
@@ -1436,7 +1437,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		uploadFile(UploadArcDataTempleteChineseTrade)
 		WebUI.delay(4)
 	}
-	
+
 
 	//LEED Online Create Water meter
 	@Keyword
@@ -1622,12 +1623,17 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.delay(1)
 		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/English'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('DataInput/Survey/English'))
-		//WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.minAngularWait)
-		//WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
-		
+
+		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard()
+		Transferable contents = clipboard.getContents(null)
+		String url = (String) contents.getTransferData(DataFlavor.stringFlavor)
+		data.setCellData(sheetName, "V2Url", GlobalVariable.rowNumTwo,url)
+
+		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey1'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey1'))
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
-		for( int rowNum=2;rowNum<=5;rowNum++)
+		for( int rowNum=2;rowNum<3;rowNum++)
 		{
 			if(rowNum==2)
 			{
@@ -1785,7 +1791,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 				WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
 				WebUI.delay(2)
 				WebUI.selectOptionByLabel(findTestObject('Object Repository/DataInput/Survey/OccupantTypeSurvey'), "Regular Occupant", false)
-				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)  
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 				WebUI.click(findTestObject('DataInput/Survey/Submit'))
 				WebUI.waitForElementClickable(findTestObject('DataInput/Survey/Submit'), GlobalVariable.avgAngularWait)
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
@@ -1801,7 +1807,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 	}
 
-	//Leed online survey on Arc 
+	//Leed online survey on Arc
 	@Keyword
 	public void surveySubmitArc(String sheetName) throws IOException, InterruptedException, Exception{
 
@@ -1824,7 +1830,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.click(findTestObject('DataInput/Survey/English'))
 		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
-		
+
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
@@ -1923,6 +1929,6 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 	}
 
 
-	
+
 
 }
