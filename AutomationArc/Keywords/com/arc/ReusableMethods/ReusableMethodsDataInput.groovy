@@ -4444,7 +4444,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForElementPresent(findTestObject('DataInput/CityCom/button_Next Year'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('DataInput/CityCom/button_Next Year'), GlobalVariable.minAngularWait)
-		
+
 		WebUI.scrollToElement(findTestObject('DataInput/CityCom/button_Next Year'), 2)
 		WebUI.click(findTestObject('DataInput/CityCom/button_Next Year'))
 		//WebUI.delay(2)
@@ -4591,7 +4591,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('DataInput/CityCom/span_Human Experience'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForElementPresent(findTestObject('DataInput/CityCom/EducationAddYear'), GlobalVariable.minAngularWait)
-		WebUI.waitForElementVisible(findTestObject('DataInput/CityCom/EducationAddYear'))
+		WebUI.waitForElementVisible(findTestObject('DataInput/CityCom/EducationAddYear'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/EducationAddYear'),GlobalVariable.minAngularWait )
 		WebUI.click(findTestObject('DataInput/CityCom/EducationAddYear'))
 		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/EducationAddYear'),GlobalVariable.minAngularWait )
@@ -5616,7 +5616,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		if((surveyAccept==true)){
 			WebUI.click(findTestObject('DataInput/Survey/ACCEPTANDCLOSE'))
 		}
-		
+
 		WebUI.selectOptionByLabel(findTestObject('dataInputNewUI/SurveyV2/SurveyDropdownLang'),surveylang, false)
 
 		WebUI.scrollToElement(findTestObject('DataInput/Survey/WalkR1'), 10)
@@ -5648,11 +5648,11 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Survey/ReloadSurvey'),20)
 		WebUI.click(findTestObject('Object Repository/DataInput/Survey/ReloadSurvey'))
 		WebUI.waitForPageLoad(GlobalVariable.timeOut)
-		
+
 		WebUI.waitForElementPresent(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/clickOnLogin'), 30)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/LoginArc/Page_Arc Skoru  Sustainability perf/clickOnLogin'), 10)
 		println "Survey Submited Successufully"
-        
+
 		WebUI.switchToWindowIndex(0)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 
