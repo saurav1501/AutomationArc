@@ -3079,7 +3079,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/App/ArbnWellAppVerification'), GlobalVariable.minAngularWait)
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/ArbnWellAppVerification'))
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/App/ArbnWellAppVerification')), "Arbn well", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/App/ArbnWellAppVerification')), "arbn well", false)
 
 	}
 

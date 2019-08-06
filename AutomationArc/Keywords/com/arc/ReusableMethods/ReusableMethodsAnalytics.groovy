@@ -431,7 +431,7 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 	@Keyword
 	public void surveyRepRate(){
-		
+
 		navigation.navigateIntoDataInput()
 
 		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.avgAngularWait)
@@ -469,10 +469,10 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		
-        WebUI.waitForElementPresent(findTestObject('Analytics/TotalAnalytics/TransportRep'), GlobalVariable.minAngularWait)
+
+		WebUI.waitForElementPresent(findTestObject('Analytics/TotalAnalytics/TransportRep'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Analytics/TotalAnalytics/TransportRep'), GlobalVariable.minAngularWait)
-		
+
 		String transportsurveyResponsePercentage = WebUI.getText(findTestObject('Analytics/TotalAnalytics/TransportRep'))
 		String asurveyResponsepercentage1 = transportsurveyResponsePercentage.replace("%","")
 		String asurveyResponsepercentage = asurveyResponsepercentage1.replaceAll("\\s","")
@@ -3466,12 +3466,12 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		String UIannualcarbonemissionsMTCO2eperOcc = WebUI.getText(findTestObject('Analytics/TotalCarbon/AnnualWaterConOcc'))
 		String eUIAnnualcarbonemissionsMTCO2eperOcc =  UIannualcarbonemissionsMTCO2eperOcc.replace(',', '')
 		Double eUIAnnualcarbonemissionMTCO2eperOcc =  Double.parseDouble(eUIAnnualcarbonemissionsMTCO2eperOcc)
-		
+
 		BigDecimal eUIAnnualcarbonemMTCO2eperOcc = new BigDecimal(eUIAnnualcarbonemissionMTCO2eperOcc)
 		eUIAnnualcarbonemMTCO2eperOcc = eUIAnnualcarbonemMTCO2eperOcc.setScale(2,RoundingMode.HALF_UP)
 		String eUIAnnualWaterOcc = eUIAnnualcarbonemMTCO2eperOcc.toString()
 
-		
+
 		/****************UI Verses Calculated Value water per Occupancy*****************************/
 		WebUI.verifyMatch(eUIAnnualWaterOcc, cUIWaterconsumptiongalperOccupany, false)
 	}
@@ -3552,11 +3552,11 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 		String UIavgdailywaterGenerated = WebUI.getText(findTestObject('Analytics/Cal/WDailycarbon'))
 		Double UIavgdailywaterGenerate =  Double.parseDouble(UIavgdailywaterGenerated)
-	
+
 		BigDecimal UIavgdailywaterGenerat = new BigDecimal(UIavgdailywaterGenerate)
 		UIavgdailywaterGenerat = UIavgdailywaterGenerat.setScale(2,RoundingMode.HALF_UP)
 		String UIavgdailywaterGen = UIavgdailywaterGenerat.toString()
-		
+
 
 		/****************UI Verses Calculated Value of annual water generated Per project in LBS *****************************/
 		WebUI.verifyMatch(UIavgdailywaterGen, avgdailywaterGenerated, false)
@@ -4051,10 +4051,10 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		String BOccupancy = data.getCellData(sheetName,"BOccupancy",rowNum)
 		Double dBOccupancy =  Double.parseDouble(BOccupancy)
 
-		
+
 		String grossAreasqft = data.getCellData(sheetName,"GrossAreasqft",rowNum)
 		Double occupants =  Double.parseDouble(grossAreasqft)
-		
+
 		String walk1 = data.getCellData(sheetName, "Walk", rowNum)
 		double dwalk = Double.parseDouble(walk1)
 		double cwalk = dwalk * 0.0
@@ -4120,9 +4120,9 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 		/****************UI Verses Calculated Value Annual transport per Occupancy*****************************/
 		WebUI.verifyMatch(UITrans_Occupancy, cannual_annual_carbon_emissionin_lbsOCCp, false)
-	
-		
-		}
+
+
+	}
 
 
 	@Keyword
@@ -4293,18 +4293,18 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		String cco2HumexpMean = co2HumExpMean.toString()
 
 		/****************UI Verses Calculated human exp co2 *****************************/
-		
-		String UICO2 =  WebUI.getText(findTestObject('Analytics/Nav/Co2'))	
+
+		String UICO2 =  WebUI.getText(findTestObject('Analytics/Nav/Co2'))
 		Double UICO2M= Double.parseDouble(UICO2)
-				
+
 		BigDecimal UIco2HumExpMean = new BigDecimal(UICO2M)
 		UIco2HumExpMean = UIco2HumExpMean.setScale(2, RoundingMode.HALF_UP)
 		String UIco2HumExp = UIco2HumExpMean.toString()
-		
+
 		WebUI.verifyMatch(UIco2HumExp, cco2HumexpMean, false)
-			
-		
-		
+
+
+
 	}
 	@Keyword
 	public void totalVolatileOrganicTest(String sheetName ,int rowNum) {
@@ -4323,16 +4323,65 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 		/****************UI Verses Calculated human exp TVOC *****************************/
 		String TVOC = WebUI.getText(findTestObject('Analytics/Nav/Tvoc'))
-		
-		
-		
+
+
+
 		Double UITVOC= Double.parseDouble(TVOC)
-		
+
 		BigDecimal UIUITVOCHumExpMean = new BigDecimal(UITVOC)
 		UIUITVOCHumExpMean = UIUITVOCHumExpMean.setScale(2, RoundingMode.HALF_UP)
 		String UITVOCHumExp = UIUITVOCHumExpMean.toString()
 		WebUI.verifyMatch(UITVOCHumExp, ctvocHumexpMean, false)
 
 	}
+
+
+	@Keyword
+	public void verifyOnSlidingTheSliderTheEnergyScoreChanges(){
+		/*
+		 findTestObject('Object Repository/DashboardNavigationNewUI/analyticsEnergy')
+		 findTestObject('Object Repository/Analytics/EnergySliderLocator/TotalEnergyScore')
+		 findTestObject('Object Repository/Analytics/EnergySliderLocator/CarbonIntensityCurrentScore')
+		 findTestObject('Object Repository/Analytics/EnergySliderLocator/SourceEnergyCurrentScore')
+		 findTestObject('Object Repository/Analytics/EnergySliderLocator/NewIncreasedScore')
+		 findTestObject('Object Repository/Analytics/EnergySliderLocator/CarbonIntensityStartPoint')
+		 findTestObject('Object Repository/Analytics/EnergySliderLocator/CarbonIntensityEndPoint')
+		 findTestObject('Object Repository/Analytics/EnergySliderLocator/CarbonIntensityBallonScore')
+		 findTestObject('Object Repository/Analytics/EnergySliderLocator/SourceEnergyStartPoint')
+		 findTestObject('Object Repository/Analytics/EnergySliderLocator/SourceEnergyEndPoint')
+		 findTestObject('Object Repository/Analytics/EnergySliderLocator/SourceEnergyBallonScore')
+		 findTestObject('Object Repository/Analytics/EnergySliderLocator/EnergyTotalScoreBallon')
+		 */
+
+		WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/analyticsEnergy'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		double initialScoreEnergy = Double.valueOf(WebUI.getText(findTestObject('Object Repository/Analytics/EnergySliderLocator/TotalEnergyScore')))
+		double carbonIntCurScore= Double.valueOf(WebUI.getText(findTestObject('Object Repository/Analytics/EnergySliderLocator/CarbonIntensityCurrentScore')))
+		double sourceEnergyCurScore=Double.valueOf(WebUI.getText(findTestObject('Object Repository/Analytics/EnergySliderLocator/SourceEnergyCurrentScore')))
+		WebUI.verifyMatch(String.valueOf(initialScoreEnergy), String.valueOf(carbonIntCurScore+sourceEnergyCurScore), false )
+		println carbonIntCurScore+sourceEnergyCurScore
+		WebUI.verifyMatch(String.valueOf(initialScoreEnergy), String.valueOf((carbonIntCurScore+sourceEnergyCurScore)), false)
+		WebUI.scrollToElement(findTestObject('Object Repository/Analytics/EnergySliderLocator/CarbonIntensityInitialStateSlider'), 5)
+		WebUI.delay(3)
+		WebUI.dragAndDropToObject(findTestObject('Object Repository/Analytics/EnergySliderLocator/CarbonIntensityStartPoint'),findTestObject('Object Repository/Analytics/EnergySliderLocator/CarbonIntensityEndPoint') , FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.delay(3)
+		double carbonIntBallonScore =Double.valueOf(WebUI.getText(findTestObject('Object Repository/Analytics/EnergySliderLocator/CarbonIntensityBallonScore')))
+		println carbonIntBallonScore
+		if(sourceEnergyCurScore<16.5){
+			// WebUI.mouseOver(findTestObject('Object Repository/Analytics/EnergySliderLocator/SourceEnergyInitialStateSlider'))
+			WebUI.dragAndDropToObject(findTestObject('Object Repository/Analytics/EnergySliderLocator/CarbonIntensityStartPoint'),findTestObject('Object Repository/Analytics/EnergySliderLocator/SourceEnergyEndPoint') , FailureHandling.CONTINUE_ON_FAILURE)
+		}
+		double sourceEnergyBallonScore= Double.valueOf(WebUI.getText(findTestObject('Object Repository/Analytics/EnergySliderLocator/SourceEnergyBallonScore')))
+		double energyTotalBallonScore= Double.valueOf(WebUI.getText(findTestObject('Object Repository/Analytics/EnergySliderLocator/EnergyTotalScoreBallon')))
+		//double FinalScoreEnergy= Double.valueOf(WebUI.getText(findTestObject('Object Repository/Analytics/EnergySliderLocator/NewIncreasedScore')))
+		double newTotalScore= (carbonIntCurScore+carbonIntBallonScore) + (sourceEnergyCurScore+sourceEnergyBallonScore)
+		initialScoreEnergy+=energyTotalBallonScore
+		println "Final Increaed Score "+initialScoreEnergy
+		println "New total Score "+newTotalScore
+		WebUI.verifyMatch(String.valueOf(newTotalScore), String.valueOf(initialScoreEnergy), false )
+
+
+	}
+
 }
 

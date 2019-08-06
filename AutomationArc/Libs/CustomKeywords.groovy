@@ -2074,6 +2074,10 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.uploadArcDataTempla
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).uploadArcDataTemplate()
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.uploadArcDataTemplateUSTons"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).uploadArcDataTemplateUSTons()
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.uploadArcDataTemplatetrial"() {
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).uploadArcDataTemplatetrial()
 }
@@ -2592,6 +2596,14 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.surveySubmitDiffLan
          , 	rowNum)
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.surveySubmitDiffLangLV3"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).surveySubmitDiffLangLV3(
+        	sheetName
+         , 	rowNum)
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.surveySubmitDiffLangV2"(
     	String sheetName	
      , 	int rowNum	) {
@@ -2608,6 +2620,10 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.surveyLanguageCopyS
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).surveyLanguageCopySurveyLink()
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.surveyLanguageCopySurveyLinkLEED"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).surveyLanguageCopySurveyLinkLEED()
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.surveySubmitDifferentLang"(
     	String sheetName	
      , 	int rowNum1	) {
@@ -2618,6 +2634,10 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.surveySubmitDiffere
 
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.surveyLanguageEmail"() {
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).surveyLanguageEmail()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.surveyLanguageEmailLEED"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).surveyLanguageEmailLEED()
 }
 
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.surveySubmitTr"(
@@ -2920,6 +2940,18 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.scoreShouldNotChang
 
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyTheCommentCityCommunityDoesnotIncludeMeterName"() {
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyTheCommentCityCommunityDoesnotIncludeMeterName()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyErrorMessageForIncompleteSurvey"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyErrorMessageForIncompleteSurvey()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyErrorMessageDisappearAfterDetails"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyErrorMessageDisappearAfterDetails(
+        	sheetName
+         , 	rowNum)
 }
 
 def static "com.arc.ReusableMethods.ReusableMethodsAnalytics.downloadAndVerifySurveyExportedData"() {
@@ -3352,6 +3384,10 @@ def static "com.arc.ReusableMethods.ReusableMethodsAnalytics.totalVolatileOrgani
          , 	rowNum)
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsAnalytics.verifyOnSlidingTheSliderTheEnergyScoreChanges"() {
+    (new com.arc.ReusableMethods.ReusableMethodsAnalytics()).verifyOnSlidingTheSliderTheEnergyScoreChanges()
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsAddNewProject.buildingAddNewProject"(
     	String sheetName	
      , 	int rowNum	) {
@@ -3422,6 +3458,46 @@ def static "com.arc.ReusableMethods.ReusableMethodsAddNewProject.pricingProjectR
     (new com.arc.ReusableMethods.ReusableMethodsAddNewProject()).pricingProjectRegistrationBuildingTransit(
         	buildingSheet
          , 	pricingSheet)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsAddNewProject.buildingAddNewProjectErrorValidation"() {
+    (new com.arc.ReusableMethods.ReusableMethodsAddNewProject()).buildingAddNewProjectErrorValidation()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsAddNewProject.VerifyErrorMessageDisappearOnFormCompletion"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsAddNewProject()).VerifyErrorMessageDisappearOnFormCompletion(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsAddNewProject.projectDetailPageErrorValidation"() {
+    (new com.arc.ReusableMethods.ReusableMethodsAddNewProject()).projectDetailPageErrorValidation()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsAddNewProject.verifyErrorMessageDisappearAfterFillingProjectDetails"(
+    	String sheetName	
+     , 	int rowNum	
+     , 	int yearOfSubscription	) {
+    (new com.arc.ReusableMethods.ReusableMethodsAddNewProject()).verifyErrorMessageDisappearAfterFillingProjectDetails(
+        	sheetName
+         , 	rowNum
+         , 	yearOfSubscription)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsAddNewProject.payementPagePayemntDetailsErrorMessagevalidation"() {
+    (new com.arc.ReusableMethods.ReusableMethodsAddNewProject()).payementPagePayemntDetailsErrorMessagevalidation()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsAddNewProject.verifyErrorMessageDisappersAfterCompletingPaymentDetails"(
+    	String sheetName	
+     , 	int rowNum	
+     , 	String paymentMode	) {
+    (new com.arc.ReusableMethods.ReusableMethodsAddNewProject()).verifyErrorMessageDisappersAfterCompletingPaymentDetails(
+        	sheetName
+         , 	rowNum
+         , 	paymentMode)
 }
 
 def static "com.helper.mysql.ConnectMySqlRemoteDB.connectDB"() {

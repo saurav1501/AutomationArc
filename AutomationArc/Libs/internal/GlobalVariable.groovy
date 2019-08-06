@@ -522,6 +522,11 @@ Profile STG-US-P2 : payment via credit card</p>
     /**
      * <p></p>
      */
+    public static Object surveyLinkDashboard
+     
+    /**
+     * <p></p>
+     */
     public static Object TestCount
      
 
@@ -612,6 +617,7 @@ Profile STG-US-P2 : payment via credit card</p>
             rowNumThirteen = selectedVariables['rowNumThirteen']
             rowNumFourteen = selectedVariables['rowNumFourteen']
             rowNumFifteen = selectedVariables['rowNumFifteen']
+            surveyLinkDashboard = selectedVariables['surveyLinkDashboard']
             TestCount = selectedVariables['TestCount']
             
         } catch (Exception e) {

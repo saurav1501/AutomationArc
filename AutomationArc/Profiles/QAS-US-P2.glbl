@@ -299,4 +299,9 @@
       <initValue>'QASPromocodesFiftyReview'</initValue>
       <name>promocodeReviewFifty</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://qas.app.arconline.io/app/project/1000090802/survey/v2/?key=Y7KNAArJDEl2e7WsdTm2fR87&amp;language=en'</initValue>
+      <name>surveyLinkDashboard</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

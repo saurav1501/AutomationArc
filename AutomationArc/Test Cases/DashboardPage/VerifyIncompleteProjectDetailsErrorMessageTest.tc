@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify if on submitting the incomplete project error message displayed below submit button.</description>
+   <name>VerifyIncompleteProjectDetailsErrorMessageTest</name>
+   <tag>Verify Error Message for Incomplete Test</tag>
+   <comment></comment>
+   <testCaseGuid>b4748b6d-ff10-4e8f-a9d6-6d3b5ae7d28c</testCaseGuid>
+</TestCaseEntity>

@@ -26,7 +26,7 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 	public void buildingAddNewProject(String sheetName , int rowNum) {
 
 		/**************Reading data form excel sheet*************************/
-        int counter=0
+		int counter=0
 		project:
 		String prjName      = data.getCellData(sheetName,"ProjectName", rowNum)
 		String prjType 		= data.getCellData(sheetName, "ProjectType", rowNum)
@@ -91,14 +91,14 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		else{
 			counter++
 			if(counter==3){
-			KeywordUtil.markFailed("Project not created")
-			return
+				KeywordUtil.markFailed("Project not created")
+				return
 			}
 			WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
 			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			continue project
 		}
-		
+
 	}
 
 	@Keyword
@@ -164,28 +164,28 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 
 		if(WebUI.waitForElementPresent(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'),GlobalVariable.avgAngularWait, FailureHandling.OPTIONAL) && WebUI.waitForElementVisible(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'),GlobalVariable.avgAngularWait, FailureHandling.OPTIONAL))
 		{
-		String PaymentPageText = WebUI.getText(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'))
-		WebUI.verifyMatch(PaymentPageText,'Project Setup',true)
-		String title= DriverFactory.getWebDriver().getCurrentUrl()
-		println title
-		String Project_ID= title.substring(title.indexOf('9'),title.indexOf('9')+10 )
-		println Project_ID
-		data.setCellData(sheetName,"ProjectID", rowNum, Project_ID)
-		data.setCellData(sheetName,"RegDate", rowNum, ReusableMethodsManage.verifyBillingDate())
-		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+			String PaymentPageText = WebUI.getText(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'))
+			WebUI.verifyMatch(PaymentPageText,'Project Setup',true)
+			String title= DriverFactory.getWebDriver().getCurrentUrl()
+			println title
+			String Project_ID= title.substring(title.indexOf('9'),title.indexOf('9')+10 )
+			println Project_ID
+			data.setCellData(sheetName,"ProjectID", rowNum, Project_ID)
+			data.setCellData(sheetName,"RegDate", rowNum, ReusableMethodsManage.verifyBillingDate())
+			WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		}
 		else{
 			counter++
 			if(counter==3){
-			KeywordUtil.markFailed("Project not created")
-			return
+				KeywordUtil.markFailed("Project not created")
+				return
 			}
 			WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
 			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			continue project
 		}
-		
-		
+
+
 	}
 
 
@@ -194,7 +194,7 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		/**************Reading data form excel sheet*************************/
 		int counter=0
 		project:
-		
+
 		String prjName      = data.getCellData(sheetName,"ProjectName", rowNum)
 		String prjType 		= data.getCellData(sheetName, "ProjectType", rowNum)
 		String prjRating 	= data.getCellData(sheetName, "RatingSystem", rowNum)
@@ -263,37 +263,37 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/addProjectNextButton'))
 		//WebUI.delay(5)
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-		
+
 		if(WebUI.waitForElementPresent(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'),GlobalVariable.avgAngularWait, FailureHandling.OPTIONAL) && WebUI.waitForElementVisible(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'),GlobalVariable.avgAngularWait, FailureHandling.OPTIONAL))
 		{
-		String PaymentPageText = WebUI.getText(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'))
-		WebUI.verifyMatch(PaymentPageText,'Project Setup',true)
-		String title= DriverFactory.getWebDriver().getCurrentUrl()
-		println title
-		String Project_ID= title.substring(title.indexOf('9'),title.indexOf('9')+10 )
-		println Project_ID
-		data.setCellData(sheetName,"ProjectID", rowNum, Project_ID)
-		data.setCellData(sheetName,"RegDate", rowNum, ReusableMethodsManage.verifyBillingDate())
-		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-	    }
-	    else{
-		counter++
-		if(counter==3){
-		KeywordUtil.markFailed("Project not created")
-		return
+			String PaymentPageText = WebUI.getText(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'))
+			WebUI.verifyMatch(PaymentPageText,'Project Setup',true)
+			String title= DriverFactory.getWebDriver().getCurrentUrl()
+			println title
+			String Project_ID= title.substring(title.indexOf('9'),title.indexOf('9')+10 )
+			println Project_ID
+			data.setCellData(sheetName,"ProjectID", rowNum, Project_ID)
+			data.setCellData(sheetName,"RegDate", rowNum, ReusableMethodsManage.verifyBillingDate())
+			WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		}
-		WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		continue project
-	  }
-		
+		else{
+			counter++
+			if(counter==3){
+				KeywordUtil.markFailed("Project not created")
+				return
+			}
+			WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+			continue project
+		}
+
 	}
 
 	@Keyword
 	public void addNewProjectCityScore(String sheetName , int rowNum) {
 		/**************Reading data form excel sheet*************************/
 
-		
+
 		String srowNum = rowNum.toString()
 		data.setCellData(sheetName,"rowNum", 2, srowNum)
 		//data.setCellIntData(sheetName,"rowNum" , 2, rowNum)
@@ -501,22 +501,22 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/addProjectNextButton'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		if(WebUI.waitForElementPresent(findTestObject('Object Repository/paymentPageNewUI/paymentPageTextPurchase'), 30, FailureHandling.OPTIONAL) && WebUI.waitForElementVisible(findTestObject('Object Repository/paymentPageNewUI/paymentPageTextPurchase'), 30, FailureHandling.OPTIONAL) ){
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/paymentPageNewUI/paymentPageTextPurchase')),"Purchase", false)
-		String title= DriverFactory.getWebDriver().getCurrentUrl()
-		println title
-		String Project_ID= title.substring(title.indexOf('1'),title.indexOf('1')+10 )
-		println Project_ID
-		data.setCellData(sheetName,"ProjectID", rowNum, Project_ID)
-		data.setCellData(sheetName,"RegDate", rowNum, ReusableMethodsManage.verifyBillingDate())
-		//WebUI.delay(5)
-		SAPSyncFlag=true
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/paymentPageNewUI/paymentPageTextPurchase')),"Purchase", false)
+			String title= DriverFactory.getWebDriver().getCurrentUrl()
+			println title
+			String Project_ID= title.substring(title.indexOf('1'),title.indexOf('1')+10 )
+			println Project_ID
+			data.setCellData(sheetName,"ProjectID", rowNum, Project_ID)
+			data.setCellData(sheetName,"RegDate", rowNum, ReusableMethodsManage.verifyBillingDate())
+			//WebUI.delay(5)
+			SAPSyncFlag=true
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		}
 		else{
 			counter++
 			if(counter==3){
-			KeywordUtil.markFailed("Project not created")
-			return
+				KeywordUtil.markFailed("Project not created")
+				return
 			}
 			WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
 			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
@@ -773,4 +773,242 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 
 	}
 
+
+
+	//Add new project page error messge on submit
+	@Keyword
+	public void buildingAddNewProjectErrorValidation() {
+
+		//Navigate to All project page
+		WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
+		navigation.clickAddProject()
+
+		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/clickOnSignAgreement'))
+		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/addProjectNextButton'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/ErrorLocators/AddProject/SubmitButtonErrorMessage'), GlobalVariable.minAngularWait)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/ErrorLocators/AddProject/SubmitButtonErrorMessage')), "Please provide valid data", false)
+
+	}
+
+	@Keyword
+	public void VerifyErrorMessageDisappearOnFormCompletion(String sheetName, int rowNum){
+
+		String prjName      = data.getCellData(sheetName,"ProjectName", rowNum)
+		String prjType 		= data.getCellData(sheetName, "ProjectType", rowNum)
+		String prjRating 	= data.getCellData(sheetName, "RatingSystem", rowNum)
+		String spaceType    = data.getCellData(sheetName, "SpaceType", rowNum)
+		String ownerOrg 	= data.getCellData(sheetName, "OwnerOrganization", rowNum)
+		String ownerType 	= data.getCellData(sheetName, "OwnerType", rowNum)
+		String ownerCountry = data.getCellData(sheetName, "OwnerCountry", rowNum)
+		String ownerMail 	= data.getCellData(sheetName, "OwnerEmail", rowNum)
+		String prjArea 		= data.getCellData(sheetName, "Area", rowNum)
+		String prjAddress 	= data.getCellData(sheetName, "Address", rowNum)
+		String prjCity 		= data.getCellData(sheetName, "City", rowNum)
+		String prjCountry 	= data.getCellData(sheetName, "Country", rowNum)
+		String prjState 	= data.getCellData(sheetName, "State", rowNum)
+		String prjZip 		= data.getCellData(sheetName, "Zip", rowNum)
+		Date date = new Date(System.currentTimeMillis())
+		String proName
+		if(sheetName.equalsIgnoreCase("USBuildingProject")){
+			proName="USBuilding"
+		}
+		else if(sheetName.equalsIgnoreCase("ChinaBuildingProject")){
+			proName="CHBuilding"
+		}
+		else if(sheetName.equalsIgnoreCase("BuildingIndiaProject")){
+			proName="INDBuilding"
+		}
+		else{
+			proName="CNBuilding"
+		}
+		//String proName= prjName.substring(0, 9)
+		String ProjectName = proName +prjRating +formatarDate.format(date)
+		data.setCellData(sheetName,"ProjectName", rowNum, ProjectName)
+
+		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/projectName'), ProjectName)
+		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/selectProjectType'), prjType, true)
+		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/grossArea'),prjArea )
+		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/streetName'), prjAddress)
+		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/cityName'), prjCity)
+		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/countryName'), prjCountry, false)
+		WebUI.delay(2)
+		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/stateName'),prjState, false)
+		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/zipCode'), prjZip)
+		WebUI.verifyElementNotPresent(findTestObject('Object Repository/ErrorLocators/AddProject/SubmitButtonErrorMessage'),10 , FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/addProjectNextButton'))
+
+		//WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+
+		//String PaymentPageText = WebUI.getText(findTestObject('Add_Project_Details/VerifyPaymentPage_ text'))
+		if(WebUI.waitForElementPresent(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'),GlobalVariable.minAngularWait,FailureHandling.OPTIONAL) && WebUI.waitForElementVisible(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'),GlobalVariable.minAngularWait,FailureHandling.OPTIONAL) ){
+			WebUI.verifyMatch(WebUI.getText(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup')),'Project Setup',true)
+			String title= DriverFactory.getWebDriver().getCurrentUrl()
+			println title
+			String Project_ID= title.substring(title.indexOf('9'),title.indexOf('9')+10 )
+			println Project_ID
+			//WebUI.getText(findTestObject('Object Repository/Add_Project_Details/td_BuildingID'))
+			//System.out.println()
+			data.setCellData(sheetName,"ProjectID", rowNum, Project_ID)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		}
+
+	}
+
+	@Keyword
+	public void projectDetailPageErrorValidation(){
+
+		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/saveButtonProjectDetails'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/ErrorLocators/AddProject/SubmitButtonErrorMessage'), GlobalVariable.minAngularWait)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/ErrorLocators/AddProject/SubmitButtonErrorMessage')), "Please provide valid data", false)
+
+	}
+
+    //Payment page project details
+	@Keyword
+	public void verifyErrorMessageDisappearAfterFillingProjectDetails(String sheetName, int rowNum, int yearOfSubscription){
+		String prjRating 	= data.getCellData(sheetName, "RatingSystem", rowNum)
+		String ownerOrg 	= data.getCellData(sheetName, "OwnerOrganization", rowNum)
+		String ownerCountry = data.getCellData(sheetName, "OwnerCountry", rowNum)
+		String ownerMail 	= data.getCellData(sheetName, "OwnerEmail", rowNum)
+		String prjArea 		= data.getCellData(sheetName, "Area", rowNum)
+		String prjAddress 	= data.getCellData(sheetName, "Address", rowNum)
+		String prjCity 		= data.getCellData(sheetName, "City", rowNum)
+		String prjCountry 	= data.getCellData(sheetName, "Country", rowNum)
+		String prjState 	= data.getCellData(sheetName, "State", rowNum)
+		String prjZip 		= data.getCellData(sheetName, "Zip", rowNum)
+
+		WebUI.waitForElementVisible(findTestObject('Object Repository/paymentPageNewUI/paymentPageTextPurchase'),20)
+		String purchase= WebUI.getText(findTestObject('Object Repository/paymentPageNewUI/paymentPageTextPurchase'))
+		WebUI.verifyMatch("Purchase", purchase, false)
+		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/spaceType'))
+		List<WebElement> list= driver.findElements(By.xpath("//*[@ng-repeat='type in spaceType']"))
+		int size = list.size()
+		int randonNumber = ThreadLocalRandom.current().nextInt(0, size)
+		println list.get(randonNumber).getText()
+		data.setCellData(sheetName, "SpaceType", rowNum ,list.get(randonNumber).getText())
+		WebUI.delay(3)
+		list.get(randonNumber).click()
+		if((list.get(randonNumber).getText()=="Industrial Manufacturing") || (list.get(randonNumber).getText()=="Laboratory") || (list.get(randonNumber).getText()=="Data Center") ||
+		(list.get(randonNumber).getText()=="Warehouse: Nonrefrigerated Distribution/Shipping") || (list.get(randonNumber).getText()=="Warehouse: Refrigerated")|| (list.get(randonNumber).getText()=="Warehouse: Self Storage Units") ||
+		(list.get(randonNumber).getText()=="Warehouse: General")){
+			uniqueSpaceTypesFlag=true
+		}
+		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/ownerType'))
+		List<WebElement> list1= driver.findElements(By.xpath("//*[@ng-repeat='type in ownerType']"))
+		int size1 = list1.size()
+		int randonNumber1 = ThreadLocalRandom.current().nextInt(0, size1)
+		println list1.get(randonNumber1).getText()
+		list1.get(randonNumber1).click()
+		data.setCellData(sheetName, "OwnerType", rowNum,list1.get(randonNumber1).getText())
+		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/organization'),ownerOrg)
+		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/organization'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Add_Project_Details/span_Habitat for Humanity'))
+		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/ownerEmail'), ownerMail)
+		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/ownerCountry'), ownerCountry, false)
+		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/ratingSystem'), prjRating , false)
+		WebUI.verifyElementNotPresent(findTestObject('Object Repository/ErrorLocators/AddProject/SubmitButtonErrorMessage'),10 , FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/saveButtonProjectDetails'))
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait, FailureHandling.OPTIONAL)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/AddProjectNewUI/saveButtonProjectDetails'), GlobalVariable.maxAngularWait, FailureHandling.OPTIONAL)
+
+		String title= DriverFactory.getWebDriver().getCurrentUrl()
+		println title
+		String[] arc=title.split("/");
+		Project_ID_Promocode= arc[4]
+		println Project_ID_Promocode
+		if(WebUI.waitForElementPresent(findTestObject('Object Repository/paymentPageNewUI/oneYearSubscription'),10, FailureHandling.OPTIONAL) && WebUI.waitForElementVisible(findTestObject('Object Repository/paymentPageNewUI/oneYearSubscription'), 10, FailureHandling.OPTIONAL) ){
+			Project_ID_Created=arc[4]
+			//************* Select the yearly subscription *****************//
+			if(yearOfSubscription==1)
+				WebUI.click(findTestObject('Object Repository/paymentPageNewUI/oneYearSubscription'))
+			else if(yearOfSubscription==2)
+				WebUI.click(findTestObject('Object Repository/paymentPageNewUI/twoYearSubscription'))
+			else if(yearOfSubscription==3)
+				WebUI.click(findTestObject('Object Repository/paymentPageNewUI/threeYearSubscription'))
+			else if(yearOfSubscription==4)
+				WebUI.click(findTestObject('Object Repository/paymentPageNewUI/fourYearSubscription'))
+			else if(yearOfSubscription==5)
+				WebUI.click(findTestObject('Object Repository/paymentPageNewUI/fiveYearSubscription'))
+			WebUI.delay(10)
+			data.setCellData(sheetName,"ProjectID", rowNum, Project_ID_Promocode)
+		}
+	}
+	
+	@Keyword
+	public void payementPagePayemntDetailsErrorMessagevalidation(){
+		
+		WebUI.click(findTestObject('Object Repository/paymentPageNewUI/submitPayment'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/ErrorLocators/PaymentPage/PaymentErrorMessage'), GlobalVariable.minAngularWait)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/ErrorLocators/PaymentPage/PaymentErrorMessage')), "Please provide valid data", false)
+		
+	}
+	
+	
+	@Keyword
+	public void verifyErrorMessageDisappersAfterCompletingPaymentDetails(String sheetName, int rowNum, String paymentMode){
+		
+		String cardName   = data.getCellData(sheetName, "CardName", rowNum)
+		String cardNum    = data.getCellData(sheetName, "CardNumber", rowNum)
+		String cardDate   = data.getCellData(sheetName, "Date ", rowNum)
+		String cardCvv    = data.getCellData(sheetName, "CVV", rowNum)
+		String partyName  = data.getCellData(sheetName, "PartyName", rowNum)
+		String partyEmail = data.getCellData(sheetName, "PartyEmail", rowNum)
+		String address    = data.getCellData(sheetName, "Address", rowNum)
+		String city       = data.getCellData(sheetName, "City", rowNum)
+		String country    = data.getCellData(sheetName, "Country", rowNum)
+		String state      = data.getCellData(sheetName, "State", rowNum)
+		String zip        = data.getCellData(sheetName, "Zip", rowNum)
+		String phone      = data.getCellData(sheetName, "Mobile", rowNum)
+
+		WebUI.clearText(findTestObject('Object Repository/paymentPageNewUI/billingName'))
+		WebUI.setText(findTestObject('Object Repository/paymentPageNewUI/billingName'),partyName)
+		WebUI.clearText(findTestObject('Object Repository/paymentPageNewUI/billingEmail'))
+		WebUI.setText(findTestObject('Object Repository/paymentPageNewUI/billingEmail'), partyEmail)
+		WebUI.clearText(findTestObject('Object Repository/paymentPageNewUI/billingAddress'))
+		WebUI.setText(findTestObject('Object Repository/paymentPageNewUI/billingAddress'), address)
+		WebUI.clearText(findTestObject('Object Repository/paymentPageNewUI/billingCity'))
+		WebUI.setText(findTestObject('Object Repository/paymentPageNewUI/billingCity'), city)
+		WebUI.selectOptionByLabel(findTestObject('Object Repository/paymentPageNewUI/billingCountry'), country, false)
+		WebUI.selectOptionByLabel(findTestObject('Object Repository/paymentPageNewUI/billingState'), state , false)
+		WebUI.clearText(findTestObject('Object Repository/paymentPageNewUI/billingZip'))
+		WebUI.setText(findTestObject('Object Repository/paymentPageNewUI/billingZip'),zip )
+		//*********************** Select the payment mode *******************//
+		if((paymentMode.equalsIgnoreCase("creditCard"))){
+
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
+			WebUI.click(findTestObject('Object Repository/paymentPageNewUI/paymentPagePayNowOption'))
+
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
+			WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/CardNumber'),cardNum)
+			WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/ccExpiary'),cardDate)
+			WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/cvvCreditCard'),cardCvv)
+			//promocode field in case if used
+			//WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/promoCode'),promocode)
+			//WebUI.delay(3)
+			WebUI.verifyElementNotPresent(findTestObject('Object Repository/ErrorLocators/PaymentPage/PaymentErrorMessage'),10 , FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.click(findTestObject('Object Repository/paymentPageNewUI/submitPayment'))
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		}
+		else{
+			WebUI.click(findTestObject('Object Repository/paymentPageNewUI/paymentPagePayByCheckOption'))
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+			WebUI.verifyElementNotPresent(findTestObject('Object Repository/ErrorLocators/PaymentPage/PaymentErrorMessage'),10 , FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.click(findTestObject('Object Repository/paymentPageNewUI/submitPayment'))
+			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		}
+		
+	}
+	
+	
 }

@@ -344,4 +344,9 @@
       <initValue>'STGPromocodesFiftyReview'</initValue>
       <name>promocodeReviewFifty</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://stg.app.arconline.io/app/project/1000168973/survey/v2/?key=3d7IAcPLYxKghqFyb40sLaDh&amp;language=en'</initValue>
+      <name>surveyLinkDashboard</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

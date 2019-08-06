@@ -64,6 +64,31 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.refresh()
 		WebUI.delay(7)
 	}
+	
+	@Keyword
+	public void uploadArcDataTemplateUSTons(){
+
+		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		navigation.navigateIntoDataInput()
+		WebUI.delay(5)
+		WebUI.doubleClick(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'))
+		WebUI.delay(2)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/span_Upload.XLS'), 20)
+		WebUI.doubleClick(findTestObject('Object Repository/DataInput/span_Upload.XLS'))
+		WebUI.delay(3)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/ClickOnUploadToSelectFile'),3)
+		WebUI.sendKeys(findTestObject('Object Repository/DataInput/UploadArcDataTemplete'),BaseClass.UploadArcDataTempleteUSTons )
+		WebUI.delay(4)
+		WebUI.click(findTestObject('DataInput/ClickToUploadFileButton'))
+		WebUI.delay(5)
+		String successmessage= WebUI.getText(findTestObject('Object Repository/DataInput/ExcelUploadSuccessMessage'))
+		WebUI.delay(5)
+		WebUI.verifyMatch(successmessage,'Excel submitted successfully. We will send you an email when your data is processed.' , true)
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/DataInput/button_CLOSE'))
+		WebUI.refresh()
+		WebUI.delay(7)
+	}
 
 	@Keyword
 	public void uploadArcDataTemplatetrial(){
@@ -377,13 +402,26 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), 4)
 		WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), "Waste Data", FailureHandling.STOP_ON_FAILURE)
 		WebUI.delay(6)
+		String date1
+		String date2 
+		String reading1
+		String reading2
 		int j=2
 		(1..11).each{
-			String date1 = dataExcelTemplate.getCellData(sheetName, "Start", j)
-			String date2 = dataExcelTemplate.getCellData(sheetName, "End", j)
-			String reading1 = dataExcelTemplate.getCellData(sheetName, "Reading1", j)
-			String reading2 = dataExcelTemplate.getCellData(sheetName, "Reading2", j)
-
+			if((rowNum==5)){
+				date1 = dataExcelTemplate.getCellData(sheetName, "Start", j)
+				date2 = dataExcelTemplate.getCellData(sheetName, "End", j)
+				reading1 = dataExcelTemplate.getCellData(sheetName, "Reading3", j)
+				reading2 = dataExcelTemplate.getCellData(sheetName, "Reading4", j)
+			}
+			else{
+				date1 = dataExcelTemplate.getCellData(sheetName, "Start", j)
+				date2 = dataExcelTemplate.getCellData(sheetName, "End", j)
+				reading1 = dataExcelTemplate.getCellData(sheetName, "Reading1", j)
+				reading2 = dataExcelTemplate.getCellData(sheetName, "Reading2", j)
+	
+			}
+			
 
 			Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/DataInput/DataInputExcelUploadDataVerification/StartDateOne',[index: it]),'value'), date1)
 			Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/DataInput/DataInputExcelUploadDataVerification/EndDateOne',[index: it]),'value'),date2)
@@ -7805,8 +7843,98 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		else{
 			KeywordUtil.markFailed("Meter name is included in the acivity comment ")
 		}
-
-
 	}
+	
+	
+	@Keyword
+	public void verifyErrorMessageForIncompleteSurvey(){
+		Robot r = new Robot();
+		r.keyPress(KeyEvent.VK_CONTROL);
+		r.keyPress(KeyEvent.VK_T);
+		r.keyRelease(KeyEvent.VK_CONTROL)
+		r.keyRelease(KeyEvent.VK_T)
+		WebUI.delay(5)
+		WebUI.switchToWindowIndex(1)
+		WebUI.navigateToUrl(GlobalVariable.surveyLinkDashboard)
+		WebUI.delay(2)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForElementPresent(findTestObject('dataInputNewUI/Survey/AllLang'), 10)
+		WebUI.waitForElementVisible(findTestObject('dataInputNewUI/Survey/AllLang'), 10)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('dataInputNewUI/Survey/Submit1'))
+		//findTestObject('Object Repository/ErrorLocators/Survey/SubmitSurveyErrorMessage')
+		WebUI.waitForElementPresent(findTestObject('Object Repository/ErrorLocators/Survey/SubmitSurveyErrorMessage'), GlobalVariable.minAngularWait)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/ErrorLocators/Survey/SubmitSurveyErrorMessage')), "Please answer all the questions", false)
+	}
+	
+	@Keyword
+	public void verifyErrorMessageDisappearAfterDetails(String sheetName, int rowNum){
+		
+		String url = data.getCellData(sheetName,"V2Url", 2)
+		String walk1 = data.getCellData(sheetName, "Walk", 2)
+		String walk2 = data.getCellData(sheetName, "Bus", 2)
+		String walk3 = data.getCellData(sheetName, "Tram", 2)
+		String walk4 = data.getCellData(sheetName, "Heavyrail", 2)
+		String walk5 = data.getCellData(sheetName, "Motorcycle", 2)
+		String walk6 = data.getCellData(sheetName, "Carsolo", 2)
+		String walk7 = data.getCellData(sheetName, "Carpool", 2)
+		String walk8 = data.getCellData(sheetName, "Caralternative", 2)
+		String name = data.getCellData(sheetName, "Name", 2)
+
+		String surveylang = data.getCellData(sheetName,"surveylang", rowNum)
+		String surveyType = data.getCellData(sheetName,"surveyType", rowNum)
+
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'), GlobalVariable.avgAngularWait)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'), GlobalVariable.avgAngularWait)
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/DataInput/Survey/ClickOnSelectTravelMethod'))
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
+		int it=1;
+		WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk1)
+		it++
+
+		WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), '0')
+		it++
+
+		WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), '0')
+		it++
+		WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk2)
+		it++
+		WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk3)
+		it++
+		WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk4)
+		it++
+		WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk5)
+		it++
+		WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk6)
+		it++
+		WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk7)
+		it++
+		WebUI.setText(findTestObject('Object Repository/DataInput/Survey/InputMileage',[index: it]), walk8)
+		it++
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.click(findTestObject('Object Repository/DataInput/Survey/SaveButtonToRecordSurveyData'))
+		WebUI.delay(1)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'),10)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'),10)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'),5)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'),5)
+		WebUI.dragAndDropToObject(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'), findTestObject('dataInputNewUI/Survey/ExtremelySatisfySpanText'))
+		WebUI.delay(1)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		WebUI.scrollToElement(findTestObject('DataInput/Survey/survey_tenant_name'),5)
+		WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
+		markAllCheckbox()
+		WebUI.selectOptionByLabel(findTestObject('Object Repository/DataInput/Survey/OccupantTypeSurvey'), "Visitor", false)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementNotPresent(findTestObject('Object Repository/ErrorLocators/Survey/SubmitSurveyErrorMessage'),5,FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.click(findTestObject('dataInputNewUI/Survey/Submit1'))
+		WebUI.waitForElementPresent(findTestObject('dataInputNewUI/Survey/Welcome'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('dataInputNewUI/Survey/Welcome'), GlobalVariable.minAngularWait)
+		WebUI.switchToWindowIndex(0)
+	}
+	
 }
 

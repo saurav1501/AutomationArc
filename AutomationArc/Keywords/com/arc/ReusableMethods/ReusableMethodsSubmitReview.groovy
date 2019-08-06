@@ -1390,13 +1390,13 @@ public class ReusableMethodsSubmitReview extends BaseClass{
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	}
 
-	
+
 	//Apply promocode
 	@Keyword
 	public void applyPromocodeReview(String sheetName, int rowNum, String reviewPromoType){
-		
+
 		String promoCode = dataExcelTemplate.getCellData(sheetName, reviewPromoType, rowNum)
-	    WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Promocode/ReviewPagePromocodeBox'), GlobalVariable.minAngularWait)
 		WebUI.sendKeys(findTestObject('Object Repository/Promocode/ReviewPagePromocodeBox'), promoCode)
 		WebUI.click(findTestObject('Object Repository/Promocode/ApplyPromoCodeReviewPage'))

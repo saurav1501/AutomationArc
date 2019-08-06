@@ -341,12 +341,6 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ValidateWaterMeterGraphTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>7fbe0fbd-cae0-4e51-8a4f-c3d3c195e9e1</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ValidateWasteDatagraphTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>ebd42140-f5d9-419a-939f-9382485e51fa</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -429,5 +423,11 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/DownloadAndVerifyTheSnapshotFileNameTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>292358a0-9ad3-4059-8a24-702483d83160</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyAnalyticsEnergySliderChangesTheScoreTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
