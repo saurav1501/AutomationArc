@@ -269,6 +269,12 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyFilterDataInputForWasteReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>292358a0-9ad3-4059-8a24-702483d83160</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyAnalyticsEnergySliderChangesTheScoreTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>6b4b3eac-5747-4ec5-9dc0-54b084a055c9</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -423,11 +429,5 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/DownloadAndVerifyTheSnapshotFileNameTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>292358a0-9ad3-4059-8a24-702483d83160</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyAnalyticsEnergySliderChangesTheScoreTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
