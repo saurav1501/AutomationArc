@@ -299,22 +299,10 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyBillingDetailsMeasurablTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>4ba3fe53-0157-461a-aa4d-1e545a105a7e</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyNoOfFilesUploadedInSubmitReviewTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>1975d1f8-c8a7-4b94-980f-d9f4a51701bc</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyExportSurveyReportDownloadTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>154c2bd4-a23a-49b9-8c16-3a2d874bf9a9</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/INTPerformanceScoreVerificationCCTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>a2dae379-a3b6-49e8-a83f-6f2c40440a5b</guid>
@@ -423,11 +411,5 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyViewAppNavigatesToAppsSectionTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>519fdd53-c6b6-45e3-b797-f221b1b04ab5</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/DownloadAndVerifyTheSnapshotFileNameTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

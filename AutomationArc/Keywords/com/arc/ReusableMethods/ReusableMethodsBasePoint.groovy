@@ -363,7 +363,7 @@ public class ReusableMethodsBasePoint extends BaseClass{
 
 		WebUI.verifyElementPresent(findTestObject('DataInput/Survey/a_ Data Input'),2)
 
-		WebUI.verifyElementPresent(findTestObject('Page_Arc dashboard/DashboardPage/NavigationCreditAction/a_ Review'),2)
+		WebUI.verifyElementNotPresent(findTestObject('Page_Arc dashboard/DashboardPage/NavigationCreditAction/a_ Review'),2)
 
 
 

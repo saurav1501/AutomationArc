@@ -59,12 +59,6 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ProjectDetailsVerificationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>ae97b5cb-4955-4800-a69e-ad1b08467126</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/VerifyMessageUpdateOccupancyAndOprHrsTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>92042244-785b-4075-b662-c787f51291b5</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -1331,18 +1325,6 @@
       <testCaseId>Test Cases/Common/Notification/BuildingTVOCDeleteReadingNotificationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>533570e4-2e92-451d-aec7-542268fc6461</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/CheckChangeCreditNavigatesToSelectionPageTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>a89ccef6-c1c9-480a-9bca-7579dec8857c</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/ValidateCreditCardsSubmitReviewPaymentTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>6a69e25e-51ca-4c9d-b41e-288cc1853dfc</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -1359,12 +1341,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/DownloadAndVerifyExportedDataTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>96a6fdbc-8a7f-4ad0-8164-09d0f0cecb9e</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/INTPerformanceScoreVerificationCCTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>69f7c574-1740-41d0-9787-97fa40ea3959</guid>

@@ -1452,7 +1452,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeSelectButtonArea'), 20)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeSelectButtonArea')),"Imperial System (IP)",false,FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeSelectButtonArea')),"IP units (feet)",false,FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeHeader')), "GROSS AREA (square feet)", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
@@ -2215,8 +2215,8 @@ public class ReusableMethodsManage extends BaseClass {
 			WebUI.verifyMatch(regOrderType, "REGISTRATION", false, FailureHandling.CONTINUE_ON_FAILURE)
 			String regStatus= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationPaymentStatus'))
 			WebUI.verifyMatch(regStatus, "Completed", false, FailureHandling.CONTINUE_ON_FAILURE)
-			String reviewOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/ReviewOrderId'))
-			data.setCellData(sheetName, "ReviewId", rowNum,reviewOrderId)
+			//String reviewOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/ReviewOrderId'))
+			//data.setCellData(sheetName, "ReviewId", rowNum,reviewOrderId)
 		}
 	}
 

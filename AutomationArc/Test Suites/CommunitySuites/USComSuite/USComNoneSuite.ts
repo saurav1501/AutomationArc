@@ -107,12 +107,6 @@
       <testCaseId>Test Cases/MyCommunities/CommunitiesNone/AdminToolAddCertificationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>fb111703-08a9-4ebe-b8c6-5bc42e64206d</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCommunities/CommunitiesNone/INTPerformanceScoreRevPayByCCTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>65ca41b9-493a-4a2d-8dbd-165637959ed7</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -135,11 +129,5 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/MyCommunities/CommunitiesNone/VerifyAndDownloadBillingReceiptTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>720678b5-60ad-4d1f-a923-89beb1dbdf74</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCommunities/CommunitiesNone/DownloadAndVerifyTheSnapshotFileNameTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

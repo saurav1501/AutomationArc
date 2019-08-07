@@ -119,12 +119,6 @@
       <testCaseId>Test Cases/MyCities/CitiesOther/SetPerformanceScoreDefaultTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>0f280ba1-0d16-4621-b70e-0e8c0b5641b6</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCities/CitiesOther/INTPerformanceScoreRevPayByCCTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>d91127b6-818e-4ff9-acd6-f956cf53e025</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
