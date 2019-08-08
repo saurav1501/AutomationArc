@@ -149,12 +149,6 @@
       <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/1YearFullAccessBuildingOther/FullAccess1Year/DataInput/AdminToolScoreRecomputeTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>66fd94f5-990f-4554-8cf3-02b43e88822d</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/TrialAndFullAccessProj1To5Year/BuildingOther/1YearFullAccessBuildingOther/FullAccess1Year/DataInput/INTPerformanceScoreVerificationCCTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>e329bebc-af71-435b-803b-23e4711410ab</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

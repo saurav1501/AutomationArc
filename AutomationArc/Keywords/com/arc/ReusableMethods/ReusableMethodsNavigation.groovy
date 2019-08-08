@@ -481,9 +481,9 @@ public class ReusableMethodsNavigation {
 	@Keyword
 	public void projectDashboardNavigationEndToEnd(){
 
-		WebUI.click(findTestObject('Object Repository/SubmitReview/a_ Review'))
-		closeFullAccessPopup()
-		WebUI.delay(2)
+		//WebUI.click(findTestObject('Object Repository/SubmitReview/a_ Review'))
+		//closeFullAccessPopup()
+		//WebUI.delay(2)
 		/*WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreBasePoint'))
 		 closeFullAccessPopup()
 		 WebUI.delay(2)
@@ -628,9 +628,9 @@ public class ReusableMethodsNavigation {
 	public void projectDashboardNavigationEndToEndAfterPaymentBOtherNone(){
 
 
-		WebUI.click(findTestObject('Object Repository/SubmitReview/a_ Review'))
-		verifyFullAccessPopupNotVisible()
-		WebUI.delay(2)
+		//WebUI.click(findTestObject('Object Repository/SubmitReview/a_ Review'))
+		//verifyFullAccessPopupNotVisible()
+		//WebUI.delay(2)
 		/*WebUI.click(findTestObject('Object Repository/DashboardNavigationNewUI/scoreBasePoint'))
 		 verifyFullAccessPopupNotVisible()
 		 WebUI.delay(2)
