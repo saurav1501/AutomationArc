@@ -992,6 +992,24 @@ def static "com.arc.ReusableMethods.ResuableMethodsLEEDOnline.surveySubmitArc"(
         	sheetName)
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodValidation.buildingAddNewProjectPageValidation"(
+    	String sheetName	
+     , 	int rowNum1	) {
+    (new com.arc.ReusableMethods.ReusableMethodValidation()).buildingAddNewProjectPageValidation(
+        	sheetName
+         , 	rowNum1)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodValidation.paymentPageProjectDataValidation"(
+    	String sheetName	
+     , 	int rowNum1	
+     , 	int yearOfSubscription	) {
+    (new com.arc.ReusableMethods.ReusableMethodValidation()).paymentPageProjectDataValidation(
+        	sheetName
+         , 	rowNum1
+         , 	yearOfSubscription)
+}
+
 def static "com.arc.ReusableMethods.ResuableMethodsLandingPage.invalidIDLoginTest"() {
     (new com.arc.ReusableMethods.ResuableMethodsLandingPage()).invalidIDLoginTest()
 }
@@ -1118,24 +1136,6 @@ def static "com.arc.ReusableMethods.ResuableMethodsLandingPage.verifyBuildingPop
 
 def static "com.arc.ReusableMethods.ResuableMethodsLandingPage.verifyNavigationPopup"() {
     (new com.arc.ReusableMethods.ResuableMethodsLandingPage()).verifyNavigationPopup()
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodValidation.buildingAddNewProjectPageValidation"(
-    	String sheetName	
-     , 	int rowNum1	) {
-    (new com.arc.ReusableMethods.ReusableMethodValidation()).buildingAddNewProjectPageValidation(
-        	sheetName
-         , 	rowNum1)
-}
-
-def static "com.arc.ReusableMethods.ReusableMethodValidation.paymentPageProjectDataValidation"(
-    	String sheetName	
-     , 	int rowNum1	
-     , 	int yearOfSubscription	) {
-    (new com.arc.ReusableMethods.ReusableMethodValidation()).paymentPageProjectDataValidation(
-        	sheetName
-         , 	rowNum1
-         , 	yearOfSubscription)
 }
 
 def static "com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram"(
