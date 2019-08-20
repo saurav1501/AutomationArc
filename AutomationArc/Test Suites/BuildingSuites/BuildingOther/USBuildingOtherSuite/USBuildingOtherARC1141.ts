@@ -77,9 +77,15 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/AdminToolScoreRecomputeTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>754e55d4-b950-48d4-b724-4dd892ae6508</guid>
+      <guid>5d09d411-bc71-4841-beed-b76eb6f652a8</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/SubmitSurveyTest</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/SubmitSurvey200Test</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>af29b19b-5332-4cb2-8d79-30100d3dc475</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/AdminToolScoreRecomputeVerifyScoreTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>
