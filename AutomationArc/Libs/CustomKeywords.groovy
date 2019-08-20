@@ -4018,6 +4018,10 @@ def static "com.arc.ReusableMethods.ResuableMethodsGRESB.gresbAddanddeleteprojec
          , 	rowNum)
 }
 
+def static "com.arc.ReusableMethods.ResuableMethodsGRESB.verifyDataInputMeterData"() {
+    (new com.arc.ReusableMethods.ResuableMethodsGRESB()).verifyDataInputMeterData()
+}
+
 def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.genratePerformanceScoreAdminTool"(
     	String sheetName	
      , 	int rowNum	) {

@@ -16,7 +16,7 @@ import internal.GlobalVariable as GlobalVariable
 try {
 	
 		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.PortfoliosSheet,GlobalVariable.rowNumTwo)
-		CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsGRESB.verifyEstimatedScore'()
+		CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsGRESB.verifyDataInputMeterData'()
 	
 	}
 	catch (Throwable t) {
@@ -26,5 +26,3 @@ try {
 	e1.printStackTrace()
 	
 	}
-	
-	

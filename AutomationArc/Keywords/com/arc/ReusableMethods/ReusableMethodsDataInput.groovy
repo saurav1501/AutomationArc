@@ -64,7 +64,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.refresh()
 		WebUI.delay(7)
 	}
-	
+
 	@Keyword
 	public void uploadArcDataTemplateUSTons(){
 
@@ -403,7 +403,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), "Waste Data", FailureHandling.STOP_ON_FAILURE)
 		WebUI.delay(6)
 		String date1
-		String date2 
+		String date2
 		String reading1
 		String reading2
 		int j=2
@@ -419,9 +419,9 @@ public class ReusableMethodsDataInput  extends BaseClass{
 				date2 = dataExcelTemplate.getCellData(sheetName, "End", j)
 				reading1 = dataExcelTemplate.getCellData(sheetName, "Reading1", j)
 				reading2 = dataExcelTemplate.getCellData(sheetName, "Reading2", j)
-	
+
 			}
-			
+
 
 			Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/DataInput/DataInputExcelUploadDataVerification/StartDateOne',[index: it]),'value'), date1)
 			Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/DataInput/DataInputExcelUploadDataVerification/EndDateOne',[index: it]),'value'),date2)
@@ -5689,10 +5689,10 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'),10)
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'),5)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'),5)
-		
+
 		WebUI.scrollToElement(findTestObject('dataInputNewUI/Survey/ExtremelySatisfySpanText'),5)
 		WebUI.scrollToElement(findTestObject('dataInputNewUI/Survey/ExtremelyUnsatisfied'),5)
-		
+
 		if(surveylang=='French'||surveylang=='Portuguese'||surveylang=='Chinese'){
 			WebUI.dragAndDropToObject(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'), findTestObject('dataInputNewUI/Survey/ExtremelySatisfySpanText'))
 
@@ -5703,11 +5703,11 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		}
 		WebUI.delay(1)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-		
+
 		WebUI.scrollToElement(findTestObject('DataInput/Survey/survey_tenant_name'),5)
 		WebUI.setText(findTestObject('DataInput/Survey/survey_tenant_name'), name)
 		markAllCheckbox()
-        
+
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/DataInput/Survey/OccupantTypeSurvey'), surveyType, false)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 
@@ -5719,7 +5719,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 	}
 
-	
+
 	@Keyword
 	public void surveySubmitDiffLangV2(String sheetName,int rowNum) throws IOException, InterruptedException, Exception{
 
@@ -5861,13 +5861,13 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(1)
 		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/English'), GlobalVariable.minAngularWait)
 		verifySurveyLang()
-	
+
 
 	}
 	public void verifySurveyLang(){
-		
+
 		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/Language/span_English'),5)
-        WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Language/span_English'),4)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Language/span_English'),4)
 		String english =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_English'))
 		String french =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_French'))
 		String port =WebUI.getText(findTestObject('Object Repository/DataInput/Language/span_Portuguese'))
@@ -5887,10 +5887,10 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	}
 
 	public void everifySurveyLang(){
-        
+
 		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/Language1/span_English'),5)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Language1/span_English'),4)
-			
+
 		String english =WebUI.getText(findTestObject('Object Repository/DataInput/Language1/span_English'))
 		String french =WebUI.getText(findTestObject('Object Repository/DataInput/Language1/span_French'))
 		String port =WebUI.getText(findTestObject('Object Repository/DataInput/Language1/span_Portuguese'))
@@ -6030,7 +6030,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey1'))
 	}
 
-	
+
 	@Keyword
 	public void surveySubmitTr(String sheetName) throws IOException, InterruptedException, Exception{
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
@@ -7759,11 +7759,11 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		String totalScore  = data.getCellData(sheetName, "TotalScore", rowNum)
 		int utotalScore = Integer.parseInt(totalScore)
-        navigation.navigateIntoDataInput()
+		navigation.navigateIntoDataInput()
 		/********* Verifying the Generated score for total score under data Input section ********/
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Setting/Setting'), 60)
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'),40)
-		
+
 		if(WebUI.getText(findTestObject('PerformanceScore/DataInput/TotalScore')).equalsIgnoreCase('')){
 			WebUI.delay(15)
 		}
@@ -7844,8 +7844,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 			KeywordUtil.markFailed("Meter name is included in the acivity comment ")
 		}
 	}
-	
-	
+
+
 	@Keyword
 	public void verifyErrorMessageForIncompleteSurvey(){
 		Robot r = new Robot();
@@ -7866,10 +7866,10 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForElementPresent(findTestObject('Object Repository/ErrorLocators/Survey/SubmitSurveyErrorMessage'), GlobalVariable.minAngularWait)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/ErrorLocators/Survey/SubmitSurveyErrorMessage')), "Please answer all the questions", false)
 	}
-	
+
 	@Keyword
 	public void verifyErrorMessageDisappearAfterDetails(String sheetName, int rowNum){
-		
+
 		String url = data.getCellData(sheetName,"V2Url", 2)
 		String walk1 = data.getCellData(sheetName, "Walk", 2)
 		String walk2 = data.getCellData(sheetName, "Bus", 2)
@@ -7935,6 +7935,6 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForElementVisible(findTestObject('dataInputNewUI/Survey/Welcome'), GlobalVariable.minAngularWait)
 		WebUI.switchToWindowIndex(0)
 	}
-	
+
 }
 

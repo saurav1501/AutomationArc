@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify the data populated in the data input section of the GRESB project.</description>
+   <name>VerifyTheDataInputPopulatedDataInGRESBTest</name>
+   <tag>Verify the data populated in the GRESB project</tag>
+   <comment></comment>
+   <testCaseGuid>a7355f00-38e5-47e3-aa28-f47a4acecad1</testCaseGuid>
+</TestCaseEntity>

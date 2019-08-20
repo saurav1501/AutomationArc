@@ -21,6 +21,7 @@ public class ResuableMethodsGRESB extends BaseClass {
 	ReusableMethodsDataInput reusableMethodsDataInput = new ReusableMethodsDataInput()
 	ReusableMethodsNavigation reusableMethodsNavigation = new ReusableMethodsNavigation()
 	ReusableMethodsSearch reusableMethodsSearch = new 	ReusableMethodsSearch()
+	
 
 	SimpleDateFormat formatarDate = new SimpleDateFormat(' HH:mm:ss')
 
@@ -734,5 +735,64 @@ public class ResuableMethodsGRESB extends BaseClass {
 
 	}
 
+
+	@Keyword
+	public void verifyDataInputMeterData(){
+
+		/*findTestObject('Object Repository/Portfolio/GRESB/DataInput/ElectricityMeter')
+		 findTestObject('Object Repository/Portfolio/GRESB/DataInput/DistrictHeatingAndCoolingMeter')
+		 findTestObject('Object Repository/Portfolio/GRESB/DataInput/FuelMeter')
+		 findTestObject('Object Repository/Portfolio/GRESB/DataInput/WaterMeter')
+		 findTestObject('Object Repository/Portfolio/GRESB/DataInput/WasteMeter')
+		 findTestObject('Object Repository/Portfolio/GRESB/DataInput/BuildingSetting')*/
+
+		double energyReading=100
+		double value= (energyReading*(4000/3000))*2
+		value.round(2)
+		println value.round(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		ReusableMethodsLogin.waitForIframeLoad(60)
+		WebUI.waitForElementNotPresent(findTestObject('Object Repository/DataInput/LoaderIframeDatainput'), 60)
+		WebUI.delay(10)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/a_ Data Input'),GlobalVariable.avgAngularWait)
+		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Portfolio/GRESB/DataInput/ElectricityMeter'), GlobalVariable.minAngularWait)
+		WebUI.scrollToElement(findTestObject('Object Repository/Portfolio/GRESB/DataInput/ElectricityMeter'),4)
+		WebUI.click(findTestObject('Object Repository/Portfolio/GRESB/DataInput/ElectricityMeter'))
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ReadingOne'),'value'), Double.toString(value.round(2)), false)
+        WebUI.click(findTestObject('Object Repository/Portfolio/GRESB/DataInput/DistrictHeatingAndCoolingMeter'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ReadingOne'),'value'), Double.toString(value.round(2)), false)
+		WebUI.click(findTestObject('Object Repository/Portfolio/GRESB/DataInput/FuelMeter'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ReadingOne'),'value'), Double.toString(value.round(2)), false)
+
+		WebUI.click(findTestObject('Object Repository/Portfolio/GRESB/DataInput/WaterMeter'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		double waterReading=50
+		double value1= (waterReading*(4000/3000))*2
+		value1= value1*264.172
+		println value1.round(2)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ReadingOne'),'value'), Double.toString(value1.round(2)), false)
+		
+		WebUI.click(findTestObject('Object Repository/Portfolio/GRESB/DataInput/WasteMeter'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		double direct_waste = (0.004 * (100/89))               // here if % asset covered is blank then take it as 100/100  i.e. 1
+		double indirect_waste = (0.007 * (100/76))               // here if % asset covered is blank then take it as 100/100 i.e. 1
+		double total_waste = direct_waste + indirect_waste
+		double wasteGenReading=total_waste * 1.10231
+		println wasteGenReading.round(2)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/wasteGeneratedReadingOne'),'value'), Double.toString(wasteGenReading.round(2)), false)
+		//WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/wasteDivertedReadingOne'),'value'),'300')
+		double waste_diverted = wasteGenReading * (42 + 8)/100
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/wasteDivertedReadingOne'),'value'), Double.toString(waste_diverted.round(2)), false)
+
+	}
+	
+	
+	
+	
 }
 
