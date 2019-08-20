@@ -4886,6 +4886,14 @@ def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.genratePerfo
          , 	rowNum)
 }
 
+def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.genratePerformanceScoreAdminTool200Survey"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).genratePerformanceScoreAdminTool200Survey(
+        	sheetName
+         , 	rowNum)
+}
+
 def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.verifyTheScoreAfter200Survey"(
     	String sheetName	
      , 	int rowNum	) {

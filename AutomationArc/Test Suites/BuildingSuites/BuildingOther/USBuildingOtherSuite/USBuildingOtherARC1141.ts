@@ -47,6 +47,12 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/SearchProgramTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>3a614499-31e4-4e35-a1b6-a72975d733b8</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/BuildingWasteMeterCreateTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>79dd41b5-58b5-4c54-be1d-18dbac322422</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -65,16 +71,10 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/BuildingWaterMeterCreateTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>3a614499-31e4-4e35-a1b6-a72975d733b8</guid>
+      <guid>7ce09586-8fc6-4e1f-9745-0ecd4e15d17b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/BuildingWasteMeterCreateTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>02cdf59f-697e-4399-a85d-56ebb163d06f</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/AdminToolScoreRecomputeTest</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/AdminToolScoreRecompute200SurveyTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>5d09d411-bc71-4841-beed-b76eb6f652a8</guid>
