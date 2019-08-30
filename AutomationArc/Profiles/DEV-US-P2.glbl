@@ -11,7 +11,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>Gold membership user</description>
-      <initValue>'devusgbcarc1@gmail.com'</initValue>
+      <initValue>'usgbcarcapi2@gmail.com'</initValue>
       <name>userName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -236,7 +236,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'devusgbcarc1@gmail.com'</initValue>
+      <initValue>'usgbcarcapi2@gmail.com'</initValue>
       <name>projectTeamAdminAndArcAdminEmail</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

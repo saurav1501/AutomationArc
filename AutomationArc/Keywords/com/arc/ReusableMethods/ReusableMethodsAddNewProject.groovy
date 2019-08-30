@@ -865,7 +865,7 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 
 	}
 
-    //Payment page project details
+	//Payment page project details
 	@Keyword
 	public void verifyErrorMessageDisappearAfterFillingProjectDetails(String sheetName, int rowNum, int yearOfSubscription){
 		String prjRating 	= data.getCellData(sheetName, "RatingSystem", rowNum)
@@ -936,21 +936,21 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 			data.setCellData(sheetName,"ProjectID", rowNum, Project_ID_Promocode)
 		}
 	}
-	
+
 	@Keyword
 	public void payementPagePayemntDetailsErrorMessagevalidation(){
-		
+
 		WebUI.click(findTestObject('Object Repository/paymentPageNewUI/submitPayment'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementPresent(findTestObject('Object Repository/ErrorLocators/PaymentPage/PaymentErrorMessage'), GlobalVariable.minAngularWait)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/ErrorLocators/PaymentPage/PaymentErrorMessage')), "Please provide valid data", false)
-		
+
 	}
-	
-	
+
+
 	@Keyword
 	public void verifyErrorMessageDisappersAfterCompletingPaymentDetails(String sheetName, int rowNum, String paymentMode){
-		
+
 		String cardName   = data.getCellData(sheetName, "CardName", rowNum)
 		String cardNum    = data.getCellData(sheetName, "CardNumber", rowNum)
 		String cardDate   = data.getCellData(sheetName, "Date ", rowNum)
@@ -1007,8 +1007,8 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 		}
-		
+
 	}
-	
-	
+
+
 }
