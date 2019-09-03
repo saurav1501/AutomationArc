@@ -11,7 +11,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>Gold membership user</description>
-      <initValue>'usgbcarcapi@gmail.com'</initValue>
+      <initValue>'devusgbcarc1@gmail.com'</initValue>
       <name>userName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

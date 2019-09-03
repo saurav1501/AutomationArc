@@ -39,7 +39,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	ResuableMethodsPerformanceScore  performanceScore = new ResuableMethodsPerformanceScore()
 	ReusableMethodsNavigation navigation = new ReusableMethodsNavigation()
 	ResuableMethodsSetting setting = new ResuableMethodsSetting()
-	
+
 	@Keyword
 	public void uploadArcDataTemplate(){
 
@@ -504,25 +504,31 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	}
 
 	public void getGraphReading(String sheetName, String colName){
-		SimpleDateFormat simpleDateformat,simpleDateformat1
+		SimpleDateFormat simpleDateformat,simpleDateformat1,simpleDateformat2
 		Calendar cal = Calendar.getInstance()
 		int curMonth = cal.get(Calendar.MONTH)+1
 		int curYear  = cal.get(Calendar.YEAR)
+		int curDay   =cal.get(Calendar.DAY_OF_WEEK)
 		println "Cur Year "+ curYear
 		int j=0
 		for(int row=26; row>=2;row--){
 			String date= dataExcelTemplate.getCellData(sheetName, "Start",row )
 
-			Date date1=new SimpleDateFormat("MMM dd, yyyy").parse(date)
+			Date date1=new SimpleDateFormat("MM/dd/yyyy").parse(date)
 			simpleDateformat = new SimpleDateFormat("MM")
 			int tempDate= Integer.parseInt(simpleDateformat.format(date1))
-			println "Temp month "+tempDate
-			Date date2=new SimpleDateFormat("MMM dd, yyyy").parse(date)
+			println "Temp Month "+tempDate
+
+			Date date2=new SimpleDateFormat("MM/dd/yyyy").parse(date)
 			simpleDateformat1 = new SimpleDateFormat("yyyy")
 			int tempYear= Integer.parseInt(simpleDateformat1.format(date2))
 			println "Temp Year "+tempYear
+
+			Date date3=new SimpleDateFormat("MM/dd/yyyy").parse(date)
+			simpleDateformat2 = new SimpleDateFormat("dd")
+			int tempDay= Integer.parseInt(simpleDateformat2.format(date3))
+			println "Temp Day "+tempYear
 			if((curMonth==tempDate && tempYear==curYear)){
-				//println "Row Num"+row
 				j=row
 				break
 			}
@@ -3687,9 +3693,9 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('DataInput/CityCom/a_ Data Input'))
 		//New data Input
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		
+
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/GHGEmissions'))
-		 
+
 		WebUI.click(findTestObject('DataInput/CityCom/span_Energy'))
 		//WebUI.delay(10)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
@@ -8054,8 +8060,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.switchToWindowIndex(0)
 	}
 
-	
-		
-	
+
+
+
 }
 

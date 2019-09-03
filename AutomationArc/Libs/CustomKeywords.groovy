@@ -648,6 +648,10 @@ def static "com.arc.ReusableMethods.ResuableMethodsPortfolio.avgArea"(
          , 	rowNum)
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsImprovement.validateEnergyImprovementData"() {
+    (new com.arc.ReusableMethods.ReusableMethodsImprovement()).validateEnergyImprovementData()
+}
+
 def static "com.helper.javascript.JavaScriptHelper.executeScript"(
     	String script	) {
     (new com.helper.javascript.JavaScriptHelper()).executeScript(
