@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description>Percentage source energy intensity.</description>
-   <name>SourceEnergyIntensity</name>
+   <description></description>
+   <name>ImprovementPageLoader</name>
    <tag></tag>
-   <elementGuidId>6f4d7d0d-55cc-4fb8-922b-e8dc7c127a22</elementGuidId>
+   <elementGuidId>48378d5d-8f62-42f0-ad13-81004fcac556</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//*[@class=&quot;change-row&quot;])[1]/td[3]/span/span[1]</value>
+         <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//*[@id=&quot;content&quot;]//*[@class=&quot;circular-loader&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

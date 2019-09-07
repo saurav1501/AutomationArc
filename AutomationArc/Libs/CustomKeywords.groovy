@@ -652,6 +652,18 @@ def static "com.arc.ReusableMethods.ReusableMethodsImprovement.validateEnergyImp
     (new com.arc.ReusableMethods.ReusableMethodsImprovement()).validateEnergyImprovementData()
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsImprovement.validateWaterImprovementData"() {
+    (new com.arc.ReusableMethods.ReusableMethodsImprovement()).validateWaterImprovementData()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsImprovement.validateWasteImprovementData"() {
+    (new com.arc.ReusableMethods.ReusableMethodsImprovement()).validateWasteImprovementData()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsImprovement.validateTransportationImprovementData"() {
+    (new com.arc.ReusableMethods.ReusableMethodsImprovement()).validateTransportationImprovementData()
+}
+
 def static "com.helper.javascript.JavaScriptHelper.executeScript"(
     	String script	) {
     (new com.helper.javascript.JavaScriptHelper()).executeScript(

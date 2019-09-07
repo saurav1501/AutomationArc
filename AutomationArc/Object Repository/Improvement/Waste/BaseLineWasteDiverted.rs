@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//*[@class=&quot;data-row&quot;])[6]//td[4]/span</value>
+         <value>(//*[@class=&quot;data-row&quot;])[6]//td[3]/span</value>
       </entry>
       <entry>
          <key>BASIC</key>

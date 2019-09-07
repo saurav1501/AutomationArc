@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description>Percentage source energy intensity.</description>
-   <name>SourceEnergyIntensity</name>
+   <description>Transport Total Performance Score</description>
+   <name>TransportationTotalScore</name>
    <tag></tag>
-   <elementGuidId>6f4d7d0d-55cc-4fb8-922b-e8dc7c127a22</elementGuidId>
+   <elementGuidId>ee211385-a465-4171-bc74-e036626b0ddc</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//*[@class=&quot;change-row&quot;])[1]/td[3]/span/span[1]</value>
+         <value>(//*[@class=&quot;category-score&quot;])[4]/span[1]</value>
       </entry>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description>Percentage source energy intensity.</description>
-   <name>SourceEnergyIntensity</name>
+   <description></description>
+   <name>BaselinePeriodOcc</name>
    <tag></tag>
-   <elementGuidId>6f4d7d0d-55cc-4fb8-922b-e8dc7c127a22</elementGuidId>
+   <elementGuidId>efe2a3ff-9b99-4d21-bfdf-71d293ec6a23</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//*[@class=&quot;change-row&quot;])[1]/td[3]/span/span[1]</value>
+         <value>(//*[@class=&quot;data-row&quot;])[8]//td[3]/span</value>
       </entry>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

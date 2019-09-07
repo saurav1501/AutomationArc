@@ -22,4 +22,22 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ImprovementPageEnergyDetailsVerificationTest</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>cd8cdab1-5609-405e-925a-dddc63cfbf85</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ImprovementPageWaterDetailsVerificationTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>a8f66591-bde2-456d-b162-8811383a74d6</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ImprovementPageWasteDetailsVerificationTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>ba56fabe-c2e6-47d3-9cc1-1dd7b076e8e5</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ImprovementPageTransportationDetailsVerificationTest</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>
