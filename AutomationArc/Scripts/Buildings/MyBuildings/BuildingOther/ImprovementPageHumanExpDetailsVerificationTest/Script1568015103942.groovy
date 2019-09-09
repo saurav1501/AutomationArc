@@ -13,11 +13,13 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-///verify Waste Meter graph created via excel upload and validate the data populated.
+//Improvement Page energy details
 
-try {
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumFive)
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.verifyEnergyGraphpopulatedAfterExcelUpload'(GlobalVariable.TemplateEnergyData)
+try{
+
+	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumFive)
+	
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsImprovement.validateTransportationImprovementData'()
 
 } catch (Throwable t) {
 	System.out.println(t.getLocalizedMessage())
@@ -25,4 +27,3 @@ try {
 		e1.setStackTrace(t.getStackTrace())
 		e1.printStackTrace()
 }
-

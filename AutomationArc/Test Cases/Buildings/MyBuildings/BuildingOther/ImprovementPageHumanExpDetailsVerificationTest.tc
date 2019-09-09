@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify the improvement page details for the energy</description>
+   <name>ImprovementPageHumanExpDetailsVerificationTest</name>
+   <tag>Verify Improvement Page Energy Details</tag>
+   <comment></comment>
+   <testCaseGuid>bc376cd6-1e22-4500-9c94-54a109746cb5</testCaseGuid>
+</TestCaseEntity>

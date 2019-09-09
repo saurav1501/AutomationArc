@@ -90,6 +90,33 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(7)
 	}
 
+	
+	@Keyword
+	public void uploadArcDataTemplateImprovement(){
+
+		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		navigation.navigateIntoDataInput()
+		WebUI.delay(5)
+		WebUI.doubleClick(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'))
+		WebUI.delay(2)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/span_Upload.XLS'), 20)
+		WebUI.doubleClick(findTestObject('Object Repository/DataInput/span_Upload.XLS'))
+		WebUI.delay(3)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/ClickOnUploadToSelectFile'),3)
+		WebUI.sendKeys(findTestObject('Object Repository/DataInput/UploadArcDataTemplete'),BaseClass.UploadArcDataTempleteImprovement)
+		WebUI.delay(4)
+		WebUI.click(findTestObject('DataInput/ClickToUploadFileButton'))
+		WebUI.delay(5)
+		String successmessage= WebUI.getText(findTestObject('Object Repository/DataInput/ExcelUploadSuccessMessage'))
+		WebUI.delay(5)
+		WebUI.verifyMatch(successmessage,'Excel submitted successfully. We will send you an email when your data is processed.' , true)
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/DataInput/button_CLOSE'))
+		WebUI.refresh()
+		WebUI.delay(7)
+	}
+	
+	
 	@Keyword
 	public void uploadArcDataTemplatetrial(){
 

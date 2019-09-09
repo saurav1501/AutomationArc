@@ -24,26 +24,28 @@ public class ReusableMethodsImprovement extends BaseClass{
 	ResuableMethodsPerformanceScore  performanceScore = new ResuableMethodsPerformanceScore()
 	ReusableMethodsNavigation navigation = new ReusableMethodsNavigation()
 	ResuableMethodsSetting setting = new ResuableMethodsSetting()
-
+	DecimalFormat df = new DecimalFormat("0.###");
 	public double calculateBaseLineReading(double area){
 
 		SimpleDateFormat simpleDateformat,simpleDateformat1,simpleDateformat2, simpleDateformat3,simpleDateformat4;
 		Calendar cal = Calendar.getInstance();
 		int curMonth = cal.get(Calendar.MONTH)+1;
 		int curYear  = cal.get(Calendar.YEAR)-1;
-		int curDay  = cal.get(Calendar.DAY_OF_WEEK);
+		int curDay  = cal.get(Calendar.DAY_OF_MONTH);
 		double totalReadingFirst = 0;
 		int tempDay=0;
 		System.out.println("Cur Year "+ curYear);
 		System.out.println("Cur Month "+ curMonth);
+		System.out.println("Cur Day "+ curDay);
+		
 		int j=0;
 		for(int row=27; row>=2;row--){
 			String date= dataExcelTemplate.getCellData("Improvement", "Start",row );
-
+            
 			Date date2=new SimpleDateFormat("MM/dd/yyyy").parse(date);
 			simpleDateformat1 = new SimpleDateFormat("YYYY");
 			int tempYear= Integer.parseInt(simpleDateformat1.format(date2));
-			tempYear+=2000;
+			
 			//System.out.println("Temp Year "+tempYear);
 
 			Date date1=new SimpleDateFormat("MM/dd/yyyy").parse(date);
@@ -55,7 +57,6 @@ public class ReusableMethodsImprovement extends BaseClass{
 			simpleDateformat2 = new SimpleDateFormat("dd");
 			tempDay= Integer.parseInt(simpleDateformat2.format(date3));
 			//System.out.println("Temp Day "+tempDay);
-
 			if((curMonth==tempDate && tempYear==curYear)){
 				if(curDay==1) {
 					j=row+1;
@@ -69,15 +70,15 @@ public class ReusableMethodsImprovement extends BaseClass{
 					double reading1=Double.valueOf(dataExcelTemplate.getCellData("Improvement", "Reading1",row ));
 					double oneDayReading=reading1/endDay;
 					System.out.println("Current One day reading "+oneDayReading);
-					System.out.println("No of cur days "+(curDay-2));
-					totalReadingFirst = oneDayReading*(curDay-2);
+					System.out.println("No of cur days "+(curDay-1));
+					totalReadingFirst = oneDayReading*(curDay-1);
 					System.out.println(totalReadingFirst);
 				}
 				System.out.println("j value"+ j);
 				break;
 			}
 		}
-
+  
 		for(int i=j;i<=j+10;i++)
 			totalReadingFirst+=Double.valueOf(dataExcelTemplate.getCellData("Improvement", "Reading1",i ));
 		System.out.println("Middle Reading "+totalReadingFirst);
@@ -99,9 +100,9 @@ public class ReusableMethodsImprovement extends BaseClass{
 		System.out.println("End Day "+endDayValue);
 		double oneDayReadingLast= reading2/ endDayValue;
 		System.out.println(oneDayReadingLast);
-		totalReadingFirst+=(oneDayReadingLast*((endDayValue-curDay)+2));
-		System.out.println("Day count "+((endDayValue-curDay)+2));
-		System.out.println("Last month reading "+oneDayReadingLast*((endDayValue-curDay)+2));
+		totalReadingFirst+=(oneDayReadingLast*((endDayValue-curDay)+1));
+		System.out.println("Day count "+((endDayValue-curDay)+1));
+		System.out.println("Last month reading "+oneDayReadingLast*((endDayValue-curDay)+1));
 		System.out.println("Total Reading "+totalReadingFirst);
 		return totalReadingFirst/area;
 	}
@@ -114,7 +115,7 @@ public class ReusableMethodsImprovement extends BaseClass{
 		Calendar cal = Calendar.getInstance();
 		int curMonth = cal.get(Calendar.MONTH)+1;
 		int curYear  = cal.get(Calendar.YEAR);
-		int curDay  = cal.get(Calendar.DAY_OF_WEEK);
+		int curDay  = cal.get(Calendar.DAY_OF_MONTH);
 		double totalReadingFirst = 0;
 		int tempDay=0;
 		System.out.println("Cur Year "+ curYear);
@@ -126,7 +127,7 @@ public class ReusableMethodsImprovement extends BaseClass{
 			Date date2=new SimpleDateFormat("MM/dd/yyyy").parse(date);
 			simpleDateformat1 = new SimpleDateFormat("YYYY");
 			int tempYear= Integer.parseInt(simpleDateformat1.format(date2));
-			tempYear+=2000;
+			
 			//System.out.println("Temp Year "+tempYear);
 
 			Date date1=new SimpleDateFormat("MM/dd/yyyy").parse(date);
@@ -152,8 +153,8 @@ public class ReusableMethodsImprovement extends BaseClass{
 					double reading1=Double.valueOf(dataExcelTemplate.getCellData("Improvement", "Reading1",row ));
 					double oneDayReading=reading1/endDay;
 					System.out.println("Current One day reading "+oneDayReading);
-					System.out.println("No of cur days "+(curDay-2));
-					totalReadingFirst = oneDayReading*(curDay-2);
+					System.out.println("No of cur days "+(curDay-1));
+					totalReadingFirst = oneDayReading*(curDay-1);
 					System.out.println(totalReadingFirst);
 				}
 				System.out.println("j value"+ j);
@@ -182,9 +183,9 @@ public class ReusableMethodsImprovement extends BaseClass{
 		System.out.println("End Day "+endDayValue);
 		double oneDayReadingLast= reading2/ endDayValue;
 		System.out.println(oneDayReadingLast);
-		totalReadingFirst+=(oneDayReadingLast*((endDayValue-curDay)+2));
-		System.out.println("Day count "+((endDayValue-curDay)+2));
-		System.out.println("Last month reading "+oneDayReadingLast*((endDayValue-curDay)+2));
+		totalReadingFirst+=(oneDayReadingLast*((endDayValue-curDay)+1));
+		System.out.println("Day count "+((endDayValue-curDay)+1));
+		System.out.println("Last month reading "+oneDayReadingLast*((endDayValue-curDay)+1));
 		System.out.println("Total Reading "+totalReadingFirst);
 
 		return totalReadingFirst/area;
@@ -196,7 +197,7 @@ public class ReusableMethodsImprovement extends BaseClass{
 		Calendar cal = Calendar.getInstance();
 		int curMonth = cal.get(Calendar.MONTH)+1;
 		int curYear  = cal.get(Calendar.YEAR)-1;
-		int curDay  = cal.get(Calendar.DAY_OF_WEEK);
+		int curDay  = cal.get(Calendar.DAY_OF_MONTH);
 		double totalReadingFirst = 0;
 		int tempDay=0;
 		System.out.println("Cur Year "+ curYear);
@@ -208,7 +209,7 @@ public class ReusableMethodsImprovement extends BaseClass{
 			Date date2=new SimpleDateFormat("MM/dd/yyyy").parse(date);
 			simpleDateformat1 = new SimpleDateFormat("YYYY");
 			int tempYear= Integer.parseInt(simpleDateformat1.format(date2));
-			tempYear+=2000;
+			
 			//System.out.println("Temp Year "+tempYear);
 
 			Date date1=new SimpleDateFormat("MM/dd/yyyy").parse(date);
@@ -224,6 +225,7 @@ public class ReusableMethodsImprovement extends BaseClass{
 			if((curMonth==tempDate && tempYear==curYear)){
 				if(curDay==1) {
 					j=row+1;
+					print "j value"+ j
 				}
 				else {
 					j=row+1;
@@ -234,8 +236,8 @@ public class ReusableMethodsImprovement extends BaseClass{
 					double reading1=Double.valueOf(dataExcelTemplate.getCellData("Improvement", reading ,row ));
 					double oneDayReading=reading1/endDay;
 					System.out.println("Current One day reading "+oneDayReading);
-					System.out.println("No of cur days "+(curDay-2));
-					totalReadingFirst = oneDayReading*(curDay-2);
+					System.out.println("No of cur days "+(curDay-1));
+					totalReadingFirst = oneDayReading*(curDay-1);
 					System.out.println(totalReadingFirst);
 				}
 				System.out.println("j value"+ j);
@@ -264,9 +266,9 @@ public class ReusableMethodsImprovement extends BaseClass{
 		System.out.println("End Day "+endDayValue);
 		double oneDayReadingLast= reading2/ endDayValue;
 		System.out.println(oneDayReadingLast);
-		totalReadingFirst+=(oneDayReadingLast*((endDayValue-curDay)+2));
-		System.out.println("Day count "+((endDayValue-curDay)+2));
-		System.out.println("Last month reading "+oneDayReadingLast*((endDayValue-curDay)+2));
+		totalReadingFirst+=(oneDayReadingLast*((endDayValue-curDay)+1));
+		System.out.println("Day count "+((endDayValue-curDay)+1));
+		System.out.println("Last month reading "+oneDayReadingLast*((endDayValue-curDay)+1));
 		System.out.println("Total Reading "+totalReadingFirst);
 		return totalReadingFirst;
 	}
@@ -277,7 +279,7 @@ public class ReusableMethodsImprovement extends BaseClass{
 		Calendar cal = Calendar.getInstance();
 		int curMonth = cal.get(Calendar.MONTH)+1;
 		int curYear  = cal.get(Calendar.YEAR);
-		int curDay  = cal.get(Calendar.DAY_OF_WEEK);
+		int curDay  = cal.get(Calendar.DAY_OF_MONTH);
 		double totalReadingFirst = 0;
 		int tempDay=0;
 		System.out.println("Cur Year "+ curYear);
@@ -289,7 +291,7 @@ public class ReusableMethodsImprovement extends BaseClass{
 			Date date2=new SimpleDateFormat("MM/dd/yyyy").parse(date);
 			simpleDateformat1 = new SimpleDateFormat("YYYY");
 			int tempYear= Integer.parseInt(simpleDateformat1.format(date2));
-			tempYear+=2000;
+			
 			//System.out.println("Temp Year "+tempYear);
 
 			Date date1=new SimpleDateFormat("MM/dd/yyyy").parse(date);
@@ -315,8 +317,8 @@ public class ReusableMethodsImprovement extends BaseClass{
 					double reading1=Double.valueOf(dataExcelTemplate.getCellData("Improvement", reading, row ));
 					double oneDayReading=reading1/endDay;
 					System.out.println("Current One day reading "+oneDayReading);
-					System.out.println("No of cur days "+(curDay-2));
-					totalReadingFirst = oneDayReading*(curDay-2);
+					System.out.println("No of cur days "+(curDay-1));
+					totalReadingFirst = oneDayReading*(curDay-1);
 					System.out.println(totalReadingFirst);
 				}
 				System.out.println("j value"+ j);
@@ -345,9 +347,9 @@ public class ReusableMethodsImprovement extends BaseClass{
 		System.out.println("End Day "+endDayValue);
 		double oneDayReadingLast= reading2/ endDayValue;
 		System.out.println(oneDayReadingLast);
-		totalReadingFirst+=(oneDayReadingLast*((endDayValue-curDay)+2));
-		System.out.println("Day count "+((endDayValue-curDay)+2));
-		System.out.println("Last month reading "+oneDayReadingLast*((endDayValue-curDay)+2));
+		totalReadingFirst+=(oneDayReadingLast*((endDayValue-curDay)+1));
+		System.out.println("Day count "+((endDayValue-curDay)+1));
+		System.out.println("Last month reading "+oneDayReadingLast*((endDayValue-curDay)+1));
 		System.out.println("Total Reading "+totalReadingFirst);
 
 		return totalReadingFirst;
@@ -420,12 +422,12 @@ public class ReusableMethodsImprovement extends BaseClass{
 			scoreSEI=0;
 			percentSEI= ((diffSEI*100)*-1)/baseReadingSEI;
 			percentSEI= percentSEI.round(1);
-			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Energy/SiteEnergyIntensity')), String.valueOf(percentSEI)+"%", false , FailureHandling.CONTINUE_ON_FAILURE )
+			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Energy/SiteEnergyIntensity')), df.format(percentSEI)+"%", false , FailureHandling.CONTINUE_ON_FAILURE )
 		}
 		else{
 			percentSEI= (diffSEI*100)/baseReadingSEI;
 			percentSEI= percentSEI.round(1);
-			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Energy/SiteEnergyIntensity')),String.valueOf(percentSEI)+"%", false, , FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Energy/SiteEnergyIntensity')),df.format(percentSEI)+"%", false, , FailureHandling.CONTINUE_ON_FAILURE)
 			scoreSEI= score(percentSEI);
 			scoreSEI= ((scoreSEI*33.33)/100).round(1);
 			println "Score SEI 33.33 " + scoreSEI;
@@ -441,12 +443,12 @@ public class ReusableMethodsImprovement extends BaseClass{
 			scoreSoEI=0;
 			percentSoEI= ((diffSoEI*100)*-1)/baseReadingSoEI;
 			percentSoEI= percentSoEI.round(1);
-			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Energy/SourceEnergyIntensity')), String.valueOf(percentSoEI)+"%", false , FailureHandling.CONTINUE_ON_FAILURE )
+			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Energy/SourceEnergyIntensity')), df.format(percentSoEI)+"%", false , FailureHandling.CONTINUE_ON_FAILURE )
 		}
 		else{
 			percentSoEI= (diffSoEI*100)/baseReadingSoEI;
 			percentSoEI= percentSoEI.round(1);
-			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Energy/SourceEnergyIntensity')), String.valueOf(percentSoEI)+"%", false , FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Energy/SourceEnergyIntensity')), df.format(percentSoEI)+"%", false , FailureHandling.CONTINUE_ON_FAILURE)
 			scoreSoEI= score(percentSoEI);
 			scoreSoEI= ((scoreSoEI*33.33)/100).round(1);
 			println "Score SoEI 33.33 " + scoreSoEI;
@@ -468,11 +470,11 @@ public class ReusableMethodsImprovement extends BaseClass{
 		else if(diffArea<0){
 
 			percentArea= ((diffArea*-100)/baseReadingArea.round(6)).round(1)
-			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Energy/EnergyGrossArea')), String.valueOf(percentArea)+"%", false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Energy/EnergyGrossArea')), df.format(percentArea)+"%", false, FailureHandling.CONTINUE_ON_FAILURE)
 		}
 		else{
 			percentArea= ((diffArea*100)/baseReadingArea.round(6)).round(1)
-			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Energy/EnergyGrossArea')), String.valueOf(percentArea)+"%", false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Energy/EnergyGrossArea')), df.format(percentArea)+"%", false, FailureHandling.CONTINUE_ON_FAILURE)
 		}
 	}
 
@@ -510,12 +512,12 @@ public class ReusableMethodsImprovement extends BaseClass{
 			scoreWater=0;
 			percentWater= ((diffWater*100)*-1)/baseReadingWater;
 			percentWater= percentWater.round(1);
-			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Water/WaterImprovementPercentageChange')), String.valueOf(percentWater)+"%", false , FailureHandling.CONTINUE_ON_FAILURE )
+			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Water/WaterImprovementPercentageChange')), df.format(percentWater)+"%", false , FailureHandling.CONTINUE_ON_FAILURE )
 		}
 		else{
 			percentWater= (diffWater*100)/baseReadingWater;
 			percentWater= percentWater.round(1);
-			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Water/WaterImprovementPercentageChange')),String.valueOf(percentWater)+"%", false, , FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Water/WaterImprovementPercentageChange')),df.format(percentWater)+"%", false, , FailureHandling.CONTINUE_ON_FAILURE)
 			scoreWater= score(percentWater).round(1);
 			println "Score Water " + scoreWater;
 		}
@@ -537,29 +539,17 @@ public class ReusableMethodsImprovement extends BaseClass{
 		else if(diffArea<0){
 
 			percentArea= ((diffArea*-100)/baseReadingArea.round(6)).round(1)
-			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Water/WaterGrossAreaPercentageChange')), String.valueOf(percentArea)+"%", false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Water/WaterGrossAreaPercentageChange')), df.format(percentArea)+"%", false, FailureHandling.CONTINUE_ON_FAILURE)
 		}
 		else{
 			percentArea= ((diffArea*100)/baseReadingArea.round(6)).round(1)
-			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Water/WaterGrossAreaPercentageChange')), String.valueOf(percentArea)+"%", false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Water/WaterGrossAreaPercentageChange')), df.format(percentArea)+"%", false, FailureHandling.CONTINUE_ON_FAILURE)
 		}
 	}
 
 
 	@Keyword
 	public void validateWasteImprovementData(){
-
-
-		/*findTestObject('Object Repository/Improvement/Waste/BaseLinePeriodOccupants')
-		 findTestObject('Object Repository/Improvement/Waste/PerformancePeriodOccupants')
-		 findTestObject('Object Repository/Improvement/Waste/BaseLineWasteDiverted')
-		 findTestObject('Object Repository/Improvement/Waste/BaseLineWasteGenerated')
-		 findTestObject('Object Repository/Improvement/Waste/PerformancePeriodWasteDiverted')
-		 findTestObject('Object Repository/Improvement/Waste/PerformancePeriodWasteGenerated')
-		 findTestObject('Object Repository/Improvement/Waste/WasteDivertedPercentageChange')
-		 findTestObject('Object Repository/Improvement/Waste/WasteGeneratedPercentageChange')
-		 findTestObject('Object Repository/Improvement/Waste/WasteImprovementScorePercentage')
-		 findTestObject('Object Repository/Improvement/Waste/WasteOccupantsPercentage')*/
 
 		double scoreWG,scoreWD;
 		double percentWG, percentWD, percentOcc;
@@ -600,12 +590,12 @@ public class ReusableMethodsImprovement extends BaseClass{
 			println "Score WG 50 " + scoreWG;
 			percentWG= ((diffWG*100)*-1)/baseReadingWG;
 			percentWG= percentWG.round(1);
-			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Waste/WasteGeneratedPercentageChange')), String.valueOf(percentWG)+"%", false , FailureHandling.CONTINUE_ON_FAILURE )
+			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Waste/WasteGeneratedPercentageChange')), df.format(percentWG)+"%", false , FailureHandling.CONTINUE_ON_FAILURE )
 		}
 		else{
 			percentWG= (diffWG*100)/baseReadingWG;
 			percentWG= percentWG.round(1);
-			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Waste/WasteGeneratedPercentageChange')),String.valueOf(percentWG)+"%", false, , FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Waste/WasteGeneratedPercentageChange')), df.format(percentWG)+"%", false, , FailureHandling.CONTINUE_ON_FAILURE)
 			scoreWG= score(percentWG);
 			scoreWG= ((scoreWG*50)/100).round(1);
 			println "Score WG 50 " + scoreWG;
@@ -623,12 +613,12 @@ public class ReusableMethodsImprovement extends BaseClass{
 			println "Score WD 50 " + scoreWD;
 			percentWD= ((diffWD*100)*-1)/baseReadingWD;
 			percentWD= percentWD.round(1);
-			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Waste/WasteDivertedPercentageChange')), String.valueOf(percentWD)+"%", false , FailureHandling.CONTINUE_ON_FAILURE )
+			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Waste/WasteDivertedPercentageChange')), df.format(percentWD)+"%", false , FailureHandling.CONTINUE_ON_FAILURE )
 		}
 		else{
 			percentWD= (diffWD*100)/baseReadingWD;
 			percentWD= percentWD.round(1);
-			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Waste/WasteDivertedPercentageChange')), String.valueOf(percentWD)+"%", false , FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Waste/WasteDivertedPercentageChange')), df.format(percentWD)+"%", false , FailureHandling.CONTINUE_ON_FAILURE)
 			scoreWD= score(percentWD);
 			scoreWD= ((scoreWD*50)/100).round(1);
 			println "Score WD 50 " + scoreWD;
@@ -650,24 +640,24 @@ public class ReusableMethodsImprovement extends BaseClass{
 		else if(diffOcc<0){
 
 			percentOcc= ((diffOcc*-100)/baseReadingOcc.round(6)).round(1)
-			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Waste/WasteOccupantsPercentage')), String.valueOf(percentOcc)+"%", false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Waste/WasteOccupantsPercentage')), df.format(percentOcc)+"%", false, FailureHandling.CONTINUE_ON_FAILURE)
 		}
 		else{
 			percentOcc= ((diffOcc*100)/baseReadingOcc.round(6)).round(1)
-			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Waste/WasteOccupantsPercentage')), String.valueOf(percentOcc)+"%", false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Waste/WasteOccupantsPercentage')), df.format(percentOcc)+"%", false, FailureHandling.CONTINUE_ON_FAILURE)
 		}
 
-    }
+	}
 
 
- 
-    //Transportation Improvement  	
+
+	//Transportation Improvement
 	@Keyword
 	public void validateTransportationImprovementData(){
-		
+
 		double scoreTransport;
 		double percentCo2e, percentOcc;
-		
+
 		//Carbon emission
 		float car= 0.93;
 		float car23= 0.39;
@@ -677,41 +667,41 @@ public class ReusableMethodsImprovement extends BaseClass{
 		float bus= 0.68;
 		float light_rail= 0.44;
 		float heavy_rail= 0.33;
-		
+
 		//Carbon emission for the performance period 2018-2019
 		float survey1_perf= (7 * car) + (4 * car23) + (6 * cars4) + (5 * light_rail);
 		float survey2_perf= (8 * motorcycle) + (9 * bus) + (5 * heavy_rail) + (7 * car);
-		float carbonEmissionPerform = (((survey1_perf + survey2_perf)/2)*0.0004536).round(6); 
-		
+		float carbonEmissionPerform = (((survey1_perf + survey2_perf)/2)*0.0004536).round(6);
+
 		//Carbon emission for the performance period 2017-2018
 		float survey3_perf= (8 * car) + (4 * car23) + (9 * cars4) + (7 * light_rail);
 		float survey4_perf= (3 * motorcycle) + (4 * bus) + (5 * heavy_rail) + (9 * car);
 		float survey5_perf= (4 * walk) + (0 * car23) + (0 * cars4) + (0 * light_rail);
 		float survey6_perf= (4 * walk) + (0 * car23) + (0 * cars4) + (0 * light_rail);
 		float survey7_perf= (9 * car) + (0 * car23) + (0 * cars4) + (0 * light_rail);
-		
+
 		//we have to find mean for the survey's submitted, it will give co2e emission
 		survey3_perf = 16.74
 		survey4_perf = 13.52
 		survey5_perf = 0.0
 		survey6_perf = 0.0
 		survey7_perf = 8.37
-		
+
 		float carbonEmissionBaseLine = (survey7_perf * 0.0004536).round(6);
-		
-		//Verify the Baseline and performance carbon emission 
+
+		//Verify the Baseline and performance carbon emission
 		String baseLineReadingCo2= WebUI.getText(findTestObject('Object Repository/Improvement/Transportation/BaselinePeriodCo2e'))
 		String performanceReadingCo2= WebUI.getText(findTestObject('Object Repository/Improvement/Transportation/PerformancePeriodCo2e'))
 		String baseReadingOcc = WebUI.getText(findTestObject('Object Repository/Improvement/Transportation/BaselinePeriodOcc'))
 		String perfomanceReadingOcc = WebUI.getText(findTestObject('Object Repository/Improvement/Transportation/PerformancePeriodOcc'))
-		
+
 		WebUI.verifyMatch(baseLineReadingCo2, String.valueOf(carbonEmissionBaseLine) , false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(performanceReadingCo2, String.valueOf(carbonEmissionPerform) , false , FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(baseReadingOcc, '47', false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(perfomanceReadingOcc, '47', false , FailureHandling.CONTINUE_ON_FAILURE)
-		
+
 		float diffCE = (carbonEmissionBaseLine - carbonEmissionPerform)
-		
+
 		if(diffCE==0){
 			scoreTransport=0;
 			println "Score Transport " + scoreTransport;
@@ -733,15 +723,15 @@ public class ReusableMethodsImprovement extends BaseClass{
 		}
 
 		//Area percentage change for Transportation
-		
+
 		double diffOcc= (Double.parseDouble(baseReadingOcc).round(6) - Double.parseDouble(perfomanceReadingOcc).round(6));
-		 if (diffOcc==0){
-		
+		if (diffOcc==0){
+
 			percentOcc=0;
 			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Transportation/PercentageChangeOcc')), "0%", false, FailureHandling.CONTINUE_ON_FAILURE)
 		}
 		else if(diffOcc<0){
-		
+
 			percentOcc= ((diffOcc*-100)/baseReadingOcc.round(6)).round(1)
 			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Transportation/PercentageChangeOcc')), String.valueOf(percentOcc)+"%", false, FailureHandling.CONTINUE_ON_FAILURE)
 		}
@@ -749,15 +739,91 @@ public class ReusableMethodsImprovement extends BaseClass{
 			percentOcc= ((diffOcc*100)/baseReadingOcc.round(6)).round(1)
 			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Transportation/PercentageChangeOcc')), String.valueOf(percentOcc)+"%", false, FailureHandling.CONTINUE_ON_FAILURE)
 		}
-		
-		
+
+
 		// Total Score for Energy
 		println "Total Transport Score "+scoreTransport;
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Transportation/TransportationTotalScore')), String.valueOf(Math.round(scoreTransport)), false , FailureHandling.CONTINUE_ON_FAILURE)
+
+	}
+
+
+	//Human Experience Improvement data
+	@Keyword
+	public void validateHumanExperienceImprovementData(){
 		
-	}	
+		double scoreHumanExp;
+		double percentOS, percentOcc;
+		
+		//Total survey submitted 7
+		//Performance Period 2 Survey with occ satisfaction 2,2 
+		double occSatisfactionPerform=(2+2)/2
+		//BaseLine period 5 Survey with occ Satisfaction 2,2,1,1,1
+		double occSatisfactionbaseline= (2+2+1+1+1)/5
+		
+		//Verify the Baseline and performance carbon emission
+		String baseLineReadingOccSatis= WebUI.getText(findTestObject('Object Repository/Improvement/HumanExperience/BaseLineOccSatis'))
+		String performanceReadingOccSatis= WebUI.getText(findTestObject('Object Repository/Improvement/HumanExperience/PerformaceOccSatis'))
+		String baseReadingOcc = WebUI.getText(findTestObject('Object Repository/Improvement/HumanExperience/BaseLinePeriodOcc'))
+		String perfomanceReadingOcc = WebUI.getText(findTestObject('Object Repository/Improvement/HumanExperience/PerformancePeriodOcc'))
+
+		WebUI.verifyMatch(baseLineReadingOccSatis, String.valueOf(Math.round(occSatisfactionbaseline)) , false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(performanceReadingOccSatis, String.valueOf(Math.round(occSatisfactionPerform)) , false , FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(baseReadingOcc, '47', false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(perfomanceReadingOcc, '47', false , FailureHandling.CONTINUE_ON_FAILURE)
+
+		float diffOS = (baseLineReadingOccSatis - performanceReadingOccSatis)
+
+		if(diffOS==0){
+			scoreHumanExp=0;
+			println "Score Transport " + scoreHumanExp;
+			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/HumanExperience/PercentageChangeOccSatis')), "0%", false , FailureHandling.CONTINUE_ON_FAILURE )
+		}
+		else if(diffOS<0){
+			scoreHumanExp=0;
+			println "Score Transport " + scoreHumanExp;
+			percentOS= (diffOS*-100)/baseLineReadingOccSatis;
+			percentOS= percentOS.round(1);
+			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/HumanExperience/PercentageChangeOccSatis')), String.valueOf(percentOS)+"%", false , FailureHandling.CONTINUE_ON_FAILURE )
+		}
+		else{
+			percentOS= (diffOS*100)/baseLineReadingOccSatis;
+			percentOS= percentOS.round(1);
+			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/HumanExperience/PercentageChangeOccSatis')),String.valueOf(percentOS)+"%", false, , FailureHandling.CONTINUE_ON_FAILURE)
+			scoreHumanExp= score(percentOS).round(1);
+			println "Score Transport " + scoreHumanExp;
+		}
+
+		//Area percentage change for Transportation
+
+		double diffOcc= (Double.parseDouble(baseReadingOcc).round(6) - Double.parseDouble(perfomanceReadingOcc).round(6));
+		if (diffOcc==0){
+
+			percentOcc=0;
+			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/HumanExperience/PercentageChangeOcc')), "0%", false, FailureHandling.CONTINUE_ON_FAILURE)
+		}
+		else if(diffOcc<0){
+
+			percentOcc= ((diffOcc*-100)/baseReadingOcc.round(6)).round(1)
+			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/HumanExperience/PercentageChangeOcc')), String.valueOf(percentOcc)+"%", false, FailureHandling.CONTINUE_ON_FAILURE)
+		}
+		else{
+			percentOcc= ((diffOcc*100)/baseReadingOcc.round(6)).round(1)
+			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/HumanExperience/PercentageChangeOcc')), String.valueOf(percentOcc)+"%", false, FailureHandling.CONTINUE_ON_FAILURE)
+		}
+
+
+		// Total Score for Energy
+		println "Total Transport Score "+scoreHumanExp;
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Transportation/TransportationTotalScore')), String.valueOf(Math.round(scoreHumanExp)), false , FailureHandling.CONTINUE_ON_FAILURE)
+
+		
+		
+		
+		
+	}
 	
 	
-	
-	
+
+
 }

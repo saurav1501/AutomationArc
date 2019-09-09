@@ -664,6 +664,10 @@ def static "com.arc.ReusableMethods.ReusableMethodsImprovement.validateTransport
     (new com.arc.ReusableMethods.ReusableMethodsImprovement()).validateTransportationImprovementData()
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsImprovement.validateHumanExperienceImprovementData"() {
+    (new com.arc.ReusableMethods.ReusableMethodsImprovement()).validateHumanExperienceImprovementData()
+}
+
 def static "com.helper.javascript.JavaScriptHelper.executeScript"(
     	String script	) {
     (new com.helper.javascript.JavaScriptHelper()).executeScript(
@@ -2110,6 +2114,10 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.uploadArcDataTempla
 
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.uploadArcDataTemplateUSTons"() {
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).uploadArcDataTemplateUSTons()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.uploadArcDataTemplateImprovement"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).uploadArcDataTemplateImprovement()
 }
 
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.uploadArcDataTemplatetrial"() {
