@@ -655,6 +655,11 @@ public class ReusableMethodsImprovement extends BaseClass{
 	@Keyword
 	public void validateTransportationImprovementData(){
 
+		WebUI.delay(5)
+		WebUI.click(findTestObject('Object Repository/Improvement/ImprovementTab'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.delay(10)
+		
 		double scoreTransport;
 		double percentCo2e, percentOcc;
 
