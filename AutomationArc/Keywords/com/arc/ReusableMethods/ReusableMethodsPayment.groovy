@@ -593,7 +593,7 @@ public class ReusableMethodsPayment extends BaseClass{
 		WebUI.setText(findTestObject('Object Repository/paymentPageNewUI/billingZip'),zip )
 
 		WebUI.click(findTestObject('Object Repository/paymentPageNewUI/paymentPagePayNowOption'))
-		WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/CardNumber'),'4012000010000676767')
+		WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/CardNumber'),'4012000010000135013')
 		WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/ccExpiary'),cardDate)
 		WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/cvvCreditCard'),cardCvv)
 		WebUI.delay(3)

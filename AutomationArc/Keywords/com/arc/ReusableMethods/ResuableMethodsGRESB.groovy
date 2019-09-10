@@ -739,15 +739,10 @@ public class ResuableMethodsGRESB extends BaseClass {
 	@Keyword
 	public void verifyDataInputMeterData(){
 
-		/*findTestObject('Object Repository/Portfolio/GRESB/DataInput/ElectricityMeter')
-		 findTestObject('Object Repository/Portfolio/GRESB/DataInput/DistrictHeatingAndCoolingMeter')
-		 findTestObject('Object Repository/Portfolio/GRESB/DataInput/FuelMeter')
-		 findTestObject('Object Repository/Portfolio/GRESB/DataInput/WaterMeter')
-		 findTestObject('Object Repository/Portfolio/GRESB/DataInput/WasteMeter')
-		 findTestObject('Object Repository/Portfolio/GRESB/DataInput/BuildingSetting')*/
+		
 
 		double energyReading=100
-		double value= (energyReading*(4000/3000))*2
+		double value= (energyReading*(5000/4500))*2
 		value.round(2)
 		println value.round(2)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
@@ -772,7 +767,7 @@ public class ResuableMethodsGRESB extends BaseClass {
 		WebUI.click(findTestObject('Object Repository/Portfolio/GRESB/DataInput/WaterMeter'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		double waterReading=50
-		double value1= (waterReading*(4000/3000))*2
+		double value1= (waterReading*(5000/4500))*2
 		value1= value1*264.172
 		println value1.round(2)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ReadingOne'),'value'), Double.toString(value1.round(2)), false)

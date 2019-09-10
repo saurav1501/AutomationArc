@@ -3836,9 +3836,10 @@ public class ResuableMethodsPortfolio extends BaseClass {
 	public void projectSIDetails(String sheetName, int rowNum) throws IOException, InterruptedException {
 		WebUI.click(findTestObject('Portfolio/CarbonVal/ProjectFil/SIButton'))
 		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Portfolio/Common/SQMile'))
 		WebUI.delay(2)
-
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		String totalFloorAreaSI = data.getCellData(sheetName,"AreaSI",9)
 		String totalCertifiedAreaSI = data.getCellData(sheetName,"AreaSI",10)
 

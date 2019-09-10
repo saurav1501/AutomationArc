@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//span[text()=&quot;Gross Sq.ft.&quot;])[1]</value>
+         <value>(//*[@class=&quot;portfolioWidget-data--units&quot;]//button)[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

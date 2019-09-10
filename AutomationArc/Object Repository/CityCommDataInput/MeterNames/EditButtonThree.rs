@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description>Upload button in the document tab to upload files.</description>
-   <name>UploadButtonInDocumentTab</name>
+   <description></description>
+   <name>EditButtonThree</name>
    <tag></tag>
-   <elementGuidId>cd076709-0317-4469-82d3-a8051bfb5954</elementGuidId>
+   <elementGuidId>cd6f089f-494e-4389-acae-7c791e45147f</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@ng-class=&quot;upload_credit ? 'block_div' : ''&quot;]</value>
+         <value>(//*[@ng-click=&quot;data.static_row = !data.static_row&quot;])[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -20,6 +21,6 @@
       <matchCondition>equals</matchCondition>
       <name>ref_element</name>
       <type>Main</type>
-      <value>Object Repository/DataInput/CreateMeterBuilding/iframe_datainput-widget</value>
+      <value>Object Repository/DataInput/iframe_datainput-widget</value>
    </webElementProperties>
 </WebElementEntity>
