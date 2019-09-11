@@ -5757,6 +5757,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('Object Repository/DataInput/Survey/SaveButtonToRecordSurveyData'))
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		WebUI.delay(2)
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Survey/SatisfactionSlider'),5)
 
 		if(surveylang=='French'||surveylang=='Portuguese'||surveylang=='Chinese'){

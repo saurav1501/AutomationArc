@@ -381,6 +381,7 @@ public class ReusableMethodsImprovement extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/Improvement/ImprovementTab'))
 		//WebUI.waitForElementNotVisible(findTestObject('Object Repository/Improvement/ImprovementPageLoader'), GlobalVariable.minAngularWait)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 		WebUI.delay(10)
 		String baseLineReadingSEI= WebUI.getText(findTestObject('Object Repository/Improvement/Energy/BaseLinePeriodSEI'))
 		String performanceReadingSEI= WebUI.getText(findTestObject('Object Repository/Improvement/Energy/PerformancePeriodSEI'))

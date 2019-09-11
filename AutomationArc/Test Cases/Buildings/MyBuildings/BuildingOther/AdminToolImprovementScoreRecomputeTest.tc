@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>To recompute the score for the Improvement page.</description>
+   <name>AdminToolImprovementScoreRecomputeTest</name>
+   <tag>Score Recompute Admin tool Improvement page</tag>
+   <comment></comment>
+   <testCaseGuid>efa842f6-53f6-4ae5-bc48-61fc98fc4329</testCaseGuid>
+</TestCaseEntity>

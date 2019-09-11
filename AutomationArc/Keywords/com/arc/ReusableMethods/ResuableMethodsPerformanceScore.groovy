@@ -170,7 +170,8 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 
 		/*WebUI.delay(22)
 		 WebUI.waitForElementVisible(findTestObject('PerformanceScore/Score/EnergyScore'), 20)
-		 */	String energyScore = WebUI.getText(findTestObject('PerformanceScore/Score/EnergyScore'))
+		 */	
+		String energyScore = WebUI.getText(findTestObject('PerformanceScore/Score/EnergyScore'))
 		String waterScore = WebUI.getText(findTestObject('PerformanceScore/Score/WaterSocre'))
 		String wasteScore = WebUI.getText(findTestObject('PerformanceScore/Score/WasteScore'))
 		String transportScore = WebUI.getText(findTestObject('PerformanceScore/Score/TransportScore'))
@@ -1644,4 +1645,33 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		//WebUI.delay(5)
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 	}
+	
+	
+	public void recomputeScoreImprovement(String sheetName,int rowNum) throws IOException, InterruptedException {
+		String projectId = data.getCellData(sheetName,"ProjectID",rowNum)
+
+		WebUI.click(findTestObject('PerformanceScore/ImprovementScoreTab'))
+		WebUI.delay(3)
+		WebUI.setText(findTestObject('PerformanceScore/LEEDIDImprovementPage'),projectId)
+		WebUI.delay(2)
+		WebUI.click(findTestObject('PerformanceScore/ImprovementScoreRecomputeButton'))
+
+		boolean keepGoing = WebUI.waitForAngularLoad(240, FailureHandling.CONTINUE_ON_FAILURE)
+
+		if(keepGoing== false)
+
+			for(int i=0;i<=1;i++){
+				WebUI.click(findTestObject('PerformanceScore/ImprovementScoreTab'))
+				WebUI.delay(3)
+				WebUI.setText(findTestObject('PerformanceScore/LEEDIDImprovementPage'),projectId)
+				WebUI.delay(2)
+				WebUI.click(findTestObject('PerformanceScore/ImprovementScoreRecomputeButton'))
+				WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+			}
+		
+		WebUI.waitForElementNotVisible(findTestObject('Object Repository/PerformanceScore/NoEnergyDataWarning'), GlobalVariable.minAngularWait)		
+	}
+	
+	
 }

@@ -3497,11 +3497,10 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Object Repository/DataInput/Not/div_Total Volatile Organic Com'))
 		WebUI.delay(6)
 		WebUI.click(findTestObject('Object Repository/DataInput/CityC/DeleteButton1'))
-		WebUI.click(findTestObject('Object Repository/DataInput/CityC/DeleteButton2'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/DataInput/CityC/DeleteButton1'))
 		WebUI.delay(7)
 		WebUI.verifyElementPresent(findTestObject('Object Repository/DataInput/Not/Tvo/svg_Total Volatile Organic Com'),3)
-
-
 	}
 
 	@Keyword
@@ -3513,7 +3512,8 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Object Repository/DataInput/Not/div_Carbon Dioxide'))
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/DataInput/CityC/DeleteButton1'))
-		WebUI.click(findTestObject('Object Repository/DataInput/CityC/DeleteButton2'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/DataInput/CityC/DeleteButton1'))
 		WebUI.delay(7)
 		WebUI.verifyElementNotPresent(findTestObject('DataInput/Not/CO2Notification'),5)
 

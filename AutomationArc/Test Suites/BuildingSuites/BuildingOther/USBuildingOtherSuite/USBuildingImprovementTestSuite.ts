@@ -107,6 +107,12 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/TeamVerifyProjectShouldNotHaveoreThanOneAdminTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>04b63c6b-7099-4d85-a4e9-75e6c298cda2</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/AdminToolImprovementScoreRecomputeTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>b432be43-d607-42da-90da-1115ea8be565</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
