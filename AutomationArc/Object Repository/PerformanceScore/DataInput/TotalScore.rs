@@ -6,15 +6,15 @@
    <elementGuidId>20d3dd09-3202-42c6-af4e-a1d58ea0c634</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>XPATH</key>
+         <value>(//span[@class=&quot;category-score--wrapper&quot;])[1]/span</value>
+      </entry>
+      <entry>
          <key>CSS</key>
       </entry>
       <entry>
          <key>BASIC</key>
          <value>//*[@ng-if = '!computing_energy &amp;&amp; !computing_water &amp;&amp; !computing_waste &amp;&amp; !computing_transport &amp;&amp; !computing_human &amp;&amp; !computing_asset' and @ref_element = 'Object Repository/PerformanceScore/DataInput/iframe_datainput-widget']</value>
-      </entry>
-      <entry>
-         <key>XPATH</key>
-         <value>(//span[@class=&quot;category-score--wrapper&quot;])[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

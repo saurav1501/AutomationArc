@@ -37,15 +37,15 @@ public class ReusableMethodsImprovement extends BaseClass{
 		System.out.println("Cur Year "+ curYear);
 		System.out.println("Cur Month "+ curMonth);
 		System.out.println("Cur Day "+ curDay);
-		
+
 		int j=0;
 		for(int row=27; row>=2;row--){
 			String date= dataExcelTemplate.getCellData("Improvement", "Start",row );
-            
+
 			Date date2=new SimpleDateFormat("MM/dd/yyyy").parse(date);
 			simpleDateformat1 = new SimpleDateFormat("YYYY");
 			int tempYear= Integer.parseInt(simpleDateformat1.format(date2));
-			
+
 			//System.out.println("Temp Year "+tempYear);
 
 			Date date1=new SimpleDateFormat("MM/dd/yyyy").parse(date);
@@ -78,7 +78,7 @@ public class ReusableMethodsImprovement extends BaseClass{
 				break;
 			}
 		}
-  
+
 		for(int i=j;i<=j+10;i++)
 			totalReadingFirst+=Double.valueOf(dataExcelTemplate.getCellData("Improvement", "Reading1",i ));
 		System.out.println("Middle Reading "+totalReadingFirst);
@@ -127,7 +127,7 @@ public class ReusableMethodsImprovement extends BaseClass{
 			Date date2=new SimpleDateFormat("MM/dd/yyyy").parse(date);
 			simpleDateformat1 = new SimpleDateFormat("YYYY");
 			int tempYear= Integer.parseInt(simpleDateformat1.format(date2));
-			
+
 			//System.out.println("Temp Year "+tempYear);
 
 			Date date1=new SimpleDateFormat("MM/dd/yyyy").parse(date);
@@ -209,7 +209,7 @@ public class ReusableMethodsImprovement extends BaseClass{
 			Date date2=new SimpleDateFormat("MM/dd/yyyy").parse(date);
 			simpleDateformat1 = new SimpleDateFormat("YYYY");
 			int tempYear= Integer.parseInt(simpleDateformat1.format(date2));
-			
+
 			//System.out.println("Temp Year "+tempYear);
 
 			Date date1=new SimpleDateFormat("MM/dd/yyyy").parse(date);
@@ -291,7 +291,7 @@ public class ReusableMethodsImprovement extends BaseClass{
 			Date date2=new SimpleDateFormat("MM/dd/yyyy").parse(date);
 			simpleDateformat1 = new SimpleDateFormat("YYYY");
 			int tempYear= Integer.parseInt(simpleDateformat1.format(date2));
-			
+
 			//System.out.println("Temp Year "+tempYear);
 
 			Date date1=new SimpleDateFormat("MM/dd/yyyy").parse(date);
@@ -395,9 +395,9 @@ public class ReusableMethodsImprovement extends BaseClass{
 
 		WebUI.verifyMatch(baseReadingArea, '1,234', false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(perfomanceReadingArea, '1,234', false , FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(baseLineCost, "NA", false , FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(performanceCost, "NA", false , FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(energyCostPercentage, "NA", false , FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(baseLineCost, "0", false , FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(performanceCost, "0", false , FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(energyCostPercentage, "0%", false , FailureHandling.CONTINUE_ON_FAILURE)
 
 		WebUI.verifyMatch(baseLineReadingSEI, String.valueOf(calculateBaseLineReading(1234.0).round(6)),false , FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(performanceReadingSEI,String.valueOf(calculatePerformanceReading(1234.0).round(6)),false , FailureHandling.CONTINUE_ON_FAILURE)
@@ -660,7 +660,7 @@ public class ReusableMethodsImprovement extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/Improvement/ImprovementTab'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.delay(10)
-		
+
 		double scoreTransport;
 		double percentCo2e, percentOcc;
 
@@ -757,16 +757,16 @@ public class ReusableMethodsImprovement extends BaseClass{
 	//Human Experience Improvement data
 	@Keyword
 	public void validateHumanExperienceImprovementData(){
-		
+
 		double scoreHumanExp;
 		double percentOS, percentOcc;
-		
+
 		//Total survey submitted 7
-		//Performance Period 2 Survey with occ satisfaction 2,2 
+		//Performance Period 2 Survey with occ satisfaction 2,2
 		double occSatisfactionPerform=(2+2)/2
 		//BaseLine period 5 Survey with occ Satisfaction 2,2,1,1,1
 		double occSatisfactionbaseline= (2+2+1+1+1)/5
-		
+
 		//Verify the Baseline and performance carbon emission
 		String baseLineReadingOccSatis= WebUI.getText(findTestObject('Object Repository/Improvement/HumanExperience/BaseLineOccSatis'))
 		String performanceReadingOccSatis= WebUI.getText(findTestObject('Object Repository/Improvement/HumanExperience/PerformaceOccSatis'))
@@ -823,13 +823,13 @@ public class ReusableMethodsImprovement extends BaseClass{
 		println "Total Transport Score "+scoreHumanExp;
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Improvement/Transportation/TransportationTotalScore')), String.valueOf(Math.round(scoreHumanExp)), false , FailureHandling.CONTINUE_ON_FAILURE)
 
-		
-		
-		
-		
+
+
+
+
 	}
-	
-	
+
+
 
 
 }
