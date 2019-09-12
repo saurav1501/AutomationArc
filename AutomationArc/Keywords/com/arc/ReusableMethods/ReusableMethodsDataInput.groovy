@@ -8176,7 +8176,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	}
 
-	
+
 	public void createCityCommWaterConsumptionMeter(String sheetName, int rowNum){
 		/*************************Reading data from excel sheet ************************************/
 		String reading1  = data.getCellData(sheetName, "WaterReading1", rowNum)
@@ -8184,11 +8184,11 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		String reading3  = data.getCellData(sheetName, "WaterReading3", rowNum)
 		String reading4  = data.getCellData(sheetName, "WaterReading4", rowNum)
 		String reading5  = data.getCellData(sheetName, "WaterReading5", rowNum)
-		
+
 		WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-		
+
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/Waterconsumption'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'))
@@ -8224,7 +8224,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.refresh()
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		
+
 		WebUI.click(WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/Waterconsumption')))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'), reading1, false)
@@ -8232,24 +8232,24 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingThree'),'value'), reading3, false)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingFour'),'value'), reading4, false)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingFive'),'value'), reading5, false)
-		
-		
+
+
 	}
-	
+
 
 	public void createCityCommWasteGenerationMeter(String sheetName, int rowNum){
-		
+
 		/*************************Reading data from excel sheet ************************************/
 		String reading1  = data.getCellData(sheetName, "wastegeneration1", rowNum)
 		String reading2  = data.getCellData(sheetName, "wastegeneration2", rowNum)
 		String reading3  = data.getCellData(sheetName, "wastegeneration3", rowNum)
 		String reading4  = data.getCellData(sheetName, "wastegeneration4", rowNum)
 		String reading5  = data.getCellData(sheetName, "wastegeneration5", rowNum)
-		
+
 		WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-		
+
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/CityCommunityWasteGeneration'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'))
@@ -8285,7 +8285,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.refresh()
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		
+
 		WebUI.click(WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/CityCommunityWasteGeneration')))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'), reading1, false)
@@ -8293,122 +8293,299 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingThree'),'value'), reading3, false)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingFour'),'value'), reading4, false)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingFive'),'value'), reading5, false)
-		
+
 	}
-	
+
 	public void createCityCommWasteDiversionMeter(String sheetName, int rowNum){
-			
-			WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
-			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-			WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-			
-			WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/CityCommunityWasteGeneration'))
-			WebUI.waitForElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'), GlobalVariable.minAngularWait)
-			WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'))
-			WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
-			WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), "80")
-			WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
-			WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonOne'), GlobalVariable.minAngularWait)
-	
-			WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/NextYearButton'))
-			WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingTwo'), GlobalVariable.minAngularWait)
-			WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingTwo'), "70")
-			WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
-			WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonTwo'), GlobalVariable.minAngularWait)
-	
-			WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/PreviousYearButton'))
-			WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingThree'), GlobalVariable.minAngularWait)
-			WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingThree'), "60")
-			WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
-			WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonThree'), GlobalVariable.minAngularWait)
-	
-			WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/PreviousYearButton'))
-			WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingFour'), GlobalVariable.minAngularWait)
-			WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingFour'), "50")
-			WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
-			WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonFour'), GlobalVariable.minAngularWait)
-	
-			WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/PreviousYearButton'))
-			WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingFive'), GlobalVariable.minAngularWait)
-			WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingThree'), "40")
-			WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
-			WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonThree'), GlobalVariable.minAngularWait)
-	
-			WebUI.refresh()
-			WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-			
-			WebUI.click(WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/CityCommunityWasteGeneration')))
-			WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
-			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'), "80", false)
-			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingTwo'),'value'), "70", false)
-			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingThree'),'value'), "60", false)
-			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingFour'),'value'), "50", false)
-			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingFive'),'value'), "40", false)
-			
+
+		WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/CityCommunityWasteGeneration'))
+		WebUI.waitForElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
+		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), "80")
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonOne'), GlobalVariable.minAngularWait)
+
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/NextYearButton'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingTwo'), GlobalVariable.minAngularWait)
+		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingTwo'), "70")
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonTwo'), GlobalVariable.minAngularWait)
+
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/PreviousYearButton'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingThree'), GlobalVariable.minAngularWait)
+		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingThree'), "60")
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonThree'), GlobalVariable.minAngularWait)
+
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/PreviousYearButton'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingFour'), GlobalVariable.minAngularWait)
+		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingFour'), "50")
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonFour'), GlobalVariable.minAngularWait)
+
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/PreviousYearButton'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingFive'), GlobalVariable.minAngularWait)
+		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingThree'), "40")
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonThree'), GlobalVariable.minAngularWait)
+
+		WebUI.refresh()
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.click(WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/CityCommunityWasteGeneration')))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'), "80", false)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingTwo'),'value'), "70", false)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingThree'),'value'), "60", false)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingFour'),'value'), "50", false)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingFive'),'value'), "40", false)
+
 	}
-	
-	public void createCityCommCityCommunityTransportationMeter(String sheetName, int rowNum){
+
+	public void createCityCommunityTransportationMeter(String sheetName, int rowNum){
 		/*************************Reading data from excel sheet ************************************/
-		    String reading1  = data.getCellData(sheetName, "TReading1", rowNum)
-		    String reading2  = data.getCellData(sheetName, "TReading2", rowNum)
-		    String reading3  = data.getCellData(sheetName, "TReading3", rowNum)
-		    String reading4  = data.getCellData(sheetName, "TReading4", rowNum)
-		    String reading5  = data.getCellData(sheetName, "TReading5", rowNum)
-			
-			WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
-			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-			WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-			
-			WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/CityCommunityTransportation'))
-			WebUI.waitForElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'), GlobalVariable.minAngularWait)
-			WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'))
-			WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
-			WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), reading1)
-			WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
-			WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonOne'), GlobalVariable.minAngularWait)
-	
-			WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/NextYearButton'))
-			WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingTwo'), GlobalVariable.minAngularWait)
-			WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingTwo'), reading2)
-			WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
-			WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonTwo'), GlobalVariable.minAngularWait)
-	
-			WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/PreviousYearButton'))
-			WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingThree'), GlobalVariable.minAngularWait)
-			WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingThree'), reading3)
-			WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
-			WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonThree'), GlobalVariable.minAngularWait)
-	
-			WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/PreviousYearButton'))
-			WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingFour'), GlobalVariable.minAngularWait)
-			WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingFour'), reading4)
-			WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
-			WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonFour'), GlobalVariable.minAngularWait)
-	
-			WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/PreviousYearButton'))
-			WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingFive'), GlobalVariable.minAngularWait)
-			WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingThree'), reading5)
-			WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
-			WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonThree'), GlobalVariable.minAngularWait)
-	
-			WebUI.refresh()
-			WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-			
-			WebUI.click(WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/CityCommunityTransportation')))
-			WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
-			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'), reading1, false)
-			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingTwo'),'value'), reading2, false)
-			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingThree'),'value'), reading3, false)
-			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingFour'),'value'), reading4, false)
-			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingFive'),'value'), reading5, false)	
+		String reading1  = data.getCellData(sheetName, "TReading1", rowNum)
+		String reading2  = data.getCellData(sheetName, "TReading2", rowNum)
+		String reading3  = data.getCellData(sheetName, "TReading3", rowNum)
+		String reading4  = data.getCellData(sheetName, "TReading4", rowNum)
+		String reading5  = data.getCellData(sheetName, "TReading5", rowNum)
+
+		WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/CityCommunityTransportation'))
+		WebUI.waitForElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
+		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), reading1)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonOne'), GlobalVariable.minAngularWait)
+
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/NextYearButton'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingTwo'), GlobalVariable.minAngularWait)
+		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingTwo'), reading2)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonTwo'), GlobalVariable.minAngularWait)
+
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/PreviousYearButton'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingThree'), GlobalVariable.minAngularWait)
+		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingThree'), reading3)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonThree'), GlobalVariable.minAngularWait)
+
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/PreviousYearButton'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingFour'), GlobalVariable.minAngularWait)
+		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingFour'), reading4)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonFour'), GlobalVariable.minAngularWait)
+
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/PreviousYearButton'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingFive'), GlobalVariable.minAngularWait)
+		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingThree'), reading5)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonThree'), GlobalVariable.minAngularWait)
+
+		WebUI.refresh()
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.click(WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/CityCommunityTransportation')))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'), reading1, false)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingTwo'),'value'), reading2, false)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingThree'),'value'), reading3, false)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingFour'),'value'), reading4, false)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingFive'),'value'), reading5, false)
 	}
-	
-	
-	
-	
-	
+
+	//Human Experience Meters
+
+	//High School Percent
+
+	public void createCityCommCityCommunityHighSchoolPercentMeter(String sheetName, int rowNum){
+
+		String reading1  = data.getCellData(sheetName, "EPReading1", rowNum)
+		String reading2  = data.getCellData(sheetName, "EPReading2", rowNum)
+		String reading3  = data.getCellData(sheetName, "HGiniReading1", rowNum)
+		String reading4  = data.getCellData(sheetName, "HGiniReading2", rowNum)
+		String reading5  = data.getCellData(sheetName, "Hincome1", rowNum)
+		String reading6  = data.getCellData(sheetName, "Hincome2", rowNum)
+
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/HighSchoolPercent'))
+		WebUI.waitForElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
+		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), reading1)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonOne'), GlobalVariable.minAngularWait)
+
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/PreviousYearButton'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingTwo'), GlobalVariable.minAngularWait)
+		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingTwo'), reading2)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonTwo'), GlobalVariable.minAngularWait)
+
+		WebUI.refresh()
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.click(WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/HighSchoolPercent')))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'), reading1, false)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingTwo'),'value'), reading2, false)
+
+	}
+
+	//Bachelor Degree Percentage
+
+	public void createCityCommunityBachelorDegreePercentMeter(String sheetName, int rowNum){
+
+		String reading1  = data.getCellData(sheetName, "EPReading1", rowNum)
+		String reading2  = data.getCellData(sheetName, "EPReading2", rowNum)
+		String reading3  = data.getCellData(sheetName, "HGiniReading1", rowNum)
+		String reading4  = data.getCellData(sheetName, "HGiniReading2", rowNum)
+		String reading5  = data.getCellData(sheetName, "Hincome1", rowNum)
+		String reading6  = data.getCellData(sheetName, "Hincome2", rowNum)
+
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/BachelorDegreePercent'))
+		WebUI.waitForElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
+		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), reading1)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonOne'), GlobalVariable.minAngularWait)
+
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/PreviousYearButton'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingTwo'), GlobalVariable.minAngularWait)
+		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingTwo'), reading2)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonTwo'), GlobalVariable.minAngularWait)
+
+		WebUI.refresh()
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.click(WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/BachelorDegreePercent')))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'), reading1, false)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingTwo'),'value'), reading2, false)
+
+	}
+
+	//Rent Income Percentage
+
+	public void createCityCommunityRentIncomePercentMeter(String sheetName, int rowNum){
+
+		String reading1  = data.getCellData(sheetName, "EPReading1", rowNum)
+		String reading2  = data.getCellData(sheetName, "EPReading2", rowNum)
+		String reading3  = data.getCellData(sheetName, "HGiniReading1", rowNum)
+		String reading4  = data.getCellData(sheetName, "HGiniReading2", rowNum)
+		String reading5  = data.getCellData(sheetName, "Hincome1", rowNum)
+		String reading6  = data.getCellData(sheetName, "Hincome2", rowNum)
+
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/RentIncomePercent'))
+		WebUI.waitForElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
+		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), reading1)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonOne'), GlobalVariable.minAngularWait)
+
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/PreviousYearButton'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingTwo'), GlobalVariable.minAngularWait)
+		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingTwo'), reading2)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonTwo'), GlobalVariable.minAngularWait)
+
+		WebUI.refresh()
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.click(WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/RentIncomePercent')))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'), reading1, false)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingTwo'),'value'), reading2, false)
+
+	}
+
+	//Ginni Coefficient
+
+	public void createCityCommunityGinniCoefficientMeter(String sheetName, int rowNum){
+
+		String reading1  = data.getCellData(sheetName, "EPReading1", rowNum)
+		String reading2  = data.getCellData(sheetName, "EPReading2", rowNum)
+		String reading3  = data.getCellData(sheetName, "HGiniReading1", rowNum)
+		String reading4  = data.getCellData(sheetName, "HGiniReading2", rowNum)
+		String reading5  = data.getCellData(sheetName, "Hincome1", rowNum)
+		String reading6  = data.getCellData(sheetName, "Hincome2", rowNum)
+
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/GiniCoefficient'))
+		WebUI.waitForElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
+		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), reading3)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonOne'), GlobalVariable.minAngularWait)
+
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/PreviousYearButton'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingTwo'), GlobalVariable.minAngularWait)
+		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingTwo'), reading4)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonTwo'), GlobalVariable.minAngularWait)
+
+		WebUI.refresh()
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.click(WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/GiniCoefficient')))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'), reading3, false)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingTwo'),'value'), reading3, false)
+
+	}
+
+	//Median Income
+	public void createCityCommunityMedianIncomeMeter(String sheetName, int rowNum){
+
+		String reading1  = data.getCellData(sheetName, "EPReading1", rowNum)
+		String reading2  = data.getCellData(sheetName, "EPReading2", rowNum)
+		String reading3  = data.getCellData(sheetName, "HGiniReading1", rowNum)
+		String reading4  = data.getCellData(sheetName, "HGiniReading2", rowNum)
+		String reading5  = data.getCellData(sheetName, "Hincome1", rowNum)
+		String reading6  = data.getCellData(sheetName, "Hincome2", rowNum)
+
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/GiniCoefficient'))
+		WebUI.waitForElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
+		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), reading3)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonOne'), GlobalVariable.minAngularWait)
+
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/PreviousYearButton'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingTwo'), GlobalVariable.minAngularWait)
+		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingTwo'), reading4)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonTwo'), GlobalVariable.minAngularWait)
+
+		WebUI.refresh()
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.click(WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/GiniCoefficient')))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'), reading3, false)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingTwo'),'value'), reading3, false)
+
+	}
+
 
 }
 

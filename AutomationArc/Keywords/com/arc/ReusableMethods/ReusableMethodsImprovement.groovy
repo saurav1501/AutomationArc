@@ -395,9 +395,9 @@ public class ReusableMethodsImprovement extends BaseClass{
 
 		WebUI.verifyMatch(baseReadingArea, '1,234', false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(perfomanceReadingArea, '1,234', false , FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(baseLineCost, "0", false , FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(performanceCost, "0", false , FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(energyCostPercentage, "0%", false , FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(baseLineCost, "NA", false , FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(performanceCost, "NA", false , FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(energyCostPercentage, "NA", false , FailureHandling.CONTINUE_ON_FAILURE)
 
 		WebUI.verifyMatch(baseLineReadingSEI, String.valueOf(calculateBaseLineReading(1234.0).round(6)),false , FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(performanceReadingSEI,String.valueOf(calculatePerformanceReading(1234.0).round(6)),false , FailureHandling.CONTINUE_ON_FAILURE)

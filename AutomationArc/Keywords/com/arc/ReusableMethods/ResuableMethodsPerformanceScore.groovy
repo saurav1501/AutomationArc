@@ -1647,8 +1647,9 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 	}
 
-
+    @Keyword
 	public void recomputeScoreImprovement(String sheetName,int rowNum) throws IOException, InterruptedException {
+		
 		String projectId = data.getCellData(sheetName,"ProjectID",rowNum)
 
 		WebUI.click(findTestObject('PerformanceScore/ImprovementScoreTab'))
@@ -1670,8 +1671,12 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 				WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 			}
-
 		WebUI.waitForElementNotVisible(findTestObject('Object Repository/PerformanceScore/NoEnergyDataWarning'), GlobalVariable.minAngularWait)
+
+		WebUI.closeWindowIndex(1)
+		WebUI.delay(2)
+		WebUI.switchToWindowIndex(0)
+
 	}
 
 
