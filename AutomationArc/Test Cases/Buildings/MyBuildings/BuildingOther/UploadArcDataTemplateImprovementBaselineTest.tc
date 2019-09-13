@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description>Uploading the excel file to create the meter and populate the data</description>
-   <name>UploadArcDataTemplateImprovementTest</name>
+   <name>UploadArcDataTemplateImprovementBaselineTest</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>292274eb-f464-43a6-a17a-e5b8b0a36b53</testCaseGuid>

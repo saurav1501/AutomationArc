@@ -44,7 +44,7 @@
       <guid>7f6c1185-765e-4fe3-a936-f80d58b7c8a2</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/UploadArcDataTemplateImprovementTest</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/UploadArcDataTemplateImprovementBaselineTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>3c0cf843-0e21-4e0a-ab71-fc5b4da20029</guid>
