@@ -3226,6 +3226,8 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.switchToWindowIndex(1)
 		WebUI.delay(8)
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/Setting/DataGuideBuilding'), 10)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/Manage/Setting/DataGuideBuilding'), GlobalVariable.minAngularWait)
+		WebUI.scrollToElement(findTestObject('Object Repository/Manage/Setting/DataGuideBuilding'), 10)
 		WebUI.click(findTestObject('Object Repository/Manage/Setting/DataGuideBuilding'))
 		WebUI.delay(5)
 		Assert.assertTrue(ReusDataInput.isFileDownloaded('Data Guide for Buildings.pdf'), "DataResources File Didn't downloaded successfully")

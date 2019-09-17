@@ -1910,8 +1910,9 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 
 			//WebUI.selectOptionByLabel(findTestObject('DataInput/Survey/OccupantType'),'Regular Occupant', false)
 
-			WebUI.click(findTestObject('DataInput/Survey/Submit1'))
 			WebUI.waitForElementClickable(findTestObject('DataInput/Survey/Submit'), GlobalVariable.avgAngularWait)
+			WebUI.click(findTestObject('DataInput/Survey/Submit1'))
+			
 
 			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 			WebUI.verifyMatch(WebUI.getText(findTestObject('DataInput/Survey/Thank')), "Options that enhance your satisfaction", false)
