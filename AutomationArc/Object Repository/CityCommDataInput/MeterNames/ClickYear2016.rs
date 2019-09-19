@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description></description>
-   <name>UnemployementPercent</name>
+   <description>Click on the year 2016 in the calender.</description>
+   <name>ClickYear2016</name>
    <tag></tag>
-   <elementGuidId>0399d15c-54fd-4c8f-a318-eaf7c8f3447e</elementGuidId>
+   <elementGuidId>0b0287df-ab33-4498-bc58-954db666d562</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//td[@class=&quot;meterListByType-meterName&quot;])[12]/div</value>
+         <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//*[@class=&quot;datepicker-years&quot;]//td/span[8]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

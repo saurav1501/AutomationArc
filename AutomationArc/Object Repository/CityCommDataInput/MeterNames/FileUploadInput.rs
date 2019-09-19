@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>UnemployementPercent</name>
+   <name>FileUploadInput</name>
    <tag></tag>
-   <elementGuidId>0399d15c-54fd-4c8f-a318-eaf7c8f3447e</elementGuidId>
+   <elementGuidId>91b3768b-6545-4447-b80f-c590ee3fe67d</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//td[@class=&quot;meterListByType-meterName&quot;])[12]/div</value>
+         <value>(//input[@type='file'])[2]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>input[type='file']</value>
       </entry>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

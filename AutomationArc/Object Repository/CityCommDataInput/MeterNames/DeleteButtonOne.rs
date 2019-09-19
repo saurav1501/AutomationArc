@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description></description>
-   <name>UnemployementPercent</name>
+   <description>Delete the reading in the first row.</description>
+   <name>DeleteButtonOne</name>
    <tag></tag>
-   <elementGuidId>0399d15c-54fd-4c8f-a318-eaf7c8f3447e</elementGuidId>
+   <elementGuidId>fcfb86f3-c264-405b-b694-7acdd3e117da</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//td[@class=&quot;meterListByType-meterName&quot;])[12]/div</value>
+         <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>(//*[@ng-click=&quot;deleteReading(data, $index)&quot;])[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

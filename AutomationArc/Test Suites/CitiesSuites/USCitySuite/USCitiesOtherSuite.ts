@@ -83,28 +83,40 @@
       <testCaseId>Test Cases/MyCities/CitiesOther/CreateEnergyMeterReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>a4b44093-1a27-4e92-ab39-6a3316faa460</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCities/CitiesOther/CreateWaterMeterReadingTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>3e40f8f8-e7f4-45c6-a68d-7a45d694e096</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCities/CitiesOther/CreateWasteGenerationMeterReadingTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>88e29da4-c2fe-40c9-a9a1-18a71ecded52</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCities/CitiesOther/CreateWasteDiversionMeterReadingTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>740cc4fe-0a4d-4444-9035-12685bd07d26</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCities/CitiesOther/CreateTrasportMeterReadingTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>d2623958-a927-44c3-ae0e-2166a558147b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/MyCities/CitiesOther/CreateHumanExpMeterReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>888051ec-e6f6-4b97-af51-166b82b10adb</guid>
+      <guid>7a8bd631-3c25-4eb7-b445-8fc9bd21ae20</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCities/CitiesOther/CreateTrasportMeterReadingTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>740cc4fe-0a4d-4444-9035-12685bd07d26</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCities/CitiesOther/CreateWasteGenerationMeterReadingTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>a4b44093-1a27-4e92-ab39-6a3316faa460</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCities/CitiesOther/CreateWaterMeterReadingTest</testCaseId>
+      <testCaseId>Test Cases/MyCities/CitiesOther/CityCommFileUploadDataInputTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>e85a748d-325c-4f13-8b8d-b2b69c4d61b6</guid>

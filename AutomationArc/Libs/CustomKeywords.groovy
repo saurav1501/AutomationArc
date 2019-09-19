@@ -3002,6 +3002,114 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyErrorMessageD
          , 	rowNum)
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createCityCommEnergyGHGMeter"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createCityCommEnergyGHGMeter(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createCityCommWaterConsumptionMeter"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createCityCommWaterConsumptionMeter(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createCityCommWasteGenerationMeter"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createCityCommWasteGenerationMeter(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createCityCommWasteDiversionMeter"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createCityCommWasteDiversionMeter(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createCityCommunityTransportationMeter"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createCityCommunityTransportationMeter(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createCityCommCityCommunityHighSchoolPercentMeter"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createCityCommCityCommunityHighSchoolPercentMeter(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createCityCommunityBachelorDegreePercentMeter"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createCityCommunityBachelorDegreePercentMeter(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createCityCommunityRentIncomePercentMeter"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createCityCommunityRentIncomePercentMeter(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createCityCommunityGinniCoefficientMeter"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createCityCommunityGinniCoefficientMeter(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createCityCommunityMedianIncomeMeter"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createCityCommunityMedianIncomeMeter(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createCityCommunityAirQualityIndexMeter"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createCityCommunityAirQualityIndexMeter()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createCityCommunityUnEmployementPercentageMeter"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createCityCommunityUnEmployementPercentageMeter()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createCityCommunityUnhealthyDaysMeter"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createCityCommunityUnhealthyDaysMeter()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createCityCommunityViolentCrimeMeter"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createCityCommunityViolentCrimeMeter()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.createCityCommunityAdditionalDataMeter"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).createCityCommunityAdditionalDataMeter(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.fileuploadEnergyMeterDataInputCityComm"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).fileuploadEnergyMeterDataInputCityComm()
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsAnalytics.downloadAndVerifySurveyExportedData"() {
     (new com.arc.ReusableMethods.ReusableMethodsAnalytics()).downloadAndVerifySurveyExportedData()
 }

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description></description>
-   <name>UnemployementPercent</name>
+   <description>Save the reading for the populationa and area.</description>
+   <name>SaveButtonSettingTab</name>
    <tag></tag>
-   <elementGuidId>0399d15c-54fd-4c8f-a318-eaf7c8f3447e</elementGuidId>
+   <elementGuidId>2fe5f71c-a1d4-4bae-becf-7756fbaf79ce</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//td[@class=&quot;meterListByType-meterName&quot;])[12]/div</value>
+         <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//*[@ng-click=&quot;validateReadings(data, true)&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

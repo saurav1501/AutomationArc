@@ -836,7 +836,7 @@ public class ReusableMethodsNavigation {
 		}
 
 	}
-	
+
 	@Keyword
 	public void verifyViewAppNavigatesToAppsSection(){
 		navigateIntoDataInput()
@@ -848,8 +848,8 @@ public class ReusableMethodsNavigation {
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/EnergyStartAppVerification'))
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/App/EnergyStartAppVerification')), "Energy Star Portfolio Manager", false)
 
-		
+
 	}
-	
+
 
 }

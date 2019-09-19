@@ -245,7 +245,7 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/projectName'), ProjectName)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/selectProjectType'), prjType, true)
 		if(GlobalVariable.environment=='dev'){
-			WebUI.selectOptionByLabel(findTestObject('Object Repository/Add_Project_Details/UnitType'), 'Square kilo meters', false)
+			WebUI.selectOptionByLabel(findTestObject('Object Repository/Add_Project_Details/UnitType'), 'SI units (kilo meters)', false)
 			WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/grossArea'),'48')
 		}
 		else{
@@ -349,7 +349,7 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/projectName'), ProjectName)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/selectProjectType'), prjType, true)
 		if(GlobalVariable.environment=='dev'){
-			WebUI.selectOptionByLabel(findTestObject('Object Repository/Add_Project_Details/UnitType'), 'Square kilo meters', false)
+			WebUI.selectOptionByLabel(findTestObject('Object Repository/Add_Project_Details/UnitType'), 'SI units (kilo meters)', false)
 			WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/grossArea'),'48')
 		}
 		else{
