@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//*[@ng-click=&quot;saveYear(data)&quot;])[2]</value>
+         <value>(//*[@ng-click=&quot;saveYear(data, data.meter)&quot;])[2]</value>
       </entry>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -6,12 +6,11 @@
    <elementGuidId>a7e0601b-e8f3-47c2-9ba8-95306a782735</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>(//*[@ng-click=&quot;saveYear(data, data.meter)&quot;])[4]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>(//*[@ng-click=&quot;saveYear(data)&quot;])[4]</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
