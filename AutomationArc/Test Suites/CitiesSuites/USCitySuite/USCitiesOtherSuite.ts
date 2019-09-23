@@ -13,7 +13,7 @@
    <testCaseLink>
       <guid>569dd470-b417-4030-aaae-168610e7b8bc</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/MyCities/CitiesOther/LoginWithCitesTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -55,25 +55,19 @@
    <testCaseLink>
       <guid>61d85e9b-101e-47f5-bac5-4576b86479ef</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/MyCities/CitiesOther/UIScoreWithoutDataTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>061bcd52-7116-4a20-9038-b8559da887b7</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/MyCities/CitiesOther/UIScoreFieldIndividualTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>2aac03b8-29a0-4212-9a61-de4d61cb62c1</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCities/CitiesOther/VerifyTotalCreditTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>bfbb0faa-1e30-41f0-9c57-41fc024be497</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/MyCities/CitiesOther/UIFieldTotalScoreTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -115,49 +109,61 @@
    <testCaseLink>
       <guid>7a8bd631-3c25-4eb7-b445-8fc9bd21ae20</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/MyCities/CitiesOther/CityCommFileUploadDataInputTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>c8a4d07a-d1a0-4ee2-a329-30db67b3cbce</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCities/CitiesOther/DownloadAndVerifyExportedDataTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>e88ff2f2-4544-419e-be18-5785f1a4a31a</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCities/CitiesOther/VerifyAndEditTheAreaAndPopulationReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>e85a748d-325c-4f13-8b8d-b2b69c4d61b6</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/MyCities/CitiesOther/AdminToolScoreRecomputeTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>e1d9e04f-82f8-472f-95b9-46bdffbaeea3</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/MyCities/CitiesOther/SetPerformanceScoreDefaultTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d91127b6-818e-4ff9-acd6-f956cf53e025</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/MyCities/CitiesOther/AgreementFileDownloadTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>f7c596e1-7ba0-4e3c-b6d5-ec924630c019</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/MyCities/CitiesOther/CreateADMeterReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>68db65ba-5a30-4538-9c46-d2e549be89c9</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/MyCities/CitiesOther/BillingDateAndStatusTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>a0661f07-e694-46eb-8177-71e7eabc0ccb</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/MyCities/CitiesOther/VerifyAndDownloadBillingReceiptTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>130959f3-bafc-4ea8-960f-2ad73b964e84</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/MyCities/CitiesOther/ScoreVersionVerificationTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

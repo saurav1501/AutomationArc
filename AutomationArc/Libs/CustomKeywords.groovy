@@ -3110,6 +3110,10 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.fileuploadEnergyMet
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).fileuploadEnergyMeterDataInputCityComm()
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.downloadAndVerifyExportDataCityComm"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).downloadAndVerifyExportDataCityComm()
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsAnalytics.downloadAndVerifySurveyExportedData"() {
     (new com.arc.ReusableMethods.ReusableMethodsAnalytics()).downloadAndVerifySurveyExportedData()
 }
