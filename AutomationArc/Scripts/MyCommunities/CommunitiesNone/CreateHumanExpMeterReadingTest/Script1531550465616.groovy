@@ -22,9 +22,17 @@ import internal.GlobalVariable as GlobalVariable
 
 try {
 	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.CommunitySheet, GlobalVariable.rowNumFour)
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.createHumanExpMeterReading'(GlobalVariable.CDataInput,GlobalVariable.rowNumTwo)
-			
-} catch (Throwable t) {
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.createCityCommunityAirQualityIndexMeter'()
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.createCityCommunityBachelorDegreePercentMeter'(GlobalVariable.CDataInput,GlobalVariable.rowNumTwo)
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.createCityCommunityGinniCoefficientMeter'(GlobalVariable.CDataInput,GlobalVariable.rowNumTwo)
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.createCityCommCityCommunityHighSchoolPercentMeter'(GlobalVariable.CDataInput,GlobalVariable.rowNumTwo)
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.createCityCommunityRentIncomePercentMeter'(GlobalVariable.CDataInput,GlobalVariable.rowNumTwo)
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.createCityCommunityUnEmployementPercentageMeter'()
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.createCityCommunityUnhealthyDaysMeter'()
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.createCityCommunityViolentCrimeMeter'()
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.createCityCommunityMedianIncomeMeter'(GlobalVariable.CDataInput,GlobalVariable.rowNumTwo)
+
+  } catch (Throwable t) {
 	System.out.println(t.getLocalizedMessage())
 	Error e1 = new Error(t.getMessage())
 	e1.setStackTrace(t.getStackTrace())

@@ -21,7 +21,7 @@ import internal.GlobalVariable as GlobalVariable
 
 try {
 	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.CommunitySheet, GlobalVariable.rowNumFour)
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.createEnergyMeterReading'(GlobalVariable.CDataInput,GlobalVariable.rowNumTwo)
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.createCityCommEnergyGHGMeter'(GlobalVariable.CDataInput,GlobalVariable.rowNumTwo)
 			
 } catch (Throwable t) {
 	System.out.println(t.getLocalizedMessage())
