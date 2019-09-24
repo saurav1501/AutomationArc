@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//td[@class=&quot;meterListByType-meterName&quot;])[12]/div</value>
+         <value>//*[@data-original-title=&quot;Prosperity: Unemployment rate (%)&quot;]</value>
       </entry>
       <entry>
          <key>BASIC</key>

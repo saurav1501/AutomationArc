@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//td[@class=&quot;meterListByType-meterName&quot;])[16]/div</value>
+         <value>(//*[@class=&quot;meterListByType-meterName&quot;])[4]/div</value>
       </entry>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

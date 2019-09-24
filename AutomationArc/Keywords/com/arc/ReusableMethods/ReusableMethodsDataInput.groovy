@@ -8521,6 +8521,9 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		String ureading3  = data.getCellData(sheetName, "ADeatailsUnitReading3", rowNum)
 		String ureading4  = data.getCellData(sheetName, "ADeatailsUnitReading4", rowNum)
 
+		navigation.navigateIntoDataInput()
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/Data'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/AdditionalDataDropdownButton'), GlobalVariable.minAngularWait)
 

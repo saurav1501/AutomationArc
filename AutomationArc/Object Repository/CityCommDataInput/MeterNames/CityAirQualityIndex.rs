@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//td[@class=&quot;meterListByType-meterName&quot;])[7]/div</value>
+         <value>//*[@data-original-title=&quot;Health &amp; Safety: Median air quality index (AQI)&quot;]</value>
       </entry>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -115,7 +115,7 @@
    <testCaseLink>
       <guid>c8a4d07a-d1a0-4ee2-a329-30db67b3cbce</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/MyCities/CitiesOther/DownloadAndVerifyExportedDataTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -145,7 +145,7 @@
    <testCaseLink>
       <guid>f7c596e1-7ba0-4e3c-b6d5-ec924630c019</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/MyCities/CitiesOther/CreateADMeterReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
