@@ -8579,7 +8579,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/AdditionalDataDropdownButton'), GlobalVariable.minAngularWait)
 
 		//Verify the readings for the following options
-		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AdditionalDataDropdownButton'))
+		/*WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AdditionalDataDropdownButton'))
 		WebUI.scrollToElement(findTestObject('Object Repository/CityCommDataInput/MeterNames/TotalElectricityUse'), 5)
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/TotalElectricityUse'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
@@ -8605,7 +8605,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/PercentageOfGovtWorkers'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'), reading4, false)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/UnitAdditonalData'),'value'), ureading4, false)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/UnitAdditonalData'),'value'), ureading4, false)*/
 	}
 
 	//File Upload City / Community Data Input
@@ -8740,7 +8740,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 
 	//Verify the setting tab Area and Population data and Verify adding and deleting the data
-
+	@Keyword
 	public void buildingSettingDataInputCityComm(String sheetName, int rowNum){
 
 		String prjPopulation= data.getCellData(sheetName, "Population", rowNum)
@@ -8755,6 +8755,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/ProjectSettingTab'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'),prjPopulation , false)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/DeleteButtonOne'), GlobalVariable.minAngularWait)
+		
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/DeleteButtonOne'))
 		WebUI.waitForElementNotPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddRowButton'), GlobalVariable.minAngularWait)

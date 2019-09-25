@@ -19,7 +19,7 @@
    <testCaseLink>
       <guid>2ad26672-4905-4374-b115-dfbc388312ed</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/MyCities/CitiesOther/AddNewProjectTest</testCaseId>
       <variableLink>
          <testDataLinkId></testDataLinkId>
@@ -43,13 +43,13 @@
    <testCaseLink>
       <guid>17f42305-5d0d-4a80-bbd3-314a09d2cb3e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/MyCities/CitiesOther/RegPaymentByCreditCardTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>524cb10c-1161-4ff3-ad87-685b44ad6a39</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/MyCities/CitiesOther/SearchProgramTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -73,37 +73,37 @@
    <testCaseLink>
       <guid>908af01b-3e04-45ce-9343-c45d971f9dc4</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/MyCities/CitiesOther/CreateEnergyMeterReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>a4b44093-1a27-4e92-ab39-6a3316faa460</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/MyCities/CitiesOther/CreateWaterMeterReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>3e40f8f8-e7f4-45c6-a68d-7a45d694e096</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/MyCities/CitiesOther/CreateWasteGenerationMeterReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>88e29da4-c2fe-40c9-a9a1-18a71ecded52</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/MyCities/CitiesOther/CreateWasteDiversionMeterReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>740cc4fe-0a4d-4444-9035-12685bd07d26</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/MyCities/CitiesOther/CreateTrasportMeterReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d2623958-a927-44c3-ae0e-2166a558147b</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/MyCities/CitiesOther/CreateHumanExpMeterReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -145,7 +145,7 @@
    <testCaseLink>
       <guid>f7c596e1-7ba0-4e3c-b6d5-ec924630c019</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/MyCities/CitiesOther/CreateADMeterReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>

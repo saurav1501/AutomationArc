@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//*[@ng-click=&quot;selectMeter(meter, 'additional_data')&quot;])[175]</value>
+         <value>(//*[@ng-click=&quot;selectMeter(meter, 'additional_data')&quot;])[175]/span</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
