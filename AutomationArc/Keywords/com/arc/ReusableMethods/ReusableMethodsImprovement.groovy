@@ -382,16 +382,16 @@ public class ReusableMethodsImprovement extends BaseClass{
 		//WebUI.waitForElementNotVisible(findTestObject('Object Repository/Improvement/ImprovementPageLoader'), GlobalVariable.minAngularWait)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-		WebUI.delay(10)
-		String baseLineReadingSEI= WebUI.getText(findTestObject('Object Repository/Improvement/Energy/BaseLinePeriodSEI'))
-		String performanceReadingSEI= WebUI.getText(findTestObject('Object Repository/Improvement/Energy/PerformancePeriodSEI'))
-		String baseLineReadingSoEI= WebUI.getText(findTestObject('Object Repository/Improvement/Energy/BaseLinePeriodSourceEI'))
-		String performanceReadingSoEI= WebUI.getText(findTestObject('Object Repository/Improvement/Energy/PerformancePeriodSourceEI'))
-		String baseLineCost = WebUI.getText(findTestObject('Object Repository/Improvement/Energy/BaselinePeriodECI'))
-		String performanceCost = WebUI.getText(findTestObject('Object Repository/Improvement/Energy/PerformancePeroidECI'))
+		WebUI.delay(10)	
+		String baseLineReadingSEI= WebUI.getText(findTestObject('Object Repository/Improvement/Energy/PerformancePeriodSEI'))
+		String performanceReadingSEI= WebUI.getText(findTestObject('Object Repository/Improvement/Energy/BaseLinePeriodSEI'))
+		String baseLineReadingSoEI= WebUI.getText(findTestObject('Object Repository/Improvement/Energy/PerformancePeriodSourceEI'))
+		String performanceReadingSoEI= WebUI.getText(findTestObject('Object Repository/Improvement/Energy/BaseLinePeriodSourceEI'))
+		String baseLineCost = WebUI.getText(findTestObject('Object Repository/Improvement/Energy/PerformancePeroidECI'))
+		String performanceCost = WebUI.getText(findTestObject('Object Repository/Improvement/Energy/BaselinePeriodECI'))
 		String energyCostPercentage = WebUI.getText(findTestObject('Object Repository/Improvement/Energy/EnergyCostIntensity'))
-		String baseReadingArea = WebUI.getText(findTestObject('Object Repository/Improvement/Energy/BaseLinePeriodGrossArea'))
-		String perfomanceReadingArea = WebUI.getText(findTestObject('Object Repository/Improvement/Energy/PerformancePeriodGrossArea'))
+		String baseReadingArea = WebUI.getText(findTestObject('Object Repository/Improvement/Energy/PerformancePeriodGrossArea'))
+		String perfomanceReadingArea = WebUI.getText(findTestObject('Object Repository/Improvement/Energy/BaseLinePeriodGrossArea'))
 
 		WebUI.verifyMatch(baseReadingArea, '1,234', false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(perfomanceReadingArea, '1,234', false , FailureHandling.CONTINUE_ON_FAILURE)
@@ -485,10 +485,10 @@ public class ReusableMethodsImprovement extends BaseClass{
 		double scoreWater;
 		double percentWater, percentArea;
 
-		String baseLineReadingWater= WebUI.getText(findTestObject('Object Repository/Improvement/Water/BaseLinePeriodWater'))
-		String performanceReadingWater= WebUI.getText(findTestObject('Object Repository/Improvement/Water/PerformancePeriodWater'))
-		String baseReadingArea = WebUI.getText(findTestObject('Object Repository/Improvement/Water/BaseLinePeriodWaterArea'))
-		String perfomanceReadingArea = WebUI.getText(findTestObject('Object Repository/Improvement/Water/PerformancePeriodWaterArea'))
+		String baseLineReadingWater= WebUI.getText(findTestObject('Object Repository/Improvement/Water/PerformancePeriodWater'))
+		String performanceReadingWater= WebUI.getText(findTestObject('Object Repository/Improvement/Water/BaseLinePeriodWater'))
+		String baseReadingArea = WebUI.getText(findTestObject('Object Repository/Improvement/Water/PerformancePeriodWaterArea'))
+		String perfomanceReadingArea = WebUI.getText(findTestObject('Object Repository/Improvement/Water/BaseLinePeriodWaterArea'))
 
 		WebUI.verifyMatch(baseReadingArea, '1,234', false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(perfomanceReadingArea, '1,234', false , FailureHandling.CONTINUE_ON_FAILURE)
@@ -555,12 +555,12 @@ public class ReusableMethodsImprovement extends BaseClass{
 		double scoreWG,scoreWD;
 		double percentWG, percentWD, percentOcc;
 
-		String baseLineReadingWG= WebUI.getText(findTestObject('Object Repository/Improvement/Waste/BaseLineWasteGenerated'))
-		String performanceReadingWG= WebUI.getText(findTestObject('Object Repository/Improvement/Waste/PerformancePeriodWasteGenerated'))
-		String baseLineReadingWD= WebUI.getText(findTestObject('Object Repository/Improvement/Waste/BaseLineWasteDiverted'))
-		String performanceReadingWD= WebUI.getText(findTestObject('Object Repository/Improvement/Waste/PerformancePeriodWasteDiverted'))
-		String baseReadingOcc = WebUI.getText(findTestObject('Object Repository/Improvement/Waste/BaseLinePeriodOccupants'))
-		String perfomanceReadingOcc = WebUI.getText(findTestObject('Object Repository/Improvement/Waste/PerformancePeriodOccupants'))
+		String baseLineReadingWG= WebUI.getText(findTestObject('Object Repository/Improvement/Waste/PerformancePeriodWasteGenerated'))
+		String performanceReadingWG= WebUI.getText(findTestObject('Object Repository/Improvement/Waste/BaseLineWasteGenerated'))
+		String baseLineReadingWD= WebUI.getText(findTestObject('Object Repository/Improvement/Waste/PerformancePeriodWasteDiverted'))
+		String performanceReadingWD= WebUI.getText(findTestObject('Object Repository/Improvement/Waste/BaseLineWasteDiverted'))
+		String baseReadingOcc = WebUI.getText(findTestObject('Object Repository/Improvement/Waste/PerformancePeriodOccupants'))
+		String perfomanceReadingOcc = WebUI.getText(findTestObject('Object Repository/Improvement/Waste/BaseLinePeriodOccupants'))
 
 		WebUI.verifyMatch(baseReadingOcc, '47', false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(perfomanceReadingOcc, '47', false , FailureHandling.CONTINUE_ON_FAILURE)
@@ -696,10 +696,10 @@ public class ReusableMethodsImprovement extends BaseClass{
 		float carbonEmissionBaseLine = (survey7_perf * 0.0004536).round(6);
 
 		//Verify the Baseline and performance carbon emission
-		String baseLineReadingCo2= WebUI.getText(findTestObject('Object Repository/Improvement/Transportation/BaselinePeriodCo2e'))
-		String performanceReadingCo2= WebUI.getText(findTestObject('Object Repository/Improvement/Transportation/PerformancePeriodCo2e'))
-		String baseReadingOcc = WebUI.getText(findTestObject('Object Repository/Improvement/Transportation/BaselinePeriodOcc'))
-		String perfomanceReadingOcc = WebUI.getText(findTestObject('Object Repository/Improvement/Transportation/PerformancePeriodOcc'))
+		String baseLineReadingCo2= WebUI.getText(findTestObject('Object Repository/Improvement/Transportation/PerformancePeriodCo2e'))
+		String performanceReadingCo2= WebUI.getText(findTestObject('Object Repository/Improvement/Transportation/BaselinePeriodCo2e'))
+		String baseReadingOcc = WebUI.getText(findTestObject('Object Repository/Improvement/Transportation/PerformancePeriodOcc'))
+		String perfomanceReadingOcc = WebUI.getText(findTestObject('Object Repository/Improvement/Transportation/BaselinePeriodOcc'))
 
 		WebUI.verifyMatch(baseLineReadingCo2, String.valueOf(carbonEmissionBaseLine) , false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(performanceReadingCo2, String.valueOf(carbonEmissionPerform) , false , FailureHandling.CONTINUE_ON_FAILURE)
@@ -768,10 +768,10 @@ public class ReusableMethodsImprovement extends BaseClass{
 		double occSatisfactionbaseline= (2+2+1+1+1)/5
 
 		//Verify the Baseline and performance carbon emission
-		String baseLineReadingOccSatis= WebUI.getText(findTestObject('Object Repository/Improvement/HumanExperience/BaseLineOccSatis'))
-		String performanceReadingOccSatis= WebUI.getText(findTestObject('Object Repository/Improvement/HumanExperience/PerformaceOccSatis'))
-		String baseReadingOcc = WebUI.getText(findTestObject('Object Repository/Improvement/HumanExperience/BaseLinePeriodOcc'))
-		String perfomanceReadingOcc = WebUI.getText(findTestObject('Object Repository/Improvement/HumanExperience/PerformancePeriodOcc'))
+		String baseLineReadingOccSatis= WebUI.getText(findTestObject('Object Repository/Improvement/HumanExperience/PerformaceOccSatis'))
+		String performanceReadingOccSatis= WebUI.getText(findTestObject('Object Repository/Improvement/HumanExperience/BaseLineOccSatis'))
+		String baseReadingOcc = WebUI.getText(findTestObject('Object Repository/Improvement/HumanExperience/PerformancePeriodOcc'))
+		String perfomanceReadingOcc = WebUI.getText(findTestObject('Object Repository/Improvement/HumanExperience/BaseLinePeriodOcc'))
 
 		WebUI.verifyMatch(baseLineReadingOccSatis, String.valueOf(Math.round(occSatisfactionbaseline)) , false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(performanceReadingOccSatis, String.valueOf(Math.round(occSatisfactionPerform)) , false , FailureHandling.CONTINUE_ON_FAILURE)
