@@ -8871,6 +8871,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
         int j=6
 		(1..5).each{
 			String reading1 = dataExcelTemplate.getCellData(sheetName, "Reading1", j)
+			WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/CityCommGraphDI',[index: it]), GlobalVariable.minAngularWait)
 			WebUI.focus(findTestObject('Object Repository/CityCommDataInput/MeterNames/CityCommGraphDI',[index: it]))
 			String[] reading=WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ToolTipGraph')).split(" ")
 			WebUI.verifyMatch(reading[0], reading1, false, FailureHandling.CONTINUE_ON_FAILURE)

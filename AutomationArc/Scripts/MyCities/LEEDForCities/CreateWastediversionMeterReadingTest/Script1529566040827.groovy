@@ -2,8 +2,8 @@ import internal.GlobalVariable as GlobalVariable
 
 
 try {
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.CitySheet, GlobalVariable.rowNumTwo)
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.createWasteDiversionMeterReading'(GlobalVariable.CDataInput,GlobalVariable.rowNumTwo)
+	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.CitySheet, GlobalVariable.rowNumTwo)
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.createCityCommWasteDiversionMeter'(GlobalVariable.CDataInput,GlobalVariable.rowNumTwo)
 			
 } catch (Throwable t) {
 	System.out.println(t.getLocalizedMessage())

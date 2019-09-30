@@ -7,11 +7,11 @@
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>#chart-id > div > div > svg > g:nth-child(8) > g > g > g:nth-child(${index})</value>
+         <value>#chart-id > div > div > svg > g:nth-child(8) > g > g > g:nth-child(${index}) >path</value>
       </entry>
       <entry>
          <key>BASIC</key>
-         <value></value>
+         <value>//*[@ref_element = 'Object Repository/DataInput/iframe_datainput-widget']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>CSS</selectorMethod>

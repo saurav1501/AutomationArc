@@ -22,7 +22,7 @@ import internal.GlobalVariable as GlobalVariable
 //Energy meter create city leed
 try {
 	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.CitySheet, GlobalVariable.rowNumTwo)
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.createEnergyMeterReading'(GlobalVariable.CDataInput,GlobalVariable.rowNumTwo)
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.createCityCommEnergyGHGMeter'(GlobalVariable.CDataInput,GlobalVariable.rowNumTwo)
 			
 } catch (Throwable t) {
 	System.out.println(t.getLocalizedMessage())
