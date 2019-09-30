@@ -6,15 +6,18 @@
    <elementGuidId>fcfb86f3-c264-405b-b694-7acdd3e117da</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>CSS</key>
+         <value>#readingsTable > tbody > tr > td:nth-child(5) > span</value>
+      </entry>
+      <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//*[@ng-click=&quot;deleteReading(data, $index)&quot;])[1]</value>
+         <value>//*[@id=&quot;readingsTable&quot;]/tbody/tr/td[5]</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
