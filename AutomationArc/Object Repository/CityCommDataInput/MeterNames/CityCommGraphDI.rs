@@ -6,16 +6,23 @@
    <elementGuidId>7aae9f06-f54d-4fa1-a772-ab0eb9d87cc0</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
+         <key>BASIC</key>
          <value>#chart-id > div > div > svg > g:nth-child(8) > g > g > g:nth-child(${index}) >path</value>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value>//*[@ref_element = 'Object Repository/DataInput/iframe_datainput-widget']</value>
+         <key>CSS</key>
+         <value>#chart-id > div > div > svg > g:nth-child(8) > g > g > g:nth-child(${index}) >path</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>CSS</selectorMethod>
+   <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>css</name>
+      <type>Main</type>
+      <value>#chart-id > div > div > svg > g:nth-child(8) > g > g > g:nth-child(${index}) >path</value>
+   </webElementProperties>
    <webElementProperties>
       <isSelected>true</isSelected>
       <matchCondition>equals</matchCondition>

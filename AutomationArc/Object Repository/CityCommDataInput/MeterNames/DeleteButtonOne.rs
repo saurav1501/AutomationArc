@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>#readingsTable > tbody > tr > td:nth-child(5) > span</value>
+         <value>#readingsTable > tbody > tr:nth-child(1) > td:nth-child(5) > span</value>
       </entry>
       <entry>
          <key>BASIC</key>
