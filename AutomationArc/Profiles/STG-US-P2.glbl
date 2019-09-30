@@ -319,4 +319,9 @@
       <initValue>'https://stg.app.arconline.io/app/project/1000168529/survey/v2/?key=aP2V381iCMmHEYJOnTpPLnoz&amp;language=en'</initValue>
       <name>surveyLinkDashboard</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'CityDI'</initValue>
+      <name>TemplateCityDI</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

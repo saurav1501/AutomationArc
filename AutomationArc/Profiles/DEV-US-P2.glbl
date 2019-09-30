@@ -319,4 +319,9 @@
       <initValue>'STGPromocodesFiftyReview'</initValue>
       <name>promocodeReviewFifty</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'CityDI'</initValue>
+      <name>TemplateCityDI</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

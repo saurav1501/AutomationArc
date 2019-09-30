@@ -8856,6 +8856,123 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	}
 
 
-
+	//Verify the city Data Input graph
+	@Keyword
+	public void verifyEnergyGraph(String sheetName){
+		
+		navigation.navigateIntoDataInput()
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/GHGEmissions'))
+		WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), "GHG Emissions", FailureHandling.STOP_ON_FAILURE)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/DetailsTab'))
+		WebUI.delay(5)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/CityCommDataInput/MeterNames/EnergyUnitGraph')), "tons", false)
+        int j=6
+		(1..5).each{
+			String reading1 = dataExcelTemplate.getCellData(sheetName, "Reading1", j)
+			WebUI.focus(findTestObject('Object Repository/CityCommDataInput/MeterNames/CityCommGraphDI',[index: it]))
+			String[] reading=WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ToolTipGraph')).split(" ")
+			WebUI.verifyMatch(reading[0], reading1, false, FailureHandling.CONTINUE_ON_FAILURE)
+			//Assert.assertTrue(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ToolTipGraph')).contains(reading1))
+			WebUI.delay(2)
+			j--
+		}
+	}
+	
+	
+	@Keyword
+	public void verifyWaterGraph(String sheetName){
+		
+		navigation.navigateIntoDataInput()
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/GHGEmissions'))
+		WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), "Water consumption", FailureHandling.STOP_ON_FAILURE)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/DetailsTab'))
+		WebUI.delay(5)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/CityCommDataInput/MeterNames/WaterUnitGraph')), "tons", false)
+		int j=6
+		(1..5).each{
+			String reading1 = dataExcelTemplate.getCellData(sheetName, "Reading2", j)
+			WebUI.focus(findTestObject('Object Repository/CityCommDataInput/MeterNames/CityCommGraphDI',[index: it]))
+			String[] reading=WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ToolTipGraph')).split(" ")
+			WebUI.verifyMatch(reading[0], reading1, false, FailureHandling.CONTINUE_ON_FAILURE)
+			//Assert.assertTrue(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ToolTipGraph')).contains(reading1))
+			WebUI.delay(2)
+			j--
+		}
+	}
+	
+	@Keyword
+	public void verifyWasteGenGraph(String sheetName){
+		
+		navigation.navigateIntoDataInput()
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/GHGEmissions'))
+		WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), "Municipal solid waste generation intensity", FailureHandling.STOP_ON_FAILURE)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/DetailsTab'))
+		WebUI.delay(5)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/CityCommDataInput/MeterNames/WasteGenUnitGraph')), "tons", false)
+		int j=6
+		(1..5).each{
+			String reading1 = dataExcelTemplate.getCellData(sheetName, "Reading3", j)
+			WebUI.focus(findTestObject('Object Repository/CityCommDataInput/MeterNames/CityCommGraphDI',[index: it]))
+			String[] reading=WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ToolTipGraph')).split(" ")
+			WebUI.verifyMatch(reading[0], reading1, false, FailureHandling.CONTINUE_ON_FAILURE)
+			//Assert.assertTrue(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ToolTipGraph')).contains(reading1))
+			WebUI.delay(2)
+			j--
+		}
+	}
+	
+	@Keyword
+	public void verifyWasteDivGraph(String sheetName){
+		
+		navigation.navigateIntoDataInput()
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/GHGEmissions'))
+		WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), "Municipal solid waste diversion rate from landfill", FailureHandling.STOP_ON_FAILURE)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/DetailsTab'))
+		WebUI.delay(5)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/CityCommDataInput/MeterNames/WasteDivUnit')), "percent", false)
+		int j=6
+		(1..5).each{
+			String reading1 = dataExcelTemplate.getCellData(sheetName, "Reading4", j)
+			WebUI.focus(findTestObject('Object Repository/CityCommDataInput/MeterNames/CityCommGraphDI',[index: it]))
+			String[] reading=WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ToolTipGraph')).split(" ")
+			WebUI.verifyMatch(reading[0], reading1, false, FailureHandling.CONTINUE_ON_FAILURE)
+			//Assert.assertTrue(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ToolTipGraph')).contains(reading1))
+			WebUI.delay(2)
+			j--
+		}
+	}
+	
+	@Keyword
+	public void verifyTransportGraph(String sheetName){
+		
+		navigation.navigateIntoDataInput()
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/GHGEmissions'))
+		WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), "Vehicle miles traveled on individual vehicles daily (VMT)", FailureHandling.STOP_ON_FAILURE)
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/DetailsTab'))
+		WebUI.delay(5)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/CityCommDataInput/MeterNames/TransportGraphUnit')), "miles", false)
+		int j=6
+		(1..5).each{
+			String reading1 = dataExcelTemplate.getCellData(sheetName, "Reading5", j)
+			WebUI.focus(findTestObject('Object Repository/CityCommDataInput/MeterNames/CityCommGraphDI',[index: it]))
+			String[] reading=WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ToolTipGraph')).split(" ")
+			WebUI.verifyMatch(reading[0], reading1, false, FailureHandling.CONTINUE_ON_FAILURE)
+			//Assert.assertTrue(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ToolTipGraph')).contains(reading1))
+			WebUI.delay(2)
+			j--
+		}
+	}
+	
+	
 }
 

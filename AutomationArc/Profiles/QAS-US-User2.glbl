@@ -184,4 +184,9 @@
       <initValue>'Promocode'</initValue>
       <name>Promocode</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'CityDI'</initValue>
+      <name>TemplateCityDI</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

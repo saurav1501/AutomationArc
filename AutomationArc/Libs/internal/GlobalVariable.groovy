@@ -497,6 +497,11 @@ Profile STG-US-P2 : payment via credit card</p>
     /**
      * <p></p>
      */
+    public static Object TemplateCityDI
+     
+    /**
+     * <p></p>
+     */
     public static Object validationSheet
      
     /**
@@ -612,6 +617,7 @@ Profile STG-US-P2 : payment via credit card</p>
             promocodeRegistrationHundred = selectedVariables['promocodeRegistrationHundred']
             promocodeReviewHundred = selectedVariables['promocodeReviewHundred']
             promocodeReviewFifty = selectedVariables['promocodeReviewFifty']
+            TemplateCityDI = selectedVariables['TemplateCityDI']
             validationSheet = selectedVariables['validationSheet']
             rowNumTwelve = selectedVariables['rowNumTwelve']
             rowNumThirteen = selectedVariables['rowNumThirteen']
