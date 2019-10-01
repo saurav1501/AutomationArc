@@ -2124,10 +2124,6 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.uploadArcDataTempla
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).uploadArcDataTemplatetrial()
 }
 
-def static "com.arc.ReusableMethods.ReusableMethodsDataInput.verifyGraphDefaultUnitsPresentOnXAxis"() {
-    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).verifyGraphDefaultUnitsPresentOnXAxis()
-}
-
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.uploadArcDataTemplateBuildingAnalytics"() {
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).uploadArcDataTemplateBuildingAnalytics()
 }
@@ -2786,8 +2782,8 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.validateCityCommWat
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).validateCityCommWaterDataInputText()
 }
 
-def static "com.arc.ReusableMethods.ReusableMethodsDataInput.validateCityCommWasteDataInputText"() {
-    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).validateCityCommWasteDataInputText()
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.validateCityCommWasteGenerationDataInputText"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).validateCityCommWasteGenerationDataInputText()
 }
 
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.validateCityCommTransportationDataInputText"() {

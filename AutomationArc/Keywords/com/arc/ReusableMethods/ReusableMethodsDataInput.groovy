@@ -145,10 +145,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	//Verify the default units displayed on the Graphs y-axis
 
-	@Keyword
-	public void verifyGraphDefaultUnitsPresentOnXAxis(){
-
-	}
+	
 
 	@Keyword
 	public void uploadArcDataTemplateBuildingAnalytics(){
@@ -6751,13 +6748,13 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	public void validateCityCommEnergyDataInputText(){
 
 		//Verify the title text
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTextOne')),"GHG Emissions (CO2 equivalent)", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTextOne')),"GHG Emissions", false)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTextTwo')), "Enter tons of CO2 equivalent per year per capita", false)
 
 		//Verify the reading title
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyYearLabel')), "Year", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyYearLabel')), "YEAR", false)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTonsYearCapita')),"Tons/Year/Capita",false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyActionsLabel')),"Actions", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyActionsLabel')),"ACTIONS", false)
 	}
 
 
@@ -6766,37 +6763,35 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	public void validateCityCommWaterDataInputText(){
 
 		//Verify the title Text
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTextOne')),"Domestic Water Consumption", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTextOne')),"Water consumption", false)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTextTwo')), "Enter domestic water consumption per capita", false)
 
 		//Verify the reading title
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterYearLabel')), "Year", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterYearLabel')), "YEAR", false)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterValueLabel')),"Value",false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterUnitLabel')),"Unit", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterDurationLabel')),"Duration", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterActionsLabel')),"Actions", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterUnitLabel')),"UNIT", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterDurationLabel')),"DURATION", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterActionsLabel')),"ACTIONS", false)
 	}
 
 	@Keyword
-	public void validateCityCommWasteDataInputText(){
+	public void validateCityCommWasteGenerationDataInputText(){
 
 		//Verify the solid waste generation title Text
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTextOne')),"Municipal solid waste generation intensity", false)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTextTwo')), "Enter muncipal solid waste generated per year per capita", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWasteTextThree')),"Municipal solid waste diversion rate from landfill", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWasteTextFour')), "Enter muncipal solid waste diversion rate", false)
+		
 
 		//Verify the solid waste generation reading title
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterYearLabel')), "Year", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterYearLabel')), "YEAR", false)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterValueLabel')),"Tons/Year/Capita",false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterUnitLabel')),"Actions", false)
-
-		//verify the solid waste diversion reading title
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWasteDivYearLabel')), "Year", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWasteDivPercentLabel')),"Percent",false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWasteDivActionsLabel')),"Actions", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterUnitLabel')),"ACTIONS", false)
 
 	}
+	
+	
+	
+	
 
 
 	@Keyword
@@ -8903,7 +8898,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), "Water consumption", FailureHandling.STOP_ON_FAILURE)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/DetailsTab'))
 		WebUI.delay(5)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/CityCommDataInput/MeterNames/WaterUnitGraph')), "tons", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/CityCommDataInput/MeterNames/WaterUnitGraph')), "gal", false)
 		int j=6
 		(1..5).each{
 			String reading1 = dataExcelTemplate.getCellData(sheetName, "Reading2", j)
