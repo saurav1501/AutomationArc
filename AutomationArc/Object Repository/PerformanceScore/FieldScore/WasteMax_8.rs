@@ -4,6 +4,12 @@
    <name>WasteMax_8</name>
    <tag></tag>
    <elementGuidId>302a0ed5-b4e1-4d52-a54a-7b8b748814cd</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//div[(text() = '4' or . = '4')]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
@@ -25,7 +31,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>8</value>
+      <value>4</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

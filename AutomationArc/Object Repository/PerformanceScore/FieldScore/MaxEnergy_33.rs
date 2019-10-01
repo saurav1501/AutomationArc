@@ -4,6 +4,12 @@
    <name>MaxEnergy_33</name>
    <tag></tag>
    <elementGuidId>eccdfe45-c5ae-4c89-b3a7-529b4a2d201b</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//div[(text() = '14' or . = '14')]</value>
+      </entry>
+   </selectorCollection>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
@@ -25,7 +31,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>33</value>
+      <value>14</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

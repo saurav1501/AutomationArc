@@ -1050,6 +1050,77 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		//String basePoint = WebUI.getText(findTestObject('PerformanceScore/Score/span_Base Points'))
 		//WebUI.verifyMatch(basePoint ,"BASE POINTS", false)
 	}
+	
+	
+	
+	@Keyword
+	public void individualScoreUIAllFieldVerificationCityV3() throws IOException, InterruptedException {
+		
+		
+		/********* Verifying all fields UI  Score for individual Energy , Water , Waste , Transport , Human Exp , Base Point ************* */
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('PerformanceScore/Score/a_ Base Points'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		
+		String lowestSocreTotal = WebUI.getText(findTestObject('PerformanceScore/FieldScore/minPoint_0'))
+		WebUI.verifyMatch(lowestSocreTotal ,"0", false)
+		String higestScoretotal = WebUI.getText(findTestObject('PerformanceScore/FieldScore/BasePointMax_10'))
+		WebUI.verifyMatch(higestScoretotal ,"10", false)
+		String basePoint = WebUI.getText(findTestObject('PerformanceScore/FieldScore/BaseScore'))
+		WebUI.verifyMatch(basePoint ,"BASE SCORE", false)
+		
+		WebUI.click(findTestObject('PerformanceScore/Score/a_ Energy'))
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		String energylowestSocreTotal = WebUI.getText(findTestObject('PerformanceScore/FieldScore/minPoint_0'))
+	    WebUI.verifyMatch(energylowestSocreTotal ,"0", false)
+		String energyhigestScoretotal = WebUI.getText(findTestObject('PerformanceScore/FieldScore/MaxEnergy_33'))
+		WebUI.verifyMatch(energyhigestScoretotal ,"14", false)
+		String energy = WebUI.getText(findTestObject('PerformanceScore/FieldScore/span_Energy'))
+		WebUI.verifyMatch(energy ,"ENERGY", false)
+		
+		WebUI.click(findTestObject('PerformanceScore/Score/a_ Water'))
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		String waterlowestSocreTotal = WebUI.getText(findTestObject('PerformanceScore/FieldScore/minPoint_0'))
+		WebUI.verifyMatch(waterlowestSocreTotal ,"0", false)
+		String waterhigestScoretotal = WebUI.getText(findTestObject('PerformanceScore/FieldScore/WaterMax_15'))
+		WebUI.verifyMatch(waterhigestScoretotal ,"6", false)
+		String water = WebUI.getText(findTestObject('PerformanceScore/FieldScore/span_Water'))
+		WebUI.verifyMatch(water ,"WATER", false)
+		
+		WebUI.click(findTestObject('PerformanceScore/Score/a_ Waste'))
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		String wastelowestSocreTotal = WebUI.getText(findTestObject('PerformanceScore/FieldScore/minPoint_0'))
+		WebUI.verifyMatch(wastelowestSocreTotal ,"0", false)
+		String wastehigestScoretotal = WebUI.getText(findTestObject('PerformanceScore/FieldScore/WasteMax_8'))
+		WebUI.verifyMatch(wastehigestScoretotal ,"4", false)
+	    String waste = WebUI.getText(findTestObject('PerformanceScore/FieldScore/span_Waste'))
+		WebUI.verifyMatch(waste ,"WASTE", false)
+		
+		WebUI.click(findTestObject('PerformanceScore/Score/a_ Transportation'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		//WebUI.delay(5)
+		String translowestSocreTotal = WebUI.getText(findTestObject('PerformanceScore/FieldScore/minPoint_0'))
+		WebUI.verifyMatch(translowestSocreTotal ,"0", false)
+		String transhigestScoretotal = WebUI.getText(findTestObject('PerformanceScore/FieldScore/Transportation_14'))
+		WebUI.verifyMatch(transhigestScoretotal ,"6", false)
+		String transportation = WebUI.getText(findTestObject('PerformanceScore/FieldScore/span_Transportation'))
+		WebUI.verifyMatch(transportation ,"TRANSPORTATION", false)
+		
+		WebUI.click(findTestObject('PerformanceScore/Score/a_ Human Experience'))
+		//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		String humlowestSocreTotal = WebUI.getText(findTestObject('PerformanceScore/FieldScore/minPoint_0'))
+		WebUI.verifyMatch(humlowestSocreTotal ,"0", false)
+		String humhigestScoretotal = WebUI.getText(findTestObject('PerformanceScore/FieldScore/HumanExperienceMax_20'))
+		WebUI.verifyMatch(humhigestScoretotal ,"6", false)
+		String humExp = WebUI.getText(findTestObject('PerformanceScore/FieldScore/span_HumanExperience'))
+		WebUI.verifyMatch(humExp ,"HUMAN EXPERIENCE", false)
+	}
+	
+	
 	@Keyword
 	public void individualScoreUIAllFieldVerification() throws IOException, InterruptedException {
 

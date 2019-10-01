@@ -24,7 +24,7 @@ try{
 	
 	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.CitySheet, GlobalVariable.rowNumTwo)
 	
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.scoreVersionVerificationCity'()
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.scoreVersionVerificationCityCommunityV3'()
 	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.scoreVersionVerification1_1'()
 
 } catch (Throwable t) {

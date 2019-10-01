@@ -6753,7 +6753,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		//Verify the reading title
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyYearLabel')), "YEAR", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTonsYearCapita')),"Tons/Year/Capita",false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTonsYearCapita')),"TONS/YEAR/CAPITA",false)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyActionsLabel')),"ACTIONS", false)
 	}
 
@@ -6768,7 +6768,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		//Verify the reading title
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterYearLabel')), "YEAR", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterValueLabel')),"Value",false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterValueLabel')),"VALUE",false)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterUnitLabel')),"UNIT", false)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterDurationLabel')),"DURATION", false)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterActionsLabel')),"ACTIONS", false)
@@ -6784,7 +6784,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		//Verify the solid waste generation reading title
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterYearLabel')), "YEAR", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterValueLabel')),"Tons/Year/Capita",false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterValueLabel')),"TONS/YEAR/CAPITA",false)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterUnitLabel')),"ACTIONS", false)
 
 	}
@@ -6793,12 +6793,12 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	public void validateCityCommWasteDiversionDataInputText(){
 		
 		//verify the solid waste diversion reading title
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWasteTextThree')),"Municipal solid waste diversion rate from landfill", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWasteTextFour')), "Enter muncipal solid waste diversion rate", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTextOne')),"Municipal solid waste diversion rate from landfill", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTextOne')), "Enter muncipal solid waste diversion rate", false)
 		
 		//Verify the soild waste diversion reading title
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWasteDivYearLabel')), "YEAR", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWasteDivPercentLabel')),"Percent",false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWasteDivPercentLabel')),"PERCENT",false)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWasteDivActionsLabel')),"ACTIONS", false)
 		
 		
@@ -6815,7 +6815,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		//Verify the transportation reading title
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterYearLabel')), "YEAR", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterValueLabel')),"Miles/Day/Capita",false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterValueLabel')),"MILES/DAY/CAPITA",false)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterUnitLabel')),"ACTIONS", false)
 
 	}
@@ -7905,7 +7905,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.switchToWindowIndex(0)
 	}
 
-
+//*************************************** CITY / COMMUNITY NEW DATA INPUT UI ***********************************************//
 
 	// City/Community new data input UI
 	@Keyword
@@ -8089,13 +8089,14 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	}
 
 	@Keyword
-	public void createCityCommWasteDiversionMeter(String sheetName, int rowNum){
+	public void createCityCommWasteDiversionMeter(){
 
 		navigation.navigateIntoDataInput()
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-
-		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/CityCommunityWasteDiversion'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/CityCommunityWasteDiversion'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/CityCommunityWasteDiversion'),GlobalVariable.minAngularWait)
+		WebUI.doubleClick(findTestObject('Object Repository/CityCommDataInput/MeterNames/CityCommunityWasteDiversion'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
