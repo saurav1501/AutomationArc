@@ -151,19 +151,19 @@
    <testCaseLink>
       <guid>3bcc8125-4c7f-4a9c-8b82-31762d884490</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/MyCities/LEEDForCities/CreateTrasportMeterReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>bc7ac647-eba5-4d0b-87a4-7b753021cee9</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/MyCities/LEEDForCities/DataInputTransportationPageTextValidationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>4fccea61-30fe-4b16-8629-5e268d925cfb</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/MyCities/LEEDForCities/CreateHumanExpMeterReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
