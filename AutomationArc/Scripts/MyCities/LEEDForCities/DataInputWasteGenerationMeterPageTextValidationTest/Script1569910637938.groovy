@@ -16,7 +16,7 @@ import internal.GlobalVariable as GlobalVariable
 //Waste meter text validation city leed
 try {
 	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.CitySheet, GlobalVariable.rowNumTwo)
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.validateCityCommWasteDataInputText'()
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.validateCityCommWasteGenerationDataInputText'()
 			
 } catch (Throwable t) {
 	System.out.println(t.getLocalizedMessage())

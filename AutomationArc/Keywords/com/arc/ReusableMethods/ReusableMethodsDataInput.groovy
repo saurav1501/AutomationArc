@@ -6789,8 +6789,20 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	}
 	
-	
-	
+	@Keyword
+	public void validateCityCommWasteDiversionDataInputText(){
+		
+		//verify the solid waste diversion reading title
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWasteTextThree')),"Municipal solid waste diversion rate from landfill", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWasteTextFour')), "Enter muncipal solid waste diversion rate", false)
+		
+		//Verify the soild waste diversion reading title
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWasteDivYearLabel')), "YEAR", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWasteDivPercentLabel')),"Percent",false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWasteDivActionsLabel')),"ACTIONS", false)
+		
+		
+	}
 	
 
 
@@ -6802,9 +6814,9 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTextTwo')), "Enter total vehicle miles traveled per day per capita", false)
 
 		//Verify the transportation reading title
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterYearLabel')), "Year", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterYearLabel')), "YEAR", false)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterValueLabel')),"Miles/Day/Capita",false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterUnitLabel')),"Actions", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterUnitLabel')),"ACTIONS", false)
 
 	}
 

@@ -2786,6 +2786,10 @@ def static "com.arc.ReusableMethods.ReusableMethodsDataInput.validateCityCommWas
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).validateCityCommWasteGenerationDataInputText()
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsDataInput.validateCityCommWasteDiversionDataInputText"() {
+    (new com.arc.ReusableMethods.ReusableMethodsDataInput()).validateCityCommWasteDiversionDataInputText()
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsDataInput.validateCityCommTransportationDataInputText"() {
     (new com.arc.ReusableMethods.ReusableMethodsDataInput()).validateCityCommTransportationDataInputText()
 }

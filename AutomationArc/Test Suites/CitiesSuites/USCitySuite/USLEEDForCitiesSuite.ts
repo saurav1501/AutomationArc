@@ -131,16 +131,16 @@
       <testCaseId>Test Cases/MyCities/LEEDForCities/CreateWasteGenerationMeterReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>824ba93a-0846-4684-9bab-8c84b93e0f1e</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCities/LEEDForCities/DataInputWasteGenerationMeterPageTextValidationTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>22863675-7bb5-49f0-87ff-6891e477e677</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/MyCities/LEEDForCities/CreateWastediversionMeterReadingTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>824ba93a-0846-4684-9bab-8c84b93e0f1e</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCities/LEEDForCities/DataInputWasteMeterPageTextValidationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>3bcc8125-4c7f-4a9c-8b82-31762d884490</guid>
