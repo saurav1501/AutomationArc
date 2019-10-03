@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Edit and verify the Area and population and then in the later test case verify if the same has been reflected on the LEED Online Platform.</description>
+   <name>EditAreaAndPopulationCityCommunityTest</name>
+   <tag>Edit and Verify the Area and Population in Data Input</tag>
+   <comment></comment>
+   <testCaseGuid>f8c60386-fa00-4055-b1cb-307dde480af1</testCaseGuid>
+</TestCaseEntity>

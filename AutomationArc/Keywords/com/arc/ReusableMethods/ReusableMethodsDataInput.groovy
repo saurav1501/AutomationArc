@@ -4493,7 +4493,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		String reading5  = data.getCellData(sheetName, "Hincome1", rowNum)
 		String reading6  = data.getCellData(sheetName, "Hincome2", rowNum)
 
-		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait) 
 		WebUI.click(findTestObject('DataInput/CityCom/a_ Data Input'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('DataInput/CityCom/span_Human Experience'))
@@ -6794,8 +6794,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		
 		//verify the solid waste diversion reading title
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTextOne')),"Municipal solid waste diversion rate from landfill", false)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTextOne')), "Enter muncipal solid waste diversion rate", false)
-		
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTextOne')), "Enter municipal solid waste diversion rate", false)
+									                                                                                           
 		//Verify the soild waste diversion reading title
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWasteDivYearLabel')), "YEAR", false)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWasteDivPercentLabel')),"PERCENT",false)
@@ -8838,7 +8838,6 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	@Keyword
 	public void downloadAndVerifyExportDataCityComm(){
 
-
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		navigation.navigateIntoDataInput()
@@ -8993,6 +8992,90 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		}
 	}
 	
-	
+	@Keyword
+	public void editAreaAndPopulationCityComm(String sheetName, int rowNum){
+		
+		String prjPopulation= data.getCellData(sheetName, "Population", rowNum)
+		String prjArea 		= data.getCellData(sheetName, "Area", rowNum)
+		
+		//Verify delete the default population and input the new population values
+		
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		navigation.navigateIntoDataInput()
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ProjectSettingTab'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/ProjectSettingTab'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'),prjPopulation , false)
+		WebUI.doubleClick(findTestObject('Object Repository/CityCommDataInput/MeterNames/DeleteButtonOne'))
+		WebUI.waitForElementNotPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddRowButton'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddRowButton'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/StartDate'))
+		WebUI.scrollToElement(findTestObject('Object Repository/CityCommDataInput/MeterNames/ClickYear2017'), 10)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/ClickYear2017'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), '1000')
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonSettingTab'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.refresh()
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ProjectSettingTab'), GlobalVariable.minAngularWait)
+		WebUI.doubleClick(findTestObject('Object Repository/CityCommDataInput/MeterNames/ProjectSettingTab'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/SettingDropdown'), GlobalVariable.minAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'),'1000' , false)
+		
+		//Verify delete the default area and input the new area values
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+	    WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SettingDropdown'))
+		WebUI.scrollToElement(findTestObject('Object Repository/CityCommDataInput/MeterNames/ProjectArea'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/ProjectArea'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/IPUnit'), GlobalVariable.minAngularWait)
+		if(GlobalVariable.environment=='dev'){
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'),'48' , false)
+		}
+		else{
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'),prjArea , false)
+		}
+		WebUI.doubleClick(findTestObject('Object Repository/CityCommDataInput/MeterNames/DeleteButtonOne'))
+		WebUI.waitForElementNotPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddRowButton'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddRowButton'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/StartDate'))
+		WebUI.scrollToElement(findTestObject('Object Repository/CityCommDataInput/MeterNames/ClickYear2017'), 10)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/ClickYear2017'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		if(GlobalVariable.environment=='dev'){
+			WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), '1000')
+		}
+		else{
+			WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), '1000')
+		}
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonSettingTab'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.refresh()
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ProjectSettingTab'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/ProjectSettingTab'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/ProjectSettingTab'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SettingDropdown'))
+		WebUI.scrollToElement(findTestObject('Object Repository/CityCommDataInput/MeterNames/ProjectArea'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/ProjectArea'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/IPUnit'), GlobalVariable.minAngularWait)
+		if(GlobalVariable.environment=='dev'){
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'), '1000' , false)
+		}
+		else{
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'), '1000' , false)
+		}
+	}
+		
 }
 
