@@ -37,7 +37,7 @@ import internal.GlobalVariable as GlobalVariable
 
 try {
 	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.CitySheet, GlobalVariable.rowNumThree)
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.editAreaAndPopulationCityComm'(GlobalVariable.CitySheet,GlobalVariable.rowNumThree)
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.editAreaAndPopulationCityComm'(GlobalVariable.CitySheet,GlobalVariable.rowNumTwo)
 			
 } catch (Throwable t) {
 	System.out.println(t.getLocalizedMessage())
