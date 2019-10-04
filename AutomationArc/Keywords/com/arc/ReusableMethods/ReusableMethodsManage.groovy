@@ -1689,17 +1689,17 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void projectDetailsValidation(){
-		/*WebUI.delay(3)
-		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
-		 */
-
-		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
+		
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		navigation.navigateIntoDataInput()
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ProjectSettingTab'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/ProjectSettingTab'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
+		WebUI.setText(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'SDF')
+		WebUI.waitForElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/PopulationReadingErrorMessage'), GlobalVariable.minAngularWait)
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.setText(findTestObject('Manage/CityCom/New/Population'),'SDF')
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.click(findTestObject('Object Repository/Manage/ManageEntity/Managing entity Name'))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.verifyElementPresent(findTestObject('Object Repository/Manage/ErrorMessage/populationErrorMessage'),2)
 	}
 
 	@Keyword
