@@ -6637,8 +6637,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	@Keyword
 	public void HumanExpMeterReadingValidationUI()throws IOException, InterruptedException {
 		
-		
-		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ProjectSettingTab'), GlobalVariable.minAngularWait)
+		navigation.navigateIntoDataInput()
 		WebUI.doubleClick(findTestObject('Object Repository/CityCommDataInput/MeterNames/HighSchoolPercent'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'))
@@ -6683,7 +6682,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	@Keyword
 	public void EQUITABILITYHumanExpMeterReadingValidationUI()throws IOException, InterruptedException {
 
-		WebUI.douleClick(findTestObject('Object Repository/CityCommDataInput/MeterNames/MedianIncome'))
+		WebUI.doubleClick(findTestObject('Object Repository/CityCommDataInput/MeterNames/MedianIncome'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
@@ -6705,7 +6704,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	@Keyword
 	public void GinicoefficientHumanExpMeterReadingValidationUI()throws IOException, InterruptedException {
 
-		WebUI.doubleClick(findTestObject('Object Repository/CityCommDataInput/MeterNames/GiniCoefficient'))
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/GiniCoefficient'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
@@ -6721,6 +6720,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.verifyElementNotVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/PopulationReadingErrorMessage'))
+
 
 	}
 
@@ -8848,7 +8848,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/cancelButton'), GlobalVariable.minAngularWait)
-		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/cancelButton'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/closeCreateReportModal'))
 		WebUI.delay(8)
 		//'Verifying the file is download in the User defined Path'
 		Assert.assertTrue(isFileDownloaded('Export Data.xlsx'), 'Failed to download Expected document')
