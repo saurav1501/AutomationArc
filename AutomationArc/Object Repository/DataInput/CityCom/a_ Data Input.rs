@@ -9,8 +9,12 @@
          <key>BASIC</key>
          <value>//*[@id = 'data_input']</value>
       </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//a[(text() = '  Data Input' or . = '  Data Input')]</value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>
@@ -67,5 +71,12 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;data_input&quot;)</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>ref_element</name>
+      <type>Main</type>
+      <value>Object Repository/DataInput/iframe_datainput-widget</value>
    </webElementProperties>
 </WebElementEntity>

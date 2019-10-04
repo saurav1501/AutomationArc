@@ -21,7 +21,7 @@
             <profileName>STG-US-P2</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
-         <runEnabled>false</runEnabled>
+         <runEnabled>true</runEnabled>
          <testSuiteEntity>Test Suites/CitiesSuites/USCitySuite/USLEEDForCitiesSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
@@ -30,7 +30,7 @@
             <profileName>STG-US-P2</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
-         <runEnabled>true</runEnabled>
+         <runEnabled>false</runEnabled>
          <testSuiteEntity>Test Suites/CitiesSuites/USCitySuite/USCitiesOtherSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
@@ -48,7 +48,7 @@
             <profileName>STG-US-P2</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
-         <runEnabled>false</runEnabled>
+         <runEnabled>true</runEnabled>
          <testSuiteEntity>Test Suites/CommunitySuites/USComSuite/USComLEEDForComSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>

@@ -131,6 +131,12 @@
       <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/CreateWasteGenerationMeterReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>e37c8196-9978-4c93-aece-b4a665ff3c2d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/CreateWasteDiversionMeterReadingTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>0170e480-629d-4ab2-966b-9d7dee2717f7</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -243,12 +249,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/AppVerifyUninstalledMessageWhileUninstallingAppsTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>72f2d5ef-c5c9-4333-b3a2-ed6668608007</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/AppVerifyAllUninstalledAppRemovedFromAddSupportingSectionTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>972841e6-0936-4092-994f-ada392f7ddda</guid>
