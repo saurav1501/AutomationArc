@@ -11,7 +11,11 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//a[(text() = '  Data Input' or . = '  Data Input')]</value>
+         <value>//*[@ng-click=&quot;saveDefaultPage('allactions')&quot;]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
@@ -71,12 +75,5 @@
       <name>xpath</name>
       <type>Main</type>
       <value>id(&quot;data_input&quot;)</value>
-   </webElementProperties>
-   <webElementProperties>
-      <isSelected>true</isSelected>
-      <matchCondition>equals</matchCondition>
-      <name>ref_element</name>
-      <type>Main</type>
-      <value>Object Repository/DataInput/iframe_datainput-widget</value>
    </webElementProperties>
 </WebElementEntity>
