@@ -31,43 +31,43 @@
    <testCaseLink>
       <guid>facbffdd-3dea-4283-866c-1d1db7e97312</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/MyCommunities/CommunitiesOther/SearchProgramTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>e6626625-db17-46c7-914b-222909af01f5</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/MyCommunities/CommunitiesOther/ScoreVersionVerificationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>3defc560-8f0e-499c-8a81-54d04e50f99b</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/MyCommunities/CommunitiesOther/AgreementFileDownloadTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>4434eddf-896c-4f1b-a73f-d1abdedd1fcd</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/CityComValidation/ManageProjectDetailsValidationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>b3861c1c-462e-484c-95fc-b8da3ec8b0b2</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/CityComValidation/ManagingEntityStateTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>ebd74801-5fc2-4a05-a4bb-933cd01ac5c2</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/CityComValidation/ManageStateUS(StateNotAvalable)ValidationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>2dc24115-20fd-4442-be06-7a0437cc0047</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Common/CityComValidation/VerifyNonUSGBCMemAddInsideTeamTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
