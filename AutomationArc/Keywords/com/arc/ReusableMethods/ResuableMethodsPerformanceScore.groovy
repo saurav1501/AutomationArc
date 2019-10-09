@@ -1705,7 +1705,7 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		//WebUI.verifyElementPresent(findTestObject('Manage/CityCom/New/LEEDPerformance scoreThe total'), 22)
 		WebUI.verifyElementVisible(findTestObject('Manage/CityCom/New/CategoryScoreOtherNone'), FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyElementVisible(findTestObject('Manage/CityCom/New/Performance scoreThe total'), FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyElementNotPresent(findTestObject('Manage/CityCom/New/Base pointsAchieve'),3)
+		//WebUI.verifyElementNotPresent(findTestObject('Manage/CityCom/New/Base pointsAchieve'),3)
 
 		WebUI.waitForElementClickable(findTestObject('Manage/CityCom/New/PerformanceToolTip'),30)
 		WebUI.click(findTestObject('Manage/CityCom/New/PerformanceToolTip'))
