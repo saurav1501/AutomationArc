@@ -4,7 +4,17 @@
    <name>a_ Manage</name>
    <tag></tag>
    <elementGuidId>bad0ed0b-4c0d-4de3-97ef-86d652ee0704</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>(//*[(text() = '   Manage   ' or span = 'Manage')])[1]</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//a[(text() = '   Manage   ' or . = '   Manage   ')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//a[(text() = '  Data Input' or . = '  Data Input')]</value>
+         <value>//*[(text() = '  Data Input' or . = 'Data Input')]</value>
       </entry>
       <entry>
          <key>BASIC</key>
