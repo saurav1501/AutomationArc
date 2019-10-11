@@ -917,10 +917,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	public void editMeterReading(String sheetName, int rowNum){
 		String reading4  = data.getCellData(sheetName, "Reading4", rowNum)
 
-		//WebUI.delay(18)
-		//WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/UploadFilesViaCloud/EnergyFileUploadTestMeter'))
-		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/TestEnergyMeterNew'), 3)
+		
+		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/TestEnergyMeterNew'), 3)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/TestEnergyMeterNew'))
 		WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), "Test Energy Meter New", FailureHandling.STOP_ON_FAILURE)
 		WebUI.delay(8)
@@ -2075,9 +2073,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	@Keyword
 	public void newMeterBuidingFieldVerification(){
-		//WebUI.delay(18)
-		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/TestEnergyMeterNew'), 3)
+		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/TestEnergyMeterNew'), 3)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/TestEnergyMeterNew'))
 		WebUI.delay(3)
 		//WebUI.scrollToElement(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'), 3)
@@ -2097,10 +2093,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	@Keyword
 	public void addNewMeterBuildingDefaultfuelType(){
 
-		//WebUI.delay(3)
-		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
-		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/TestEnergyMeterNew'), 3)
-		WebUI.scrollToElement(findTestObject('Object Repository/dataInputNewUI/dataInputTextVerification'), 3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/TestEnergyMeterNew'))
 		WebUI.delay(3)
 		//WebUI.scrollToElement(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'), 3)
@@ -2261,9 +2254,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	@Keyword
 	public void editEnergyMeterBuilding(){
-		//WebUI.delay(15)
-		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
-		WebUI.scrollToElement(findTestObject('Object Repository/dataInputNewUI/dataInputTextVerification'), 3)
+		
+		//WebUI.scrollToElement(findTestObject('Object Repository/dataInputNewUI/dataInputTextVerification'), 3)
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/TestEnergyMeter'))
 		WebUI.delay(5)
@@ -2274,7 +2266,6 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/EditUnit'),20)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/EditUnit'))
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/Select_mWh'))
-		//WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Document/ScorePopup'), 20)
 		WebUI.delay(15)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/EditFuelSource'),20)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/EditFuelSource'))
@@ -2282,7 +2273,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(6)
 		WebUI.refresh()
 		WebUI.delay(15)
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/TestEnergyMeterNew'), 3)
+		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/TestEnergyMeterNew'), 3)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/TestEnergyMeterNew'))
 		WebUI.delay(5)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/MeterDetails'))
@@ -2317,7 +2308,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/EditFuelSource'), 20)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/EditFuelSource'))
 		WebUI.delay(2)
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/MunicipalitySuppliedReclaimWater'), 5)
+		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/MunicipalitySuppliedReclaimWater'), 5)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/MunicipalitySuppliedReclaimWater'))
 		WebUI.delay(5)
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/EditMeterName'),'value'),"Test Water Meter New")
@@ -2334,13 +2325,10 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		String reading3  = data.getCellData(sheetName, "Reading3", rowNum)
 		String meterName=  data.getCellData(sheetName, "MeterName", rowNum)
 
-
-		//WebUI.delay(18)
-		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		WebUI.delay(5)
 		ReusableMethodsLogin.waitForIframeLoad(60)
 		ReusableMethodsLogin.waitForPageLoad(60)
-		WebUI.scrollToElement(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'), 5)
+		//WebUI.scrollToElement(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'), 5)
 		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'))
 		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/a_Add New Meter'))
 		WebUI.delay(3)
@@ -2478,10 +2466,10 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	@Keyword
 	public void createEnergyMeterWithDifferentUnits(){
 
-		//WebUI.delay(18)
-		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		
 		ReusableMethodsLogin.waitForIframeLoad(60)
 		ReusableMethodsLogin.waitForPageLoad(60)
+		//WebUI.scrollToElement(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'), 5)
 		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'))
 		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/a_Add New Meter'))
 		WebUI.delay(3)
@@ -2747,13 +2735,11 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	public void createWaterMeterWithDifferentUnits(){
 
 		//kGal
-		//WebUI.delay(18)
 		WebUI.waitForAngularLoad(60, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
-		///ReusableMethodsLogin.waitForPageLoad(60)
-		//ReusableMethodsLogin.waitForIframeLoad(60)
 		WebUI.waitForAngularLoad(60, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.waitForElementClickable(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'), 60)
+		//WebUI.scrollToElement(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'), 5)
 		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'))
 		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/a_Add New Meter'))
 		//WebUI.delay(3)
@@ -3423,16 +3409,13 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	public void verifyAndDownloadExportData(){
 
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		navigation.navigateIntoDataInput()
 		WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-
-		WebUI.scrollToElement(findTestObject('Object Repository/dataInputNewUI/dataInputTextVerification'), 3)
 		WebUI.waitForElementPresent(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'), 60)
 		WebUI.waitForElementVisible(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'), 60)
 		WebUI.waitForElementClickable(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'),20)
+		//WebUI.scrollToElement(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'))
 		WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
