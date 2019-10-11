@@ -391,7 +391,7 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.delay(15)
 
 		/********* Verifying the Generated score for total score & Energy & Water & Waste & Transport & Human Experience under data Input section ********/
-		WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
+		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		WebUI.delay(8)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
