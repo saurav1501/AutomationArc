@@ -5118,10 +5118,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		navigation.navigateIntoDataInput()
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
-
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
 		String MainWindowHandle = driver.getWindowHandle()
 		WebUI.delay(1)
 		WebUI.click(findTestObject('DataInput/Survey/CopySurveyLink'))
@@ -5149,7 +5147,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 		//To switch to the new tab
 
-		for( int rowNum=2;rowNum<=200;rowNum++)
+		for( int rowNum=2;rowNum<=4;rowNum++)
 		{
 
 			String walk1 = data.getCellData(sheetName, "Walk", 3)
