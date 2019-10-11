@@ -6,12 +6,11 @@
    <elementGuidId>6fa51462-5d20-40d7-aa11-f305572dbd12</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>CSS</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//a[(text() = '  Data Input' or . = '  Data Input')]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//a[@class = 'ng-scope']</value>
+         <key>CSS</key>
       </entry>
       <entry>
          <key>BASIC</key>
