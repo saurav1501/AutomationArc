@@ -6,12 +6,12 @@
    <elementGuidId>78458ad0-d27c-4c04-b729-cc0184171150</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@id='datainput-widget'] | //*[@id=&quot;arcWidget&quot;]/iframe</value>
-      </entry>
-      <entry>
          <key>BASIC</key>
          <value>//*[@id = 'datainput-widget']</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@id='datainput-widget'] | //*[@id=&quot;arcWidget&quot;]/iframe</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

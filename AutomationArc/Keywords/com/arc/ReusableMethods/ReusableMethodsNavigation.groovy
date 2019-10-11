@@ -28,21 +28,16 @@ public class ReusableMethodsNavigation {
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ Buildings'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.delay(2)
-		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ My Buildings'))
-		String postNavigationLoginText = WebUI.getText(findTestObject('Object Repository/Page_Arc dashboard/span_My Buildings'))
-		WebUI.verifyMatch(postNavigationLoginText,'My Buildings',true)
 	}
 
 	@Keyword
 	public void clickAddProject() {
-		//WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.scrollToElement(findTestObject('Object Repository/Add_Project_Details/button_ Add'), 3)
-		WebUI.click(findTestObject('Object Repository/Add_Project_Details/button_ Add'))
+		WebUI.scrollToElement(findTestObject('Object Repository/Arc2.0 Locators/AllProjectDashboard/AddAProjectButton'), 3)
+		WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/AllProjectDashboard/AddAProjectButton'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		//WebUI.delay(2)
-		String postNavigationLoginText = WebUI.getText(findTestObject('Object Repository/Add_Project_Details/h1_Project Registration'))
-		WebUI.verifyMatch(postNavigationLoginText,'Project Registration',true)
+		String postNavigationLoginText = WebUI.getText(findTestObject('Object Repository/Arc2.0 Locators/Add Project Locators/AddAProjectText'))
+		WebUI.verifyMatch(postNavigationLoginText,'Add a Project',true)
 	}
 
 	@Keyword

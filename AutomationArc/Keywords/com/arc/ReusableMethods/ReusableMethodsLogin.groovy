@@ -229,7 +229,7 @@ public class ReusableMethodsLogin extends BaseClass{
 		WebUI.getViewportLeftPosition()
 		WebUI.getViewportTopPosition()
 
-		WebUI.click(findTestObject('Object Repository/LoginViaAppUrl/CookieACCEPTANDCLOSE'),FailureHandling.OPTIONAL)
+		//WebUI.click(findTestObject('Object Repository/LoginViaAppUrl/CookieACCEPTANDCLOSE'),FailureHandling.OPTIONAL)
 		WebUI.setText(findTestObject('Object Repository/LoginViaAppUrl/UserName'), userName)
 		WebUI.setText(findTestObject('Object Repository/LoginViaAppUrl/UserPassword'), password)
 		WebUI.check(findTestObject('Object Repository/LoginViaAppUrl/AcceptAgreement'))

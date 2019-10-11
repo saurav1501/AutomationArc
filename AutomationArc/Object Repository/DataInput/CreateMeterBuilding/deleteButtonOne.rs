@@ -6,19 +6,19 @@
    <elementGuidId>efce5ded-44fe-496a-9dbf-d74fcecfda21</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//*[@ng-click=&quot;deleteReading(data, $index)&quot;])[1]</value>
-      </entry>
-      <entry>
          <key>BASIC</key>
          <value>//*[@ref_element = 'Object Repository/PerformanceScore/DataInput/iframe_datainput-widget']</value>
       </entry>
       <entry>
          <key>CSS</key>
-         <value>#readingsTable > tbody > tr:nth-child(1) > td:nth-child(8) >span</value>
+         <value>#readingsTable > tbody > tr > td:nth-child(8) > span</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(//*[@ng-click=&quot;deleteReading(data, $index)&quot;])[1]</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

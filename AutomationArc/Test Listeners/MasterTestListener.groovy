@@ -102,7 +102,7 @@ public class MasterTestListener extends BaseClass {
 			KeywordUtil.markWarning("LEED Online Test : " + testCaseId[testCount-1])
 		}
 		else{
-		CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsNavigation.clickOnSidebar'(testSuiteId[count-1])
+		//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsNavigation.clickOnSidebar'(testSuiteId[count-1])
 			
 		//***********Login by Remote MySQL Database environment stg , qas , dev ***********************************************//*
 	     //    CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.LoginToArcWithRemoteDBMySQL'()
