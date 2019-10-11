@@ -103,43 +103,43 @@
    <testCaseLink>
       <guid>8e1ed928-8238-4ecf-af54-1f56143a6ee8</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyAddNewMeterInEnergyAndWaterMeterTabIsPresentTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>3b5333b4-75d2-4351-8835-e62713f63b3c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyErrorMessageWasteDivertedGreaterThanWasteGenerationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>a6491a29-1dd2-4b36-b866-126c1bdda7d8</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/DataInputWasteFileUploadTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>4b74a284-a8b0-471b-8725-9fe538f9543b</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/BuildingEnergyMeterCreateTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>78960b03-b9ec-4f68-9ce0-a345e03d0c27</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/DataInputEnergyFileUploadTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>0539a11b-2003-4ee1-98a0-d14ffba4fa43</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/BuildingWaterMeterCreateTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d6611f1f-31f2-4b4d-8cab-4e35850094e9</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/DataInputWaterFileUploadTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -151,19 +151,19 @@
    <testCaseLink>
       <guid>e5576fb3-ad02-45b6-974d-f39c9f925ac5</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/DataInputFileUploadHumanExperience</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>24c571a3-25ce-4bf7-9241-6d4414798f83</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyEnergyActivityTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>939bdd17-05d8-4522-826a-caa08f37f3fa</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/EditEnergyMeterDetailsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -175,91 +175,91 @@
    <testCaseLink>
       <guid>73df2861-0801-407a-a24e-8f0d625f41f4</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/EditWaterMeterDetailsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d3502079-4d28-4be5-a32f-411605a4a8bd</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/NewMeterFieldVerificationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>ff25885d-eb3a-4e81-9a70-b9e11a75c3f4</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/NewMeterDefaultFuelTypeValidationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>b4d6f03e-f5fc-452a-9989-c242cdf53e55</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/DownloadAndVerifyExportedDataTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>6147e393-e25a-4ba4-a8cb-b0bef9c7a02e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/EditEnergyMeterReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>780e5f78-892b-4d48-ad70-cbb4bdebd44d</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyThatTheIncompleteMeterCanBeDeleted_1_15_4Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>a94aa142-f1c4-4deb-95ba-001d841d0334</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/CreateWaterMeterWithDifferentUnitTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>189ff1db-1d84-48fd-8945-9447ce90a9a3</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/CreateEnergyMeterWithDifferentUnitTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>3fef6c62-a0e4-451a-87f1-3e336337f48c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/CountTheNoOfEnergyAndWaterMeterTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d200df5a-2cc6-45ae-9cc8-ef025dd4f2f8</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/UploadArcDataTemplateTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>2472e5fa-603b-45ce-ad8d-1a16ee394918</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/InternationalLanguageEnergyMeterTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>6bdc0630-6610-4738-ae5b-bc67bfe6fd5b</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyWasteMeterDataCreatedViaExcelTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>8be77a1e-d901-4660-bddc-7e9891361742</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyWaterMeterDataCreatedViaExcelTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>34e704d3-5207-4a0b-8505-24066cd4e484</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyEnergyMeterDataCreatedViaExcelTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>f89f776d-3cac-4de7-bc48-361356e07d48</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyFilterDataInputForWasteReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -271,7 +271,7 @@
    <testCaseLink>
       <guid>6b4b3eac-5747-4ec5-9dc0-54b084a055c9</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/SubmitSurveyTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
