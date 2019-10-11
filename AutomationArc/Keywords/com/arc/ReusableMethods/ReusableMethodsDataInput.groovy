@@ -378,10 +378,9 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	@Keyword
 	public void verifyWaterReadingUploadedViaExcel(String sheetName, int rowNum){
-		//WebUI.delay(18)
-		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/DataInputExcelUploadDataVerification/ClickOnWaterMeterCreatedViaExcel'))
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), 4)
+		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), 4)
 		WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), "Water meter via upload", FailureHandling.STOP_ON_FAILURE)
 		WebUI.delay(5)
 
@@ -400,7 +399,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		}
 		//verify document tab is available under data input section
 		WebUI.delay(5)
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/DocumentTab'), 4)
+		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/DocumentTab'), 4)
 		WebUI.click(findTestObject('Object Repository/DataInput/DocumentTab'))
 		WebUI.delay(3)
 		Assert.assertTrue(WebUI.verifyElementVisible(findTestObject('Object Repository/DataInput/UploadButtonInDocumentTab')))
@@ -424,12 +423,10 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	@Keyword
 	public void verifyWasteReadingUploadedViaExcel(String sheetName, int rowNum){
-		//WebUI.delay(18)
-		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		//WebUI.delay(20)
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'))
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), 4)
+		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), 4)
 		WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), "Waste Data", FailureHandling.STOP_ON_FAILURE)
 		WebUI.delay(6)
 		String date1
@@ -461,7 +458,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		}
 		//verify document tab is available under data input section
 		WebUI.delay(5)
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/DocumentTab'), 4)
+		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/DocumentTab'), 4)
 		WebUI.click(findTestObject('Object Repository/DataInput/DocumentTab'))
 		WebUI.delay(3)
 		Assert.assertTrue(WebUI.verifyElementVisible(findTestObject('Object Repository/DataInput/UploadButtonInDocumentTab')))
@@ -875,10 +872,9 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	//should be placed just after after waste generation
 	@Keyword
 	public void verifyFilterDataInput(){
-		WebUI.delay(18)
-		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		navigation.navigateIntoDataInput()
 		WebUI.click(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'))
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), 4)
+		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), 4)
 		WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), "Waste Data", FailureHandling.STOP_ON_FAILURE)
 		WebUI.delay(5)
 		WebUI.click(findTestObject('Object Repository/DataInput/CheckFilter/ClickFilter'))
@@ -2453,7 +2449,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(5)
 		WebUI.refresh()
 		WebUI.delay(15)
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ClickOnInternationalMeter'), 3)
+		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ClickOnInternationalMeter'), 3)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ClickOnInternationalMeter'))
 		WebUI.delay(4)
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ReadingOne'),'value'),reading3)
