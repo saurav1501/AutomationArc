@@ -2640,11 +2640,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
 		WebUI.setText(findTestObject('DataInput/CreateMeterBuilding/input_fw600 reading ng-pristin'), reading1)
-		//WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Update'))
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
-		//WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/deleteButtonOne'), 20)
-		//WebUI.waitForElementNotVisible(findTestObject('Object Repository/DataInput/saveButtonDataInput'), 20)
-		//WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/SuccessGreenTick'),20)
+		WebUI.waitForElementNotPresent(findTestObject('Object Repository/DataInput/SaveButtonDI'), GlobalVariable.minAngularWait, FailureHandling.CONTINUE_ON_FAILURE )
 		//reading two
 		//WebUI.delay(5)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), 20)
@@ -2673,11 +2670,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
 		WebUI.setText(findTestObject('DataInput/CreateMeterBuilding/input_fw600 reading ng-pristin'), reading2)
-		//WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Update'))
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
-		//WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/deleteButtonTwo'), 20)
-		//WebUI.waitForElementNotVisible(findTestObject('Object Repository/DataInput/saveButtonDataInput'), 20)
-		//WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/SuccessGreenTick'),20)
+		WebUI.waitForElementNotPresent(findTestObject('Object Repository/DataInput/SaveButtonDI'), GlobalVariable.minAngularWait, FailureHandling.CONTINUE_ON_FAILURE )
 		//reading 3
 		//WebUI.delay(5)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), 20)
@@ -2706,18 +2700,10 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
 		WebUI.setText(findTestObject('DataInput/CreateMeterBuilding/input_fw600 reading ng-pristin'), reading3)
-		//WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Update'))
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
-		//WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/deleteButtonThree'), 20)
-		//WebUI.waitForElementNotVisible(findTestObject('Object Repository/DataInput/saveButtonDataInput'), 20)
-		//WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/SuccessGreenTick'),20)
-		//WebUI.delay(5)
+		WebUI.waitForElementNotPresent(findTestObject('Object Repository/DataInput/SaveButtonDI'), GlobalVariable.minAngularWait, FailureHandling.CONTINUE_ON_FAILURE )
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.refresh()
-		//WebUI.delay(15)
-		//WebUI.delay(5)
-		//ReusableMethodsLogin.waitForloaderToDisappear(60)
-		//ReusableMethodsLogin.waitForPageLoad(60)
 		ReusableMethodsLogin.waitForIframeLoad(60)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/CreateEnergyAndWaterMeterWithDifferentCombinations/div_Test Energy Meter'))
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ReadingOne'),'value'),reading3)
@@ -2891,11 +2877,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
 		WebUI.setText(findTestObject('DataInput/CreateMeterBuilding/input_fw600 reading ng-pristin'), reading1)
-		//WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Update'))
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
-		//WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/deleteButtonOne'), 20)
-		//WebUI.waitForElementNotVisible(findTestObject('Object Repository/DataInput/saveButtonDataInput'), 20)
-		//WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/SuccessGreenTick'),20)
+		WebUI.waitForElementNotPresent(findTestObject('Object Repository/DataInput/SaveButtonDI'), GlobalVariable.minAngularWait, FailureHandling.CONTINUE_ON_FAILURE )
 		//reading two
 
 		//WebUI.delay(5)
@@ -2925,16 +2908,13 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
 		WebUI.setText(findTestObject('DataInput/CreateMeterBuilding/input_fw600 reading ng-pristin'), reading2)
-		//WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Update'))
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
-		//WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/deleteButtonTwo'), 20)
-		//WebUI.waitForElementNotVisible(findTestObject('Object Repository/DataInput/saveButtonDataInput'), 20)
-		//WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/SuccessGreenTick'),20)
+		WebUI.waitForElementNotPresent(findTestObject('Object Repository/DataInput/SaveButtonDI'), GlobalVariable.minAngularWait, FailureHandling.CONTINUE_ON_FAILURE )
+
 		//reading 3
 
 		//WebUI.delay(5)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'), 20)
-		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'),2)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
 		//WebUI.delay(4)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
@@ -2959,16 +2939,10 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/day_2'))
 		WebUI.setText(findTestObject('DataInput/CreateMeterBuilding/input_fw600 reading ng-pristin'), reading3)
-		//WebUI.doubleClick(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Update'))
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/button_Add Row'))
-		//WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/deleteButtonThree'), 20)
-		//WebUI.waitForElementNotVisible(findTestObject('Object Repository/DataInput/saveButtonDataInput'), 20)
-		//WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/SuccessGreenTick'),20)
-		//WebUI.delay(5)
+		WebUI.waitForElementNotPresent(findTestObject('Object Repository/DataInput/SaveButtonDI'), GlobalVariable.minAngularWait, FailureHandling.CONTINUE_ON_FAILURE )
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.refresh()
-		//ReusableMethodsLogin.waitForloaderToDisappear(60)
-		//ReusableMethodsLogin.waitForPageLoad(60)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		ReusableMethodsLogin.waitForIframeLoad(60)
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/TestWaterMeter'), 5)
@@ -5088,18 +5062,13 @@ public class ReusableMethodsDataInput  extends BaseClass{
 			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
 			//WebUI.selectOptionByLabel(findTestObject('DataInput/Survey/OccupantType'),'Regular Occupant', false)
-
-			WebUI.click(findTestObject('DataInput/Survey/Submit1'))
 			WebUI.waitForElementClickable(findTestObject('DataInput/Survey/Submit'), GlobalVariable.avgAngularWait)
-
+			WebUI.click(findTestObject('DataInput/Survey/Submit1'))
 			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 			WebUI.verifyMatch(WebUI.getText(findTestObject('DataInput/Survey/Thank')), "Options that enhance your satisfaction", false)
 			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
 			println "Survey Submited Successufully"
-
-
-
 		}
 		WebUI.closeWindowIndex(1)
 		WebUI.delay(2)
