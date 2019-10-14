@@ -301,31 +301,31 @@
    <testCaseLink>
       <guid>a2dae379-a3b6-49e8-a83f-6f2c40440a5b</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/PercentageSurveyResponseRateCalculationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>a1653587-0b28-402f-9dd5-db49c7f14cc0</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ValidateTransportationSurveyGraphTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>d6a7a461-5d82-4faa-86fc-6786835d99bf</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ValidateHumanExpGraphTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>429c616f-22d7-43e3-ad0a-49fea2ee6eb5</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ValidateEnergyMeterGraphTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>7500c43c-50e5-4ffb-b2a2-b319e8f77024</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ValidateWaterMeterGraphTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -337,7 +337,7 @@
    <testCaseLink>
       <guid>1b99ebd6-75bb-404d-8860-a932458edde0</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/VerifyDataUploadTemplatePresentInResourcesTab_1_15_4Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -379,7 +379,7 @@
    <testCaseLink>
       <guid>354451ee-5bfa-4dad-a6f0-a2d76c30567c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ChangeBuildingSetting_1_17_Test</testCaseId>
    </testCaseLink>
    <testCaseLink>

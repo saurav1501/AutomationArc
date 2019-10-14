@@ -98,18 +98,14 @@ public class ReusableMethodsNavigation {
 	@Keyword
 	@Step
 	public void navigateToBuildingTransit() {
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
-		WebUI.delay(3)
-		WebUI.waitForElementClickable(findTestObject('Object Repository/Page_Arc dashboard/a_ Buildings'), 10)
-		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ Buildings'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/Arc2.0 Locators/Project Dashboard Sidebar Locators/AllTransitProjects'), 10)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/Project Dashboard Sidebar Locators/AllTransitProjects'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.delay(2)
-		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ My Transit'))
-		//WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/i_fa fa-bars fa-lg'))
-
-		print "Making Slider On"
-		String postNavigationLoginText = WebUI.getText(findTestObject('Object Repository/Page_Arc dashboard/span_My Transit'))
-		WebUI.verifyMatch(postNavigationLoginText,'My Transit',true)
-		WebUI.delay(5)
 	}
 
 	@Keyword

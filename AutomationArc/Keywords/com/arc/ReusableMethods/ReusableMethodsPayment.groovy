@@ -519,7 +519,10 @@ public class ReusableMethodsPayment extends BaseClass{
 			}
 			//WebUI.delay(10)
 
-			if(WebUI.waitForElementPresent(findTestObject('PaymenntLocator/NextButton'), GlobalVariable.avgAngularWait, FailureHandling.OPTIONAL) && WebUI.waitForElementVisible(findTestObject('PaymenntLocator/NextButton'), GlobalVariable.avgAngularWait, FailureHandling.OPTIONAL)){
+			if(WebUI.waitForElementPresent(findTestObject('Object Repository/Arc2.0 Locators/Project Dashboard Sidebar Locators/AllTransitProjects'), GlobalVariable.avgAngularWait, FailureHandling.OPTIONAL) && WebUI.waitForElementVisible(findTestObject('Object Repository/Arc2.0 Locators/Project Dashboard Sidebar Locators/AllTransitProjects'), GlobalVariable.avgAngularWait, FailureHandling.OPTIONAL)){
+				WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/Project Dashboard Sidebar Locators/AllTransitProjects'))
+				WebUI.waitForElementPresent(findTestObject('PaymenntLocator/NextButton'), GlobalVariable.minAngularWait)
+				WebUI.waitForElementVisible(findTestObject('PaymenntLocator/NextButton'), GlobalVariable.minAngularWait)
 				WebUI.click(findTestObject('PaymenntLocator/NextButton'))
 				WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait,FailureHandling.CONTINUE_ON_FAILURE)
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
