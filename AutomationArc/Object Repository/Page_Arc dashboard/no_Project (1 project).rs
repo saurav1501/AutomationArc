@@ -6,15 +6,15 @@
    <elementGuidId>3038ed33-4eec-423e-ae45-643e4c4db328</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>XPATH</key>
+         <value>//div[@class = 'searchLabels ng-binding' and (text() = 'Project(s) - 1' or . = 'Project(s) - 1')]</value>
+      </entry>
+      <entry>
          <key>BASIC</key>
          <value>//div[@class = 'searchLabels ng-binding' and (text() = ' Project (1 project)' or . = ' Project (1 project)')]</value>
       </entry>
-      <entry>
-         <key>XPATH</key>
-         <value></value>
-      </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

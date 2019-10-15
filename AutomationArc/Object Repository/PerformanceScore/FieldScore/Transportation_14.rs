@@ -6,11 +6,15 @@
    <elementGuidId>0770c789-f198-4d89-98b9-0e21d3a5dadc</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>XPATH</key>
+         <value>//div[(text() = '6' or . = '14')]</value>
+      </entry>
+      <entry>
          <key>BASIC</key>
          <value>//div[(text() = '6' or . = '6')]</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

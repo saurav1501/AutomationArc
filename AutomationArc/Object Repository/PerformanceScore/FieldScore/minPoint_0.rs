@@ -4,7 +4,17 @@
    <name>minPoint_0</name>
    <tag></tag>
    <elementGuidId>d0954d32-fad8-4be6-a379-66c33fc62b00</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>(//div[@class = 'col-md-1 col-xs-1 text-right total-score w50px' and (text() = '0' or . = '0')])[1]</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//div[@class = 'col-md-1 col-xs-1 text-right total-score w50px' and (text() = '0' or . = '0')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

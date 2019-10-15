@@ -85,13 +85,13 @@
    <testCaseLink>
       <guid>c537ba13-6cc7-4272-8e8a-fc53a34811bb</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/UIFieldTotalScoreTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>f52c84e8-26d6-475b-a1bd-e9e55784a08c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/UIScoreFieldIndividualTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -109,13 +109,13 @@
    <testCaseLink>
       <guid>4642acb8-0ebe-4941-b640-8140274db225</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/ProjectDetailsVerificationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>ff27cf7e-7f65-427f-b98f-ac4ffbe318e8</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/VerifyTotalCreditTest</testCaseId>
    </testCaseLink>
    <testCaseLink>

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description></description>
-   <name>prjPrivate</name>
+   <description>Navigate to Manage section.</description>
+   <name>Manage</name>
    <tag></tag>
-   <elementGuidId>c059f371-d716-454d-b565-9f721e548d34</elementGuidId>
+   <elementGuidId>c396607f-65fa-4f25-b115-d5def0f4aea2</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//*[@name=&quot;confidential&quot;])[2]</value>
+         <value>//*[@id=&quot;sidebar-projects-link&quot;]</value>
       </entry>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

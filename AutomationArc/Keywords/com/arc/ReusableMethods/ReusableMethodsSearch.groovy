@@ -73,7 +73,7 @@ public class ReusableMethodsSearch extends BaseClass{
 		println nuberOfProjects
 
 		WebUI.delay(1)
-		WebUI.verifyMatch(nuberOfProjects,'Project (1 project)', false)
+		WebUI.verifyMatch(nuberOfProjects,'Project(s) - 1', false)
 		WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
@@ -100,7 +100,7 @@ public class ReusableMethodsSearch extends BaseClass{
 		//	WebUI.waitForElementPresent(findTestObject('Page_Arc dashboard/no_Project (1 project)'),3)
 		String nuberOfProjects = WebUI.getText(findTestObject('Page_Arc dashboard/no_Project (1 project)'))
 		println nuberOfProjects
-		WebUI.verifyMatch(nuberOfProjects,'Project (1 project)', false)
+		WebUI.verifyMatch(nuberOfProjects,'Project(s) - 1', false)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		//WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/search_Result'))

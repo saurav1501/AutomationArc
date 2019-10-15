@@ -1005,17 +1005,13 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 	}
 	@Keyword
 	public void totalPerformanceScoreUIAllFieldVerification() throws IOException, InterruptedException {
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)
-		 WebUI.click(findTestObject('PerformanceScore/a_ CreditsActions'))
-		 WebUI.delay(1)
-		 WebUI.click(findTestObject('PerformanceScore/Score/a_ Score'))
-		 WebUI.delay(1)*/
-		WebUI.click(findTestObject('PerformanceScore/Score/a_ Total'))
+		
+		
+		WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/Project Navigation Locators/Performance'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		String performaceScore = WebUI.getText(findTestObject('PerformanceScore/span_Performance Score'))
-		WebUI.verifyMatch(performaceScore , 'Performance Score', false)
+		WebUI.verifyMatch(performaceScore , 'Performance', false)
 
 		String total = WebUI.getText(findTestObject('PerformanceScore/Score/span_Total'))
 		WebUI.verifyMatch(total ,"TOTAL", false)
@@ -1126,20 +1122,22 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 
 
 		/********* Verifying all fields UI  Score for individual Energy , Water , Waste , Transport , Human Exp , Base Point ************* */	
+		
+		/*
+		 findTestObject('Object Repository/Arc2.0 Locators/Project Navigation Locators/Performance')
+	  findTestObject('Object Repository/Arc2.0 Locators/Performance Tab Locators/TotalTab')
+	  findTestObject('Object Repository/Arc2.0 Locators/Performance Tab Locators/Energy')
+	  findTestObject('Object Repository/Arc2.0 Locators/Performance Tab Locators/Water')
+	  findTestObject('Object Repository/Arc2.0 Locators/Performance Tab Locators/Waste')
+	  findTestObject('Object Repository/Arc2.0 Locators/Performance Tab Locators/Transportation')
+	  findTestObject('Object Repository/Arc2.0 Locators/Performance Tab Locators/HumanExperience')
+	  */
+		
+		WebUI.maximizeWindow()
+		WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/Project Navigation Locators/Performance'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		WebUI.click(findTestObject('PerformanceScore/Score/a_ Base Points'))
-		//WebUI.delay(5)
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-		String lowestSocreTotal = WebUI.getText(findTestObject('PerformanceScore/FieldScore/minPoint_0'))
-		WebUI.verifyMatch(lowestSocreTotal ,"0", false)
-		String higestScoretotal = WebUI.getText(findTestObject('PerformanceScore/FieldScore/BasePointMax_10'))
-		WebUI.verifyMatch(higestScoretotal ,"10", false)
-		String basePoint = WebUI.getText(findTestObject('PerformanceScore/FieldScore/BaseScore'))
-		WebUI.verifyMatch(basePoint ,"BASE SCORE", false)
-
-		WebUI.click(findTestObject('PerformanceScore/Score/a_ Energy'))
-		//WebUI.delay(5)
+		
+		WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/Performance Tab Locators/Energy'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		String energylowestSocreTotal = WebUI.getText(findTestObject('PerformanceScore/FieldScore/minPoint_0'))
 		WebUI.verifyMatch(energylowestSocreTotal ,"0", false)
@@ -1148,8 +1146,7 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		String energy = WebUI.getText(findTestObject('PerformanceScore/FieldScore/span_Energy'))
 		WebUI.verifyMatch(energy ,"ENERGY", false)
 
-		WebUI.click(findTestObject('PerformanceScore/Score/a_ Water'))
-		//WebUI.delay(5)
+		WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/Performance Tab Locators/Water'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		String waterlowestSocreTotal = WebUI.getText(findTestObject('PerformanceScore/FieldScore/minPoint_0'))
 		WebUI.verifyMatch(waterlowestSocreTotal ,"0", false)
@@ -1158,8 +1155,7 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		String water = WebUI.getText(findTestObject('PerformanceScore/FieldScore/span_Water'))
 		WebUI.verifyMatch(water ,"WATER", false)
 
-		WebUI.click(findTestObject('PerformanceScore/Score/a_ Waste'))
-		//WebUI.delay(5)
+		WebUI.click( findTestObject('Object Repository/Arc2.0 Locators/Performance Tab Locators/Waste'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		String wastelowestSocreTotal = WebUI.getText(findTestObject('PerformanceScore/FieldScore/minPoint_0'))
 		WebUI.verifyMatch(wastelowestSocreTotal ,"0", false)
@@ -1168,9 +1164,8 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		String waste = WebUI.getText(findTestObject('PerformanceScore/FieldScore/span_Waste'))
 		WebUI.verifyMatch(waste ,"WASTE", false)
 
-		WebUI.click(findTestObject('PerformanceScore/Score/a_ Transportation'))
+		WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/Performance Tab Locators/Transportation'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		//WebUI.delay(5)
 		String translowestSocreTotal = WebUI.getText(findTestObject('PerformanceScore/FieldScore/minPoint_0'))
 		WebUI.verifyMatch(translowestSocreTotal ,"0", false)
 		String transhigestScoretotal = WebUI.getText(findTestObject('PerformanceScore/FieldScore/Transportation_14'))
@@ -1178,8 +1173,7 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		String transportation = WebUI.getText(findTestObject('PerformanceScore/FieldScore/span_Transportation'))
 		WebUI.verifyMatch(transportation ,"TRANSPORTATION", false)
 
-		WebUI.click(findTestObject('PerformanceScore/Score/a_ Human Experience'))
-		//WebUI.delay(5)
+		WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/Performance Tab Locators/HumanExperience'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		String humlowestSocreTotal = WebUI.getText(findTestObject('PerformanceScore/FieldScore/minPoint_0'))
 		WebUI.verifyMatch(humlowestSocreTotal ,"0", false)
@@ -1187,6 +1181,7 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.verifyMatch(humhigestScoretotal ,"20", false)
 		String humExp = WebUI.getText(findTestObject('PerformanceScore/FieldScore/span_HumanExperience'))
 		WebUI.verifyMatch(humExp ,"HUMAN EXPERIENCE", false)
+		WebUI.setViewPortSize(1366,1280)
 	}
 
 
@@ -1356,6 +1351,7 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 	public void individualPerformanceScoreUIWithoutScoreAg() throws IOException, InterruptedException {
 		/********* Verifying blank category score race-track without entering data for individual Energy , Water , Waste , Transport , Human Exp , Base Point ************* */
 		
+		WebUI.maximizeWindow()
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Arc2.0 Locators/Project Navigation Locators/Performance'), GlobalVariable.minAngularWait)
         WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/Project Navigation Locators/Performance'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
@@ -1374,6 +1370,8 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/Performance Tab Locators/Transportation'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyElementPresent(findTestObject('PerformanceScore/RaceTrack/TransportBalnkRaceTrack'),5, FailureHandling.STOP_ON_FAILURE)
+		WebUI.setViewPortSize(1366,1280)
+		
 	}
 	@Keyword
 	public void individualPerformanceScoreUIWithoutScoreLV4() throws IOException, InterruptedException {
@@ -1468,15 +1466,7 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 	@Keyword
 	public void navigationIndividualRacetrackToAnalytics() throws IOException, InterruptedException {
 		
-/*
-   		findTestObject('Object Repository/Arc2.0 Locators/Project Navigation Locators/Performance')
-		findTestObject('Object Repository/Arc2.0 Locators/Performance Tab Locators/TotalTab')
-		findTestObject('Object Repository/Arc2.0 Locators/Performance Tab Locators/Energy')
-		findTestObject('Object Repository/Arc2.0 Locators/Performance Tab Locators/Water')
-		findTestObject('Object Repository/Arc2.0 Locators/Performance Tab Locators/Waste')
-		findTestObject('Object Repository/Arc2.0 Locators/Performance Tab Locators/Transportation')
-		findTestObject('Object Repository/Arc2.0 Locators/Performance Tab Locators/HumanExperience')
-		*/
+
 		WebUI.maximizeWindow()
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Arc2.0 Locators/Project Navigation Locators/Performance'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/Project Navigation Locators/Performance'))
