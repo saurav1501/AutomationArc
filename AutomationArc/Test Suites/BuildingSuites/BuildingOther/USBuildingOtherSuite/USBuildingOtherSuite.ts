@@ -49,19 +49,19 @@
    <testCaseLink>
       <guid>488b8470-e416-410c-b441-296f6e210cf8</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/UIScoreFieldIndividualTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>23f7b380-e993-4fd7-a0b8-0b16af54e891</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/UIFieldTotalScoreTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>8e99872f-70b4-48a6-95bd-68df8813468d</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/UIScoreWithoutDataTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -303,12 +303,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/ChangeBuildingSetting_1_17_Test</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>84e5b2fb-db33-41e1-a7dd-931f5d354752</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/CreditActionModuleOtherNoneTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>25fe874c-580f-41ed-a3bc-79daee1fbde8</guid>

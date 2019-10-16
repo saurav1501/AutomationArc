@@ -581,8 +581,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	@Keyword
 	public void verifyEnergyGraphpopulatedAfterExcelUpload(String sheetName){
-		//WebUI.delay(15)
-		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		
 		navigation.navigateIntoDataInput()
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
@@ -743,15 +742,11 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	//Transportation Graph verification score version 3
 	@Keyword
 	public void verifyTransportationGraphpopulatedAfterExcelUploadNewScore(String sheetName, int rowNum){
-		WebUI.delay(15)
-		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+
 		navigation.navigateIntoDataInput()
 		WebUI.delay(3)
 		WebUI.click(findTestObject('Object Repository/DataInput/Survey/div_Transportation Survey'))
-		//WebUI.waitForAngularLoad(10)
 		WebUI.delay(4)
-		//WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), "Transportation Survey", FailureHandling.STOP_ON_FAILURE)
-		//WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'))
 		String people = dataExcelTemplate.getCellData(sheetName,"SurveyTransportation", rowNum)
 		WebUI.delay(2)
 		WebUI.focus(findTestObject('Object Repository/DataInput/Survey/MonthlySurveyGraph'))
@@ -765,7 +760,6 @@ public class ReusableMethodsDataInput  extends BaseClass{
 			String reading=WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/TransportationSurveyToolTip'),FailureHandling.CONTINUE_ON_FAILURE)
 			println reading
 			WebUI.verifyMatch(reading, reading1, false, FailureHandling.CONTINUE_ON_FAILURE)
-			//Assert.assertTrue(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/TransportationSurveyToolTip')).contains(reading1))
 			WebUI.delay(2)
 			j++
 		}
@@ -778,7 +772,6 @@ public class ReusableMethodsDataInput  extends BaseClass{
 			String reading=WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/TransportationSurveyToolTip'),FailureHandling.CONTINUE_ON_FAILURE)
 			println reading
 			WebUI.verifyMatch(reading, reading1, false, FailureHandling.CONTINUE_ON_FAILURE)
-			//Assert.assertTrue(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/TransportationSurveyToolTip')).contains(reading1))
 			WebUI.delay(2)
 			k++
 			index ++
@@ -789,9 +782,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	//New Score version Human experience Graph Validation
 	@Keyword
 	public void verifyHumanCo2BuildingGraphpopulatedAfterExcelUploadNewScore(String sheetName, int rowNum){
-		//WebUI.refresh()
-		WebUI.delay(15)
-		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		
 		navigation.navigateIntoDataInput()
 		WebUI.delay(4)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ClickOccupantSatisfaction'))
@@ -2158,11 +2149,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	@Keyword
 	public void deleteEnergyAndWaterMeterReadingBuilding(){
-		WebUI.delay(3)
-		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
+		
 		navigation.navigateIntoDataInput()
-		WebUI.delay(15)
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/TestEnergyMeterNew'), 3)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/TestEnergyMeterNew'))
 		WebUI.delay(5)
 		for (int c in 1..3){
@@ -2172,7 +2160,6 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		}
 		Assert.assertTrue(WebUI.verifyElementNotPresent(findTestObject('Object Repository/DataInput/CreateMeterBuilding/input_date-picker-meter start_'), 3))
 		WebUI.delay(5)
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/TestWaterMeterNew'), 3)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/TestWaterMeterNew'))
 		WebUI.delay(5)
 		for (int c in 1..3){
@@ -6860,7 +6847,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	public void verifyTheDataUploadTemplateInResourcesTab(){
 		navigation.navigateIntoDataInput()
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Resources/div_Guides'), 4)
+		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Resources/div_Guides'), 4)
 		WebUI.click(findTestObject('Object Repository/DataInput/Resources/div_Guides'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Resources/div_Guides (1)'),10)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Resources/div_Guides (1)')),"Guides", false)
@@ -6880,6 +6867,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Resources/a_Data Guide for Buildings')), "Data Guide for Buildings", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Resources/a_Data Review Checklist')), "Data Review Checklist", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Resources/a_ENERGY STAR Template')), "Arc Data Template", false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.scrollToElement(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'), 5)	
 	}
 
 	@Keyword

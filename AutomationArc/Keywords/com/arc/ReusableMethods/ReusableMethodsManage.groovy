@@ -497,23 +497,17 @@ public class ReusableMethodsManage extends BaseClass {
 	public editOccupanyAreaAndOpreatingHours(){
 
 		ReusNavigate.navigateIntoDataInput()
-		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), 5)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
 		WebUI.delay(3)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
-		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'), 5)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'))
 		WebUI.delay(3)
 		WebUI.click(findTestObject('Object Repository/DataInput/OperatingHourDropdown'))
 		WebUI.delay(2)
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/OperatingHourValue168'),5)
-		Thread.sleep(2000)
-
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
 		WebUI.click(findTestObject('Object Repository/DataInput/OperatingHourValue168'))
-		Thread.sleep(2000)
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
@@ -2366,6 +2360,7 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public void verifyAgreementFileDownload(){
 		deleteFile(BaseClass.ServiceAgreement)
+		WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/Project Navigation Locators/Manage'))
 		WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForElementClickable(findTestObject('Manage/VerifyAgreementFile/button_Download'), 20)
@@ -3267,12 +3262,11 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.waitForElementPresent(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), 30)
-		//WebUI.scrollToElement(findTestObject('DataInput/Survey/div_Transportation Survey'),5)
 		WebUI.doubleClick(findTestObject('DataInput/Survey/div_Transportation Survey'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 		String MainWindowHandle = driver.getWindowHandle()
-		WebUI.scrollToElement(findTestObject('DataInput/Survey/CopySurveyLink'),5)
+		//WebUI.scrollToElement(findTestObject('DataInput/Survey/CopySurveyLink'),5)
 		WebUI.click(findTestObject('DataInput/Survey/CopySurveyLink'))
 		WebUI.delay(1)
 		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/Survey/ClickOnSurveyDropDown'), 20)

@@ -111,7 +111,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://stg-v2.app.arconline.io/admin'</initValue>
+      <initValue>'https://stg.app.arconline.io/admin'</initValue>
       <name>adminUrl</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

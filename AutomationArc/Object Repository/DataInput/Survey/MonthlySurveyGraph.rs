@@ -9,8 +9,12 @@
          <key>BASIC</key>
          <value>#responses-chart-id > div > div > svg > g:nth-child(8) > g > g > g:nth-child(13)</value>
       </entry>
+      <entry>
+         <key>CSS</key>
+         <value>#responses-chart-id > div > div > svg > g:nth-child(8) > g > g > g:nth-child(12) > path</value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
