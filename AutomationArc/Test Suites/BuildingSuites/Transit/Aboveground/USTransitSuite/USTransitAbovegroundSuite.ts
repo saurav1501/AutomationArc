@@ -283,7 +283,7 @@
    <testCaseLink>
       <guid>b5fc8c6c-d4e2-4aa5-9cb2-1c64b75cac4e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/Analytics/AnalyticsArcDataTemplateUploadTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -295,13 +295,13 @@
    <testCaseLink>
       <guid>f759ac8c-1757-45dc-867d-5521f24747c9</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/PercentageSurveyResponseRateCalculationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>5e93b27c-6f0c-4bfc-8156-eeb5c6a68b49</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/ValidateTransportationGraphTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -961,151 +961,151 @@
    <testCaseLink>
       <guid>a53739bb-8add-468d-ba9c-9afd0a245034</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/BillingDateAndStatusTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>1e31d210-4d27-4425-aadb-944211ccc4c2</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/ScoreVersionVerificationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>c8cb775d-4280-4c98-b83f-a9bbf6d88472</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/AgreementFileDownloadTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>449ac6ea-8b8b-487c-a01d-5b08cf746f9e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/AgreementVerifyDateSignedAndTypeTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>a2dd9981-8acd-437b-b344-ac49258316e9</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/AppVerifyEnergyPortfolioManagerAppInstalledByDefaultAndUninstallCheckMsgTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>37247d7c-4489-4f73-9b8c-ebb4a6a2ba5b</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/AppVerifyAllAppsAvailableInstallAndCheckSuccessMessageTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>03eb3eef-954c-4d86-b682-332dc123b3a5</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/AppVerifyAllAppsInstalledOnDataInputPageTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>46db8d4c-05d5-4ce2-9f00-e9c26ca655e4</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/AppVerifyUninstalledMessageWhileUninstallingAppsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>64f1b1b6-1f65-4240-8e14-1582a6af2999</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/AppVerifyAllAppInstallInDataInputByDefaultEvenAfterUnIstallingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>2deec54f-32e2-4aa2-9b1c-3df645d7960a</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/SettingVerifyDataResourceAndDataReviewChecklistDownloadTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>e63676e3-55a6-4bc8-8a37-d7a1d38aefdd</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/ValidateEnergyMeterGraphTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>4fb76fe9-63a3-4ee0-ba44-fc366a9ba82f</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/ValidateWaterMeterGraphTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>b83fa53c-d0f9-44bc-a498-0b34ae4962ae</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/ValidateTransitHumanExperienceGraphTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>50950311-07c2-4999-8a46-29dd815ed21c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/SettingVerifyPlaqueAnimationURLVisibleTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>7c87afe0-c19d-4d84-8c9a-79c2696541ef</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/SettingVerifyPlaqueAnimationWorkInNewWindowTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>b80b9f9c-12ca-4962-9d53-606567e24ee8</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/SettingVerifySettingsPageDetailsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>b072a29d-c26c-45ce-9270-5ebd6b6f8cb0</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/TeamAddTeamMemberTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>bff9b30f-3dfd-4286-bae1-d5ba9df16dfa</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/TeamAddingSameRoleForAMemberAgainTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>5bcb6d28-bc84-4a3b-a72c-947a903ee40b</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/TeamVerifyPrjAdminAndArcAdministratorCreateBydefaultInNewProjectTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>f3b85794-240d-4ca5-a7f9-ed057875f117</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/TeamVerifyProjectAdminCanNotEditTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>a694304a-8123-4d1d-a5bf-46bbd8b22752</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/TeamVerifyArcAdministratorCanNotEditWhenOnePresentTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>745a817f-5b18-4d63-b432-948e9a2be7ae</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/TeamEditTeamManagerRoleAndAddSecondArcAdministratorRoleTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>af7849e6-d0f2-472a-b9de-363a7d88eadc</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/TeamVerifyProjectShouldNotHaveoreThanOneAdminTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>dbb21b28-74fd-49e9-85a2-d1a2caea9a26</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/VerifyAndDownloadBillingReceiptTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>a40bff88-04ed-4db5-af65-5abd9fe027ea</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/ProjectDetailsVerificationAfterExcelUploadTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
