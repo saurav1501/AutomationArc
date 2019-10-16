@@ -43,7 +43,7 @@
    <testCaseLink>
       <guid>ae3c5d85-8d06-46de-a0e2-c348818b8c1e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/SearchProgramTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -133,7 +133,7 @@
    <testCaseLink>
       <guid>098bbd1a-b357-4f91-a27b-640deb5de456</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Common/Notification/Transit/CreateRidershipMeterTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -145,139 +145,139 @@
    <testCaseLink>
       <guid>f430c21e-05cf-4cc8-a37e-cee902f79fb2</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Common/Notification/Transit/CarbonMonoxideNotificationNotDisplayTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>f6592b1e-8987-47b7-8446-4cb825fc0c11</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Common/Notification/Transit/NitrogenDioxideNotificationNotDisplayTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>f414fb1d-35f3-4bf3-ad6d-e2d3959764d6</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Common/Notification/Transit/OzoneNotificationNotDisplayTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>ec3c3d0e-bc56-4feb-b335-e9f7310bf874</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Common/Notification/Default/OccupantSatisfactionDefaultSurveyTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>41d11428-023e-4832-88ff-65800f844cf1</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Common/Notification/Default/TransportSurveyDefaultNotifciationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>e97e0c17-880d-404c-9bf3-542fdaddb7ee</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Common/Notification/Default/WasteDefaultNotifciationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>bcf3f14b-8cc9-4e32-a7bb-cbdec73199bd</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Common/Notification/Transit/PM10NotificationShouldDisplayTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>0a2711c7-7f30-445f-ab6c-ee01dcc0e0cd</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Common/Notification/Transit/PM2.5NotificationNotDisplayTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>f5ed2911-c8d0-46d5-b8d9-de2fadcd5156</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Common/Notification/Transit/SulfurDioxideNotificationNotDisplayTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>242c0557-5859-437b-a0df-e4d7a985c128</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Common/Notification/Transit/AirQualityIndexNotificationNotDisplayTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>be8e01e1-9054-47fb-a147-417e6e38a6f1</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Common/Notification/Transit/DeleteRidershipMeterReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>30c86ef7-ca87-4621-a1d2-7765340bfc17</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Common/Notification/Transit/RidershipNotificationNotDisplayBeforeAfterRefreshTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>1db58cf5-979e-4d79-bbf3-5be6052c4902</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Common/Notification/Transit/VerifyNotificatinEffectOnOtherSectionAfterDeleteingRiderShipMeterRedTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>b2473b43-561e-4e17-a3ea-30e7e1e7877c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Common/DataInput/TransportationSurveyX-AxisLabelMonthDetailsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>da41151f-39b1-4da9-98f0-3e51f9998514</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Common/DataInput/OccupantSatisfactionSurveyX-AxisLabelMonthDetailsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>8844fccc-1291-4559-9979-53594a804f91</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Common/DataInput/AirQualityIndexX-AxisLabelMonthDetailsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>7b931fba-2583-4da0-aa21-3b826850f2d3</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Common/DataInput/Carbon MonoxideX-AxisLabelMonthDetailsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>62183e64-21d3-43b6-8732-27850eaf1e6d</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Common/DataInput/Nitrogen DioxideX-AxisLabelMonthDetailsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>2b1e1dbd-5274-4202-8cc2-b68acb16017c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Common/DataInput/OzoneX-AxisLabelMonthDetailsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>3a5fe840-6bfd-4363-a03f-e854e4042476</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Common/DataInput/PM10X-AxisLabelMonthDetailsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>7c6e4988-13bd-4142-8e4d-9e4532062c95</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Common/DataInput/pm25X-AxisLabelMonthDetailsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>77ca41ee-3b19-4123-a1dd-ac526437194f</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Common/DataInput/Sulfur DioxideX-AxisLabelMonthDetailsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>74f50151-06b0-4b3e-834e-477dc4725d74</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Common/DataInput/RidershipX-AxisLabelMonthDetailsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -289,7 +289,7 @@
    <testCaseLink>
       <guid>b2473b43-561e-4e17-a3ea-30e7e1e7877c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/SubmitSurveyTest</testCaseId>
    </testCaseLink>
    <testCaseLink>

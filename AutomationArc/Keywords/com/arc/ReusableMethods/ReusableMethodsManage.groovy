@@ -497,11 +497,11 @@ public class ReusableMethodsManage extends BaseClass {
 	public editOccupanyAreaAndOpreatingHours(){
 
 		ReusNavigate.navigateIntoDataInput()
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), 5)
+		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'), 5)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
 		WebUI.delay(3)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'), 5)
+		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'), 5)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'))
 		WebUI.delay(3)
 		WebUI.click(findTestObject('Object Repository/DataInput/OperatingHourDropdown'))
@@ -944,8 +944,8 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'), 5)
 		Thread.sleep(1000)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'), 5)
-		Thread.sleep(1000)
+		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'), 5)
+		//Thread.sleep(1000)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'))
 		Thread.sleep(3000)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'),20)
@@ -1281,7 +1281,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/preLEEDCertified'),'value'), "false", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/containsResUnits'),'value'),"false", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/precertify'),'value'),"false", false, FailureHandling.CONTINUE_ON_FAILURE)
-		//WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/stationType'),'value'),"aboveground", false, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Manage/ProjectDetailVerification/stationType')),"aboveground", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/annualRidership'),'value'),annualRidership, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/fullTimeStaffAtStn'),'value'),fullTimeStaffAtStn, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/avgTimeSpent'),'value'),avgTimeSpent, false, FailureHandling.CONTINUE_ON_FAILURE)
@@ -2154,9 +2154,9 @@ public class ReusableMethodsManage extends BaseClass {
 		String regdAmt = data.getCellData(sheetName, "RegAmount", rowNum)
 		String reviewAmt = data.getCellData(sheetName, "ReviewAmount", rowNum)
 		String registrationDate = data.getCellData(sheetName, "RegDate", rowNum)
-		WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
+		
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/Loaders/ProjectDashboardLoader'), 30)
+		
 		//Registration Payment details verification
 		//WebUI.delay(5)
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
@@ -2366,7 +2366,6 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public void verifyAgreementFileDownload(){
 		deleteFile(BaseClass.ServiceAgreement)
-		WebUI.scrollToElement(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'),2)
 		WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForElementClickable(findTestObject('Manage/VerifyAgreementFile/button_Download'), 20)
@@ -2902,7 +2901,6 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public void scoreVersionVerification3(){
 
-		WebUI.scrollToElement(findTestObject('Manage/CertificationAndScore/a_ Score Version'),2)
 		WebUI.click(findTestObject('Manage/CertificationAndScore/a_ Score Version'))
 		String scoreVersion = WebUI.getText(findTestObject('Manage/CertificationAndScore/h3_Arc score v2.0'))
 		WebUI.verifyMatch(scoreVersion, "Arc score v3.0",false, FailureHandling.CONTINUE_ON_FAILURE)
@@ -2916,7 +2914,6 @@ public class ReusableMethodsManage extends BaseClass {
 	
 	public void scoreVersionVerificationCityCommunityV3(){
 		
-		WebUI.scrollToElement(findTestObject('Manage/CertificationAndScore/a_ Score Version'),2)
 		WebUI.click(findTestObject('Manage/CertificationAndScore/a_ Score Version'))
 		String scoreVersion = WebUI.getText(findTestObject('Manage/CertificationAndScore/h3_Arc score v2.0'))
 		WebUI.verifyMatch(scoreVersion, "Arc score for cities version 3.0",false, FailureHandling.CONTINUE_ON_FAILURE)
@@ -2930,7 +2927,6 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public void scoreVersionVerification1_1(){
 
-		WebUI.scrollToElement(findTestObject('Manage/CertificationAndScore/a_ Score Version'),2)
 		WebUI.click(findTestObject('Manage/CertificationAndScore/a_ Score Version'))
 		String scoreVersion = WebUI.getText(findTestObject('Manage/CertificationAndScore/h3_Arc score v2.0'))
 		WebUI.verifyMatch(scoreVersion, "Arc score v1.1",false, FailureHandling.CONTINUE_ON_FAILURE)
@@ -3163,29 +3159,23 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public void verifyLobbyBtnRemailOnAfterNavigationFromOtherPage() throws IOException, InterruptedException {
 
-		WebUI.scrollToElement(findTestObject('Manage/Setting/a_setting'), 5)
+		WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/Project Navigation Locators/Manage'))
 		WebUI.click(findTestObject('Manage/Setting/a_setting'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
-		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/Setting/lobbySurveyBtn'), 15)
 		WebUI.click(findTestObject('Object Repository/Manage/Setting/lobbySurveyBtn'))
 		WebUI.delay(2)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/Manage/Setting/lobbySurveyBtn'), GlobalVariable.avgAngularWait)
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
 		WebUI.click(findTestObject('Object Repository/Manage/App/a_ Apps'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
 		WebUI.click(findTestObject('Object Repository/Manage/Setting/a_setting'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
 		WebUI.verifyElementChecked(findTestObject('Object Repository/Manage/Setting/lobbySurveyBtnOn'), 5)
-		//WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/Setting/lobbySurveyBtnOn'))
-
+		
 	}
 
 	@Keyword
@@ -3270,19 +3260,14 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public void verifySubmitSurveyMultipleTimes(String sheetName) throws IOException, InterruptedException {
 
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
-		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+		navigation.navigateIntoDataInput()
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
 		WebUI.delay(2)
 		WebUI.waitForElementPresent(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), 30)
-		WebUI.scrollToElement(findTestObject('DataInput/Survey/div_Transportation Survey'),5)
+		//WebUI.scrollToElement(findTestObject('DataInput/Survey/div_Transportation Survey'),5)
 		WebUI.doubleClick(findTestObject('DataInput/Survey/div_Transportation Survey'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
@@ -3362,8 +3347,6 @@ public class ReusableMethodsManage extends BaseClass {
 				WebUI.delay(2)
 				WebUI.click(findTestObject('DataInput/Survey/Submit'))
 				WebUI.delay(3)
-				//WebUI.verifyMatch(WebUI.getText(findTestObject('DataInput/Survey/Thank')), "Options that enhance your satisfaction", false)
-				// WebUI.delay(3)
 				println "Survey Submited Successufully"
 			}
 			WebUI.closeWindowIndex(1)
@@ -3656,7 +3639,7 @@ public class ReusableMethodsManage extends BaseClass {
 	public void OccupantSatisfactionDefaultSurvey() throws IOException, InterruptedException {
 
 		WebUI.delay(3)
-		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+		navigation.navigateIntoDataInput()
 		WebUI.delay(2)
 		WebUI.verifyElementPresent(findTestObject('DataInput/Notification1/Occupant Satisfaction Surv'),5)
 
@@ -3673,7 +3656,7 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public void riderShipCreateMeterTest() throws IOException, InterruptedException {
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+		navigation.navigateIntoDataInput()
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
@@ -3729,12 +3712,14 @@ public class ReusableMethodsManage extends BaseClass {
 	}
 	@Keyword
 	public void deleteRiderShipReadingTest() throws IOException, InterruptedException {
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/TRNotification/div_Ridership'),10)
+		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/TRNotification/div_Ridership'),10)
 		WebUI.click(findTestObject('Object Repository/DataInput/TRNotification/div_Ridership'))
-		WebUI.delay(5)
-		WebUI.click(findTestObject('Object Repository/DataInput/CityC/DeleteButton1'))
-		WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.mouseOver(findTestObject('Object Repository/DataInput/CityC/DeleteButton1'))
+		WebUI.doubleClick(findTestObject('Object Repository/DataInput/CityC/DeleteButton1'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	}
+	
 	@Keyword
 	public void billingStatusPrice(String sheetName, int rowNum){
 

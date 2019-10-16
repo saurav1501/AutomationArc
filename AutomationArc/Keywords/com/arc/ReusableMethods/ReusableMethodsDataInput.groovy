@@ -145,7 +145,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	//Verify the default units displayed on the Graphs y-axis
 
-	
+
 
 	@Keyword
 	public void uploadArcDataTemplateBuildingAnalytics(){
@@ -378,7 +378,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	@Keyword
 	public void verifyWaterReadingUploadedViaExcel(String sheetName, int rowNum){
-		
+
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/DataInputExcelUploadDataVerification/ClickOnWaterMeterCreatedViaExcel'))
 		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), 4)
 		WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), "Water meter via upload", FailureHandling.STOP_ON_FAILURE)
@@ -423,7 +423,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	@Keyword
 	public void verifyWasteReadingUploadedViaExcel(String sheetName, int rowNum){
-		
+
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'))
 		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), 4)
@@ -913,7 +913,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	public void editMeterReading(String sheetName, int rowNum){
 		String reading4  = data.getCellData(sheetName, "Reading4", rowNum)
 
-		
+
 		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/TestEnergyMeterNew'), 3)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/TestEnergyMeterNew'))
 		WebUI.verifyElementText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/div_ Meter Name'), "Test Energy Meter New", FailureHandling.STOP_ON_FAILURE)
@@ -2250,7 +2250,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	@Keyword
 	public void editEnergyMeterBuilding(){
-		
+
 		//WebUI.scrollToElement(findTestObject('Object Repository/dataInputNewUI/dataInputTextVerification'), 3)
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/TestEnergyMeter'))
@@ -2462,7 +2462,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	@Keyword
 	public void createEnergyMeterWithDifferentUnits(){
 
-		
+
 		ReusableMethodsLogin.waitForIframeLoad(60)
 		ReusableMethodsLogin.waitForPageLoad(60)
 		//WebUI.scrollToElement(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'), 5)
@@ -4429,7 +4429,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		String reading5  = data.getCellData(sheetName, "Hincome1", rowNum)
 		String reading6  = data.getCellData(sheetName, "Hincome2", rowNum)
 
-		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait) 
+		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.click(findTestObject('DataInput/CityCom/a_ Data Input'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('DataInput/CityCom/span_Human Experience'))
@@ -5944,7 +5944,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	@Keyword
 	public void surveySubmitTr(String sheetName) throws IOException, InterruptedException, Exception{
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
-		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+		navigation.navigateIntoDataInput()
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.maxAngularWait)
 		WebUI.waitForElementVisible(findTestObject('DataInput/Survey/div_Transportation Survey'), 40)
@@ -6709,7 +6709,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		//Verify the solid waste generation title Text
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTextOne')),"Municipal solid waste generation intensity", false)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTextTwo')), "Enter muncipal solid waste generated per year per capita", false)
-		
+
 
 		//Verify the solid waste generation reading title
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterYearLabel')), "YEAR", false)
@@ -6717,22 +6717,22 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWaterUnitLabel')),"ACTIONS", false)
 
 	}
-	
+
 	@Keyword
 	public void validateCityCommWasteDiversionDataInputText(){
-		
+
 		//verify the solid waste diversion reading title
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTextOne')),"Municipal solid waste diversion rate from landfill", false)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputEnergyTextOne')), "Enter municipal solid waste diversion rate", false)
-									                                                                                           
+
 		//Verify the soild waste diversion reading title
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWasteDivYearLabel')), "YEAR", false)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWasteDivPercentLabel')),"PERCENT",false)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/TextValidation/DataInputWasteDivActionsLabel')),"ACTIONS", false)
-		
-		
+
+
 	}
-	
+
 
 
 	@Keyword
@@ -6858,10 +6858,9 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	//Verify data upload template present and can be download in resources section
 	@Keyword
 	public void verifyTheDataUploadTemplateInResourcesTab(){
-		WebUI.delay(5)
-		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
-		WebUI.delay(10)
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Resources/div_Guides'), 4)
+		navigation.navigateIntoDataInput()
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/Resources/div_Guides'), 4)
 		WebUI.click(findTestObject('Object Repository/DataInput/Resources/div_Guides'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/Resources/div_Guides (1)'),10)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Resources/div_Guides (1)')),"Guides", false)
@@ -7834,7 +7833,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.switchToWindowIndex(0)
 	}
 
-//*************************************** CITY / COMMUNITY NEW DATA INPUT UI ***********************************************//
+	//*************************************** CITY / COMMUNITY NEW DATA INPUT UI ***********************************************//
 
 	// City/Community new data input UI
 	@Keyword
@@ -8517,32 +8516,29 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		//Verify the readings for the following options
 		/*WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AdditionalDataDropdownButton'))
-		WebUI.scrollToElement(findTestObject('Object Repository/CityCommDataInput/MeterNames/TotalElectricityUse'), 5)
-		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/TotalElectricityUse'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'), reading1, false)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/UnitAdditonalData'),'value'), ureading1, false)
-
-		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AdditionalDataDropdownButton'))
-		WebUI.scrollToElement(findTestObject('Object Repository/CityCommDataInput/MeterNames/LandfillDiversionRate'), 5)
-		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/LandfillDiversionRate'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'), reading2, false)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/UnitAdditonalData'),'value'), ureading2, false)
-
-		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AdditionalDataDropdownButton'))
-		WebUI.scrollToElement(findTestObject('Object Repository/CityCommDataInput/MeterNames/PercentageOfpopulationWithPotableWater'), 5)
-		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/PercentageOfpopulationWithPotableWater'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'), reading3, false)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/UnitAdditonalData'),'value'), ureading3, false)
-
-		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AdditionalDataDropdownButton'))
-		WebUI.scrollToElement(findTestObject('Object Repository/CityCommDataInput/MeterNames/PercentageOfGovtWorkers'), 5)
-		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/PercentageOfGovtWorkers'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'), reading4, false)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/UnitAdditonalData'),'value'), ureading4, false)*/
+		 WebUI.scrollToElement(findTestObject('Object Repository/CityCommDataInput/MeterNames/TotalElectricityUse'), 5)
+		 WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/TotalElectricityUse'))
+		 WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
+		 WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'), reading1, false)
+		 WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/UnitAdditonalData'),'value'), ureading1, false)
+		 WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AdditionalDataDropdownButton'))
+		 WebUI.scrollToElement(findTestObject('Object Repository/CityCommDataInput/MeterNames/LandfillDiversionRate'), 5)
+		 WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/LandfillDiversionRate'))
+		 WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
+		 WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'), reading2, false)
+		 WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/UnitAdditonalData'),'value'), ureading2, false)
+		 WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AdditionalDataDropdownButton'))
+		 WebUI.scrollToElement(findTestObject('Object Repository/CityCommDataInput/MeterNames/PercentageOfpopulationWithPotableWater'), 5)
+		 WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/PercentageOfpopulationWithPotableWater'))
+		 WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
+		 WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'), reading3, false)
+		 WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/UnitAdditonalData'),'value'), ureading3, false)
+		 WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AdditionalDataDropdownButton'))
+		 WebUI.scrollToElement(findTestObject('Object Repository/CityCommDataInput/MeterNames/PercentageOfGovtWorkers'), 5)
+		 WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/PercentageOfGovtWorkers'))
+		 WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
+		 WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'), reading4, false)
+		 WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/UnitAdditonalData'),'value'), ureading4, false)*/
 	}
 
 	//File Upload City / Community Data Input
@@ -8806,7 +8802,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	//Verify the city Data Input graph
 	@Keyword
 	public void verifyEnergyGraph(String sheetName){
-		
+
 		navigation.navigateIntoDataInput()
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
@@ -8815,7 +8811,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/DetailsTab'))
 		WebUI.delay(5)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/CityCommDataInput/MeterNames/EnergyUnitGraph')), "tons", false)
-        int j=6
+		int j=6
 		(1..5).each{
 			String reading1 = dataExcelTemplate.getCellData(sheetName, "Reading1", j)
 			WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/CityCommGraphDI',[index: it]), GlobalVariable.minAngularWait)
@@ -8827,11 +8823,11 @@ public class ReusableMethodsDataInput  extends BaseClass{
 			j--
 		}
 	}
-	
-	
+
+
 	@Keyword
 	public void verifyWaterGraph(String sheetName){
-		
+
 		navigation.navigateIntoDataInput()
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
@@ -8851,10 +8847,10 @@ public class ReusableMethodsDataInput  extends BaseClass{
 			j--
 		}
 	}
-	
+
 	@Keyword
 	public void verifyWasteGenGraph(String sheetName){
-		
+
 		navigation.navigateIntoDataInput()
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
@@ -8874,10 +8870,10 @@ public class ReusableMethodsDataInput  extends BaseClass{
 			j--
 		}
 	}
-	
+
 	@Keyword
 	public void verifyWasteDivGraph(String sheetName){
-		
+
 		navigation.navigateIntoDataInput()
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
@@ -8897,10 +8893,10 @@ public class ReusableMethodsDataInput  extends BaseClass{
 			j--
 		}
 	}
-	
+
 	@Keyword
 	public void verifyTransportGraph(String sheetName){
-		
+
 		navigation.navigateIntoDataInput()
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
@@ -8920,15 +8916,15 @@ public class ReusableMethodsDataInput  extends BaseClass{
 			j--
 		}
 	}
-	
+
 	@Keyword
 	public void editAreaAndPopulationCityComm(String sheetName, int rowNum){
-		
+
 		String prjPopulation= data.getCellData(sheetName, "Population", rowNum)
 		String prjArea 		= data.getCellData(sheetName, "Area", rowNum)
-		
+
 		//Verify delete the default population and input the new population values
-		
+
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		navigation.navigateIntoDataInput()
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
@@ -8957,10 +8953,10 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'),'1000' , false)
-		
+
 		//Verify delete the default area and input the new area values
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-	    WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SettingDropdown'))
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SettingDropdown'))
 		WebUI.scrollToElement(findTestObject('Object Repository/CityCommDataInput/MeterNames/ProjectArea'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/ProjectArea'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/IPUnit'), GlobalVariable.minAngularWait)
@@ -9005,6 +9001,6 @@ public class ReusableMethodsDataInput  extends BaseClass{
 			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'), '1000' , false)
 		}
 	}
-		
+
 }
 

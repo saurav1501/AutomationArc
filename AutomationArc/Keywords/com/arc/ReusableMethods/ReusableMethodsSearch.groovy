@@ -47,6 +47,9 @@ public class ReusableMethodsSearch extends BaseClass{
 	}
 
 	public void navigationSearch(){
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Arc2.0 Locators/SearchBar_Locators/Search_Icon'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/Arc2.0 Locators/SearchBar_Locators/Search_Icon'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/SearchBar_Locators/Search_Icon'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'),5)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'),5)
@@ -55,6 +58,7 @@ public class ReusableMethodsSearch extends BaseClass{
 		WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 	}
+	
 	@Keyword
 	public void searchProgram(String projectID) {
 

@@ -17,6 +17,7 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 
 	ReusableMethodsLogin reusableMethodsLogin = new ReusableMethodsLogin()
 	ReusableMethodsSearch reusableMethodsSearch = new ReusableMethodsSearch()
+	ReusableMethodsNavigation navigation = new ReusableMethodsNavigation()
 
 	@Keyword
 	public void genratePerformanceScoreAdminTool(String sheetName,int rowNum) throws IOException, InterruptedException {
@@ -161,16 +162,6 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 			}
 
-		/*		WebUI.click(findTestObject('PerformanceScore/RecomputeScoreButton'))
-		 WebUI.delay(3)
-		 WebUI.setText(findTestObject('PerformanceScore/PorjectId'),projectId)
-		 WebUI.delay(2)
-		 WebUI.click(findTestObject('PerformanceScore/RecomputeScore'))
-		 WebUI.waitForAngularLoad(240, FailureHandling.CONTINUE_ON_FAILURE)*/
-
-		/*WebUI.delay(22)
-		 WebUI.waitForElementVisible(findTestObject('PerformanceScore/Score/EnergyScore'), 20)
-		 */	
 		String energyScore = WebUI.getText(findTestObject('PerformanceScore/Score/EnergyScore'))
 		String waterScore = WebUI.getText(findTestObject('PerformanceScore/Score/WaterSocre'))
 		String wasteScore = WebUI.getText(findTestObject('PerformanceScore/Score/WasteScore'))
@@ -205,92 +196,21 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.switchToWindowIndex(0)
 		//Search the project
 		reusableMethodsSearch.searchProgram(sheetName,rowNum)
+        WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 
-		WebUI.delay(15)
-		if((WebUI.getAttribute(findTestObject('Object Repository/PerformanceScore/Score/a_ Score1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
-			println "Scores"
-			WebUI.delay(2)
-			WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
-			WebUI.delay(2)
-		}
-
-		WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Total'))
-		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TotalPerformanceScore'),10)
-		WebUI.delay(15)
+		WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/Project Navigation Locators/Performance'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Arc2.0 Locators/Performance Tab Locators/TotalTab'),10)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 
-		String totalperformaceScore = WebUI.getText(findTestObject('PerformanceScore/Score/TotalPerformanceScore'))
+		String totalperformaceScore = WebUI.getText(findTestObject('Object Repository/Arc2.0 Locators/Performance Tab Locators/TotalScoreBuildingSchool'))
 		print totalperformaceScore
 		WebUI.verifyMatch(totalperformaceScore , totalperformanceScore, false)
 
-		WebUI.click(findTestObject('PerformanceScore/Score/a_ Energy'))
-		WebUI.delay(12)
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-
-		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/EnergyPerScore'),10)
-		String energyperScore = WebUI.getText(findTestObject('PerformanceScore/Score/EnergyPerScore'))
-		WebUI.verifyMatch(energyperScore , energyScore, false)
-		//String carbonIntensity= WebUI.getText(findTestObject('Object Repository/Analytics/Score/CarbonIntensity'),FailureHandling.CONTINUE_ON_FAILURE)
-		//String energyIntensity= WebUI.getText(findTestObject('Object Repository/Analytics/Score/EnergyIntensity'),FailureHandling.CONTINUE_ON_FAILURE)
-
-		/*if((Double.parseDouble(carbonIntensity)==0))
-		 KeywordUtil.markFailed("Carbon Intensity is zero(0)")
-		 if((Double.parseDouble(energyIntensity)==0))
-		 KeywordUtil.markFailed("Energy Intensity is zero(0)")*/
-
-		WebUI.click(findTestObject('PerformanceScore/Score/a_ Water'))
-		WebUI.delay(12)
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-
-		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/WaterPerScore'),10)
-		String waterpfScore = WebUI.getText(findTestObject('PerformanceScore/Score/WaterPerScore'))
-		WebUI.verifyMatch(waterpfScore ,waterScore, false)
-
-		WebUI.click(findTestObject('PerformanceScore/Score/a_ Waste'))
-		WebUI.delay(12)
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-
-		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/WastePerSocre'),10)
-		String wastepfScore = WebUI.getText(findTestObject('PerformanceScore/Score/WastePerSocre'))
-		WebUI.verifyMatch(wastepfScore ,wasteScore , false)
-
-		WebUI.click(findTestObject('PerformanceScore/Score/a_ Transportation'))
-		WebUI.delay(12)
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-
-		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/TransportperScore'),10)
-		String transportperScore = WebUI.getText(findTestObject('PerformanceScore/Score/TransportperScore'))
-		WebUI.verifyMatch(transportperScore ,transportScore, false)
-
-		WebUI.click(findTestObject('PerformanceScore/Score/a_ Human Experience'))
-		WebUI.delay(12)
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-
-		WebUI.waitForElementPresent(findTestObject('PerformanceScore/Score/HumanExpScore'),10)
-		String humanExperience = WebUI.getText(findTestObject('PerformanceScore/Score/HumanExpScore'))
-		WebUI.verifyMatch(humanExperience ,humanExpScore, false)
-
-		String occupantSatisfaction= WebUI.getText(findTestObject('Object Repository/Analytics/Score/OccupantSatisfaction'))
-		//String co2Level= WebUI.getText(findTestObject('Object Repository/Analytics/Score/CO2Level'))
-		//String voc= WebUI.getText(findTestObject('Object Repository/Analytics/Score/VOCLevel'))
-
-		/*if((Integer.parseInt(occupantSatisfaction)==0))
-		 KeywordUtil.markFailed("Occupant Satisfaction is zero(0)")
-		 if((Integer.parseInt(co2Level)==0))
-		 KeywordUtil.markFailed("Co2 Level is zero(0)")
-		 if((Integer.parseInt(voc)==0))
-		 KeywordUtil.markFailed("VOC Level is zero(0)")
-		 */
 
 		/********* Verifying the Generated score for total score & Energy & Water & Waste & Transport & Human Experience under data Input section ********/
-		WebUI.click(findTestObject('PerformanceScore/DataInput/a_ Data Input'))
-		WebUI.delay(8)
+		navigation.navigateIntoDataInput()
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 

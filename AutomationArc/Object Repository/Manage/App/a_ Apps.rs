@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//a[(text() = '   Apps' or . = '   Apps')]</value>
+         <value>//a[(text() = '   Apps' or . = 'Apps')]</value>
       </entry>
       <entry>
          <key>BASIC</key>

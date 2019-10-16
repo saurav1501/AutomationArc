@@ -22,12 +22,11 @@ public class ReusableMethodsAnalytics extends BaseClass{
 
 	@Keyword
 	public void downloadAndVerifySurveyExportedData(){
-		/*WebUI.delay(5)
-		 WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ClickOnAnalytics'), 3)
-		 WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalytics'))*/
-		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'))
-		WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ExportSurveyDataButtonInAnalytics'), 4)
+		
+		WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/Project Navigation Locators/Performance'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('PerformanceScore/Score/TotalPerformanceScore'))
+		WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ExportSurveyDataButtonInAnalytics'), 5)
 		WebUI.click(findTestObject('Object Repository/Analytics/ExportSurveyDataButtonInAnalytics'))
 		WebUI.click(findTestObject('Object Repository/Analytics/ClickOnDowloadExportButton'))
 		WebUI.delay(4)
@@ -730,23 +729,28 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		YearMonth ninemonthsAgo   = thisMonth.minusMonths(9)
 		YearMonth tenmonthsAgo = thisMonth.minusMonths(10)
 		YearMonth elevenmonthsAgo = thisMonth.minusMonths(11)
+		YearMonth twelvemonthsAgo = thisMonth.minusMonths(12)
+		
+		println thisMonth
+		println lastmonth
 
-		String thisMonths    = thisMonth.format(monthYearFormatter)
-		String lastMonth    = lastmonth.format(monthYearFormatter)
-		String twoMonthsAgo = twomonthsAgo.format(monthYearFormatter)
-		String threetMonthsAgo   = threetmonthsAgo.format(monthYearFormatter)
-		String fourMonthsAgo = fourmonthsAgo.format(monthYearFormatter)
-		String fiveMonthsAgo    = fivemonthsAgo.format(monthYearFormatter)
-		String sixMonthsAgo = sixmonthsAgo.format(monthYearFormatter)
-		String sevenMonthsAgo   = sevenmonthsAgo.format(monthYearFormatter)
-		String eightMonthsAgo = eightmonthsAgo.format(monthYearFormatter)
-		String nineMonthsAgo   = ninemonthsAgo.format(monthYearFormatter)
-		String tenMonthsAgo = tenmonthsAgo.format(monthYearFormatter)
-		String elevenMonthsAgo = elevenmonthsAgo.format(monthYearFormatter)
+		String thisMonths    = lastmonth.format(monthYearFormatter)
+		String lastMonth    = twomonthsAgo.format(monthYearFormatter)
+		String twoMonthsAgo = threetmonthsAgo.format(monthYearFormatter)
+		String threetMonthsAgo   = fourmonthsAgo.format(monthYearFormatter)
+		String fourMonthsAgo = fivemonthsAgo.format(monthYearFormatter)
+		String fiveMonthsAgo    = sixmonthsAgo.format(monthYearFormatter)
+		String sixMonthsAgo = sevenmonthsAgo.format(monthYearFormatter)
+		String sevenMonthsAgo   = eightmonthsAgo.format(monthYearFormatter)
+		String eightMonthsAgo = ninemonthsAgo.format(monthYearFormatter)
+		String nineMonthsAgo   = tenmonthsAgo.format(monthYearFormatter)
+		String tenMonthsAgo = elevenmonthsAgo.format(monthYearFormatter)
+		String elevenMonthsAgo = twelvemonthsAgo.format(monthYearFormatter)
 
 
 		String currentMonth = WebUI.getText(findTestObject('Analytics/Gra/currentMonth'))
 		WebUI.verifyMatch(thisMonths, currentMonth, false)
+		
 
 		String lastmonths = WebUI.getText(findTestObject('Analytics/Gra/lastMonth'))
 		WebUI.verifyMatch(lastMonth,lastmonths, false)
