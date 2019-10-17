@@ -6,12 +6,12 @@
    <elementGuidId>93fe3f60-2ff5-4b36-8794-aff1d52d4a4a</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//a[(text() = '   Manage   ' or . = '   Manage   ')]</value>
+         <key>XPATH</key>
+         <value>//*[@id=&quot;sidebar-projects-link&quot;]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@id=&quot;sidebar-manage&quot;]</value>
+         <key>BASIC</key>
+         <value>//a[(text() = '   Manage   ' or . = '   Manage   ')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

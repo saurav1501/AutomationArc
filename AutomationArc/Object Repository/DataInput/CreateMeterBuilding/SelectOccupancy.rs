@@ -6,11 +6,11 @@
    <elementGuidId>5a99d246-9acf-4dce-89f8-6236cb0694e7</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//*[text()='Occupants']</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@class=&quot;dropdown-menu dropdown-menu-building&quot;]//a[text()='Occupants']</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

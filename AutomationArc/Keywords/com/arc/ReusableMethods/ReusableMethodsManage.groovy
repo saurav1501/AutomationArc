@@ -497,11 +497,10 @@ public class ReusableMethodsManage extends BaseClass {
 	public editOccupanyAreaAndOpreatingHours(){
 
 		ReusNavigate.navigateIntoDataInput()
+		
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
-		WebUI.delay(3)
-		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'))
-		WebUI.delay(3)
 		WebUI.click(findTestObject('Object Repository/DataInput/OperatingHourDropdown'))
 		WebUI.delay(2)
 		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/OperatingHourValue168'),5)
@@ -900,62 +899,35 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public void verifyOperatingHrsAreaAndOccupancyAfterExcelUpload(){
 
-		WebUI.delay(4)
-		WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
-		WebUI.delay(10)
-		//WebUI.click(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'))
+		navigation.navigateIntoDataInput()
+		
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
 		WebUI.delay(3)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle')),"Building Settings", false)
-		/*
-		 findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown')
-		 findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOccupancy')
-		 findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea')
-		 findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours')
-		 findTestObject('Object Repository/DataInput/CreateMeterBuilding/OperationalDays')
-		 */
+	
 		//operating hours
-		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'), 5)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'))
-		Thread.sleep(3000)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/OperatingHourDropdown')),"30 Hour", false,FailureHandling.CONTINUE_ON_FAILURE)
-		Thread.sleep(2000)
 
 		//Verify Occupancy
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'), 5)
-		Thread.sleep(1000)
-		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOccupancy'), 5)
-		Thread.sleep(1000)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOccupancy'))
-		Thread.sleep(3000)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingRegularOccupantsReading'),20)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingRegularOccupantsReading')), '9',false,FailureHandling.CONTINUE_ON_FAILURE)
-		Thread.sleep(2000)
 
 		//verify Area
-		WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'), 5)
-		Thread.sleep(1000)
-		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SettingPageDropDown'))
-		//WebUI.scrollToElement(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'), 5)
-		//Thread.sleep(1000)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectGrossFloorArea'))
-		Thread.sleep(3000)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'),20)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingDataFieldOne'),'value'), '5000',false,FailureHandling.CONTINUE_ON_FAILURE)
-		Thread.sleep(2000)
-
+		
 	}
 
 	//Verify operating hours, occupancy and area after uploading the excel template. For Building None, Other, City, Community Leed, None and Other
 	@Keyword
 	public void verifyOperatingHrsAreaAndOccupancyAfterExcelUploadTrasit(){
-		/*WebUI.delay(5)
-		 WebUI.click(findTestObject('Object Repository/SubmitReview/clickOnSideBar'))
-		 WebUI.delay(3)
-		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
-		 WebUI.delay(2)*/
+		
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
 		WebUI.delay(2)
 
@@ -1639,24 +1611,22 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public void addTeamMember(){
 
-		WebUI.scrollToElement(findTestObject('Manage/TeamModule/a_ Team'),2)
+		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+			println "Manage"
+			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		}
 		WebUI.click(findTestObject('Manage/TeamModule/a_ Team'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
-
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/TeamModule/TeamMembersFirstRow'),GlobalVariable.avgAngularWait,FailureHandling.CONTINUE_ON_FAILURE)
-
-		WebUI.scrollToElement(findTestObject('Manage/TeamModule/input_input'), 2)
 		WebUI.setText(findTestObject('Manage/TeamModule/input_input'),GlobalVariable.TeamMember)
 		WebUI.delay(1)
 		WebUI.click(findTestObject('Manage/TeamModule/button_Add Member'))
 		WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
 		WebUI.waitForElementClickable(findTestObject('Manage/TeamModule/button_Add Member'), GlobalVariable.avgAngularWait)
-
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/TeamModule/newMemberAddedAuthorizationLevel'),30)
 		WebUI.verifyOptionSelectedByLabel(findTestObject('Object Repository/Manage/TeamModule/newMemberAddedAuthorizationLevel'),"Team Member", false,10)
 	}
@@ -2193,7 +2163,7 @@ public class ReusableMethodsManage extends BaseClass {
 			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		}
-		WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
+		//WebUI.scrollToElement(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'),2)
 		WebUI.click(findTestObject('Object Repository/Manage/BillingSection/a_ Billing'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		//Registration Payment details verification
@@ -2360,7 +2330,11 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public void verifyAgreementFileDownload(){
 		deleteFile(BaseClass.ServiceAgreement)
-		WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/Project Navigation Locators/Manage'))
+		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+			println "Manage"
+			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		}
 		WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForElementClickable(findTestObject('Manage/VerifyAgreementFile/button_Download'), 20)
@@ -2374,13 +2348,13 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public void verifyAgreementDateSignAndType(){
 
-		WebUI.scrollToElement(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'),2)
+		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+			println "Manage"
+			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		}
 		WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
-		/*String dateSigned = WebUI.getText(findTestObject('Manage/VerifyAgreementFile/dateSigned'))
-		 Assert.assertEquals(dateSigned, commMethod.dateNew(),"Agreement date signed is not correct.")
-		 WebUI.delay(2)*/
 		String type = WebUI.getText(findTestObject('Manage/VerifyAgreementFile/agreementType'))
 		WebUI.verifyMatch(type,"Registration" ,false)
 		println "Agreement File downloaded and verified successfully"
@@ -2390,12 +2364,6 @@ public class ReusableMethodsManage extends BaseClass {
 	public void verifyAgreementDateSignAndTypeparking(String sheetName, int rowNum)
 	{
 		String agreementDate = data.getCellData(sheetName, "RegDate", rowNum)
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(4)
-		 WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Manage'))*/
-		/*		WebUI.scrollToElement(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'),2)
-		 WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'))
-		 WebUI.delay(3)*/
 		String dateSigned = WebUI.getText(findTestObject('Manage/VerifyAgreementFile/dateSigned'))
 		WebUI.verifyMatch(dateSigned, agreementDate, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.delay(2)
@@ -2406,9 +2374,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void verifyAgreementLOProjectsAgreementType(){
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(4)
-		 WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Manage'))*/
+	
 		WebUI.scrollToElement(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'),2)
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'))
@@ -2811,12 +2777,14 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public void scoreVersionVerification(){
 
-		WebUI.scrollToElement(findTestObject('Manage/CertificationAndScore/a_ Score Version'),2)
+		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+			println "Manage"
+			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		}
 		WebUI.click(findTestObject('Manage/CertificationAndScore/a_ Score Version'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Loaders/ProjectDashboardLoader'), 30, FailureHandling.CONTINUE_ON_FAILURE)
-
 		String scoreVersion = WebUI.getText(findTestObject('Manage/CertificationAndScore/h3_Arc score v2.0'))
 		WebUI.verifyMatch(scoreVersion, "Arc score v2.0",false, FailureHandling.CONTINUE_ON_FAILURE)
 		print scoreVersion
@@ -3153,8 +3121,12 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void verifyLobbyBtnRemailOnAfterNavigationFromOtherPage() throws IOException, InterruptedException {
-
-		WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/Project Navigation Locators/Manage'))
+		
+		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("option sidebar-projects-link collapsed"))){
+			println "Manage"
+			WebUI.delay(2)
+			WebUI.click(findTestObject('Manage/Parking/Manage'))
+		}
 		WebUI.click(findTestObject('Manage/Setting/a_setting'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
@@ -3169,7 +3141,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Object Repository/Manage/Setting/a_setting'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-		WebUI.verifyElementChecked(findTestObject('Object Repository/Manage/Setting/lobbySurveyBtnOn'), 5)
+		//WebUI.verifyElementChecked(findTestObject('Object Repository/Manage/Setting/lobbySurveyBtnOn'), 5)
 		
 	}
 

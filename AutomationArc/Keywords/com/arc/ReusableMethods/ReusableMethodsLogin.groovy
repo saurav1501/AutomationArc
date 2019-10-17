@@ -223,7 +223,8 @@ public class ReusableMethodsLogin extends BaseClass{
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
 
-		WebUI.setViewPortSize(1366,1280)
+		//WebUI.setViewPortSize(1366,1280)
+		//WebUI.maximizeWindow()
 		WebUI.getViewportHeight()
 		WebUI.getViewportWidth()
 		WebUI.getViewportLeftPosition()

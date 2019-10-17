@@ -561,7 +561,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 			}
 		}
 
-		j+=12
+		j+=11
 		println j
 		(1..7).each{
 
@@ -581,7 +581,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	@Keyword
 	public void verifyEnergyGraphpopulatedAfterExcelUpload(String sheetName){
-		
+
 		navigation.navigateIntoDataInput()
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
@@ -782,7 +782,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	//New Score version Human experience Graph Validation
 	@Keyword
 	public void verifyHumanCo2BuildingGraphpopulatedAfterExcelUploadNewScore(String sheetName, int rowNum){
-		
+
 		navigation.navigateIntoDataInput()
 		WebUI.delay(4)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ClickOccupantSatisfaction'))
@@ -2149,7 +2149,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 	@Keyword
 	public void deleteEnergyAndWaterMeterReadingBuilding(){
-		
+
 		navigation.navigateIntoDataInput()
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/TestEnergyMeterNew'))
 		WebUI.delay(5)
@@ -6867,7 +6867,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Resources/a_Data Guide for Buildings')), "Data Guide for Buildings", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Resources/a_Data Review Checklist')), "Data Review Checklist", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/Resources/a_ENERGY STAR Template')), "Arc Data Template", false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.scrollToElement(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'), 5)	
+		WebUI.scrollToElement(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'), 5)
 	}
 
 	@Keyword

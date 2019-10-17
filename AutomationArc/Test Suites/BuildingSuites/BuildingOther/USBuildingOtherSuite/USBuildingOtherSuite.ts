@@ -49,19 +49,19 @@
    <testCaseLink>
       <guid>488b8470-e416-410c-b441-296f6e210cf8</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/UIScoreFieldIndividualTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>23f7b380-e993-4fd7-a0b8-0b16af54e891</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/UIFieldTotalScoreTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>8e99872f-70b4-48a6-95bd-68df8813468d</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/UIScoreWithoutDataTest</testCaseId>
    </testCaseLink>
    <testCaseLink>

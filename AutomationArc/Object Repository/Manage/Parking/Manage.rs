@@ -4,7 +4,17 @@
    <name>Manage</name>
    <tag></tag>
    <elementGuidId>34f5475b-f9f1-49fa-8ba7-0a90a6462819</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//a[@data-target = '#sidebar-manage' and (text() = '   Manage   ' or . = '   Manage   ')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@id=&quot;sidebar-projects-link&quot;]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
