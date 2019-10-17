@@ -42,14 +42,9 @@ public class ReusableMethodsNavigation {
 
 	@Keyword
 	public void navigateToCities(){
-		WebUI.delay(3)
-		WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
-		WebUI.delay(3)
-		WebUI.waitForElementClickable(findTestObject('Object Repository/Page_Arc dashboard/a_ My Cities'),20)
-		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ My Cities'))
-		WebUI.delay(3)
-		String postNavigationLoginText = WebUI.getText(findTestObject('Object Repository/Page_Arc dashboard/span_My Cities'))
-		WebUI.verifyMatch(postNavigationLoginText,'My Cities',false)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/Arc2.0 Locators/Project Dashboard Sidebar Locators/AllCitiesProjects'),20)
+		WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/Project Dashboard Sidebar Locators/AllCitiesProjects'))	
 	}
 
 	@Keyword
