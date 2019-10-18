@@ -6,12 +6,12 @@
    <elementGuidId>6742c2ca-a7cb-46de-a2c2-e978c829b70f</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@ng-if=&quot;appData.new_arc_project&quot;]</value>
-      </entry>
-      <entry>
          <key>BASIC</key>
          <value>//a[@id = 'all_actions' and (text() = '  All Actions' or . = '  All Actions')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@ng-click=&quot;filterTrial('app.allactions', {project_id: appData.project_id})&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

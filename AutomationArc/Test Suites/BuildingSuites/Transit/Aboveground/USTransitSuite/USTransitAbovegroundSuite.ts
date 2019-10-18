@@ -67,19 +67,19 @@
    <testCaseLink>
       <guid>d3adaaa9-226b-4b94-9b79-8df672c14cc1</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/BasePointCreditTeamAssignTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>bf4ca2db-ab15-4938-8f03-13aa8e58373b</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/BasePointPromptAttemToReviewTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>9e264d46-243b-4b09-ae10-a67720bd71c9</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/BasePointPromptReviewToAttemptedTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -97,13 +97,13 @@
    <testCaseLink>
       <guid>f5502e7f-3a3a-418d-8ddc-8af5e794fb76</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/CreditActionNavigationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>a99b8aa0-36bf-401d-896b-fdea29d83e3c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyTransit/TransitAboveground/CreditLibraryNavigationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>

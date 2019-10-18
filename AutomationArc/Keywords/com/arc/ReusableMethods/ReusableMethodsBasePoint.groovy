@@ -370,8 +370,7 @@ public class ReusableMethodsBasePoint extends BaseClass{
 	}
 	@Keyword
 	public void basePromptMessageAttemptedToReadyForReview(){
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
-		WebUI.scrollToElement(findTestObject('Object Repository/BasePoint/a_ Base Points (1)'), 10)
+		
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 		WebUI.doubleClick(findTestObject('Object Repository/BasePoint/a_ Base Points (1)'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
@@ -398,8 +397,7 @@ public class ReusableMethodsBasePoint extends BaseClass{
 	@Keyword
 	public void basePromptMessageReadyForReviewtoAttempted(){
 
-		WebUI.scrollToElement(findTestObject('Object Repository/BasePoint/a_ Base Points (1)'), 10)
-		WebUI.doubleClick(findTestObject('Object Repository/BasePoint/a_ Base Points (1)'))
+		WebUI.click(findTestObject('Object Repository/BasePoint/a_ Base Points (1)'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		WebUI.click(findTestObject('Object Repository/BasePoint/span_Site Development - Protec'))
@@ -463,10 +461,7 @@ public class ReusableMethodsBasePoint extends BaseClass{
 	@Keyword
 	public void basePointCreditLibraryNaviagionTest(){
 
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)
-		 */
-		WebUI.scrollToElement(findTestObject('Object Repository/BasePoint/a_ Base Points (1)'), 2)
+		
 		WebUI.click(findTestObject('Object Repository/BasePoint/a_ Base Points (1)'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 

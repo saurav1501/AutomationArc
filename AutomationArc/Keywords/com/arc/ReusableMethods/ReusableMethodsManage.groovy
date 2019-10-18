@@ -1224,8 +1224,13 @@ public class ReusableMethodsManage extends BaseClass {
 		String avgTimeSpent      = data.getCellData(sheetName,"avg_time_spent", rowNum)
 		String weeklyOprHrs      = data.getCellData(sheetName,"week_opr_hrs", rowNum)
 
-		
-		WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/Project Navigation Locators/Manage'))
+		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+			println "Manage"
+			WebUI.delay(2)
+			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+		}
+
+		//WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/Project Navigation Locators/Manage'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)

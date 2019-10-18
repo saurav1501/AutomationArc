@@ -4,7 +4,17 @@
    <name>a_ Prerequisites</name>
    <tag></tag>
    <elementGuidId>c34d325e-649e-4ac1-bc4f-d9c3d9a5a3b8</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//a[@id = 'ca_prerequisites']</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(//a[@id = 'ca_prerequisites'])[1]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

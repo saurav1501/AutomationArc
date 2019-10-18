@@ -4,7 +4,17 @@
    <name>a_ Base Points (1)</name>
    <tag></tag>
    <elementGuidId>14ccfc52-6065-449b-8f7b-497ec4175be2</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//a[@id = 'ca_basepoints' and (text() = '  Base Points' or . = '  Base Points')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//a[@id = 'ca_basepoints']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

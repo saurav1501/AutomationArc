@@ -4,7 +4,17 @@
    <name>button_Ok</name>
    <tag></tag>
    <elementGuidId>cb00f3fc-bef9-42b4-a5a5-c8355b0d1372</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//button[@type = 'button' and (text() = 'Ok' or . = 'Ok')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@ng-click=&quot;changeCreditStatus(selectedCredit)&quot;]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

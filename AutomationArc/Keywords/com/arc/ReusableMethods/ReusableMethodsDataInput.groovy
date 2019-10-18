@@ -43,7 +43,6 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	@Keyword
 	public void uploadArcDataTemplate(){
 
-		//WebUI.click(findTestObject('Object Repository/DataInput/a_ Data Input'))
 		navigation.navigateIntoDataInput()
 		WebUI.delay(5)
 		WebUI.doubleClick(findTestObject('Object Repository/DataInput/DataInputFileUpload/WasteMeter'))

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description>Navigate to Manage section.</description>
-   <name>Manage</name>
+   <description></description>
+   <name>Credit_Actions</name>
    <tag></tag>
-   <elementGuidId>c396607f-65fa-4f25-b115-d5def0f4aea2</elementGuidId>
+   <elementGuidId>a21d43d0-9180-4bfe-9bb0-c2533e986b59</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[text()=&quot;Manage&quot;]</value>
+         <value>//*[@data-target=&quot;#sidebar-actions&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

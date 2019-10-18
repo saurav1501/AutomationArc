@@ -9,8 +9,12 @@
          <key>BASIC</key>
          <value>//a[@id = 'ca_prerequisites' and (text() = '  Prerequisites' or . = '  Prerequisites')]</value>
       </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>(//*[@id=&quot;ca_prerequisites&quot;])[1]</value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

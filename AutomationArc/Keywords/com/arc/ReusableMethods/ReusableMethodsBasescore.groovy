@@ -289,14 +289,13 @@ public class ReusableMethodsBasescore {
 	@Keyword
 	public void basePointTeamMemberAddTransit(){
 		/***********User should be able to add team member under base points.*********************************/
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)*/
+		
 		WebUI.click(findTestObject('PreRequisite/a_ Prerequisites'))
 		//WebUI.setViewPortSize(1500,800)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 		WebUI.click(findTestObject('PreRequisite/span_Site Management Policy'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
-        WebUI.scrollToElement(findTestObject('BasePoint/BasePointCreditCom/TeamIconClick'), 4)
+        //WebUI.scrollToElement(findTestObject('BasePoint/BasePointCreditCom/TeamIconClick'), 4)
 		WebUI.click(findTestObject('BasePoint/BasePointCreditCom/TeamIconClick'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 		WebUI.click(findTestObject('BasePoint/BasePointCreditCom/TeamMemberSelection'))
@@ -340,6 +339,8 @@ public class ReusableMethodsBasescore {
 	@Keyword
 	public void nameOfCreditCreditTransit(){
 		/*******Verify that the Name of the credit is correct  for Buildings.***********/
+		
+		
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/DashboardPage/NavigationCreditAction/a_ All Actions'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyElementPresent(findTestObject('Page_Arc dashboard/Credit/span_Site Management Policy'),2)

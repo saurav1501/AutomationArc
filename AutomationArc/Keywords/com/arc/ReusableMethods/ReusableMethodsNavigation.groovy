@@ -17,6 +17,7 @@ import io.qameta.allure.Step
 
 public class ReusableMethodsNavigation {
 	WebDriver driver=DriverFactory.getWebDriver()
+	ReusableMethodsNavigation navigation = new ReusableMethodsNavigation()
 
 	@Keyword
 	public void navigateToBuilding() {
@@ -44,7 +45,7 @@ public class ReusableMethodsNavigation {
 	public void navigateToCities(){
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/Arc2.0 Locators/Project Dashboard Sidebar Locators/AllCitiesProjects'),20)
-		WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/Project Dashboard Sidebar Locators/AllCitiesProjects'))	
+		WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/Project Dashboard Sidebar Locators/AllCitiesProjects'))
 	}
 
 	@Keyword
@@ -269,17 +270,15 @@ public class ReusableMethodsNavigation {
 		String Logintext = WebUI.getText(findTestObject('Page_Arc dashboard/DashboardPage/NavigationCreditAction/h1_Prerequisites'))
 		WebUI.verifyMatch(Logintext,'Prerequisites', false)
 
-		WebUI.scrollToElement(findTestObject('Object Repository/BasePoint/a_ Base Points (1)'), 10)
+		//WebUI.scrollToElement(findTestObject('Object Repository/BasePoint/a_ Base Points (1)'), 10)
 		WebUI.doubleClick(findTestObject('Object Repository/BasePoint/a_ Base Points (1)'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		String basePoint = WebUI.getText(findTestObject('Page_Arc dashboard/DashboardPage/NavigationCreditAction/h1_Base Points'))
 		WebUI.verifyMatch(basePoint,'Base Points', false)
 
-		WebUI.click(findTestObject('DataInput/Survey/a_ Data Input'))
+		navigation.navigateIntoDataInput()
 
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		String dataInput1 = WebUI.getText(findTestObject('DataInput/Data/span_Data Input'))
-		WebUI.verifyMatch(dataInput1,'Data Input', false)
 
 		WebUI.waitForElementPresent(findTestObject('Page_Arc dashboard/DashboardPage/NavigationCreditAction/span_Meters  Surveys'), 40)
 		WebUI.waitForElementVisible(findTestObject('Page_Arc dashboard/DashboardPage/NavigationCreditAction/span_Meters  Surveys'), 40)
@@ -400,11 +399,25 @@ public class ReusableMethodsNavigation {
 				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			}
 		}
+		
+		
+		
 	}
 
 
 	//Individual Section Click operation
 
+	
+	public static void clickOnCreditAction(){
+		if((WebUI.getAttribute(findTestObject('Object Repository/Arc2.0 Locators/Project Navigation Locators/AllActions'), "class", FailureHandling.OPTIONAL).equals("option sidebar-projects-link collapsed"))){
+			println "Scores"
+			WebUI.delay(2)
+			WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
+		}
+		
+		
+	}
+	
 
 	public static void  clickScoreLabel(){
 		if((WebUI.getAttribute(findTestObject('Object Repository/PerformanceScore/Score/a_ Score1'), "aria-expanded", FailureHandling.OPTIONAL).equals("null"))){

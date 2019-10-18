@@ -6,11 +6,15 @@
    <elementGuidId>26e7ba1f-d56d-4a52-9748-3f025aaf9fee</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>CSS</key>
+         <value>#readingsTable > tbody > tr:nth-child(1) > td:nth-child(7) > span</value>
+      </entry>
+      <entry>
          <key>XPATH</key>
          <value>#readingsTable > tbody > tr > td:nth-child(7) > span</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>XPATH</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

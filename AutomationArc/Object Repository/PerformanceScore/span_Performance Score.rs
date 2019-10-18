@@ -6,12 +6,12 @@
    <elementGuidId>1041dca8-26f5-4417-a2a0-731a2c2b1797</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//h3[(text() = 'Performance' or . = 'Performance')]</value>
-      </entry>
-      <entry>
          <key>BASIC</key>
          <value>//span[(text() = 'Performance Score' or . = 'Performance Score')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//h3[(text() = 'Performance ' or . = 'Performance ')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

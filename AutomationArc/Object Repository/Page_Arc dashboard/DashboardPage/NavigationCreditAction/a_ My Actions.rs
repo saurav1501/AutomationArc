@@ -4,7 +4,17 @@
    <name>a_ My Actions</name>
    <tag></tag>
    <elementGuidId>10cace38-fe5d-4072-bff5-9678bf173efe</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//a[@id = 'ca_assignedtome' and (text() = '  My Actions' or . = '  My Actions')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@id=&quot;ca_assignedtome&quot;]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

@@ -734,18 +734,18 @@ public class ReusableMethodsAnalytics extends BaseClass{
 		println thisMonth
 		println lastmonth
 
-		String thisMonths    = lastmonth.format(monthYearFormatter)
-		String lastMonth    = twomonthsAgo.format(monthYearFormatter)
-		String twoMonthsAgo = threetmonthsAgo.format(monthYearFormatter)
-		String threetMonthsAgo   = fourmonthsAgo.format(monthYearFormatter)
-		String fourMonthsAgo = fivemonthsAgo.format(monthYearFormatter)
-		String fiveMonthsAgo    = sixmonthsAgo.format(monthYearFormatter)
-		String sixMonthsAgo = sevenmonthsAgo.format(monthYearFormatter)
-		String sevenMonthsAgo   = eightmonthsAgo.format(monthYearFormatter)
-		String eightMonthsAgo = ninemonthsAgo.format(monthYearFormatter)
-		String nineMonthsAgo   = tenmonthsAgo.format(monthYearFormatter)
-		String tenMonthsAgo = elevenmonthsAgo.format(monthYearFormatter)
-		String elevenMonthsAgo = twelvemonthsAgo.format(monthYearFormatter)
+		String thisMonths    = thisMonth.format(monthYearFormatter)
+		String lastMonth    = lastmonth.format(monthYearFormatter)
+		String twoMonthsAgo = twomonthsAgo.format(monthYearFormatter)
+		String threetMonthsAgo   = threetmonthsAgo.format(monthYearFormatter)
+		String fourMonthsAgo = fourmonthsAgo.format(monthYearFormatter)
+		String fiveMonthsAgo    = fivemonthsAgo.format(monthYearFormatter)
+		String sixMonthsAgo = sixmonthsAgo.format(monthYearFormatter)
+		String sevenMonthsAgo   = sevenmonthsAgo.format(monthYearFormatter)
+		String eightMonthsAgo = eightmonthsAgo.format(monthYearFormatter)
+		String nineMonthsAgo   = ninemonthsAgo.format(monthYearFormatter)
+		String tenMonthsAgo = tenmonthsAgo.format(monthYearFormatter)
+		String elevenMonthsAgo = elevenmonthsAgo.format(monthYearFormatter)
 
 
 		String currentMonth = WebUI.getText(findTestObject('Analytics/Gra/currentMonth'))
