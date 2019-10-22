@@ -53,18 +53,6 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/UIScoreFieldIndividualTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>23f7b380-e993-4fd7-a0b8-0b16af54e891</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/UIFieldTotalScoreTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>8e99872f-70b4-48a6-95bd-68df8813468d</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingOther/UIScoreWithoutDataTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>bc135ed4-c58a-47fc-8f38-82e03c8f22cf</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

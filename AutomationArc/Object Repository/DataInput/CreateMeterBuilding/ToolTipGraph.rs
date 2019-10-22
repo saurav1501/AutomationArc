@@ -6,12 +6,19 @@
    <elementGuidId>5c94ea71-e586-42f3-99ec-74479c7322b2</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>CSS</key>
+         <value>#GCpYI6CH1cslIfNn > div > div > div</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@class=&quot;amcharts-balloon-div&quot;]//b</value>
+      </entry>
+      <entry>
          <key>BASIC</key>
-         <value>#chart-id > div > div > div > div > b
-#survey-chart-id > div > div > div > div</value>
+         <value>#chart-id > div > div > div > div > b</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

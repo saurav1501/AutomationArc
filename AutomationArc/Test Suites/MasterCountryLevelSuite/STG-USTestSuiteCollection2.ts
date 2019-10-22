@@ -9,7 +9,7 @@
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>STGv2-US-P2</profileName>
+            <profileName>STGv2-US-P1</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>
