@@ -2173,9 +2173,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	//Delete city-community energy and water meter readings
 	@Keyword
 	public void deleteEnergyAndWaterMeterReadingCityComm(){
+		
 		//delete energy reading
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)*/
 		WebUI.click(findTestObject('DataInput/CityCom/a_ Data Input'))
 		WebUI.delay(2)
 		WebUI.click(findTestObject('DataInput/CityCom/span_Energy'))

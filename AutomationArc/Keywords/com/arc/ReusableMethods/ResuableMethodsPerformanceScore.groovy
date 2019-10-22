@@ -923,6 +923,54 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		String TotalperformaceScore = WebUI.getText(findTestObject('PerformanceScore/Score/TotalPerformanceScore'))
 		WebUI.verifyMatch(TotalperformaceScore , 'Performance Score', false)
 	}
+	
+	
+	@Keyword
+	public void totalPerformanceScoreUIAllFieldVerificationOtherNone() throws IOException, InterruptedException {
+		
+		
+		WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/Project Navigation Locators/Performance'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		String performaceScore = WebUI.getText(findTestObject('PerformanceScore/span_Performance Score'))
+		WebUI.verifyMatch(performaceScore , 'Performance', false)
+
+		String total = WebUI.getText(findTestObject('PerformanceScore/Score/span_Total'))
+		WebUI.verifyMatch(total ,"TOTAL", false)
+
+		String higestScoretotal = WebUI.getText(findTestObject('PerformanceScore/Score/TotalHigestScore100'))
+		WebUI.verifyMatch(higestScoretotal ,"100", false)
+
+		String lowestSocreTotal = WebUI.getText(findTestObject('PerformanceScore/Score/TotalLowestSocre0'))
+		WebUI.verifyMatch(lowestSocreTotal ,"0", false)
+
+		String energy = WebUI.getText(findTestObject('PerformanceScore/Score/span_Energy'))
+		WebUI.verifyMatch(energy ,"ENERGY", false)
+
+		String higestScoreEnergy = WebUI.getText(findTestObject('PerformanceScore/Score/EnergyHighestSocre100'))
+		WebUI.verifyMatch(higestScoretotal ,"100", false)
+
+		String lowestSocreEnergy = WebUI.getText(findTestObject('PerformanceScore/Score/EnergyLowestSocre0'))
+		WebUI.verifyMatch(lowestSocreEnergy ,"0", false)
+
+		String water = WebUI.getText(findTestObject('PerformanceScore/Score/span_Water'))
+		WebUI.verifyMatch(water ,"WATER", false)
+
+		String waste = WebUI.getText(findTestObject('PerformanceScore/Score/span_Waste'))
+		WebUI.verifyMatch(waste ,"WASTE", false)
+
+		String transport = WebUI.getText(findTestObject('PerformanceScore/Score/span_Transportation'))
+		WebUI.verifyMatch(transport ,"TRANSPORTATION", false)
+
+		String humanExp = WebUI.getText(findTestObject('PerformanceScore/Score/span_Human Experience'))
+		WebUI.verifyMatch(humanExp ,"HUMAN EXPERIENCE", false)
+
+		//String basePoint = WebUI.getText(findTestObject('PerformanceScore/Score/span_Base Points'))
+		//WebUI.verifyMatch(basePoint ,"BASE POINTS", false)
+	}
+	
+	
+	
 	@Keyword
 	public void totalPerformanceScoreUIAllFieldVerification() throws IOException, InterruptedException {
 		
@@ -1035,6 +1083,68 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		String humExp = WebUI.getText(findTestObject('PerformanceScore/FieldScore/span_HumanExperience'))
 		WebUI.verifyMatch(humExp ,"HUMAN EXPERIENCE", false)
 	}
+	
+	
+	
+	@Keyword
+	public void individualScoreUIAllFieldVerificationOtherNone() throws IOException, InterruptedException {
+
+
+		/********* Verifying all fields UI  Score for individual Energy , Water , Waste , Transport , Human Exp , Base Point ************* */
+		
+		WebUI.maximizeWindow()
+		WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/Project Navigation Locators/Performance'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		
+		WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/Performance Tab Locators/Energy'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		String energylowestSocreTotal = WebUI.getText(findTestObject('Object Repository/Arc2.0 Locators/Performance Tab Locators/ScoreObtained'))
+		WebUI.verifyMatch(energylowestSocreTotal ,"0", false)
+		String energyhigestScoretotal = WebUI.getText(findTestObject('Arc2.0 Locators/Performance Tab Locators/MaxScore100'))
+		WebUI.verifyMatch(energyhigestScoretotal ,"/100", false)
+		String energy = WebUI.getText(findTestObject('Arc2.0 Locators/Performance Tab Locators/IndividualCategoryHeader'))
+		WebUI.verifyMatch(energy ,"Energy", false)
+
+		WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/Performance Tab Locators/Water'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		String waterlowestSocreTotal = WebUI.getText(findTestObject('Object Repository/Arc2.0 Locators/Performance Tab Locators/ScoreObtained'))
+		WebUI.verifyMatch(waterlowestSocreTotal ,"0", false)
+		String waterhigestScoretotal = WebUI.getText(findTestObject('Arc2.0 Locators/Performance Tab Locators/MaxScore100'))
+		WebUI.verifyMatch(waterhigestScoretotal ,"/100", false)
+		String water = WebUI.getText(findTestObject('Arc2.0 Locators/Performance Tab Locators/IndividualCategoryHeader'))
+		WebUI.verifyMatch(water ,"Water", false)
+
+		WebUI.click( findTestObject('Object Repository/Arc2.0 Locators/Performance Tab Locators/Waste'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		String wastelowestSocreTotal = WebUI.getText(findTestObject('Object Repository/Arc2.0 Locators/Performance Tab Locators/ScoreObtained'))
+		WebUI.verifyMatch(wastelowestSocreTotal ,"0", false)
+		String wastehigestScoretotal = WebUI.getText(findTestObject('Arc2.0 Locators/Performance Tab Locators/MaxScore100'))
+		WebUI.verifyMatch(wastehigestScoretotal ,"/100", false)
+		String waste = WebUI.getText(findTestObject('Arc2.0 Locators/Performance Tab Locators/IndividualCategoryHeader'))
+		WebUI.verifyMatch(waste ,"Waste", false)
+
+		WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/Performance Tab Locators/Transportation'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		String translowestSocreTotal = WebUI.getText(findTestObject('Object Repository/Arc2.0 Locators/Performance Tab Locators/ScoreObtained'))
+		WebUI.verifyMatch(translowestSocreTotal ,"0", false)
+		String transhigestScoretotal = WebUI.getText(findTestObject('Arc2.0 Locators/Performance Tab Locators/MaxScore100'))
+		WebUI.verifyMatch(transhigestScoretotal ,"/100", false)
+		String transportation = WebUI.getText(findTestObject('Arc2.0 Locators/Performance Tab Locators/IndividualCategoryHeader'))
+		WebUI.verifyMatch(transportation ,"Transportation", false)
+
+		WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/Performance Tab Locators/HumanExperience'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		String humlowestSocreTotal = WebUI.getText(findTestObject('Object Repository/Arc2.0 Locators/Performance Tab Locators/ScoreObtained'))
+		WebUI.verifyMatch(humlowestSocreTotal ,"0", false)
+		String humhigestScoretotal = WebUI.getText(findTestObject('Arc2.0 Locators/Performance Tab Locators/MaxScore100'))
+		WebUI.verifyMatch(humhigestScoretotal ,"/100", false)
+		String humExp = WebUI.getText(findTestObject('Arc2.0 Locators/Performance Tab Locators/IndividualCategoryHeader'))
+		WebUI.verifyMatch(humExp ,"Human Experience", false)
+		WebUI.setViewPortSize(1366,1280)
+	}
+
+	
+	
 	
 	
 	@Keyword

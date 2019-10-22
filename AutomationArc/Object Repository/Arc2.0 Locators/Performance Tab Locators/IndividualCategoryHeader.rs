@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description>Verify the total score for the building and the school project.</description>
-   <name>TotalScoreBuildingSchool</name>
+   <description></description>
+   <name>IndividualCategoryHeader</name>
    <tag></tag>
-   <elementGuidId>f5d7bb26-16cf-455c-b349-01debf751820</elementGuidId>
+   <elementGuidId>d4cfe71a-8406-4285-b536-3c06c74bbc2a</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;reading&quot;]</value>
+         <value>//*[@id=&quot;score_header&quot;]</value>
       </entry>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

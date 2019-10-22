@@ -497,7 +497,7 @@ public class ReusableMethodsManage extends BaseClass {
 	public editOccupanyAreaAndOpreatingHours(){
 
 		ReusNavigate.navigateIntoDataInput()
-		
+		WebUI.scrollToElement(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'), 5 )
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/SelectOperatingHours'))
@@ -509,7 +509,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Object Repository/DataInput/OperatingHourValue168'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
+		WebUI.scrollToElement(findTestObject('DataInput/CreateMeterBuilding/button_tippy_init dropdown-tog'), 5 )
 		//WebUI.click(findTestObject('Object Repository/DataInput/SaveButtonBuildingSetting'))
 
 		/*	//Edit Occupancy
@@ -902,7 +902,8 @@ public class ReusableMethodsManage extends BaseClass {
 		navigation.navigateIntoDataInput()
 		
 		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/a_Building Settings'))
-		WebUI.delay(3)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle'), GlobalVariable.minAngularWait)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/BuildingSettingTitle')),"Building Settings", false)
 	
 		//operating hours
@@ -2335,7 +2336,7 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public void verifyAgreementFileDownload(){
 		deleteFile(BaseClass.ServiceAgreement)
-		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("option sidebar-projects-link collapsed"))){
 			println "Manage"
 			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
@@ -2353,7 +2354,7 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public void verifyAgreementDateSignAndType(){
 
-		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("option sidebar-projects-link collapsed"))){
 			println "Manage"
 			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
@@ -2782,7 +2783,7 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public void scoreVersionVerification(){
 
-		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("option sidebar-projects-link collapsed"))){
 			println "Manage"
 			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
@@ -2869,6 +2870,12 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public void scoreVersionVerification3(){
 
+		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("option sidebar-projects-link collapsed"))){
+			println "Manage"
+			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		}
+		
 		WebUI.click(findTestObject('Manage/CertificationAndScore/a_ Score Version'))
 		String scoreVersion = WebUI.getText(findTestObject('Manage/CertificationAndScore/h3_Arc score v2.0'))
 		WebUI.verifyMatch(scoreVersion, "Arc score v3.0",false, FailureHandling.CONTINUE_ON_FAILURE)

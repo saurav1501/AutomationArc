@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description>Verify the total score for the building and the school project.</description>
-   <name>TotalScoreBuildingSchool</name>
+   <description>Individual category score for the Energy, Water, Waste, and Transportation</description>
+   <name>ScoreObtained</name>
    <tag></tag>
-   <elementGuidId>f5d7bb26-16cf-455c-b349-01debf751820</elementGuidId>
+   <elementGuidId>0a61db26-ba05-4e3b-a72e-97305fe65772</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
@@ -11,6 +11,7 @@
       </entry>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

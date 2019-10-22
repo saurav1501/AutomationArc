@@ -24,7 +24,7 @@ import internal.GlobalVariable as GlobalVariable
 try {
 	
 	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumFive)
-	CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsPerformanceScore.individualScoreUIAllFieldVerification'()
+	CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsPerformanceScore.individualScoreUIAllFieldVerificationOtherNone'()
 	
 } catch (Throwable t) {
 	System.out.println(t.getLocalizedMessage())
