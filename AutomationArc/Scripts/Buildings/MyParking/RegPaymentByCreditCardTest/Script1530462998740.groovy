@@ -21,7 +21,7 @@ import internal.GlobalVariable as GlobalVariable
 
 try {
 	
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.paymentRegistration'(GlobalVariable.CCPayment , GlobalVariable.rowNumTwo, GlobalVariable.creditCard)
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.paymentRegistrationParking'(GlobalVariable.CCPayment , GlobalVariable.rowNumTwo, GlobalVariable.creditCard)
 	
 			
 } catch (Throwable t) {

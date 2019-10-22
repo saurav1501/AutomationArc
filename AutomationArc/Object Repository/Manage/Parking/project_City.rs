@@ -9,8 +9,12 @@
          <key>BASIC</key>
          <value>//*[@ng-model = 'projectInfo.city']</value>
       </entry>
+      <entry>
+         <key>CSS</key>
+         <value>#content > div.static_info.ng-scope > div:nth-child(1) > div:nth-child(3) > div.value.ng-binding</value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

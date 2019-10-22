@@ -61,16 +61,12 @@ public class ReusableMethodsNavigation {
 
 	@Keyword
 	public void navigateToParking(){
-		WebUI.delay(3)
-		WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
-		WebUI.delay(3)
-		WebUI.waitForElementClickable(findTestObject('Object Repository/Page_Arc dashboard/a_ Buildings'),10)
-		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ Buildings'))
-		WebUI.delay(3)
+
+		WebUI.waitForElementClickable(findTestObject('Page_Arc dashboard/a_ My Parking'),10)
 		WebUI.click(findTestObject('Page_Arc dashboard/a_ My Parking'))
-		WebUI.delay(4)
-		String postNavigationLoginText = WebUI.getText(findTestObject('Page_Arc dashboard/span_My Parking'))
-		WebUI.verifyMatch(postNavigationLoginText,'My Parking',false)
+		WebUI.delay(3)
+		WebUI.verifyMatch(WebUI.getUrl(), "https://stg-v2.app.arconline.io/app/projects/my-projects/?project-type=parksmart", false)
+	
 	}
 
 

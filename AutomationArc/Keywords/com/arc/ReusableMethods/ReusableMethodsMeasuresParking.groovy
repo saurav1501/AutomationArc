@@ -676,32 +676,36 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 	@Keyword
 	public void verifyProjectDetailsParking(String sheetName,int rowNum) throws IOException, InterruptedException {
 
-		String prjId 		= data.getCellData(sheetName, "ProjectID", rowNum)
-		String ownerOrg 	= data.getCellData(sheetName, "OwnerOrganization", rowNum)
-		String ownerCountry = data.getCellData(sheetName, "OwnerCountry", rowNum)
-		String ownerMail 	= data.getCellData(sheetName, "OwnerEmail", rowNum)
+		String prjId 		  = data.getCellData(sheetName, "ProjectID", rowNum)
+		String ownerOrg 	  = data.getCellData(sheetName, "OwnerOrganization", rowNum)
+		String ownerCountry   = data.getCellData(sheetName, "OwnerCountry", rowNum)
+		String ownerMail 	  = data.getCellData(sheetName, "OwnerEmail", rowNum)
 		String dataCommisioned= data.getCellData(sheetName, "date_comm", rowNum)
-		String prjAddress 	= data.getCellData(sheetName, "Address", rowNum)
-		String prjCity 		= data.getCellData(sheetName, "City", rowNum)
-		String prjCountry 	= data.getCellData(sheetName, "Country", rowNum)
-		String prjState 	= data.getCellData(sheetName, "State", rowNum)
+		String prjAddress 	  = data.getCellData(sheetName, "Address", rowNum)
+		String prjCity 		  = data.getCellData(sheetName, "City", rowNum)
+		String prjCountry 	  = data.getCellData(sheetName, "Country", rowNum)
+		String prjState 	  = data.getCellData(sheetName, "State", rowNum)
 
-		/*WebUI.click(findTestObject('Manage/Parking/Manage'))
-		 WebUI.delay(1)*/
+		
+		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+			println "Manage"
+			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		}
+		
 		WebUI.click(findTestObject('Manage/Parking/ManageProject'))
-		//WebUI.delay(6)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		println "Verify if  registered project  project id , address , city  , country , owner details , data commissioned , project country & satate fields displays the correct data."
-		Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/Parking/project_ID'),"value"),prjId,"Not Valid")
-		WebUI.scrollToElement(findTestObject('Manage/Parking/Owner_organization'), 2)
-		Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/Parking/Owner_organization'),"value"),ownerOrg,"Not Valid")
-		Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/Parking/projectOwnerCounty'),"value"),ownerCountry,"Not Valid")
-		Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/Parking/project_owneremail'),"value"),ownerMail,"Not Valid")
+		Assert.assertEquals(WebUI.getText(findTestObject('Manage/Parking/project_ID')),prjId,"Not Valid")
+		//WebUI.scrollToElement(findTestObject('Manage/Parking/Owner_organization'), 2)
+		Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/Parking/Owner_organization')),ownerOrg,"Not Valid")
+		Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/Parking/projectOwnerCounty')),ownerCountry,"Not Valid")
+		Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/Parking/project_owneremail')),ownerMail,"Not Valid")
 		//Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/Parking/project_DateComissioned'),"value"),dataCommisioned,"Not Valid")
-		Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/Parking/Project_Address'),"value"),prjAddress,"Not Valid")
-		Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/Parking/project_City'),"value"),prjCity,"Not Valid")
-		Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/Parking/projectCountry'),"value"),prjCountry,"Not Valid")
-		Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/Parking/Porject_State'),"value"),prjState,"Not Valid")
+		Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/Parking/Project_Address')),prjAddress,"Not Valid")
+		Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/Parking/project_City')),prjCity,"Not Valid")
+		Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/Parking/projectCountry')),prjCountry,"Not Valid")
+		Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/Parking/Porject_State')),prjState,"Not Valid")
 		println "Verified successfully  registered project project id , address , city  , country , owner details , data commissioned , project country & satate fields"
 	}
 

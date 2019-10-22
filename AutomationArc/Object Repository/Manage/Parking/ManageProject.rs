@@ -4,7 +4,17 @@
    <name>ManageProject</name>
    <tag></tag>
    <elementGuidId>cf7f0efe-37e2-453d-bc77-ada3f58fc9a8</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//a[(text() = '   Project' or . = '   Project')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//a[(text() = '   Project' or . = 'Project')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

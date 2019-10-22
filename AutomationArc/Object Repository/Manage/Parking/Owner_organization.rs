@@ -4,7 +4,17 @@
    <name>Owner_organization</name>
    <tag></tag>
    <elementGuidId>6cf14de9-2ae9-4ad1-accb-6fe7bc18a656</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>CSS</key>
+         <value>#content > div.static_info.ng-scope > div.w50p.ng-scope > div:nth-child(1) > div.value.ng-binding</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//textarea[@id = 'organization' and @name = 'organization']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

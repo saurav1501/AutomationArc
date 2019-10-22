@@ -47,6 +47,12 @@
       <testCaseId>Test Cases/Buildings/MyParking/RegPaymentByCreditCardTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>3d4b0c89-8f27-461c-837b-465675f69633</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/MyParking/SearchProgramTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>7d6494d6-cbf9-4eda-9a74-fc206b6daac3</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

@@ -546,6 +546,109 @@ public class ReusableMethodsPayment extends BaseClass{
 			KeywordUtil.markFailed("Project ID Not Created (SAP not Synched)")
 		}
 	}
+	
+	
+	@Keyword
+	public void paymentRegistrationParking(String sheetName , int rowNum, String paymentMode){
+		/********************Fetching the data via Excel Sheet ******************************/
+		if(SAPSyncFlag){
+
+			int counter=0
+			payment:
+			String cardName   = data.getCellData(sheetName, "CardName", rowNum)
+			String cardNum    = data.getCellData(sheetName, "CardNumber", rowNum)
+			String cardDate   = data.getCellData(sheetName, "Date ", rowNum)
+			String cardCvv    = data.getCellData(sheetName, "CVV", rowNum)
+			String partyName  = data.getCellData(sheetName, "PartyName", rowNum)
+			String partyEmail = data.getCellData(sheetName, "PartyEmail", rowNum)
+			String address    = data.getCellData(sheetName, "Address", rowNum)
+			String city       = data.getCellData(sheetName, "City", rowNum)
+			String country    = data.getCellData(sheetName, "Country", rowNum)
+			String state      = data.getCellData(sheetName, "State", rowNum)
+			String zip        = data.getCellData(sheetName, "Zip", rowNum)
+			String phone      = data.getCellData(sheetName, "Mobile", rowNum)
+
+			WebUI.clearText(findTestObject('Object Repository/paymentPageNewUI/billingName'))
+			WebUI.setText(findTestObject('Object Repository/paymentPageNewUI/billingName'),partyName)
+			WebUI.clearText(findTestObject('Object Repository/paymentPageNewUI/billingEmail'))
+			WebUI.setText(findTestObject('Object Repository/paymentPageNewUI/billingEmail'), partyEmail)
+			WebUI.clearText(findTestObject('Object Repository/paymentPageNewUI/billingAddress'))
+			WebUI.setText(findTestObject('Object Repository/paymentPageNewUI/billingAddress'), address)
+			WebUI.clearText(findTestObject('Object Repository/paymentPageNewUI/billingCity'))
+			WebUI.setText(findTestObject('Object Repository/paymentPageNewUI/billingCity'), city)
+			WebUI.selectOptionByLabel(findTestObject('Object Repository/paymentPageNewUI/billingCountry'), country, false)
+			WebUI.selectOptionByLabel(findTestObject('Object Repository/paymentPageNewUI/billingState'), state , false)
+			WebUI.clearText(findTestObject('Object Repository/paymentPageNewUI/billingZip'))
+			WebUI.setText(findTestObject('Object Repository/paymentPageNewUI/billingZip'),zip )
+			//*********************** Select the payment mode *******************//
+			if((paymentMode.equalsIgnoreCase("creditCard"))){
+
+				WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
+				WebUI.click(findTestObject('Object Repository/paymentPageNewUI/paymentPagePayNowOption'))
+
+				WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+
+				WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/CardNumber'),cardNum)
+				WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/ccExpiary'),cardDate)
+				WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/cvvCreditCard'),cardCvv)
+				//promocode field in case if used
+				//WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/promoCode'),promocode)
+				//WebUI.delay(3)
+
+				WebUI.click(findTestObject('Object Repository/paymentPageNewUI/submitPayment'))
+				WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+			}
+			else{
+				WebUI.click(findTestObject('Object Repository/paymentPageNewUI/paymentPagePayByCheckOption'))
+				WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+				WebUI.click(findTestObject('Object Repository/paymentPageNewUI/submitPayment'))
+				WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+			}
+			//WebUI.delay(30)
+			WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+			if((uniqueSpaceTypesFlag==true)){
+				println "Space type matched"
+				WebUI.waitForElementVisible(findTestObject('Object Repository/PayNowRegistrationPaymentUSTest/RegistrationPaymentConfirmationPopCloseButton'), 70)
+				//WebUI.delay(2)
+				WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+				WebUI.click(findTestObject('Object Repository/PayNowRegistrationPaymentUSTest/RegistrationPaymentConfirmationPopCloseButton'))
+				WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
+				uniqueSpaceTypesFlag=false
+			}
+			else{
+				println "Space type not matched"
+				uniqueSpaceTypesFlag=false
+			}
+			//WebUI.delay(10)
+
+			if(WebUI.waitForElementPresent(findTestObject('Page_Arc dashboard/a_ My Parking'), GlobalVariable.avgAngularWait, FailureHandling.OPTIONAL) && WebUI.waitForElementVisible(findTestObject('Page_Arc dashboard/a_ My Parking'), GlobalVariable.avgAngularWait, FailureHandling.OPTIONAL)){
+				WebUI.click(findTestObject('Page_Arc dashboard/a_ My Parking'))
+			}
+			else{
+				counter++
+				if(counter==3){
+					KeywordUtil.markFailed("Project Payment Unsuccessful")
+					return
+				}
+				WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+				reusableMethodsSearch.searchProgram(Project_ID_Created)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+				continue payment
+			}
+
+		}
+		else{
+			KeywordUtil.markFailed("Project ID Not Created (SAP not Synched)")
+		}
+	}
 
 	@Keyword
 	public void regPaymentUsingPromocode(String sheetName , int rowNum){
