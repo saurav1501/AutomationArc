@@ -6,12 +6,12 @@
    <elementGuidId>ab1afe64-cb16-4f9e-b6b5-2a760d767e5b</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//a[(text() = '   Team' or . = '   Team')]</value>
+         <key>XPATH</key>
+         <value>(//a[(text() = '   Team' or . = 'Team')])[1]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>(//a[(text() = '   Team' or . = '   Team')])[1]</value>
+         <key>BASIC</key>
+         <value>//a[(text() = '   Team' or . = '   Team')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -6,12 +6,11 @@
    <elementGuidId>3d9e3487-6236-4712-9007-f3ccdd4bc6d8</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>(//*[@data-ng-repeat=&quot;team_member in team_members |orderBy:orderByField:reverseSort&quot;])[3]//td/div[2]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@label=&quot;Arc Administrator&quot; and @selected=&quot;selected&quot;]//parent::select//parent::td//preceding-sibling::td</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

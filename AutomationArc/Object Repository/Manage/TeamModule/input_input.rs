@@ -4,7 +4,17 @@
    <name>input_input</name>
    <tag></tag>
    <elementGuidId>f552ffd7-b08d-4dd0-8000-8bb6c34bf6f5</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//input[@type = 'email' and @name = 'input']</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//input[@type = 'email' and @name = 'input' and @placeholder = 'Email']</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

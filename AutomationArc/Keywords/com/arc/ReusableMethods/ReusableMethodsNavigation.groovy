@@ -17,7 +17,7 @@ import io.qameta.allure.Step
 
 public class ReusableMethodsNavigation {
 	
-	
+	WebDriver driver = DriverFactory.getWebDriver()
 
 	@Keyword
 	public void navigateToBuilding() {
@@ -122,11 +122,11 @@ public class ReusableMethodsNavigation {
 		WebUI.delay(2)
 		WebUI.waitForElementPresent(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('PerformanceScore/DataInput/TotalScore'), GlobalVariable.minAngularWait)
-
 		WebUI.waitForElementClickable(findTestObject('DataInput/Survey/div_Transportation Survey'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	}
+	
 	@Keyword
 	public void navigateToDataAQI(){
 
@@ -276,7 +276,7 @@ public class ReusableMethodsNavigation {
 		String basePoint = WebUI.getText(findTestObject('Page_Arc dashboard/DashboardPage/NavigationCreditAction/h1_Base Points'))
 		WebUI.verifyMatch(basePoint,'Base Points', false)
 
-		navigation.navigateIntoDataInput()
+		navigateIntoDataInput()
 
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 

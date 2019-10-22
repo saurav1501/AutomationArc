@@ -1594,11 +1594,10 @@ public class ReusableMethodsManage extends BaseClass {
 		String prjTeamAdminEmail= GlobalVariable.projectTeamAdminAndArcAdminEmail
 		String prjTeamArcAdministratorName= GlobalVariable.projectTeamAdminAndArcAdminName
 		String prjTeamArcAdministratorEmail= GlobalVariable.projectTeamAdminAndArcAdminEmail
+		
 		WebUI.click(findTestObject('Manage/TeamModule/a_ Team'))
-
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/TeamModule/prjAdminName'), GlobalVariable.avgAngularWait)
 		String prjAdminName= WebUI.getText(findTestObject('Object Repository/Manage/TeamModule/prjAdminName'))
 		WebUI.verifyMatch(prjAdminName, prjTeamAdminName, false, FailureHandling.CONTINUE_ON_FAILURE)
@@ -1840,11 +1839,9 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.scrollToElement(findTestObject('Manage/TeamModule/input_input'), 2)
 		WebUI.setText(findTestObject('Manage/TeamModule/input_input'),GlobalVariable.TeamMember)
 		WebUI.click(findTestObject('Manage/TeamModule/button_Add Member'))
-
 		WebUI.waitForElementClickable(findTestObject('Manage/TeamModule/button_Add Member'), GlobalVariable.minAngularWait)
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/TeamModule/sameRoleAddAgainErrMsg'), 20)
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/TeamModule/sameRoleAddAgainErrMsg'))
 		WebUI.clearText(findTestObject('Manage/TeamModule/input_input'))

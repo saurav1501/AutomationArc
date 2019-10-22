@@ -6,12 +6,11 @@
    <elementGuidId>b15ea12d-1409-4612-9398-15b9c0726c01</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//*[@ng-if=&quot;team_member.Roleid == 'ZRPO03'&quot;]//preceding-sibling::td[2]/div[2]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@ng-if=&quot;team_member.Roleid == 'ZRPO03'&quot;]//preceding-sibling::td</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
