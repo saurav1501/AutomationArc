@@ -16,8 +16,8 @@ import internal.GlobalVariable
 import io.qameta.allure.Step
 
 public class ReusableMethodsNavigation {
-	WebDriver driver=DriverFactory.getWebDriver()
-	ReusableMethodsNavigation navigation = new ReusableMethodsNavigation()
+	
+	
 
 	@Keyword
 	public void navigateToBuilding() {

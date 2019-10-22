@@ -1095,9 +1095,10 @@ public class ResuableMethodsPerformanceScore extends BaseClass {
 		WebUI.maximizeWindow()
 		WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/Project Navigation Locators/Performance'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Arc2.0 Locators/Performance Tab Locators/Energy'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/Performance Tab Locators/Energy'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		
 		String energylowestSocreTotal = WebUI.getText(findTestObject('Object Repository/Arc2.0 Locators/Performance Tab Locators/ScoreObtained'))
 		WebUI.verifyMatch(energylowestSocreTotal ,"0", false)
 		String energyhigestScoretotal = WebUI.getText(findTestObject('Arc2.0 Locators/Performance Tab Locators/MaxScore100'))
