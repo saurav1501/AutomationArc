@@ -160,7 +160,7 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 				WebUI.verifyMatch(totalPoint, "8 of 8 Points Pursued", true)
 				println "Measure A16 - Life-cycle Assessment total points Verified Successully"
 			}
-			WebUI.scrollToElement(findTestObject('Page_Arc dashboard/button_Next'), 3)
+			//WebUI.scrollToElement(findTestObject('Page_Arc dashboard/button_Next'), 3)
 			WebUI.click(findTestObject('Page_Arc dashboard/button_Next'))
 			//WebUI.delay(3)
 			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
