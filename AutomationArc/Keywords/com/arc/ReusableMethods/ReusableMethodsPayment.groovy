@@ -442,10 +442,7 @@ public class ReusableMethodsPayment extends BaseClass{
 	@Keyword
 	public void paymentRegistration(String sheetName , int rowNum, String paymentMode){
 		/********************Fetching the data via Excel Sheet ******************************/
-		if(SAPSyncFlag){
-
-			int counter=0
-			payment:
+			
 			String cardName   = data.getCellData(sheetName, "CardName", rowNum)
 			String cardNum    = data.getCellData(sheetName, "CardNumber", rowNum)
 			String cardDate   = data.getCellData(sheetName, "Date ", rowNum)
@@ -501,12 +498,11 @@ public class ReusableMethodsPayment extends BaseClass{
 				WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 			}
-			//WebUI.delay(30)
+			
 			WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 			if((uniqueSpaceTypesFlag==true)){
 				println "Space type matched"
 				WebUI.waitForElementVisible(findTestObject('Object Repository/PayNowRegistrationPaymentUSTest/RegistrationPaymentConfirmationPopCloseButton'), 70)
-				//WebUI.delay(2)
 				WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 				WebUI.click(findTestObject('Object Repository/PayNowRegistrationPaymentUSTest/RegistrationPaymentConfirmationPopCloseButton'))
 				WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
@@ -517,35 +513,13 @@ public class ReusableMethodsPayment extends BaseClass{
 				println "Space type not matched"
 				uniqueSpaceTypesFlag=false
 			}
-			//WebUI.delay(10)
-
-			if(WebUI.waitForElementPresent(findTestObject('Object Repository/Arc2.0 Locators/Project Dashboard Sidebar Locators/AllTransitProjects'), GlobalVariable.avgAngularWait, FailureHandling.OPTIONAL) && WebUI.waitForElementVisible(findTestObject('Object Repository/Arc2.0 Locators/Project Dashboard Sidebar Locators/AllTransitProjects'), GlobalVariable.avgAngularWait, FailureHandling.OPTIONAL)){
-				WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/Project Dashboard Sidebar Locators/AllTransitProjects'))
-				WebUI.waitForElementPresent(findTestObject('PaymenntLocator/NextButton'), GlobalVariable.minAngularWait)
-				WebUI.waitForElementVisible(findTestObject('PaymenntLocator/NextButton'), GlobalVariable.minAngularWait)
-				WebUI.click(findTestObject('PaymenntLocator/NextButton'))
+			
 				WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait,FailureHandling.CONTINUE_ON_FAILURE)
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
+				WebUI.waitForElementPresent(findTestObject('Object Repository/Arc2.0 Locators/Add Project Locators/ProjectDashBoardProjectName'), GlobalVariable.minAngularWait)
+				WebUI.waitForElementVisible(findTestObject('Object Repository/Arc2.0 Locators/Add Project Locators/ProjectDashBoardProjectName'), GlobalVariable.minAngularWait)
 				KeywordUtil.markPassed("Project Created Successfully")
-			}
-			else{
-				counter++
-				if(counter==3){
-					KeywordUtil.markFailed("Project Payment Unsuccessful")
-					return
-				}
-				WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
-				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-				reusableMethodsSearch.searchProgram(Project_ID_Created)
-				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-				continue payment
-			}
-
 		}
-		else{
-			KeywordUtil.markFailed("Project ID Not Created (SAP not Synched)")
-		}
-	}
 	
 	
 	@Keyword
