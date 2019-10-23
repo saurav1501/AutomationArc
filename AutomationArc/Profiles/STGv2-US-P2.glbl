@@ -236,7 +236,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>Project team admin and arc administrator email id</description>
-      <initValue>'saurav@groupten.com'</initValue>
+      <initValue>'devarcbeta3@gmail.com'</initValue>
       <name>projectTeamAdminAndArcAdminEmail</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>

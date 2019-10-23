@@ -551,10 +551,9 @@ public class ReusableMethodsPayment extends BaseClass{
 	@Keyword
 	public void paymentRegistrationParking(String sheetName , int rowNum, String paymentMode){
 		/********************Fetching the data via Excel Sheet ******************************/
-		if(SAPSyncFlag){
+		
 
-			int counter=0
-			payment:
+			
 			String cardName   = data.getCellData(sheetName, "CardName", rowNum)
 			String cardNum    = data.getCellData(sheetName, "CardNumber", rowNum)
 			String cardDate   = data.getCellData(sheetName, "Date ", rowNum)
@@ -594,9 +593,6 @@ public class ReusableMethodsPayment extends BaseClass{
 				WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/CardNumber'),cardNum)
 				WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/ccExpiary'),cardDate)
 				WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/cvvCreditCard'),cardCvv)
-				//promocode field in case if used
-				//WebUI.sendKeys(findTestObject('Object Repository/paymentPageNewUI/promoCode'),promocode)
-				//WebUI.delay(3)
 
 				WebUI.click(findTestObject('Object Repository/paymentPageNewUI/submitPayment'))
 				WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
@@ -610,7 +606,7 @@ public class ReusableMethodsPayment extends BaseClass{
 				WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 				WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 			}
-			//WebUI.delay(30)
+
 			WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
 			if((uniqueSpaceTypesFlag==true)){
 				println "Space type matched"
@@ -626,28 +622,12 @@ public class ReusableMethodsPayment extends BaseClass{
 				println "Space type not matched"
 				uniqueSpaceTypesFlag=false
 			}
-			//WebUI.delay(10)
-
-			if(WebUI.waitForElementPresent(findTestObject('Page_Arc dashboard/a_ My Parking'), GlobalVariable.avgAngularWait, FailureHandling.OPTIONAL) && WebUI.waitForElementVisible(findTestObject('Page_Arc dashboard/a_ My Parking'), GlobalVariable.avgAngularWait, FailureHandling.OPTIONAL)){
-				WebUI.click(findTestObject('Page_Arc dashboard/a_ My Parking'))
-			}
-			else{
-				counter++
-				if(counter==3){
-					KeywordUtil.markFailed("Project Payment Unsuccessful")
-					return
-				}
-				WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
-				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-				reusableMethodsSearch.searchProgram(Project_ID_Created)
-				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-				continue payment
-			}
-
-		}
-		else{
-			KeywordUtil.markFailed("Project ID Not Created (SAP not Synched)")
-		}
+			
+			WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)
+			WebUI.waitForElementPresent(findTestObject('Object Repository/Page_Arc dashboard/AllMeasuresHeader'), GlobalVariable.minAngularWait)
+			WebUI.waitForElementVisible(findTestObject('Object Repository/Page_Arc dashboard/AllMeasuresHeader'), GlobalVariable.minAngularWait)
+			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Page_Arc dashboard/AllMeasuresHeader')),"All Measures", false)
+				
 	}
 
 	@Keyword

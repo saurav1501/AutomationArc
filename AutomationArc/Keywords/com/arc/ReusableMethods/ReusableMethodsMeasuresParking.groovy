@@ -16,6 +16,7 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 	@Keyword
 	public void measureMangementPoint()throws IOException, InterruptedException {
 		
+		sidebarMeasures()
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Page_Arc dashboard/a_ Management'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
@@ -169,6 +170,8 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 
 	@Keyword
 	public void measureProgramsPoint()throws IOException, InterruptedException {
+		
+		sidebarMeasures()
 		WebUI.doubleClick(findTestObject('Page_Arc dashboard/a_ Programs'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.doubleClick(findTestObject('Page_Arc dashboard/span_B1 - Placemaking'))
@@ -176,14 +179,12 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		for (int i = 0; i <= 12; i++) {
 			WebUI.click(findTestObject('BasePoint/CityCom/Checkbox1'))
-			//WebUI.delay(2)
 			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			if(i==0) {
 				println "Measure B1 - Placemaking total point Test Started"
 				WebUI.click(findTestObject('BasePoint/CityCom/Checkbox2'))
 				WebUI.click(findTestObject('BasePoint/CityCom/Checkbox3'))
 				WebUI.click(findTestObject('BasePoint/CityCom/Checkbox4'))
-				//WebUI.delay(3)
 				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				String totalPoint = WebUI.getText(findTestObject('Page_Arc dashboard/TotalPoint'))
 				//Reported Issue Here
@@ -200,7 +201,6 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 				println "Measure B3 - Wayfinding Systems - External total points Test Started"
 				WebUI.click(findTestObject('BasePoint/CityCom/Checkbox4'))
 				WebUI.click(findTestObject('BasePoint/CityCom/Checkbox6'))
-				//WebUI.delay(5)
 				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				String totalPoint = WebUI.getText(findTestObject('Page_Arc dashboard/TotalPoint'))
 				WebUI.verifyMatch(totalPoint, "4 of 4 Points Pursued", true)
@@ -286,23 +286,21 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 			}
 
 			WebUI.click(findTestObject('Page_Arc dashboard/button_Next'))
-			//WebUI.delay(3)
 			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		}
 	}
 
 	@Keyword
 	public void measureTechnologyDesignPoint()throws IOException, InterruptedException {
+		
+		sidebarMeasures()
 		WebUI.doubleClick(findTestObject('Page_Arc dashboard/a_ Technology  Structure Desig'))
-		//WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.doubleClick(findTestObject('Page_Arc dashboard/span_C1 - Idle Reduction Payme'))
-		//WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		//WebUI.click(findTestObject('Page_Arc dashboard/sideBar'))
+		
 		for (int i = 0; i <= 17; i++) {
 			WebUI.click(findTestObject('BasePoint/CityCom/Checkbox1'))
-			//WebUI.delay(3)
 			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			if(i==0) {
 				println  "Measure C1 - Idle Reduction Payment Systems total point Test Started"
@@ -477,30 +475,28 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 
 	@Keyword
 	public void measureInnovationPoint()throws IOException, InterruptedException {
+		
+		sidebarMeasures()
 		WebUI.doubleClick(findTestObject('Page_Arc dashboard/a_ Innovation'))
-		//WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.doubleClick(findTestObject('Page_Arc dashboard/span_D1 - Innovative Approach'))
-		//WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		//	WebUI.click(findTestObject('Page_Arc dashboard/sideBar'))
 		WebUI.click(findTestObject('BasePoint/CityCom/Checkbox1'))
-		//WebUI.delay(3)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		for (int i = 0; i < 1; i++) {
 			if(i==0) {
 				println "Measure D1 - Innovative Approach total point Test Started"
 				WebUI.click(findTestObject('BasePoint/CityCom/Checkbox2'))
-				//WebUI.delay(2)
+			
 				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				WebUI.click(findTestObject('BasePoint/CityCom/Checkbox3'))
-				//WebUI.delay(2)
+				
 				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				WebUI.click(findTestObject('BasePoint/CityCom/Checkbox4'))
-				///WebUI.delay(2)
+				
 				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				WebUI.click(findTestObject('BasePoint/CityCom/Checkbox5'))
-				//WebUI.delay(5)
+				
 				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				//Issue here
 				String totalPoint = WebUI.getText(findTestObject('Page_Arc dashboard/TotalPoint'))
@@ -705,6 +701,7 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 	@Keyword
 	public void parksmartResourceNavigation()throws IOException, InterruptedException {
 		
+		sidebarMeasures()
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Page_Arc dashboard/a_ Management'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)

@@ -1616,7 +1616,7 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public void addTeamMember(){
 
-		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("option sidebar-projects-link collapsed"))){
 			println "Manage"
 			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
@@ -2391,10 +2391,8 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void verifyAgreementFileDownloadParking(){
+		
 		deleteFile(BaseClass.ServiceAgreement)
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(8)
-		 WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Manage'))*/
 		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
 			println "Manage"
 			WebUI.delay(2)
@@ -2412,8 +2410,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void verifymeasureDownloadfileParking(){
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.delay(1)*/
+		
 		WebUI.click(findTestObject('Page_Arc dashboard/a_ Management'))
 		WebUI.delay(5)
 		WebUI.click(findTestObject('Page_Arc dashboard/span_A1 - Parking Pricing'))
@@ -2433,47 +2430,11 @@ public class ReusableMethodsManage extends BaseClass {
 		String prjName = data.getCellData(sheetName, "ProjectName", rowNum)
 		String ownerEmail = data.getCellData(sheetName, "OwnerEmail", rowNum)
 
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_Projects'))
-		 WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Manage'))*/
 		WebUI.delay(4)
 		WebUI.scrollToElement(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'),2)
 		WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'))
 		WebUI.delay(3)
 		WebUI.verifyMatch("Addendum", WebUI.getText(findTestObject('Object Repository/Manage/VerifyAgreementFile/Addenum')), false)
-		/*WebUI.click(findTestObject('Manage/VerifyAgreementFile/buttonAddendumDownload'))
-		 WebUI.delay(3)
-		 Assert.assertTrue(ReusDataInput.isFileDownloaded('Agreement.pdf'), "Addendum agreement File Didn't downloaded successfully")
-		 println "Addendum agreement File downloaded and verified successfully"
-		 WebUI.delay(3)
-		 FileInputStream fis = null;
-		 try {
-		 fis = new FileInputStream(BaseClass.Addendum);
-		 }
-		 catch (Exception e) {
-		 e.printStackTrace();
-		 }
-		 PDDocument doc = PDDocument.load(fis);
-		 String pdfText = new PDFTextStripper().getText(doc);
-		 doc.close();
-		 fis.close();
-		 println(pdfText);
-		 Assert.assertTrue(pdfText.contains("User Name : "+name), "PDF not contains the required user name.");
-		 Assert.assertTrue(pdfText.contains("User Email : "+email), "PDF not contains the required user email.");
-		 Assert.assertTrue(pdfText.contains("User ID : "+id), "PDF not contains the required user id.");
-		 //Assert.assertTrue(pdfText.contains("Date of Acceptance : "+date), "PDF not contains the required date.");
-		 Assert.assertTrue(pdfText.contains("Name of Project : "+prjName), "PDF not contains the required project name.");
-		 Assert.assertTrue(pdfText.contains("Owner Email : "+ownerEmail), "PDF not contains the required owner email.");
-		 Assert.assertTrue(pdfText.contains("http://www.usgbc.org/resources/agent-authority"), "PDF not contains the hypelink: http://www.usgbc.org/resources/agent-authority ");
-		 Assert.assertTrue(pdfText.contains("http://www.usgbc.org"), "PDF not contains the hypelink: http://www.usgbc.org ");
-		 Assert.assertTrue(pdfText.contains("http://www.usgbc.org/cert-guide"), "PDF not contains the hypelink: http://www.usgbc.org/cert-guide ");
-		 Assert.assertTrue(pdfText.contains("http://www.usgbc.org/cert-guide/fees"), "PDF not contains the hypelink: http://www.usgbc.org/cert-guide/fees ");
-		 Assert.assertTrue(pdfText.contains("http://www.usgbc.org/trademarks"), "PDF not contains the hypelink: http://www.usgbc.org/trademarks ");
-		 Assert.assertTrue(pdfText.contains("http://www.usgbc.org/resources/change-of-owner"), "PDF not contains the hypelink: http://www.usgbc.org/resources/change-of-owner");
-		 Assert.assertTrue(pdfText.contains("http://usgbc.org/resources/primary-owner"), "PDF not contains the hypelink: http://usgbc.org/resources/primary-owner ");
-		 Assert.assertTrue(pdfText.contains("legal@gbci.org"), "PDF not contains the hypelink: legal@gbci.org");
-		 */
-
-
 	}
 
 
@@ -3424,7 +3385,7 @@ public class ReusableMethodsManage extends BaseClass {
 		println(pdfText)
 		println("project name in excel"+prjName)
 		KeywordUtil.markWarning('Agreement details are : '+pdfText)
-		//Assert.assertTrue(pdfText.contains("PARKSMART™ SERVICES AGREEMENT"), "Parking Agreement is not downloaded");
+		
 		Assert.assertTrue(pdfText.contains("User Name : "+name), "PDF not contains the required user name.")
 		Assert.assertTrue(pdfText.contains("User Email : "+email), "PDF not contains the required user email.")
 		Assert.assertTrue(pdfText.contains("User ID : "+id), "PDF not contains the required user id.")
@@ -3432,7 +3393,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 		Assert.assertTrue(pdfText.contains("Name of Project : "+prjName), "Downloaded agreement PDF does not contains the mandatory field project name.")
 		Assert.assertTrue(pdfText.contains("Owner Email : "+ownerEmail), "PDF not contains the required owner email.")
-		// Assert.assertTrue(pdfText.contains("Date of Acceptance : "+ date), "PDF not contains the required date.");
+		
 
 	}
 
