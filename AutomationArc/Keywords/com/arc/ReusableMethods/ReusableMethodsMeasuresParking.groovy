@@ -15,18 +15,14 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 
 	@Keyword
 	public void measureMangementPoint()throws IOException, InterruptedException {
-		//WebUI.delay(5)
+		
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Page_Arc dashboard/a_ Management'))
-		//WebUI.delay(3)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Page_Arc dashboard/span_A1 - Parking Pricing'))
-		//WebUI.doubleClick(findTestObject('Page_Arc dashboard/sideBar'))
-		//WebUI.delay(10)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		for (int i = 0; i <= 15; i++) {
 			WebUI.click(findTestObject('BasePoint/CityCom/Checkbox1'))
-			//WebUI.delay(2)
 			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			if(i==0) {
 				println "Measure A1 - Parking Pricing total point Test Started"
@@ -37,10 +33,8 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 
 			if(i==1) {
 				println "Measure A2 - Shared Parking total points Test Started"
-				//WebUI.delay(2)
 				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				WebUI.click(findTestObject('BasePoint/CityCom/Checkbox6'))
-				//WebUI.delay(4)
 				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				String totalPoint = WebUI.getText(findTestObject('Page_Arc dashboard/TotalPoint'))
 				WebUI.verifyMatch(totalPoint, "6 of 6 Points Pursued", true)
@@ -49,7 +43,6 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 
 			if(i==2) {
 				println "Measure A3 - Transportation Management total points Test Started"
-				//WebUI.delay(4)
 				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				String totalPoint = WebUI.getText(findTestObject('Page_Arc dashboard/TotalPoint'))
 				WebUI.verifyMatch(totalPoint, "4 of 4 Points Pursued", true)
@@ -177,12 +170,9 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 	@Keyword
 	public void measureProgramsPoint()throws IOException, InterruptedException {
 		WebUI.doubleClick(findTestObject('Page_Arc dashboard/a_ Programs'))
-		//WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.doubleClick(findTestObject('Page_Arc dashboard/span_B1 - Placemaking'))
 		WebUI.waitForPageLoad(10)
-		//	WebUI.click(findTestObject('Page_Arc dashboard/sideBar'))
-		//WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		for (int i = 0; i <= 12; i++) {
 			WebUI.click(findTestObject('BasePoint/CityCom/Checkbox1'))
@@ -523,28 +513,20 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 			//WebUI.delay(2)
 			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		}
-		//	WebUI.click(findTestObject('Page_Arc dashboard/sideBar'))
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_ Measures'))
-		 WebUI.doubleClick(findTestObject('Page_Arc dashboard/a_ Innovation'))*/
 		WebUI.println "Verified Total Points By Marking all credit for Management section successuflly"
 		WebUI.delay(2)
 	}
 
 	@Keyword
 	public void uploadImageParking() throws IOException, InterruptedException {
-		/*WebUI.click(findTestObject('Manage/Parking/Manage'))
-		 WebUI.delay(1)*/
+		
 		WebUI.click(findTestObject('Manage/Parking/ManageProject'))
-		//WebUI.delay(2)
-		//WebUI.scrollToElement(findTestObject('Manage/Parking/span_Upload'), 4)
+		
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.scrollToElement(findTestObject('Manage/Parking/input_projectWebsite'), 4)
-		//WebUI.takeScreenshot("Park Image upload.jpg")
 		WebUI.click(findTestObject('Manage/Parking/span_Upload'))
-		//WebUI.takeScreenshot("Park Image upload.jpg")
 		WebUI.delay(2)
 		WebUI.sendKeys(findTestObject('Manage/Parking/ParkPdfUpload'), parkImageUpload)
-		//WebUI.delay(7)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		ReusableMethodsDataInput.clickCancel()
 		String uploadImage = WebUI.getText(findTestObject('Manage/Parking/span_Parking SJ.jpg'))
@@ -554,8 +536,9 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 
 	@Keyword
 	public void uploadSuppotingDocMeasure() throws IOException, InterruptedException {
+		
+		sidebarMeasures()
 		WebUI.doubleClick(findTestObject('Page_Arc dashboard/a_ Programs'))
-		//WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.doubleClick(findTestObject('Page_Arc dashboard/span_B1 - Placemaking'))
 		WebUI.delay(6)
@@ -590,6 +573,8 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 
 	@Keyword
 	public void deleteUploadPdf() throws IOException, InterruptedException {
+		
+		sidebarMeasures()
 		WebUI.doubleClick(findTestObject('Page_Arc dashboard/a_ Programs'))
 		WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
@@ -623,37 +608,26 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 
 	@Keyword
 	public void editProjectDetailsParking() throws IOException, InterruptedException {
-		/*WebUI.click(findTestObject('Manage/Parking/Manage'))
-		 WebUI.delay(1)*/
-		/*	WebUI.click(findTestObject('Manage/Parking/ManageProject'))
-		 WebUI.delay(2)*/
-
+		
 		WebUI.clearText(findTestObject('Manage/Parking/input_noOfParkingSpace'))
 		WebUI.sendKeys(findTestObject('Manage/Parking/input_noOfParkingSpace'),"50")
-		//WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Manage/Parking/input_noOfParkingLevels'))
-		//WebUI.delay(5)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.clearText(findTestObject('Manage/Parking/input_noOfParkingLevels'))
 		WebUI.sendKeys(findTestObject('Manage/Parking/input_noOfParkingLevels'),"50")
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)//WebUI.delay(5)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Manage/Parking/ClickSave'))
-		//WebUI.delay(5)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Manage/Parking/input_projectWebsite'))
 		WebUI.sendKeys(findTestObject('Manage/Parking/input_projectWebsite'),"http://www.parking-net.com")
-		//WebUI.delay(5)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Manage/Parking/ClickSave'))
-		//WebUI.delay(5)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.sendKeys(findTestObject('Manage/Parking/textarea_projectInfo'),"When assigned parking is provided, designated accessible parking.")
 		WebUI.click(findTestObject('Manage/Parking/ClickSave'))
-		//WebUI.delay(10)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.refresh()
-		//WebUI.delay(10)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		println "Verifying edited functionlity for no of parking space , level , website , about parking fields after refresh"
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/Parking/input_noOfParkingSpace'),"value"),"50","Not Valid")
@@ -666,7 +640,7 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 
 	@Keyword
 	public void verifyUnitTypeParking() throws IOException, InterruptedException {
-		//WebUI.delay(5)
+		
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyElementVisible(findTestObject('Manage/Parking/Project/Unit type'), FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyElementVisible(findTestObject('Manage/Parking/Project/td_Gross floor area'), FailureHandling.CONTINUE_ON_FAILURE)
@@ -711,13 +685,12 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 
 	@Keyword
 	public void faqNavigation()throws IOException, InterruptedException {
-		//WebUI.delay(5)
+	
+		sidebarMeasures()
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Page_Arc dashboard/a_ Management'))
-		//WebUI.delay(3)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Page_Arc dashboard/span_A1 - Parking Pricing'))
-		//WebUI.delay(15)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Manage/Parking/Naviation/a_FAQs'))
 		WebUI.delay(5)
@@ -731,13 +704,11 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 
 	@Keyword
 	public void parksmartResourceNavigation()throws IOException, InterruptedException {
-		//WebUI.delay(2)
+		
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Page_Arc dashboard/a_ Management'))
-		//WebUI.delay(3)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Page_Arc dashboard/span_A1 - Parking Pricing'))
-		//WebUI.delay(4)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Manage/Parking/Naviation/a_Parksmart Resources'))
 		WebUI.delay(3)
@@ -749,16 +720,24 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 		WebUI.switchToWindowIndex(0)
 	}
 
+	
+	public void sidebarMeasures(){
+		
+		if((WebUI.getAttribute(findTestObject('Object Repository/Page_Arc dashboard/SidebarMeasures'), "class", FailureHandling.OPTIONAL).equals("option sidebar-projects-link collapsed"))){
+			println "Measures"
+			WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/SidebarMeasures'))
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		}
+	}
+	
 	@Keyword
 	public void contactHyperlink()throws IOException, InterruptedException {
+		
+		sidebarMeasures()
 		WebUI.delay(2)
-		/*WebUI.click(findTestObject('Page_Arc dashboard/a_ Measures'))
-		 WebUI.delay(2)*/
 		WebUI.click(findTestObject('Page_Arc dashboard/a_ Management'))
-		//WebUI.delay(3)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Page_Arc dashboard/span_A1 - Parking Pricing'))
-		//WebUI.delay(7)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyElementPresent(findTestObject('Manage/Parking/Naviation/a_Contact us'),10)
 
@@ -766,11 +745,10 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 
 	@Keyword
 	public void PaymentPageTextNotVisible(){
-		//WebUI.delay(3)
+		
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyElementNotVisible(findTestObject('Add_Project_Details/Par/p_LETS GET STARTED'))
 		WebUI.verifyElementNotPresent(findTestObject('Add_Project_Details/Par/p_Select a term to access the'),3)
-
 	}
 
 	@Keyword
@@ -787,10 +765,10 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 
 	@Keyword
 	public void toolTip()throws IOException, InterruptedException {
-		//WebUI.delay(7)
+		
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Page_Arc dashboard/span_A1 - Parking Pricing'))
-		//WebUI.delay(5)
+		
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		for (int i = 0; i <= 46; i++) {
 			/********Verifying status button should not display*******************/
