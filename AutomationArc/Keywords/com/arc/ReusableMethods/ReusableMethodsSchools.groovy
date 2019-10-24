@@ -31,10 +31,11 @@ public class ReusableMethodsSchools extends BaseClass{
 
 		clickClaimYourSchool()
 		claimASchool()
-
+        WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		String projectArea =data.getCellData(sheetName, "Area", rowNum)
 		WebUI.delay(3)
 		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/grossArea'), projectArea)
+		
 		String prjName      = WebUI.getAttribute(findTestObject('Object Repository/AddProjectNewUI/projectName'),'value')
 		String prjType 		= WebUI.getText(findTestObject('Object Repository/AddProjectNewUI/selectProjectType'))
 		String prjAddress 	= WebUI.getAttribute(findTestObject('Object Repository/AddProjectNewUI/streetName'),'value')
@@ -50,6 +51,7 @@ public class ReusableMethodsSchools extends BaseClass{
 		data.setCellData(sheetName, "State", rowNum, prjState)
 		data.setCellData(sheetName, "Zip", rowNum, prjZip)
 		WebUI.delay(5)
+		
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/clickOnSignAgreement'))
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/addProjectNextButton'))
 		WebUI.delay(5)
@@ -605,24 +607,23 @@ public class ReusableMethodsSchools extends BaseClass{
 
 
 	public void clickClaimYourSchool() {
-
-		WebUI.delay(2)
-		WebUI.delay(2)
-		WebUI.scrollToElement(findTestObject('Object Repository/SchoolsLocators/SchoolNavigation/ClaimYourSchoolsButton'), 3)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		//WebUI.scrollToElement(findTestObject('Object Repository/SchoolsLocators/SchoolNavigation/ClaimYourSchoolsButton'), 3)
 		WebUI.click(findTestObject('Object Repository/SchoolsLocators/SchoolNavigation/ClaimYourSchoolsButton'))
-		WebUI.delay(2)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		String postNavigationClaimSchoolText = WebUI.getText(findTestObject('Object Repository/SchoolsLocators/SchoolNavigation/Claim_a_SchoolPageText'))
 		WebUI.verifyMatch(postNavigationClaimSchoolText,'Claim a School',true)
 	}
 
 	@Keyword
 	public void navigateToBuildingSchools() {
-		WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
-		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ Buildings'))
-		WebUI.delay(2)
-		WebUI.click(findTestObject('Object Repository/SchoolsLocators/SchoolNavigation/NavigateToMySchools'))
-		String postNavigationLoginText = WebUI.getText(findTestObject('Object Repository/SchoolsLocators/SchoolNavigation/SchoolsDashboardPage'))
-		WebUI.verifyMatch(postNavigationLoginText,'My Schools',true)
+		
+		WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/Project Dashboard Sidebar Locators/ProjectTabNavBar'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Arc2.0 Locators/Project Dashboard Sidebar Locators/ProjectTextAllProjectPage'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/Project Dashboard Sidebar Locators/AllSchoolsProjects'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/SchoolsLocators/SchoolNavigation/ClaimYourSchoolsButton'), GlobalVariable.minAngularWait)
 	}
 
 	//Search School
@@ -694,9 +695,9 @@ public class ReusableMethodsSchools extends BaseClass{
 			}
 		}
 
-		WebUI.waitForElementVisible(findTestObject('Object Repository/Add_Project_Details/h1_Project Registration'), 20)
-		String projectRegistrationText = WebUI.getText(findTestObject('Object Repository/Add_Project_Details/h1_Project Registration'))
-		WebUI.verifyMatch(projectRegistrationText,'Project Registration',true)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/Arc2.0 Locators/Add Project Locators/AddAProjectText'), 20)
+		String projectRegistrationText = WebUI.getText(findTestObject('Object Repository/Arc2.0 Locators/Add Project Locators/AddAProjectText'))
+		WebUI.verifyMatch(projectRegistrationText,'Add a Project',true)
 	}
 
 

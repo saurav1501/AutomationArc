@@ -13,7 +13,7 @@
    <testCaseLink>
       <guid>b96ce9be-b67f-4d08-a256-c595f10d24ed</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyParking/LoginWithParkingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>

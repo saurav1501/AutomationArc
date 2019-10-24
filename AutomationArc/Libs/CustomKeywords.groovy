@@ -2026,22 +2026,6 @@ def static "com.arc.ReusableMethods.ReusableMethodsPayment.paymentForMeasurablSu
          , 	paymentMode)
 }
 
-def static "com.katalon.plugin.keyword.calendar.SetDateCalendarKeyword.setDate"(
-    	TestObject to	
-     , 	int day	
-     , 	int month	
-     , 	int year	
-     , 	int slideTimeOut	
-     , 	FailureHandling flowControl	) {
-    (new com.katalon.plugin.keyword.calendar.SetDateCalendarKeyword()).setDate(
-        	to
-         , 	day
-         , 	month
-         , 	year
-         , 	slideTimeOut
-         , 	flowControl)
-}
-
 def static "com.arc.ReusableMethods.ReusableMethodsMeasuresParking.measureMangementPoint"() {
     (new com.arc.ReusableMethods.ReusableMethodsMeasuresParking()).measureMangementPoint()
 }
@@ -2112,6 +2096,22 @@ def static "com.arc.ReusableMethods.ReusableMethodsMeasuresParking.toolTip"() {
 
 def static "com.arc.ReusableMethods.ReusableMethodsMeasuresParking.permissionRequestsTeamMan"() {
     (new com.arc.ReusableMethods.ReusableMethodsMeasuresParking()).permissionRequestsTeamMan()
+}
+
+def static "com.katalon.plugin.keyword.calendar.SetDateCalendarKeyword.setDate"(
+    	TestObject to	
+     , 	int day	
+     , 	int month	
+     , 	int year	
+     , 	int slideTimeOut	
+     , 	FailureHandling flowControl	) {
+    (new com.katalon.plugin.keyword.calendar.SetDateCalendarKeyword()).setDate(
+        	to
+         , 	day
+         , 	month
+         , 	year
+         , 	slideTimeOut
+         , 	flowControl)
 }
 
 def static "com.arc.BaseClass.CommonMethod.clickCancel"() {

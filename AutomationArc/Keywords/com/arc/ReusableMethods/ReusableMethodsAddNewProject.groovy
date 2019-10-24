@@ -26,7 +26,7 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 	public void buildingAddNewProject(String sheetName , int rowNum) {
 
 		/**************Reading data form excel sheet*************************/
-		
+
 		String prjName      = data.getCellData(sheetName,"ProjectName", rowNum)
 		String prjType 		= data.getCellData(sheetName, "ProjectType", rowNum)
 		String prjRating 	= data.getCellData(sheetName, "RatingSystem", rowNum)
@@ -102,17 +102,17 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Arc2.0 Locators/Add Project Locators/ProjectDashBoardProjectName'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Arc2.0 Locators/Add Project Locators/ProjectDashBoardProjectName'), GlobalVariable.minAngularWait)
-	    KeywordUtil.markPassed("Project Created Successfully")
+		KeywordUtil.markPassed("Project Created Successfully")
 		String title= DriverFactory.getWebDriver().getCurrentUrl()
 		println title
 		String Project_ID= title.substring(title.indexOf('8'),title.indexOf('8')+10 )
 		println Project_ID
 		data.setCellData(sheetName,"ProjectID", rowNum, Project_ID)
 		data.setCellData(sheetName,"RegDate", rowNum, ReusableMethodsManage.verifyBillingDate())
-		
+
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Arc2.0 Locators/Add Project Locators/ProjectDashBoardProjectName')),ProjectName+", "+prjZip, false)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		
+
 
 	}
 

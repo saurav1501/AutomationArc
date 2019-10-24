@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
-   <description>Button to navigate to the claim your school page.</description>
-   <name>ClaimYourSchoolsButton</name>
+   <description></description>
+   <name>ProjectTabNavBar</name>
    <tag></tag>
-   <elementGuidId>a1b1f48a-3aae-46a5-b94d-c7bbd59d4a32</elementGuidId>
+   <elementGuidId>37a132b9-d403-497a-a7df-b1868c9b694e</elementGuidId>
    <selectorCollection>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//button[@ng-click=&quot;claimSchool(appData.project_type)&quot;]</value>
+         <value>(//*[text()='Projects'])[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
