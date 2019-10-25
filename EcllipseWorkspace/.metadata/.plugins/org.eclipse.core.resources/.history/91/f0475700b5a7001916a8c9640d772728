@@ -1,0 +1,17 @@
+package com.java.date;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class DateFormatter {
+
+	public static void main(String[] args) {
+		 String pattern = "MMM dd, yyyy";
+		    SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+		    String sDate1="Aug 16, 2019";
+		    Date date=  simpleDateFormat.format(sDate1);
+		    
+		    
+	}
+
+}
