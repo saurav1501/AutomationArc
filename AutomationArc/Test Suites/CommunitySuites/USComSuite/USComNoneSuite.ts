@@ -41,12 +41,6 @@
       <testCaseId>Test Cases/MyCommunities/CommunitiesNone/UIFieldTotalScoreTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>3c3f7294-f42f-496f-8f3c-281dc5de3205</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCommunities/CommunitiesNone/VerifyTotalCreditTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>7d09b6f8-59da-40cf-b719-ac81fec04341</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -71,6 +65,24 @@
       <testCaseId>Test Cases/MyCommunities/CommunitiesNone/EnergyMeterFileUploadTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>1b1a8b96-089d-4f1d-b864-10f3fa9447e2</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCommunities/CommunitiesNone/CreateWaterMeterReadingTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>36c8b4f7-0f7b-4cf2-9764-102bae238761</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCommunities/CommunitiesNone/CreateWasteGenerationMeterReadingTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>519c1349-a990-45a5-91bc-29de0b2027c9</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCommunities/CommunitiesNone/CreateWasteDiversionMeterReadingTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>484b892d-a214-4b5d-b528-a9db11686118</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -81,18 +93,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/MyCommunities/CommunitiesNone/CreateHumanExpMeterReadingTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>cc6c77b5-73be-4416-aa00-ee1efcbc2cb7</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCommunities/CommunitiesNone/CreateWasteGenerationMeterReadingTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>1b1a8b96-089d-4f1d-b864-10f3fa9447e2</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCommunities/CommunitiesNone/CreateWaterMeterReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>8c5406e9-0202-4110-a92f-11f1851e79dd</guid>
@@ -107,12 +107,6 @@
       <testCaseId>Test Cases/MyCommunities/CommunitiesNone/AdminToolAddCertificationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>fb111703-08a9-4ebe-b8c6-5bc42e64206d</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCommunities/CommunitiesNone/INTPerformanceScoreRevPayByCCTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>65ca41b9-493a-4a2d-8dbd-165637959ed7</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -125,21 +119,9 @@
       <testCaseId>Test Cases/MyCommunities/CommunitiesNone/ScoreVersionVerificationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>805c2e0d-e36f-4e16-99f6-dd709dfbddd1</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCommunities/CommunitiesNone/BillingDateAndStatusTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>3f47fb80-306e-4ab3-a628-865ce2128bae</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/MyCommunities/CommunitiesNone/VerifyAndDownloadBillingReceiptTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>720678b5-60ad-4d1f-a923-89beb1dbdf74</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCommunities/CommunitiesNone/DownloadAndVerifyTheSnapshotFileNameTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

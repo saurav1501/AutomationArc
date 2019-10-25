@@ -137,33 +137,15 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/PayNowRegistrationPaymentINTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>3637d52d-f6e5-49c6-8f27-2b167dcb0fdc</guid>
+      <guid>10fd2929-3240-4406-b085-4a377eb6ab19</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/CheckChangeCreditNavigatesToSelectionPageTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>e11a7875-8361-40bf-91dc-96041ff24de9</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/INDPerformanceScoreVerificationByCheckTest</testCaseId>
+      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/DownloadAndVerifyGBCIDocsINDTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>32c287fc-2900-4d90-a427-cb3ee4bd4496</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/BillingDateAndStatusTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>975d177b-440d-4b9e-8129-2d42f7615768</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/PayNowSubmitReviewPaymentINDTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>10fd2929-3240-4406-b085-4a377eb6ab19</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/DownloadAndVerifyGBCIDocsINDTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

@@ -269,9 +269,21 @@
       <testCaseId>Test Cases/DashboardPage/SideBarCollapsingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>75a58fb5-8ab2-4e31-987b-498445fea0d1</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/DashboardPage/VerifyIncompleteProjectDetailsErrorMessageTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>8069bb44-5f1d-47e7-98fa-da941095809f</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/DashboardPage/LogoutToArcTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>75f38354-22ea-42ff-9d3b-20f679881d30</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/DashboardPage/VerifySurveyPageErrorMessageTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

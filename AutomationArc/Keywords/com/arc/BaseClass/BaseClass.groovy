@@ -35,6 +35,9 @@ public class BaseClass {
 	public static boolean SAPSyncFlag=false
 	public static String Project_ID_Created
 	public static String Project_ID_Promocode
+	public static String totalScore
+	public static String transportScore
+	public static String HumanScore
 
 
 	//public static String arcReportFile= RunConfiguration.getProjectDir()+"/ARCDataTemplete/ARCReport.xlsx"
@@ -67,11 +70,14 @@ public class BaseClass {
 	public String UnzippedNewFolder= GlobalVariable.downloadDir+"GBCI-India/"
 	public static String Addendum = GlobalVariable.downloadDir+"Agreement.pdf"
 	public static String ServiceAgreement = GlobalVariable.downloadDir+"Agreement.pdf"
+	public static String UploadArcDataTempleteImprovement = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Arc_Data_Template_Improvement.xlsm"
 	public static String UploadArcDataTempleteTransit = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Arc_Data_Template_transit_above_v3.1.xlsm"
 	public static String UploadArcDataTempleteLEEDV4 = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Arc_Data_Template_LEED_v4.3.xlsm"
 	public static String UploadArcDataTempleteTransitanalytics = RunConfiguration.getProjectDir()+"/ARCDataTemplete/AnalyticArc_Data_Template_transit_above.xlsm"
 	public static String UploadArcDataTempleteTransitBelow = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Arc_Data_Template_transit_below_v4.1.xlsm"
 	public static String UploadArcDataTemplete = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Arc_Data_Template_v4.3.xlsm"
+	public static String UploadArcDataTempleteUSTons = RunConfiguration.getProjectDir()+"/ARCDataTemplete/Arc_Data_Template_building_v4.1_USTons.xlsm"
+
 	public static String analyticsUploadArcDataTemplete = RunConfiguration.getProjectDir()+"/ARCDataTemplete/AnalyticArc_Data_Template.xlsm"
 
 	public static String analyticsUploadArcDataTemplete18 = RunConfiguration.getProjectDir()+"/ARCDataTemplete/AnalyticArc_Data_TemplateV3.xlsm"

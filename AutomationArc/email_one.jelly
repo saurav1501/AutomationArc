@@ -149,7 +149,7 @@ table.border, td.border, th.border {
             <j:forEach var="packageResult" items="${junitResult.getChildren()}">
               <tr class="border">
                 <td class="brownshade border">
-                  <tt><b>ARC Frontend Tests</b></tt>
+                  <tt><b>ARC Tests</b></tt>
                 </td>
         <td class="brownshade border">
         <b><font color="red">&amp;nbsp;&amp;nbsp; ${packageResult.getFailCount()}</font></b></td>

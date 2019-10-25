@@ -6,12 +6,12 @@
    <elementGuidId>aa4196c1-36e2-48e7-b37c-41209019a7f5</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//div[@class = 'meterName--data ng-binding' and @ref_element = 'Object Repository/DataInput/CreateMeterBuilding/iframe_datainput-widget']</value>
+         <key>XPATH</key>
+         <value>(//*[@class=&quot;meterNameInfo--wrapper&quot;])[2]//div[2]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>(//div[@class = 'meterName--data ng-binding'])[2]</value>
+         <key>BASIC</key>
+         <value>//div[@class = 'meterName--data ng-binding' and @ref_element = 'Object Repository/DataInput/CreateMeterBuilding/iframe_datainput-widget']</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

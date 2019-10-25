@@ -375,10 +375,10 @@ public class ResuableMethodsLandingPage extends BaseClass {
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/selectProjectType'), 'Buildings', true)
 
-		WebUI.selectOptionByLabel(findTestObject('Object Repository/DashboardNavigationNewUI/Dash/select_Square feetSquare meter'), 'Square feet', false)
-		WebUI.verifyElementPresent(findTestObject('Object Repository/DashboardNavigationNewUI/Dash/EnterAreaIP'),4)
+		WebUI.selectOptionByLabel(findTestObject('Object Repository/DashboardNavigationNewUI/Dash/select_Square feetSquare meter'), 'IP units (feet)', false)
+		WebUI.verifyElementPresent(findTestObject('Object Repository/DashboardNavigationNewUI/Dash/EnterAreaIP'),4)                  
 
-		WebUI.selectOptionByLabel(findTestObject('Object Repository/DashboardNavigationNewUI/Dash/select_Square feetSquare meter'), 'Square meters', false)
+		WebUI.selectOptionByLabel(findTestObject('Object Repository/DashboardNavigationNewUI/Dash/select_Square feetSquare meter'), 'SI units (meters)', false)
 		WebUI.verifyElementPresent(findTestObject('Object Repository/DashboardNavigationNewUI/Dash/square meters'),4)
 	}
 	@Keyword

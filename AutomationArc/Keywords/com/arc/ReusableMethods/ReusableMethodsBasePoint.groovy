@@ -363,7 +363,7 @@ public class ReusableMethodsBasePoint extends BaseClass{
 
 		WebUI.verifyElementPresent(findTestObject('DataInput/Survey/a_ Data Input'),2)
 
-		WebUI.verifyElementPresent(findTestObject('Page_Arc dashboard/DashboardPage/NavigationCreditAction/a_ Review'),2)
+		WebUI.verifyElementNotPresent(findTestObject('Page_Arc dashboard/DashboardPage/NavigationCreditAction/a_ Review'),2)
 
 
 
@@ -374,7 +374,7 @@ public class ReusableMethodsBasePoint extends BaseClass{
 		WebUI.scrollToElement(findTestObject('Object Repository/BasePoint/a_ Base Points (1)'), 10)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 		WebUI.doubleClick(findTestObject('Object Repository/BasePoint/a_ Base Points (1)'))
-	    WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 
 		WebUI.click(findTestObject('Object Repository/BasePoint/span_Site Development - Protec'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
@@ -424,7 +424,7 @@ public class ReusableMethodsBasePoint extends BaseClass{
 	}
 	@Keyword
 	public void basePointTotalScoreTest(){
-		
+
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('PerformanceScore/Score/a_ Base Points'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)

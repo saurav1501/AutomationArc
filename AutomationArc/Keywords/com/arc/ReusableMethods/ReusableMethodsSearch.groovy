@@ -23,7 +23,7 @@ public class ReusableMethodsSearch extends BaseClass{
 	/*************Search By Project ID **************************************/
 	@Keyword
 	public void searchProgram(String sheetName , int rowNum) {
-		String projectId = data.getCellData(sheetName,"ProjectID",rowNum)
+		String projectId = data.getCellData(sheetName, "ProjectID" ,rowNum)
 
 		navigationSearch()
 		WebUI.setText(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'), projectId)

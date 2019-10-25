@@ -215,12 +215,6 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/MySchools/VerifyEnergyMeterDataCreatedViaExcelTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>53d19897-c2ad-4575-8f00-090ffb017adc</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/MySchools/VerifyFilterDataInputForWasteReadingTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>613048f3-5eb3-43c5-a16f-69c63f5094ca</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -345,12 +339,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/MySchools/TeamVerifyProjectShouldNotHaveoreThanOneAdminTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>6a0f7cd6-6b95-4896-99fb-1847583e6c00</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/MySchools/INTPerformanceScoreVerificationCCTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>ae068aaf-7b50-4eaa-bf99-5471b3c294d9</guid>

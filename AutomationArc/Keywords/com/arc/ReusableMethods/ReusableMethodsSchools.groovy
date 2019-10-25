@@ -136,7 +136,7 @@ public class ReusableMethodsSchools extends BaseClass{
 		String[] arc=title.split("/");
 		Project_ID_Promocode= arc[4]
 		println Project_ID_Promocode
-		if(WebUI.waitForElementPresent(findTestObject('Object Repository/paymentPageNewUI/oneYearSubscription'),10, FailureHandling.OPTIONAL) && WebUI.waitForElementVisible(findTestObject('Object Repository/paymentPageNewUI/oneYearSubscription'), 10, FailureHandling.OPTIONAL) ){
+		if(WebUI.waitForElementPresent(findTestObject('Object Repository/paymentPageNewUI/oneYearSubscription'), GlobalVariable.maxAngularWait , FailureHandling.OPTIONAL) && WebUI.waitForElementVisible(findTestObject('Object Repository/paymentPageNewUI/oneYearSubscription'), 10, FailureHandling.OPTIONAL) ){
 			Project_ID_Created=arc[4]
 			//************* Select the yearly subscription *****************//
 			if(yearOfSubscription==1)

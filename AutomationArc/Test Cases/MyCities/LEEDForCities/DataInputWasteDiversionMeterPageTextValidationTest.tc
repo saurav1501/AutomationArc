@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Waste meter label and reading label validation</description>
+   <name>DataInputWasteDiversionMeterPageTextValidationTest</name>
+   <tag>Validate the waste meter label and reading label test</tag>
+   <comment></comment>
+   <testCaseGuid>92c89844-d6cb-424f-9d8e-e7e7a4e37938</testCaseGuid>
+</TestCaseEntity>

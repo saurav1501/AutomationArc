@@ -19,8 +19,8 @@ try{
 
 	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.CommunitySheet, GlobalVariable.rowNumTwo)
 	
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.fileUploadCityCommEnergyMeter'()
-
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.fileuploadEnergyMeterDataInputCityComm'()
+	
 } catch (Throwable t) {
 	
 	System.out.println(t.getLocalizedMessage())

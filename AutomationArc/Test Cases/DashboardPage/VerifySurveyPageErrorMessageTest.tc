@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify if the survey details are incomplete, the user gets error message.</description>
+   <name>VerifySurveyPageErrorMessageTest</name>
+   <tag>Verify error message visible for incomplete details.</tag>
+   <comment></comment>
+   <testCaseGuid>4c7305a2-9e8c-4293-a788-ade12424b26d</testCaseGuid>
+</TestCaseEntity>

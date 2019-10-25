@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Test the comment text, make reply and check the timestamp</description>
+   <name>VerifyEnergyActivityTest</name>
+   <tag>Verify Activity</tag>
+   <comment></comment>
+   <testCaseGuid>f5674262-e22a-4f4e-b6f9-f53551ae300b</testCaseGuid>
+</TestCaseEntity>

@@ -4,7 +4,17 @@
    <name>HumanExperienceMax_20</name>
    <tag></tag>
    <elementGuidId>32ab02a7-1b75-4353-b2d8-2de893645646</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[(text() = '20' or . = '6')]</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//div[(text() = '6' or . = '6')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -25,7 +35,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>20</value>
+      <value>6</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

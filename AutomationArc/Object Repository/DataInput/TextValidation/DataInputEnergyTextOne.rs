@@ -7,13 +7,19 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>(//*[@ng-if=&quot;option.content_type == 'info_item'&quot;])[1]</value>
+         <value>(//*[@class=&quot;meterNameInfo--wrapper&quot;])[2]//div[2]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>ref_element</name>
+      <type>Main</type>
+      <value>Object Repository/DataInput/iframe_datainput-widget</value>
+   </webElementProperties>
 </WebElementEntity>

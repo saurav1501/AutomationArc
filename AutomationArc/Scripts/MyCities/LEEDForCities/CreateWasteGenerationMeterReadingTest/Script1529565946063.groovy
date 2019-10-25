@@ -22,7 +22,7 @@ import internal.GlobalVariable as GlobalVariable
 
 try {
 	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.CitySheet, GlobalVariable.rowNumTwo)
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.createWasteGenerationMeterReading'(GlobalVariable.CDataInput,GlobalVariable.rowNumTwo)
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsDataInput.createCityCommWasteGenerationMeter'(GlobalVariable.CDataInput,GlobalVariable.rowNumTwo)
 			
 } catch (Throwable t) {
 	System.out.println(t.getLocalizedMessage())

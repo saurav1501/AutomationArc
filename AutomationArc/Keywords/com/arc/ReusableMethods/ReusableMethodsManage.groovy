@@ -451,15 +451,6 @@ public class ReusableMethodsManage extends BaseClass {
 
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectName'),'value'),prjName, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectId'),'value'),prjId, false, FailureHandling.CONTINUE_ON_FAILURE)
-		if(GlobalVariable.environment=='dev'){
-			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/unitType'),'value'),"string:SI", false, FailureHandling.CONTINUE_ON_FAILURE)
-			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),'value'),"48", false, FailureHandling.CONTINUE_ON_FAILURE)
-		}
-		else{
-			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/unitType'),'value'),"string:IP", false, FailureHandling.CONTINUE_ON_FAILURE)
-			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),'value'),prjArea, false, FailureHandling.CONTINUE_ON_FAILURE)
-		}
-
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/prjAddress'),'value'),prjAddress, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectCity'),'value'), prjCity, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectState'),'value'), prjState, false, FailureHandling.CONTINUE_ON_FAILURE)
@@ -469,11 +460,8 @@ public class ReusableMethodsManage extends BaseClass {
 		//Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/ownerOrg'),'value'),ownerOrg)
 		//Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/ownerCountry'),'value'),ownerCountry)
 		//Assert.assertEquals(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/ownerEmail'),'value'),ownerEmail)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/population'),'value'),population, false, FailureHandling.CONTINUE_ON_FAILURE)
+		//WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/population'),'value'),population, false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/precertify'),'value'),"boolean:false", false, FailureHandling.CONTINUE_ON_FAILURE)
-
-
-
 
 	}
 
@@ -1452,7 +1440,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
 		WebUI.waitForElementVisible(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeSelectButtonArea'), 20)
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeSelectButtonArea')),"Imperial System (IP)",false,FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeSelectButtonArea')),"IP units (sq feet)",false,FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/UnitTypeHeader')), "GROSS AREA (square feet)", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
@@ -1701,17 +1689,17 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void projectDetailsValidation(){
-		/*WebUI.delay(3)
-		 WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
-		 */
-
-		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
+		
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		navigation.navigateIntoDataInput()
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ProjectSettingTab'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/ProjectSettingTab'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
+		WebUI.setText(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'SDF')
+		WebUI.waitForElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/PopulationReadingErrorMessage'), GlobalVariable.minAngularWait)
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.setText(findTestObject('Manage/CityCom/New/Population'),'SDF')
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.click(findTestObject('Object Repository/Manage/ManageEntity/Managing entity Name'))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.verifyElementPresent(findTestObject('Object Repository/Manage/ErrorMessage/populationErrorMessage'),2)
 	}
 
 	@Keyword
@@ -1790,31 +1778,12 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.click(findTestObject('Manage/CityCom/New/Save'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-
-		WebUI.selectOptionByLabel(findTestObject('Manage/CityCom/New/unitType'), 'SI', false)
-		WebUI.delay(1)
-		WebUI.click(findTestObject('Manage/CityCom/New/Save'))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.setText(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),'1000')
-		//WebUI.delay(1)
-		WebUI.click(findTestObject('Manage/CityCom/New/Save'))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.setText(findTestObject('Manage/ProjectDetailVerification/population'),'1000')
-		//WebUI.delay(1)
-		WebUI.click(findTestObject('Manage/CityCom/New/Save'))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		//WebUI.delay(5)
 		WebUI.selectOptionByLabel(findTestObject('Manage/CityCom/New/private'), 'Yes', false)
 		WebUI.delay(1)
 		WebUI.click(findTestObject('Manage/CityCom/New/Save'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectName'),'value'),'Changed Data LEEDV4 CityCom project', false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/unitType'),'value'),"string:SI", false, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/prjPrivate'),'value'),"boolean:true", false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/population'),'value'),'1000', false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),'value'),'1000', false, FailureHandling.CONTINUE_ON_FAILURE)
-
 
 	}
 
@@ -2215,8 +2184,8 @@ public class ReusableMethodsManage extends BaseClass {
 			WebUI.verifyMatch(regOrderType, "REGISTRATION", false, FailureHandling.CONTINUE_ON_FAILURE)
 			String regStatus= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/RegistrationPaymentStatus'))
 			WebUI.verifyMatch(regStatus, "Completed", false, FailureHandling.CONTINUE_ON_FAILURE)
-			String reviewOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/ReviewOrderId'))
-			data.setCellData(sheetName, "ReviewId", rowNum,reviewOrderId)
+			//String reviewOrderId= WebUI.getText(findTestObject('Object Repository/Manage/BillingSection/ReviewOrderId'))
+			//data.setCellData(sheetName, "ReviewId", rowNum,reviewOrderId)
 		}
 	}
 
@@ -2945,6 +2914,20 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.verifyMatch(scoreStatus, "You are all up to date!",false,FailureHandling.CONTINUE_ON_FAILURE )
 		print scoreStatus
 	}
+	
+	
+	
+	public void scoreVersionVerificationCityCommunityV3(){
+		
+		WebUI.scrollToElement(findTestObject('Manage/CertificationAndScore/a_ Score Version'),2)
+		WebUI.click(findTestObject('Manage/CertificationAndScore/a_ Score Version'))
+		String scoreVersion = WebUI.getText(findTestObject('Manage/CertificationAndScore/h3_Arc score v2.0'))
+		WebUI.verifyMatch(scoreVersion, "Arc score for cities version 3.0",false, FailureHandling.CONTINUE_ON_FAILURE)
+		print scoreVersion
+		String scoreStatus= WebUI.getText(findTestObject('Manage/CertificationAndScore/h4_You are all up to date'))
+		WebUI.verifyMatch(scoreStatus, "You are all up to date!",false,FailureHandling.CONTINUE_ON_FAILURE )
+		print scoreStatus
+	}
 
 
 	@Keyword
@@ -2999,19 +2982,25 @@ public class ReusableMethodsManage extends BaseClass {
 	@Keyword
 	public void verifyAppInstalledOnAddSupportingDocuments(){
 
-
-		WebUI.doubleClick(findTestObject('DataInput/CityCom/a_ Data Input'))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/span_Energy'), 10)
-		WebUI.click(findTestObject('DataInput/CityCom/span_Energy'))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.waitForElementVisible(findTestObject('Object Repository/Manage/App/cityCommDropbox'), 20)
-		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/cityCommComputerFile'))
-		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/cityCommDropbox'))
-		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/cityCommGoogleDrive'))
-		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/cityCommOneDrive'))
-
-
+		navigation.navigateIntoDataInput()
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/GHGEmissions'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/DocumentsTab'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/DocumentsTab'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/FileUploadCityComm/UploadButtonCityComm'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/FileUploadCityComm/UploadButtonCityComm'))
+		WebUI.delay(2)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ComputerFile'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/ComputerFile'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/DropboxApp'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/DropboxApp'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/OneDriveApp'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/OneDriveApp'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/GoogleDrive'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/GoogleDrive'), GlobalVariable.minAngularWait)
+		
 	}
 
 	@Keyword
@@ -3079,7 +3068,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/App/ArbnWellAppVerification'), GlobalVariable.minAngularWait)
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/App/ArbnWellAppVerification'))
-		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/App/ArbnWellAppVerification')), "Arbn well", false)
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Manage/App/ArbnWellAppVerification')), "arbn well", false)
 
 	}
 
@@ -3226,6 +3215,8 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.switchToWindowIndex(1)
 		WebUI.delay(8)
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Manage/Setting/DataGuideBuilding'), 10)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/Manage/Setting/DataGuideBuilding'), GlobalVariable.minAngularWait)
+		WebUI.scrollToElement(findTestObject('Object Repository/Manage/Setting/DataGuideBuilding'), 10)
 		WebUI.click(findTestObject('Object Repository/Manage/Setting/DataGuideBuilding'))
 		WebUI.delay(5)
 		Assert.assertTrue(ReusDataInput.isFileDownloaded('Data Guide for Buildings.pdf'), "DataResources File Didn't downloaded successfully")
@@ -3497,11 +3488,10 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Object Repository/DataInput/Not/div_Total Volatile Organic Com'))
 		WebUI.delay(6)
 		WebUI.click(findTestObject('Object Repository/DataInput/CityC/DeleteButton1'))
-		WebUI.click(findTestObject('Object Repository/DataInput/CityC/DeleteButton2'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/DataInput/CityC/DeleteButton1'))
 		WebUI.delay(7)
 		WebUI.verifyElementPresent(findTestObject('Object Repository/DataInput/Not/Tvo/svg_Total Volatile Organic Com'),3)
-
-
 	}
 
 	@Keyword
@@ -3513,7 +3503,8 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.click(findTestObject('Object Repository/DataInput/Not/div_Carbon Dioxide'))
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/DataInput/CityC/DeleteButton1'))
-		WebUI.click(findTestObject('Object Repository/DataInput/CityC/DeleteButton2'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/DataInput/CityC/DeleteButton1'))
 		WebUI.delay(7)
 		WebUI.verifyElementNotPresent(findTestObject('DataInput/Not/CO2Notification'),5)
 

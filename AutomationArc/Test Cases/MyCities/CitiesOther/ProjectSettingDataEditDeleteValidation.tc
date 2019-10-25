@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Verify add reading and delete reading for the Area and Population in the building setting tab.</description>
+   <name>ProjectSettingDataEditDeleteValidation</name>
+   <tag>Verify the Area and Population and verify Edit, Add and Delete operation.</tag>
+   <comment></comment>
+   <testCaseGuid>9b50fd81-f1d2-41b2-8bd9-9d447e04af60</testCaseGuid>
+</TestCaseEntity>

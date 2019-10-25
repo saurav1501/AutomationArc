@@ -4,7 +4,17 @@
    <name>Transportation_14</name>
    <tag></tag>
    <elementGuidId>0770c789-f198-4d89-98b9-0e21d3a5dadc</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>//div[(text() = '14' or . = '6')]</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//div[(text() = '6' or . = '6')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
@@ -25,7 +35,7 @@
       <matchCondition>equals</matchCondition>
       <name>text</name>
       <type>Main</type>
-      <value>14</value>
+      <value>6</value>
    </webElementProperties>
    <webElementProperties>
       <isSelected>false</isSelected>

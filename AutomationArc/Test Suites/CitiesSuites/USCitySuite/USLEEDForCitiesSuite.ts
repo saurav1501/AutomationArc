@@ -134,7 +134,19 @@
       <guid>824ba93a-0846-4684-9bab-8c84b93e0f1e</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCities/LEEDForCities/DataInputWasteMeterPageTextValidationTest</testCaseId>
+      <testCaseId>Test Cases/MyCities/LEEDForCities/DataInputWasteGenerationMeterPageTextValidationTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>22863675-7bb5-49f0-87ff-6891e477e677</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCities/LEEDForCities/CreateWastediversionMeterReadingTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>424d83fe-b1e8-44c2-b904-c4f70498cd61</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCities/LEEDForCities/DataInputWasteDiversionMeterPageTextValidationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>3bcc8125-4c7f-4a9c-8b82-31762d884490</guid>
@@ -153,12 +165,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/MyCities/LEEDForCities/CreateHumanExpMeterReadingTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>be27b48f-530d-4085-87d2-efe73e5aa71e</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCities/LEEDForCities/DataInputHumanExperiencePageTextValidationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>72c843e8-049e-44a1-a541-9175f3294074</guid>
@@ -207,6 +213,12 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/MyCities/LEEDForCities/ManageEntity/ManageEditProjectDetailsArcTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>9e4bc54d-a92b-4e55-93b2-752fd9e99cfe</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCities/LEEDForCities/EditAreaAndPopulationCityCommunityTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>ec4db78f-d6d9-4bdb-8886-adb0046aa4e2</guid>
@@ -309,12 +321,6 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/MyCities/LEEDForCities/AppVerifyUninstalledMessageWhileUninstallingAppsTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>c77ac50a-edb3-4041-99c7-333bcc97bcc5</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCities/LEEDForCities/AppVerifyAllUninstalledAppRemovedFromAddSupportingSectionTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>25ac3b5f-305f-4dae-8844-c883231e081d</guid>

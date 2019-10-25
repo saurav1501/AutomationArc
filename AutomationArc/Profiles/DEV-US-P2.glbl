@@ -6,12 +6,12 @@
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://dev.app.arconline.io/login'</initValue>
+      <initValue>'https://dev.app.arconline.io/'</initValue>
       <name>url</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description>Gold membership user</description>
-      <initValue>'devusgbcarc1@gmail.com'</initValue>
+      <initValue>'devusgbcarc@gmail.com'</initValue>
       <name>userName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -206,7 +206,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://dev.app.arconline.io/login'</initValue>
+      <initValue>'https://dev.app.arconline.io/'</initValue>
       <name>appUrl</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -236,7 +236,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'devusgbcarc1@gmail.com'</initValue>
+      <initValue>'usgbcarcapi2@gmail.com'</initValue>
       <name>projectTeamAdminAndArcAdminEmail</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -318,5 +318,10 @@
       <description></description>
       <initValue>'STGPromocodesFiftyReview'</initValue>
       <name>promocodeReviewFifty</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'CityDI'</initValue>
+      <name>TemplateCityDI</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

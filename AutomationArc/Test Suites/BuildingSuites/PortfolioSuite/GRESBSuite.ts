@@ -89,6 +89,12 @@
       <testCaseId>Test Cases/Buildings/GRESB/VerifyProjectNotificationError(RedAlert)ForAllSectionTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>cb195796-9527-4e2d-8604-6a9b54ecf159</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Buildings/GRESB/VerifyTheDataInputPopulatedDataInGRESBTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>8f42d82b-9cbb-44ba-a322-bde446a58f93</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

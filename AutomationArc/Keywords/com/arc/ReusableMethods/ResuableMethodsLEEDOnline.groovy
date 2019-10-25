@@ -332,9 +332,9 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.setText(findTestObject('LEEDOnline/Payment/input_Name on card_card-name'),cardName)
 		WebUI.setText(findTestObject('LEEDOnline/Payment/input_Card number_card-number'), cardNum)
 		WebUI.setText(findTestObject('LEEDOnline/Payment/input_CVV_card-cvv'),cardCvv)
-
+		WebUI.selectOptionByValue(findTestObject('Object Repository/LEEDOnline/Payment/ExpiaryDate'), "02", false)
+		WebUI.selectOptionByValue( findTestObject('Object Repository/LEEDOnline/Payment/ExpiaryYear'), "2022", false)
 		//WebUI.setText(findTestObject('Object Repository/PaymenntLocator/input_CC_expiry'),cardDate)
-
 		WebUI.clearText(findTestObject('LEEDOnline/Payment/input_Bill-to-party name_billN'))
 		WebUI.setText(findTestObject('LEEDOnline/Payment/input_Bill-to-party name_billN'),partyName)
 
@@ -1910,8 +1910,9 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 
 			//WebUI.selectOptionByLabel(findTestObject('DataInput/Survey/OccupantType'),'Regular Occupant', false)
 
-			WebUI.click(findTestObject('DataInput/Survey/Submit1'))
 			WebUI.waitForElementClickable(findTestObject('DataInput/Survey/Submit'), GlobalVariable.avgAngularWait)
+			WebUI.click(findTestObject('DataInput/Survey/Submit1'))
+			
 
 			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 			WebUI.verifyMatch(WebUI.getText(findTestObject('DataInput/Survey/Thank')), "Options that enhance your satisfaction", false)

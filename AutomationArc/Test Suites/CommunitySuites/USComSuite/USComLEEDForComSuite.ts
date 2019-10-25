@@ -131,6 +131,12 @@
       <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/CreateWasteGenerationMeterReadingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
+      <guid>e37c8196-9978-4c93-aece-b4a665ff3c2d</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/CreateWasteDiversionMeterReadingTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
       <guid>0170e480-629d-4ab2-966b-9d7dee2717f7</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -245,12 +251,6 @@
       <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/AppVerifyUninstalledMessageWhileUninstallingAppsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>72f2d5ef-c5c9-4333-b3a2-ed6668608007</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/AppVerifyAllUninstalledAppRemovedFromAddSupportingSectionTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>972841e6-0936-4092-994f-ada392f7ddda</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
@@ -269,28 +269,10 @@
       <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/SettingVerifySettingsPageDetailsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>e471d8a7-dd09-49b8-bd6c-5da1b3f35a7b</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/Team/AssignAddedTeamMemberInsideCredit Test</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>f0a4e281-0834-4523-8a6f-5c08f3eb7f89</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/Team/DeactivateAddedTeamMemberTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>ce4fa0da-7e71-43bd-97fc-8d48df90ff0c</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/Team/VerifyDeactivatedTeamMemberShouldNotPresentTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>f7d9ecf9-3328-4a6a-8e25-0a40d4c08a26</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/Team/VerifyTeamLabelShouldBeDisplayDataInputTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>b2c74d88-747b-4d75-a368-c0a746079343</guid>
@@ -311,9 +293,9 @@
       <testCaseId>Test Cases/Common/1_15_4/SettingScoreVersionPageUpdate_1_15_4Test</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>5e374a8a-a83f-4dc6-89da-5167b1b81297</guid>
+      <guid>cc450ee7-0014-4b82-bf87-05d4caa07545</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Common/1_15_4/LEEDRatingsTooltipText_1_15_4Test</testCaseId>
+      <testCaseId>Test Cases/MyCommunities/LEEDForCommunities/LEEDRatingsTooltipText_1_15_4Test</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

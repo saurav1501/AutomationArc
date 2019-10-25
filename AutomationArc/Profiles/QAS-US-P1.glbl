@@ -319,4 +319,14 @@
       <initValue>'QASPromocodesFiftyReview'</initValue>
       <name>promocodeReviewFifty</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://qas.app.arconline.io/app/project/1000090304/survey/v2/?key=HdOnqPGltTpfztCNd3QgqQ0d&amp;language=en'</initValue>
+      <name>surveyLinkDashboard</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'CityDI'</initValue>
+      <name>TemplateCityDI</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

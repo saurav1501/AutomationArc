@@ -41,12 +41,6 @@
       </variableLink>
    </testCaseLink>
    <testCaseLink>
-      <guid>a8c61f3b-3736-496f-9685-f0585c492ece</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyParking/Paymentpagevalidation_1_15_5Test</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>58a39548-02ee-44c4-8f75-9fa52d805aeb</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
