@@ -2393,11 +2393,9 @@ public class ReusableMethodsManage extends BaseClass {
 	public void verifyAgreementFileDownloadParking(){
 		
 		deleteFile(BaseClass.ServiceAgreement)
-		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
-			println "Manage"
-			WebUI.delay(2)
-			WebUI.click(findTestObject('Manage/Parking/Manage'))
-		}
+		
+		WebUI.click(findTestObject('Arc2.0 Locators/Navbar Button Locators/Manage'))
+		
 		WebUI.delay(2)
 		WebUI.scrollToElement(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'),2)
 		WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'))

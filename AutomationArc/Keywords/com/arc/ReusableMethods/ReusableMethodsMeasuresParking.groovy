@@ -730,9 +730,10 @@ public class ReusableMethodsMeasuresParking extends BaseClass {
 	@Keyword
 	public void contactHyperlink()throws IOException, InterruptedException {
 		
-		sidebarMeasures()
+		/*sidebarMeasures()
 		WebUI.delay(2)
-		WebUI.click(findTestObject('Page_Arc dashboard/a_ Management'))
+		
+	*/	WebUI.click(findTestObject('Page_Arc dashboard/a_ Management'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Page_Arc dashboard/span_A1 - Parking Pricing'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)

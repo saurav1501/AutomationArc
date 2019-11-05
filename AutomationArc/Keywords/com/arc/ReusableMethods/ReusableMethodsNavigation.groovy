@@ -61,11 +61,13 @@ public class ReusableMethodsNavigation {
 
 	@Keyword
 	public void navigateToParking(){
-
+		WebUI.click(findTestObject('Arc2.0 Locators/Navbar Button Locators/ProjectButton'))
+		WebUI.waitForAngularLoad(3)
 		WebUI.waitForElementClickable(findTestObject('Page_Arc dashboard/a_ My Parking'),10)
 		WebUI.click(findTestObject('Page_Arc dashboard/a_ My Parking'))
-		WebUI.delay(3)
-		WebUI.verifyMatch(WebUI.getUrl(), "https://stg-v2.app.arconline.io/app/projects/my-projects/?project-type=parksmart", false)
+		WebUI.waitForAngularLoad(10)
+	
+	//	WebUI.verifyMatch(WebUI.getUrl(), "https://stg-v2.app.arconline.io/app/projects/my-projects/?project-type=parksmart", false)
 	
 	}
 
