@@ -3275,11 +3275,7 @@
 			</matcher>
 		</filter>
 		<filter>
-<<<<<<< HEAD
-			<id>1564635791600</id>
-=======
 			<id>1566187073306</id>
->>>>>>> fb6299f08667a92ceaa112aeba269fb167cbe98d
 			<name></name>
 			<type>10</type>
 			<matcher>
@@ -3288,11 +3284,7 @@
 			</matcher>
 		</filter>
 		<filter>
-<<<<<<< HEAD
-			<id>1564635791659</id>
-=======
 			<id>1566187073391</id>
->>>>>>> fb6299f08667a92ceaa112aeba269fb167cbe98d
 			<name></name>
 			<type>6</type>
 			<matcher>
@@ -3301,11 +3293,7 @@
 			</matcher>
 		</filter>
 		<filter>
-<<<<<<< HEAD
-			<id>1564655022207</id>
-=======
 			<id>1567585168613</id>
->>>>>>> fb6299f08667a92ceaa112aeba269fb167cbe98d
 			<name></name>
 			<type>10</type>
 			<matcher>
@@ -3314,11 +3302,7 @@
 			</matcher>
 		</filter>
 		<filter>
-<<<<<<< HEAD
-			<id>1564655022258</id>
-=======
 			<id>1567585168659</id>
->>>>>>> fb6299f08667a92ceaa112aeba269fb167cbe98d
 			<name></name>
 			<type>6</type>
 			<matcher>
@@ -3327,11 +3311,7 @@
 			</matcher>
 		</filter>
 		<filter>
-<<<<<<< HEAD
-			<id>1567062122835</id>
-=======
 			<id>1568798987315</id>
->>>>>>> fb6299f08667a92ceaa112aeba269fb167cbe98d
 			<name></name>
 			<type>10</type>
 			<matcher>
@@ -3340,11 +3320,7 @@
 			</matcher>
 		</filter>
 		<filter>
-<<<<<<< HEAD
-			<id>1567062122935</id>
-=======
 			<id>1568798987364</id>
->>>>>>> fb6299f08667a92ceaa112aeba269fb167cbe98d
 			<name></name>
 			<type>6</type>
 			<matcher>
@@ -3353,11 +3329,7 @@
 			</matcher>
 		</filter>
 		<filter>
-<<<<<<< HEAD
-			<id>1571061228893</id>
-=======
 			<id>1568800733439</id>
->>>>>>> fb6299f08667a92ceaa112aeba269fb167cbe98d
 			<name></name>
 			<type>10</type>
 			<matcher>
@@ -3366,11 +3338,7 @@
 			</matcher>
 		</filter>
 		<filter>
-<<<<<<< HEAD
-			<id>1571061228938</id>
-=======
 			<id>1568800733501</id>
->>>>>>> fb6299f08667a92ceaa112aeba269fb167cbe98d
 			<name></name>
 			<type>6</type>
 			<matcher>
@@ -3379,11 +3347,7 @@
 			</matcher>
 		</filter>
 		<filter>
-<<<<<<< HEAD
-			<id>1571460655416</id>
-=======
 			<id>1568888479544</id>
->>>>>>> fb6299f08667a92ceaa112aeba269fb167cbe98d
 			<name></name>
 			<type>10</type>
 			<matcher>
@@ -3392,11 +3356,7 @@
 			</matcher>
 		</filter>
 		<filter>
-<<<<<<< HEAD
-			<id>1571460655489</id>
-=======
 			<id>1568888480827</id>
->>>>>>> fb6299f08667a92ceaa112aeba269fb167cbe98d
 			<name></name>
 			<type>6</type>
 			<matcher>
@@ -3405,11 +3365,7 @@
 			</matcher>
 		</filter>
 		<filter>
-<<<<<<< HEAD
-			<id>1571811348756</id>
-=======
 			<id>1569163298829</id>
->>>>>>> fb6299f08667a92ceaa112aeba269fb167cbe98d
 			<name></name>
 			<type>10</type>
 			<matcher>
@@ -3418,9 +3374,6 @@
 			</matcher>
 		</filter>
 		<filter>
-<<<<<<< HEAD
-			<id>1571811348801</id>
-=======
 			<id>1569163298956</id>
 			<name></name>
 			<type>6</type>
@@ -3458,7 +3411,24 @@
 		</filter>
 		<filter>
 			<id>1569299104789</id>
->>>>>>> fb6299f08667a92ceaa112aeba269fb167cbe98d
+			<name></name>
+			<type>6</type>
+			<matcher>
+				<id>org.eclipse.core.resources.regexFilterMatcher</id>
+				<arguments>(.*\.svn-base$)|(.*\.png$)|(.*\.log$)|(.*\.xlsx$)|(.*\.xls$)|(.*\.csv$)|(.*\.txt$)</arguments>
+			</matcher>
+		</filter>
+		<filter>
+			<id>1572948443024</id>
+			<name></name>
+			<type>10</type>
+			<matcher>
+				<id>org.eclipse.core.resources.regexFilterMatcher</id>
+				<arguments>.*\.svn$</arguments>
+			</matcher>
+		</filter>
+		<filter>
+			<id>1572948443079</id>
 			<name></name>
 			<type>6</type>
 			<matcher>
