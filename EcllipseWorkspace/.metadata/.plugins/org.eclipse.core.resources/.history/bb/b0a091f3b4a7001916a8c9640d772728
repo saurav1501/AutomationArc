@@ -1,0 +1,13 @@
+package com.java.date;
+
+import java.text.SimpleDateFormat;
+
+public class DateFormatter {
+
+	public static void main(String[] args) {
+		 String pattern = "MMM dd, yyyy";
+		    SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+		    String sDate1="31/12/1998";  
+	}
+
+}

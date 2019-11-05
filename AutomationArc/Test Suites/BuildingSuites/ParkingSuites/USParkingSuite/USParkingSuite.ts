@@ -13,7 +13,7 @@
    <testCaseLink>
       <guid>b96ce9be-b67f-4d08-a256-c595f10d24ed</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyParking/LoginWithParkingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -49,7 +49,7 @@
    <testCaseLink>
       <guid>3d4b0c89-8f27-461c-837b-465675f69633</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/Buildings/MyParking/SearchProgramTest</testCaseId>
    </testCaseLink>
    <testCaseLink>

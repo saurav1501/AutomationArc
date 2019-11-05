@@ -1,0 +1,37 @@
+package com.java.date;
+
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.TimeZone;
+
+public class DateFormatter {
+
+	public static void main(String[] args) throws ParseException {
+		    String pattern = "MMM dd, yyyy";
+		    Calendar cal = Calendar.getInstance();
+		    cal.add(Calendar.MONTH, 1);
+		    
+		    SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+		    String sDate1="Aug 16, 2019";
+		    Date date=  simpleDateFormat.parse(sDate1);
+		    date.setMonth(cal.MONTH);
+		    DateFormat dateFormat = new SimpleDateFormat("MMM dd, yyyy");  
+            String strDate = dateFormat.format(date);  
+            System.out.println("Converted String: " + strDate); 
+            
+		/*
+		 * Calendar cal = Calendar.getInstance();
+		 * cal.setTimeZone(TimeZone.getTimeZone("UTC")); cal.add(Calendar.MONTH, 5);
+		 * System.out.println("date after 5 months : " + (Calendar.MONTH)+1);
+		 */
+
+    
+            
+		    
+		    
+	}
+
+}

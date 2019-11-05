@@ -6,12 +6,11 @@
    <elementGuidId>a1b1f48a-3aae-46a5-b94d-c7bbd59d4a32</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//button[@ng-click=&quot;claimSchool()&quot;]</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//button[@ng-click=&quot;claimSchool(appData.project_type)&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

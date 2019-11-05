@@ -26,8 +26,7 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 	public void buildingAddNewProject(String sheetName , int rowNum) {
 
 		/**************Reading data form excel sheet*************************/
-		int counter=0
-		project:
+
 		String prjName      = data.getCellData(sheetName,"ProjectName", rowNum)
 		String prjType 		= data.getCellData(sheetName, "ProjectType", rowNum)
 		String prjRating 	= data.getCellData(sheetName, "RatingSystem", rowNum)
@@ -97,36 +96,23 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		WebUI.delay(2)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/stateName'),prjState, false)
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/zipCode'), prjZip)
-		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/clickOnSignAgreement'))
+		WebUI.check(findTestObject('Object Repository/AddProjectNewUI/clickOnSignAgreement'))
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/addProjectNextButton'))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait,FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/Arc2.0 Locators/Add Project Locators/ProjectDashBoardProjectName'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementVisible(findTestObject('Object Repository/Arc2.0 Locators/Add Project Locators/ProjectDashBoardProjectName'), GlobalVariable.minAngularWait)
+		KeywordUtil.markPassed("Project Created Successfully")
+		String title= DriverFactory.getWebDriver().getCurrentUrl()
+		println title
+		String Project_ID= title.substring(title.indexOf('8'),title.indexOf('8')+10 )
+		println Project_ID
+		data.setCellData(sheetName,"ProjectID", rowNum, Project_ID)
+		data.setCellData(sheetName,"RegDate", rowNum, ReusableMethodsManage.verifyBillingDate())
 
-		if(WebUI.waitForElementPresent(findTestObject('Object Repository/Arc2.0 Locators/Add Project Locators/BuildingPopUpToNavigateToProject'),GlobalVariable.minAngularWait,FailureHandling.OPTIONAL) && WebUI.waitForElementVisible(findTestObject('Object Repository/Arc2.0 Locators/Add Project Locators/BuildingPopUpToNavigateToProject'),GlobalVariable.minAngularWait,FailureHandling.OPTIONAL) ){
-			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Arc2.0 Locators/Add Project Locators/BuildingPopUpToNavigateToProject')),"Your Building's Score",true)
-			WebUI.click(findTestObject('PaymenntLocator/NextButton'))
-			WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait,FailureHandling.CONTINUE_ON_FAILURE)
-			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
-			KeywordUtil.markPassed("Project Created Successfully")
-			String title= DriverFactory.getWebDriver().getCurrentUrl()
-			println title
-			String Project_ID= title.substring(title.indexOf('8'),title.indexOf('8')+10 )
-			println Project_ID
-			//WebUI.getText(findTestObject('Object Repository/Add_Project_Details/td_BuildingID'))
-			//System.out.println()
-			data.setCellData(sheetName,"ProjectID", rowNum, Project_ID)
-			data.setCellData(sheetName,"RegDate", rowNum, ReusableMethodsManage.verifyBillingDate())
-			WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Arc2.0 Locators/Add Project Locators/ProjectDashBoardProjectName')),ProjectName+", "+prjZip, false)
-			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		}
-		else{
-			counter++
-			if(counter==3){
-				KeywordUtil.markFailed("Project not created")
-				return
-			}
-			WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
-			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-			continue project
-		}
+		WebUI.verifyMatch(WebUI.getText(findTestObject('Object Repository/Arc2.0 Locators/Add Project Locators/ProjectDashBoardProjectName')),ProjectName+", "+prjZip, false)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
 
 	}
 
@@ -186,7 +172,7 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		WebUI.delay(2)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/stateName'),prjState, false)
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/zipCode'), prjZip)
-		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/clickOnSignAgreement'))
+		WebUI.check(findTestObject('Object Repository/AddProjectNewUI/clickOnSignAgreement'))
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/addProjectNextButton'))
 
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait)

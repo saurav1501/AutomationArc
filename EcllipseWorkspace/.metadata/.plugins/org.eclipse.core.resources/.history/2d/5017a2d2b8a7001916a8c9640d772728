@@ -1,0 +1,36 @@
+package com.java.date;
+
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.TimeZone;
+
+public class DateFormatter {
+
+	public static void main(String[] args) throws ParseException {
+		    String pattern = "MMM dd, yyyy";
+		   
+		    SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+		    String sDate1="Jul 16, 2019";
+		    Date date=  simpleDateFormat.parse(sDate1);
+		    //date.setMonth(cal.MONTH);
+		    DateFormat dateFormat = new SimpleDateFormat("MMM dd, yyyy");  
+            String strDate = dateFormat.format(date);  
+          //  System.out.println("Converted String: " + strDate); 
+            Date current = new Date();
+            System.out.println(current);
+            Calendar cal = Calendar.getInstance();
+            cal.setTime(current);
+            cal.set(Calendar.MONTH, (cal.get(Calendar.MONTH)+6));
+            current = cal.getInstance();
+            System.out.println(current);
+		
+    
+            
+		    
+		    
+	}
+
+}
