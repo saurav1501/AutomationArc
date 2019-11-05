@@ -5154,12 +5154,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 			WebUI.selectOptionByLabel(findTestObject('Object Repository/DataInput/Survey/OccupantTypeSurvey'), "Regular Occupant", false)
 			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
-
-			//WebUI.selectOptionByLabel(findTestObject('DataInput/Survey/OccupantType'),'Regular Occupant', false)
-
-			WebUI.click(findTestObject('DataInput/Survey/Submit1'))
 			WebUI.waitForElementClickable(findTestObject('DataInput/Survey/Submit'), GlobalVariable.avgAngularWait)
-
+			WebUI.click(findTestObject('DataInput/Survey/Submit1'))
 			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 			WebUI.verifyMatch(WebUI.getText(findTestObject('DataInput/Survey/Thank')), "Options that enhance your satisfaction", false)
 			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
@@ -6547,113 +6543,98 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.verifyMatch(GlobalVariable.teamMemName,pteamMemUI, false)
 
 	}
+	
 	@Keyword
 	public void HumanExpMeterReadingValidationUI()throws IOException, InterruptedException {
+		
+		navigation.navigateIntoDataInput()
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/GHGEmissions'))
+		WebUI.doubleClick(findTestObject('Object Repository/CityCommDataInput/MeterNames/HighSchoolPercent'))
+		WebUI.waitForElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
+		WebUI.setText(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), '5000')
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.click(findTestObject('DataInput/CityCom/a_ Data Input'))
+		WebUI.verifyElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/PopulationReadingErrorMessage'))
+		
+		/************************** Verify the error message gone after valid value *************************/
+		WebUI.clearText(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.click(findTestObject('DataInput/CityCom/span_Human Experience'))
+		WebUI.setText(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), '20')
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.waitForPageLoad(10)
-		WebUI.click(findTestObject('DataInput/CityCom/EducationAddYear'))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-
-
-		WebUI.setText(findTestObject('DataInput/CityCom/TextboxValue1'), '5000')
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+1))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.verifyElementPresent(findTestObject('DataInput/CityCom/Hum/TextValidationPercentPercentvalueshouldnotexceed100'),5)
-
-		/****************************Verifying the Notification of Error message******************************/
-		WebUI.clearText(findTestObject('DataInput/CityCom/TextboxValue1'))
-		//WebUI.delay(5)
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.setText(findTestObject('DataInput/CityCom/TextboxValue1'),'20')
-		//WebUI.delay(1)
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton'+1),2)
-		WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+1))
-		//WebUI.delay(5)
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/TextboxValue1'),"value"),'20',"Not Valid")
-
-
+		WebUI.verifyElementNotVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/PopulationReadingErrorMessage'))
 	}
 
 
 	@Keyword
 	public void PopulationHumanExpMeterReadingValidationUI()throws IOException, InterruptedException {
 
-		WebUI.scrollToElement(findTestObject('DataInput/CityCom/BachelorAddYear'), 2)
-		WebUI.click(findTestObject('DataInput/CityCom/BachelorAddYear'))
+		WebUI.doubleClick(findTestObject('Object Repository/CityCommDataInput/MeterNames/BachelorDegreePercent'))
+		WebUI.waitForElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
+		WebUI.setText(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), '5000')
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-
-		WebUI.setText(findTestObject('DataInput/CityCom/HTextBox2'), '5000')
+		WebUI.verifyElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/PopulationReadingErrorMessage'))
+		
+		/************************** Verify the error message gone after valid value *************************/
+		WebUI.clearText(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+2))
+		WebUI.setText(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), '20')
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.verifyElementPresent(findTestObject('DataInput/CityCom/Hum/TextValidationPercentPercentvalueshouldnotexceed100'),5)
-
-		/****************************Verifying the Notification of Error message******************************/
-		WebUI.clearText(findTestObject('DataInput/CityCom/HTextBox2'))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.setText(findTestObject('DataInput/CityCom/HTextBox2'), '20')
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton'+2),2)
-		WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+2))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityCom/HTextBox2'),"value"),'20',"Not Valid")
+		WebUI.verifyElementNotVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/PopulationReadingErrorMessage'))
 
 
 	}
 	@Keyword
 	public void EQUITABILITYHumanExpMeterReadingValidationUI()throws IOException, InterruptedException {
 
-		WebUI.waitForPageLoad(10)
-		WebUI.scrollToElement(findTestObject('DataInput/CityCom/EquAddYear'),2)
-		WebUI.click(findTestObject('DataInput/CityCom/EquAddYear'))
+		WebUI.doubleClick(findTestObject('Object Repository/CityCommDataInput/MeterNames/GiniCoefficient'))
+		WebUI.waitForElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
+		WebUI.setText(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), '5000')
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-
-		WebUI.setText(findTestObject('DataInput/CityC/TextBox3'), '5000')
+		WebUI.verifyElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/PopulationReadingErrorMessage'))
+		
+		/************************** Verify the error message gone after valid value *************************/
+		WebUI.clearText(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+3))
+		WebUI.setText(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), '1')
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.verifyElementPresent(findTestObject('DataInput/CityCom/Hum/TextValidationPercentPercentvalueshouldnotexceed100'),5)
-
-		/****************************Verifying the Notification of Error message******************************/
-		WebUI.clearText(findTestObject('DataInput/CityC/TextBox3'))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.setText(findTestObject('DataInput/CityC/TextBox3'), '20')
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton'+3),2)
-		WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+3))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityC/TextBox3'),"value"),'20',"Not Valid")
-
+		WebUI.verifyElementNotVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/PopulationReadingErrorMessage'))
 
 	}
+	
 	@Keyword
 	public void GinicoefficientHumanExpMeterReadingValidationUI()throws IOException, InterruptedException {
 
-		WebUI.click(findTestObject('DataInput/CityCom/GiniAddYear'))
+		WebUI.doubleClick(findTestObject('Object Repository/CityCommDataInput/MeterNames/RentIncomePercent'))
+		WebUI.waitForElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'), GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
+		WebUI.setText(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), '5000')
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.verifyElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/PopulationReadingErrorMessage'))
+		
+		/************************** Verify the error message gone after valid value *************************/
+		WebUI.clearText(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.setText(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), '20')
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
+		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
+		WebUI.verifyElementNotVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/PopulationReadingErrorMessage'))
 
-		WebUI.setText(findTestObject('DataInput/CityC/TextBox4'), '5000')
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+4))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.verifyElementPresent(findTestObject('DataInput/CityCom/Hum/Gini'),5)
 
-		/****************************Verifying the Notification of Error message******************************/
-		WebUI.clearText(findTestObject('DataInput/CityC/TextBox4'))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.setText(findTestObject('DataInput/CityC/TextBox4'),'1')
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		WebUI.waitForElementClickable(findTestObject('DataInput/CityCom/SaveButton'+4),2)
-		WebUI.click(findTestObject('DataInput/CityCom/SaveButton'+4))
-		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
-		Assert.assertEquals(WebUI.getAttribute(findTestObject('DataInput/CityC/TextBox4'),"value"),'1',"Not Valid")
 	}
 
 
@@ -8317,6 +8298,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingTwo'), reading2)
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonTwo'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonTwo'), GlobalVariable.minAngularWait)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.refresh()
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
@@ -8350,6 +8332,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingTwo'), reading2)
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonTwo'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonTwo'), GlobalVariable.minAngularWait)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.refresh()
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
@@ -8383,6 +8366,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingTwo'), reading2)
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonTwo'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonTwo'), GlobalVariable.minAngularWait)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.refresh()
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
@@ -8416,6 +8400,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingTwo'), reading2)
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonTwo'), GlobalVariable.minAngularWait)
+		WebUI.waitForElementClickable(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonTwo'), GlobalVariable.minAngularWait)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.refresh()
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
@@ -8446,7 +8431,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		navigation.navigateIntoDataInput()
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
-		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/Data'))
+		WebUI.waitForElementClickable(findTestObject('Object Repository/CityCommDataInput/MeterNames/Data'), GlobalVariable.minAngularWait)
+		WebUI.doubleClick(findTestObject('Object Repository/CityCommDataInput/MeterNames/Data'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/AdditionalDataDropdownButton'), GlobalVariable.minAngularWait)
 
 		//Total Electricty Use
@@ -8457,7 +8443,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
 		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), reading1)
-		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/UnitAdditonalData'), ureading1)
+		WebUI.sendKeys(findTestObject('CityCommDataInput/MeterNames/UnitAdditonalDataOne'), ureading1)
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonOne'), GlobalVariable.minAngularWait)
 		//Landfill diversion rate
@@ -8466,9 +8452,9 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/LandfillDiversionRate'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
-		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), reading2)
-		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/UnitAdditonalData'), ureading2)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingTwo'), GlobalVariable.minAngularWait)
+		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingTwo'), reading2)
+		WebUI.sendKeys(findTestObject('CityCommDataInput/MeterNames/UnitAdditonalDataTwo'), ureading2)
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonOne'), GlobalVariable.minAngularWait)
 		//Percentage Of population With Potable Water
@@ -8477,9 +8463,9 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/PercentageOfpopulationWithPotableWater'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
-		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), reading3)
-		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/UnitAdditonalData'), ureading3)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingThree'), GlobalVariable.minAngularWait)
+		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingThree'), reading3)
+		WebUI.sendKeys(findTestObject('CityCommDataInput/MeterNames/UnitAdditonalDataThree'), ureading3)
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonOne'), GlobalVariable.minAngularWait)
 		//PercentageOfGovtWorkers
@@ -8488,9 +8474,9 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/PercentageOfGovtWorkers'))
 		WebUI.waitForElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AddYearButton'))
-		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
-		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), reading4)
-		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/UnitAdditonalData'), ureading4)
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingFour'), GlobalVariable.minAngularWait)
+		WebUI.sendKeys(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingFour'), reading4)
+		WebUI.sendKeys(findTestObject('CityCommDataInput/MeterNames/UnitAdditonalDataFour'), ureading4)
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/EditButtonOne'), GlobalVariable.minAngularWait)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
@@ -8502,6 +8488,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		//Verify the readings for the following options
 		/*WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AdditionalDataDropdownButton'))
+<<<<<<< HEAD
 		 WebUI.scrollToElement(findTestObject('Object Repository/CityCommDataInput/MeterNames/TotalElectricityUse'), 5)
 		 WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/TotalElectricityUse'))
 		 WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
@@ -8525,6 +8512,34 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		 WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
 		 WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'), reading4, false)
 		 WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/UnitAdditonalData'),'value'), ureading4, false)*/
+=======
+		WebUI.scrollToElement(findTestObject('Object Repository/CityCommDataInput/MeterNames/TotalElectricityUse'), 5)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/TotalElectricityUse'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'), reading1, false)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('CityCommDataInput/MeterNames/UnitAdditonalDataOne'),'value'), ureading1, false)
+
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AdditionalDataDropdownButton'))
+		WebUI.scrollToElement(findTestObject('Object Repository/CityCommDataInput/MeterNames/LandfillDiversionRate'), 5)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/LandfillDiversionRate'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'), reading2, false)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('CityCommDataInput/MeterNames/UnitAdditonalDataOne'),'value'), ureading2, false)
+
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AdditionalDataDropdownButton'))
+		WebUI.scrollToElement(findTestObject('Object Repository/CityCommDataInput/MeterNames/PercentageOfpopulationWithPotableWater'), 5)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/PercentageOfpopulationWithPotableWater'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'), reading3, false)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('CityCommDataInput/MeterNames/UnitAdditonalDataOne'),'value'), ureading3, false)
+
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AdditionalDataDropdownButton'))
+		WebUI.scrollToElement(findTestObject('Object Repository/CityCommDataInput/MeterNames/PercentageOfGovtWorkers'), 5)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/PercentageOfGovtWorkers'))
+		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'), reading4, false)
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('CityCommDataInput/MeterNames/UnitAdditonalDataOne'),'value'), ureading4, false)*/
+>>>>>>> fb6299f08667a92ceaa112aeba269fb167cbe98d
 	}
 
 	//File Upload City / Community Data Input
@@ -8671,7 +8686,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		navigation.navigateIntoDataInput()
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ProjectSettingTab'), GlobalVariable.minAngularWait)
-		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/ProjectSettingTab'))
+		WebUI.doubleClick(findTestObject('Object Repository/CityCommDataInput/MeterNames/ProjectSettingTab'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'),prjPopulation , false)
 		WebUI.doubleClick(findTestObject('Object Repository/CityCommDataInput/MeterNames/DeleteButtonOne'))
@@ -8777,7 +8792,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.delay(2)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForElementClickable(findTestObject('Object Repository/DataInput/CreateMeterBuilding/cancelButton'), GlobalVariable.minAngularWait)
-		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/cancelButton'))
+		WebUI.click(findTestObject('Object Repository/DataInput/CreateMeterBuilding/CloseCreateReportModal'))
 		WebUI.delay(8)
 		//'Verifying the file is download in the User defined Path'
 		Assert.assertTrue(isFileDownloaded('Export Data.xlsx'), 'Failed to download Expected document')
@@ -8894,6 +8909,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		int j=6
 		(1..5).each{
 			String reading1 = dataExcelTemplate.getCellData(sheetName, "Reading5", j)
+			WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/CityCommGraphDI',[index: it]), GlobalVariable.minAngularWait)
 			WebUI.focus(findTestObject('Object Repository/CityCommDataInput/MeterNames/CityCommGraphDI',[index: it]))
 			String[] reading=WebUI.getText(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ToolTipGraph')).split(" ")
 			WebUI.verifyMatch(reading[0], reading1, false, FailureHandling.CONTINUE_ON_FAILURE)
@@ -8986,6 +9002,12 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		else{
 			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'), '1000' , false)
 		}
+		
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/ClickOnUnitTypeDropdown'))
+		WebUI.scrollToElement(findTestObject('Object Repository/CityCommDataInput/MeterNames/SIUnits'), 5)
+		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/ClickOnUnitTypeDropdown'))
+		WebUI.waitForElementClickable(findTestObject('Object Repository/CityCommDataInput/MeterNames/ClickOnUnitTypeDropdown'), GlobalVariable.minAngularWait)
+		
 	}
 
 }

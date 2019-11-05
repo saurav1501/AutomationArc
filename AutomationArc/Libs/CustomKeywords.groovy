@@ -4404,6 +4404,10 @@ def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.totalPerform
     (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).totalPerformanceScoreToolTipOtherNone()
 }
 
+def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.totalPerformanceScoreToolTip"() {
+    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).totalPerformanceScoreToolTip()
+}
+
 def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.recomputeScoreImprovement"(
     	String sheetName	
      , 	int rowNum	) {

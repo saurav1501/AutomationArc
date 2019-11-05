@@ -7,7 +7,11 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
+<<<<<<< HEAD
          <value>//div[(text() = '4' or . = '8')]</value>
+=======
+         <value>//div[(text() = '8' or . = '4')]</value>
+>>>>>>> fb6299f08667a92ceaa112aeba269fb167cbe98d
       </entry>
       <entry>
          <key>BASIC</key>

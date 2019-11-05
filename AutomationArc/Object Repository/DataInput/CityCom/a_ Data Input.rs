@@ -9,8 +9,16 @@
          <key>BASIC</key>
          <value>//*[@id = 'data_input']</value>
       </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@ng-click=&quot;saveDefaultPage('allactions')&quot;]</value>
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value></value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>

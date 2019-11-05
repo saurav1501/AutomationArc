@@ -6,12 +6,20 @@
    <elementGuidId>6621b17a-fe88-423a-88b8-dd3236eabe39</elementGuidId>
    <selectorCollection>
       <entry>
+<<<<<<< HEAD
          <key>CSS</key>
          <value>#responses-chart-id > div > div > svg > g:nth-child(15) > g:nth-child(1) > text:nth-child(12) > tspan:nth-child(1)</value>
-      </entry>
-      <entry>
+=======
          <key>XPATH</key>
          <value>//*[text()='Oct']</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+>>>>>>> fb6299f08667a92ceaa112aeba269fb167cbe98d
+      </entry>
+      <entry>
+         <key>CSS</key>
+         <value>#responses-chart-id > div > div > svg > g:nth-child(15) > g:nth-child(1) > text:nth-child(12) > tspan:nth-child(1)</value>
       </entry>
       <entry>
          <key>BASIC</key>
