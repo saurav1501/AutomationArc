@@ -125,37 +125,37 @@ public class ResuableMethodsPortfolio extends BaseClass {
 			WebUI.waitForElementClickable(findTestObject('Portfolio/Common/span_Add a Project'),GlobalVariable.minAngularWait)
 			WebUI.click(findTestObject('Portfolio/Common/span_Add a Project'))
 			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
-			
+
 			WebUI.waitForElementClickable(findTestObject('Portfolio/Common/input_searchBarPort'),GlobalVariable.minAngularWait)
 			WebUI.setText(findTestObject('Portfolio/Common/input_searchBarPort'), projectId)
-			
+
 			WebUI.waitForElementClickable(findTestObject('Portfolio/Common/input_searchBarPort'),GlobalVariable.minAngularWait)
 			WebUI.click(findTestObject('Portfolio/Common/input_searchBarPort'))
-			
+
 			WebUI.delay(2)
 			WebUI.waitForElementClickable(findTestObject('Portfolio/Common/SelectProjectInPortfolio'),GlobalVariable.minAngularWait)
 			WebUI.click(findTestObject('Portfolio/Common/SelectProjectInPortfolio'))
-			
+
 			WebUI.waitForElementClickable(findTestObject('Portfolio/Common/input_searchBarPortfolio'),GlobalVariable.minAngularWait)
 			WebUI.setText(findTestObject('Portfolio/Common/input_searchBarPortfolio'),portfolioName)
 			WebUI.click(findTestObject('Portfolio/Common/input_searchBarPortfolio'))
 			WebUI.delay(2)
-			
+
 			WebUI.waitForElementClickable(findTestObject('Portfolio/Common/SelectPortfolio'),GlobalVariable.minAngularWait)
 			WebUI.click(findTestObject('Portfolio/Common/SelectPortfolio'))
 			WebUI.waitForElementClickable(findTestObject('Portfolio/Common/button_Add'),GlobalVariable.minAngularWait)
 			WebUI.click(findTestObject('Portfolio/Common/button_Add'))
-		    WebUI.waitForElementClickable(findTestObject('Portfolio/Common/button_Add'),GlobalVariable.minAngularWait)
+			WebUI.waitForElementClickable(findTestObject('Portfolio/Common/button_Add'),GlobalVariable.minAngularWait)
 			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
-			
+
 			WebUI.waitForElementVisible(findTestObject('Portfolio/Common/button_Done'),GlobalVariable.minAngularWait)
 			WebUI.click(findTestObject('Portfolio/Common/button_Done'))
 			WebUI.waitForElementClickable(findTestObject('Portfolio/Common/button_Done'),GlobalVariable.minAngularWait)
 			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
-			
+
 			/*WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
-			String verifyPortfioio =WebUI.getText(findTestObject('Portfolio/Common/ProjectName'))
-			WebUI.verifyMatch(verifyPortfioio,portfolioName,false)*/
+			 String verifyPortfioio =WebUI.getText(findTestObject('Portfolio/Common/ProjectName'))
+			 WebUI.verifyMatch(verifyPortfioio,portfolioName,false)*/
 		}
 		println  "6 Projects Successfully added inside portfolio"
 	}
@@ -171,9 +171,9 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		BigDecimal UactannualcarconEmession =  new BigDecimal(AnnualCarbonEmissions)
 		UactannualcarconEmession =  UactannualcarconEmession .setScale(0, RoundingMode.HALF_UP)
 		String uactannualcarconEmession = UactannualcarconEmession.toString()
-		
+
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
-	
+
 
 		String totalGrossArea = WebUI.getText(findTestObject('Portfolio/Common/TotalGrossArea'))
 		WebUI.verifyMatch(projectArea,totalGrossArea,false)
@@ -752,7 +752,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.delay(5)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Portfolio/Goal/CarbonUnit'), 10)
-		
+
 		println "Test started verifying carbon unit MTCO2E"
 		String mtco2e = WebUI.getText(findTestObject('Object Repository/Portfolio/Goal/CarbonUnit'))
 		System.out.println(mtco2e)
@@ -806,7 +806,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.click(findTestObject('Portfolio/Goal/CarbonCurrentProgess'))
 		WebUI.delay(2)
 		WebUI.waitForAngularLoad(120, FailureHandling.CONTINUE_ON_FAILURE)
-		
+
 		/*	WebUI.refresh()
 		 WebUI.delay(5)
 		 println cbValue*/
@@ -887,9 +887,9 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.delay(2)
 		WebUI.refresh()
 		WebUI.delay(7)
-		
+
 		WebUI.waitForAngularLoad(120, FailureHandling.CONTINUE_ON_FAILURE)
-	
+
 
 		println "Test started verifying carbon textarea, carbon reducion , base line value after refersh"
 		Assert.assertTrue(WebUI.getAttribute(findTestObject('Portfolio/Goal/energy_baseline_value'),"value").contains(ebValue),"Not Valid")
@@ -965,9 +965,9 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.delay(4)
 		WebUI.refresh()
 		WebUI.delay(5)
-		
+
 		WebUI.waitForAngularLoad(120, FailureHandling.CONTINUE_ON_FAILURE)
-		
+
 
 		println "Test started verifying carbon textarea, carbon reducion , base line value after refersh"
 		Assert.assertTrue(WebUI.getAttribute(findTestObject('Portfolio/Goal/water_baseline_value'),"value").contains(wbValue),"Not Valid")
@@ -1418,9 +1418,9 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.delay(5)
 		WebUI.refresh()
 		WebUI.delay(5)
-		
+
 		WebUI.waitForAngularLoad(120, FailureHandling.CONTINUE_ON_FAILURE)
-		
+
 
 		println "Test started verifying carbon textarea, carbon reducion , base line value after refersh"
 		Assert.assertTrue(WebUI.getAttribute(findTestObject('Portfolio/Goal/generated_waste_baseline_value'),"value").contains(wbValue),"Not Valid")
@@ -1503,7 +1503,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.refresh()
 		WebUI.delay(5)
 		WebUI.waitForAngularLoad(120, FailureHandling.CONTINUE_ON_FAILURE)
-		
+
 
 		println "Test started verifying carbon textarea, carbon reducion , base line value after refersh"
 		Assert.assertTrue(WebUI.getAttribute(findTestObject('Portfolio/Goal/diverted_waste_baseline_value'),"value").contains(wbValue),"Not Valid")
@@ -1583,7 +1583,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.refresh()
 		WebUI.delay(8)
 		WebUI.waitForAngularLoad(120, FailureHandling.CONTINUE_ON_FAILURE)
-		
+
 
 		println "Test started verifying transport textarea, carbon reducion , base line value after refersh"
 		Assert.assertTrue(WebUI.getAttribute(findTestObject('Portfolio/Goal/transport_baseline_value'),"value").contains(tbValue),"Not Valid")
@@ -1649,9 +1649,9 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.sendKeys(findTestObject('Object Repository/Portfolio/Goal/humanexp_textarea'),htextbox )
 		WebUI.click(findTestObject('Portfolio/Goal/transport_currentProgess'))
 		WebUI.delay(2)
-	
+
 		WebUI.waitForAngularLoad(120, FailureHandling.CONTINUE_ON_FAILURE)
-		
+
 
 		println "Test started verifying carbon textarea, carbon reducion , base line value after refersh"
 		Assert.assertTrue(WebUI.getAttribute(findTestObject('Portfolio/Goal/humanExp_baseline_value'),"value").contains(hbValue),"Not Valid")
@@ -1972,7 +1972,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		System.out.println(areductionTarget2)
 		System.out.println(cGoalPercentage)
 		println  "verifyed 2018 Reduction Targets"
-		
+
 		println "Test started verifying average occpant per project"
 		String totalNoOccupaint =WebUI.getText(findTestObject('Portfolio/Total/AverageOccupant'))
 		double expavgmtco2_peroccupant = Double.parseDouble(totalNoOccupaint)
@@ -2253,10 +2253,10 @@ public class ResuableMethodsPortfolio extends BaseClass {
 
 		WebUI.click(findTestObject('Portfolio/Common/a_ Waste'))
 		WebUI.delay(5)
-		
+
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
-	
-		
+
+
 		println "Test started verifying 2018 Reduction Targets"
 		String carbonGoal = WebUI.getText(findTestObject('Portfolio/Total/WasteGoal'))
 		String greplace = carbonGoal.replace("%" , "")
@@ -2300,14 +2300,13 @@ public class ResuableMethodsPortfolio extends BaseClass {
 
 		println UIGenGoalPercentage
 		println WasteGenGoalPercentage1
-		
+
 		/**************Commenting fails in STG pass in QAS need to check with dev********************/
 
-/*		if (UIGenGoalPercentage==WasteGenGoalPercentage1 || UIGenGoalPercentage==WasteGenGoalPercentage2 || UIGenGoalPercentage==WasteGenGoalPercentage3 || UIGenGoalPercentage==WasteGenGoalPercentage4 || UIGenGoalPercentage== WasteGenGoalPercentage5 || UIGenGoalPercentage==WasteGenGoalPercentage6 || UIGenGoalPercentage==WasteGenGoalPercentage7 || UIGenGoalPercentage==WasteGenGoalPercentage8 || UIGenGoalPercentage==WasteGenGoalPercentage9 || UIGenGoalPercentage== WasteGenGoalPercentage10||UIGenGoalPercentage==NegWasteGenGoalPercentage1 || UIGenGoalPercentage==NegWasteGenGoalPercentage2 || UIGenGoalPercentage==NegWasteGenGoalPercentage3 || UIGenGoalPercentage==NegWasteGenGoalPercentage4 || UIGenGoalPercentage== NegWasteGenGoalPercentage5 || UIGenGoalPercentage==NegWasteGenGoalPercentage6 || UIGenGoalPercentage==NegWasteGenGoalPercentage7 || UIGenGoalPercentage==NegWasteGenGoalPercentage8 || UIGenGoalPercentage==NegWasteGenGoalPercentage9 || UIGenGoalPercentage== NegWasteGenGoalPercentage10)
-			
-		    KeywordUtil.markPassed('SUCCESS: Portfolio Analytics WasteGen Reduciton Target')
-		else
-			KeywordUtil.markFailed('Fail : Portfolio Mismatch in Analytics WasteGen Reduciton Target')*/
+		/*		if (UIGenGoalPercentage==WasteGenGoalPercentage1 || UIGenGoalPercentage==WasteGenGoalPercentage2 || UIGenGoalPercentage==WasteGenGoalPercentage3 || UIGenGoalPercentage==WasteGenGoalPercentage4 || UIGenGoalPercentage== WasteGenGoalPercentage5 || UIGenGoalPercentage==WasteGenGoalPercentage6 || UIGenGoalPercentage==WasteGenGoalPercentage7 || UIGenGoalPercentage==WasteGenGoalPercentage8 || UIGenGoalPercentage==WasteGenGoalPercentage9 || UIGenGoalPercentage== WasteGenGoalPercentage10||UIGenGoalPercentage==NegWasteGenGoalPercentage1 || UIGenGoalPercentage==NegWasteGenGoalPercentage2 || UIGenGoalPercentage==NegWasteGenGoalPercentage3 || UIGenGoalPercentage==NegWasteGenGoalPercentage4 || UIGenGoalPercentage== NegWasteGenGoalPercentage5 || UIGenGoalPercentage==NegWasteGenGoalPercentage6 || UIGenGoalPercentage==NegWasteGenGoalPercentage7 || UIGenGoalPercentage==NegWasteGenGoalPercentage8 || UIGenGoalPercentage==NegWasteGenGoalPercentage9 || UIGenGoalPercentage== NegWasteGenGoalPercentage10)
+		 KeywordUtil.markPassed('SUCCESS: Portfolio Analytics WasteGen Reduciton Target')
+		 else
+		 KeywordUtil.markFailed('Fail : Portfolio Mismatch in Analytics WasteGen Reduciton Target')*/
 
 		/*	 String sareductionTarget2 = areductionTarget2.toString()
 		 String scGoalPercentage = cGoalPercentage.toString()
@@ -2360,9 +2359,9 @@ public class ResuableMethodsPortfolio extends BaseClass {
 
 		WebUI.click(findTestObject('Portfolio/Total/span_Edit'))
 		WebUI.delay(2)
-		
+
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
-	
+
 		WebUI.waitForElementVisible(findTestObject('Portfolio/Total/portfolio_name'), 20)
 		WebUI.clearText(findTestObject('Portfolio/Total/portfolio_name'))
 
@@ -2930,7 +2929,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		BigDecimal Str3 = new BigDecimal(str3)
 		Str3 =  Str3 .setScale(0, RoundingMode.HALF_UP)
 		String UStr3 = Str3.toString()
-		
+
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		WebUI.scrollToElement(findTestObject('Portfolio/Common/a_ Analytics'),2)
 		WebUI.waitForElementClickable(findTestObject('Portfolio/Common/a_ Analytics'),15)
@@ -2940,7 +2939,7 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.click(findTestObject('Portfolio/Common/a_ Total'))
 		WebUI.delay(3)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
-		
+
 
 		String str5 = WebUI.getText(findTestObject('Portfolio/CarbonVal/CarbonPage/TAnnualCarbonEmissions'))
 		Double str9 =  Double.parseDouble(str5)
@@ -3236,12 +3235,12 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.click(findTestObject('Portfolio/Score/Sort/SortButton'))
 		//WebUI.delay(3)
 		WebUI.waitForAngularLoad(60, FailureHandling.CONTINUE_ON_FAILURE)
-   
+
 		WebUI.click(findTestObject('Portfolio/Score/Sort/li_Energy'))
 		//WebUI.delay(10)
-        
+
 		WebUI.waitForAngularLoad(60, FailureHandling.CONTINUE_ON_FAILURE)
-		
+
 		String Energy1Valule =  WebUI.getText(findTestObject('Portfolio/Score/Energy1'))
 		Integer energy1Valule = Integer.parseInt(Energy1Valule)
 
@@ -3535,8 +3534,8 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.click(findTestObject('Portfolio/Score/Sort/li_Human Experience'))
 		//WebUI.delay(9)
 		WebUI.waitForAngularLoad(60, FailureHandling.CONTINUE_ON_FAILURE)
-		
-		
+
+
 		String HumanExperience1Valule = WebUI.getText(findTestObject('Portfolio/Score/Hum1'))
 		Integer humanExperience1Valule = Integer.parseInt(HumanExperience1Valule)
 
