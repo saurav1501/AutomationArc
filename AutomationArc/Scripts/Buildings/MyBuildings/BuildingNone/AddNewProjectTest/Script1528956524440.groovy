@@ -29,8 +29,7 @@ import java.text.SimpleDateFormat as SimpleDateFormat
 //Add new Project Test
 try {
     
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToBuilding'()
-    CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsAddNewProject.buildingAddNewProject'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
+	 CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsAddNewProject.buildingAddNewProject'(GlobalVariable.BuildingSheet, GlobalVariable.rowNumSix)
 }
 catch (Throwable t) {
     System.out.println(t.getLocalizedMessage())

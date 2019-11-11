@@ -8512,7 +8512,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		 WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
 		 WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'), reading4, false)
 		 WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/UnitAdditonalData'),'value'), ureading4, false)*/
-=======
+
 		WebUI.scrollToElement(findTestObject('Object Repository/CityCommDataInput/MeterNames/TotalElectricityUse'), 5)
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/TotalElectricityUse'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
@@ -8538,8 +8538,8 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/PercentageOfGovtWorkers'))
 		WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
 		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'), reading4, false)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('CityCommDataInput/MeterNames/UnitAdditonalDataOne'),'value'), ureading4, false)*/
->>>>>>> fb6299f08667a92ceaa112aeba269fb167cbe98d
+		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('CityCommDataInput/MeterNames/UnitAdditonalDataOne'),'value'), ureading4, false)
+
 	}
 
 	//File Upload City / Community Data Input
