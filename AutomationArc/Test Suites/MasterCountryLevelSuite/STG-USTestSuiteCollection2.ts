@@ -13,7 +13,11 @@
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>
+<<<<<<< HEAD
          <testSuiteEntity>Test Suites/BuildingSuites/Transit/Aboveground/USTransitSuite/V2TransitAbovegroundSuite</testSuiteEntity>
+=======
+         <testSuiteEntity>Test Suites/BuildingSuites/Transit/Aboveground/USTransitSuite/USTransitAbovegroundSuite</testSuiteEntity>
+>>>>>>> 7bed9a0bec50a5dcb1f4c3cafe79de2bd8817e8c
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>

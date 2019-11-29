@@ -105,6 +105,7 @@
 	<classpathentry kind="lib" path="D:/BackUp/Garbage/Katalon_Studio_Windows_64-5.10.1/plugins/wsdl4j_1.6.2.jar"/>
 	<classpathentry kind="lib" path="D:/BackUp/Garbage/Katalon_Studio_Windows_64-5.10.1/plugins/com.google.oauth-client.google-oauth-client_1.22.0.jar"/>
 	<classpathentry kind="lib" path="D:/BackUp/Garbage/Katalon_Studio_Windows_64-5.10.1/plugins/com.google.http-client.google-http-client_1.22.0.jar"/>
+<<<<<<< HEAD
 	<classpathentry kind="lib" path="D:/ArcKatalon/AutomationArc/AutomationArc/Drivers/activation-1.1.jar"/>
 	<classpathentry kind="lib" path="D:/ArcKatalon/AutomationArc/AutomationArc/Drivers/allure-java-commons-2.7.0.jar"/>
 	<classpathentry kind="lib" path="D:/ArcKatalon/AutomationArc/AutomationArc/Drivers/allure-junit-platform-2.7.0.jar"/>
@@ -142,6 +143,45 @@
 	<classpathentry kind="lib" path="D:/ArcKatalon/AutomationArc/AutomationArc/Drivers/xmlbeans-2.6.0.jar"/>
 	<classpathentry kind="lib" path="D:/ArcKatalon/AutomationArc/AutomationArc/Drivers/xmpbox-2.0.11.jar"/>
 	<classpathentry kind="lib" path="D:/ArcKatalon/AutomationArc/AutomationArc/Drivers/zip4j-1.3.2.jar"/>
+=======
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/activation-1.1.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/allure-java-commons-2.7.0.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/allure-junit-platform-2.7.0.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/allure-junit4-2.12.0.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/allure-junit5-2.7.0.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/allure2-model-api-1.0.0.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/allure2-model-jackson-1.0.0.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/allure2-model-pojo-1.0.0.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/aspectj-1.9.4.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/calendar-plugin.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/curvesapi-1.04.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/fontbox-2.0.11.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/javax.mail-1.6.0.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/maven-surefire-plugin-2.19.1.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/mysql-connector-java-8.0.11.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/org.apache.tika.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/pdfbox-2.0.1.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/pdfbox-2.0.11.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/pdfbox-debugger-2.0.11.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/pdfbox-tools-2.0.11.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/poi-3.17.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/poi-examples-3.17.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/poi-excelant-3.17.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/poi-ooxml-3.17.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/poi-ooxml-schemas-3.17.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/poi-scratchpad-3.17.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/preflight-2.0.11.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/spock-core-0.7-groovy-2.0.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/xmlbeans-2.6.0.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/xmpbox-2.0.11.jar"/>
+	<classpathentry kind="lib" path="D:/AutomationV1/AutomationArc/AutomationArc/Drivers/zip4j-1.3.2.jar"/>
+>>>>>>> 7bed9a0bec50a5dcb1f4c3cafe79de2bd8817e8c
 	<classpathentry exported="true" kind="con" path="GROOVY_SUPPORT"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
