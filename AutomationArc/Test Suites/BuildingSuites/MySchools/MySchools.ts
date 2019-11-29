@@ -17,21 +17,15 @@
       <testCaseId>Test Cases/Buildings/MyBuildings/MySchools/AddNewProjectTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>3aba7835-8b23-49a8-b411-86c1a65db8f3</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/MySchools/PaymentByCreditCardTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>b68c1c58-2bfa-4a04-a886-1a2585e2bed8</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/MySchools/SearchProgramTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>e594c574-b862-41e5-82d3-8c548cfa9f5c</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyBuildings/MySchools/UIFieldTotalScoreTest</testCaseId>
    </testCaseLink>
    <testCaseLink>

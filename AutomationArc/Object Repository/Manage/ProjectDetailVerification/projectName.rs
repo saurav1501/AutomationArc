@@ -6,16 +6,16 @@
    <elementGuidId>c1ce7536-ff61-4c5f-bc26-cffad3bd6e92</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@ng-model=&quot;formdata.name&quot;]</value>
+         <key>CSS</key>
+         <value>#app > div:nth-child(3) > nav > div > h4</value>
       </entry>
       <entry>
          <key>BASIC</key>
          <value>//input[@id = 'project_name' and @name = 'name']</value>
       </entry>
       <entry>
-         <key>CSS</key>
-         <value>#app > div:nth-child(3) > nav > div > h4</value>
+         <key>XPATH</key>
+         <value>//input[@ng-model=&quot;formdata.name&quot; or @id=&quot;project_name&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

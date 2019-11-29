@@ -37,8 +37,7 @@ public class ReusableMethodsNavigation {
 		WebUI.scrollToElement(findTestObject('Object Repository/Arc2.0 Locators/AllProjectDashboard/AddAProjectButton'), 3)
 		WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/AllProjectDashboard/AddAProjectButton'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-		String postNavigationLoginText = WebUI.getText(findTestObject('Object Repository/Arc2.0 Locators/Add Project Locators/AddAProjectText'))
-		WebUI.verifyMatch(postNavigationLoginText,'Add a Project',true)
+	
 	}
 
 	@Keyword
@@ -74,6 +73,8 @@ public class ReusableMethodsNavigation {
 
 	@Keyword
 	public void navigateToPortfolio(){
+		
+		if(GlobalVariable.userType=="v1"){
 		WebUI.delay(3)
 		WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
 		WebUI.delay(2)
@@ -85,8 +86,10 @@ public class ReusableMethodsNavigation {
 		WebUI.click(findTestObject('Portfolio/Common/span_My Portfolios'))
 		WebUI.delay(4)
 		String postNavigationLoginText = WebUI.getText(findTestObject('Page_Arc dashboard/span_My Portfolios'))
-		WebUI.verifyMatch(postNavigationLoginText,'My Portfolios',false)
-	}
+		WebUI.verifyMatch(postNavigationLoginText,'+ Create a Portfolio',false)
+		}
+		
+		}
 
 	//@Step("Type {user.name} / {user.password}.")
 	@Keyword
@@ -240,7 +243,18 @@ public class ReusableMethodsNavigation {
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait, FailureHandling.OPTIONAL)
 	}
 
-
+	@Keyword
+	public void navigateToManageSection1(){
+		/*boolean test = WebUI.
+		//(findTestObject('Manage/ProjectDetailVerification/NavigationManage'),2)
+		if(test=="false"){
+	*/	
+		
+		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+	
+	}
+	
 	@Keyword
 	public void navigateToAnalyticsTotal() {
 		WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'),5)
@@ -381,6 +395,16 @@ public class ReusableMethodsNavigation {
 				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			}
 
+			if((WebUI.getAttribute(findTestObject('DashboardNavigationNewUI/SideBar'),"class", FailureHandling.OPTIONAL).equals("sidebar-projects-link lh45"))){
+				println WebUI.getAttribute(findTestObject('DashboardNavigationNewUI/SideBar'),"class")
+				println "side"
+				
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+				WebUI.click(findTestObject('DashboardNavigationNewUI/SideBar'))
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+			}
+			
+			
 			if((WebUI.getAttribute(findTestObject('Object Repository/Analytics/ClickOnAnalytics1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
 				println "Analytics"
 				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
@@ -389,7 +413,7 @@ public class ReusableMethodsNavigation {
 			}
 
 
-			if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+			if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'),"class", FailureHandling.OPTIONAL).equals("collapsed pl20"))){
 
 				println "Manage"
 				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)

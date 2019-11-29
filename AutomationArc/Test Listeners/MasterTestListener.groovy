@@ -98,26 +98,17 @@ public class MasterTestListener extends BaseClass {
 		println testCaseId[testCount-1]
 		println "Test Suite ID: "
 		println testSuiteId[count-1]
-		if((testCaseId[testCount-2].contains("LEEDOnline") || testCaseId[testCount-1].contains("AddNewProject") || testCaseId[testCount-1].contains("PaymentByCreditCard") || testCaseId[testCount-1].contains("RegistrationPaymentCC") || testCaseId[testCount-1].contains("PaymentByCheck")|| testCaseId[testCount-1].contains("Login") || testCaseId[testCount-1].contains("INDVerifyTaxZeroIfSezIsCheckedTest") || testCaseId[testCount-1].contains("INDSEZCheckBoxVisibilityAndClausePopUpTest") || testCaseId[testCount-1].contains("INDPaymentPageTaxAndRegAmountVerificationTest") || testCaseId[testCount-1].contains("INDVerifyUploadedFileSEZAreVisibleToTheUserTest") || testCaseId[testCount-1].contains("VerifyThePriceTextOnTheMeasurablPaymentPageTest") || testCaseId[testCount-1].contains("PaymentForMeasurableSubscriptionTest"))){
+		
+		if(GlobalVariable.userType=="v1")
+		{
+			if((testCaseId[testCount-2].contains("LEEDOnline") || testCaseId[testCount-1].contains("AddNewProject") || testCaseId[testCount-1].contains("PaymentByCreditCard") || testCaseId[testCount-1].contains("RegistrationPaymentCC") || testCaseId[testCount-1].contains("PaymentByCheck")|| testCaseId[testCount-1].contains("Login") || testCaseId[testCount-1].contains("INDVerifyTaxZeroIfSezIsCheckedTest") || testCaseId[testCount-1].contains("INDSEZCheckBoxVisibilityAndClausePopUpTest") || testCaseId[testCount-1].contains("INDPaymentPageTaxAndRegAmountVerificationTest") || testCaseId[testCount-1].contains("INDVerifyUploadedFileSEZAreVisibleToTheUserTest") || testCaseId[testCount-1].contains("VerifyThePriceTextOnTheMeasurablPaymentPageTest") || testCaseId[testCount-1].contains("PaymentForMeasurableSubscriptionTest"))){
 			KeywordUtil.markWarning("LEED Online Test : " + testCaseId[testCount-1])
+			}
+			else{
+			CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsNavigation.clickOnSidebar'(testSuiteId[count-1])
+			
 		}
-		else{
-		//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsNavigation.clickOnSidebar'(testSuiteId[count-1])
 			
-		//***********Login by Remote MySQL Database environment stg , qas , dev ***********************************************//*
-	     //    CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.LoginToArcWithRemoteDBMySQL'()
-			
-		//**********Login by global variable by change the environment stg , qas , dev **************************************//*
-			
-			//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariable'()
-			//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariableAppUrl'()
-			
-			
-		//*************Login by excel sheet by change the row number 1 stg , 2 qas , 3 dev , 4 prd only ********************//*
-		 //   CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithExcelData'()
-			
-		//*************Login by enter URL & username & passowrd by parameter ************************************************//*
-		 //  CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcApplication'("http://www.stg.arconline.io/","Saurav@groupten.com","LEEDg10")
 		}
 	}
 	

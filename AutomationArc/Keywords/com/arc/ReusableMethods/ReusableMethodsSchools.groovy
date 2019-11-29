@@ -42,6 +42,23 @@ public class ReusableMethodsSchools extends BaseClass{
 		String prjCity 		= WebUI.getAttribute(findTestObject('Object Repository/AddProjectNewUI/cityName'),'value')
 		String prjState 	= WebUI.getText(findTestObject('Object Repository/AddProjectNewUI/GetSchoolStateName'))
 		String prjZip 		= WebUI.getAttribute(findTestObject('Object Repository/AddProjectNewUI/zipCode'),'value')
+		String ownerOrg 	= data.getCellData(sheetName, "OwnerOrganization", rowNum)
+		String ownerMail 	= data.getCellData(sheetName, "OwnerEmail", rowNum)
+		
+		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/ownerType'))
+		List<WebElement> list1= driver.findElements(By.xpath("//*[@ng-repeat='type in ownerType']"))
+		int size1 = list1.size()
+		int randonNumber1 = ThreadLocalRandom.current().nextInt(0, size1)
+		println list1.get(randonNumber1).getText()
+		list1.get(randonNumber1).click()
+		data.setCellData(sheetName, "OwnerType", rowNum,list1.get(randonNumber1).getText())
+		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/organization'),ownerOrg)
+		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/organization'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Add_Project_Details/span_Habitat for Humanity'))
+		WebUI.setText(findTestObject('Object Repository/Add_Project_Details/Email'),ownerMail)
+		
+
 		data.setCellData(sheetName, "ProjectName", rowNum, prjName)
 		data.setCellData(sheetName, "ProjectType", rowNum, prjType)
 		data.setCellData(sheetName, "Address", rowNum, prjAddress)
@@ -55,20 +72,16 @@ public class ReusableMethodsSchools extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/clickOnSignAgreement'))
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/addProjectNextButton'))
 		WebUI.delay(5)
-		//String PaymentPageText = WebUI.getText(findTestObject('Add_Project_Details/VerifyPaymentPage_ text'))
-		//String PaymentPageText = WebUI.getText(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'))
-		if(WebUI.waitForElementPresent(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'),GlobalVariable.minAngularWait,FailureHandling.OPTIONAL) && WebUI.waitForElementVisible(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'),GlobalVariable.minAngularWait,FailureHandling.OPTIONAL))
-		{
-			WebUI.verifyMatch(WebUI.getText(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup')),'Project Setup',true)
+		if(WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/a_ Data Input'),GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)){
 			String title= DriverFactory.getWebDriver().getCurrentUrl()
 			println title
-			String Project_ID= title.substring(title.indexOf('9'),title.indexOf('9')+10 )
+			String Project_ID= title.substring(title.indexOf('8'),title.indexOf('8')+10 )
 			println Project_ID
 			//WebUI.getText(findTestObject('Object Repository/Add_Project_Details/td_BuildingID'))
 			//System.out.println()
 			data.setCellData(sheetName,"ProjectID", rowNum, Project_ID)
 			data.setCellData(sheetName,"RegDate", rowNum, ReusableMethodsManage.verifyBillingDate())
-			WebUI.delay(5)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		}
 		else{
 			counter++
@@ -76,10 +89,11 @@ public class ReusableMethodsSchools extends BaseClass{
 				KeywordUtil.markFailed("Project not created")
 				return
 			}
-			navigateToBuildingSchools()
+			WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
 			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			continue project
 		}
+
 	}
 
 
@@ -614,9 +628,18 @@ public class ReusableMethodsSchools extends BaseClass{
 		String postNavigationClaimSchoolText = WebUI.getText(findTestObject('Object Repository/SchoolsLocators/SchoolNavigation/Claim_a_SchoolPageText'))
 		WebUI.verifyMatch(postNavigationClaimSchoolText,'Claim a School',true)
 	}
-
 	@Keyword
 	public void navigateToBuildingSchools() {
+		WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
+		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ Buildings'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/SchoolsLocators/SchoolNavigation/NavigateToMySchools'))
+		String postNavigationLoginText = WebUI.getText(findTestObject('Object Repository/SchoolsLocators/SchoolNavigation/SchoolsDashboardPage'))
+		WebUI.verifyMatch(postNavigationLoginText,'My Schools',true)
+	}
+	
+	@Keyword
+	public void navigateToBuildingSchoolsV2() {
 		
 		WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/Project Dashboard Sidebar Locators/ProjectTabNavBar'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
@@ -694,11 +717,19 @@ public class ReusableMethodsSchools extends BaseClass{
 				}
 			}
 		}
-
+		if(GlobalVariable.userType=="v2"){
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Arc2.0 Locators/Add Project Locators/AddAProjectText'), 20)
 		String projectRegistrationText = WebUI.getText(findTestObject('Object Repository/Arc2.0 Locators/Add Project Locators/AddAProjectText'))
 		WebUI.verifyMatch(projectRegistrationText,'Add a Project',true)
-	}
+		}
+		else {
+		WebUI.waitForElementVisible(findTestObject('Object Repository/Add_Project_Details/h1_Project Registration'), 20)
+		String projectRegistrationText = WebUI.getText(findTestObject('Object Repository/Add_Project_Details/h1_Project Registration'))
+		WebUI.verifyMatch(projectRegistrationText,'Project Registration',true)
+		
+		
+		}
+		}
 
 
 

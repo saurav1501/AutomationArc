@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//*[@href=&quot;/app/projects/my-projects/?project-type=parksmart&quot;]</value>
+         <value>(//*[@href=&quot;/app/projects/my-projects/?project-type=parksmart&quot;])[1]</value>
       </entry>
       <entry>
          <key>BASIC</key>

@@ -6,17 +6,17 @@
    <defaultProfile>false</defaultProfile>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://stg-v2.app.arconline.io'</initValue>
+      <initValue>'http://www.stg.arconline.io/'</initValue>
       <name>url</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'devarcbeta2@gmail.com'</initValue>
+      <initValue>'Saurav@groupten.com'</initValue>
       <name>userName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'initpass'</initValue>
+      <initValue>'LEEDg10'</initValue>
       <name>password</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -206,7 +206,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'https://stg-v2.app.arconline.io'</initValue>
+      <initValue>'https://stg.app.arconline.io/'</initValue>
       <name>appUrl</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
@@ -353,5 +353,10 @@
       <description></description>
       <initValue>'CityDI'</initValue>
       <name>TemplateCityDI</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'v2'</initValue>
+      <name>userType</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

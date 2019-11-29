@@ -6,11 +6,11 @@
    <elementGuidId>7fdfc5ab-6cc1-4a75-acf2-adf541dfa17a</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@name=&quot;spaceType&quot;]</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//*[@id=&quot;spaceType&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

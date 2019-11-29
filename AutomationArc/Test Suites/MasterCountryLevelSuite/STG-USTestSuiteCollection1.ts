@@ -9,11 +9,11 @@
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>STGv2-US-P1</profileName>
+            <profileName>STG-US-P1</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
-         <runEnabled>false</runEnabled>
-         <testSuiteEntity>Test Suites/BuildingSuites/BuildingNone/USBuildingNoneSuite/USBuildingNoneSuiteV2</testSuiteEntity>
+         <runEnabled>true</runEnabled>
+         <testSuiteEntity>Test Suites/BuildingSuites/BuildingNone/USBuildingNoneSuite/USBuildingNoneSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>
@@ -45,24 +45,6 @@
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>STGv2-US-P1</profileName>
-            <runConfigurationId>Firefox</runConfigurationId>
-         </configuration>
-         <runEnabled>true</runEnabled>
-         <testSuiteEntity>Test Suites/BuildingSuites/BuildingOther/USBuildingOtherSuite/USBuildingOtherSuite</testSuiteEntity>
-      </TestSuiteRunConfiguration>
-      <TestSuiteRunConfiguration>
-         <configuration>
-            <groupName>Web Desktop</groupName>
-            <profileName>STG-US-P1</profileName>
-            <runConfigurationId>Firefox</runConfigurationId>
-         </configuration>
-         <runEnabled>false</runEnabled>
-         <testSuiteEntity>Test Suites/TrialFullAccess1To5YearsSuite/USBuildingTrialFullAccess1To5YearsSuite</testSuiteEntity>
-      </TestSuiteRunConfiguration>
-      <TestSuiteRunConfiguration>
-         <configuration>
-            <groupName>Web Desktop</groupName>
             <profileName>STG-US-P1</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
@@ -72,11 +54,29 @@
       <TestSuiteRunConfiguration>
          <configuration>
             <groupName>Web Desktop</groupName>
-            <profileName>STG-US-P1</profileName>
+            <profileName>STGv2-US-P1</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
          <runEnabled>false</runEnabled>
-         <testSuiteEntity>Test Suites/BuildingSuites/BuildingOther/USBuildingOtherSuite/USBuildingOtherARC1141</testSuiteEntity>
+         <testSuiteEntity>Test Suites/BuildingSuites/BuildingOther/USBuildingOtherSuite/V2BuildingOtherSuite</testSuiteEntity>
+      </TestSuiteRunConfiguration>
+      <TestSuiteRunConfiguration>
+         <configuration>
+            <groupName>Web Desktop</groupName>
+            <profileName>STGv2-US-P1</profileName>
+            <runConfigurationId>Firefox</runConfigurationId>
+         </configuration>
+         <runEnabled>false</runEnabled>
+         <testSuiteEntity>Test Suites/BuildingSuites/ParkingSuites/USParkingSuite/V2USParkingSuite</testSuiteEntity>
+      </TestSuiteRunConfiguration>
+      <TestSuiteRunConfiguration>
+         <configuration>
+            <groupName>Web Desktop</groupName>
+            <profileName>STGv2-US-P1</profileName>
+            <runConfigurationId>Firefox</runConfigurationId>
+         </configuration>
+         <runEnabled>false</runEnabled>
+         <testSuiteEntity>Test Suites/BuildingSuites/BuildingNone/USBuildingNoneSuite/V2BuildingNoneSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
    </testSuiteRunConfigurations>
 </TestSuiteCollectionEntity>

@@ -6,19 +6,19 @@
    <elementGuidId>78056d02-c7d8-4d0a-8168-0f04b33e6a7a</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//input[@ng-model = 'projectInfo.city']</value>
+         <key>CSS</key>
+         <value>//*[@ng-model=&quot;projectInfo.city&quot;]</value>
       </entry>
       <entry>
          <key>BASIC</key>
          <value>//input[@ng-model = 'projectInfo.city']</value>
       </entry>
       <entry>
-         <key>CSS</key>
-         <value>#content > div.static_info.ng-scope > div:nth-child(1) > div:nth-child(3) > div.value.ng-binding</value>
+         <key>XPATH</key>
+         <value>//input[@ng-model = 'projectInfo.city']</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>CSS</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

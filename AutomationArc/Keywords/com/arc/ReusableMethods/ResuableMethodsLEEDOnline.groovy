@@ -72,7 +72,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.click(findTestObject('DashboardNavigationNewUI/payment/Cancel'))
 		WebUI.delay(5)
 	}
-	
+
 	@Keyword
 	public void communityLEEDPage() {
 		/**********Verify if project type selected is  'Building LEED', a pop up to redirect to LEED ONLINE appears. Verify if redirect button works as expected.*******************/
@@ -416,7 +416,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 	@Keyword
 	public void loginIntoLEEDOnlineWithGlobalVariable() {
 		String url = GlobalVariable.LEEDURL
-		String userName= GlobalVariable.userName
+		String userName= GlobalVariable.userTypeName
 		String password= GlobalVariable.password
 		WebUI.openBrowser('')
 		//WebUI.switchToWindowIndex(1)
@@ -649,10 +649,10 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/energyPerformanceDataTab'),FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.waitForElementNotVisible(findTestObject('Object Repository/LEEDOnline/Credits/widgetLoader'), 10,FailureHandling.CONTINUE_ON_FAILURE)
 		/*WebUI.verifyElementText(findTestObject('Object Repository/LEEDOnline/EnergyMeter/MeterName'), "AnalyticsEnergy Meter via upload",FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyEqual(WebUI.getAttribute(findTestObject('Object Repository/LEEDOnline/EnergyMeter/StartDate1'),'value'),startDate,FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyEqual(WebUI.getAttribute(findTestObject('Object Repository/LEEDOnline/EnergyMeter/EndDate1'),'value'),endDate,FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyEqual(WebUI.getAttribute(findTestObject('Object Repository/LEEDOnline/EnergyMeter/readingOne'),'value'),reading1,FailureHandling.CONTINUE_ON_FAILURE)
-*/
+		 WebUI.verifyEqual(WebUI.getAttribute(findTestObject('Object Repository/LEEDOnline/EnergyMeter/StartDate1'),'value'),startDate,FailureHandling.CONTINUE_ON_FAILURE)
+		 WebUI.verifyEqual(WebUI.getAttribute(findTestObject('Object Repository/LEEDOnline/EnergyMeter/EndDate1'),'value'),endDate,FailureHandling.CONTINUE_ON_FAILURE)
+		 WebUI.verifyEqual(WebUI.getAttribute(findTestObject('Object Repository/LEEDOnline/EnergyMeter/readingOne'),'value'),reading1,FailureHandling.CONTINUE_ON_FAILURE)
+		 */
 	}
 
 	//Water data
@@ -1580,17 +1580,17 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		Assert.assertEquals(WebUI.getAttribute(findTestObject('Object Repository/DataInput/CreateMeterBuilding/ReadingThree'),'value'),reading1)
 	}
 
-	
-	
-	
-	
+
+
+
+
 	public static void paste(WebElement objectLocator) throws IOException{
-		
+
 		String selectLinkOpeninNewTab = Keys.chord(Keys.CONTROL,"v");
 		objectLocator.sendKeys(selectLinkOpeninNewTab);
-		
-		}
-	
+
+	}
+
 
 	@Keyword
 	public void surveySubmit(String sheetName) throws IOException, InterruptedException, Exception{
@@ -1601,7 +1601,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 		//WebUI.waitForElementNotVisible(findTestObject('Object Repository/LEEDOnline/Credits/widgetLoader'), 10,FailureHandling.CONTINUE_ON_FAILURE)
 
 		//Above section to be commented
-		
+
 		WebUI.waitForElementPresent(findTestObject('Object Repository/LEEDOnline/Credits/meterTab'), 30)
 		WebUI.click(findTestObject('Object Repository/LEEDOnline/Credits/meterTab'),FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.delay(2)
@@ -1912,7 +1912,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 
 			WebUI.waitForElementClickable(findTestObject('DataInput/Survey/Submit'), GlobalVariable.avgAngularWait)
 			WebUI.click(findTestObject('DataInput/Survey/Submit1'))
-			
+
 
 			WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 			WebUI.verifyMatch(WebUI.getText(findTestObject('DataInput/Survey/Thank')), "Options that enhance your satisfaction", false)

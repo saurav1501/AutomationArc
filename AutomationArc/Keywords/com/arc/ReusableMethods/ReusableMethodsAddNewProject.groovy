@@ -23,7 +23,7 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 	SimpleDateFormat formatarDate = new SimpleDateFormat(' HH:mm:ss')
 	@Keyword
 	//Add project new Building
-	public void buildingAddNewProject(String sheetName , int rowNum) {
+	public void buildingAddNewProjectV2(String sheetName , int rowNum) {
 
 		/**************Reading data form excel sheet*************************/
 
@@ -62,8 +62,9 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		navigation.clickAddProject()
 		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/projectName'), ProjectName)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/selectProjectType'), prjType, true)
+		WebUI.check(findTestObject('Object Repository/AddProjectNewUI/CertificationNo'))
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/grossArea'),prjArea )
-		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/ratingSystem'), prjRating , false)
+		
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/spaceType'))
 		List<WebElement> list= driver.findElements(By.xpath("//*[@ng-repeat='type in spaceType']"))
 		int size = list.size()
@@ -90,6 +91,7 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		WebUI.click(findTestObject('Add_Project_Details/span_Habitat for Humanity'))
 		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/ownerEmail'), ownerMail)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/ownerCountry'), ownerCountry, false)
+		WebUI.setText(findTestObject('Object Repository/Add_Project_Details/Email'),ownerMail)
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/streetName'), prjAddress)
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/cityName'), prjCity)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/countryName'), prjCountry, false)
@@ -116,6 +118,95 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 
 	}
 
+	@Keyword
+	//Add project new Building
+	public void buildingAddNewProject(String sheetName , int rowNum) {
+
+		/**************Reading data form excel sheet*************************/
+		int counter=0
+		project:
+		String prjName      = data.getCellData(sheetName,"ProjectName", rowNum)
+		String prjType 		= data.getCellData(sheetName, "ProjectType", rowNum)
+		String prjRating 	= data.getCellData(sheetName, "RatingSystem", rowNum)
+		String spaceType    = data.getCellData(sheetName, "SpaceType", rowNum)
+		String ownerOrg 	= data.getCellData(sheetName, "OwnerOrganization", rowNum)
+		String ownerType 	= data.getCellData(sheetName, "OwnerType", rowNum)
+		String ownerCountry = data.getCellData(sheetName, "OwnerCountry", rowNum)
+		String ownerMail 	= data.getCellData(sheetName, "OwnerEmail", rowNum)
+		String prjArea 		= data.getCellData(sheetName, "Area", rowNum)
+		String prjAddress 	= data.getCellData(sheetName, "Address", rowNum)
+		String prjCity 		= data.getCellData(sheetName, "City", rowNum)
+		String prjCountry 	= data.getCellData(sheetName, "Country", rowNum)
+		String prjState 	= data.getCellData(sheetName, "State", rowNum)
+		String prjZip 		= data.getCellData(sheetName, "Zip", rowNum)
+		Date date = new Date(System.currentTimeMillis())
+		String proName
+		if(sheetName.equalsIgnoreCase("USBuildingProject")){
+			proName="USBuilding"
+		}
+		else if(sheetName.equalsIgnoreCase("ChinaBuildingProject")){
+			proName="CHBuilding"
+		}
+		else if(sheetName.equalsIgnoreCase("BuildingIndiaProject")){
+			proName="INDBuilding"
+		}
+		else{
+			proName="CNBuilding"
+		}
+		//String proName= prjName.substring(0, 9)
+		String ProjectName = proName +prjRating +formatarDate.format(date)
+		data.setCellData(sheetName,"ProjectName", rowNum, ProjectName)
+
+		navigation.clickAddProject()
+		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/projectName'), ProjectName)
+		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/selectProjectType'), prjType, true)
+		WebUI.check(findTestObject('Object Repository/AddProjectNewUI/CertificationNo'))
+		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/grossArea'),prjArea )
+		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/streetName'), prjAddress)
+		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/ownerType'))
+		List<WebElement> list1= driver.findElements(By.xpath("//*[@ng-repeat='type in ownerType']"))
+		int size1 = list1.size()
+		int randonNumber1 = ThreadLocalRandom.current().nextInt(0, size1)
+		println list1.get(randonNumber1).getText()
+		list1.get(randonNumber1).click()
+		data.setCellData(sheetName, "OwnerType", rowNum,list1.get(randonNumber1).getText())
+		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/organization'),ownerOrg)
+		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/organization'))
+		WebUI.delay(2)
+		WebUI.click(findTestObject('Add_Project_Details/span_Habitat for Humanity'))
+		
+		WebUI.setText(findTestObject('Object Repository/Add_Project_Details/Email'),ownerMail)
+
+		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/cityName'), prjCity)
+		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/countryName'), prjCountry, false)
+		WebUI.delay(2)
+		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/stateName'),prjState, false)
+		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/zipCode'), prjZip)
+		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/clickOnSignAgreement'))
+		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/addProjectNextButton'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
+
+		if(WebUI.waitForElementPresent(findTestObject('Object Repository/DataInput/a_ Data Input'),GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)){
+			String title= DriverFactory.getWebDriver().getCurrentUrl()
+			println title
+			String Project_ID= title.substring(title.indexOf('8'),title.indexOf('8')+10 )
+			println Project_ID
+			data.setCellData(sheetName,"ProjectID", rowNum, Project_ID)
+			data.setCellData(sheetName,"RegDate", rowNum, ReusableMethodsManage.verifyBillingDate())
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		}
+		else{
+			counter++
+			if(counter==3){
+				KeywordUtil.markFailed("Project not created")
+				return
+			}
+			WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
+			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+			continue project
+		}
+
+	}
 	@Keyword
 	public void buildingTransitAddNewProject(String sheetName , int rowNum) {
 		/**************Reading data form excel sheet*************************/

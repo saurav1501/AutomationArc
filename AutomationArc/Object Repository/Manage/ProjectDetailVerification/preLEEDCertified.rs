@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//*[@name=&quot;IsLovRecert&quot;])[2]</value>
+         <value>//*[@id=&quot;affiliatedWithLeedLab&quot;]</value>
       </entry>
       <entry>
          <key>BASIC</key>

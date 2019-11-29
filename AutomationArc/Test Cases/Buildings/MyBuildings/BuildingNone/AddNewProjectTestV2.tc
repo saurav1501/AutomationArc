@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>US Building None Project Registration</description>
+   <name>AddNewProjectTestV2</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>b172c05a-863f-4a68-a779-25338ddc674a</testCaseGuid>
+   <variable>
+      <defaultValue>'USBuildingNone'</defaultValue>
+      <description></description>
+      <id>a1faea37-9247-4165-9f06-7e587f2b49dd</id>
+      <masked>false</masked>
+      <name>USBuildingNone</name>
+   </variable>
+   <variable>
+      <defaultValue>'Buildings'</defaultValue>
+      <description></description>
+      <id>bd520d31-0187-4d1d-b41c-5f74dfa0b68f</id>
+      <masked>false</masked>
+      <name>ProjectType</name>
+   </variable>
+   <variable>
+      <defaultValue>'None'</defaultValue>
+      <description></description>
+      <id>bc557c69-0d1b-4ec7-922b-6972672f362e</id>
+      <masked>false</masked>
+      <name>RatingSystem</name>
+   </variable>
+</TestCaseEntity>

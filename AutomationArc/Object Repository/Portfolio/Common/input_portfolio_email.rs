@@ -4,7 +4,17 @@
    <name>input_portfolio_email</name>
    <tag></tag>
    <elementGuidId>06917761-f573-49d4-879e-7d701ec8861d</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//input[@type = 'email' and @id = 'portfolio_email' and @name = 'portfolio_email']</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//input[@type = 'email' and @id = 'portfolio_email' and @name = 'portfolio_email' or @name=&quot;organization_email&quot;]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

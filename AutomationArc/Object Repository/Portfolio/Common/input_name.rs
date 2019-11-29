@@ -6,12 +6,12 @@
    <elementGuidId>70d6c290-53a3-4f43-9682-8a628335e16d</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//input[@name=&quot;name&quot;])[2]</value>
-      </entry>
-      <entry>
          <key>BASIC</key>
          <value>//input[@type = 'text' and @name = 'name']</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//input[@ng-model=&quot;formdata.name&quot; or @ng-model=&quot;formdata.portfolio_name&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -34,8 +34,9 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		String  desc 	= data.getCellData(sheetName,"portfolioDesc", rowNum)
 		data.setCellData(sheetName,"ProjectName",rowNum, "Building Portfolio" +" " +formatarDate.format(date))
 		String prjName 	= data.getCellData(sheetName, "ProjectName", rowNum)
-		WebUI.scrollToElement(findTestObject('Portfolio/Common/button_ Create a Portfolio'), 4)
-		WebUI.click(findTestObject('Portfolio/Common/button_ Create a Portfolio'))
+		
+		WebUI.scrollToElement(findTestObject('Page_Arc dashboard/span_My Portfolios'), 4)
+		WebUI.click(findTestObject('Page_Arc dashboard/span_My Portfolios'))
 		WebUI.delay(4)
 		WebUI.setText(findTestObject('Portfolio/Common/input_name'), prjName)
 		WebUI.setText(findTestObject('Portfolio/Common/input_organization'), organization)
@@ -49,11 +50,15 @@ public class ResuableMethodsPortfolio extends BaseClass {
 		WebUI.setText(findTestObject('Portfolio/Common/textarea_Description'), desc)
 		WebUI.click(findTestObject('Portfolio/Common/button_Create'))
 		WebUI.delay(7)
+		if(GlobalVariable.userType=="v1"){
 		WebUI.waitForElementVisible(findTestObject('Portfolio/Common/button_Done'), 50)
 		WebUI.click(findTestObject('Portfolio/Common/button_Done'))
 		WebUI.delay(5)
 		String started = WebUI.getText(findTestObject('Portfolio/Common/p_Get Started'))
-		WebUI.verifyMatch(started,"Get Started!", true)
+		WebUI.verifyMatch(started,"Get Started!", true) 
+		}
+		
+		
 	}
 	@Keyword
 	public void createNewPortfolioMantory( String sheetName,int rowNum) throws IOException, InterruptedException {

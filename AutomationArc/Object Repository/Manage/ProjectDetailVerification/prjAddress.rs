@@ -6,17 +6,17 @@
    <elementGuidId>ae6bfc9d-9ecc-4447-b22d-f85d845027fd</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//textArea[@ng-model = 'projectInfo.street']</value>
+         <key>CSS</key>
+         <value>//textarea[@name=&quot;project_address&quot;]</value>
       </entry>
       <entry>
          <key>BASIC</key>
       </entry>
       <entry>
-         <key>CSS</key>
-         <value>#content > div.static_info.ng-scope > div:nth-child(1) > div:nth-child(2) > div.value.ng-binding</value>
+         <key>XPATH</key>
+         <value>//textarea[@name=&quot;project_address&quot;]</value>
       </entry>
    </selectorCollection>
-   <selectorMethod>CSS</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
 </WebElementEntity>

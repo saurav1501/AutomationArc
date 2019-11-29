@@ -4,7 +4,17 @@
    <name>button_Create</name>
    <tag></tag>
    <elementGuidId>174c89d8-14c6-4fcf-a540-7df923296dc9</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//button[@type = 'submit' and (text() = 'Create' or . = 'Create')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@ng-click=&quot;verifyDetails()&quot;]|//button[@type = 'submit' and (text() = 'Create' or . = 'Create')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

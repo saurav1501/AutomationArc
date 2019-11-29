@@ -23,7 +23,7 @@ try{
 	
 	//CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.CitySheet, GlobalVariable.rowNumTwo)	
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.logoutFromArcApplication'()
-	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcApplication'(GlobalVariable.userName,GlobalVariable.password )
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcApplication'(GlobalVariable.userTypeName,GlobalVariable.password )
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchProgram'(GlobalVariable.CitySheet, GlobalVariable.rowNumTwo)
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsManage.editAuthLevelToNone'()
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.logoutFromArcApplication'()

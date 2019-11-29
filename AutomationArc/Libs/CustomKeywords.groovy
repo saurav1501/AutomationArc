@@ -1384,6 +1384,10 @@ def static "com.arc.ReusableMethods.ReusableMethodsSchools.navigateToBuildingSch
     (new com.arc.ReusableMethods.ReusableMethodsSchools()).navigateToBuildingSchools()
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsSchools.navigateToBuildingSchoolsV2"() {
+    (new com.arc.ReusableMethods.ReusableMethodsSchools()).navigateToBuildingSchoolsV2()
+}
+
 def static "com.helper.grid.GridHelper.GetValueFromGrid"(
     	TestObject baseTestObject	
      , 	int rowIndex	
@@ -1492,6 +1496,10 @@ def static "com.arc.ReusableMethods.ReusableMethodsNavigation.ArclogoNavigation"
 
 def static "com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToManageSection"() {
     (new com.arc.ReusableMethods.ReusableMethodsNavigation()).navigateToManageSection()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToManageSection1"() {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).navigateToManageSection1()
 }
 
 def static "com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToAnalyticsTotal"() {
@@ -3580,6 +3588,14 @@ def static "com.arc.ReusableMethods.ReusableMethodsAnalytics.totalVolatileOrgani
 
 def static "com.arc.ReusableMethods.ReusableMethodsAnalytics.verifyOnSlidingTheSliderTheEnergyScoreChanges"() {
     (new com.arc.ReusableMethods.ReusableMethodsAnalytics()).verifyOnSlidingTheSliderTheEnergyScoreChanges()
+}
+
+def static "com.arc.ReusableMethods.ReusableMethodsAddNewProject.buildingAddNewProjectV2"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ReusableMethodsAddNewProject()).buildingAddNewProjectV2(
+        	sheetName
+         , 	rowNum)
 }
 
 def static "com.arc.ReusableMethods.ReusableMethodsAddNewProject.buildingAddNewProject"(

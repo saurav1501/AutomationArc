@@ -4,7 +4,17 @@
    <name>a_ My Communities</name>
    <tag></tag>
    <elementGuidId>82e93bcd-2657-4e9f-9a5e-9f467696d594</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>(//*[@href=&quot;/app/projects/my-projects/?project-type=community&quot;])[1] </value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//a[@href = '/app/projects/my-projects/?project-type=community' and (text() = '  My Communities' or . = '  My Communities')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

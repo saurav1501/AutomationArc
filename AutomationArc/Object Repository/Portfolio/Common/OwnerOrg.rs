@@ -4,7 +4,17 @@
    <name>OwnerOrg</name>
    <tag></tag>
    <elementGuidId>daad8cef-c81b-4005-8428-84bade7db8cc</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//select[@id = 'create_portfolio_organization_country']</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//select[@id = 'create_portfolio_organization_country' or @name=&quot;organization_country&quot;]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

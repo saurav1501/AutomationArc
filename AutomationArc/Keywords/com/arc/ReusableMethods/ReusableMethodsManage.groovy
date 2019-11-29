@@ -1119,36 +1119,61 @@ public class ReusableMethodsManage extends BaseClass {
 		String prjCountry 	= data.getCellData(sheetName, "Country", rowNum)
 		String prjState 	= data.getCellData(sheetName, "State", rowNum)
 
-		//ReusNavigate.navigateToManageSection()
-		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
-		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		
+			if(GlobalVariable.userType=="v1"){
 
-		WebUI.waitForElementClickable(findTestObject('Manage/ProjectDetailVerification/projectName'), GlobalVariable.minAngularWait)
-
-
-		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectName'),'value').equalsIgnoreCase(''))){
+			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
 			WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectName'),'value'),prjName, false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectId'),'value'),prjId, false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/spaceType'),'value'),"string:"+spaceType, false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/prjAddress'),'value'),prjAddress, false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectCity'),'value'), prjCity, false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectState'),'value'), prjState, false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectCountry'),'value'),prjCountry, false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/prjPrivate'),'value'),"boolean:false", false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/ownerType'),'value'),"string:"+ownerType, false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/ownerOrg'),'value'),ownerOrg, false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/ownerCountry'),'value'),ownerCountry, false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/ownerEmail'),'value'),ownerEmail, false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/preLEEDCertified'),'value'), "boolean:false", false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/containsResUnits'),'value'),"boolean:false", false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/prjAffiliatedHigherEducation'),'value'),"boolean:false", false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/prjAffiliatedLEEDLab'),'value'),"boolean:false", false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/precertify'),'value'),"boolean:false", false, FailureHandling.CONTINUE_ON_FAILURE)
 		}
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectName'),'value'),prjName, false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectId'),'value'),prjId, false, FailureHandling.CONTINUE_ON_FAILURE)
-		//WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/unitType'),'value'),"string:IP", false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/spaceType'),'value'),"string:"+spaceType, false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/prjAddress'),'value'),prjAddress, false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectCity'),'value'), prjCity, false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectState'),'value'), prjState, false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectCountry'),'value'),prjCountry, false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/prjPrivate'),'value'),"boolean:false", false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/ownerType'),'value'),"string:"+ownerType, false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/ownerOrg'),'value'),ownerOrg, false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/ownerCountry'),'value'),ownerCountry, false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/ownerEmail'),'value'),ownerEmail, false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/preLEEDCertified'),'value'), "boolean:false", false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/containsResUnits'),'value'),"boolean:false", false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/prjAffiliatedHigherEducation'),'value'),"boolean:false", false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/prjAffiliatedLEEDLab'),'value'),"boolean:false", false, FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/precertify'),'value'),"boolean:false", false, FailureHandling.CONTINUE_ON_FAILURE)
-		//WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/input_grossArea'),'value'),prjArea, false, FailureHandling.CONTINUE_ON_FAILURE)
+		else {
+			
+	  WebUI.click(findTestObject('Manage/ProjectDetailVerification/ManageSider'))
+	  WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+	  
+	  WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
+	  WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 
+	  WebUI.waitForElementClickable(findTestObject('Manage/ProjectDetailVerification/projectName'), GlobalVariable.minAngularWait)
+
+
+	  if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectName'),'value').equalsIgnoreCase(''))){
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+	   }
+
+			
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectName'),'value'),prjName, false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectId2'),'value'),prjId, false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/spaceType'),'value'),"string:"+spaceType, false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/prjAddress1'),'value'),prjAddress, false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectCity/v2'),'value'), prjCity, false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/projectCountry/v2'),'value'),prjCountry, false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/prjPrivate'),'value'),"boolean:false", false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/ownerType'),'value'),"string:"+ownerType, false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/ownerOrg/v2'),'value'),ownerOrg, false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/ownerCountry/v2'),'value'),ownerCountry, false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/ownerEmail/v2'),'value'),ownerEmail, false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/containsResUnits1'),'value'),"boolean:false", false, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/precertify1'),'value'),"boolean:false", false, FailureHandling.CONTINUE_ON_FAILURE)
+
+
+		}
 	}
 	@Keyword
 	public void occupancyShouldNotMoreThan168(String sheetName, int rowNum) throws IOException, InterruptedException {
@@ -1225,7 +1250,7 @@ public class ReusableMethodsManage extends BaseClass {
 		String avgTimeSpent      = data.getCellData(sheetName,"avg_time_spent", rowNum)
 		String weeklyOprHrs      = data.getCellData(sheetName,"week_opr_hrs", rowNum)
 
-		if((WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/a_ Manage1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
+		if(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/ManageSider')).equals("false")){
 			println "Manage"
 			WebUI.delay(2)
 			WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
@@ -1655,7 +1680,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void projectDetailsValidation(){
-		
+
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		navigation.navigateIntoDataInput()
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
@@ -2391,11 +2416,11 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void verifyAgreementFileDownloadParking(){
-		
+
 		deleteFile(BaseClass.ServiceAgreement)
-		
+
 		WebUI.click(findTestObject('Arc2.0 Locators/Navbar Button Locators/Manage'))
-		
+
 		WebUI.delay(2)
 		WebUI.scrollToElement(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'),2)
 		WebUI.click(findTestObject('Manage/VerifyAgreementFile/a_ Agreements'))
@@ -2408,7 +2433,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 	@Keyword
 	public void verifymeasureDownloadfileParking(){
-		
+
 		WebUI.click(findTestObject('Page_Arc dashboard/a_ Management'))
 		WebUI.delay(5)
 		WebUI.click(findTestObject('Page_Arc dashboard/span_A1 - Parking Pricing'))
@@ -3383,7 +3408,7 @@ public class ReusableMethodsManage extends BaseClass {
 		println(pdfText)
 		println("project name in excel"+prjName)
 		KeywordUtil.markWarning('Agreement details are : '+pdfText)
-		
+
 		Assert.assertTrue(pdfText.contains("User Name : "+name), "PDF not contains the required user name.")
 		Assert.assertTrue(pdfText.contains("User Email : "+email), "PDF not contains the required user email.")
 		Assert.assertTrue(pdfText.contains("User ID : "+id), "PDF not contains the required user id.")
@@ -3391,7 +3416,7 @@ public class ReusableMethodsManage extends BaseClass {
 
 		Assert.assertTrue(pdfText.contains("Name of Project : "+prjName), "Downloaded agreement PDF does not contains the mandatory field project name.")
 		Assert.assertTrue(pdfText.contains("Owner Email : "+ownerEmail), "PDF not contains the required owner email.")
-		
+
 
 	}
 

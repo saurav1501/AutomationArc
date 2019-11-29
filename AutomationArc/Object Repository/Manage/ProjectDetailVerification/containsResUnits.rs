@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//*[@name=&quot;IsResidential&quot;])[2]</value>
+         <value>//select[@ng-model = 'projectInfo.IsResidential']</value>
       </entry>
       <entry>
          <key>BASIC</key>

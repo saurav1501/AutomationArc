@@ -13,7 +13,7 @@
    <testCaseLink>
       <guid>b96ce9be-b67f-4d08-a256-c595f10d24ed</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyParking/LoginWithParkingTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -49,13 +49,13 @@
    <testCaseLink>
       <guid>3d4b0c89-8f27-461c-837b-465675f69633</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyParking/SearchProgramTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>7d6494d6-cbf9-4eda-9a74-fc206b6daac3</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyParking/ToolTipTextAndStatusAndNextAllCreditTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -67,49 +67,49 @@
    <testCaseLink>
       <guid>b47f06b0-5af9-40ee-8970-63102cb2e37a</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyParking/MeasureDuplicateFileUploadTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>c4eceff2-d64c-4109-95ae-7458b4871100</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyParking/DeleteUploadPdfFileTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>3d9f3f93-ded5-4b63-8619-8a66fde78334</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyParking/FAQSNavigationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>4212d2bb-4658-46ea-8bf2-804dc6fa6eb2</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyParking/ParksmartResourceNavigationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>16dd6680-8986-4496-87c7-3d60f5c2b9f3</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyParking/AllInnovationTotalPointTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>3a3d1e22-5039-491a-889d-77423caf0b7b</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyParking/AllManagementTotalPointTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>f0e485b6-6617-4c50-92b7-5bbbbc753429</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyParking/AllProgramsTotalPointTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>ff83510e-5755-4b22-8794-831568585297</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/Buildings/MyParking/AllTechStructureDesignTotalPointTest</testCaseId>
    </testCaseLink>
    <testCaseLink>

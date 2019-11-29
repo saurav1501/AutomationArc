@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[@ng-click=&quot;addProject(appData.project_type)&quot;]</value>
+         <value> //*[text()=&quot;Add a Project&quot; or text()=&quot;+ Add&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

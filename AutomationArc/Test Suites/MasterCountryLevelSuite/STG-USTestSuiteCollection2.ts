@@ -13,7 +13,7 @@
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>
-         <testSuiteEntity>Test Suites/BuildingSuites/Transit/Aboveground/USTransitSuite/USTransitAbovegroundSuite</testSuiteEntity>
+         <testSuiteEntity>Test Suites/BuildingSuites/Transit/Aboveground/USTransitSuite/V2TransitAbovegroundSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>
@@ -39,7 +39,7 @@
             <profileName>STG-US-P2</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
-         <runEnabled>true</runEnabled>
+         <runEnabled>false</runEnabled>
          <testSuiteEntity>Test Suites/CitiesSuites/USCitySuite/USCitiesNoneSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
@@ -84,7 +84,7 @@
             <profileName>STG-US-P2</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
-         <runEnabled>true</runEnabled>
+         <runEnabled>false</runEnabled>
          <testSuiteEntity>Test Suites/BuildingSuites/Transit/Underground/USTransitSuite/USTransitUndergroundSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
@@ -93,7 +93,7 @@
             <profileName>STGv2-US-P1</profileName>
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
-         <runEnabled>true</runEnabled>
+         <runEnabled>false</runEnabled>
          <testSuiteEntity>Test Suites/TrialFullAccess1To5YearsSuite/USCityComTrialFullAccess1To5YearsSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>

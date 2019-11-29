@@ -6,12 +6,11 @@
    <elementGuidId>4b617cbe-1f4e-4cc4-8a0a-78ebdd36bdf2</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@ng-change=&quot;verifyField(formdata.name, 'name')&quot;]</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//input[@ng-model=&quot;formdata.name&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

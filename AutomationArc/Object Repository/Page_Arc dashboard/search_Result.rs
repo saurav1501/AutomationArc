@@ -6,11 +6,11 @@
    <elementGuidId>19c2c639-335f-44ee-852c-4f623ddaa080</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//td[@class='cursor-pointer vertical_align_middle'])[2]</value>
+         <key>BASIC</key>
       </entry>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>//div/div/div/table[1]/tbody/tr/td[1]/span</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

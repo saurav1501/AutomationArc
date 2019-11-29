@@ -6,12 +6,12 @@
    <elementGuidId>d1134f97-6286-4cd1-b048-b7d47eb10d20</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@id=&quot;search-input&quot;]</value>
-      </entry>
-      <entry>
          <key>BASIC</key>
          <value>//input[@id = 'searchBar1']</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//input[@ng-model-options=&quot;{debounce:50}&quot; or  @id=&quot;search-input&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

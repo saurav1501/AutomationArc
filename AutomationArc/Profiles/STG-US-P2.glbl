@@ -324,4 +324,9 @@
       <initValue>'CityDI'</initValue>
       <name>TemplateCityDI</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'v1'</initValue>
+      <name>userType</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

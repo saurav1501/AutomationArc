@@ -13,7 +13,7 @@
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
          <runEnabled>true</runEnabled>
-         <testSuiteEntity>Test Suites/BuildingSuites/BuildingNone/USBuildingNoneSuite/USBuildingNoneSuiteV2</testSuiteEntity>
+         <testSuiteEntity>Test Suites/BuildingSuites/BuildingNone/USBuildingNoneSuite/V2BuildingNoneSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>
@@ -31,7 +31,7 @@
             <runConfigurationId>Firefox</runConfigurationId>
          </configuration>
          <runEnabled>false</runEnabled>
-         <testSuiteEntity>Test Suites/BuildingSuites/Transit/Aboveground/USTransitSuite/USTransitAbovegroundSuite</testSuiteEntity>
+         <testSuiteEntity>Test Suites/BuildingSuites/Transit/Aboveground/USTransitSuite/V2TransitAbovegroundSuite</testSuiteEntity>
       </TestSuiteRunConfiguration>
       <TestSuiteRunConfiguration>
          <configuration>

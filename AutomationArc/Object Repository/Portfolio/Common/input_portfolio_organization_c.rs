@@ -4,7 +4,17 @@
    <name>input_portfolio_organization_c</name>
    <tag></tag>
    <elementGuidId>1a5cb68a-7896-435e-a0dc-5f44eeffcded</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//input[@type = 'text' and @name = 'portfolio_organization_contact']</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//input[@name = 'portfolio_organization_contact' or @name=&quot;organization_contact&quot;]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

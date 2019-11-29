@@ -20,8 +20,14 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
 try {
+	if(GlobalVariable.userType=="v1"){
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsNavigation.navigateToPortfolio'()
 	CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsPortfolio.createNewPortfolio'(GlobalVariable.PortfoliosSheet,GlobalVariable.rowNumTwo)
+	}
+	else {
+		CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsPortfolio.createNewPortfolio'(GlobalVariable.PortfoliosSheet,GlobalVariable.rowNumTwo)
+		
+	}
 	
 } catch (Throwable t) {
     CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.tearDown'()

@@ -47,9 +47,20 @@ public class ReusableMethodsSearch extends BaseClass{
 	}
 
 	public void navigationSearch(){
+		if(GlobalVariable.userType=="v2"){
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Arc2.0 Locators/SearchBar_Locators/Search_Icon'), GlobalVariable.minAngularWait)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Arc2.0 Locators/SearchBar_Locators/Search_Icon'), GlobalVariable.minAngularWait)
 		WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/SearchBar_Locators/Search_Icon'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
+		WebUI.waitForElementPresent(findTestObject('Page_Arc dashboard/SearchBar'),5)
+		WebUI.waitForElementVisible(findTestObject('Page_Arc dashboard/SearchBar'),5)
+		WebUI.waitForElementClickable(findTestObject('Page_Arc dashboard/SearchBar'),GlobalVariable.minAngularWait)
+		WebUI.click(findTestObject('Page_Arc dashboard/SearchBar'))
+		WebUI.delay(1)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
+	}
+		else 
+		{
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
 		WebUI.waitForElementPresent(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'),5)
 		WebUI.waitForElementVisible(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'),5)
@@ -57,6 +68,11 @@ public class ReusableMethodsSearch extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/input_searchBar1'))
 		WebUI.delay(1)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait,FailureHandling.OPTIONAL)
+
+	
+		}
+		
+	
 	}
 	
 	@Keyword

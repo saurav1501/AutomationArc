@@ -201,6 +201,7 @@ public class ReusableMethodsLogin extends BaseClass{
 		myProject = WebUI.waitForElementPresent(findTestObject('Page_Arc dashboard/span_My Projects'),GlobalVariable.maxAngularWait)
 
 
+
 	}
 	public void loginIntoArcAppUrl(){
 		String userName= GlobalVariable.userName
@@ -230,17 +231,83 @@ public class ReusableMethodsLogin extends BaseClass{
 		WebUI.getViewportLeftPosition()
 		WebUI.getViewportTopPosition()
 
-		//WebUI.click(findTestObject('Object Repository/LoginViaAppUrl/CookieACCEPTANDCLOSE'),FailureHandling.OPTIONAL)
 		WebUI.setText(findTestObject('Object Repository/LoginViaAppUrl/UserName'), userName)
 		WebUI.setText(findTestObject('Object Repository/LoginViaAppUrl/UserPassword'), password)
 		WebUI.check(findTestObject('Object Repository/LoginViaAppUrl/AcceptAgreement'))
-		//WebUI.click(findTestObject('Object Repository/LoginViaAppUrl/AcceptAgreement'))
 		WebUI.click(findTestObject('Object Repository/LoginViaAppUrl/ClickLOGIN'))
+
 		WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
 		WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
 
-	}
+		WebUI.waitForElementPresent(findTestObject('Arc2.0 Locators/Dashbard/Dashboard1'), GlobalVariable.maxAngularWait)
+		WebUI.waitForElementVisible(findTestObject('Arc2.0 Locators/Dashbard/Dashboard1'),GlobalVariable.maxAngularWait)
 
+		if(GlobalVariable.userType=="v2" && WebUI.getText(findTestObject('Arc2.0 Locators/Dashbard/Dashboard1'))=="newest version.")
+		{
+			WebUI.waitForElementClickable(findTestObject('Arc2.0 Locators/Dashbard/Dashboard1'), 30)
+			WebUI.click(findTestObject('Arc2.0 Locators/Dashbard/Dashboard1'))
+			WebUI.delay(4)
+			WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
+			WebUI.verifyMatch(WebUI.getText(findTestObject('Arc2.0 Locators/Dashbard/Dashboard1')), "older version.", FailureHandling.STOP_ON_FAILURE)
+
+			WebUI.waitForElementClickable(findTestObject('Arc2.0 Locators/Dashbard/Dashboard1'), 30)
+			WebUI.click(findTestObject('Arc2.0 Locators/Dashbard/Dashboard1'))
+			WebUI.delay(4)
+			WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
+			WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.waitForElementPresent(findTestObject('Arc2.0 Locators/Dashbard/Dashboard1'), GlobalVariable.maxAngularWait)
+			WebUI.waitForElementVisible(findTestObject('Arc2.0 Locators/Dashbard/Dashboard1'),GlobalVariable.maxAngularWait)
+			WebUI.verifyMatch(WebUI.getText(findTestObject('Arc2.0 Locators/Dashbard/Dashboard1')), "newest version.", FailureHandling.STOP_ON_FAILURE)
+
+		}
+		else if(GlobalVariable.userType=="v1" && WebUI.getText(findTestObject('Arc2.0 Locators/Dashbard/Dashboard1'))=="older version.")
+		{
+			WebUI.waitForElementClickable(findTestObject('Arc2.0 Locators/Dashbard/Dashboard1'), 30)
+			WebUI.click(findTestObject('Arc2.0 Locators/Dashbard/Dashboard1'))
+			WebUI.delay(4)
+			WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
+			WebUI.waitForElementPresent(findTestObject('Arc2.0 Locators/Dashbard/Dashboard1'), GlobalVariable.maxAngularWait)
+			WebUI.waitForElementVisible(findTestObject('Arc2.0 Locators/Dashbard/Dashboard1'),GlobalVariable.maxAngularWait)
+			WebUI.verifyMatch(WebUI.getText(findTestObject('Arc2.0 Locators/Dashbard/Dashboard1')), "newest version.", FailureHandling.STOP_ON_FAILURE)
+			WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
+
+			WebUI.waitForElementClickable(findTestObject('Arc2.0 Locators/Dashbard/Dashboard1'), 30)
+			WebUI.click(findTestObject('Arc2.0 Locators/Dashbard/Dashboard1'))
+			WebUI.delay(4)
+			WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
+			WebUI.verifyMatch(WebUI.getText(findTestObject('Arc2.0 Locators/Dashbard/Dashboard1')),"older version.", FailureHandling.STOP_ON_FAILURE)
+
+		}
+
+		if(GlobalVariable.userType=="v1" && WebUI.getText(findTestObject('Arc2.0 Locators/Dashbard/Dashboard1'))=="older version.")
+		{
+			WebUI.waitForElementClickable(findTestObject('Arc2.0 Locators/Dashbard/Dashboard1'), 30)
+			WebUI.click(findTestObject('Arc2.0 Locators/Dashbard/Dashboard1'))
+			WebUI.delay(4)
+			WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
+			WebUI.verifyMatch(WebUI.getText(findTestObject('Arc2.0 Locators/Dashbard/Dashboard1')), "newest version.", FailureHandling.STOP_ON_FAILURE)
+
+
+		}
+
+		if(GlobalVariable.userType=="v2" && WebUI.getText(findTestObject('Arc2.0 Locators/Dashbard/Dashboard1'))=="newest version.")
+		{
+			WebUI.waitForElementClickable(findTestObject('Arc2.0 Locators/Dashbard/Dashboard1'), 30)
+			WebUI.click(findTestObject('Arc2.0 Locators/Dashbard/Dashboard1'))
+			WebUI.delay(4)
+			WebUI.waitForAngularLoad(GlobalVariable.maxAngularWait, FailureHandling.CONTINUE_ON_FAILURE)
+			WebUI.waitForPageLoad(GlobalVariable.maxAngularWait)
+			WebUI.waitForElementPresent(findTestObject('Arc2.0 Locators/Dashbard/Dashboard1'),GlobalVariable.maxAngularWait)
+			WebUI.waitForElementVisible(findTestObject('Arc2.0 Locators/Dashbard/Dashboard1'),GlobalVariable.maxAngularWait)
+			WebUI.verifyMatch(WebUI.getText(findTestObject('Arc2.0 Locators/Dashbard/Dashboard1')), "older version.", FailureHandling.STOP_ON_FAILURE)
+
+
+		}
+
+	}
 
 
 	@Keyword
@@ -315,7 +382,7 @@ public class ReusableMethodsLogin extends BaseClass{
 	@Keyword
 	public void loginWithValidId() {
 
-		String userName= GlobalVariable.userName
+		String userName= GlobalVariable.userTypeName
 		String password= GlobalVariable.password
 
 		WebUI.delay(2)

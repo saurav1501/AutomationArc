@@ -4,7 +4,17 @@
    <name>span_My Portfolios</name>
    <tag></tag>
    <elementGuidId>f92929af-056f-4bbf-bde8-7645b2f15742</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//span[(text() = 'My Portfolios' or . = 'My Portfolios')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//button[@data-ui-sref=&quot;app.portfolio_create&quot; or @ng-click=&quot;openCreatePortfolioModal()&quot;]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

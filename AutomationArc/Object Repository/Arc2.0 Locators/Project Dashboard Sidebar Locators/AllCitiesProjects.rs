@@ -6,12 +6,11 @@
    <elementGuidId>e3b540ff-4697-4e85-9b78-bfb74bbb234d</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>(//*[@href=&quot;/app/projects/my-projects/?project-type=city&quot;])[1]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//*[@href=&quot;/app/projects/my-projects/?project-type=city&quot;]</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//*[@name = 'ownerType']</value>
+         <value>//*[@ng-model=&quot;projectInfo.ownerType&quot; or  @ng-model= &quot;formdata.ownerType&quot;]</value>
       </entry>
       <entry>
          <key>BASIC</key>

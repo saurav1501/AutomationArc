@@ -9,8 +9,12 @@
          <key>BASIC</key>
          <value>//textarea[@ng-model = 'formdata.portfolio_description']</value>
       </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//textarea[@ng-model = 'formdata.portfolio_description' or @id=&quot;portfolio_text&quot;]</value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

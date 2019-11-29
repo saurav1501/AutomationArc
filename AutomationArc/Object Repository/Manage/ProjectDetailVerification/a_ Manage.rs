@@ -11,7 +11,7 @@
       </entry>
       <entry>
          <key>XPATH</key>
-         <value>//*[text()=&quot;Manage&quot;]</value>
+         <value>//*[@data-target=&quot;#sidebar-manage&quot;]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

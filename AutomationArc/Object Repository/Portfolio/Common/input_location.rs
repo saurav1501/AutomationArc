@@ -9,8 +9,12 @@
          <key>BASIC</key>
          <value>//input[@type = 'text' and @ng-model = 'formdata.portfolio_location']</value>
       </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//input[@type = 'text' and @ng-model = 'formdata.portfolio_location' or @ng-model=&quot;formdata.address&quot;]</value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>
