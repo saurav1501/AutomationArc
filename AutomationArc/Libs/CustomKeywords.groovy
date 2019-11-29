@@ -7,8 +7,6 @@ import java.lang.String
 
 import com.kms.katalon.core.testobject.TestObject
 
-import java.sql.Connection
-
 
 def static "com.arc.ReusableMethods.ReusableMethodsPrerequisites.narrativeTextSave"(
     	String sheetName	
