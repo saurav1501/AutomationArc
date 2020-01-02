@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//*[text()='Select Travel Method']</value>
+         <value>//button[@ng-click=&quot;editRoute(route, $index)&quot;]/span</value>
       </entry>
       <entry>
          <key>BASIC</key>
