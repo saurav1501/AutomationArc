@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>FirstProjectScore</name>
+   <name>Manage</name>
    <tag></tag>
-   <elementGuidId>1c0a03a9-efc0-4cb1-86e3-9f49a2245298</elementGuidId>
+   <elementGuidId>fe968ed2-d8d6-452f-ae3f-0175ca6ba3ef</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//td[@class=&quot;vertical-align-middle cursor-pointer ng-scope&quot;]/div[1])[1]</value>
+         <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>(//*[@id=&quot;sidebar-projects-link&quot;])[1]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

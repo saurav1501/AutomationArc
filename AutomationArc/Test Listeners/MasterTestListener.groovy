@@ -85,10 +85,7 @@ public class MasterTestListener extends BaseClass {
 		println RunConfiguration.getProjectDir()
 		println RunConfiguration.getAppVersion()
 		
-		/*if((DriverFactory.getWebDriver().getCurrentUrl()).equalsIgnoreCase(GlobalVariable.url)){
-			CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsLogin.loginIntoArcWithGlobalVariable'()
-		}*/
-		
+	
 		println "Hey"
 		println testCase.getTestCaseId()
 		testCaseId = testCase.getTestCaseId().split("/")
@@ -108,8 +105,17 @@ public class MasterTestListener extends BaseClass {
 			CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsNavigation.clickOnSidebar'(testSuiteId[count-1])
 			
 		}
+	   }
+		if(GlobalVariable.userType=="v2")
+		{
+			if((testCaseId[testCount-2].contains("LEEDOnline") || testCaseId[testCount-1].contains("AddNewProject") || testCaseId[testCount-1].contains("PaymentByCreditCard") || testCaseId[testCount-1].contains("RegistrationPaymentCC") || testCaseId[testCount-1].contains("PaymentByCheck")|| testCaseId[testCount-1].contains("Login") || testCaseId[testCount-1].contains("INDVerifyTaxZeroIfSezIsCheckedTest") || testCaseId[testCount-1].contains("INDSEZCheckBoxVisibilityAndClausePopUpTest") || testCaseId[testCount-1].contains("INDPaymentPageTaxAndRegAmountVerificationTest") || testCaseId[testCount-1].contains("INDVerifyUploadedFileSEZAreVisibleToTheUserTest") || testCaseId[testCount-1].contains("VerifyThePriceTextOnTheMeasurablPaymentPageTest") || testCaseId[testCount-1].contains("PaymentForMeasurableSubscriptionTest"))){
+				KeywordUtil.markWarning("LEED Online Test : " + testCaseId[testCount-1])
+				}
+			else {
+			CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsNavigation.clickOnManage'(testSuiteId[count-1])
 			
 		}
+	}
 	}
 	
 	

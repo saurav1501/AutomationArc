@@ -4,7 +4,17 @@
    <name>GotoLEEDOnline</name>
    <tag></tag>
    <elementGuidId>7f674587-222f-4198-841f-07bcbfed5903</elementGuidId>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorCollection>
+      <entry>
+         <key>XPATH</key>
+         <value>  //button[text()=&quot;Go to LEED Online&quot; or text()=&quot;Register for LEED certification now&quot;]</value>
+      </entry>
+      <entry>
+         <key>BASIC</key>
+         <value>//button[@class = 'btn btn-primary ml10 ng-binding' and (text() = 'Go to LEED Online' or . = 'Go to LEED Online')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

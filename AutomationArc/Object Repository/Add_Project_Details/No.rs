@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>FirstProjectScore</name>
+   <name>No</name>
    <tag></tag>
-   <elementGuidId>1c0a03a9-efc0-4cb1-86e3-9f49a2245298</elementGuidId>
+   <elementGuidId>8de2fdfb-6400-4ec9-8cd6-43ea74e23eca</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>(//td[@class=&quot;vertical-align-middle cursor-pointer ng-scope&quot;]/div[1])[1]</value>
+         <value>//*[@ng-click=&quot;registerLEEDOrNonLEED('no')&quot;]/span[@class=&quot;radiobtn&quot;]</value>
       </entry>
       <entry>
          <key>BASIC</key>
+         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

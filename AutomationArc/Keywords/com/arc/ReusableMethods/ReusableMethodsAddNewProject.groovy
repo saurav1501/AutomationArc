@@ -64,7 +64,7 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/selectProjectType'), prjType, true)
 		WebUI.check(findTestObject('Object Repository/AddProjectNewUI/CertificationNo'))
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/grossArea'),prjArea )
-		
+
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/spaceType'))
 		List<WebElement> list= driver.findElements(By.xpath("//*[@ng-repeat='type in spaceType']"))
 		int size = list.size()
@@ -128,7 +128,6 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		String prjName      = data.getCellData(sheetName,"ProjectName", rowNum)
 		String prjType 		= data.getCellData(sheetName, "ProjectType", rowNum)
 		String prjRating 	= data.getCellData(sheetName, "RatingSystem", rowNum)
-		String spaceType    = data.getCellData(sheetName, "SpaceType", rowNum)
 		String ownerOrg 	= data.getCellData(sheetName, "OwnerOrganization", rowNum)
 		String ownerType 	= data.getCellData(sheetName, "OwnerType", rowNum)
 		String ownerCountry = data.getCellData(sheetName, "OwnerCountry", rowNum)
@@ -163,6 +162,22 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		WebUI.check(findTestObject('Object Repository/AddProjectNewUI/CertificationNo'))
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/grossArea'),prjArea )
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/streetName'), prjAddress)
+
+		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/spaceType'))
+		List<WebElement> list= driver.findElements(By.xpath("//*[@ng-repeat='type in spaceType']"))
+		int size = list.size()
+		int randonNumber = ThreadLocalRandom.current().nextInt(0, size)
+		println list.get(randonNumber).getText()
+		data.setCellData(sheetName, "SpaceType", rowNum ,list.get(randonNumber).getText())
+		WebUI.delay(3)
+		list.get(randonNumber).click()
+		if((list.get(randonNumber).getText()=="Industrial Manufacturing") || (list.get(randonNumber).getText()=="Laboratory") || (list.get(randonNumber).getText()=="Data Center") ||
+		(list.get(randonNumber).getText()=="Warehouse: Nonrefrigerated Distribution/Shipping") || (list.get(randonNumber).getText()=="Warehouse: Refrigerated")|| (list.get(randonNumber).getText()=="Warehouse: Self Storage Units") ||
+		(list.get(randonNumber).getText()=="Warehouse: General")){
+			uniqueSpaceTypesFlag=true
+		}
+
+
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/ownerType'))
 		List<WebElement> list1= driver.findElements(By.xpath("//*[@ng-repeat='type in ownerType']"))
 		int size1 = list1.size()
@@ -174,7 +189,7 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/organization'))
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Add_Project_Details/span_Habitat for Humanity'))
-		
+
 		WebUI.setText(findTestObject('Object Repository/Add_Project_Details/Email'),ownerMail)
 
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/cityName'), prjCity)
@@ -834,27 +849,29 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		String isStation 		= data.getCellData(sheetName, "is_station", rowNum)
 		Date date = new Date(System.currentTimeMillis())
 		String proName="USBuilding"
-		String ProjectName = proName +prjRating +formatarDate.format(date)
-
+		
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+		WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		navigation.clickAddProject()
-		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/projectName'), ProjectName)
+		
+		WebUI.delay(3)
+		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/projectName'), proName)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/selectProjectType'), prjType, true)
-		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/grossArea'),prjArea )
-		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/streetName'), prjAddress)
-		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/cityName'), prjCity)
+		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/grossArea'),prjArea )
+		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/streetName'),prjAddress)
+		WebUI.delay(2)
+		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/cityName'),prjCity)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/countryName'),'Sri Lanka', false)
 		WebUI.delay(2)
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/zipCode'), prjZip)
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/clickOnSignAgreement'))
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/addProjectNextButton'))
 		WebUI.delay(5)
-		//String PaymentPageText = WebUI.getText(findTestObject('Add_Project_Details/VerifyPaymentPage_ text'))
 		String PaymentPageText = WebUI.getText(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'))
 		WebUI.verifyMatch(PaymentPageText,'Project Setup',true)
-
-		WebUI.click(findTestObject('Object Repository/paymentPageNewUI/payNowButton'),FailureHandling.CONTINUE_ON_FAILURE)
-		WebUI.delay(5)
-
+	
+		
 	}
 
 	@Keyword

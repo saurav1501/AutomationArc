@@ -6,8 +6,12 @@
    <elementGuidId>3369c50f-bb06-4378-9234-daf3cad2bed3</elementGuidId>
    <selectorCollection>
       <entry>
+         <key>CSS</key>
+         <value>div > div > div > table:nth-child(2) > tbody > tr.project_agreement_row.ng-scope > td:nth-child(2) > button</value>
+      </entry>
+      <entry>
          <key>XPATH</key>
-         <value>//*[@id=&quot;app&quot;]/div[3]/nav/div/div[2]/form/div/div/div/table[1]/tbody/tr[2]/td[2]/button</value>
+         <value>(//button[text()=&quot;Accept&quot;])[2]</value>
       </entry>
       <entry>
          <key>BASIC</key>

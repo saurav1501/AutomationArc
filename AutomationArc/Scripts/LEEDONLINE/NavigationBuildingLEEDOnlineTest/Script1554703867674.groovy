@@ -21,8 +21,6 @@ import internal.GlobalVariable as GlobalVariable
 
 try{
 	
-CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsSearch.searchLEEDProgram'(GlobalVariable.PortfoliosSheet, GlobalVariable.rowNumTwo)
-CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.selectPayNow'()
 CustomKeywords.'com.arc.ReusableMethods.ResuableMethodsLEEDOnline.buildingLEEDPage'()
 
 } catch (Throwable t) {

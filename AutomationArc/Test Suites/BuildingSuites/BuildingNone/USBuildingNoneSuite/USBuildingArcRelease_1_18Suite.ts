@@ -35,12 +35,6 @@
       </variableLink>
    </testCaseLink>
    <testCaseLink>
-      <guid>8b173a83-06ac-4996-b40e-150a3de15195</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
-      <testCaseId>Test Cases/Buildings/MyBuildings/BuildingNone/PaymentByCheckTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>58a345ca-e3e3-49cf-9f53-3347a7e422f2</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>

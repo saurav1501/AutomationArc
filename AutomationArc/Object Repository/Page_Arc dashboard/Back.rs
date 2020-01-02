@@ -7,11 +7,10 @@
    <selectorCollection>
       <entry>
          <key>CSS</key>
-         <value>#content > div.row.ng-scope > main > div.payment-card.payment-new-full-screen.ng-scope > div</value>
+         <value>[ng-click=&quot;goBack()&quot;]</value>
       </entry>
       <entry>
          <key>BASIC</key>
-         <value></value>
       </entry>
    </selectorCollection>
    <selectorMethod>CSS</selectorMethod>

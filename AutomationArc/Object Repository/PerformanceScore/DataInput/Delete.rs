@@ -7,7 +7,7 @@
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//table[@id='wasteTable']/tbody/tr/td[10]/span</value>
+         <value>//span[@ng-click=&quot;deleteReading(data, $index)&quot; and @role=&quot;button&quot;]  </value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

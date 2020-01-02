@@ -14,6 +14,7 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
 try{
+	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.paymentPageBuildingCityDetails'(GlobalVariable.CitySheet, GlobalVariable.rowNumFour)
 	
 	CustomKeywords.'com.arc.ReusableMethods.ReusableMethodsPayment.invalidCardDetais'(GlobalVariable.CCPayment , GlobalVariable.rowNumTwo, GlobalVariable.creditCard)
 	

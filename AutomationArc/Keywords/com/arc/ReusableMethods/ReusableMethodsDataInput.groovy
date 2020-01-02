@@ -2173,7 +2173,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 	//Delete city-community energy and water meter readings
 	@Keyword
 	public void deleteEnergyAndWaterMeterReadingCityComm(){
-		
+
 		//delete energy reading
 		WebUI.click(findTestObject('DataInput/CityCom/a_ Data Input'))
 		WebUI.delay(2)
@@ -6543,10 +6543,10 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.verifyMatch(GlobalVariable.teamMemName,pteamMemUI, false)
 
 	}
-	
+
 	@Keyword
 	public void HumanExpMeterReadingValidationUI()throws IOException, InterruptedException {
-		
+
 		navigation.navigateIntoDataInput()
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.minAngularWait)
@@ -6559,7 +6559,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.verifyElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/PopulationReadingErrorMessage'))
-		
+
 		/************************** Verify the error message gone after valid value *************************/
 		WebUI.clearText(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
@@ -6581,7 +6581,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.verifyElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/PopulationReadingErrorMessage'))
-		
+
 		/************************** Verify the error message gone after valid value *************************/
 		WebUI.clearText(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
@@ -6603,7 +6603,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.verifyElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/PopulationReadingErrorMessage'))
-		
+
 		/************************** Verify the error message gone after valid value *************************/
 		WebUI.clearText(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
@@ -6613,7 +6613,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.verifyElementNotVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/PopulationReadingErrorMessage'))
 
 	}
-	
+
 	@Keyword
 	public void GinicoefficientHumanExpMeterReadingValidationUI()throws IOException, InterruptedException {
 
@@ -6625,7 +6625,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/SaveButtonOne'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.verifyElementVisible(findTestObject('Object Repository/CityCommDataInput/MeterNames/PopulationReadingErrorMessage'))
-		
+
 		/************************** Verify the error message gone after valid value *************************/
 		WebUI.clearText(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'))
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
@@ -7718,6 +7718,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		r.keyRelease(KeyEvent.VK_CONTROL)
 		r.keyRelease(KeyEvent.VK_T)
 		WebUI.delay(5)
+
 		WebUI.switchToWindowIndex(1)
 		WebUI.navigateToUrl(GlobalVariable.surveyLinkDashboard)
 		WebUI.delay(2)
@@ -8488,7 +8489,7 @@ public class ReusableMethodsDataInput  extends BaseClass{
 
 		//Verify the readings for the following options
 		/*WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/AdditionalDataDropdownButton'))
-<<<<<<< HEAD
+		 <<<<<<< HEAD
 		 WebUI.scrollToElement(findTestObject('Object Repository/CityCommDataInput/MeterNames/TotalElectricityUse'), 5)
 		 WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/TotalElectricityUse'))
 		 WebUI.waitForElementPresent(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'), GlobalVariable.minAngularWait)
@@ -9002,12 +9003,12 @@ public class ReusableMethodsDataInput  extends BaseClass{
 		else{
 			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Object Repository/CityCommDataInput/MeterNames/ReadingOne'),'value'), '1000' , false)
 		}
-		
+
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/ClickOnUnitTypeDropdown'))
 		WebUI.scrollToElement(findTestObject('Object Repository/CityCommDataInput/MeterNames/SIUnits'), 5)
 		WebUI.click(findTestObject('Object Repository/CityCommDataInput/MeterNames/ClickOnUnitTypeDropdown'))
 		WebUI.waitForElementClickable(findTestObject('Object Repository/CityCommDataInput/MeterNames/ClickOnUnitTypeDropdown'), GlobalVariable.minAngularWait)
-		
+
 	}
 
 }

@@ -265,6 +265,9 @@ public class ResuableMethodsGRESB extends BaseClass {
 
 		/*WebUI.click(findTestObject('Portfolio/GRESB/Owner/a_Click here'))
 		 WebUI.delay(2)*/
+		reusableMethodsNavigation.navigateToBuilding()
+		reusableMethodsNavigation.clickAddProject()
+		
 		Date date = new Date(System.currentTimeMillis())
 
 		String ownerName1= ownerName.substring(0, 9)

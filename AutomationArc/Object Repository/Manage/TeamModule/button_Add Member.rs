@@ -6,12 +6,12 @@
    <elementGuidId>5abec66d-9dc2-4104-b19e-03ad13f3a28e</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>//button[@id=&quot;invite_team&quot;]</value>
-      </entry>
-      <entry>
          <key>BASIC</key>
          <value>//button[(text() = 'Add Member' or . = 'Add Member')]</value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[text()=&quot;Add Member&quot; or text()=&quot;Invite&quot; ]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

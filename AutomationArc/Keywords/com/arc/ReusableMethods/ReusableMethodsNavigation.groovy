@@ -16,7 +16,7 @@ import internal.GlobalVariable
 import io.qameta.allure.Step
 
 public class ReusableMethodsNavigation {
-	
+
 	WebDriver driver = DriverFactory.getWebDriver()
 
 	@Keyword
@@ -37,7 +37,6 @@ public class ReusableMethodsNavigation {
 		WebUI.scrollToElement(findTestObject('Object Repository/Arc2.0 Locators/AllProjectDashboard/AddAProjectButton'), 3)
 		WebUI.click(findTestObject('Object Repository/Arc2.0 Locators/AllProjectDashboard/AddAProjectButton'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-	
 	}
 
 	@Keyword
@@ -65,31 +64,30 @@ public class ReusableMethodsNavigation {
 		WebUI.waitForElementClickable(findTestObject('Page_Arc dashboard/a_ My Parking'),10)
 		WebUI.click(findTestObject('Page_Arc dashboard/a_ My Parking'))
 		WebUI.waitForAngularLoad(10)
-	
-	//	WebUI.verifyMatch(WebUI.getUrl(), "https://stg-v2.app.arconline.io/app/projects/my-projects/?project-type=parksmart", false)
-	
+
+		//	WebUI.verifyMatch(WebUI.getUrl(), "https://stg-v2.app.arconline.io/app/projects/my-projects/?project-type=parksmart", false)
+
 	}
 
 
 	@Keyword
 	public void navigateToPortfolio(){
-		
+
 		if(GlobalVariable.userType=="v1"){
-		WebUI.delay(3)
-		WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
-		WebUI.delay(2)
-		WebUI.waitForElementClickable(findTestObject('Object Repository/Page_Arc dashboard/a_ Buildings'), 10)
-		WebUI.delay(3)
-		WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ Buildings'))
-		WebUI.delay(2)
-		WebUI.click(findTestObject('Portfolio/Common/a_ My Portfolios'))
-		WebUI.click(findTestObject('Portfolio/Common/span_My Portfolios'))
-		WebUI.delay(4)
-		String postNavigationLoginText = WebUI.getText(findTestObject('Page_Arc dashboard/span_My Portfolios'))
-		WebUI.verifyMatch(postNavigationLoginText,'+ Create a Portfolio',false)
+			WebUI.delay(3)
+			WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
+			WebUI.delay(2)
+			WebUI.waitForElementClickable(findTestObject('Object Repository/Page_Arc dashboard/a_ Buildings'), 10)
+			WebUI.delay(3)
+			WebUI.click(findTestObject('Object Repository/Page_Arc dashboard/a_ Buildings'))
+			WebUI.delay(2)
+			WebUI.click(findTestObject('Portfolio/Common/a_ My Portfolios'))
+			WebUI.click(findTestObject('Portfolio/Common/span_My Portfolios'))
+			WebUI.delay(4)
+			String postNavigationLoginText = WebUI.getText(findTestObject('Page_Arc dashboard/span_My Portfolios'))
+			WebUI.verifyMatch(postNavigationLoginText,'+ Create a Portfolio',false)
 		}
-		
-		}
+	}
 
 	//@Step("Type {user.name} / {user.password}.")
 	@Keyword
@@ -127,7 +125,7 @@ public class ReusableMethodsNavigation {
 		WebUI.click(findTestObject('DataInput/Survey/div_Transportation Survey'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	}
-	
+
 	@Keyword
 	public void navigateToDataAQI(){
 
@@ -246,15 +244,15 @@ public class ReusableMethodsNavigation {
 	@Keyword
 	public void navigateToManageSection1(){
 		/*boolean test = WebUI.
-		//(findTestObject('Manage/ProjectDetailVerification/NavigationManage'),2)
-		if(test=="false"){
-	*/	
-		
+		 //(findTestObject('Manage/ProjectDetailVerification/NavigationManage'),2)
+		 if(test=="false"){
+		 */	
+
 		WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Manage'))
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
-	
+
 	}
-	
+
 	@Keyword
 	public void navigateToAnalyticsTotal() {
 		WebUI.scrollToElement(findTestObject('Object Repository/Analytics/ClickOnAnalyticsTotal'),5)
@@ -398,13 +396,13 @@ public class ReusableMethodsNavigation {
 			if((WebUI.getAttribute(findTestObject('DashboardNavigationNewUI/SideBar'),"class", FailureHandling.OPTIONAL).equals("sidebar-projects-link lh45"))){
 				println WebUI.getAttribute(findTestObject('DashboardNavigationNewUI/SideBar'),"class")
 				println "side"
-				
+
 				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 				WebUI.click(findTestObject('DashboardNavigationNewUI/SideBar'))
 				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			}
-			
-			
+
+
 			if((WebUI.getAttribute(findTestObject('Object Repository/Analytics/ClickOnAnalytics1'), "class", FailureHandling.OPTIONAL).equals("collapse"))){
 				println "Analytics"
 				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
@@ -421,25 +419,55 @@ public class ReusableMethodsNavigation {
 				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 			}
 		}
-		
-		
-		
+
+
+
 	}
+
+
+	@Keyword
+	public void clickOnManage(String suitId){
+		if((suitId.contains("V2Cities")) || (suitId.contains("V2Com"))){
+			if((WebUI.getAttribute(findTestObject('Object Repository/Manage/V2/Manage'), "class", FailureHandling.OPTIONAL).equals("option sidebar-projects-link collapsed"))){
+				println "Manage"
+				//WebUI.delay(2)
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+				WebUI.click(findTestObject('Object Repository/Manage/V2/Manage'))
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+			}
+		}
+
+
+		else if((suitId.contains("V2Building")) || (suitId.contains("V2BuildingOther")) || (suitId.contains("V2Transit")) || (suitId.contains("MySchools")) ) {
+
+			if((WebUI.getAttribute(findTestObject('Object Repository/Manage/V2/Manage'),"class", FailureHandling.OPTIONAL).equals("option sidebar-projects-link collapsed"))){
+
+				println "Manage"
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+				WebUI.click(findTestObject('Object Repository/Manage/V2/Manage'))
+				WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+			}
+		}
+	}
+
+
+
+
 
 
 	//Individual Section Click operation
 
-	
+
 	public static void clickOnCreditAction(){
 		if((WebUI.getAttribute(findTestObject('Object Repository/Arc2.0 Locators/Project Navigation Locators/AllActions'), "class", FailureHandling.OPTIONAL).equals("option sidebar-projects-link collapsed"))){
 			println "Scores"
 			WebUI.delay(2)
 			WebUI.click(findTestObject('Object Repository/PerformanceScore/Score/a_ Score'))
 		}
-		
-		
+
+
 	}
-	
+
 
 	public static void  clickScoreLabel(){
 		if((WebUI.getAttribute(findTestObject('Object Repository/PerformanceScore/Score/a_ Score1'), "aria-expanded", FailureHandling.OPTIONAL).equals("null"))){

@@ -124,4 +124,40 @@
       <isRun>true</isRun>
       <testCaseId>Test Cases/MyCommunities/CommunitiesNone/VerifyAndDownloadBillingReceiptTest</testCaseId>
    </testCaseLink>
+   <testCaseLink>
+      <guid>4434eddf-896c-4f1b-a73f-d1abdedd1fcd</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Common/CityComValidation/ManageProjectDetailsValidationTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>b3861c1c-462e-484c-95fc-b8da3ec8b0b2</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Common/CityComValidation/ManagingEntityStateTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>ebd74801-5fc2-4a05-a4bb-933cd01ac5c2</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Common/CityComValidation/ManageStateUS(StateNotAvalable)ValidationTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>2dc24115-20fd-4442-be06-7a0437cc0047</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Common/CityComValidation/VerifyNonUSGBCMemAddInsideTeamTest</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>5268155a-95af-455f-8d6f-44cc8b2365c6</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Common/1_15_4/NoneOtherToolTipText_1_15_4Test</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>1932cb47-4d3d-4afa-a2d4-317b72df065f</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/Common/1_15_4/SettingScoreVersionPageUpdate_1_15_4Test</testCaseId>
+   </testCaseLink>
 </TestSuiteEntity>

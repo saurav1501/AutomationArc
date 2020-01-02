@@ -9,8 +9,12 @@
          <key>BASIC</key>
          <value>id(&quot;app&quot;)/div[@class=&quot;ng-scope&quot;]/nav[@class=&quot;page-controls navbar navbar-default ng-scope&quot;]/div[@class=&quot;container-fluid ng-scope&quot;]/div[@class=&quot;collapse navbar-collapse&quot;]/ul[@class=&quot;nav navbar-nav navbar-right&quot;]/li[@class=&quot;dropdown&quot;]/a[@class=&quot;dropdown-toggle ng-binding&quot;]/b[@class=&quot;caret&quot;][count(. | //b[@class = 'caret']) = count(//b[@class = 'caret'])]</value>
       </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@class=&quot;dropdown-toggle ng-binding&quot;]/child::b[@class=&quot;caret&quot;]</value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>XPATH</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <webElementProperties>
       <isSelected>true</isSelected>

@@ -13,67 +13,67 @@
    <testCaseLink>
       <guid>52956bb3-8ce1-4f12-9246-de0aa1a386fd</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/DashboardPage/ArcLogoNavigationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>b2f88e76-4031-4d11-ae18-28ecc05e22ba</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/DashboardPage/LoginWithBlankAndCheckValidationMessageTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>ee46a408-b9b4-4f3e-a7a3-ed77932507d3</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/DashboardPage/CheckboxIAccepttheEULATest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>2c549389-7ff1-4765-b941-30ba4cc94ab7</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/DashboardPage/CookiePolicyNavigationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>200c21f3-e0a9-4cab-9b22-049196be5eb8</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/DashboardPage/TermsofuseNavigationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>78391055-073c-401c-baa3-5c1860a9e0c1</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/DashboardPage/ENDUserNavigationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>44a74dfd-9999-43bf-8c62-48449b2dcc6a</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/DashboardPage/PrivacyPolicyNavigationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>0999cac1-9bc5-4b57-b9c5-ee24d5c3ba42</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/DashboardPage/InvalidIDLoginCheckValidationMessageTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>8b266c4b-7692-4c33-a321-81f6117abee4</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/DashboardPage/ForgetPasswodLinkNavigationValidationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>03d8f789-08de-4025-8dc5-4b0a53002b92</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/DashboardPage/LoginWithValidIdTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>69315193-c99d-4d75-93c6-9559f6717899</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>true</isRun>
+      <isRun>false</isRun>
       <testCaseId>Test Cases/DashboardPage/MyAcountNavigationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
@@ -125,12 +125,6 @@
       <testCaseId>Test Cases/DashboardPage/ProjectNameLengthSpecialCharacterTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>53f24f42-95f1-4177-a773-9f8a2905c715</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/DashboardPage/ProjectRegPageZipCodeValidationTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>52d769e5-d116-4356-a63d-6e1cd2c5ad3b</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
@@ -179,12 +173,6 @@
       <testCaseId>Test Cases/DashboardPage/CityPopulationOptioalFieldVerificationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
-      <guid>41c4c059-9623-47e4-947e-c3340d085570</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/DashboardPage/PaymentPageValidation/VerifyRatingSystemValidationTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
       <guid>42eb5609-e9bc-49ae-93f0-24493f9b5d93</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>false</isRun>
@@ -199,80 +187,38 @@
    <testCaseLink>
       <guid>61562608-bb0e-4862-93e5-b66c9be3e34d</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/DashboardPage/PaymentPageValidation/ProjectRegCountryWhichStateNotAvaliableTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>c111cbab-12c5-4ad6-84ee-0f4ea9490a35</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/DashboardPage/PaymentPageValidation/OwenrOrg/InvalidAddOwnerOrgTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>8cb44175-bdd4-4af1-83f9-b11b6993af68</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/DashboardPage/PaymentPageValidation/OwenrOrg/AddOwnerOrgValidTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>e8ecc749-0d6e-40b1-a3f8-04e693bce7f5</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/DashboardPage/PaymentPageValidation/OwenrOrg/searchAddedOwnerOrgTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>3fba923f-ae45-4b54-9902-18f9f95b3688</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/DashboardPage/PaymentPageValidation/Reg/RegPaymentCheckTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>9ac57754-0f64-4a56-8c5c-606ccd2e1f86</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/DashboardPage/PaymentPageValidation/Reg/BuildingPopUpVerificationTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>dc106903-a729-4deb-bf4f-b709696fe2b4</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/DashboardPage/PaymentPageValidation/Reg/DataInputNavigationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>79ac1702-6bdf-44c0-b1ee-6fe4fc6dc23b</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/DashboardPage/PaymentPageValidation/RegPaymentCheckAddDetailsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>443718a8-9689-4440-a76f-a6fe74bef49e</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/DashboardPage/PaymentPageValidation/OwenrOrg/RegPaymentBillingDetailsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>80f2d424-fe0c-4471-8140-074896bbf0d6</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/DashboardPage/PaymentPageValidation/RegPaymentProjDetailsTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>4f6f249a-011b-4edd-b0b4-a2cf21885ca6</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/DashboardPage/PaymentPageValidation/RegPaymentSpecialCharacterValidationTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>8d0e035b-9591-4be5-91ff-04b7325198ac</guid>
       <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
+      <isRun>true</isRun>
       <testCaseId>Test Cases/DashboardPage/SideBarCollapsingTest</testCaseId>
-   </testCaseLink>
-   <testCaseLink>
-      <guid>75a58fb5-8ab2-4e31-987b-498445fea0d1</guid>
-      <isReuseDriver>false</isReuseDriver>
-      <isRun>false</isRun>
-      <testCaseId>Test Cases/DashboardPage/VerifyIncompleteProjectDetailsErrorMessageTest</testCaseId>
    </testCaseLink>
    <testCaseLink>
       <guid>8069bb44-5f1d-47e7-98fa-da941095809f</guid>

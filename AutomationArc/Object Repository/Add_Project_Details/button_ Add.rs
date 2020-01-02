@@ -6,12 +6,12 @@
    <elementGuidId>aa803c32-3a54-459e-a630-f7af2f4f17e1</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value>//button[@href = '/app/projects/project-registration/details' and (text() = '+ Add' or . = '+ Add')]</value>
+         <key>XPATH</key>
+         <value>//*[@class=&quot;btn btn-success projectHeader-btn--addProject&quot;]</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>//button[(text() = '+ Add' or . = '+ Add')]</value>
+         <key>BASIC</key>
+         <value>//button[@href = '/app/projects/project-registration/details' and (text() = '+ Add' or . = '+ Add')]</value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

@@ -1536,6 +1536,12 @@ def static "com.arc.ReusableMethods.ReusableMethodsNavigation.clickOnSidebar"(
         	suitId)
 }
 
+def static "com.arc.ReusableMethods.ReusableMethodsNavigation.clickOnManage"(
+    	String suitId	) {
+    (new com.arc.ReusableMethods.ReusableMethodsNavigation()).clickOnManage(
+        	suitId)
+}
+
 def static "com.arc.ReusableMethods.ReusableMethodsNavigation.payNow"() {
     (new com.arc.ReusableMethods.ReusableMethodsNavigation()).payNow()
 }
@@ -4240,14 +4246,18 @@ def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.genratePerfo
          , 	rowNum)
 }
 
-def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.trialScoreVerifica"() {
-    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).trialScoreVerifica()
-}
-
 def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.genratePerformanceScoreAdminToolOtherNone"(
     	String sheetName	
      , 	int rowNum	) {
     (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).genratePerformanceScoreAdminToolOtherNone(
+        	sheetName
+         , 	rowNum)
+}
+
+def static "com.arc.ReusableMethods.ResuableMethodsPerformanceScore.genratePerformanceScoreAdminToolOtherNoneV2"(
+    	String sheetName	
+     , 	int rowNum	) {
+    (new com.arc.ReusableMethods.ResuableMethodsPerformanceScore()).genratePerformanceScoreAdminToolOtherNoneV2(
         	sheetName
          , 	rowNum)
 }

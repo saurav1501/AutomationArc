@@ -6,12 +6,11 @@
    <elementGuidId>e1137090-113b-492b-a022-bab1e30f7395</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>BASIC</key>
-         <value></value>
+         <key>XPATH</key>
+         <value>//*[@class=&quot;btn action-button ccc_border ml10&quot;]/span[text()='Cancel']</value>
       </entry>
       <entry>
-         <key>XPATH</key>
-         <value>(//button[text()='Cancel'])[1]</value>
+         <key>BASIC</key>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

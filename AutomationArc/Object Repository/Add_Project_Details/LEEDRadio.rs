@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>FirstProjectScore</name>
+   <name>LEEDRadio</name>
    <tag></tag>
-   <elementGuidId>1c0a03a9-efc0-4cb1-86e3-9f49a2245298</elementGuidId>
+   <elementGuidId>53e343be-e4f8-4f66-9943-a9f4ce3cfa3c</elementGuidId>
    <selectorCollection>
       <entry>
-         <key>XPATH</key>
-         <value>(//td[@class=&quot;vertical-align-middle cursor-pointer ng-scope&quot;]/div[1])[1]</value>
+         <key>BASIC</key>
+         <value></value>
       </entry>
       <entry>
-         <key>BASIC</key>
+         <key>XPATH</key>
+         <value>  //span[@class=&quot;checkcontainer&quot;]/preceding::span[@class=&quot;radiobtn&quot;] </value>
       </entry>
    </selectorCollection>
    <selectorMethod>XPATH</selectorMethod>

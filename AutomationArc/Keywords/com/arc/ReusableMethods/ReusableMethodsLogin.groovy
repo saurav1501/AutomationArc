@@ -382,7 +382,7 @@ public class ReusableMethodsLogin extends BaseClass{
 	@Keyword
 	public void loginWithValidId() {
 
-		String userName= GlobalVariable.userTypeName
+		String userName= GlobalVariable.userName
 		String password= GlobalVariable.password
 
 		WebUI.delay(2)

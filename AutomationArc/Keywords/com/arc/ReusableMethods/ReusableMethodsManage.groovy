@@ -1143,9 +1143,6 @@ public class ReusableMethodsManage extends BaseClass {
 			WebUI.verifyMatch(WebUI.getAttribute(findTestObject('Manage/ProjectDetailVerification/precertify'),'value'),"boolean:false", false, FailureHandling.CONTINUE_ON_FAILURE)
 		}
 		else {
-			
-	  WebUI.click(findTestObject('Manage/ProjectDetailVerification/ManageSider'))
-	  WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 	  
 	  WebUI.click(findTestObject('Manage/ProjectDetailVerification/a_ Project'))
 	  WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
@@ -3060,7 +3057,6 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.waitForAngularLoad(GlobalVariable.avgAngularWait)
 		WebUI.waitForPageLoad(GlobalVariable.avgAngularWait)
 
-		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/Setting/lobbySurveyText'))
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/Setting/makeScorePublicText'))
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/Setting/receiveEmailsText'))
 		WebUI.verifyElementVisible(findTestObject('Object Repository/Manage/Setting/plaqueAnimationText'))
@@ -3455,7 +3451,7 @@ public class ReusableMethodsManage extends BaseClass {
 		WebUI.delay(3)
 		WebUI.click(findTestObject('Object Repository/DataInput/CityC/DeleteButton1'))
 		WebUI.delay(7)
-		WebUI.verifyElementNotPresent(findTestObject('Object Repository/DataInput/NotSym/svg_AnalyticsEnergy Meter via'),5)
+		WebUI.verifyElementPresent(findTestObject('Object Repository/DataInput/NotSym/svg_AnalyticsEnergy Meter via'),5)
 
 	}
 	@Keyword

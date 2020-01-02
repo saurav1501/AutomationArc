@@ -1,4 +1,4 @@
-package com.arc.ReusableMethods
+ package com.arc.ReusableMethods
 
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 
@@ -42,10 +42,12 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 	@Keyword
 	public void buildingLEEDPage() {
 		/**********Verify if project type selected is  'Building LEED', a pop up to redirect to LEED ONLINE appears. Verify if redirect button works as expected.*******************/
-		WebUI.delay(4)
-		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/ratingSystem'),"LEED" ,false)
-		WebUI.delay(4)
-		WebUI.click(findTestObject("Page_Arc dashboard/DashboardPage/GotoLEEDOnline"))
+		reusableMethodsNavigation.clickAddProject()
+
+		WebUI.check(findTestObject('Add_Project_Details/LEEDRadio'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.click(findTestObject('Page_Arc dashboard/DashboardPage/GotoLEEDOnline'))
 		WebUI.switchToWindowIndex(1)
 		WebUI.delay(10)
 		String projectRegistration = WebUI.getText(findTestObject('Page_Arc dashboard/DashboardPage/AllProject/Project Registration'))
@@ -58,10 +60,10 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 	@Keyword
 	public void cityLEEDPage() {
 		/**********Verify if project type selected is  'City LEED', a pop up to redirect to LEED ONLINE appears. Verify if redirect button works as expected.*******************/
-		WebUI.delay(4)
-		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/ratingSystem'),"LEED for Cities" ,false)
-		WebUI.delay(4)
-		WebUI.click(findTestObject("Page_Arc dashboard/DashboardPage/GotoLEEDOnline"))
+		WebUI.check(findTestObject('Add_Project_Details/LEEDRadio'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.click(findTestObject('Page_Arc dashboard/DashboardPage/GotoLEEDOnline'))
 		WebUI.switchToWindowIndex(1)
 		WebUI.delay(10)
 		String projectRegistration = WebUI.getText(findTestObject('Page_Arc dashboard/DashboardPage/AllProject/Project Registration'))
@@ -76,10 +78,10 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 	@Keyword
 	public void communityLEEDPage() {
 		/**********Verify if project type selected is  'Building LEED', a pop up to redirect to LEED ONLINE appears. Verify if redirect button works as expected.*******************/
-		WebUI.delay(4)
-		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/ratingSystem'),"LEED for Communities" ,false)
-		WebUI.delay(4)
-		WebUI.click(findTestObject("Page_Arc dashboard/DashboardPage/GotoLEEDOnline"))
+		WebUI.check(findTestObject('Add_Project_Details/LEEDRadio'))
+		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
+
+		WebUI.click(findTestObject('Page_Arc dashboard/DashboardPage/GotoLEEDOnline'))
 		WebUI.switchToWindowIndex(1)
 		WebUI.delay(10)
 		String projectRegistration = WebUI.getText(findTestObject('Page_Arc dashboard/DashboardPage/AllProject/Project Registration'))
@@ -416,7 +418,7 @@ public class ResuableMethodsLEEDOnline extends BaseClass {
 	@Keyword
 	public void loginIntoLEEDOnlineWithGlobalVariable() {
 		String url = GlobalVariable.LEEDURL
-		String userName= GlobalVariable.userTypeName
+		String userName= GlobalVariable.userName
 		String password= GlobalVariable.password
 		WebUI.openBrowser('')
 		//WebUI.switchToWindowIndex(1)

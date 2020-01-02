@@ -5,6 +5,7 @@ import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
 import org.openqa.selenium.By
 import org.openqa.selenium.WebDriver
 import org.testng.Assert
+import org.openqa.selenium.WebElement
 
 import com.arc.BaseClass.BaseClass
 import com.kms.katalon.core.annotation.Keyword
@@ -18,6 +19,7 @@ import internal.GlobalVariable
 public class ResuableMethodsLandingPage extends BaseClass {
 	ReusableMethodsNavigation landingPage =new ReusableMethodsNavigation()
 	Date date = new Date(System.currentTimeMillis())
+	WebDriver driver = DriverFactory.getWebDriver()
 
 
 	@Keyword
@@ -293,6 +295,7 @@ public class ResuableMethodsLandingPage extends BaseClass {
 		WebUI.delay(4)
 
 		WebUI.clearText(findTestObject('Object Repository/AddProjectNewUI/projectName'))
+		
 		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/projectName'), 'ProjectName')
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/selectProjectType'), 'Buildings', true)
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/grossArea'),'2000' )
@@ -306,7 +309,14 @@ public class ResuableMethodsLandingPage extends BaseClass {
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/addProjectNextButton'))
 		WebUI.delay(5)
 		WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Arc dashboard/DashboardPage/New Folder/Page_Arc dashboard/ProjectZipCode'),3, FailureHandling.STOP_ON_FAILURE)
-	}
+	
+		
+		
+		
+		
+		
+		
+		}
 
 	@Keyword
 	public void projectRegistrationPagearea() {
@@ -375,12 +385,13 @@ public class ResuableMethodsLandingPage extends BaseClass {
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/selectProjectType'), 'Buildings', true)
 
-		WebUI.selectOptionByLabel(findTestObject('Object Repository/DashboardNavigationNewUI/Dash/select_Square feetSquare meter'), 'IP units (feet)', false)
+		/*WebUI.selectOptionByLabel(findTestObject('Object Repository/DashboardNavigationNewUI/Dash/select_Square feetSquare meter'), 'IP units (feet)', false)
 		WebUI.verifyElementPresent(findTestObject('Object Repository/DashboardNavigationNewUI/Dash/EnterAreaIP'),4)                  
 
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/DashboardNavigationNewUI/Dash/select_Square feetSquare meter'), 'SI units (meters)', false)
 		WebUI.verifyElementPresent(findTestObject('Object Repository/DashboardNavigationNewUI/Dash/square meters'),4)
-	}
+*/	
+		}
 	@Keyword
 	public verifyValidationSpecialCharacter() {
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
