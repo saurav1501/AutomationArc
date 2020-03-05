@@ -78,7 +78,7 @@ public class ResuableMethodsLandingPage extends BaseClass {
 
 		WebUI.click(findTestObject('Page_Arc dashboard/DashboardPage/RedirectPrdPage'))
 		WebUI.delay(6)
-		
+
 		WebUI.switchToWindowIndex(2)
 		WebUI.verifyTextPresent('Performance is the future of green building', true)
 		WebUI.closeWindowIndex(2)
@@ -295,7 +295,7 @@ public class ResuableMethodsLandingPage extends BaseClass {
 		WebUI.delay(4)
 
 		WebUI.clearText(findTestObject('Object Repository/AddProjectNewUI/projectName'))
-		
+
 		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/projectName'), 'ProjectName')
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/selectProjectType'), 'Buildings', true)
 		WebUI.setText(findTestObject('Object Repository/AddProjectNewUI/grossArea'),'2000' )
@@ -309,14 +309,7 @@ public class ResuableMethodsLandingPage extends BaseClass {
 		WebUI.click(findTestObject('Object Repository/AddProjectNewUI/addProjectNextButton'))
 		WebUI.delay(5)
 		WebUI.verifyElementPresent(findTestObject('Object Repository/Page_Arc dashboard/DashboardPage/New Folder/Page_Arc dashboard/ProjectZipCode'),3, FailureHandling.STOP_ON_FAILURE)
-	
-		
-		
-		
-		
-		
-		
-		}
+	}
 
 	@Keyword
 	public void projectRegistrationPagearea() {
@@ -348,7 +341,7 @@ public class ResuableMethodsLandingPage extends BaseClass {
 	@Keyword
 	public void projectRegistrationCountryState() {
 		/**********Verify if Project Registration page is open when add project is clicked on *******************/
-		
+
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)
 		WebUI.clearText(findTestObject('Object Repository/AddProjectNewUI/projectName'))
 		WebUI.delay(2)
@@ -386,12 +379,11 @@ public class ResuableMethodsLandingPage extends BaseClass {
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/selectProjectType'), 'Buildings', true)
 
 		/*WebUI.selectOptionByLabel(findTestObject('Object Repository/DashboardNavigationNewUI/Dash/select_Square feetSquare meter'), 'IP units (feet)', false)
-		WebUI.verifyElementPresent(findTestObject('Object Repository/DashboardNavigationNewUI/Dash/EnterAreaIP'),4)                  
-
-		WebUI.selectOptionByLabel(findTestObject('Object Repository/DashboardNavigationNewUI/Dash/select_Square feetSquare meter'), 'SI units (meters)', false)
-		WebUI.verifyElementPresent(findTestObject('Object Repository/DashboardNavigationNewUI/Dash/square meters'),4)
-*/	
-		}
+		 WebUI.verifyElementPresent(findTestObject('Object Repository/DashboardNavigationNewUI/Dash/EnterAreaIP'),4)                  
+		 WebUI.selectOptionByLabel(findTestObject('Object Repository/DashboardNavigationNewUI/Dash/select_Square feetSquare meter'), 'SI units (meters)', false)
+		 WebUI.verifyElementPresent(findTestObject('Object Repository/DashboardNavigationNewUI/Dash/square meters'),4)
+		 */
+	}
 	@Keyword
 	public verifyValidationSpecialCharacter() {
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait, FailureHandling.OPTIONAL)

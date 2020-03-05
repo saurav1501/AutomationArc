@@ -849,12 +849,12 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		String isStation 		= data.getCellData(sheetName, "is_station", rowNum)
 		Date date = new Date(System.currentTimeMillis())
 		String proName="USBuilding"
-		
+
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		WebUI.navigateToUrl(GlobalVariable.AllProjectUrl)
 		WebUI.waitForAngularLoad(GlobalVariable.minAngularWait)
 		navigation.clickAddProject()
-		
+
 		WebUI.delay(3)
 		WebUI.sendKeys(findTestObject('Object Repository/AddProjectNewUI/projectName'), proName)
 		WebUI.selectOptionByLabel(findTestObject('Object Repository/AddProjectNewUI/selectProjectType'), prjType, true)
@@ -870,8 +870,8 @@ public class ReusableMethodsAddNewProject extends BaseClass{
 		WebUI.delay(5)
 		String PaymentPageText = WebUI.getText(findTestObject('paymentPageNewUI/paymentPageTextProjetSetup'))
 		WebUI.verifyMatch(PaymentPageText,'Project Setup',true)
-	
-		
+
+
 	}
 
 	@Keyword
